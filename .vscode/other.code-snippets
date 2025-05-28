@@ -1,0 +1,46 @@
+{
+  "snippet": {
+    "prefix": "snippet",
+    "body": [
+      "\"$1\":{",
+      "  \"prefix\": \"$2\",",
+      "  \"body\": \"$3\"",
+      "},"
+    ]
+  },
+  "proof": {
+    "prefix": "proof",
+    "body": "*Proof*"
+  },
+  "example": {
+    "prefix": "example",
+    "body": "*Example*"
+  },
+  "question": {
+    "prefix": "question",
+    "body": "*Question*"
+  },
+  "abbreviation": {
+    "prefix": "abbreviation",
+    "body": "*Abbreviation*"
+  },
+  "alias": {
+    "prefix": "alias",
+    "body": "*alias*"
+  },
+  "reference": {
+    "prefix": "reference",
+    "body": "*Reference*"
+  },
+  "textmate rule": {
+    "prefix": "textmate rule",
+    "body": [
+      "{",
+      "    \"scope\": [$1],",
+      "    \"settings\": {",
+      "        \"foreground\": \"$2\"",
+      "    }",
+      "}"
+    ]
+  },
+}

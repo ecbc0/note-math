@@ -1,0 +1,65 @@
+strong {
+    color: #34a500;
+    /* bold font color */
+}
+
+body {
+    font-family: 'source code pro medium', 'source code pro', 'noto sans sc', monospace;
+}
+
+.vscode-dark hr {
+    border-color: #bc0000;
+}
+
+.vscode-dark th {
+    border-color: #4421e2;
+}
+
+::selection {
+    background-color: transparent;
+}
+
+p::selection {
+    color: #d13e21;
+}
+
+strong::selection {
+    color: #34a500;
+}
+
+code {
+    background-color: transparent;
+    color: #34a500;
+}
+
+th {
+    color: #d23997;
+}
+
+em {
+    color: #4421e2;
+}
+
+h1 {
+    color: #eec200;
+}
+
+h2 {
+    color: #2f00ff;
+}
+
+h3 {
+    color: #aaa;
+}
+
+h4 {
+    color: #e33917;
+} 
+
+::marker {
+    color: #eec200;
+}
+
+blockquote {
+    background-color: transparent;
+}

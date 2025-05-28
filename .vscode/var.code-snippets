@@ -1,0 +1,29 @@
+{
+  "velocity and acceleration": {
+    "prefix": "let-velocity-and-acceleration",
+    "body": [
+      "#let vel(x) = math.dot(x)",
+      "#let acc(x) = math.dot.double(x)"
+    ]
+  },
+  "let quantum operator": {
+    "prefix": "let-quantum-operator",
+    "body": [
+      "#let H = c-Lie-algebra(\"H\")",
+      "#let a = c-Lie-algebra(\"a\")",
+      "#let q = c-Lie-algebra(\"q\")",
+      "#let p = c-Lie-algebra(\"p\")"
+    ]
+  },
+  "blue Δ": {
+    "prefix": "blue-Delta",
+    "body": "#show \"Δ\": it => text(it, fill: rgb(\"#0056e1\"))"
+  },
+  "let limit closed operator": {
+    "prefix": "let-limit-closed-operator",
+    "body": [
+      "#let closed(x) = math.macron(x)",
+      "#let Closed(x) = math.overline(x)"
+    ]
+  },
+}

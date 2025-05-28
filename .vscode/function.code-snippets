@@ -1,0 +1,85 @@
+{
+  "import": {
+    "prefix": "import",
+    "body": [
+      "#import \"/module/module.typ\": *",
+      "#show: module"
+    ]
+  },
+  "table": {
+    "prefix": "table",
+    "body": [
+      "#table(",
+      "columns: ${1:2},",
+      "[$2],[$3],",
+      "[$4],[$5]",
+      ")"
+    ]
+  },
+  "#tag(\"⋯\")": {
+    "prefix": [
+      "tag"
+    ],
+    "body": "#tag(\"$1\")"
+  },
+  "#link(<⋯>)[]": {
+    "prefix": [
+      "link"
+    ],
+    "body": "#link(<$1>)[]"
+  },
+  "indent": {
+    "prefix": "indent",
+    "body": [
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
+  "tag-indent": {
+    "prefix": "tag-indent",
+    "body": [
+      "#tag(\"$1\") $2",
+      "#indent[",
+      "  $3",
+      "]"
+    ]
+  },
+  "proof-indent": {
+    "prefix": "proof-indent",
+    "body": [
+      "*Proof*",
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
+  "image(\"path\", width: size)": {
+    "prefix": "image-size",
+    "body": "#image(\"$1\", width: ${2:3}0%)"
+  },
+  "stack-ltr":{
+    "prefix": "stack-ltr",
+    "body": [
+      "#stack( dir: ltr,",
+      "  $1",
+      ")"
+    ]
+  },
+  "color symbol": {
+    "prefix": "color symbol",
+    "body": "show ${1:symbol}: it => text(it, fill: rgb(\"${2:#006dea}\"))"
+  },
+  "color symbol regex": {
+    "prefix": "color symbol regex",
+    "body": "show regex(\"${1:symbol}\"): it => text(it, fill: rgb(\"${2:#006dea}\"))"
+  },
+  "style symbol": {
+    "prefix": "style symbol",
+    "body": "show \"${1:symbol}\": it => ${2:style}(it)"
+  },
+  "text color": {
+    "prefix": "text color",
+    "body": "text(${1:x}, fill: rgb(\"${2:#006dea}\"))"
+  },
+}

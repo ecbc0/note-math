@@ -1,0 +1,28 @@
+ref-1: 
+  title: Digital Design and Computer Architecture, RISC-V Edition
+  author: 
+    - S.L. Harris
+    - D.M. Harris
+
+ref-2: 
+  title: Differential Geometry and Lie Groups, A Second Course 
+  author: 
+  - J. Gallier 
+  - J. Quaintance
+
+ref-3: 
+  title: Undergraduate Analysis 
+  author: S. Lang
+
+ref-4:
+  title: Complex Analysis
+  author: S. Lang
+
+ref-5: 
+  title: Real and Functional Analysis
+  author: S. Lang
+
+ref-6:
+  title: Riemannian Geometry
+  author: Z.Q. Wang 
+  url: http://staff.ustc.edu.cn/~wangzuoq/Courses/24S-RiemGeom/index.html 

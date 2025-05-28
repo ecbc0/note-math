@@ -1,0 +1,125 @@
+{
+  "integral": {
+    "prefix": "integral",
+    "body": "integral"
+  },
+  "∫": {
+    "prefix": "integral",
+    "body": "∫"
+  },
+  "integral spacetime": {
+    "prefix": "integral-spacetime",
+    "body": "integral_(ℝ^(1,3)) #d x ( ${1:/* integrand */} )"
+  },
+  "SO(1,3) ⋊ ℝ^(1,3)": {
+    "prefix": [
+      "spacetime-group",
+      "Poincare-group"
+    ],
+    "body": "SO(1,3) ⋊ ℝ^(1,3)"
+  },
+  "SO(1,3)": {
+    "prefix": [
+      "SO13",
+      "Lorentz-group"
+    ],
+    "body": "SO(1,3)"
+  },
+  "ℝ^(1,3)": {
+    "prefix": [
+      "R13"
+    ],
+    "body": "ℝ^(1,3)"
+  },
+  "lim index": {
+    "prefix": "lim",
+    "body": "lim_(${1:n -> ∞})"
+  },
+  "sum index": {
+    "prefix": "sum-index",
+    "body": "sum_(${1:n ∈ ℕ})"
+  },
+  "product index": {
+    "prefix": "product-index",
+    "body": "product_(${1:n ∈ ℕ})"
+  },
+  "a ∈ A": {
+    "prefix": "a-in-A",
+    "body": "a in A"
+  },
+  "n ∈ ℕ": {
+    "prefix": "n-in-N",
+    "body": "n in ℕ"
+  },
+  "N ∈ ℕ": {
+    "prefix": "N-in-N",
+    "body": "N in ℕ"
+  },
+  "ε-N": {
+    "prefix": "epsilon-N",
+    "body": "forall ε > 0, exists N in ℕ, forall n > N, "
+  },
+  "ε-δ": {
+    "prefix": "epsilon-delta",
+    "body": "forall ε > 0, exists δ > 0, forall "
+  },
+  "map": {
+    "prefix": "map",
+    "body": [
+      "dmat( delim: #none ,",
+      "  ${1:/* domain */} &⟶ ${2:/* co-domain */} ;",
+      "  ${3:/* source */} &⟿ ${4:/* target */}",
+      ")"
+    ]
+  },
+  "map-middle": {
+    "prefix": "map-middle",
+    "body": [
+      "dmat( delim: #none ,",
+      "  ${1:/* domain */} , ⟶ , ${2:/* co-domain */} ;",
+      "  ${3:/* source */} , ⟿ , ${4:/* target */}",
+      ")"
+    ]
+  },
+  "d diff operator": {
+    "prefix": "d",
+    "body": "#d"
+  },
+  "d diff": {
+    "prefix": "diff",
+    "body": "(#d$3 ${2:f})/(#d ${1:x})"
+  },
+  "∂ diff": {
+    "prefix": "diff (partial)",
+    "body": "(∂$3 ${2:f})/(∂ ${1:x})",
+    "description": "partial diff"
+  },
+  "d/dx": {
+    "prefix": "dd",
+    "body": "(#d)/(#d ${1:x})"
+  },
+  "∂/∂x": {
+    "prefix": "ee",
+    "body": "(∂)/(∂ ${1:x})"
+  },
+  "Im(ℂ) i": {
+    "prefix": "i",
+    "body": "#i"
+  },
+  "|ket⟩ ⟨bra|": {
+    "prefix": "ket-bra",
+    "body": "ket($1) bra($1)"
+  },
+  "⟨bra|ket⟩": {
+    "prefix": "bra-ket",
+    "body": "⟨ $1 mid(|) $2 ⟩"
+  },
+  "⟨bra|op|ket⟩": {
+    "prefix": "bra-op-ket",
+    "body": "⟨ $1 mid(|) $2 mid(|) $3 ⟩"
+  },
+  "op ⋯ op": {
+    "prefix": "n-fold",
+    "body": "$1 ⋯ $1"
+  },
+}

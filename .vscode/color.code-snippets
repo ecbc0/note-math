@@ -1,0 +1,66 @@
+{
+	"#2f00ff": {
+		"prefix": "purple-blue",
+		"body": "#2f00ff"
+	},
+	"#8534ff": {
+		"prefix": "purple",
+		"body": "#8534ff"
+	},
+	"#0056e1": {
+		"prefix": "blue",
+		"body": "#0056e1"
+	},
+	"#006dea": {
+		"prefix": "blue-bright",
+		"body": "#006dea"
+	},
+	"#34a500": {
+		"prefix": "green",
+		"body": "#2b8900"
+	},
+	"#cf9f00": {
+		"prefix": "gold",
+		"body": "#cf9f00"
+	},
+	"#c3b900": {
+		"prefix": "yellow",
+		"body": "#c3b900"
+	},
+	"#a59d00":{
+		"prefix": "yellow-dark",
+		"body": "#a59d00"
+	},
+	"#d25b00": {
+		"prefix": "orange",
+		"body": "#d25b00"
+	},
+	"#e90000": {
+		"prefix": "red",
+		"body": "#e90000"
+	},
+	"#d10000": {
+		"prefix": "red-dark",
+		"body": "#d10000"
+	},
+	"#676767": {
+		"prefix": "gray",
+		"body": "#676767"
+	},
+	"#919191": {
+		"prefix": "silver",
+		"body": "#919191"
+	},
+	"#c10047": {
+		"prefix": "pink",
+		"body": "#c10047"
+	},
+	"#5ea100":{
+		"prefix": "green-yellow",
+		"body": "5ea100"
+	},
+	"#008690":{
+		"prefix": "aqua",
+		"body": "#008690"
+	},
+}
