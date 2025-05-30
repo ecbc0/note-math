@@ -1,3 +1,10 @@
+/*
+  until typst support link to label in workspace
+
+  or use vscode search/replace in workspace `crtl + shift + f/h` to search label
+
+  or wait for tinymist to support search label
+*/
 #let link-setting(body) = {
   show link: it => {
     if type(it.dest) == label {

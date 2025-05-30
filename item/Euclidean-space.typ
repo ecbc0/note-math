@@ -226,7 +226,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 ]
 let $#B$ be net of $ℝ^n$
 
-#tag("nested-closed-set-theorem") $ℝ^n$ 的有界闭集套的交集非空
+#tag("nested-closed-set-theorem") $ℝ^n$ 的有界闭集套的交集非空. 其交集也是闭集, 可以理解为 $⊂$ 线序链闭集套的最小元
 
 #tag("closed-net-theorem") $ℝ^n$ 的有界闭集网的交集非空
 *Proof*

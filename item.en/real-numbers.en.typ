@@ -134,10 +134,12 @@ $ℝ$ completeness #tag("completeness-real")
 
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
+
+  #tag("monotone-convergence") monotone bound #link(<limit-sequence-real>)[convergence] *Proof* use exact-bound
 ]
 #tag("nested-closed-interval-theorem") Nested interval theorem
 #indent[
-  Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ and infimum $a_0$ for the endpoints with $a_0 <= a_1$ to get the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$
+  Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ and infimum $a_0$ for the endpoints with $a_0 <= a_1$ to get the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 ] 
 #let B = c-bf("B","#919191")
 #let C = c-bf("C","#919191")
@@ -169,7 +171,30 @@ $ℝ$ completeness #tag("completeness-real")
   
   If the closed interval $⋂ #C _B in #B$, the contradiction is the same
 ]
+let $a_n : ℕ -> ℝ$
 
+def $ℕ -> ℝ$ sequence $k ⇝ sup_(k >= n) {a_k}$ monotone decreasing, $k ⇝ inf_(k >= n) {a_k}$ monotone increasing
+
+#tag("limsup") Upper limit
+
+$ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) sup_(k >= n) {a_k} $
+
+#tag("liminf") Lower limit
+
+  $ liminf_(n -> ∞) {a_n} := lim_(n -> ∞) inf_(n >= k) {a_k} = sup_(n in ℕ) inf_(n >= k) {a_k} $
+
+*Example*
+
+  - $a_k = 1 + 1/k$
+    $ 
+      sup_(n in ℕ) {a_n} &= 2 \ 
+      sup_(n >= k) {a_k} &= 1 + 1/k \
+      lim_(n -> ∞) sup_(n >= k) {a_k} &= 1 
+    $
+  - $a_k = 1 + (-1)^k$
+
+    $ limsup_(n -> ∞) {a_n} = 2 $
+    
 For the $ℕ$ sequence, define $"distance"{a_(n),a_(n+1),...} := sup_(m,m' >= n) |a_m - a_m'|$
 
 For a general net, define $"distance"(B) = sup_(a,a' in B) |a - a'|$

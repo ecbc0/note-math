@@ -1,6 +1,6 @@
 #import "style.typ": * 
 #import "color-symbol.typ": * 
-#import "var.typ": * 
+#import "math-var.typ": * 
 #import "function.typ": *
 #import "link-setting.typ": * 
 
@@ -14,4 +14,4 @@
 
 #show: module
 
-to delete color, regex replace in workspace `, fill: (rgb\([\w|#|"]*\)|[\w]*)`. _warning_: you may neeed to backup first
+to delete color, regex replace in workspace `, fill: (rgb\([\w|#|"]+?\)|[\w]+?)`. _warning_: you may neeed to backup first

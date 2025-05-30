@@ -134,10 +134,12 @@ $ℝ$ 完备性 #tag("completeness-real")
 
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
+
+  #tag("monotone-convergence") 单调有界 #link(<limit-sequence-real>)[收敛] *Proof* use 确界原理
 ]
 #tag("nested-closed-interval-theorem") 闭区间套定理
 #indent[
-  无论是 $ℕ$ 区间套还是 $⊂$ 线序链区间套, 线序意味着区间端点单调性, 对端点用上确界 $a_1$ 下确界 $a_0$ with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$
+  无论是 $ℕ$ 区间套还是 $⊂$ 线序链区间套, 线序意味着区间端点单调性, 对端点用上确界 $a_1$ 下确界 $a_0$ with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ 可以理解为 $⊂$ 线序链区间套的最小元
 ] 
 #let B = c-bf("B","#919191")
 #let C = c-bf("C","#919191")
@@ -169,6 +171,29 @@ $ℝ$ 完备性 #tag("completeness-real")
   
   如果闭区间 $⋂ #C _B in #B$, 同理矛盾
 ]
+let $a_n : ℕ -> ℝ$
+
+def $ℕ -> ℝ$ 序列 $k ⇝ sup_(k >= n) {a_k}$ 单调递减, $k ⇝ inf_(k >= n) {a_k}$ 单调递增
+
+#tag("limsup") 上极限
+
+$ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) sup_(k >= n) {a_k} $
+
+#tag("liminf") 下极限
+
+  $ liminf_(n -> ∞) {a_n} := lim_(n -> ∞) inf_(n >= k) {a_k} = sup_(n in ℕ) inf_(n >= k) {a_k} $
+
+*Example*
+
+  - $a_k = 1 + 1/k$
+    $ 
+      sup_(n in ℕ) {a_n} &= 2 \ 
+      sup_(n >= k) {a_k} &= 1 + 1/k \
+      lim_(n -> ∞) sup_(n >= k) {a_k} &= 1 
+    $
+  - $a_k = 1 + (-1)^k$
+
+    $ limsup_(n -> ∞) {a_n} = 2 $
 
 对于 $ℕ$ 序列定义 $"distance"{a_(n),a_(n+1),...} := sup_(m,m' >= n) |a_m - a_m'|$
 

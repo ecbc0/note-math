@@ -226,7 +226,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 ]
 let $#B$ be net of $ℝ^n$
 
-#tag("nested-closed-set-theorem") The intersection of nested bounded closed sets of $ℝ^n$ is non-empty
+#tag("nested-closed-set-theorem") The intersection of nested bounded closed sets of $ℝ^n$ is non-empty. The intersection result is also a closed set. It can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 
 #tag("closed-net-theorem") The intersection of a net of bounded closed sets of $ℝ^n$ is non-empty
 *Proof*
