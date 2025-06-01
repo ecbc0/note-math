@@ -8,9 +8,13 @@
       "},"
     ]
   },
+  "prop": {
+    "prefix": "prop",
+    "body": "*Prop*"
+  },
   "proof": {
     "prefix": "proof",
-    "body": "*Proof*"
+    "body": "_Proof_"
   },
   "example": {
     "prefix": "example",
@@ -27,10 +31,6 @@
   "alias": {
     "prefix": "alias",
     "body": "*alias*"
-  },
-  "reference": {
-    "prefix": "reference",
-    "body": "*Reference*"
   },
   "textmate rule": {
     "prefix": "textmate rule",

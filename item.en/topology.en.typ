@@ -34,11 +34,11 @@ $A subset closed(A)$
 
 $A$ is a closed set <==> $A$ contains all limit points of $A$
 
-forall $A$, $closed(A)$ is a closed set. *Proof* Other points do not satisfy $forall B in #B (x), A ∩ B = ∅$
+forall $A$, $closed(A)$ is a closed set. _Proof_ Other points do not satisfy $forall B in #B (x), A ∩ B = ∅$
 
 $closed(closed(A)) = closed(A)$
 
-$closed(A)$ is the smallest closed set surrounding $A$. *Proof* $A subset B ==> closed(A) subset closed(B)$ and closed set $B = closed(B)$ ==> $closed(A) subset B$
+$closed(A)$ is the smallest closed set surrounding $A$. _Proof_ $A subset B ==> closed(A) subset closed(B)$ and closed set $B = closed(B)$ ==> $closed(A) subset B$
 
 Limit points $x in closed(A)$ can be classified as isolated points or accumulation points
 

@@ -34,11 +34,11 @@ $A subset closed(A)$
 
 $A$ 是闭集 <==> $A$ 包含所有 $A$ 极限点
 
-forall $A$, $closed(A)$ 是闭集. *Proof* 其它点不满足 $forall B in #B (x), A ∩ B = ∅$
+forall $A$, $closed(A)$ 是闭集. _Proof_ 其它点不满足 $forall B in #B (x), A ∩ B = ∅$
 
 $closed(closed(A)) = closed(A)$
 
-$closed(A)$ 是包围 $A$ 的最小闭集. *Proof* $A subset B ==> closed(A) subset closed(B)$ and 闭集 $B = closed(B)$ ==> $closed(A) subset B$
+$closed(A)$ 是包围 $A$ 的最小闭集. _Proof_ $A subset B ==> closed(A) subset closed(B)$ and 闭集 $B = closed(B)$ ==> $closed(A) subset B$
 
 极限点 $x in closed(A)$ 可以分类为孤立点或聚点
 

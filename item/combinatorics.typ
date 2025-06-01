@@ -65,7 +65,7 @@ vs Newton 二项式 $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
   $
 总数量 $sum_(k_1 ,…, k_d in ℕ \ k_1 + ⋯ + k_d = n) binom(n,k_1 ,…, k_d) = d^n$, 即从 $d$ 个中可重复选 $n$ 次的数量 $d^n$
 
-*Proof*
+_Proof_
 #indent[
   重复 $n$ 次选取 $1 ,…, d$, 数量 $d^n$ <==> 映射 $1 ,…, n -> 1 ,…, d$ 的数量 $|{1 ,…, d}|^(|{1 ,…, n}|)$
 

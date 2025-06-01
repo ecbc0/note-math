@@ -13,7 +13,7 @@ Operations of limits
 
 #tag("rational-dense-in-real") $ℚ$ is dense in $ℝ$. $forall x,y ∈ ℝ, exists m/n ∈ ℚ, x < m/n < y$
 
-*Proof*
+_Proof_
 #indent[
   $x < y$ #link(<order-real>)[equivalent to]
 
@@ -36,27 +36,27 @@ Operations of limits
 
 $a > 1 ==> lim_(n -> ∞) a^n = ∞$
 
-*Proof* $x > 0 ==> (1 + x)^n = 1 + n x + ⋯ > 1 + n x$ and $lim_(n -> ∞) n x = ∞$
+_Proof_ $x > 0 ==> (1 + x)^n = 1 + n x + ⋯ > 1 + n x$ and $lim_(n -> ∞) n x = ∞$
 
 ==> $0 < a < 1 ==> lim_(n -> ∞) a^n = 0$
 
 #tag("geometric-series") Geometric series $x_n = 1 + a + a^2 + ⋯ + a^n$. $0 < a < 1 ==> lim_(n ->  ∞) x_n = 1/(1 - a)$
 
-*Proof* $(1 - a)(1 + a + a^2 + ⋯ + a^n) = 1 - a^(n + 1)$, $x_n = (1 - a^(n + 1))/(1 - a)$
+_Proof_ $(1 - a)(1 + a + a^2 + ⋯ + a^n) = 1 - a^(n + 1)$, $x_n = (1 - a^(n + 1))/(1 - a)$
 
 #tag("geometric-series-test") Geometric series convergence test. let $a_n > 0$. $a_(n + 1)/a_n < q < 1 ==> lim_(n ->  ∞) a_n = 0$
 
-*Proof* $a_n = a_n/a_(n - 1) ⋯ a_0/a_1 a_0 ⋯  < q^n a_0$
+_Proof_ $a_n = a_n/a_(n - 1) ⋯ a_0/a_1 a_0 ⋯  < q^n a_0$
 
 #tag("exponential-vs-power") Exponential growth is faster than power. $a > 1 , p ∈ ℕ ==> lim_(n -> ∞) n^p/a^n = 0$
 
-*Proof* define $b_n = n^p/a_n$ 
+_Proof_ define $b_n = n^p/a_n$ 
   
   use Geometric series convergence test $b_(n + 1)/b_n = ((n + 1)/n)^p 1/a -->_(n -> ∞) 1/a < 1$
 
 #tag("exponential-root-of-power-function") $lim_(n -> ∞) n^(1/n) = 1$
 
-*Proof* 
+_Proof_ 
 #indent[
   $forall a > 1, lim_(n -> ∞) n/a^n = 0 \
   exists N ∈ ℕ, forall n > N, n < a^n \
@@ -64,7 +64,7 @@ $a > 1 ==> lim_(n -> ∞) a^n = ∞$
 ]
 ==> $a > 0 ==> lim_(n -> ∞) a^(1/n) = 1$
 
-*Proof* 
+_Proof_ 
 #indent[
   When $a > 1$, by $lim_(n -> ∞) a^(1/n) < lim_(n ->  ∞) n^(1/n)$
   
@@ -72,13 +72,13 @@ $a > 1 ==> lim_(n -> ∞) a^n = ∞$
 ]
 #tag("factorial-vs-exponential") Factorial growth is faster than exponential. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
 
-*Proof* define $b_n = a^n/n!$. use Geometric series convergence test $b_(n+1)/b_n = a/n -> 0 < 1$
+_Proof_ define $b_n = a^n/n!$. use Geometric series convergence test $b_(n+1)/b_n = a/n -> 0 < 1$
 
 $n!$ corresponds to the number of bijections of ${1 ,…, n}$, $n^n$ corresponds to the number of self-mappings of ${1 ,…, n}$. $n^(n^n)$ etc. are similar
 
 #tag("iterated-power-vs-factorial") $lim_(n -> ∞) n!/n^n = 0$
 
-*Proof* define $b_n = ⋯$. use geometric series convergence test $b_(n+1)/b_n = (n/(n + 1))^n -> 1/e < 1$
+_Proof_ define $b_n = ⋯$. use geometric series convergence test $b_(n+1)/b_n = (n/(n + 1))^n -> 1/e < 1$
 
 Comparison of growth rates, real number version
 
@@ -96,7 +96,7 @@ Comparison of growth rates, real number version
 
   Dimensionless
 ]
-*Proof* 
+_Proof_ 
 #indent[
   <==> $product_(i = 1 .. n) (a_i)^(1/n) <= 1/n sum_(i = 1 .. n) a_i$
 
@@ -161,7 +161,7 @@ Comparison of growth rates, real number version
 
   $g : n ⇝ (n+1)^(n+1)/n^n$ monotonically increasing
 
-  *Proof* $(g(n+1))/(g(n)) > 1$ 
+  _Proof_ $(g(n+1))/(g(n)) > 1$ 
   
   Function $f : n ⇝ (a/n)^n$
 
@@ -171,7 +171,7 @@ Comparison of growth rates, real number version
 
   Therefore $(a/n)^n$ takes the maximum value near $n : (n+1)^(n+1)/n^n = a$
 
-  *Proof* of the monotonic property of $f$
+  _Proof_ of the monotonic property of $f$
   #indent[
     $(f(n+1))/(f(n)) = a ⋅ (n+1)^(n+1)/n^n \
     f(n+1) >= f(n) <==> (f(n+1))/(f(n)) >= 1 <==> a >= (n+1)^(n+1)/n^n$
@@ -184,7 +184,7 @@ $(n+1)^(n+1)/n^n ∼ e ⋅ (n+1)$ i.e. $lim_(n -> ∞) ((n+1)^(n+1)/n^n)/(n+1) =
 
 $ e = lim_(n -> ∞) ((n+1)/n)^n = sum_(n = 0)^∞ 1/n! $
 
-*Proof* 
+_Proof_ 
 #indent[
   Binomial expansion
   $
@@ -213,7 +213,7 @@ $ e = lim_(n -> ∞) ((n+1)/n)^n = sum_(n = 0)^∞ 1/n! $
 
 so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
 
-*Proof* of $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
+_Proof_ of $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
 #indent[
   def $f(n) = n^n/n!$
   
@@ -229,7 +229,7 @@ so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
 
     $(a_n > 0) and (lim_(n -> ∞) a_n = a) ==> lim_(n -> ∞) (a_1 ⋯ a_n)^(1/n) = a$
 
-  *Proof*
+  _Proof_
   #indent[
     $forall ε >= 0, exists N ∈ ℕ, forall n > N, a - ε <= a_n <= a + ε$
 
@@ -246,13 +246,13 @@ so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
 
 #tag("harmonic-series-diverge") Harmonic series diverges $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n = +∞$
 
-*Proof* $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges because it is not #link(<Cauchy-completeness-real>)[limit-distance-vanish]. e.g.
+_Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges because it is not #link(<Cauchy-completeness-real>)[limit-distance-vanish]. e.g.
 
   $ forall n ∈ ℕ, a_(2n) - a_n = 1/(n+1) + ⋯ + 1/(2n) >= n ⋅ 1/(2n) = 1/2 $
 
 #tag("Euler-constant") $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ converges as additive asymptotic. $lim_(n -> ∞) exp(1 + 1/2 + ⋯ + 1/n)/n = e^γ$ as multiplicative asymptotic
 
-*Proof* 
+_Proof_ 
 #indent[
   let $a_n = 1 + 1/2 + ⋯ + 1/n - log n$
 

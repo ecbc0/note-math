@@ -7,33 +7,33 @@
   $
     ⟨v_1 ⊗ ⋯ ⊗ v_k , w_1 ⊗ ⋯ ⊗ w_k⟩ = ⟨v_1,w_1⟩ ⋯ ⟨v_k,w_k⟩
   $  
-  Iterate through all $i_1 ,…, i_k$ orthonormal bases $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $(e_(i_1) ⊗ ⋯ ⊗ e_(i_k))^2 = e_(i_1)^2 ⋯ e_(i_k)^2$, to obtain the signature
+  Iterate through all $i_1 ,…, i_k$ orthonormal bases $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $⟨ e_(i_1) ⊗ ⋯ ⊗ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, to obtain the signature
 
   Alternation 
   $
     ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
   $
   Iterate through all $i_1 < ⋯ < i_k$, orthonormal bases $e_(i_1) ∧ ⋯ ∧
-  e_(i_k)$ with $(e_(i_1) ∧ ⋯ ∧ e_(i_k))^2 = e_(i_1)^2 ⋯ e_(i_k)^2$, to obtain the signature
+  e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, to obtain the signature
 
   let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 ]
-*Abbreviation* $v w := ⟨ v , w ⟩, v^2 := ⟨ v , v ⟩, |v| := (v^2)^(1/2)$
+*Abbreviation* $⟨ v,w ⟩ := ⟨ v , w ⟩, ⟨ v ⟩^2 := ⟨ v , v ⟩, |v| := (⟨ v ⟩^2)^(1/2)$
 
-#tag("quadratic-form-inequality-Euclidean") Inner product inequality (Euclidean). $0 <= (v ∧ w)^2 = det mat(v^2, v w; w v, w^2) = v^2 w^2 - (v w)^2$. i.e. $(v w)^2 <= v^2 w^2$ or $v w <= |v| |w|$
+#tag("quadratic-form-inequality-Euclidean") Inner product inequality (Euclidean). $0 <= ⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2, ⟨ v,w ⟩; ⟨ w,v ⟩, ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ w,v ⟩^2$. i.e. $⟨ w,v ⟩^2 <= ⟨ v ⟩^2 ⟨ w ⟩^2$ or $⟨ v,w ⟩ <= |v| |w|$
 
 #tag("triangle-inequality-Euclidean") Triangle inequality (Euclidean)
   - $|v + w| <= |v| + |w|$ 
 
-    *Proof*
+    _Proof_
       $
-        (v+w)^2 &= v^2 + 2 v w + w^2 \
-        &>= v^2 + 2 |v| |w| + w^2 \
+        ⟨ v+w ⟩^2 &= ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \
+        &>= ⟨ v ⟩^2 + 2 |v| |w| + ⟨ w ⟩^2 \
         &= (|v| + |w|)^2
       $
   - $|v - w| >= stretch(|, size: #120%)|v| - |w|stretch(|, size: #120%)$
 
-    *Proof*
+    _Proof_
       $
         |v| &<= |v-w| + |w| \
         |w| &<= |v-w| + |v|
@@ -87,7 +87,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
 
-*Proof* 
+_Proof_ 
 #let B = c-bf("B","#919191")
 #let C = c-bf("C","#919191")
 #indent[
@@ -105,7 +105,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 ]
 #tag("compact-imply-subsequence-converge") $A$ compact ==> sequence ${x_n} ⊂ A$ has a convergent subsequence. The same applies to nets
 
-*Proof* 
+_Proof_ 
 #indent[
   $B_n = {x_n,x_(n+1),...}$ forms a net $#B$
   
@@ -129,7 +129,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("circle-is-compact") $𝕊^1$ compact
 
-*Proof* $e^(#i θ) : ℝ -> 𝕊^1$ is continuous
+_Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ is continuous
 #indent[
   $𝕊^1$ is continuously isomorphic to $ℝ/ℤ$ (#link(<quotient-topology>)[]) is continuously isomorphic to $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ collapsing endpoints ${-1,1} = 𝕊^0$ (quotient-topology)
 
@@ -137,7 +137,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 ]
 #tag("closed(𝔹)-sphere-is-compact") 
 
-*Proof* 
+_Proof_ 
 #indent[
   $closed(𝔹)^1, 𝕊^1$ compact. Inductive hypothesis $closed(𝔹)^n, 𝕊^n$ compact
 
@@ -161,7 +161,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
     Another method $closed(𝔹)^(n+1)$ the boundary $𝕊^n$ collapses to a point to get $closed(𝔹)^(n+1)/𝕊^n ≃ 𝕊^(n+1)$ compact
     
-    *Proof* 
+    _Proof_ 
     #indent[
      $1/(1 - |x|^2) x : 𝔹^(n+1) <-> ℝ^(n+1)$ maps the sphere $𝕊(|x|)$ to the sphere $𝕊^((|x|)/(1 - |x|^2))$ and $r/(1 - r^2) : [0,1) <-> ℝ_(>= 0)$
 
@@ -171,7 +171,7 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
     ]
   ]
 ]
-Projective space (Euclidean) compact. *Proof* $ℝℙ^n := ℝ^(n+1)/{k x} ≃ 𝕊^n/{± x}$ 
+Projective space (Euclidean) compact. _Proof_ $ℝℙ^n := ℝ^(n+1)/{k x} ≃ 𝕊^n/{± x}$ 
 
 Similarly $ℂℙ^n$ (and $ℍℙ,𝕆ℙ$)
 
@@ -192,7 +192,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 
 #tag("Euclidean-space-compact-iff-bounded-closed") $A ⊂ ℝ^n$ compact <==> $A$ is a bounded closed set 
 
-*Proof*
+_Proof_
 #indent[
   - <==
   #indent[
@@ -229,7 +229,7 @@ let $#B$ be net of $ℝ^n$
 #tag("nested-closed-set-theorem") The intersection of nested bounded closed sets of $ℝ^n$ is non-empty. The intersection result is also a closed set. It can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 
 #tag("closed-net-theorem") The intersection of a net of bounded closed sets of $ℝ^n$ is non-empty
-*Proof*
+_Proof_
 #indent[
   Map the closed set of $ℝ^n$ to the closed set of $ℝ^n ⊔ {∞} ≃ 𝕊^n$, $𝕊^n$ is compact, so the intersection of nested closed sets or the intersection of a net of closed sets is non-empty. Boundedness makes it not converge to $∞$
 ]
@@ -265,7 +265,7 @@ let $a_n$ be a sequence $ℕ -> ℝ$
 
 - $sum_(.. ∞) a_n$ converges ==> $lim_(n -> ∞) a_n = 0$
   
-  *Proof* $forall ε > 0, exists N in ℕ, forall n > N, abs(sum_(i = 1 .. n) a_i - a) < ε/2$ 
+  _Proof_ $forall ε > 0, exists N in ℕ, forall n > N, abs(sum_(i = 1 .. n) a_i - a) < ε/2$ 
 
    ==> By the triangle inequality 
    
@@ -278,7 +278,7 @@ Rearrangement $f : ℕ <-> ℕ$ does not change the tail behavior of the sequenc
 
 If $a_n >= 0$, $sum a_n$ rearrangement invariant
 
-*Proof* 
+_Proof_ 
 #indent[
   $sum a_n < ∞ ==> forall ε > 0, exists N ∈ ℕ, forall m > ℕ, sum a_n - epsilon < sum_(n=0..m) a_n <= sum a_n$
 
@@ -304,7 +304,7 @@ $ sum |a_n| < ∞ <==> sum a_n^+, sum a_n^- < ∞ $
 
 #tag("series-rearrangement-absolutely-convergence-real") Absolute convergence $sum_(.. ∞) |a_n|$ ==> $sum_(.. ∞) a_n$ converges and rearrangement invariant 
   
-*Proof* $a_n = a_n^+ - a_n^-$ and use operation of convergent sequence 
+_Proof_ $a_n = a_n^+ - a_n^-$ and use operation of convergent sequence 
   $
     lim sum_(.. N) a_n 
     
@@ -328,7 +328,7 @@ The last possibility
 - Convergent case $a_n = (-1)^(n+1) 1/n$
 - Divergent case $a_n = (-1)^n$
 
-*Proof* 
+_Proof_ 
 #indent[
   - Converges to $A ∈ ℝ$
   #indent[
@@ -401,7 +401,7 @@ $sum a_n$ converges ==> $lim_(n -> ∞) a_n = 0$
 
   $sum |a_n| < ∞$ ==> $sum a_n$ converges and is rearrangement invariant 
 ]
-*Proof* 
+_Proof_ 
 #indent[
   - $sum a_n$ converges. by using the triangle inequality $abs(sum_(N+1)^∞ a_n) <= sum_(N+1)^∞ |a_n|$ and $ℝ^d$ #link(<Cauchy-completeness-Euclidean>)[Cauchy sequence converges]
 

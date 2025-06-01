@@ -45,10 +45,19 @@
       "]"
     ]
   },
+  "prop-indent": {
+    "prefix": "Prop-indent",
+    "body": [
+      "*Prop*",
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
   "proof-indent": {
     "prefix": "proof-indent",
     "body": [
-      "*Proof*",
+      "_Proof_",
       "#indent[",
       "  $1",
       "]"

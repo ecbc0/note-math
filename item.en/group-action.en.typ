@@ -76,7 +76,7 @@ set of cosets is isomorphic to the orbit $G/G_x ≃ G x$. so $|G x| = frac(|G|,|
 
 Change the base point of the orbit. forall $y = h x$ ==> $G x = G y$
 
-*Proof*
+_Proof_
 #indent[ 
   $
     dmat( delim: #none ,
@@ -99,7 +99,7 @@ Change the base point of the orbit. forall $y = h x$ ==> $G x = G y$
 ]
 
 #tag("decomposition-into-orbit") $G x != G x' <==> G x ∩ G x' = ∅$
-*Proof*
+_Proof_
 #indent[
   Contrapositive $G x = G x' <==> G x ∩ G x' != ∅$
 

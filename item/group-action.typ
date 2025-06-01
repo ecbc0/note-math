@@ -76,7 +76,7 @@ set of cosets 同构于 orbit $G/G_x ≃ G x$. so $|G x| = frac(|G|,|G_x|)$ whic
 
 换 orbit 基点. forall $y = h x$ ==> $G x = G y$
 
-*Proof*
+_Proof_
 #indent[ 
   $
     dmat( delim: #none ,
@@ -99,7 +99,7 @@ set of cosets 同构于 orbit $G/G_x ≃ G x$. so $|G x| = frac(|G|,|G_x|)$ whic
 ]
 
 #tag("decomposition-into-orbit") $G x != G x' <==> G x ∩ G x' = ∅$
-*Proof*
+_Proof_
 #indent[
   逆否命题 $G x = G x' <==> G x ∩ G x' != ∅$
 

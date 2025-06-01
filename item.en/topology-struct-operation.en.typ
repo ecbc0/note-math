@@ -15,7 +15,7 @@
 
 Inheritance of subtopology. $S' subset S$ is a $#T _S$ subtopology <==> $S' subset X$ is a $#T _X$ subtopology
 
-*Proof* According to the associativity of $∩$ + $S' subset S <==> S' ∩ S = S'$
+_Proof_ According to the associativity of $∩$ + $S' subset S <==> S' ∩ S = S'$
 
 #tag("closed-in-subspace") #link(<closed>)[] Characterization of in subspace
 #indent[

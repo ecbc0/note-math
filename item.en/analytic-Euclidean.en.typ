@@ -26,7 +26,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 #indent[
   $|v| < R$ ==> $a_n v^n$ absolutely converges
 
-  *Proof* 
+  _Proof_ 
   #indent()[  
     use #link(<geometric-series-test>)[geometric series test] and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
 
@@ -34,7 +34,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   ]
   $|v| > R$ ==> $a_n v^n$ absolutely diverges
 
-  *Proof* $1/R := limsup_(n -> ∞) {|a_n|^(1/n)}$ ==> for infinite terms in $n in ℕ$, $|a_n|^(1/n) ≈ 1/R ==> |a_n|^(1/n) |v| > 1 ==> |a_n v^n| > 1$
+  _Proof_ $1/R := limsup_(n -> ∞) {|a_n|^(1/n)}$ ==> for infinite terms in $n in ℕ$, $|a_n|^(1/n) ≈ 1/R ==> |a_n|^(1/n) |v| > 1 ==> |a_n v^n| > 1$
 ]
 #let closed(x) = math.macron(x)
 #let Closed(x) = math.overline(x)
@@ -127,7 +127,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 
   - There exists a direction $v/(|v|)$, forall $|v| > R$, $A_n (v^n)$ is absolutely divergent
 ]
-*Proof* (of divergence) 
+_Proof_ (of divergence) 
 #indent[
   use #link(<linear-map-induced-norm>)[] $|A_n|$, there exists $v_n in 𝕂ℙ^(d-1)$ such that $|A_n ((v_n)^n)| ≈ |A_n|$
 
@@ -317,7 +317,7 @@ Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using t
 
   same convergence radius (#link(<exponential-root-of-power-function>)[use] $lim_(m -> ∞) (m+n)^(1/m) = 1$)
 ]
-*Proof* (draft) Commutativity of derivatives $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
+_Proof_ (draft) Commutativity of derivatives $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
 
 *Abbreviation* $#d^m (#d^n f) = #d^(m+n) f$ Although the notation conflicts
 
@@ -333,12 +333,10 @@ Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using t
 
   - $𝕂^d -> 𝕂^(d')$ ...
 
-*Example* $(#d)/(#d x)$ operator and $a ⋅ exp(x)$ fixed point
-
 #tag("mean-value-theorem-analytic-1d") Differential mean value theorem
 - Intermediate value ver. $ exists c in (a,b), f(b) - f(a) = (b - a) f'(c) $
 - compact uniform linear control ver. $ |f(b) - f(a)| <= |b - a| sup_(c in [a,b]) |f'(c)| $
-*Proof*
+_Proof_
 #indent[
   
 
@@ -349,7 +347,7 @@ Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using t
   - $f ≡ 0$ 
   - $exists a',b' in (a,b), a' < b', sign f(a') ≠ sign f(b')$ 
   
-  ==> $exists c in (a',b'), f'(c) = 0$ *Proof* by #link(<mean-value-theorem-continuous>)[intermediate value theorem]
+  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #link(<mean-value-theorem-continuous>)[intermediate value theorem]
 
   The intermediate value theorem uses the complete order of $ℝ$
   
@@ -503,7 +501,7 @@ Attempt to define distance on the power series space. Inspired by
 
   $1/R = limsup {|A_n|^(1/n)}$
 
-  Triangle inequality $|A + B|^(1/n) <= |A|^(1/n) + |B|^(1/n)$ *Proof* by both sides $n$ power, binomial expansion
+  Triangle inequality $|A + B|^(1/n) <= |A|^(1/n) + |B|^(1/n)$ _Proof_ by both sides $n$ power, binomial expansion
 ]
 #tag("power-series-space") 
 #indent[  
@@ -521,7 +519,7 @@ Attempt to define distance on the power series space. Inspired by
     
     as uniform control for forall $n >= 1$
 ]
-Power series space is a distance space and complete. *Proof* by inheriting from $| |^(1/n)$ of forall $n >= 1$
+Power series space is a distance space and complete. _Proof_ by inheriting from $| |^(1/n)$ of forall $n >= 1$
 
 $"dist"$ is not a norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 

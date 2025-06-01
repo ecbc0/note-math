@@ -26,7 +26,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 #indent[
   $|v| < R$ ==> $a_n v^n$ 绝对收敛
 
-  *Proof* 
+  _Proof_ 
   #indent()[  
     use #link(<geometric-series-test>)[几何级数判别] and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
 
@@ -34,7 +34,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   ]
   $|v| > R$ ==> $a_n v^n$ 绝对发散
 
-  *Proof* $1/R := limsup_(n -> ∞) {|a_n|^(1/n)}$ ==> $n in ℕ$ 中无限项 $|a_n|^(1/n) ≈ 1/R ==> |a_n|^(1/n) |v| > 1 ==> |a_n v^n| > 1$
+  _Proof_ $1/R := limsup_(n -> ∞) {|a_n|^(1/n)}$ ==> $n in ℕ$ 中无限项 $|a_n|^(1/n) ≈ 1/R ==> |a_n|^(1/n) |v| > 1 ==> |a_n v^n| > 1$
 ]
 #let closed(x) = math.macron(x)
 #let Closed(x) = math.overline(x)
@@ -127,7 +127,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 
   - 存在方向 $v/(|v|)$, forall $|v| > R$, $A_n (v^n)$ 绝对发散
 ]
-*Proof* (of 发散) 
+_Proof_ (of 发散) 
 #indent[
   use #link(<linear-map-induced-norm>)[] $|A_n|$, 存在 $v_n in 𝕂ℙ^(d-1)$ 使 $|A_n ((v_n)^n)| ≈ |A_n|$
 
@@ -317,7 +317,7 @@ $
 
   same convergence radius (#link(<exponential-root-of-power-function>)[use] $lim_(m -> ∞) (m+n)^(1/m) = 1$)
 ]
-*Proof* (draft) 导数的交换性 $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
+_Proof_ (draft) 导数的交换性 $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
 
 *Abbreviation* $#d^m (#d^n f) = #d^(m+n) f$ 尽管记号冲突
 
@@ -333,12 +333,10 @@ $
 
   - $𝕂^d -> 𝕂^(d')$ ...
 
-*Example* $(#d)/(#d x)$ 算子与 $a ⋅ exp(x)$ 不动点
-
 #tag("mean-value-theorem-analytic-1d") 微分中值定理
 - 介值 ver. $ exists c in (a,b), f(b) - f(a) = (b - a) f'(c) $
 - compact 一致线性控制 ver. $ |f(b) - f(a)| <= |b - a| sup_(c in [a,b]) |f'(c)| $
-*Proof*
+_Proof_
 #indent[
   
 
@@ -349,7 +347,7 @@ $
   - $f ≡ 0$ 
   - $exists a',b' in (a,b), a' < b', sign f(a') ≠ sign f(b')$ 
   
-  ==> $exists c in (a',b'), f'(c) = 0$ *Proof* by #link(<mean-value-theorem-continuous>)[介值定理]
+  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #link(<mean-value-theorem-continuous>)[介值定理]
 
   介值定理使用了完整的 $ℝ$ 的序
   
@@ -503,7 +501,7 @@ for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #li
 
   $1/R = limsup {|A_n|^(1/n)}$
 
-  三角不等式 $|A + B|^(1/n) <= |A|^(1/n) + |B|^(1/n)$ *Proof* by 两边 $n$ power, 二项式展开
+  三角不等式 $|A + B|^(1/n) <= |A|^(1/n) + |B|^(1/n)$ _Proof_ by 两边 $n$ power, 二项式展开
 ]
 #tag("power-series-space") 
 #indent[  
@@ -521,7 +519,7 @@ for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #li
     
     as 一致控制 for forall $n >= 1$
 ]
-幂级数空间是 distance 空间 and complete. *Proof* by 继承自 $| |^(1/n)$ of forall $n >= 1$
+幂级数空间是 distance 空间 and complete. _Proof_ by 继承自 $| |^(1/n)$ of forall $n >= 1$
 
 $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 

@@ -15,23 +15,23 @@ Intuitively speaking, connected = cannot give any substantial decomposition. For
 
 Each $A_i$ of the closed set decomposition is an open set
 
-*Proof* $A_i = X ∖ Closed(⋃_(i' != i) A_i')$
+_Proof_ $A_i = X ∖ Closed(⋃_(i' != i) A_i')$
 
 The definition of connected is equivalent to the version decomposed into two closed sets
 
 $X = A ⊔ A'$ with $A,A'$ closed ==> $(X = A) or (X = A')$
 
-*Proof* Taking the limit of the decomposition yields $Or_(i in I) X = A_i$
+_Proof_ Taking the limit of the decomposition yields $Or_(i in I) X = A_i$
 
 Connected subset := topological subspace connected
 
 *Example* $ℝ$ is connected. $ℝ$ has connected and disconnected sets. Connected sets may not be $#T _ ℝ$ closed sets
 
-#tag("real-connected-is-interval") Connected sets of $ℝ$ are intervals *Proof* by interval connected + optimal interval decomposition + number of intervals in optimal interval decomposition $> 1$ is disconnected
+#tag("real-connected-is-interval") Connected sets of $ℝ$ are intervals _Proof_ by interval connected + optimal interval decomposition + number of intervals in optimal interval decomposition $> 1$ is disconnected
 
 #tag("connected-imply-closure-connected") $S$ is a connected set ==> $closed(S)$ is a connected set
 
-*Proof* 
+_Proof_ 
 #indent[
   $closed(S)$ close ==> $#T _(closed(S))$ closed set is $#T _X$ closed set
   
@@ -49,11 +49,11 @@ It is indeed the unique limit in the sense of #link(<net>)[net]. The net comes f
 
 $S$ is $#T _S$ connected or $S$ cannot be $#T _S$ closed set decomposition and $#T _X$ has closed set decomposition $A ⊔ A'$ ==> $(S subset A) ⊕ (S subset A')$
 
-*Proof* The closed set decomposition of $#T _S$, $(S ∩ A) ⊔ (S ∩ A')$, results in one of the sets being an empty set
+_Proof_ The closed set decomposition of $#T _S$, $(S ∩ A) ⊔ (S ∩ A')$, results in one of the sets being an empty set
 
 $A$ is a limit point connected set ==> $A$ is in the only one limit point connected component of $X$ 
 
-*Proof* The points of $A$ must be in $X$ and therefore in some connected component.
+_Proof_ The points of $A$ must be in $X$ and therefore in some connected component.
 
 ==> Even if $X$ is only decomposed into connected sets, it is already a connected component decomposition.
 
@@ -63,7 +63,7 @@ The union of connected sets $S_i$ with a common point $x$, $⋃_(i in I) S_i$, i
 
   So we only need to deal with the case of $⋃_(i in I) S_i = X$
 ]
-*Proof* The connected sets containing $x$ are all in the same connected component. This shows that $⋃_(i in I) S_i = X$ has only one connected component, and is therefore connected.
+_Proof_ The connected sets containing $x$ are all in the same connected component. This shows that $⋃_(i in I) S_i = X$ has only one connected component, and is therefore connected.
 
 A connected component is a maximal element of the $⊂$ #link(<maximal-linear-order>)[maximal linear order] of a connected set family.
 
@@ -73,11 +73,11 @@ The inverse-image of a continuous function transmits disconnectedness as contrap
 
 #let prod = $limits(product)_(i in I) X_i$
 
-*Proof* Closed set decomposition $Y = A ⊔ A'$ ==> Closed set decomposition $X = f^(-1)(A) ⊔ f^(-1)(A')$
+_Proof_ Closed set decomposition $Y = A ⊔ A'$ ==> Closed set decomposition $X = f^(-1)(A) ⊔ f^(-1)(A')$
 
 ==> #tag("mean-value-theorem-continuous") Intermediate Value Theorem for Continuous Functions. The image $f(X)$ of a continuous function $f : X -> ℝ$ is connected #link(<real-connected-is-interval>)[therefore] is an interval
 
-If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected. *Proof* let $Y = A ⊔ A'$ with $A,A'$ closed, prove that $A or A' = ∅$. Or $Y = ⋃_(y in Y) S(y_0,y)$ and the union of connected sets $S(y_0,y)$ that have a common point $y_0$ is connected
+If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected. _Proof_ let $Y = A ⊔ A'$ with $A,A'$ closed, prove that $A or A' = ∅$. Or $Y = ⋃_(y in Y) S(y_0,y)$ and the union of connected sets $S(y_0,y)$ that have a common point $y_0$ is connected
 
 ==> let $X$ be connected. If any two points in $Y$ are in some connected image $f(X)$ of a continuous function, then $Y$ is connected
 
@@ -85,7 +85,7 @@ If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected
 
 #tag("product-topology-preserve-connected") #link(<product-topology>)[Product topology] preserves connectedness
 
-*Proof*
+_Proof_
 #indent[
   Using the common point method + each $X_i$ connected ==> all "cross-shaped" subsets are connected
   $
@@ -98,7 +98,7 @@ If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected
   
   $closed(C) = prod$ and #link(<connected-imply-closure-connected>)[] ==> $prod$ connected
 
-  *Proof* of $closed(C) = X$
+  _Proof_ of $closed(C) = X$
   #indent[
     Just need to prove that each set of the point-net system of $prod$ intersects some cross shape $C_(j_1 ,…, j_n)$
 
@@ -115,7 +115,7 @@ All connected components of $prod$ are
 
 $ product_(i in I) A_(i, j(i)) : j in product_(i in I) J(i) $
 
-*Proof* Using #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and the product being connected implies product connectedness, so $product_(i in I) A_(i, j(i))$ is connected, thus it can no longer be decomposed
+_Proof_ Using #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and the product being connected implies product connectedness, so $product_(i in I) A_(i, j(i))$ is connected, thus it can no longer be decomposed
 
 Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology?)
 

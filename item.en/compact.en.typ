@@ -62,7 +62,7 @@ compact-subset is closed under finite unions. this is easy to proof
 
 #tag("closed-set-in-compact-space-is-compact") $#T _X$ compact and $S$ closed ==> $S$ compact
 
-*Proof*
+_Proof_
 #indent[
   $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed-in-subspace>)[]
 
@@ -74,7 +74,7 @@ Hausdorff + compact ==> closed. At this time, compact is closed for any intersec
 
 #tag("continous-preserve-compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
 
-*Proof*
+_Proof_
 #indent[
   
   Using topology-subspace, just need to handle the case $f(X) = Y$
@@ -101,7 +101,7 @@ Contrapositive: Under a continuous function, the inverse image of non-compact is
 
 #tag("product-topology-preserve-compact") #link(<product-topology>)[] preserves compact
 
-*Proof*
+_Proof_
 #indent[
   Take a net $\#A$ of $prod$, need to prove $⋂_(A in #A) closed(A) != ∅$ or $exists x in prod, x in ⋂_(A in #A) closed(A)$
 

@@ -7,33 +7,33 @@
   $
     ⟨v_1 ⊗ ⋯ ⊗ v_k , w_1 ⊗ ⋯ ⊗ w_k⟩ = ⟨v_1,w_1⟩ ⋯ ⟨v_k,w_k⟩
   $  
-  遍历所有 $i_1 ,…, i_k$ 正交基 $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $(e_(i_1) ⊗ ⋯ ⊗ e_(i_k))^2 = e_(i_1)^2 ⋯ e_(i_k)^2$, 得到 signature
+  遍历所有 $i_1 ,…, i_k$ 正交基 $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $⟨ e_(i_1) ⊗ ⋯ ⊗ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, 得到 signature
 
   交错化 
   $
     ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
   $
   遍历所有 $i_1 < ⋯ < i_k$, 正交基 $e_(i_1) ∧ ⋯ ∧
-  e_(i_k)$ with $(e_(i_1) ∧ ⋯ ∧ e_(i_k))^2 = e_(i_1)^2 ⋯ e_(i_k)^2$, 得到 signature
+  e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, 得到 signature
 
   let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 ]
-*Abbreviation* $v w := ⟨ v , w ⟩, v^2 := ⟨ v , v ⟩, |v| := (v^2)^(1/2)$
+*Abbreviation* $⟨ v,w ⟩ := ⟨ v , w ⟩, ⟨ v ⟩^2 := ⟨ v , v ⟩, |v| := (⟨ v ⟩^2)^(1/2)$
 
-#tag("quadratic-form-inequality-Euclidean") 内积不等式 (Euclidean). $0 <= (v ∧ w)^2 = det mat(v^2, v w; w v, w^2) = v^2 w^2 - (v w)^2$. i.e. $(v w)^2 <= v^2 w^2$ or $v w <= |v| |w|$
+#tag("quadratic-form-inequality-Euclidean") 内积不等式 (Euclidean). $0 <= ⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2, ⟨ v,w ⟩; ⟨ w,v ⟩, ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ w,v ⟩^2$. i.e. $⟨ w,v ⟩^2 <= ⟨ v ⟩^2 ⟨ w ⟩^2$ or $⟨ v,w ⟩ <= |v| |w|$
 
 #tag("triangle-inequality-Euclidean") 三角不等式 (Euclidean)
   - $|v + w| <= |v| + |w|$ 
 
-    *Proof*
+    _Proof_
       $
-        (v+w)^2 &= v^2 + 2 v w + w^2 \
-        &>= v^2 + 2 |v| |w| + w^2 \
+        ⟨ v+w ⟩^2 &= ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \
+        &>= ⟨ v ⟩^2 + 2 |v| |w| + ⟨ w ⟩^2 \
         &= (|v| + |w|)^2
       $
   - $|v - w| >= stretch(|, size: #120%)|v| - |w|stretch(|, size: #120%)$
 
-    *Proof*
+    _Proof_
       $
         |v| &<= |v-w| + |w| \
         |w| &<= |v-w| + |v|
@@ -87,7 +87,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") $ℝ$ 有界闭区间 ==> #link(<compact>)[]
 
-*Proof* 
+_Proof_ 
 #let B = c-bf("B","#919191")
 #let C = c-bf("C","#919191")
 #indent[
@@ -105,7 +105,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 ]
 #tag("compact-imply-subsequence-converge") $A$ compact ==> 序列 ${x_n} ⊂ A$ 存在子序列收敛. 对 net 同理
 
-*Proof* 
+_Proof_ 
 #indent[
   $B_n = {x_n,x_(n+1),...}$ 组成网 $#B$
   
@@ -129,7 +129,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("circle-is-compact") $𝕊^1$ compact
 
-*Proof* $e^(#i θ) : ℝ -> 𝕊^1$ 连续
+_Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ 连续
 #indent[
   $𝕊^1$ 连续同构于 $ℝ/ℤ$ (#link(<quotient-topology>)[]) 连续同构于 $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ 塌缩端点 ${-1,1} = 𝕊^0$ (quotient-topology)
 
@@ -137,7 +137,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 ]
 #tag("closed(𝔹)-sphere-is-compact") 
 
-*Proof* 
+_Proof_ 
 #indent[
   $closed(𝔹)^1, 𝕊^1$ compact. 归纳假设 $closed(𝔹)^n, 𝕊^n$ compact
 
@@ -161,7 +161,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
     另一种方法 $closed(𝔹)^(n+1)$ 边界 $𝕊^n$ 塌缩到一点得到 $closed(𝔹)^(n+1)/𝕊^n ≃ 𝕊^(n+1)$ compact
     
-    *Proof* 
+    _Proof_ 
     #indent[
      $1/(1 - |x|^2) x : 𝔹^(n+1) <-> ℝ^(n+1)$ 将球面 $𝕊(|x|)$ 映射到球面 $𝕊^((|x|)/(1 - |x|^2))$ and $r/(1 - r^2) : [0,1) <-> ℝ_(>= 0)$
 
@@ -171,7 +171,7 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
     ]
   ]
 ]
-射影空间 (Euclidean) compact. *Proof* $ℝℙ^n := ℝ^(n+1)/{k x} ≃ 𝕊^n/{± x}$ 
+射影空间 (Euclidean) compact. _Proof_ $ℝℙ^n := ℝ^(n+1)/{k x} ≃ 𝕊^n/{± x}$ 
 
 同理 $ℂℙ^n$ (and $ℍℙ,𝕆ℙ$)
 
@@ -192,7 +192,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 
 #tag("Euclidean-space-compact-iff-bounded-closed") $A ⊂ ℝ^n$ compact <==> $A$ 有界闭集 
 
-*Proof*
+_Proof_
 #indent[
   - <==
   #indent[
@@ -229,7 +229,7 @@ let $#B$ be net of $ℝ^n$
 #tag("nested-closed-set-theorem") $ℝ^n$ 的有界闭集套的交集非空. 其交集也是闭集, 可以理解为 $⊂$ 线序链闭集套的最小元
 
 #tag("closed-net-theorem") $ℝ^n$ 的有界闭集网的交集非空
-*Proof*
+_Proof_
 #indent[
   将 $ℝ^n$ 闭集对应到 $ℝ^n ⊔ {∞} ≃ 𝕊^n$ 闭集, $𝕊^n$ compact, 所以闭集套 or 闭集网交集非空. 有界使得不收敛到 $∞$
 ]
@@ -265,7 +265,7 @@ let $a_n$ 是序列 $ℕ -> ℝ$
 
 - $sum_(.. ∞) a_n$ 收敛 ==> $lim_(n -> ∞) a_n = 0$
   
-  *Proof* $forall ε > 0, exists N in ℕ, forall n > N, abs(sum_(i = 1 .. n) a_i - a) < ε/2$ 
+  _Proof_ $forall ε > 0, exists N in ℕ, forall n > N, abs(sum_(i = 1 .. n) a_i - a) < ε/2$ 
 
    ==> 由三角不等式 
    
@@ -278,7 +278,7 @@ let $a_n$ 是序列 $ℕ -> ℝ$
 
 如果 $a_n >= 0$, $sum a_n$ 重排不变
 
-*Proof* 
+_Proof_ 
 #indent[
   $sum a_n < ∞ ==> forall ε > 0, exists N ∈ ℕ, forall m > ℕ, sum a_n - epsilon < sum_(n=0..m) a_n <= sum a_n$
 
@@ -304,7 +304,7 @@ $ sum |a_n| < ∞ <==> sum a_n^+, sum a_n^- < ∞ $
 
 #tag("series-rearrangement-absolutely-convergence-real") 绝对收敛 $sum_(.. ∞) |a_n|$ ==> $sum_(.. ∞) a_n$ 收敛且重排不变 
   
-*Proof* $a_n = a_n^+ - a_n^-$ and use 收敛序列的运算 
+_Proof_ $a_n = a_n^+ - a_n^-$ and use 收敛序列的运算 
   $
     lim sum_(.. N) a_n 
     
@@ -328,7 +328,7 @@ $sum a_n^+ = ∞$ and $sum a_n^- < ∞$ ==> $sum a_n = +∞$ 且重排不变
 - 收敛的情况 $a_n = (-1)^(n+1) 1/n$
 - 不收敛的情况 $a_n = (-1)^n$
 
-*Proof* 
+_Proof_ 
 #indent[
   - 收敛到 $A ∈ ℝ$
   #indent[
@@ -401,7 +401,7 @@ $sum a_n$ 收敛 ==> $lim_(n -> ∞) a_n = 0$
 
   $sum |a_n| < ∞$ ==> $sum a_n$ 收敛且重排不变 
 ]
-*Proof* 
+_Proof_ 
 #indent[
   - $sum a_n$ 收敛. by 用三角不等式 $abs(sum_(N+1)^∞ a_n) <= sum_(N+1)^∞ |a_n|$ 和 $ℝ^d$ #link(<Cauchy-completeness-Euclidean>)[Cauchy 序列收敛]
 

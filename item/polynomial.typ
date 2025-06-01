@@ -37,7 +37,7 @@ $
   &= a_p (x + Δ) \
   &= sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
 $
-*Proof* $f(y + v) = f(x + (Δ + v))$ 展开计算, 为对比系数, 收集 $v$ 幂函数项, by 求和的交换 
+_Proof_ $f(y + v) = f(x + (Δ + v))$ 展开计算, 为对比系数, 收集 $v$ 幂函数项, by 求和的交换 
 
 $
   sum_(k = 0 .. n) a_k (x) (v + Δ)^k 
@@ -123,7 +123,7 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 由于求和的交换性, 逐次差分的顺序不影响最终结果
 
-*Proof* of #link(<difference-symmetric-tensor>)[]
+_Proof_ of #link(<difference-symmetric-tensor>)[]
 #indent[
   $
     sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
@@ -139,7 +139,7 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
   $
   对任何非空有限集 $X$, $sum_(A ⊂ X) (-1)^(|A|) = 0$
 
-  *Proof*
+  _Proof_
   #indent[
     #link(<combination>)[] $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ 有 $binom(|X|,|A|)$ 种选择
 
@@ -185,7 +185,7 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 $f(x + v) = a_n v^m, m < n$ 的 $n$ 阶差分是 $0$
 
-由此得到, 多项式函数决定其多重对称线性函数表示 *Proof* 先 $n$ 差分得到相同的 $a_n$, 两者同时移除 $a_n$ 后, 仍然是相同的多项式函数, 阶数 $< n$, 继续 $n-1$ 差分得到相同的 $a_(n-1)$ ...
+由此得到, 多项式函数决定其多重对称线性函数表示 _Proof_ 先 $n$ 差分得到相同的 $a_n$, 两者同时移除 $a_n$ 后, 仍然是相同的多项式函数, 阶数 $< n$, 继续 $n-1$ 差分得到相同的 $a_(n-1)$ ...
 
 对于幂级数, 有限阶差分总是无法给出零
 

@@ -37,7 +37,7 @@ $
   &= a_p (x + Δ) \
   &= sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
 $
-*Proof* $f(y + v) = f(x + (Δ + v))$ expand the calculation, to compare coefficients, collect $v$ power function terms, by the exchange of summation 
+_Proof_ $f(y + v) = f(x + (Δ + v))$ expand the calculation, to compare coefficients, collect $v$ power function terms, by the exchange of summation 
 
 $
   sum_(k = 0 .. n) a_k (x) (v + Δ)^k 
@@ -123,7 +123,7 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 Due to the commutativity of summation, the order of successive differences does not affect the final result
 
-*Proof* of #link(<difference-symmetric-tensor>)[]
+_Proof_ of #link(<difference-symmetric-tensor>)[]
 #indent[
   $
     sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
@@ -139,7 +139,7 @@ Due to the commutativity of summation, the order of successive differences does 
   $
   For any non-empty finite set $X$, $sum_(A ⊂ X) (-1)^(|A|) = 0$
 
-  *Proof*
+  _Proof_
   #indent[
     #link(<combination>)[] $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ there are $binom(|X|,|A|)$ choices
 
@@ -185,7 +185,7 @@ The *symmetry* of the *symmetric* multilinear function $a_m$ allows the properti
 
 The $n$-th order difference of $f(x + v) = a_n v^m, m < n$ is $0$
 
-From this, we get that the polynomial function determines its multiple symmetric linear function representation *Proof* First, $n$-difference gives the same $a_n$, after removing $a_n$ from both sides, it is still the same polynomial function, the order is $< n$, continue $n-1$ difference to get the same $a_(n-1)$ ...
+From this, we get that the polynomial function determines its multiple symmetric linear function representation _Proof_ First, $n$-difference gives the same $a_n$, after removing $a_n$ from both sides, it is still the same polynomial function, the order is $< n$, continue $n-1$ difference to get the same $a_(n-1)$ ...
 
 For power series, finite-order difference can never give zero
 

@@ -62,7 +62,7 @@ compact-subset 对有限并集封闭. this is easy to proof
 
 #tag("closed-set-in-compact-space-is-compact") $#T _X$ compact and $S$ closed ==> $S$ compact
 
-*Proof*
+_Proof_
 #indent[
   $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed-in-subspace>)[]
 
@@ -74,7 +74,7 @@ Hausdorff + compact ==> closed. 此时 compact 对任意交集封闭
 
 #tag("continous-preserve-compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
 
-*Proof*
+_Proof_
 #indent[
   
   使用 topology-subspace, 只需处理情况 $f(X) = Y$
@@ -101,7 +101,7 @@ Hausdorff + compact ==> closed. 此时 compact 对任意交集封闭
 
 #tag("product-topology-preserve-compact") #link(<product-topology>)[] 保持 compact
 
-*Proof*
+_Proof_
 #indent[
   取 $prod$ 的网 $#A$, 需要证明 $⋂_(A in #A) closed(A) != ∅$ or $exists x in prod, x in ⋂_(A in #A) closed(A)$
 

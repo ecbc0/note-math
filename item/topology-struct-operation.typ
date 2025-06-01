@@ -15,7 +15,7 @@
 
 子拓扑的继承性. $S' subset S$ 是 $#T _S$ 子拓扑 <==> $S' subset X$ 是 $#T _X$ 子拓扑
 
-*Proof* 根据 $∩$ 的结合性 + $S' subset S <==> S' ∩ S = S'$
+_Proof_ 根据 $∩$ 的结合性 + $S' subset S <==> S' ∩ S = S'$
 
 #tag("closed-in-subspace") #link(<closed>)[] in subspace 的刻画
 #indent[

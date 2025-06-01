@@ -65,7 +65,7 @@ vs Newton binomial $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
   $
 Total number $sum_(k_1 ,…, k_d in ℕ \ k_1 + ⋯ + k_d = n) binom(n,k_1 ,…, k_d) = d^n$, which is the number of selecting $n$ times from $d$ with replacement $d^n$
 
-*Proof*
+_Proof_
 #indent[
   Selecting $n$ times with replacement from $1 ,…, d$, number $d^n$ <==> number of mappings $1 ,…, n -> 1 ,…, d$, $|{1 ,…, d}|^(|{1 ,…, n}|)$
 
