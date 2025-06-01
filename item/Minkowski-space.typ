@@ -14,7 +14,7 @@ if $span(v,w) ≃ ℝ^(1,1)$, 可能
   *Example* 
   #indent()[
     $v = vec(1,0), w = vec(a,b)$, where $0 < |b| < |a|$ \
-    $w^2 = a^2 - b^2 > 0$ \
+    $⟨ w ⟩^2 = a^2 - b^2 > 0$ \
     可以线性生成 $vec(0,1)$
   ]
 - 1 time, 1 space \
@@ -28,67 +28,137 @@ if $span(v,w) ≃ ℝ^(1,1)$, 可能
   $v = vec(0,1), w = vec(a,b)$, where $0 < |a| < |b|$
 - other cases (symmetry of time $<-->$ space)
 
-use signature 惯性, 正交基延拓 /* link */ ==> Minkowski $(1,n)$ 在 $dim = 2$ 的 $span(v,w)$ 的可能 signature 是 
+考虑一般的 $ℝ^(1,n)$ 中的 $span(v,w)$
+
+*Prop* 在 $ℝ^(1,n)$ 非退化二次型下, light-like $v$ 不正交于 
+- time-like
+- 与自身共线 $k v$ 之外的 light-like
+
+_Proof_ (@ref-7)
+#indent[
+  根据情况取一个正交分解 $ℝ^(1,n) = ℝ_"time" ⊕ ℝ^n_"space"$
+  $
+    v &= v_0 + bf(v) \ 
+    w &= w_0 + bf(w)
+  $
+  - $w$ time-like ==> let $w = w_0$ ==> $⟨ v,w ⟩ = v_0 w_0 != 0$
+  - $w$ light-like 
+  #indent[
+    $
+      dmat(delim: #none ,
+        ⟨ v ⟩^2,=,0,==>,v_0^2,=,⟨ bf(v) ⟩^2 ;
+      ⟨ w ⟩^2,=,0,==>,w_0^2,=,⟨ bf(w) ⟩^2 ;
+      ⟨ v,w ⟩,=,0,==>,v_0 w_0,=,⟨ bf(v) , bf(w) ⟩
+      )
+    $
+    我们证明 $w_0 ⋅ v = v_0 ⋅ w$
+    $
+      &w_0 ⋅ v - v_0 ⋅ w \ 
+      =& w_0 ⋅ bf(v) - v_0 ⋅ bf(w) \ 
+      in& ℝ^n_"space"
+    $
+    but
+    $
+      &⟨ w_0 ⋅ bf(v) - v_0 ⋅ bf(w) ⟩^2 \
+      =& w_0^2 ⟨ bf(v) ⟩^2 - 2 v_0 w_0 ⋅ ⟨ bf(v) , bf(w) ⟩ + v_0^2 ⟨ bf(w) ⟩^2 \
+      =& 0
+    $
+    space-like 但长度零, 所以 $w_0 ⋅ bf(v) - v_0 ⋅ bf(w) = 0$
+
+    ==> $w_0 ⋅ v - v_0 ⋅ w = 0$
+  ]
+]
+*Prop* $ℝ^(1,n)$ 的二维子空间的 signature 不可能是 $1,0$ or $0,0$
+
+_Proof_ 用上一个定理
+
+*Prop* $ℝ^(1,n)$ 的两个不共线 time-like $v,w$ 的展开 $span(v,w)$ 的 signature 是 $1,1$
+
+_Proof_ 以其中一个为初始的基来生成 $span(v,w)$ 正交基, 但 signature 不能是 $1,0$, 所以只能是 $1,1$
+
+$v$ 的射影 ${k v in ℝ^(1,3) : k in ℝ} ⊂ "cone"$
+
+*Prop* let $⟨ v ⟩^2 = 0$, let $w$ time-like or light-like with $v,w$ 不共线. 则 $span(v,w) ⊄ "cone"$
+
+_Proof_
+#indent[
+  已知 $⟨ v,w ⟩ != 0$
+
+  在光锥上等价于解变量 $b$ 的二次方程 $0 = (a v + b w)^2 = a b ⋅ ⟨ v,w ⟩ + b^2 ⋅ ⟨ w ⟩^2 = b ( b ⋅ ⟨ w ⟩^2 + a ⋅ ⟨ v,w ⟩)$
+
+  $b != 0 ==> b = cases(
+    - (a ⋅ ⟨ v,w ⟩)/(⟨ w ⟩^2) &"if" ⟨ w ⟩^2 != 0,
+    ℝ &"if" ⟨ w ⟩^2 = 0
+  )$
+]
+*Prop* $ℝ^(1,n)$ 的两个不共线 light-like $v,w$ 的展开 $span(v,w)$ 的 signature 是 $1,1$ or $0,1$
+
+_Proof_ $ℝ^(0,2)$ Euclidean 没有 light-like, 所以无其它可能性
+
+*Example*
+- $ℝ^(1,1)$ 的 $vec(1,±1)$
+- $ℝ^(1,2)$ 的 $vec(1,1,0),vec(1,0,1)$. 相减得到正交基 $vec(1,1,0),vec(0,1,-1)$
+
+
+*Prop* Minkowski $(1,n)$ 在 $dim = 2$ 的 $span(v,w)$ 的可能 signature 是 
 
 - $1,1$
 - $0,2$
+- $0,1$
 
-#tag("time-space-decompostion") 正交分解
+#tag("simultaneity-relativity") 相对论同时性
 #indent[
   use 正交基延拓
 
   in $1,n$, $dim = n$ space-like 子空间的正交补是 $dim = 1$ time-like 子空间 
 
-  ==> ($span(v,v') ≃ ℝ^2$ space-like <==> 存在 time-like $w$ 同时正交于 $v,v'$)
+  - ($span(v,v') ≃ ℝ^2$ space-like <==> 存在 time-like $w$ 同时正交于 $v,v'$)
 
-  ==> ($span(v,v') ≃ ℝ^(1,1)$ not space-like <==> 不存在 time-like $w$ 同时正交于 space-like $v,v'$)
+  - ($span(v,v') ≃ ℝ^(1,1)$ not space-like <==> 不存在 time-like $w$ 同时正交于 space-like $v,v'$)
 
   直观: 不同 space-like 子空间 $S,S'$ 无法使用兼容的时间计算方式 or $S,S'$ 的 time-like 正交补不相同
 ]
-in coordinate
+use $ℝ^(1,n)$ 正交分解
 
-#let time = "time"
-#let space = "space"
+$v = v_0 + bf(v)$
 
-$v = v.time + v.space$
-
-$v w = v.time ⋅ w.time - v.space ⋅ w.space$
+$⟨ v,w ⟩ = v_0 w_0 - ⟨ bf(v) , bf(w) ⟩$
   
-- $v^2,w^2 >= 0$
+- $⟨ v ⟩^2,⟨ w ⟩^2 >= 0$
 #indent[
-  分类讨论 $sign(v.time ⋅ w.time)$. 内积的时间相乘的符号决定内积的符号
+  分类讨论 $sign(v_0 w_0)$. 内积的时间相乘的符号决定内积的符号
   $ 
-    sign(v.time ⋅ w.time) 
-    &= sign(v.time ⋅ w.time - v.space ⋅ w.space) \ 
-    &= sign(v w) 
+    sign(v_0 w_0) 
+    &= sign(v_0 w_0 - ⟨ bf(v) , bf(w) ⟩) \ 
+    &= sign(⟨ v,w ⟩) 
   $
 ]
-- $v^2,w^2 <= 0$
+- $⟨ v ⟩^2,⟨ w ⟩^2 <= 0$
 #indent[
-  分类讨论 $sign(v.space ⋅ w.space)$. 内积的空间相乘的符号决定内积的符号
+  分类讨论 $sign(⟨ bf(v) , bf(w) ⟩)$. 内积的空间相乘的符号决定内积的符号
   $ 
-    sign(- v.space ⋅ w.space) 
-    &= sign(v.time ⋅ w.time - v.space ⋅ w.space) \ 
-    &= sign(v w) 
+    sign(- ⟨ bf(v) , bf(w) ⟩) 
+    &= sign(v_0 w_0 - ⟨ bf(v) , bf(w) ⟩) \ 
+    &= sign(⟨ v,w ⟩) 
   $
 ]  
-in Euclidean, we have #link(<quadratic-form-inequality-Euclidean>)[内积不等式] $|v w|^2 <= abs(v) abs(w)$ ==> #link(<triangle-inequality-Euclidean>)[三角不等式] $|v+w| <= |v|+|w|$
+in Euclidean, we have #link(<quadratic-form-inequality-Euclidean>)[内积不等式] $|⟨ v,w ⟩|^2 <= abs(v) abs(w)$ ==> #link(<triangle-inequality-Euclidean>)[三角不等式] $|v+w| <= |v|+|w|$
 
 in signature $p,q$ 二次型, 这一般不成立
 
 将 $p,q$ 二次型 #link(<tensor-induced-quadratic-form>)[导出] 到交错二阶线性 
 
-$(v ∧ w)^2 = det mat(v^2 , v w ; w v , w^2) = v^2 w^2 - (v w)^2$
+$⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2 , ⟨ v,w ⟩ ; w v , ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ v,w ⟩^2$
 
 #tag("quadratic-form-inequality-Minkowski") 内积不等式
 #indent[
   in $ℝ^(1,n)$, let $v,w$ not co-linear, so $dim(span(v,w)) = 2$
 
   $ℝ^(1,n)$ 二次型限制在 $span(v,w)$ 上, signature 
-  - $1,1$ => $(v ∧ w)^2 = v^2 w^2 - (v w)^2 < 0$ => $v^2 w^2 < (v w)^2$
-  - $0,2$ => $(v ∧ w)^2 = v^2 w^2 - (v w)^2 > 0$ => $v^2 w^2 > (v w)^2$
+  - $1,1$ ==> $⟨ v ∧ w ⟩^2 = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ v,w ⟩^2 < 0$ ==> $⟨ v ⟩^2 ⟨ w ⟩^2 < ⟨ v,w ⟩^2$
+  - $0,2$ ==> $⟨ v ∧ w ⟩^2 = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ v,w ⟩^2 > 0$ ==> $⟨ v ⟩^2 ⟨ w ⟩^2 > ⟨ v,w ⟩^2$
 ]
-*Proof*
+_Proof_
 #indent[
   $dim(span(v,w)) = 2$ ==> $dim(⋀^2 span(v,w)) = binom(2,2) = 1$
 
@@ -96,135 +166,81 @@ $(v ∧ w)^2 = det mat(v^2 , v w ; w v , w^2) = v^2 w^2 - (v w)^2$
 
   signature
 
-  - $1,1$ of $span(v,w)$ ==> $(0,1)$ of $⋀^2 span(v,w)$ 
+  - $1,1$ of $span(v,w)$ ==> $(-1)$ of $⋀^2 span(v,w)$ 
   
-    *Proof* 
+    _Proof_ 
     #indent[
       $1,1$ of $span(v,w)$ 正交基 $e_0,e_1$, $e_0^2 = 1, e_1^2 = -1$ ==> $⋀^2 span(v,w)$ 正交基 $e_0 ∧ e_1$, $(e_0 ∧ e_1)^2 = e_0^2 ⋅ e_1^2 = -1$
     ]
-    ==> $(v ∧ w)^2 < 0$, i.e. 内积不等式
+    ==> $⟨ v ∧ w ⟩^2 < 0$, i.e. 内积不等式
 
-  - $0,2$ of $span(v,w)$ ==> $(1,0)$ of $⋀^2 span(v,w)$
+  - $0,2$ of $span(v,w)$ ==> $(+1)$ of $⋀^2 span(v,w)$
 
-    ==> $(v ∧ w)^2 > 0$
+    ==> $⟨ v ∧ w ⟩^2 > 0$
 ]
 #tag("triangel-inequality-Minkowski") 三角不等式
 #indent[
-  $(v+w)^2 = v^2 + 2 v w + w^2$
+  $⟨ v + w ⟩^2 = ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2$
 
   - 2 time 
   #indent[
-    $v^2 > 0$, $|v| := (v^2)^(1/2)$
+    $⟨ v ⟩^2 > 0$, $|v| := (⟨ v ⟩^2)^(1/2)$
 
-    - $v w > 0$ ==> $|v+w| > |v| + |w|$
-    - $v w < 0$ ==> $(v+w)^2 < (|v| - |w|)^2$
+    - $⟨ v,w ⟩ > 0$ ==> $|v+w| > |v| + |w|$
+    - $⟨ v,w ⟩ < 0$ ==> $⟨ v + w ⟩^2 < (|v| - |w|)^2$
 
     (cf. #link(<same-time-direction>)[])
   ]
-  - 2 space
-  #indent[
-    $v^2 < 0$, $|v| := (-v^2)^(1/2)$
-
-    - $v w < 0$ ==> $|v+w| > |v| + |w|$
-    - $v w > 0$ ==> $(v+w)^2 > - (|v| - |w|)^2$
-
-    symmetric to case (2 time)
-  ]
-  - 1 time, 1 space. no special result?
-
   - 1 time, 1 null
   #indent[  
-    $w^2 = 0$ ==> $(v+w)^2 = v^2 + 2 v w$
-
-    time $v$, null $w$ 
-    - $v w > 0$ ==> $(v+w)^2 > v^2$
-    - $v w < 0$ ==> $(v+w)^2 < v^2$
-  ]
-  - 2 null 
-  #indent[
-    $(v+w)^2 = 2 v w$ 
-    
-    in coordinate, $vec(a,a) ⋅ vec(b,-b) = 2 a b$
+    $⟨ w ⟩^2 = 0$ ==> $⟨ v + w ⟩^2 = ⟨ v ⟩^2 + 2 ⟨ v,w ⟩$
+    - $⟨ v,w ⟩ > 0$ ==> $⟨ v + w ⟩^2 > ⟨ v ⟩^2$
+    - $⟨ v,w ⟩ < 0$ ==> $⟨ v + w ⟩^2 < ⟨ v ⟩^2$
   ]
 ]
-*Proof* 
+_Proof_ of 2 time-like
 #indent[
-  - 2 time
+  $⟨ v ⟩^2, ⟨ w ⟩^2 > 0$
+
+  $|v| := (⟨ v ⟩^2)^(1/2)$
+
+  - $⟨ v,w ⟩ > 0$
   #indent[
-    $v^2, w^2 > 0$
+    $⟨ v + w ⟩^2 > 0$
 
-    $|v| := (v^2)^(1/2)$
+    use #link(<quadratic-form-inequality-Minkowski>)[] $⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ v,w ⟩^2 = ⟨ v ∧ w ⟩^2 < 0$
 
-    - $v w > 0$
-    #indent[
-      $(v+w)^2 > 0$
+    ==> $abs(v) abs(w) < ⟨ v,w ⟩$
 
-      use #link(<quadratic-form-inequality-Minkowski>)[] $v^2 w^2 - (v w)^2 = (v ∧ w)^2 < 0$
-
-      ==> $abs(v) abs(w) < v w$
-
-      ==> 
-      $
-        (v+w)^2 
-        &> v^2 + 2 abs(v) abs(w) + w^2 \
-        &= (|v| + |w|)^2
-      $
-      ==> $ |v+w| > |v| + |w| $
-    ]
-    - $v w < 0$
-    #indent[
-      $v w < 0$ 
-
-      ==> $- abs(v) abs(w) > v w$
-
-      ==> 
-      $ 
-        (v+w)^2 
-        &< v^2 - 2 abs(v) abs(w) + w^2 \
-        &= (|v| - |w|)^2      
-      $
-      $sign((v+w)^2)$ 不确定
-
-      *Example* let $v = vec(1,0)$. let $w$ 过去 time-like
-      
-      - $w = vec(-1,0) ==> (v+w)^2 = 0$
-      
-      - $w = vec(-1,1/2) ==> (v+w)^2 = -1/4$
-      
-      - $w = vec(-1/2,0) ==> (v+w)^2 = 1/4$
-    ]
+    ==> 
+    $
+      ⟨ v + w ⟩^2 
+      &> ⟨ v ⟩^2 + 2 abs(v) abs(w) + ⟨ w ⟩^2 \
+      &= (|v| + |w|)^2
+    $
+    ==> $ |v+w| > |v| + |w| $
   ]
-  - 2 space
+  - $⟨ v,w ⟩ < 0$
   #indent[
-    $v^2, w^2 < 0$
+    $⟨ v,w ⟩ < 0$ 
 
-    $|v| := (-v^2)^(1/2)$
+    ==> $- abs(v) abs(w) > ⟨ v,w ⟩$
 
-    - $v w < 0$
-    #indent[
-      $v w < - abs(v) abs(w)$ and $(v+w)^2 < 0$
+    ==> 
+    $ 
+      ⟨ v + w ⟩^2 
+      &< ⟨ v ⟩^2 - 2 abs(v) abs(w) + ⟨ w ⟩^2 \
+      &= (|v| - |w|)^2      
+    $
+    $sign ⟨ v + w ⟩^2$ 不确定
 
-      $ (v+w)^2 < v^2 - 2 abs(v) abs(w) + w^2 $
-
-      ==>
-      $
-        - (v+w)^2 
-        &> (-v^2) + 2 abs(v) abs(w) + (-w^2) \ 
-        &= (|v| + |w|)^2
-      $
-      ==>
-
-      $ |v+w| > |v| + |w| $
-    ]
-    - $v w > 0$
-    #indent[
-      $v w > abs(v) abs(w)$
-      $ 
-        (v+w)^2 
-        &> v^2 + 2 abs(v) abs(w) + w^2 \ 
-        &= -(|v| - |w|)^2  
-      $
-    ]
+    *Example* let $v = vec(1,0)$. let $w$ 过去 time-like
+    
+    - $w = vec(-1,0) ==> ⟨ v + w ⟩^2 = 0$
+    
+    - $w = vec(-1,1/2) ==> ⟨ v + w ⟩^2 = -1/4$
+    
+    - $w = vec(-1/2,0) ==> ⟨ v + w ⟩^2 = 1/4$
   ]
 ]
 Euclidean 空间已经可以讨论不同的收敛方向 e.g. 序列 $x_n/(|x_n|)$ 是否收敛到 $𝕊^(n-1)$. 螺旋线 like 的东西在方向空间不收敛
@@ -233,7 +249,10 @@ Euclidean 空间在所有 $𝕊^(n-1)$ 方向收敛到一点 <==> 在所有方�
 
 Minkowski 空间方向空间 $ℚ^(1,n)(± 1)$ is non compact. 虽然我们尚未定义 $ℚ^(1,n)(± 1)$ 的网
 
-Minkowski 空间的 #link(<net>)[] 需要足够远离光锥 $v^2 = 0$ 
+Minkowski 空间的 #link(<net>)[] 需要足够远离光锥 $⟨ v ⟩^2 = 0$ 
+
+#let time = "time"
+#let space = "space"
 
 let $ℍ𝕪^n (time\/space) := {x in ℝ^(1,n) : x^2 = ± 1}$
 
@@ -270,7 +289,7 @@ let $ℍ𝕪 := ℍ𝕪^1 (time,future) = {(t,x) in ℝ^(1,1) : t^2 - x^2 = 1 , 
 
   - $exph (ϕ #i-split) = cosh ϕ + (sinh ϕ) #i-split in ℍ𝕪$, $ϕ in ℝ$. by $cosh^2 - sinh^2 = 1$
     
-    #tag("polor-coordinate-hyperbolic") (图) 双曲极坐标 $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨v,v⟩^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ 测地线长度参数. 也称为双曲角度 #tag("hyperbolic-angle")
+    #tag("polor-coordinate-hyperbolic") (图) 双曲极坐标 $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ 测地线长度参数. 也称为双曲角度 #tag("hyperbolic-angle")
 
     极坐标即距离和方向的分解
     
@@ -319,7 +338,7 @@ net structure of $0 in ℝ^(1,1)$
 #indent[
   距离 $r = |z|$, 方向空间 $ℍ𝕪$ or 其射影 $ℍ𝕪 ℙ$, 测地线长度 $ϕ$ 都是 $SO(1,1)$ invariant. $SO(1,1)$ 是 $ℍ𝕪$ 的 isometry group
 
-  远离光锥 $v^2 = 0$ 地定义 (time,future) #link(<net>)[网] 
+  远离光锥 $⟨ v ⟩^2 = 0$ 地定义 (time,future) #link(<net>)[网] 
 
     $[0,r] × [ϕ - R, ϕ + R]$. $R$ 作为测地线球半径
     
@@ -451,44 +470,44 @@ $ℍ𝕪^n (space)$ *alias* de Sitter space
 
   let $v = exph (ϕ #i-split), w = exph (ψ #i-split)$
   $ 
-    ⟨v,w⟩ 
+    ⟨ v,w ⟩ 
     &= Re(v ⋅ w^*) \
     &= Re(exph ((ϕ - ψ) #i-split)) \
     &= cosh(ϕ - ψ)
   $
-  let $v,w$ 未来 time-like. $|v| := (v^2)^(1/2)$
+  let $v,w$ 未来 time-like. $|v| := (⟨ v ⟩^2)^(1/2)$
 
   $v/(|v|),w/(|w|) in ℍ𝕪$
 
-  $(⟨v,w⟩)/(abs(v) abs(w)) = cosh(ϕ - ψ)$
+  $(⟨ v,w ⟩)/(abs(v) abs(w)) = cosh(ϕ - ψ)$
 
   余弦公式
   $ 
-    (v+w)^2 
-    &= v^2 + 2 ⟨v,w⟩ + w^2 \ 
-    &= v^2 + w^2 + 2 abs(v) abs(w) (⟨v,w⟩)/(abs(v) abs(w)) \
-    &= v^2 + w^2 + 2 abs(v) abs(w) cosh (ϕ - ψ)
+    ⟨ v + w ⟩^2 
+    &= ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \ 
+    &= ⟨ v ⟩^2 + ⟨ w ⟩^2 + 2 abs(v) abs(w) (⟨ v,w ⟩)/(abs(v) abs(w)) \
+    &= ⟨ v ⟩^2 + ⟨ w ⟩^2 + 2 abs(v) abs(w) cosh (ϕ - ψ)
   $
 ]
 #tag("isom-top-hyperbolic-Euclidean")
 
   $ℍ𝕪$ 在 $ℂ_"split" = ℝ^(1,1)$ 距离下的极限结构 $≃$ 测地线距离 $≃$ Euclidean $ℝ^1$ 
 
-*Proof* 
+_Proof_ 
 #indent[
   let $v,w in ℍ𝕪$, $v = exph (ϕ #i-split), w = exph (ψ #i-split)$
   $ 
-    (v-w)^2 
-    &= v^2 + w^2 - 2 ⟨v,w⟩ \
+    ⟨ v - w ⟩^2 
+    &= ⟨ v ⟩^2 + ⟨ w ⟩^2 - 2 ⟨ v,w ⟩ \
     &= 2 (1 - cosh(ϕ - ψ)) \
     &<= 0 " by " cosh >= 1
   $
-  let $"dist"(v,w) := (- (v-w)^2)^(1/2)$
+  let $"dist"(v,w) := (- ⟨ v - w ⟩^2)^(1/2)$
   
   use $cosh ϕ = 1 <==> ϕ = 0$
   $
     "dist"(v,w) = 0
-    &<==> (v-w)^2 = 0 \
+    &<==> ⟨ v - w ⟩^2 = 0 \
     &<==> ϕ = ψ \
     &<==> v = w 
   $
@@ -500,14 +519,14 @@ $ℍ𝕪^n (space)$ *alias* de Sitter space
 ]
 推广到 $ℍ𝕪^(n) subset ℝ^(1,n)$, Euclidean $ℝ^n$
 
-*Proof* 
+_Proof_ 
 #indent[
   use 测地线坐标
 
   similar to $ℝ^(1,1)$, try to prove
   $ 
-    (v-w)^2 
-    &= v^2 + w^2 - 2 ⟨v,w⟩ \
+    ⟨ v - w ⟩^2 
+    &= ⟨ v ⟩^2 + ⟨ w ⟩^2 - 2 ⟨ v,w ⟩ \
     &= 2 (1 - cosh(|ϕ - ψ|)) \
     &<= 0
   $
