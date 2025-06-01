@@ -76,16 +76,16 @@ Propositional Logic
 #tag("computability") Computability of Circuits 
 #indent[ 
   Logic gates can be used to create any ${0,1}^n -> {0,1}^m$ function
+  
+  (image from p.85 of @ref-1)
+  #stack( dir: ltr,
+    image("/image/compute-function-input.jpeg", width: 30%),
+    image("/image/decoder.jpeg", width: 30%), 
+  )
 
   - Construction of ${0,1}^n$ input
   #indent[
     $n$ circuits $A_0 ,…, A_(n - 1)$ require at most $2^n$ `and` gates $Y_0 ,…, Y_(2^n - 1)$. Some functions only need a portion of the $2^n$ inputs, in which case some lines are not connected.
-
-    #stack( dir: ltr,
-      image("/image/compute-function-input.jpeg", width: 30%),
-      image("/image/decoder.jpeg", width: 30%), 
-    )
-    *Reference* image from p. 85 of @ref-1
 
     $n ⇝ 2^n$ represents the "multiplication" property of ${0,1}$ value parallel circuits
   ]

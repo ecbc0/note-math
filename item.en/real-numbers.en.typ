@@ -8,7 +8,7 @@ Natural number $ℕ$ addition
   - Associative law: $(a + b) + c = a + (b + c)$
   - Commutative law: $a + b = b + a$
 ]
-*Proof* The intuition in the real world is that, for counting $+1$, no matter how the counting task is manually divided into several subtasks, it will not affect the result, and the total number of decomposition methods is limited. The associative and commutative laws of addition are just special cases
+_Proof_ The intuition in the real world is that, for counting $+1$, no matter how the counting task is manually divided into several subtasks, it will not affect the result, and the total number of decomposition methods is limited. The associative and commutative laws of addition are just special cases
 
 It seems difficult to express this intuition for computers, but it seems that all finite results must be correct
 
@@ -44,9 +44,25 @@ Real number $ℝ$
 ]
 Examples of irrational numbers
 #indent[
-  Algebraic integer $"algebraic-integer" := {x ∈ ℚ : (x^n + a_(n - 1) x^(n - 1) + ⋯ + a_0 = 0) and (a_0, a_1 ,…, a_(n - 1) ∈ ℤ)}$
+  Algebraic integer $"algebraic-integer" := {x ∈ ℝ : (x^n + a_(n - 1) x^(n - 1) + ⋯ + a_0 = 0) and (a_0, a_1 ,…, a_(n - 1) ∈ ℤ)}$
 
-  The "integer" in algebraic integer is because $"algebraic-integer" ⊂ ℤ$
+  The "integer" in algebraic integer is because $"algebraic-integer" ∩ ℚ = ℤ$
+
+  _Proof_ (p.43 of @ref-8)
+  #indent[
+    Take $p,q in ℤ$ and make them relatively prime. Substitute $x = p/q$ into the equation, multiply by $q^n$
+    $
+    p^n + a_(n-1) q p^(n-1) + ⋯ + a_0 q^n = 0 \
+    p^n = - q (a_(n-1) p^(n-1) + ⋯ + a_0 q^(n-1))
+    $
+    The right side is divisible by $q$. But $p,q$ are relatively prime, so $q = ± 1$ or $p = ± 1$.
+
+    $p != ± 1 ==> q = ± 1$
+
+    $p = ± 1 ==> ± 1 = p^n = q ⋅ "some-integer" ==> q = ± 1$
+
+    So $q = ± 1$. Thus $x = ± p in ℤ$
+  ]
 
   Special case ${x ∈ ℚ : x^2 - 2 = 0}$. But $(± 1)^2 = 1$ and $|x| >= 2 ==> |x|^2 >= 4$
 
@@ -135,7 +151,7 @@ $ℝ$ completeness #tag("completeness-real")
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
 
-  #tag("monotone-convergence") monotone bound #link(<limit-sequence-real>)[convergence] *Proof* use exact-bound
+  #tag("monotone-convergence") monotone bound #link(<limit-sequence-real>)[convergence] _Proof_ use exact-bound
 ]
 #tag("nested-closed-interval-theorem") Nested interval theorem
 #indent[
@@ -145,7 +161,7 @@ $ℝ$ completeness #tag("completeness-real")
 #let C = c-bf("C","#919191")
 #tag("closed-interval-net-theorem") Closed interval #link(<net>)[net] $#B$ intersection is non-empty $⋂ #B != ∅$
 
-*Proof*
+_Proof_
 #indent[
   Supplement the net $#B$ with all finite intersections
 
@@ -205,7 +221,7 @@ limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
 #tag("Cauchy-completeness-real") limit-distance-vanish sequence or net converges 
   
-*Proof*
+_Proof_
 #indent[
   Unbounded ==> $forall ε > 0, forall N ∈ ℕ, exists n > N, abs({a_(n),a_(n+1),...}) >= ε$ 
   
@@ -231,7 +247,7 @@ Sequence $ℕ -> ℝ$ or net $#B$ converges to $a$ <==> limit-distance-vanish
 
   $|Subset(ℝ)| = |ℕ -> ℕ| = |ℝ|$
 
-  *Proof* 
+  _Proof_ 
   #indent[
     According to the nested interval theorem, the binary decimal point representation of real numbers: $a_0 . a_1 a_2 ...$ The $n$-th digit takes $0 ⇝ 0 ⋅ 1/2^n$ or $1 ⇝ 1 ⋅ 1/2^n$
 
@@ -243,7 +259,7 @@ Sequence $ℕ -> ℝ$ or net $#B$ converges to $a$ <==> limit-distance-vanish
 
     $(ℕ -> ℕ) ≃ (0,1]$ 
 
-    *Proof* 
+    _Proof_ 
     #indent[
       $
         (n_1, n_2, ...) ⇝ 1/2^(n_1) + 1/2^(n_1 + n_2) + ⋯

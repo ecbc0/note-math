@@ -1,0 +1,135 @@
+#import "/module/module.typ": *
+#show: module
+
+separable ODE in 1 dimension 
+$ 
+  (#d x)/(#d t) = f(t) g(x) 
+  &--> 1/g(x) #d x = f(t) #d t \
+  &--> x = G^(-1)(F(t)) 
+$ 
+where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
+
+*Example*
+- $f(t) = a, g(x) = x$. $x(t) = x(0) exp(a t)$
+- $f(t) = 1, g(x) = x^2$. $x(t) = 1/(1/x(0) - t)$
+
+#tag("invariant-of-vector-field ")
+#indent[
+  $ ∂_(v(x)) f (x) = #d f(x) v(x) = v(f(x)) $
+
+  *Question* maybe $exp$ like, Taylor series of vector field 
+  $ 
+    f(x) 
+    &= x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
+    &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
+  $
+  $n+1$ polynomial like $(∂_(λ v(x)))^n λ v (x) = λ^(n+1) (∂_(v(x)))^n v (x)$
+]
+*Example* 
+
+compare to the result from separable ODE in 1 dimension
+
+- $v(x) = A(x), A in gl(d,𝕂)$
+#indent[  
+  expect $f(t,x) = exp(A t)(x)$ for $f(0,x) ⇝ f(1,x)$, expect $x ⇝ exp(A) (x)$
+  
+  $#d v (x) = A$, $n >= 2 ==> #d^k v (x) = 0$
+
+  $∂_(v(x)) v(x) 
+  &= A(v(x)) \
+  &= A^2 (x)$
+
+  $(∂_(v(x)))^2 v(x) 
+  &= #d (A^2(x))(v(x)) \
+  &= A^2(v(x)) \
+  &= A^3(x) $ 
+  
+  ...
+
+  $(∂_(v(x)))^n v(x) = A^(n+1) (x)$
+
+  $f(x) = (𝟙 + A + 1/2! A^2 + ⋯) (x) = (sum 1/n! A^n ) (x) = (exp A) (x)$
+
+  $#d f(x) v(x) 
+  &= (exp A)(A (x)) \
+  &= A(exp(A)(x)) \
+  &= v(f(x))$
+]
+- $ℝ -> ℝ$, $v(x) = x^2$
+#indent[
+  expect $f(t,x) = 1/(1/x - t)$ for $f(0,x) ⇝ f(1,x)$, expect $x ⇝ x/(1-x) = 1 - 1/(1-x)$ 
+
+  $∂_(v(x))v(x) = v'(x) v(x) = 2 ⋅ x^3$
+
+  $∂_(v(x))(∂_(v(x))v(x)) = (2 x^3)' v(x) = (2 ⋅ 3) ⋅ x^4$
+
+  ...
+
+  $(∂_(v(x)))^n v (x) = (n+1)! ⋅ x^(n+2)$
+
+  $f(x) 
+  &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
+  &= sum_(m=1)^∞ x^m \
+  &= 1 - 1/(1-x)$
+
+  $#d f(x) v(x) 
+  &= (1/(1-x))^2 x^2 \
+  &= (x/(1-x))^2 \
+  &= v(f(x))$
+]
+*Question* 
+#indent[
+  $f(0,x) = x, f(1,x) = f(x)$ 中间的 $f(t,x)$ 应该对应伸缩的向量场 $t ⋅ v(x)$ 的情况
+
+  单参数同态嵌入 $f(t,x) : ℝ ↪ "Diff"$
+
+  $-v$ 和初值 $y = f(x)$ 给出 $f^(-1)$. $f^(-1)(t,y) = f(-t,y)$
+]
+$f(t,x)$ is called flow. exp 道路发射状坐标
+
+#tag("vector-field-as-δ-diffeomorphism") 在 $𝟙$ 附近, 向量场是微分同胚群的坐标 $v ⇝ exp v$, 类似于 #link(<geodesic-coordinate>)[]
+
+ODE
+
+$ (#d)/(#d t) f(t,x) = ∂_(v(x)) f(t,x) = v(f(t,x)) $
+
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kowalevski theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<analytic-inverse>)[] 中所作的
+
+$F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
+
+#tag("integral-curve") ODE 解的 Picard 迭代 (#link("https://en.wikipedia.org/wiki/Picard–Lindelöf_theorem")[wiki]) 表示 or 积分曲线 e.g.
+$
+  x(t) = sum_(n = 0 .. ∞) integral_(0)^(t) #d t_(n) integral_(0)^(t_n) #d t_(n-1) ⋯ integral_(0)^(t_0) #d t_1 f(t_n, ⋯ f(t_1, x(0)) ⋯ )
+$
+如果是线性 ODE 则 (*alias* Dyson 级数)
+$
+  x(t) = sum_(n = 0 .. ∞) integral_(0)^(t) #d t_(n) integral_(0)^(t_n) #d t_(n-1) ⋯ integral_(0)^(t_0) #d t_1 A(t_n) ⋯ A(t_1) x(0)
+$
+线性 ODE. 常系数 ODE 的解可以写出 by 转为一阶微分方程组 + Jordan normal form
+
+#tag("Lie-bracket") Lie bracket
+#indent[
+  从 $"Diff"$ 群的共轭作用开始 $g,f ⇝ f g f^(-1)$ // link
+
+  微分 := $"ad"(v)(w) = [v,w]$
+
+  $[v,w](x) = ∂_(v(x)) w(x) - ∂_(w(x)) v(x)$
+
+  $[v,w] = [w,v]$
+
+  for $GL,gl$, $[A,B] ∼ A B - B A$
+]
+#tag("Lie-derivative") Lie derivative *alias* drag derivative
+#indent[
+  let $v$ 生成单参数微分同胚 $t ⇝ f_t in "Diff"$
+  
+  let $w_t = #d f_(t)^(-1) (f_t (x) : "base", w(f_t (x)) : "vector")$
+
+  $L_v (w) := lim_(t -> 0) 1/t (w_t - w_0) $
+
+  $L_v (w) = [v,w]$
+  
+  Jacobi identity $L_([v,w]) = [L_v,L_w]$ or $[v_1,[v_2,w_3]] + [v_3,[v_1,v_2]] + [v_2,[v_3,v_1]] = 0$
+
+  可以对 tensor field 也定义 Lie derivative ...
+]

@@ -1,11 +1,68 @@
 {
+    "tinymist.rootPath": "/home/user/Folder/Write/note-math", // change to your system's root path
     "editor.fontFamily": "'Source Code Pro', 'Noto Sans SC', 'Stix Two Math', Monospace",
+    "editor.fontSize": 14.5,
+    "[typst]": {
+        "editor.codeLens": false
+    },
+    "tinymist.formatterMode": "typstyle",
+    "tinymist.completion.postfix": false,
+    "tinymist.completion.postfixUfcs": false,
+    "tinymist.completion.postfixUfcsLeft": false,
+    "tinymist.completion.postfixUfcsRight": false,
+    "tinymist.preview.partialRendering": false,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "top",
+    "editor.foldingStrategy": "indentation",
+    "editor.lineHeight": 0,
+    "scm.inputFontSize": 13,
+    "search.useIgnoreFiles": false,
     "debug.console.fontSize": 13,
     "terminal.integrated.fontSize": 13,
     "chat.editor.fontSize": 13,
     "editor.wordWrap": "on",
     "editor.unicodeHighlight.nonBasicASCII": false,
     "editor.glyphMargin": false,
+    "editor.cursorBlinking": "blink",
+    "workbench.activityBar.location": "top",
+    "editor.renderLineHighlight": "all",
+    "scm.diffDecorations": "all",
+    "scm.diffDecorationsGutterPattern": {
+        "added": true
+    },
+    "git.useEditorAsCommitInput": true,
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.preferredDarkColorTheme": "Solarized Dark",
+    "telemetry.telemetryLevel": "off",
+    "markdown.preview.breaks": true,
+    "workbench.statusBar.visible": false,
+    "git.openRepositoryInParentFolders": "always",
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false,
+        },
+        "editor.fontSize": 14.5,
+    },
+    "markdown.preview.fontSize": 14.5,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.renderWhitespace": "none",
+    "editor.stickyScroll.enabled": false,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.minimap.showSlider": "always",
+    "editor.scrollBeyondLastLine": true,
+    "output.smartScroll.enabled": true,
+    "markdown.styles": [
+        ".vscode/css/styles.css"
+    ],
+    "editor.unicodeHighlight.ambiguousCharacters": false,
     "workbench.colorCustomizations": {
         "editor.background": "#000000",
         "editor.foreground": "#0058b1",
@@ -56,7 +113,7 @@
         "button.background": "#002628",
         "button.secondaryBackground": "#222",
         "editorSuggestWidget.selectedBackground": "#000",
-        "editorIndentGuide.background1": "#93a1a127" ,
+        "editorIndentGuide.background1": "#93a1a127",
         "editorIndentGuide.activeBackground1": "#7d0000ab",
         "selection.background": "#0b250061",
         "editor.bracketPairColorization.enabled": true,
@@ -108,78 +165,8 @@
         "diffEditor.insertedTextBackground": "#51e90000",
         "diffEditor.removedTextBackground": "#d1000000",
         "quickInputTitle.background": "#000000",
-        "editor.snippetTabstopHighlightBackground":"#12380041"
+        "editor.snippetTabstopHighlightBackground": "#12380041"
     },
-    "editor.defaultColorDecorators": "auto",
-    "editor.occurrencesHighlight": "off",
-    "editor.language.colorizedBracketPairs": [
-        [
-            "{",
-            "}"
-        ],
-        [
-            "[",
-            "]"
-        ],
-        [
-            "(",
-            ")"
-        ]
-    ],
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "editor.cursorBlinking": "blink",
-    "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on"
-    },
-    "editor.tabCompletion": "on",
-    "workbench.activityBar.location": "top",
-    "editor.renderLineHighlight": "all",
-    "scm.diffDecorations": "all",
-    "scm.diffDecorationsGutterPattern": {
-        "added": true
-    },
-    "git.useEditorAsCommitInput": true,
-    "workbench.colorTheme": "Solarized Dark",
-    "workbench.preferredDarkColorTheme": "Solarized Dark",
-    "editor.fontSize": 14.5,
-    "telemetry.telemetryLevel": "off",
-    "markdown.preview.breaks": true,
-    "workbench.statusBar.visible": false,
-    "git.openRepositoryInParentFolders": "always",
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": false,
-        },
-        "editor.fontSize": 14.5,
-    },
-    "markdown.preview.fontSize": 14.5,
-    "breadcrumbs.enabled": false,
-    "editor.minimap.renderCharacters": false,
-    "editor.renderWhitespace": "none",
-    "editor.stickyScroll.enabled": false,
-    "editor.scrollbar.vertical": "visible",
-    "editor.scrollbar.verticalScrollbarSize": 0,
-    "editor.minimap.showSlider": "always",
-    "editor.scrollBeyondLastLine": true,
-    "output.smartScroll.enabled": true,
-    "markdown.styles": [
-        ".vscode/css/styles.css"
-    ],
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "[typst]": {
-        "editor.codeLens": false
-    },
-    "tinymist.formatterMode": "typstyle",
-    "tinymist.completion.postfix": false,
-    "tinymist.completion.postfixUfcs": false,
-    "tinymist.completion.postfixUfcsLeft": false,
-    "tinymist.completion.postfixUfcsRight": false,
-    "tinymist.preview.partialRendering": false,
-    "editor.snippetSuggestions": "top",
-    "editor.foldingStrategy": "indentation",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -256,8 +243,21 @@
             "operator.math": "#2f00ff"
         },
     },
-    "editor.lineHeight": 0,
-    "scm.inputFontSize": 13,
-    "tinymist.rootPath": "/home/user/Folder/Write/note-math",
-    "search.useIgnoreFiles": false // change to your system's root path
+    "editor.defaultColorDecorators": "auto",
+    "editor.occurrencesHighlight": "off",
+    "editor.language.colorizedBracketPairs": [
+        [
+            "{",
+            "}"
+        ],
+        [
+            "[",
+            "]"
+        ],
+        [
+            "(",
+            ")"
+        ]
+    ],
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 }

@@ -47,7 +47,7 @@
 
     $C_1 v = A_1 (v) B_0 + A_0 B_1 (v)$
 
-    ==> #tag("Leibniz-rule") $(∂ (f g))/(∂ v) = (∂ f)/(∂ v) g + f (∂ g)/(∂ v) $
+    ==> #tag("Leibniz-law") $(∂ (f g))/(∂ v) = (∂ f)/(∂ v) g + f (∂ g)/(∂ v) $
   ]
 ]
 #tag("mulitplication-inverse-analytic")
@@ -211,9 +211,9 @@
 
   使得 $f ∘ f^(-1) = f^(-1) ∘ f = 𝟙 "of" ⨁_(n = 1)^∞ Lin(⊙^n 𝕂^d -> 𝕂^(d'))$
 
-  - 逆函数的收敛半径非零
+  - 逆函数的收敛半径非零 (p.77 of @ref-4)
   #indent[
-    *Reference* p. 77 of @ref-4
+    *Reference* 
     $
       B_l = - A_1^(-1) 
       sum_(k = 2 ,…, l) 

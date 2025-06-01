@@ -77,15 +77,17 @@
 #indent[ 
   可用逻辑门制造任何 ${0,1}^n -> {0,1}^m$ 函数
 
+  (image from p.85 of @ref-1)
+  #stack( dir: ltr,
+    image("/image/compute-function-input.jpeg", width: 30%),
+    image("/image/decoder.jpeg", width: 30%), 
+  )
+
   - ${0,1}^n$ 输入的构造
   #indent[
     $n$ 条电路 $A_0 ,…, A_(n - 1)$ 最多需要 $2^n$ 个 `and` gate $Y_0 ,…, Y_(2^n - 1)$. 有些函数只需要 $2^n$ 输入的一部分, 此时不接一些线
 
-    #stack( dir: ltr,
-      image("/image/compute-function-input.jpeg", width: 30%),
-      image("/image/decoder.jpeg", width: 30%), 
-    )
-    *Reference* image from p. 85 of @ref-1
+    
 
     $n ⇝ 2^n$ 代表了 ${0,1}$ 值并行电路的 "乘法" 性质
   ]

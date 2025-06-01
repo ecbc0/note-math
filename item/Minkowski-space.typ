@@ -30,6 +30,12 @@ if $span(v,w) ≃ ℝ^(1,1)$, 可能
 
 考虑一般的 $ℝ^(1,n)$ 中的 $span(v,w)$
 
+#tag("signature-of-2d-subspace-of-spacetime") *Prop* Minkowski $(1,n)$ 在 $dim = 2$ 的 $span(v,w)$ 的可能 signature 是 
+
+- $1,1$
+- $0,2$
+- $0,1$
+
 *Prop* 在 $ℝ^(1,n)$ 非退化二次型下, light-like $v$ 不正交于 
 - time-like
 - 与自身共线 $k v$ 之外的 light-like
@@ -98,13 +104,6 @@ _Proof_ $ℝ^(0,2)$ Euclidean 没有 light-like, 所以无其它可能性
 *Example*
 - $ℝ^(1,1)$ 的 $vec(1,±1)$
 - $ℝ^(1,2)$ 的 $vec(1,1,0),vec(1,0,1)$. 相减得到正交基 $vec(1,1,0),vec(0,1,-1)$
-
-
-*Prop* Minkowski $(1,n)$ 在 $dim = 2$ 的 $span(v,w)$ 的可能 signature 是 
-
-- $1,1$
-- $0,2$
-- $0,1$
 
 #tag("simultaneity-relativity") 相对论同时性
 #indent[

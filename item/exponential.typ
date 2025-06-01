@@ -1,8 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-$exp$ 是 $(𝕂,+) -> (𝕂 ∖ 0, ⋅)$ 同态
-
 #tag("real-exponential")
 #indent[
   如果指数是自然数, 则 $a^(n+m) = a^(n) a^m$. 可以简单地推广到有理数
@@ -25,8 +23,13 @@ $exp$ 是 $(𝕂,+) -> (𝕂 ∖ 0, ⋅)$ 同态
   $
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
+  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
 
-  for $a$, def $f^1 (0) := log a in 𝕂$
+  从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #link(<inverse-analytic>)[解析逆]
+
+  #tag("natural-logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
+
+  for $a > 0$, def $f^1 (0) := log a in ℝ$
   $
     a^1 &= f(1) \
     &= sum 1/n! (log a)^n \

@@ -30,6 +30,12 @@ if $span(v,w) ≃ ℝ^(1,1)$, possible
 
 Consider the general $ℝ^(1,n)$ in $span(v,w)$
 
+#tag("signature-of-2d-subspace-of-spacetime") *Prop* The possible signature of Minkowski $(1,n)$ in $dim = 2$'s $span(v,w)$ is 
+
+- $1,1$
+- $0,2$
+- $0,1$
+
 *Prop* Under the non-degenerate quadratic form of $ℝ^(1,n)$, light-like $v$ is not orthogonal to 
 - time-like
 - light-like other than collinear with itself $k v$
@@ -98,13 +104,6 @@ _Proof_ $ℝ^(0,2)$ Euclidean has no light-like, so there is no other possibilit
 *Example*
 - $ℝ^(1,1)$'s $vec(1,±1)$
 - $ℝ^(1,2)$'s $vec(1,1,0),vec(1,0,1)$. Subtracting gives an orthogonal basis $vec(1,1,0),vec(0,1,-1)$
-
-
-*Prop* The possible signature of Minkowski $(1,n)$ in $dim = 2$'s $span(v,w)$ is 
-
-- $1,1$
-- $0,2$
-- $0,1$
 
 #tag("simultaneity-relativity") Simultaneity in relativity
 #indent[

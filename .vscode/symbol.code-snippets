@@ -117,14 +117,6 @@
 		"prefix": "bb-1",
 		"body": "𝟙"
 	},
-	"𝟚": {
-		"prefix": [
-			"bb-2",
-			"quadratic-form-square"
-		],
-		"body": "𝟚",
-		"description": "quadratic-form ⟨v,v⟩"
-	},
 	"∂ diff operator": {
 		"prefix": "e",
 		"body": "∂",
@@ -363,8 +355,11 @@
 		],
 		"body": "≠"
 	},
-	"≡":{
-		"prefix": ["eq-all","equal-all"],
+	"≡": {
+		"prefix": [
+			"eq-all",
+			"equal-all"
+		],
 		"body": "≡"
 	},
 	/*"∈": {
@@ -450,6 +445,12 @@
 	"⟨ ⟩": {
 		"prefix": "quadratic-form",
 		"body": "⟨ $1 ⟩"
+	},
+	"⟨ ⟩^2": {
+		"prefix": [
+			"quadratic-form-square"
+		],
+		"body": "⟨ $1 ⟩^2",
 	},
 	"ℏ": {
 		"prefix": "hbar",

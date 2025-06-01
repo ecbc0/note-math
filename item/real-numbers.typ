@@ -8,7 +8,7 @@
   - 结合律: $(a + b) + c = a + (b + c)$
   - 交换律: $a + b = b + a$
 ]
-*Proof* 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任务手动分成几个子任务, 都不会影响结果, 而且总的分解方式有限. 加法结合律和交换律只是其中的特殊情况
+_Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任务手动分成几个子任务, 都不会影响结果, 而且总的分解方式有限. 加法结合律和交换律只是其中的特殊情况
 
 对计算机来说似乎难以表达这种直观, 但似乎所有的有限结果一定会正确
 
@@ -44,9 +44,25 @@
 ]
 无理数的例子
 #indent[
-  代数整数 $"algebraic-integer" := {x ∈ ℚ : (x^n + a_(n - 1) x^(n - 1) + ⋯ + a_0 = 0) and (a_0, a_1 ,…, a_(n - 1) ∈ ℤ)}$
+  代数整数 $"algebraic-integer" := {x ∈ ℝ : (x^n + a_(n - 1) x^(n - 1) + ⋯ + a_0 = 0) and (a_0, a_1 ,…, a_(n - 1) ∈ ℤ)}$
 
-  代数整数里的 "整数" 是因为 $"algebraic-integer" ⊂ ℤ$
+  代数整数里的 "整数" 是因为 $"algebraic-integer" ∩ ℚ = ℤ$
+
+  _Proof_ (p.43 of @ref-8)
+  #indent[
+    取 $p,q in ℤ$ 互素. $x = p/q$ 代入方程, 乘 $q^n$
+    $
+      p^n + a_(n-1) q p^(n-1) + ⋯ + a_0 q^n = 0 \
+      p^n = - q (a_(n-1) p^(n-1) + ⋯ + a_0 q^(n-1))
+    $
+    右边被 $q$ 整除. 但 $p,q$ 互素, 所以 $q = ± 1$ 或 $p = ± 1$.
+
+    $p != ± 1 ==> q = ± 1$
+
+    $p = ± 1 ==> ± 1 = p^n = q ⋅ "some-integer" ==> q = ± 1$
+
+    从而 $q = ± 1$. 从而 $x = ± p in ℤ$
+  ]
 
   特殊情况 ${x ∈ ℚ : x^2 - 2 = 0}$. 但是 $(± 1)^2 = 1$ 且 $|x| >= 2 ==> |x|^2 >= 4$
 
@@ -135,7 +151,7 @@ $ℝ$ 完备性 #tag("completeness-real")
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
 
-  #tag("monotone-convergence") 单调有界 #link(<limit-sequence-real>)[收敛] *Proof* use 确界原理
+  #tag("monotone-convergence") 单调有界 #link(<limit-sequence-real>)[收敛] _Proof_ use 确界原理
 ]
 #tag("nested-closed-interval-theorem") 闭区间套定理
 #indent[
@@ -145,7 +161,7 @@ $ℝ$ 完备性 #tag("completeness-real")
 #let C = c-bf("C","#919191")
 #tag("closed-interval-net-theorem") 闭区间 #link(<net>)[网] $#B$ 交集非空 $⋂ #B != ∅$
 
-*Proof*
+_Proof_
 #indent[
   对网 $#B$ 补充所有的有限交集
 
@@ -205,7 +221,7 @@ limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
 #tag("Cauchy-completeness-real") limit-distance-vanish 序列 or net 收敛 
   
-*Proof*
+_Proof_
 #indent[
   无界 ==> $forall ε > 0, forall N ∈ ℕ, exists n > N, abs({a_(n),a_(n+1),...}) >= ε$ 
   
@@ -231,7 +247,7 @@ limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
   $|Subset(ℝ)| = |ℕ -> ℕ| = |ℝ|$
 
-  *Proof* 
+  _Proof_ 
   #indent[
     根据区间套定理, 实数的二进制小数点表示: $a_0 . a_1 a_2 ...$ 第 $n$ 位取 $0 ⇝ 0 ⋅ 1/2^n$ 或 $1 ⇝ 1 ⋅ 1/2^n$
 
@@ -243,7 +259,7 @@ limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
     $(ℕ -> ℕ) ≃ (0,1]$ 
 
-    *Proof* 
+    _Proof_ 
     #indent[
       $
         (n_1, n_2, ...) ⇝ 1/2^(n_1) + 1/2^(n_1 + n_2) + ⋯

@@ -71,7 +71,6 @@
   show regex("ℝ|ℂ|ℍ|𝕆|𝕂|ℕ|ℤ|ℚ|𝕊|ℙ|𝔹|𝕪"): it => text(it, fill: rgb("#2f00ff"))
 
   show "𝟙": it => text(it, fill: rgb("#e90000"))
-  show "𝟚": it => text(it, fill: rgb("#cf9f00"))
 
   // differential
 

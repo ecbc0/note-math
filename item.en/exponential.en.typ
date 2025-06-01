@@ -1,8 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-$exp$ is $(𝕂,+) -> (𝕂 ∖ 0, ⋅)$ homomorphism
-
 #tag("real-exponential")
 #indent[
   If the exponent is a natural number, then $a^(n+m) = a^(n) a^m$. It can be simply generalized to rational numbers
@@ -25,6 +23,14 @@ $exp$ is $(𝕂,+) -> (𝕂 ∖ 0, ⋅)$ homomorphism
   $
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
+
+  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+
+  from the series, we can see that, differential $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ exists #link(<inverse-analytic>)[]
+
+  #tag("natural-logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
+
+  for $a > 0$, def $f^1 (0) := log a in ℝ$
 
   for $a$, def $f^1 (0) := log a in 𝕂$
   $
