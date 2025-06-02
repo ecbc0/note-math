@@ -69,6 +69,28 @@ Almost everywhere analytic
 
   If it is considered as integrating an $n$ form, then the integral change of variable formula is equivalent to $n$ form integration is diffeomorphism invariant
 ]
+#tag("integral-on-manfold") *Question*
+#indent[
+  According to the change of variable formula, the integral of $n$ form in the coordinates on the manifold is invariant
+
+  But what if we want to integrate the $n$ form defined on the entire manifold?
+
+  One way is to use countability + linear approximation + partitioning limit, similar to the proof of the variable substitution formula
+
+  In order to define the integral, some kind of countability assumption is needed. The simplest assumption is that the manifold can be covered by countable coordinate cards. Let's use this assumption
+
+  Now the problem is that the integral at the intersection of the coordinate cards is repeated and needs to be removed
+
+  I am not going to use measurable sets being closed under intersection and set-minus, nor do I intend to use curved simplex type region partition *alias* triangulation which is even more difficult to proof closed under intersection and set-minus
+
+  Instead, I am going to use closeness under intersection and set-minus at the level of simplex or box approximation
+
+  e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #link(<affine-map-point-ver>)[] (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
+
+  Taking the limit of this approximation gives the integral on the manifold
+
+  Prove that the result does not depend on the choice of coordinate system and linear approximation method
+]
 The measures and integrals defined by rectangles and simplexes (without fixed coordinate axes) are equivalent, because rectangles and simplexes can be countably approximated to each other
 
 #tag("Fubini-theorem") 

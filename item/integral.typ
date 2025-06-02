@@ -69,6 +69,28 @@ $𝟙_A in L^1$ 定义出来的可测集是 Lebesgue 可测集, 可能不连通
 
   如果认为是对 $n$ form 积分, 则积分变量替换等价于 $n$ form 积分 is 微分同胚 invariant
 ]
+#tag("integral-on-manfold") *Question* 
+#indent[
+  根据变量替换公式, 流形上的坐标里的对 $n$ form 的积分 invariant
+
+  但是如果想要对定义在整个流形上的 $n$ form 进行积分, 应该怎么做?
+
+  一种做法是, 类似变量替换公式的证明, 使用可数 + 线性近似 + 分割极限
+
+  为了定义积分, 需要某种可数化假设. 最简单的假设是流形可以被可数的坐标卡覆盖. 就让我们用这个假设
+
+  现在的问题是, 坐标卡交集的地方的积分是重复的, 需要去除重复
+
+  我并不打算使用可测集对交集和减集封闭, 也不打算使用弯曲 simplex 型区域分割 *alias* 三角剖分, 它们甚至更难证明对交集和减集封闭
+  
+  而是在 simplex 或者 box 近似的水平上, 对交集和减集封闭
+
+  e.g. transition map 的微分 $#d f$ at 每个 simplex (box) 中心 as #link(<affine-map-point-ver>)[仿射映射] (线性映射) 来将坐标区域 $B$ 的 simplex (box) 映射到坐标区域 $A$ 的 simplex (box). 然后 simplex (box) 的交集和减集可以再分解到 simplex (box) 
+  
+  对这种近似取极限就得到流形上的积分
+
+  证明结果不依赖于坐标系统和线性近似逼近方式的选取
+]
 用 (不固定坐标轴的) 矩形和 simplex 定义的测度和积分都是等价的, 因为矩形和 simplex 可以相互可数逼近
 
 #tag("Fubini-theorem") 

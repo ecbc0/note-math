@@ -27,9 +27,9 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 ]
 #tag("orientable-low-dim-polyhera") 多面体 #link(<orientation-of-boundary-of-simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
 
-*Example* 不可定向的 Mobius 型多面体 (image modified from wiki)
+#tag("Mobius-strip") *Example* 不可定向的 Mobius 型多面体 (image modified from wiki)
 
-#image("../image/Moebius.jpeg", width: 50%)
+#image("../image/Moebius.svg", width: 50%)
 
 不管怎么定义每个 $k$ simplex 的方向, 都存在一对相邻 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向不兼容. i.e. simplex 分割没有良定义的内部和外部
 
@@ -122,29 +122,19 @@ simplex 散度算子 as 边界算子的对偶 $⟨ ∂ σ , ω ⟩ = ⟨ σ , �
 ]
 #tag("Stokes-theorem") 
 #indent[
-  for 几乎处处解析的带边流形, Stokes 定理 $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for 几乎处处解析的 #link(<orientable>)[可定向] 带边流形, Stokes 定理 $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
 ]
 也许初看起来很奇怪, 这是有效的, 先无穷小 $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ 再积分 $integral #d ω := lim sum ⋯$, 但是一维微积分基本定理就是这样的
 
 但是一维区间的分割, 一维区间的边界, 一维区间的边界的积分, 都太简单了, 高维没那么简单
 
-对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理, 也证明了流形上的 singular 的弯曲 simplex 型区域 or 弯曲平行体型区域的 Stokes 定理
-
-对于弯曲区域, 可能会先想到弯曲 simplex 型区域分割 *alias* 三角剖分, 但一个坐标区域 $A$ 的 simplex 分割通过 transition map $f$ 映射到相邻的坐标区域 $B$ 时, 问题出现 i.e. 两个弯曲 simplex 型分割区域的交集和减集是否还是弯曲 simplex 型分割区域?
-
-所以最好改用别的方法, 例如, 参考变量替换证明中使用的将换坐标映射的微分 $#d f$ at 每个 simplex 中心 as 仿射映射作用于定义域 simplex 得到值域 simplex 用于近似, 然后取分割极限 
+#tag("Stokes-theorem-simple") 对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  对于 Stokes 定理所需要的 simplex 分割
-  
-  设两个相邻的坐标区域 $A,B$ 有 simplex 分割
-  
-  transition map 的微分 $#d f$ at 每个 simplex 中心 as 仿射映射来将坐标区域 $B$ 的 simplex 映射到坐标区域 $A$ 的 simplex 
-  
-  作为近似, 然后取极限
-  
-  最后证明结果不依赖于坐标系统的选取, 也是用微分中值定理近似和分割极限
+  使用流形上的对 form 积分的定义所使用的可数 + 线性近似 + 分割极限 #link(<integral-on-manfold>)[]
+
+  近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 内部边界抵消, 就只剩下真正的流形的边界
 
   大概需要某种一阶 Sobolev 控制?
 ]

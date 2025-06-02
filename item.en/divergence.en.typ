@@ -27,9 +27,9 @@ There are two directions
 ]
 #tag("orientable-low-dim-polyhera") Polyhedron #link(<orientation-of-boundary-of-simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
 
-*Example* Non-orientable Mobius-type polyhedron (image modified from wiki)
+#tag("Mobius-strip") *Example* Non-orientable Mobius-type polyhedron (image modified from wiki)
 
-#image("../image/Moebius.jpeg", width: 50%)
+#image("../image/Moebius.svg", width: 50%)
 
 No matter how the direction of each $k$ simplex is defined, there exists a pair of adjacent $k$ simplex $A,B$ whose $k-1$ connected boundary simplex directions are incompatible. i.e. Simplex partitioning has no well-defined inside and outside
 
@@ -122,29 +122,19 @@ For micro-molecular manifolds, it becomes easier to handle. At this time, the di
 ]
 #tag("Stokes-theorem") 
 #indent[
-  for almost everywhere analytic manifolds with boundary, Stokes' theorem $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for almost everywhere analytic #link(<orientable>)[] manifolds with boundary, Stokes' theorem $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
 ]
 Perhaps it seems strange at first glance, but this is effective, first infinitesimal $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ then integral $integral #d ω := lim sum ⋯$, but the fundamental theorem of one-dimensional calculus is like this
 
 But the division of one-dimensional intervals, the boundary of one-dimensional intervals, and the integral of the boundary of one-dimensional intervals are all too simple, and high dimensions are not that simple
 
-For high dimensions, if it's curved, it's very difficult. First deal with straight things i.e. simplex or parallelepiped. The partition is also of the same type of region, and boundary cancellation is also very simple. Then, similar to one dimension, use the differential mean value theorem to approximate compact control. This proves Stokes' Theorem for $ℝ^n$ simplex or parallelepiped, and also proves Stokes' Theorem for singular curved simplex-type regions or curved parallelepiped-type regions on manifolds.
-
-For curved regions, one might first think of curved simplex region partitioning *alias* triangulation, but when a simplex partition of a coordinate region $A$ is mapped to an adjacent coordinate region $B$ through a transition map $f$, a problem arises, i.e., are the intersection and difference sets of two curved simplex partition regions still curved simplex partition regions?
-
-So it's better to use other methods, for example, referring to the change of variable formula proof, use the differential of the coordinate mapping $#d f$ at each simplex center as an affine mapping acting on the domain simplex to obtain the range simplex for approximation, and then take the partition limit. 
+For high dimensions, if it's curved, it's very difficult. First deal with straight things i.e. simplex or parallelepiped. The partition is also of the same type of region, and boundary cancellation is also very simple. Then, similar to one dimension, use the differential mean value theorem to approximate compact control. This proves Stokes' Theorem for $ℝ^n$ simplex or parallelepiped.
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  For simplex decomposition required by Stokes' Theorem
-  
-  Suppose two adjacent coordinate regions $A,B$ have simplex decompositions
-  
-  The differential of the transition map $#d f$ at each simplex center is used as an affine map to map the simplex of coordinate region $B$ to the simplex of coordinate region $A$ 
-  
-  As an approximation, then take the limit
-  
-  Finally, prove that the result does not depend on the choice of coordinate system, also using the mean value theorem of differential for approximation and the limit of partition
+  Use countable + linear approximation + partition limit that used in the definition of form integral on manifold #link(<integral-on-manfold>)[] 
+
+  Approximately decompose into simplex or box, then use Stokes theorem of simplex + internal boundary cancellation, only the real boundary of manifold is left
 
   Probably need some kind of first-order Sobolev control?
 ]
