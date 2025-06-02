@@ -243,6 +243,8 @@ The following object construction rules, except for the intersection, generally 
 
 #tag("union")  
 #indent[
+  #image("../image/union.jpeg", width: 30%)
+
   define object $⋃ A$ and language expansion
   $ 
     x ∈ a ∪ a' &:= (x ∈ a) or (x ∈ a') \ 
@@ -258,6 +260,7 @@ The following object construction rules, except for the intersection, generally 
 ]
 #tag("sum")
 #indent[
+  #image("../image/sum.jpeg", width: 30%)
   $
     x ∈ a ⊔ a' &:= (x ∈ a) xor (x ∈ a') \
     \
@@ -273,6 +276,7 @@ enum is special case of sum/union?
 
 #tag("intersection") 
 #indent[
+  #image("../image/intersection.jpeg", width: 30%)
   $
     x ∈ a ∩ a' &:= (x ∈ a) and (x ∈ a') \
     \
@@ -284,6 +288,7 @@ enum is special case of sum/union?
 ]
 #tag("product") 
 #indent[
+  #image("../image/product.jpeg", width: 30%)
   $
     x ∈ a × a' &:= (x(a) ∈ a) and (x(a') ∈ a') \
     \
@@ -298,6 +303,8 @@ enum is special case of sum/union?
 ]
 #tag("map") 
 #indent[
+  #image("../image/map.jpeg", width: 30%)
+
   let $A,B$ is math object. The rule for defining map space $A -> B$, map $f$ as math object is
   $
     f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
@@ -313,6 +320,7 @@ enum is special case of sum/union?
 ]
 #tag("subset") 
 #indent[
+  #image("../image/subset.jpeg", width: 30%)
   $ S ∈ Subset(A) := S ⊂ A $
 
   denoted by $2^A$. According to #link(<proposition-function>)[] equivalent to map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
@@ -416,9 +424,13 @@ Define a type, called `math_object_type`, which is used by the rules and compila
 
   draft of proof: expand, use parallel distributive cf. #link(<distributive-forall-exists>)[]
 ]
-#tag("set-minus") $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
+#tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
 
-#tag("symmetric-set-minus") $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
+$A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
+
+#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
+
+$A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
 
 #tag("coordinate-component")
 - product component 

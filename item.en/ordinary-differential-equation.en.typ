@@ -15,6 +15,10 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, initial value undeterm
 
 #tag("invariant-of-vector-field ")
 #indent[
+  let $U$ open in $ℝ^n$
+
+  vector-field is analytic function $v : U -> ℝ^n$
+  
   $ ∂_(v(x)) f (x) = #d f(x) v(x) = v(f(x)) $
 
   *Question* maybe $exp$ like, Taylor series of vector field 

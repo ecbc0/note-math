@@ -47,6 +47,9 @@ _Proof_
   let $|ϕ|, |ψ| <= R$
 
   Mapping the geodesic length $r$ of the hyperbola to the spatial axis $sinh r$ is a monotonically bijective map (Figure)
+  The geodesic length of a hyperbola, $r$, is a bijection. The hyperbola map to the spatial axis and is a bijection. After composition, it is $sinh r$, a bijection, remains monotone.
+
+  #image("../image/hyperbolic-to-space-bijective.jpeg", width: 60%)
   $ 
     argh ((v+w)/(|v+w|)) 
     &-> im (v+w)/(|v+w|) &(im "of" ℂ_"split") \

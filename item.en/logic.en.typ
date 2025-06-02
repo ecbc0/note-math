@@ -193,7 +193,7 @@ A symbolic representation of multiple input or output lines in a computing unit 
 
   #image("/image/ASCII.jpeg")
 
-  *Reference* image modified from wiki media about ASCII
+  (image modified from wiki media about ASCII)
 
   In practical applications, multiple bits per address are better than 1 bit per address, or a two-dimensional memory array is more efficient than one-dimensional
 
@@ -282,7 +282,9 @@ Instruction stream
 ]
 An enlightening example of the concept of abstraction and API: The items around you can be used conveniently without knowing the manufacturing principle because they are designed that way
 
-Computers, in addition to the advantage of high-speed periodic circuits, have other advantages, such as the capacity of memory (1 GB = 2^33 bit = 8589934592 bit) and persistence (power-on time) 
+Computers, in addition to the advantage of high-speed periodic circuits, have other advantages, such as the capacity of memory (1 GB = 2^(30+3) bit = 8589934592 bit) and persistence (power-on time) 
+
+They are part of reason why proof assistant are useful for human
 
 Complex data structures and calculation functions can be constructed in memory. It may also be useful for many other fields.
 

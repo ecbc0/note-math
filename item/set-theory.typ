@@ -243,6 +243,8 @@ A proposition has many proofs with different runtime data flow, 可以认为它�
 
 #tag("union")  
 #indent[
+  #image("../image/union.jpeg", width: 30%)
+
   define object $⋃ A$ 和语言展开
   $ 
     x ∈ a ∪ a' &:= (x ∈ a) or (x ∈ a') \ 
@@ -258,6 +260,7 @@ A proposition has many proofs with different runtime data flow, 可以认为它�
 ]
 #tag("sum")
 #indent[
+  #image("../image/sum.jpeg", width: 30%)
   $
     x ∈ a ⊔ a' &:= (x ∈ a) xor (x ∈ a') \
     \
@@ -273,6 +276,7 @@ enum is special case of sum/union?
 
 #tag("intersection") 
 #indent[
+  #image("../image/intersection.jpeg", width: 30%)
   $
     x ∈ a ∩ a' &:= (x ∈ a) and (x ∈ a') \
     \
@@ -284,6 +288,7 @@ enum is special case of sum/union?
 ]
 #tag("product") 
 #indent[
+  #image("../image/product.jpeg", width: 30%)
   $
     x ∈ a × a' &:= (x(a) ∈ a) and (x(a') ∈ a') \
     \
@@ -298,6 +303,8 @@ enum is special case of sum/union?
 ]
 #tag("map") 
 #indent[
+  #image("../image/map.jpeg", width: 30%)
+
   let $A,B$ is math object. 定义 map space $A -> B$, map $f$ as math object 的规则是
   $
     f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
@@ -313,6 +320,7 @@ enum is special case of sum/union?
 ]
 #tag("subset") 
 #indent[
+  #image("../image/subset.jpeg", width: 30%)
   $ S ∈ Subset(A) := S ⊂ A $
 
   denoted by $2^A$. 根据 #link(<proposition-function>)[] 等价于 map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
@@ -416,9 +424,13 @@ $=$ 的其它用法
 
   draft of proof: 展开, 使用 parallel distributive cf. #link(<distributive-forall-exists>)[]
 ]
-#tag("set-minus") $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
+#tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
 
-#tag("symmetric-set-minus") $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
+$A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
+
+#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
+
+$A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
 
 #tag("coordinate-component")
 - product component 

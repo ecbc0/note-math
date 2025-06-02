@@ -12,9 +12,9 @@ analytic-Euclidean
 analytic-Minkowski
 analytic-struct-operation
 ordinary-differential-equation
-// volume
-// integral
-// divergence
+volume
+integral
+divergence
 limit-net
 compact
 connected

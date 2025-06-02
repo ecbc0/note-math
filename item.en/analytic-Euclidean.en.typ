@@ -74,6 +74,9 @@ Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
     f((x+Δ)+v) = sum_(m ∈ ℕ)(sum_(n=m)^∞ a_n (x) binom(n,m) Δ^(n-m)) v^m = sum_(m ∈ ℕ) a_m (x+Δ) v^m
   $
   There is also a non-zero radius of convergence $R' > 0$ at $x+Δ$. (Figure) According to the triangle inequality, $R' >= R - |Δ|$
+
+  #image("../image/change-base-point-analytic.jpeg", width: 30%)
+
 ]
 *Example* 
 
@@ -509,7 +512,7 @@ Attempt to define distance on the power series space. Inspired by
   
     $ ⨁_(n = 1)^∞ Lin(⊙^n 𝕂^d -> 𝕂^(d')) $
 
-  #link(<net>)[net]
+    #link(<net>)[] (note: $|A|$ is #link(<linear-map-induced-norm>)[])
   
     $ 𝔹(A,ε) := {B : forall n in ℕ_(>= 1), |A_n - B_n|^(1/n) < ε} $ (or $|A_n - B_n| < ε^n$)
 
@@ -551,9 +554,9 @@ The closeness of the converged values
   &= 1/(1 - ε |v|) - 1 \
   &-> 0$
 ]
-for Sobolev anayltic space, try use $integral abs(1/n! #d^n f)^(1/n)$, almost everywhere analytic. Not the distance or uniform distance at each point, but integrating the distance at each point
+#tag("Sobolev-space") for Sobolev anayltic space, try use almost-everywhere analytic + $integral abs(1/n! #d^n f)^(1/n)$ as the control function to approximate the objective function $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ is the #tag("weak-differential") of $ϕ$. (note: $|A|$ is #link(<linear-map-induced-norm>)[]) Or just use the almost-everywhere analytic space with analytic integral norm restrictions, or perform Cauchy net completion of this space with integral norm
 
-Weaker mesh control
+Weaker net control
 #indent[
   let $r < R_A$
 

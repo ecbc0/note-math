@@ -1,6 +1,13 @@
 #import "/module/module.typ": *
 #show: module
 
+#tag("tensor") 多重线性 (兼容集合积的 `and` 逻辑) + 最小独立无关 (生成基)
+$
+  dmat( delim: #none ,
+    V_1 × ⋯ × V_k &⟶ V_1 ⊗ ⋯ ⊗ V_k ;
+    (v_1 ,…, v_k) &⟿ v_1 ⊗ ⋯ ⊗ v_k
+  )
+$
 #tag("tensor-induced-quadratic-form") 
 #indent[
   将向量空间的二次型 $⟨ , ⟩$ 导出到张量空间的二次型 $⟨ , ⟩^(⊗ k)$ 

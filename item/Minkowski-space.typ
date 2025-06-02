@@ -36,11 +36,15 @@ if $span(v,w) ≃ ℝ^(1,1)$, 可能
 - $0,2$
 - $0,1$
 
-*Prop* 在 $ℝ^(1,n)$ 非退化二次型下, light-like $v$ 不正交于 
+*Prop* time-like 只正交于 space-like
+
+let $v$ time-like. 使用正交分解, let $v = v_0, w = w_0 + bf(w)$ then $⟨ v,w ⟩ = v_0 w_0 = 0 ==> w_0 = 0$ ==> $w$ space-like
+
+*Prop* light-like $v$ 不正交于 
 - time-like
 - 与自身共线 $k v$ 之外的 light-like
 
-_Proof_ (@ref-7)
+_Proof_ (@ref-7, (@ref-9, p.13))
 #indent[
   根据情况取一个正交分解 $ℝ^(1,n) = ℝ_"time" ⊕ ℝ^n_"space"$
   $
@@ -288,7 +292,11 @@ let $ℍ𝕪 := ℍ𝕪^1 (time,future) = {(t,x) in ℝ^(1,1) : t^2 - x^2 = 1 , 
 
   - $exph (ϕ #i-split) = cosh ϕ + (sinh ϕ) #i-split in ℍ𝕪$, $ϕ in ℝ$. by $cosh^2 - sinh^2 = 1$
     
-    #tag("polor-coordinate-hyperbolic") (图) 双曲极坐标 $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ 测地线长度参数. 也称为双曲角度 #tag("hyperbolic-angle")
+    #tag("polor-coordinate-hyperbolic") 
+    
+    #image("../image/polor-coordinate-hyperbolic.jpeg", width: 50%)
+    
+    双曲极坐标 $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ 测地线长度参数. 也称为双曲角度 #tag("hyperbolic-angle")
 
     极坐标即距离和方向的分解
     
@@ -361,9 +369,19 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) 连续 at $f(0) = 0$ 
 ]
 推广到高维
 
-二次曲面 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by 径向 + 切向 + 嵌入的 $ℍ𝕪$ 及其测地线长度. *Question* 是否有更好更直观的定义?
+二次流形 $ℚ^(p,q)(± 1)$ 的切空间可以定义为正交于径向的 (仿射) 子空间
 
-#tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ 测地线 (图) 
+二次流形 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by 径向 + 切向 + 嵌入的 $ℍ𝕪$ 及其测地线长度. *Question* 是否有好的解释?
+
+#image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+
+#stack( dir: ltr,
+  image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
+  image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
+  image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)
+)
+
+#tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ 测地线
 #indent[  
   let $v in ℍ𝕪^n (time) = ℚ^(1,n)(1) = {x_0^2 - (x_1^2 + ⋯ + x_n^2) = 1}$ 
   
@@ -388,6 +406,11 @@ $ℍ𝕪^n (time)$ 测地线球
   where $v^⟂ ≃ ℝ^n, {|w| = 1} ≃ 𝕊^(n-1)$
  ]
 $ℝ^(1,n)$ 的 (time,future)-like net struct
+
+#stack( dir: ltr,
+  image("../image/polor-coordinate-hyperbolic.jpeg", width: 40%),
+  image("../image/Minkowski-net.jpeg", width: 30%)
+)
 
 双曲极坐标 as 距离空间 $ℝ_(>= 0)$ 和方向空间 $ℍ𝕪^n (time)$ 的 product net struct
 #indent[

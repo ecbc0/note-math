@@ -65,7 +65,7 @@
   },
   "image(\"path\", width: size)": {
     "prefix": "image-size",
-    "body": "#image(\"$1\", width: ${2:3}0%)"
+    "body": "image(\"$1\", width: ${2:3}0%)"
   },
   "stack-ltr":{
     "prefix": "stack-ltr",

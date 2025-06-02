@@ -73,7 +73,9 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   $ 
     f((x+Δ)+v) = sum_(m ∈ ℕ)(sum_(n=m)^∞ a_n (x) binom(n,m) Δ^(n-m)) v^m = sum_(m ∈ ℕ) a_m (x+Δ) v^m
   $
-  在 $x+Δ$ 也有非零收敛半径 $R' > 0$. (图) 根据三角不等式, $R' >= R - |Δ|$
+  在 $x+Δ$ 也有非零收敛半径 $R' > 0$. 根据三角不等式, $R' >= R - |Δ|$
+  
+  #image("../image/change-base-point-analytic.jpeg", width: 30%)
 ]
 *Example* 
 
@@ -509,7 +511,7 @@ for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #li
   
     $ ⨁_(n = 1)^∞ Lin(⊙^n 𝕂^d -> 𝕂^(d')) $
 
-  #link(<net>)[网]
+    #link(<net>)[网] (note: $|A|$ is #link(<linear-map-induced-norm>)[])
   
     $ 𝔹(A,ε) := {B : forall n in ℕ_(>= 1), |A_n - B_n|^(1/n) < ε} $ (or $|A_n - B_n| < ε^n$)
 
@@ -551,7 +553,7 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
   &= 1/(1 - ε |v|) - 1 \
   &-> 0$
 ]
-for Sobolev anayltic space, try use $integral abs(1/n! #d^n f)^(1/n)$, 几乎处处解析. 不是每点距离或一致距离, 而是对每点的距离进行积分
+#tag("Sobolev-space") for Sobolev anayltic space, try use 几乎处处解析 + $integral abs(1/n! #d^n f)^(1/n)$ 作为控制函数去逼近目标函数 $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ 是 $ϕ$ 的 #tag("weak-differential"). (note: $|A|$ is #link(<linear-map-induced-norm>)[]) 或者只用带解析型积分 norm 限制的几乎处处解析空间, 或者对此空间进行积分 norm 的 Cauchy 网完备化
 
 更弱的网控制
 #indent[

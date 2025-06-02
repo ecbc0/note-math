@@ -1,16 +1,16 @@
 整理和记录的想法, 关于数学, 不保证正确性和可读性
 
-为阅读, 使用 [vscode](https://code.visualstudio.com/) tinymist 扩展的 preview 功能
+为阅读, 使用 [vscode](https://code.visualstudio.com/) [tinymist](https://github.com/Myriad-Dreamin/tinymist) 扩展的 preview 功能
 
 主题分类在 `topic` 文件夹, 里面指向 `item` 的文件 (vscode `ctrl + p` 来搜索且打开文件)
 
 在 `.vscode/settings.json` 的 `"tinymist.rootPath": ...` 设置 `note-math` 文件夹在你的系统的 path
 
-English ver. are machine translation from gemini and LinguaGacha
+English ver. are machine translation from gemini and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
 Organized and recorded ideas about mathematics, correctness and readability are not guaranteed
 
-To read, use the preview function of [vscode](https://code.visualstudio.com/) tinymist extension
+To read, use the preview function of [vscode](https://code.visualstudio.com/) [tinymist](https://github.com/Myriad-Dreamin/tinymist) extension
 
 Topics are classified in `topic` folders, which point to files in `item` (vscode `ctrl + p` to search and open file)
 

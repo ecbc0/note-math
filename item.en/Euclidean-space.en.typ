@@ -1,6 +1,13 @@
 #import "/module/module.typ": *
 #show: module
 
+#tag("tensor") multilinear (compatible to `and` logic of set product) + independent minimal (generated base)
+$
+  dmat( delim: #none ,
+    V_1 × ⋯ × V_k &⟶ V_1 ⊗ ⋯ ⊗ V_k ;
+    (v_1 ,…, v_k) &⟿ v_1 ⊗ ⋯ ⊗ v_k
+  )
+$
 #tag("tensor-induced-quadratic-form") 
 #indent[
   Derive the quadratic form $⟨ , ⟩$ of the vector space to the quadratic form $⟨ , ⟩^(⊗ k)$ of the tensor space 

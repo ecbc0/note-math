@@ -36,11 +36,15 @@ Consider the general $ℝ^(1,n)$ in $span(v,w)$
 - $0,2$
 - $0,1$
 
-*Prop* Under the non-degenerate quadratic form of $ℝ^(1,n)$, light-like $v$ is not orthogonal to 
+*Prop* time-like is only orthogonal to space-like
+
+let $v$ time-like. Using orthogonal decomposition, let $v = v_0, w = w_0 + bf(w)$ then $⟨ v,w ⟩ = v_0 w_0 = 0 ==> w_0 = 0$ ==> $w$ space-like
+
+*Prop* light-like $v$ is not orthogonal to 
 - time-like
 - light-like other than collinear with itself $k v$
 
-_Proof_ (@ref-7)
+_Proof_ (@ref-7, (@ref-9, p.13))
 #indent[
   Take an orthogonal decomposition according to the situation $ℝ^(1,n) = ℝ_"time" ⊕ ℝ^n_"space"$
   $
@@ -288,7 +292,11 @@ let $ℍ𝕪 := ℍ𝕪^1 (time,future) = {(t,x) in ℝ^(1,1) : t^2 - x^2 = 1 , 
 
   - $exph (ϕ #i-split) = cosh ϕ + (sinh ϕ) #i-split in ℍ𝕪$, $ϕ in ℝ$. by $cosh^2 - sinh^2 = 1$
     
-    #tag("polor-coordinate-hyperbolic") (Figure) Hyperbolic polar coordinates $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ geodesic length parameter. Also known as hyperbolic angle #tag("hyperbolic-angle")
+    #tag("polor-coordinate-hyperbolic") 
+    
+    #image("../image/polor-coordinate-hyperbolic.jpeg", width: 50%) 
+    
+    Hyperbolic polar coordinates $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ geodesic length parameter. Also known as hyperbolic angle #tag("hyperbolic-angle")
 
     Polar coordinates are the decomposition of distance and direction
     
@@ -361,9 +369,19 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) continuous at $f(0) =
 ]
 Generalized to higher dimensions
 
+The tangent space of the quadratic manifold $ℚ^(p,q)(± 1)$ can be defined as the (affine) subspace orthogonal to the radial direction
+
 The definition of geodesics of the quadric surface $ℚ^(p,q)(± 1)$ does not require manifold techniques, only use geodesic as secant line of the cross-section span by radial + tangent + embedded $ℍ𝕪$ and its geodesic length. *Question* Is there a better and more intuitive definition?
 
-#tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ geodesic (figure) 
+#image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+
+#stack( dir: ltr,
+  image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
+  image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
+  image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)
+)
+
+#tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ geodesic
 #indent[  
   let $v in ℍ𝕪^n (time) = ℚ^(1,n)(1) = {x_0^2 - (x_1^2 + ⋯ + x_n^2) = 1}$ 
   
@@ -388,6 +406,11 @@ $ℍ𝕪^n (time)$ geodesic sphere
   where $v^⟂ ≃ ℝ^n, {|w| = 1} ≃ 𝕊^(n-1)$
  ]
 (time,future)-like net struct of $ℝ^(1,n)$
+
+#stack( dir: ltr,
+  image("../image/polor-coordinate-hyperbolic.jpeg", width: 40%),
+  image("../image/Minkowski-net.jpeg", width: 30%)
+)
 
 Hyperbolic polar coordinates as the product net struct of distance space $ℝ_(>= 0)$ and direction space $ℍ𝕪^n (time)$
 #indent[

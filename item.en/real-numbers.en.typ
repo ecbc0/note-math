@@ -215,9 +215,9 @@ For the $ℕ$ sequence, define $"distance"{a_(n),a_(n+1),...} := sup_(m,m' >= n)
 
 For a general net, define $"distance"(B) = sup_(a,a' in B) |a - a'|$
 
-limit-distance-vanish sequence := $lim_(n -> ∞) abs({a_(n),a_(n+1),...}) = 0$ #tag("limit-distance-vanish-sequence"). i.e. tail distance vanish
+#tag("limit-distance-vanish-sequence") := $lim_(n -> ∞) abs({a_(n),a_(n+1),...}) = 0$ i.e. tail distance vanish
 
-limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
+#tag("limit-distance-vanish-net") := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
 #tag("Cauchy-completeness-real") limit-distance-vanish sequence or net converges 
   

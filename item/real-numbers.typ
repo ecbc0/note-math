@@ -215,9 +215,10 @@ $ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) 
 
 对于一般 net 定义 $"distance"(B) = sup_(a,a' in B) |a - a'|$
 
-limit-distance-vanish 序列 := $lim_(n -> ∞) abs({a_(n),a_(n+1),...}) = 0$ #tag("limit-distance-vanish-sequence"). i.e. tail distance vanish
+#tag("limit-distance-vanish-sequence") := $lim_(n -> ∞) abs({a_(n),a_(n+1),...}) = 0$. i.e. tail distance vanish
 
-limit-distance-vanish-net := $forall ε > 0, exists B in #B, "distance"(B) < ε$
+
+#tag("limit-distance-vanish-net") := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
 #tag("Cauchy-completeness-real") limit-distance-vanish 序列 or net 收敛 
   
