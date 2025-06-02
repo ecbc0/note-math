@@ -321,6 +321,8 @@ $sum a_n^+ = ∞$ and $sum a_n^- < ∞$ ==> $sum a_n = +∞$ and rearrangement i
 
 *Question* The case of $l^2$ norm $(sum |a_n|^2)^(1/2)$ reduce to $b_n = |a_n|^2$?
 
+harmonic series $sum 1/n = ∞$ vs $sum 1/n^2 = π^2 / 6$, say that, $l^1$ convergence is closer to normal convergence. $l^2$ convergence is more suitable for Fourier serise
+
 The last possibility
 
 #tag("series-rearrangement-real") 

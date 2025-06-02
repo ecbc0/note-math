@@ -14,3 +14,15 @@ minimal structure to define manifold, family of coordinate cards covering $M$ wi
 *Example* #link(<Mobius-strip>)[] is not directional
 Send feedback
 Translation results available
+
+*Example* Parametric curves and surfaces of $ℝ^3$
+
+#tag("orientable") Orientable := can analytically define #link(<orientation>)[] in the tangent bundle 
+
+Equivalent to decomposition of $"Diff"$ to the $det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$ 
+
+Equivalent to the existence of a coordinate cover, each transition function differentiation $#d f in SO$
+
+*Example* #link(<Mobius-strip>)[] Non-orientable
+
+If the interior of a manifold with boundary is orientable, then the boundary is also orientable. Intuitively, the local of boundary has the same interior + the interior is orientable ==> local of boundary has the same orientation ==> the boundary orientation is determined

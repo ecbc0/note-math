@@ -9,7 +9,7 @@ $ℝ ∖ 0 = ℝ_(< 0) ⊔ ℝ_(> 0)$
 
 $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
-有两个方向
+有两个方向. 对于 $ℝ^n$ 向量基, 交换一次顺序 $e_i <-> e_j$ 会使得方向改变, 引入 $-1$ 因子. 这和交错张量有相似之处. 方向定义为基的同向 quotient, 等价于 $GL(n,ℝ)$ 的 $det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$ 分解
 
 #tag("orientation-of-boundary-of-simplex") 
 #indent[
@@ -122,7 +122,7 @@ simplex 散度算子 as 边界算子的对偶 $⟨ ∂ σ , ω ⟩ = ⟨ σ , �
 ]
 #tag("Stokes-theorem") 
 #indent[
-  for 几乎处处解析的 #link(<orientable>)[可定向] 带边流形, Stokes 定理 $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for  #link(<orientable>)[可定向] 的几乎处处解析的带边流形, Stokes 定理 $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
 ]
 也许初看起来很奇怪, 这是有效的, 先无穷小 $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ 再积分 $integral #d ω := lim sum ⋯$, 但是一维微积分基本定理就是这样的
 
@@ -132,12 +132,16 @@ simplex 散度算子 as 边界算子的对偶 $⟨ ∂ σ , ω ⟩ = ⟨ σ , �
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  使用流形上的对 form 积分的定义所使用的可数 + 线性近似 + 分割极限 #link(<integral-on-manfold>)[]
+  使用流形上的对 form 积分的定义所使用的近似方法 #link(<integral-on-manfold>)[]
 
   近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 内部边界抵消, 就只剩下真正的流形的边界
 
-  大概需要某种一阶 Sobolev 控制?
+  再使用 $n-1$ form $ω$ 对子流形的积分 #link(<integral-on-submanfold>)[]
+
+  大概需要 $n-1$ form 的某种 Sobolev 控制?
 ]
+我并没有对没有边界的流形处理 Stokes 定理, 并没有定义 $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. 没有的边界流形 *Example* $ℝ^n$
+
 边界算子与外微分的对应性质
 
 homology

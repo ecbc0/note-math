@@ -1,4 +1,4 @@
-整理和记录的想法, 关于数学, 不保证正确性和可读性
+整理和记录的想法, 关于数学, 不保证正确性和可读性和细节完整性
 
 为阅读, 使用 [vscode](https://code.visualstudio.com/) [tinymist](https://github.com/Myriad-Dreamin/tinymist) 扩展的 preview 功能
 
@@ -6,7 +6,7 @@
 
 在 `.vscode/settings.json` 的 `"tinymist.rootPath": ...` 设置 `note-math` 文件夹在你的系统的 path
 
-English ver. are machine translation from gemini and [LinguaGacha](https://github.com/neavo/LinguaGacha)
+English ver. are machine translation without check from gemini and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
 Organized and recorded ideas about mathematics, correctness and readability are not guaranteed
 

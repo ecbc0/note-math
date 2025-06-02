@@ -319,7 +319,9 @@ _Proof_ $a_n = a_n^+ - a_n^-$ and use 收敛序列的运算
   $
 $sum a_n^+ = ∞$ and $sum a_n^- < ∞$ ==> $sum a_n = +∞$ 且重排不变
 
-*Question* $l^2$ norm $(sum |a_n|^2)^(1/2)$ 的情况 reduce to $b_n = |a_n|^2$?
+*Question* $l^2$ norm $(sum |a_n|^2)^(1/2)$ 的情况 reduce to $b_n = |a_n|^2$? 
+
+调和级数 $sum 1/n = ∞$ vs $sum 1/n^2 = π^2 / 6$ 说明, $l^1$ 会更接近一般收敛. 而 $l^2$ 收敛更适合 Fourier 展开?
 
 最后的可能性
 

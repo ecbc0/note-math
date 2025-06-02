@@ -11,5 +11,5 @@ manifold-example //
 // geodesic-derivative
 principal-bundle //
 principal-bundle-connection //
-// symmetric-space //
+// analysis-on-symmetric-space //
 group-action

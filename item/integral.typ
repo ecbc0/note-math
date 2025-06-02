@@ -47,13 +47,15 @@ $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,
 ]
 #tag("integrable-exist-subnet-almost-everywhere-pointwise-convergence") 
 #indent[
-  但是所有积分距离 Cauchy 网中存在子网几乎处处逐点收敛到目标可积函数. 这来自, 在存在测度任意小的集合 $A$ 使得在 $A^∁$ 上绝对一致收敛. cf. p.129--130 of @ref-5 
+  但是所有 $L^1,L^2$ 积分距离 Cauchy 网中存在子网几乎处处逐点收敛到目标可积函数. 这来自, 在存在测度任意小的集合 $A$ 使得在 $A^∁$ 上绝对一致收敛. cf. p.129--130 of @ref-5 
 ]
-$𝟙_A in L^1$ 定义出来的可测集是 Lebesgue 可测集, 可能不连通
+$𝟙_A in L^1, L^2$ 定义出来的可测集是 Lebesgue 可测集, 可能不连通
 
 我们定义的是绝对可积. 其它的积分操作, 例如 $integral_(-∞)^(∞)  e^(- #i x^2) $, 是基于绝对可积的特殊的极限操作, 和问题的环境有关
 
-线性换坐标 $A in GL$ 给出积分变量替换公式 $det A$. 或者如果认为是对 $n$ form 积分, 则积分是 $GL$ invariant 的
+线性换坐标 $A in GL$ 给出积分变量替换公式 $det A$
+
+#tag("integral-on-form") 如果认为是对 $n$ form 积分, i.e. form 作用在单位平行体上的值的积分, 则积分是 $GL$ invariant 的
 
 几乎处处解析
 
@@ -61,33 +63,31 @@ $𝟙_A in L^1$ 定义出来的可测集是 Lebesgue 可测集, 可能不连通
 #indent[
   积分的微分同胚的变量替换公式 $integral_(ℝ^n) f = integral_(ℝ^n) (f ∘ ϕ) |det #d ϕ|$ or $integral_(ℝ^n) #d y space f(y) = integral_(ℝ^n) #d x space (f ∘ ϕ)(x) |det #d ϕ (x)|$
   
-  将换坐标映射的微分 $#d f$ at 每个 simplex 中心 as 仿射映射作用于定义域 simplex 得到值域 simplex 用于近似, 然后取分割极限
-  
-  需要先对有界区域对微分中值定理近似进行 compact 一致控制
+  将换坐标映射的微分 $#d f$ at 每个 simplex 中心 as 仿射映射作用于定义域 simplex 得到值域 simplex 用于近似, 对有界区域对 #link(<mean-value-theorem-analytic>)[微分中值定理] (高阶) 近似进行 compact 一致控制, 然后取分割极限 (@ref-12, p.92--99)
   
   然后无界区域是来自有界区域的可数逼近, $sum_(i = 1 .. ∞) ε_i < ε$ 技术
 
-  如果认为是对 $n$ form 积分, 则积分变量替换等价于 $n$ form 积分 is 微分同胚 invariant
+  如果认为是对 $n$ form 积分, 则积分变量替换等价于 $n$ form 积分 (cf. #link(<integral-on-form>)[]) is 微分同胚 invariant
 ]
 #tag("integral-on-manfold") *Question* 
 #indent[
-  根据变量替换公式, 流形上的坐标里的对 $n$ form 的积分 invariant
+  根据变量替换公式, 流形上的坐标里的对 $n$ form 的积分 invariant (cf. #link(<integral-on-form>)[])
 
-  但是如果想要对定义在整个流形上的 $n$ form 进行积分, 应该怎么做?
+  但是如果想要对定义在整个 #link(<orientable>)[可定向] 流形上的 $n$ form 进行积分, 应该怎么做?
 
-  一种做法是, 类似变量替换公式的证明, 使用可数 + 线性近似 + 分割极限
+  一种做法是, 类似 #link(<integral-change-of-variable-formula>)[变量替换公式] 的证明, 坐标内, 线性近似 + compact 一致控制 + 分割极限, 然后可数覆盖逼近整个流形
 
   为了定义积分, 需要某种可数化假设. 最简单的假设是流形可以被可数的坐标卡覆盖. 就让我们用这个假设
 
   现在的问题是, 坐标卡交集的地方的积分是重复的, 需要去除重复
 
-  我并不打算使用可测集对交集和减集封闭, 也不打算使用弯曲 simplex 型区域分割 *alias* 三角剖分, 它们甚至更难证明对交集和减集封闭
+  我并不打算使用可测集对交集和减集封闭, 也不打算使用弯曲 simplex (box) 型区域分割 *alias* 三角剖分, 它甚至更难证明
   
-  而是在 simplex 或者 box 近似的水平上, 对交集和减集封闭
+  而是在 simplex (box) 近似的水平上, 对交集和减集封闭 (多面体分解到 simplex (box) 之后)
 
   e.g. transition map 的微分 $#d f$ at 每个 simplex (box) 中心 as #link(<affine-map-point-ver>)[仿射映射] (线性映射) 来将坐标区域 $B$ 的 simplex (box) 映射到坐标区域 $A$ 的 simplex (box). 然后 simplex (box) 的交集和减集可以再分解到 simplex (box) 
   
-  对这种近似取极限就得到流形上的积分
+  对这种近似取极限, 要求 $L^1$ or $L^2$ 式绝对收敛, 就得到流形上的积分
 
   证明结果不依赖于坐标系统和线性近似逼近方式的选取
 ]
@@ -122,4 +122,12 @@ area coarea 公式
   不同的 $n$ 维 $k$ form 可能在一个 $k$ 方向有相同的作用值, 但是这层冗余可以消去 by 考虑作用在所有 $k$ 方向
 
   类似 $n$ 阶的情况, $k$ chain 上的 simplicial map form 定义积分 $integral_(σ) ω = sum ω("center of" σ_i) Vol(σ_i)$
+]
+#tag("integral-on-submanfold") 
+#indent[
+  让 $n$ 维流形的 $k$ form 限制于 $k$ #link(<orientable>)[可定向] 子流形的切空间 (cf. #link(<integral-on-manfold>)[])
+
+  $M$ 的 $n$ form 等价于纯量函数, 但是 $M$ 的 $n-1$ form $ω$ 应怎么积分控制? 尝试 $sup(S "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
+
+  如无必要, 暂时不引入额外的 metric 来定义 $integral_M (⟨ ω ⟩^2)^(1/2)$ or $(integral_M ⟨ ω ⟩^2)^(1/2)$ 
 ]

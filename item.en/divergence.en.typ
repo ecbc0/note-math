@@ -9,7 +9,7 @@ $ℝ ∖ 0 = ℝ_(< 0) ⊔ ℝ_(> 0)$
 
 $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
-There are two directions
+There are two directions. for vector base of $ℝ^n$, change order once $e_i <-> e_j$ change orientable, introduce a $-1$ factor. This is somewhat similar to alternating-tensor. orientation defined as quotient of vector base with same orientation. equivalent to decompose of $GL(n,ℝ)$ $det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 #tag("orientation-of-boundary-of-simplex") 
 #indent[
@@ -122,7 +122,7 @@ For micro-molecular manifolds, it becomes easier to handle. At this time, the di
 ]
 #tag("Stokes-theorem") 
 #indent[
-  for almost everywhere analytic #link(<orientable>)[] manifolds with boundary, Stokes' theorem $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #link(<orientable>)[] almost everywhere analytic manifolds with boundary, Stokes' theorem $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
 ]
 Perhaps it seems strange at first glance, but this is effective, first infinitesimal $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ then integral $integral #d ω := lim sum ⋯$, but the fundamental theorem of one-dimensional calculus is like this
 
@@ -132,12 +132,18 @@ For high dimensions, if it's curved, it's very difficult. First deal with straig
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
+  use the approximation method used in defining #link(<integral-on-manfold>)[]
+
   Use countable + linear approximation + partition limit that used in the definition of form integral on manifold #link(<integral-on-manfold>)[] 
 
   Approximately decompose into simplex or box, then use Stokes theorem of simplex + internal boundary cancellation, only the real boundary of manifold is left
 
-  Probably need some kind of first-order Sobolev control?
+  then use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
+
+  Probably need some kind of Sobolev control?
 ]
+I have not deal with the Stokes theorem for manifold without boundary, have not define $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. *Example* of manifold without $ℝ^n$
+
 Correspondence between boundary operator and exterior derivative
 
 homology

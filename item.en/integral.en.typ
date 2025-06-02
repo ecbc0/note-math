@@ -47,13 +47,15 @@ $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,
 ]
 #tag("integrable-exist-subnet-almost-everywhere-pointwise-convergence") 
 #indent[
-  But for all integral distances, there exists a subnet in the Cauchy net that converges almost everywhere pointwise to the target integrable function. This comes from the fact that there exists a set $A$ with arbitrarily small measure such that it converges absolutely and uniformly on $A^∁$. cf. p.129--130 of @ref-5 
+  But for all $L^1,L^2$ integral distances, there exists a subnet in the Cauchy net that converges almost everywhere pointwise to the target integrable function. This comes from the fact that there exists a set $A$ with arbitrarily small measure such that it converges absolutely and uniformly on $A^∁$. cf. p.129--130 of @ref-5 
 ]
-The measurable set defined by $𝟙_A in L^1$ is a Lebesgue measurable set, which may be disconnected
+The measurable set defined by $𝟙_A in $L^1,L^2$$ is a Lebesgue measurable set, which may be disconnected
 
 What we define is absolutely integrable. Other integral operations, such as $integral_(-∞)^(∞)  e^(- #i x^2) $, are special limit operations based on absolute integrability, and are related to the environment of the problem
 
-The linear change of coordinates $A in GL$ gives the integral change of variable formula formula $det A$. Or if it is considered as integrating an $n$ form, then the integral is $GL$ invariant
+The linear change of coordinates $A in GL$ gives the integral change of variable formula formula $det A$
+
+#tag("integral-on-form") Or if it is considered as integrating an $n$ form, i.e. integral of form act on unit volume parallelepiped, then the integral is $GL$ invariant
 
 Almost everywhere analytic
 
@@ -61,33 +63,33 @@ Almost everywhere analytic
 #indent[
   The change of variable formula formula for diffeomorphisms of integrals is $integral_(ℝ^n) f = integral_(ℝ^n) (f ∘ ϕ) |det #d ϕ|$ or $integral_(ℝ^n) #d y space f(y) = integral_(ℝ^n) #d x space (f ∘ ϕ)(x) |det #d ϕ (x)|$
   
-  The differential of the coordinate transformation map $#d f$ at each simplex center as an affine map acting on the domain simplex is used to obtain the range simplex for approximation, and then the partition limit is taken
+  The differential of the coordinate transformation map $#d f$ at each simplex center as an affine map acting on the domain simplex is used to obtain the range space simplex for approximation, then use (high order) #link(<mean-value-theorem-analytic>)[], then take partition limit (@ref-12, p.92--99)
   
   It is necessary to first perform compact uniform control on the bounded region for the approximation of the differential mean value theorem
   
   Then the unbounded region is a countable approximation from the bounded region, using the $sum_(i = 1 .. ∞) ε_i < ε$ technique
 
-  If it is considered as integrating an $n$ form, then the integral change of variable formula is equivalent to $n$ form integration is diffeomorphism invariant
+  If it is considered as integrating an $n$ form, (cf. #link(<integral-on-form>)[]) then the integral change of variable formula is equivalent to $n$ form integration is diffeomorphism invariant
 ]
 #tag("integral-on-manfold") *Question*
 #indent[
-  According to the change of variable formula, the integral of $n$ form in the coordinates on the manifold is invariant
+  According to the change of variable formula, the integral of $n$ form in the coordinates on the manifold is invariant (cf. #link(<integral-on-form>)[])
 
-  But what if we want to integrate the $n$ form defined on the entire manifold?
+  But what if we want to integrate the $n$ form defined on the entire #link(<orientable>)[] manifold?
 
-  One way is to use countability + linear approximation + partitioning limit, similar to the proof of the variable substitution formula
+  One way is, similar to the proof of #link(<integral-change-of-variable-formula>)[], in coordinate, linear approximation + compact uniformly control + partition limit, then use countable cover to approximate entire manifold
 
   In order to define the integral, some kind of countability assumption is needed. The simplest assumption is that the manifold can be covered by countable coordinate cards. Let's use this assumption
 
   Now the problem is that the integral at the intersection of the coordinate cards is repeated and needs to be removed
 
-  I am not going to use measurable sets being closed under intersection and set-minus, nor do I intend to use curved simplex type region partition *alias* triangulation which is even more difficult to proof closed under intersection and set-minus
+  I will not use measurable sets being closed under intersection and set-minus, nor use curved simplex (box) type region partition *alias* triangulation, which is even more difficult to proof
 
-  Instead, I am going to use closeness under intersection and set-minus at the level of simplex or box approximation
+  Instead, I will use closeness under intersection and set-minus at the level of decomposition to simplex (box) approximation (closeness after decomposition from polyhedra to simplex) 
 
   e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #link(<affine-map-point-ver>)[] (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
 
-  Taking the limit of this approximation gives the integral on the manifold
+  Taking the limit of this approximation, require $L^1,L^2$ style absolute convergence, gives the integral on the manifold
 
   Prove that the result does not depend on the choice of coordinate system and linear approximation method
 ]
@@ -122,4 +124,12 @@ area coarea formula
   Different $n$-dimensional $k$ forms may have the same action value in a $k$ direction, but this layer of redundancy can be eliminated by considering the action in all $k$ directions
 
   Similar to the $n$-th order case, the simplicial map form on the $k$ chain defines the integral $integral_(σ) ω = sum ω("center of" σ_i) Vol(σ_i)$
+]
+#tag("integral-on-submanfold") 
+#indent[
+  let $M$ be $n$ dimension manifold, $k$ form restrict to #link(<orientable>)[] $k$ submanifold tangent space 
+
+  $n$ form in $M$ is equivalent to scalar function, but how to control $n-1$ form by integral? try $sup(S "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
+
+  if unnecessary, do not introduce metric to define $integral_M (⟨ ω ⟩^2)^(1/2)$ or $(integral_M ⟨ ω ⟩^2)^(1/2)$ now
 ]
