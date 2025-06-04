@@ -2,7 +2,7 @@
 #show: module
 
 point-particle-non-relativity
-// point-particle-relativity
+point-particle-relativity
 // scalar-field
 // scalar-field-non-relativity
 // projective-lightcone
