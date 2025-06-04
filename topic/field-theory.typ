@@ -1,7 +1,7 @@
 #import "/module/module.typ": *
 #show: module
 
-// point-particle-non-relativity
+point-particle-non-relativity
 // point-particle-relativity
 // scalar-field
 // scalar-field-non-relativity

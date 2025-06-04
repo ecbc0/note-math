@@ -199,7 +199,6 @@
 	"⋯": {
 		"prefix": [
 			"cdots",
-			"center-dots"
 		],
 		"body": "⋯",
 		"description": "center dots"
@@ -207,15 +206,13 @@
 	"⋱": {
 		"prefix": [
 			"ddots",
-			"diagonal-dots"
 		],
 		"body": "⋱",
-		"description": "down dots"
+		"description": "diagonal dots"
 	},
 	"⋮": {
 		"prefix": [
-			"vdots",
-			"vertical-dots"
+			"vdots"
 		],
 		"body": "⋮",
 		"description": "vertical dots"
