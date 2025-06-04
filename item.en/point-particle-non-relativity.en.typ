@@ -10,8 +10,6 @@ Non-relativistic spacetime $ℝ × ℝ^3$
 
 $ integral #d t (1/2 m vel(x)^2 - U(x)) $
 
-The integral is reparemetrization invariant. So when fixing the endpoints, the variation with respect to time does not change the result 
-
 let $X(t)$ be a time-varying vector field or time-varying δ diffeomorphism, or $(1,X(t,x_(1 .. 3)))$ is a special type of vector field of non-relativistic spacetime $ℝ × ℝ^3$
 
 let $X(t)$ _is zero at the boundary_ --- fix the endpoints of the path
@@ -24,7 +22,7 @@ where $(∂)/(∂ vel(x)) (1/2 m vel(x)^2) = m vel(x)$
 
 use product rule
 $
-  (#d)/(#d t) ((m vel(x)) X) 
+  (#d)/(#d t) ((m vel(x)) ⋅ X) 
   
   = m acc(x) ⋅ X 
     + m vel(x) ⋅ vel(X)

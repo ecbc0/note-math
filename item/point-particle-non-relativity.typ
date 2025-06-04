@@ -10,8 +10,6 @@
 
 $ integral #d t (1/2 m vel(x)^2 - U(x)) $
 
-积分是 reparemetrization 不变的. 所以当固定端点时, 对时间的变分不改变结果 
-
 let $X(t)$ 是时变向量场 or 时变 δ diffeomorphism, 或者 $(1,X(t,x_(1 .. 3)))$ 是非相对论时空 $ℝ × ℝ^3$ 的特殊类型的向量场
 
 let $X(t)$ _在边界是零_ --- 固定路径的终点
@@ -24,7 +22,7 @@ where $(∂)/(∂ vel(x)) (1/2 m vel(x)^2) = m vel(x)$
 
 use product rule
 $
-  (#d)/(#d t) ((m vel(x)) X) 
+  (#d)/(#d t) ((m vel(x)) ⋅ X) 
   
   = m acc(x) ⋅ X 
     + m vel(x) ⋅ vel(X)

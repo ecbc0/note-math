@@ -58,6 +58,30 @@ compare to the result from separable ODE in 1 dimension
   &= (exp A)(A (x)) \
   &= A(exp(A)(x)) \
   &= v(f(x))$
+
+  *Example* #tag("harmonic-oscillator") 
+  #indent[
+    make harmonic-oscillator first order 
+    $
+      mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)
+    $ 
+    with the case of trigonometric
+    $
+      exp t mat(, 1 ; - ω^2) = mat(
+        cos ω t , 1/ω sin ω t ;
+        - ω sin ω t , cos ω t
+      )
+    $ 
+    so
+    $
+      x(t) = x_0 cos ω t + v_0/ω sin ω t
+    $ 
+    or written in the form of complex number and exponential 
+    $
+      x(t) = 1/2 (x_0 - #i v_0/ω) e^(#i ω t) + 1/2 (x_0 + #i v_0/ω) e^(- #i ω t) =: a (ω, #i) e^(#i ω t) + a (ω, -#i) e^(- #i ω t)
+    $
+    similar for the case of hyperbolic
+  ]
 ]
 - $ℝ -> ℝ$, $v(x) = x^2$
 #indent[
