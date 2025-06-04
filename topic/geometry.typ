@@ -12,4 +12,8 @@ manifold-example //
 principal-bundle //
 principal-bundle-connection //
 // analysis-on-symmetric-space //
+
 group-action
+
+stereographic-projection
+Hopf-bundle

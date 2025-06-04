@@ -1,12 +1,16 @@
 #import "/module/module.typ": *
 #show: module
 
+#stack( dir: ltr,
+  image("../image/stereographic-projection-1.jpeg", width: 40%),
+  image("../image/stereographic-projection-2.jpeg", width: 50%)
+)
 Using quadratic form inversion $|x| x/(|x|) ⇝ 1/(|x|) x/(|x|)$. A type of conformal transformation
 
 $𝕊^(n-1)$ Stereographic projection coordinates of the North and South poles. $dmat( delim: #none ,
   𝕊^(n-1) &⟶ ℝ^(n-1) ;
   x &⟿ ξ
-)$. $p = (∓ 1, 0)$, collinear $(p - x)/(p - (0,ξ)) = λ$
+)$. $N "or" S = p = (∓ 1, 0)$, collinear $(p - x)/(p - (0,ξ)) = λ$, the solution give the map
 $
   dmat( delim: #none ,
     𝕊^(n-1) , ⟶ , ℝ^(n-1) ;

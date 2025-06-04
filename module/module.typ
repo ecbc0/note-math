@@ -15,3 +15,5 @@
 #show: module
 
 to delete color, regex replace in workspace `, fill: (rgb\([\w|#|"]+?\)|[\w]+?)`. _warning_: you may neeed to backup first
+
+you can clear my `.vscode/setting.json` but just leave `"tinymist.rootPath": "path-of-folder-note-math-in-your-system"`

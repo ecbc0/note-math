@@ -1,8 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-minimal structure to define manifold, family of coordinate cards covering $M$ with the same dimension, transition functions using Euclidean or Minkowski or quadratic analysis
-
 *Example* Euclidean analysis of manifolds, various coordinates of the sphere $𝕊^n$
 - Function graph coordinates, function equations $|x|^2 = 1$ and implicit function theorem. e.g. $y = sqrt(1-x^2)$ for $𝕊^1 subset ℝ^2$
 - #link(<stereographic-projection>)[stereographic projection]
@@ -15,7 +13,9 @@ minimal structure to define manifold, family of coordinate cards covering $M$ wi
 Send feedback
 Translation results available
 
-*Example* Parametric curves and surfaces of $ℝ^3$
+*Example* Parametric curves and surfaces of $ℝ^3$. analytic function $f : ℝ^2 -> ℝ^3$, $#d f != 0$ ==> for local parameter, it's local analytic isomorphism
+
+#tag("manifold") minimal structure to define manifold, family of coordinate cards covering $M$ with the same dimension, transition functions using Euclidean or Minkowski or quadratic analysis
 
 #tag("orientable") Orientable := can analytically define #link(<orientation>)[] in the tangent bundle 
 

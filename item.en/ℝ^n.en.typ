@@ -206,7 +206,7 @@ The new imaginary unit construction method is not coordinate-free, so we need to
 
   $G_2$ as automorphism of $𝕆$ illustrates that, without additional structure, such as multiplication $x ⋅ y$ and $|x ⋅ y|^2 = |x|^2 |y|^2$, only a simple linear space structure, it is impossible to give special groups like $G_2$. (Although it is said that all compact groups can have matrix representations.) 
 
-$ℝ^n$ affine structure
+#tag("affine") $ℝ^n$ affine structure
 #indent[
   Change the origin, translate
 

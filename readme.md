@@ -8,10 +8,10 @@
 
 English ver. are machine translation without check from gemini and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
-Organized and recorded ideas about mathematics, correctness and readability are not guaranteed
+Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details
 
 To read, use the preview function of [vscode](https://code.visualstudio.com/) [tinymist](https://github.com/Myriad-Dreamin/tinymist) extension
 
 Topics are classified in `topic` folders, which point to files in `item` (vscode `ctrl + p` to search and open file)
 
-in `.vscode/settings.json` in `"tinymist.rootPath": ...` set your system's path of folder `note-math`
+in `.vscode/settings.json` in `"tinymist.rootPath": ...` set the path of folder `note-math` in your system

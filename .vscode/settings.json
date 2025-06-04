@@ -1,5 +1,5 @@
 {
-    "tinymist.rootPath": "/home/user/Folder/Write/note-math", // change to your system's root path
+    "tinymist.rootPath": "/home/user/Folder/Write/note-math", // change to the path of folder `note-math` in your system 
     "editor.fontFamily": "'Source Code Pro', 'Noto Sans SC', 'Stix Two Math', Monospace",
     "editor.fontSize": 14.5,
     "[typst]": {

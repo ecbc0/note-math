@@ -3,7 +3,6 @@
 
 real-numbers
 limit-sequence
-exponential
 ℝ^n
 Euclidean-space
 Minkowski-spaces
@@ -15,9 +14,13 @@ ordinary-differential-equation
 volume
 integral
 divergence
+
 limit-net
 compact
 connected
 topology-struct-operation
+
+exponential
+angle
 
 // consider decompose into smaller piece? but not too much, too fragmented, too messy. similar to find best-multiplication-decomposition
