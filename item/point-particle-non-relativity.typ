@@ -35,7 +35,7 @@ $ integral #d t ((#d)/(#d t) (m vel(x)) ⋅ X) = 0 $
 $
   0 = - integral #d t ((m acc(x) + (#d U)/(#d x)) X)
 $
-对所有 δ diffeomorphism $X(t)$ 成立, 从而给出 Lagrange-equation (*alias*: Euler--Lagrange-equation), 对于非相对论点粒子, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
+对所有 δ diffeomorphism $X(t)$ 成立, 从而给出 Lagrange-equation (*alias* Euler--Lagrange-equation), 对于非相对论点粒子, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
 
 $ m acc(x) + (∂ U)/(∂ x) = 0 $
 

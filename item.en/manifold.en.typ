@@ -26,3 +26,5 @@ Equivalent to the existence of a coordinate cover, each transition function diff
 *Example* #link(<Mobius-strip>)[] Non-orientable
 
 If the interior of a manifold with boundary is orientable, then the boundary is also orientable. Intuitively, the local of boundary has the same interior + the interior is orientable ==> local of boundary has the same orientation ==> the boundary orientation is determined
+
+#tag("manifold-with-boundary") Manifold with boundaries. The coordinates can be the region enclosed by the $n-1$-dimensional hyperplane, and the transformation function need to be able to derives the transformation function in the $n-1$-dimensional subspace. Usually use almost everywhere analysis to deal with some singularities

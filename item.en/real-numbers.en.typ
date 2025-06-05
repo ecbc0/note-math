@@ -84,7 +84,7 @@ However, decimal cannot natively handle $e = sum_(n = 0)^∞ 1/n!$
 
 Many different $ℕ$ nested intervals have the same limit, e.g. $[0,1/n]$ vs $[-1/n,0]$, need limit-distance-vanish system quotient. let $"distance" (A) = sup_(x,x' in A) |x - x'|$
 
-let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish relation (*alias*: Cauchy convergence) 
+let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish relation (*alias* Cauchy convergence) 
 $
   forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
 $

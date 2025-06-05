@@ -35,7 +35,7 @@ So the differential of the action is
 $
   0 = - integral #d t ((m acc(x) + (#d U)/(#d x)) X)
 $
-holds for all δ diffeomorphism $X(t)$, thus giving the Lagrange-equation (*alias*: Euler--Lagrange-equation), for non-relativistic point particles, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
+holds for all δ diffeomorphism $X(t)$, thus giving the Lagrange-equation (*alias* Euler--Lagrange-equation), for non-relativistic point particles, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
 
 $ m acc(x) + (∂ U)/(∂ x) = 0 $
 

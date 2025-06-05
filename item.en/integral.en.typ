@@ -105,7 +105,9 @@ Fubini theorem 2 ... (@ref-5)
 
 Fubini's theorem can be used to prove that the volume calculation below the graph of a function is the integral of the height function with respect to the volume of the base
 
-area coarea formula
+*Example* polar coordinate ...
+
+area coarea formula ...
 
 #tag("try-to-define-low-dim-integral") 
 #indent[

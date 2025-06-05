@@ -35,7 +35,7 @@ $#d x^0 = #d c t$ may not affect?
 
 Multiply the whole thing by $ℏ^2/m$ to get
 
-Non-relativistic scalar field Lagrangian, *alias*: Schrodinger-Lagrangian #tag("Schrodinger-Lagrangian")
+Non-relativistic scalar field Lagrangian, *alias* Schrodinger-Lagrangian #tag("Schrodinger-Lagrangian")
 $
   integral_(ℝ) #d t integral_(ℝ^3) #d x 1/2 (
     ℏ #i (ψ^* ∂_t ψ - ψ ∂_t ψ^*)     
@@ -44,7 +44,7 @@ $
 $
 Can add a gauge field electrostatic potential term to the action i.e. $∂_t$ changed to $∂_t + #i/ℏ V$
 
-Non-relativistic scalar field equation, *alias*: Schrodinger-equation #tag("Schrodinger-equation")
+Non-relativistic scalar field equation, *alias* Schrodinger-equation #tag("Schrodinger-equation")
 $
   #i ℏ ∂_t ψ = - ℏ^2/(2 m) ∆ ψ + V ψ 
 $

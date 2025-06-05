@@ -103,7 +103,9 @@ Fubini theorem 2 ... (@ref-5)
 
 Fubini 定理可以用于证明函数图形下方的体积计算就是对底部体积对高度函数积分
 
-area coarea 公式
+*Example* 极坐标 ...
+
+area coarea 公式 ...
 
 #tag("try-to-define-low-dim-integral") 
 #indent[

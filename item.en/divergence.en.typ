@@ -138,7 +138,9 @@ For high dimensions, if it's curved, it's very difficult. First deal with straig
 
   Approximately decompose into simplex or box, then use Stokes theorem of simplex + internal boundary cancellation, only the real boundary of manifold is left
 
-  then use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
+  Need to use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
+
+  Approximation on the boundary may require special attention. For example, approximations on boundaries shoud use simplex (box) centered on the boundary and differential at points on the boundary.
 
   Probably need some kind of Sobolev control?
 ]

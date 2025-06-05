@@ -84,7 +84,7 @@ _Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任
 
 很多不同 $ℕ$ 区间套有相同极限, e.g. $[0,1/n]$ vs $[-1/n,0]$, 需要 limit-distance-vanish 系 quotient. let $"distance" (A) = sup_(x,x' in A) |x - x'|$
 
-let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish 关系 (*alias*: Cauchy 收敛) 
+let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish 关系 (*alias* Cauchy 收敛) 
 $
   forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
 $

@@ -3,7 +3,7 @@
 
 manifold // few
 manifold-example //
-// metric-manifold
+metric-manifold
 // metric-connection
 // geodesic-derivative
 // curvature-of-metric

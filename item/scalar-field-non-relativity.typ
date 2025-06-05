@@ -35,7 +35,7 @@ $#d x^0 = #d c t$ 可能不影响?
 
 整体再乘以 $ℏ^2/m$ 得到
 
-非相对论纯量场 Lagrangian, *alias*: Schrodinger-Lagrangian #tag("Schrodinger-Lagrangian")
+非相对论纯量场 Lagrangian, *alias* Schrodinger-Lagrangian #tag("Schrodinger-Lagrangian")
 $
   integral_(ℝ) #d t integral_(ℝ^3) #d x 1/2 (
     ℏ #i (ψ^* ∂_t ψ - ψ ∂_t ψ^*)     
@@ -44,7 +44,7 @@ $
 $
 可以在作用量上加上规范场静电 potential 项 i.e. $∂_t$ 改为 $∂_t + #i/ℏ V$
 
-非相对论纯量场方程, *alias*: Schrodinger-equation #tag("Schrodinger-equation")
+非相对论纯量场方程, *alias* Schrodinger-equation #tag("Schrodinger-equation")
 $
   #i ℏ ∂_t ψ = - ℏ^2/(2 m) ∆ ψ + V ψ 
 $

@@ -136,7 +136,9 @@ simplex 散度算子 as 边界算子的对偶 $⟨ ∂ σ , ω ⟩ = ⟨ σ , �
 
   近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 内部边界抵消, 就只剩下真正的流形的边界
 
-  再使用 $n-1$ form $ω$ 对子流形的积分 #link(<integral-on-submanfold>)[]
+  需要使用 $n-1$ form $ω$ 对子流形的积分 #link(<integral-on-submanfold>)[]
+
+  边界上的逼近可能需要特别注意. 例如, 应该让边界上的逼近使用中心在边界上的 simplex (box) 以及微分 at 边界上的点
 
   大概需要 $n-1$ form 的某种 Sobolev 控制?
 ]
