@@ -174,7 +174,11 @@ Plane wave
 ]
 #tag("try-to-define-plane-wave-in-metric-manifold") 
 #indent[
-  Can the $exp$ form of $mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)$ be generalized on manifolds? Can it be generalized on symmetric spaces $ℚ^(1,4)(-1),ℚ^(2,3)(1)$? (δ) Does isometry preserve $L^2$ superposition?
+  Can the $exp$ form of $mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)$ be generalized on manifolds? Note that this is written in coordinate-free form. If use coordinate, it will not be constant coefficient PDE. whether or not it's constant coefficient, we can try to exp it
+  
+  Can it be generalized on symmetric spaces $ℚ^(1,4)(-1),ℚ^(2,3)(1)$? 
+  
+  Does (δ) isometry preserve $L^2$ superposition?
 ]
 To construct particle-like wave packets, first find static solutions, then boost
 

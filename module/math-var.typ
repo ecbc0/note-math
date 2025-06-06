@@ -108,7 +108,7 @@
 #let argh = c-fn("argh")
 
 #let bra(x) = $lr(\⟨ #x |)$
-#let ket(x) = $lr(| #x ⟩)$ // for , use escape \, example: not use $ket(p , #i)$, use $ket(p \, #i)$
+#let ket(x) = $lr(| #x ⟩)$ // for , use escape \, *Example* not use $ket(p , #i)$, use $ket(p \, #i)$
 
 // other
 

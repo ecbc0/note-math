@@ -85,7 +85,7 @@ Almost everywhere analytic
 
   I will not use measurable sets being closed under intersection and set-minus, nor use curved simplex (box) type region partition *alias* triangulation, which is even more difficult to proof
 
-  Instead, I will use closeness under intersection and set-minus at the level of decomposition to simplex (box) approximation (closeness after decomposition from polyhedra to simplex) 
+  Instead, I will use the linear approximation version of triangulation. Under linear approximation, simplex is closed under intersection and set-minus (polyhedra decompose to to simplex) 
 
   e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #link(<affine-map-point-ver>)[] (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
 
@@ -105,7 +105,7 @@ Fubini theorem 2 ... (@ref-5)
 
 Fubini's theorem can be used to prove that the volume calculation below the graph of a function is the integral of the height function with respect to the volume of the base
 
-*Example* polar coordinate ...
+*Example* polar coordinate, 2d, 3d, hyperbolic ...
 
 area coarea formula ...
 

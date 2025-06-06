@@ -564,7 +564,7 @@ Weaker net control
 
   $ {B : sum_(n >= 1) |A_n - B_n| r^n < ε} $
 
-  example: including the truncated polynomial approximation of $A$, i.e. Taylor polynomial by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
+  *Example* including the truncated polynomial approximation of $A$, i.e. Taylor polynomial by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
 ]
 For symmetry considerations, the definition of analytic should not depend on the specific power series expansion base point
 

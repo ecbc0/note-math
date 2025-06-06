@@ -563,7 +563,7 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 
   $ {B : sum_(n >= 1) |A_n - B_n| r^n < ε} $
 
-  example: 包括 $A$ 的截断多项式逼近, i.e. Taylor 多项式 by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
+  *Example* 包括 $A$ 的截断多项式逼近, i.e. Taylor 多项式 by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
 ]
 出于对称性的考虑, 解析的定义应该不依赖于特定的幂级数展开基点
 

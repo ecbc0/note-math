@@ -83,7 +83,7 @@ $𝟙_A in L^1, L^2$ 定义出来的可测集是 Lebesgue 可测集, 可能不�
 
   我并不打算使用可测集对交集和减集封闭, 也不打算使用弯曲 simplex (box) 型区域分割 *alias* 三角剖分, 它甚至更难证明
   
-  而是在 simplex (box) 近似的水平上, 对交集和减集封闭 (多面体分解到 simplex (box) 之后)
+  而是使用三角剖分的线性近似版本. 线性近似下, simplex (box) 对交集和减集封闭 (多面体分解到 simplex (box))
 
   e.g. transition map 的微分 $#d f$ at 每个 simplex (box) 中心 as #link(<affine-map-point-ver>)[仿射映射] (线性映射) 来将坐标区域 $B$ 的 simplex (box) 映射到坐标区域 $A$ 的 simplex (box). 然后 simplex (box) 的交集和减集可以再分解到 simplex (box) 
   
@@ -103,7 +103,7 @@ Fubini theorem 2 ... (@ref-5)
 
 Fubini 定理可以用于证明函数图形下方的体积计算就是对底部体积对高度函数积分
 
-*Example* 极坐标 ...
+*Example* 极坐标, 2d, 3d, 双曲 ...
 
 area coarea 公式 ...
 

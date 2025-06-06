@@ -5,7 +5,7 @@ $𝕊^3,𝕊^2,𝕊^1$ or complex number $ℂ$ version of Hopf-bundle
 
 #tag("Hopf-bundle")
 #indent[
-  Embedding $𝕊^2 ↪ ℝ^3 ↪ ℂ^2$, in $ℝ^3 ≃ ℝ × ℂ$ use $w/z ∈ ℂ$ as stereographic projection coordinates
+  Embedding $𝕊^2 ↪ ℝ^3 ↪ ℂ^2$, in $ℝ^3 ≃ ℝ × ℂ$ use $w/z ∈ ℂ$ as #link(<stereographic-projection>)[] coordinates
   $
     dmat( delim: #none , 
       ℂ^2 , ⟶ , ℂ , ⟶ , ℝ × ℂ ;

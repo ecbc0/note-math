@@ -87,7 +87,7 @@ There are two ways to extend to $ℝ^n$
     $
       dmat( delim: #none ,
         ℝ^n, ⟶, Lin(ℝ^n -> ℝ);
-        v, ⟿, ⟨v, ⟩
+        v, ⟿, ⟨v, ⟩ "or" bra(v)
       )
     $
   - The quadratic form matrix is invertible, $det G != 0$
@@ -200,7 +200,7 @@ New imaginary unit construction method
 
   *Question* Anti-combination cannot be further extended to sixteen dimensions and beyond
 ]
-The new imaginary unit construction method is not coordinate-free, so we need to consider the automorphism of imaginary units $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$
+The new imaginary unit construction method is not coordinate-free, so we need to consider the automorphism of imaginary units $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$. Since it preserves multiplication, it automatically preserves distance
   
   *Example* for $ℂ$ it's $ℤ_2 = #O (1)$ symmetric $#i -> -#i$
 

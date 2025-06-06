@@ -21,6 +21,8 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   选取 $x_0 ,…, x_n$ 为 $ℝ^n$ 正方向后, 边界的方向是 $(-1)^(i-1) x_0 ,…, x_n without x_i$
 
+  对 box 也类似
+
   *Example* 四面体, 右手定则, 拇指指向四面体内部得到边界方向 (图片的顶点的指标从 $1$ 而不是 $0$ 开始)
 
   #image("/image/orientation-of-simplex.jpg", width: 100%)
@@ -186,13 +188,13 @@ metric 流形的情况
 #indent[
   对 $k$ form $ω$ 积分 -> 对 $⟨ ω , Vol_k ⟩ Vol_k$ 积分 -> 对 $⟨ ⋆ ω, ⋆ Vol_(n-k) ⟩ Vol_k$ 积分, 解释为通过 $Vol_k$ 的正交补 $⋆ Vol_k = Vol_(n-k)$ 的量 $⟨ ⋆ ω , Vol_(n-k) ⟩$ 对 $Vol_k$ 积分, i.e. 通量
 
-  用内积对偶 $⟨ ⋆ ω , ⟩, ⟨ Vol_(n-1) , ⟩ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $⟨ ⋆ ω , ⟩$ 在通量方向 $⟨ Vol_(n-1) , ⟩$ 上的正交投影
+  用内积对偶 $bra(⋆ ω), bra(Vol_(n-1)) in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $bra(⋆ ω)$ 在通量方向 $bra(Vol_(n-1))$ 上的正交投影
 ]
 *Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$.
 
 - $0$ form
 #indent[
-  $#d ω in (⋀^1 ℝ^3)^⊺ <--> ⟨ ⋆ #d ω , ⟩ = grad ω in ⋀^2 ℝ^3$
+  $#d ω in (⋀^1 ℝ^3)^⊺ <--> bra(⋆ #d ω) = grad ω in ⋀^2 ℝ^3$
 
   坐标 $ grad f = vec(∂_1 f, ∂_2 f, ∂_3 f) $
 
@@ -206,35 +208,35 @@ metric 流形的情况
 ]
 - $1$ form
 #indent[  
-  $#d ω in ⋀^2 ℝ^3 <--> ⟨ ⋆ #d ω , ⟩ = curl ⟨ω,⟩ in ⋀^1 ℝ^3$
+  $#d ω in ⋀^2 ℝ^3 <--> bra(⋆ #d ω) = curl bra(ω) in ⋀^1 ℝ^3$
 
   坐标 $ curl vec(v_1,v_2,v_3) = vec(∂_2 v_3 - ∂_3 v_2, ∂_3 v_1 - ∂_1 v_3, ∂_1 v_2 - ∂_2 v_1) $
 
-  $⟨ω,⟩ in ⋀^1 ℝ^3$
+  $bra(ω) in ⋀^1 ℝ^3$
 
   Stokes 定理 #tag("curl")
   $
-    integral_(∂ S) ⟨ ⟨ω,⟩ , #d l ⟩ 
+    integral_(∂ S) ⟨ bra(ω) , #d l ⟩ 
     &= integral_(∂ M) ω \
     &= integral_M #d ω \
-    &= integral_S ⟨ curl ⟨ω,⟩ , #d S ⟩
+    &= integral_S ⟨ curl bra(ω) , #d S ⟩
   $
   where $n = ⋆ Vol_2 = Vol_1$
 ]
 - $2$ form
 #indent[  
-  $#d ω in ⋀^3 ℝ^3 <--> ⟨ ⋆ #d ω , ⟩ = div ⟨ω,⟩ in ⋀^0 ℝ^3$
+  $#d ω in ⋀^3 ℝ^3 <--> bra(⋆ #d ω) = div bra(ω) in ⋀^0 ℝ^3$
 
   坐标 $ div vec(v_1,v_2,v_3) = ∂_1 v_1 + ∂_2 v_2 + ∂_3 v_3 $
 
-  $⟨ω,⟩ in ⋀^2 ℝ^3$
+  $bra(ω) in ⋀^2 ℝ^3$
 
   Stokes 定理 #tag("divergence")
   $
-    integral_(∂ V) ⟨ ⟨ω,⟩ , #d S ⟩
+    integral_(∂ V) ⟨ bra(ω) , #d S ⟩
     &= integral_(∂ M) ω \
     &= integral_M #d ω \
-    &= integral_V ⟨ div ⟨ω,⟩ , #d V ⟩ 
+    &= integral_V ⟨ div bra(ω) , #d V ⟩ 
   $
 ]
 in Minkowski $ℝ^(1,3)$, $⋀^2 ℝ^(1,3) ≃ ⋀^(4-2) ℝ^(1,3)$

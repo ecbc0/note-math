@@ -47,7 +47,7 @@ $
 )$ 
 - 同态 $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - 双射 $h^(-1) g h = g' <==> g = h g' h^(-1)$
-$h x$ 的 isotropy $G_(h x)$ 写为 $h G_x h^(-1)$, 同构于 $G_x$
+#tag("isotropy-in-same-orbit-is-isom") $h x$ 的 isotropy $G_(h x)$ 写为 $h G_x h^(-1)$, 同构于 $G_x$
 
 根据 $G$ 作用在 $G x$ 上的逆像, 将 $G$ 分解为子群 $G_x$ 及其 coset $h G_x$
 
@@ -142,7 +142,7 @@ $
   & <==> 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
 $
 
-#tag("transitive") := 以下定义等价
+#tag("action-surjective") *alias* #tag("action-transitive") := 以下定义等价
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
@@ -151,9 +151,9 @@ $
     g &⟿ g x
   )$ 是满射 $G ↠ X$
 
-*Example* $SO(3),ℝ$ 作用在 $ℝ ∖ 0$ 不 transitive. $GL(3) $ 作用在 $ℝ ∖$ 是 transitive transitive
+*Example* $SO(3)$ 作用在 $ℝ^3 ∖ 0$ 不 transitive. $GL(3,ℝ) $ 作用在 $ℝ^3 ∖ 0$ 是 transitive
 
-#tag("free") := 以下定义等价
+#tag("action-injective") *alias* #tag("action-free") := 以下定义等价
 - 每个 orbit 都是 $G$ 的 copy
 - $g x = h x ==> g = h$
 - $g x = x ==> g = 𝟙$

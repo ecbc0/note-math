@@ -21,6 +21,8 @@ There are two directions. for vector base of $ℝ^n$, change order once $e_i <->
 
   After selecting $x_0 ,…, x_n$ to be the positive direction of $ℝ^n$, the direction of the boundary is $(-1)^(i-1) x_0 ,…, x_n without x_i$
 
+  similar to box
+
   *Example* Tetrahedron, right-hand rule, with the thumb pointing towards the inside of the tetrahedron to get the boundary direction (the index of the vertices in the picture starts from $1$ instead of $0$)
 
   #image("/image/orientation-of-simplex.jpg", width: 100%)
@@ -188,13 +190,13 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
 #indent[
   Integral of $k$ form $ω$ -> Integral of $⟨ ω , Vol_k ⟩ Vol_k$ -> Integral of $⟨ ⋆ ω, ⋆ Vol_(n-k) ⟩ Vol_k$, interpreted as the quantity $⟨ ⋆ ω , Vol_(n-k) ⟩$ of the orthogonal complement $⋆ Vol_k = Vol_(n-k)$ of $Vol_k$ integrated over $Vol_k$, i.e. flux
 
-  Represent the flux $n-k$ alternating tensor using the inner product duality $⟨ ⋆ ω , ⟩, ⟨ Vol_(n-1) , ⟩ in ⋀^(n-k) ℝ^n$, the inner product represents the orthogonal projection of the quantity $⟨ ⋆ ω , ⟩$ onto the flux direction $⟨ Vol_(n-1) , ⟩$
+  Represent the flux $n-k$ alternating tensor using the inner product duality $bra(⋆ ω), bra(Vol_(n-1)) in ⋀^(n-k) ℝ^n$, the inner product represents the orthogonal projection of the quantity $bra(⋆ ω)$ onto the flux direction $bra(Vol_(n-1))$
 ]
 *Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$.
 
 - $0$ form
 #indent[
-  $#d ω in (⋀^1 ℝ^3)^⊺ <--> ⟨ ⋆ #d ω , ⟩ = grad ω in ⋀^2 ℝ^3$
+  $#d ω in (⋀^1 ℝ^3)^⊺ <--> bra(⋆ #d ω) = grad ω in ⋀^2 ℝ^3$
 
   Coordinates $ grad f = vec(∂_1 f, ∂_2 f, ∂_3 f) $
 
@@ -208,35 +210,35 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
 ]
 - $1$ form
 #indent[  
-  $#d ω in ⋀^2 ℝ^3 <--> ⟨ ⋆ #d ω , ⟩ = curl ⟨ω,⟩ in ⋀^1 ℝ^3$
+  $#d ω in ⋀^2 ℝ^3 <--> bra(⋆ #d ω) = curl bra(ω) in ⋀^1 ℝ^3$
 
   Coordinates $ curl vec(v_1,v_2,v_3) = vec(∂_2 v_3 - ∂_3 v_2, ∂_3 v_1 - ∂_1 v_3, ∂_1 v_2 - ∂_2 v_1) $
 
-  $⟨ω,⟩ in ⋀^1 ℝ^3$
+  $bra(ω) in ⋀^1 ℝ^3$
 
   Stokes' Theorem #tag("curl")
   $
-    integral_(∂ S) ⟨ ⟨ω,⟩ , #d l ⟩ 
+    integral_(∂ S) ⟨ bra(ω) , #d l ⟩ 
     &= integral_(∂ M) ω \
     &= integral_M #d ω \
-    &= integral_S ⟨ curl ⟨ω,⟩ , #d S ⟩
+    &= integral_S ⟨ curl bra(ω) , #d S ⟩
   $
   where $n = ⋆ Vol_2 = Vol_1$
 ]
 - $2$ form
 #indent[  
-  $#d ω in ⋀^3 ℝ^3 <--> ⟨ ⋆ #d ω , ⟩ = div ⟨ω,⟩ in ⋀^0 ℝ^3$
+  $#d ω in ⋀^3 ℝ^3 <--> bra(⋆ #d ω) = div bra(ω) in ⋀^0 ℝ^3$
 
   Coordinates $ div vec(v_1,v_2,v_3) = ∂_1 v_1 + ∂_2 v_2 + ∂_3 v_3 $
 
-  $⟨ω,⟩ in ⋀^2 ℝ^3$
+  $bra(ω) in ⋀^2 ℝ^3$
 
   Stokes' Theorem #tag("divergence")
   $
-    integral_(∂ V) ⟨ ⟨ω,⟩ , #d S ⟩
+    integral_(∂ V) ⟨ bra(ω) , #d S ⟩
     &= integral_(∂ M) ω \
     &= integral_M #d ω \
-    &= integral_V ⟨ div ⟨ω,⟩ , #d V ⟩ 
+    &= integral_V ⟨ div bra(ω) , #d V ⟩ 
   $
 ]
 in Minkowski $ℝ^(1,3)$, $⋀^2 ℝ^(1,3) ≃ ⋀^(4-2) ℝ^(1,3)$

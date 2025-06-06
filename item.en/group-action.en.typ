@@ -47,7 +47,7 @@ Mapping $dmat( delim: #none ,
 )$ 
 - Homomorphism $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - Bijection $h^(-1) g h = g' <==> g = h g' h^(-1)$
-The isotropy of $h x$, $G_(h x)$, is written as $h G_x h^(-1)$, which is isomorphic to $G_x$
+#tag("isotropy-in-same-orbit-is-isom") The isotropy of $h x$, $G_(h x)$, is written as $h G_x h^(-1)$, which is isomorphic to $G_x$
 
 According to the inverse image of $G$ acting on $G x$, decompose $G$ into the subgroup $G_x$ and its coset $h G_x$
 
@@ -142,7 +142,7 @@ $
   & <==> 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
 $
 
-#tag("transitive") := The following definitions are equivalent
+#tag("action-surjective") *alias* #tag("action-transitive") := The following definitions are equivalent
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
@@ -151,9 +151,9 @@ $
     g &⟿ g x
   )$ is a surjective $G ↠ X$
 
-*Example* $SO(3),ℝ$ acting on $ℝ ∖ 0$ is not transitive. $GL(3) $ acting on $ℝ ∖$ is transitive transitive
+*Example* $SO(3)$ acting on $ℝ^3 ∖ 0$ is not transitive. $GL(3,ℝ) $ acting on $ℝ^3 ∖ 0$ is transitive
 
-#tag("free") := The following definitions are equivalent
+#tag("action-injective") *alias* #tag("action-free") := The following definitions are equivalent
 - Each orbit is a copy of $G$
 - $g x = h x ==> g = h$
 - $g x = x ==> g = 𝟙$

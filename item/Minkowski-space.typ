@@ -373,9 +373,9 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) 连续 at $f(0) = 0$ 
 
 二次流形 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by 径向 + 切向 + 嵌入的 $ℍ𝕪$ 及其测地线长度. *Question* 是否有好的解释?
 
-#image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
 
-#stack( dir: ltr,
+$ℍ𝕪^n (space) = ℚ^(1,n)(-1)$ type #stack( dir: ltr,
   image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
   image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
   image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)

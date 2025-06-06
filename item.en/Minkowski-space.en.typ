@@ -373,9 +373,9 @@ The tangent space of the quadratic manifold $ℚ^(p,q)(± 1)$ can be defined as 
 
 The definition of geodesics of the quadric surface $ℚ^(p,q)(± 1)$ does not require manifold techniques, only use geodesic as secant line of the cross-section span by radial + tangent + embedded $ℍ𝕪$ and its geodesic length. *Question* Is there a better and more intuitive definition?
 
-#image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
 
-#stack( dir: ltr,
+$ℍ𝕪^n (space) = ℚ^(1,n)(-1)$ type #stack( dir: ltr,
   image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
   image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
   image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)
