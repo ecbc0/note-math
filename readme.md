@@ -6,6 +6,8 @@
 
 在 `.vscode/settings.json` 的 `"tinymist.rootPath": ...` 设置 `note-math` 文件夹在你的系统的 path
 
+---
+
 English ver. are machine translation without check from gemini and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
 Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details

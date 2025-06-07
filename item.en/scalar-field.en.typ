@@ -70,7 +70,7 @@ $
 $
 In coordinates $(∂ f)/(∂ (∂_x ϕ)) ⋅ Δ ϕ = ((∂ f)/(∂ (∂_(μ) ϕ)) ⋅ Δ ϕ)_(μ = 0 ,…, 3)$
 
-Divergence-free quantity + zero boundary + forall $Δ ϕ$, collect $Δ ϕ$ term, gets the Lagrange-equation
+Divergence quantity + Stokes theroem + zero boundary + forall $Δ ϕ$, collect $Δ ϕ$ term, gets the Lagrange-equation
 $
   (∂ f)/(∂ ϕ) - ∂_x^† (∂ f)/(∂ (∂_x ϕ)) = 0
 $
@@ -348,7 +348,7 @@ Symmetry and conserved currents
     &= integral_(ℝ^(1,3)) #d x 1/2 (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) ⋅ ∂ θ
   $ 
-  Use product rule + divergence-free + zero boundary 
+  Use product rule + divergence + Stokes theroem + zero boundary 
   $
     0 = integral_(ℝ^(1,3)) #d x (1/2 ∂^† (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) θ

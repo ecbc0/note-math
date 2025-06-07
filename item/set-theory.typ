@@ -34,6 +34,8 @@ parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to �
 
 人脑编译器能省略和补充省略, 用容易出错和遗忘来换取临时效率
 
+而且证明辅助还会有其它作用, 类似于, IDE/LSP/友好且互动的编译器错误信息/documentation 时代之前的编程是痛苦的, 数据和信息的组织和结构化和复用做得不好, 也没利用好计算机的强大记忆容量和时间
+
 #tag("proposition") proposition 是特殊的 (string, bool) product struct 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula
 
 因为我们无法直接判断一个猜测的真假, 所以我们需要一种具有未定义真假值的语言

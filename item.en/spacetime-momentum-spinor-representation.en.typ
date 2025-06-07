@@ -320,9 +320,6 @@ $
 $
 #tag("parity") 
 #indent[  
-
-  
-
   parity corresponds to $(1/2,0)$ vs $(0,1/2)$ representation, or $A$ vs $A^*,(A^†)^(-1)$, cf. #link(<conjugate-representation>)[]
 
   let $P ∈ ⨀^(* 2) ℂ^2$. $P^* = P^⊺$
@@ -404,7 +401,7 @@ $dim = 2$ ==> determinant reversal is the same as trace reversal
 
   - $(A^†)^⬨ = (A^⬨)^†$
   
-  - $⬨ : ⨀^(* 2) ℂ^2 -> "self"$
+  - $⬨ : ⨀^(* 2) ℂ^2 -> "self"$ i.e. parity preserve Hermitian
 
   - $A ∈ GL(2,ℂ) ==> A^⬨ = det(A) ⋅ A^(-1)$
   

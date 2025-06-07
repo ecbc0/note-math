@@ -220,7 +220,7 @@
   
   + 读取 `add` 指令 
     - `add` 指令在 `adress_0` (`add x_1 x_2` 以及 `adress_1, adress 2` 来自源代码和编译器的生成)
-    - 固定的内存地址 `adress_of_instruction` 存储的值 `adress_0` 被读出, `add` 指令的 index 区的数据被送到控制信号元件 (control unit), 然后计算出控制信号并输出
+    - 固定的内存地址 `adress_of_instruction` 存储的值 `adress_0` 被读出, `add` 指令的 index 区的数据被送到控制信号元件 (control unit), 然后计算出控制信号并输出 (细节太多, 见 @ref-1)
   + 执行 `add` 指令
     - 输出的控制信号输入到内存的控制电路元件, 读出内存的 `x_1` in `adress_1` 和 `x_2` in `adress_2`, 将它们输入到算术元件 (ALU)
     - 根据输出控制信号, 算术元件的输出 `x_1 + x_2` 被写到 `adress_1`
