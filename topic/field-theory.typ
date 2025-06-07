@@ -8,9 +8,8 @@ scalar-field-non-relativity
 projective-lightcone
 spacetime-momentum-spinor-representation
 Lorentz-group
-// spinor-field
+spinor-field
 // spinor-field-current
-// spinor-field-on-manifold
 // gauge
 // Laplacian-of-tensor-field
 // Einstein-metric

@@ -40,7 +40,7 @@
       P , ⟿ , ϕ^† P^⬨ ϕ
     )
   $
-  对于二重复共轭张量
+  对于复共轭二重张量
   $
     dmat( delim: #none ,
       ⨂^(* 2) ℂ^2 , ⟶ , ℂ ;
@@ -145,8 +145,6 @@
   and $∆ = #spin-d #spin-d^⬨ = #spin-d^⬨ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
   整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG
-
-  但在流形上不成立
 
   全部偏导数 $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, 给出 #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
@@ -259,3 +257,62 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 
   在 homotopy 意义下, $ℝ^(p,q)$ 只有一种类型的 $#U (1)$ bundle type
 ]
+#tag("spin-connection")
+#indent[
+  在切丛 metric 导出的 $SO(1,3)$ #link(<principal-bundle>)[frame bundle] 和 #link(<metric-connection>)[] 导出的 #link(<principal-bundle-connection>)[connection] 表现为 $Γ$ is locally type $(ℝ^(1,3))^⊺ ⊗ so(1,3)$, 作用于 tangent field $ℝ^(1,3)$ by $∂ + Γ$
+
+  导出到 spin-connection 的方式是, 在 orthonormal-frame 将 induced metric-connection $Γ$ 的 #link(<square-root-of-Lorentz-Lie-algebra>)[$so(1,3)$ 部分对应到 $sl(2,ℂ)$] , 得到 $SL(2,ℂ)$ 丛的 connection, locally type $(ℝ^(1,3))^⊺ ⊗ ℂ^2$, 作用于 spinor field $ℂ^2$ by $∂ + ω$ with $ω = ω^(μ ν) 1/4 [σ_(μ),σ_(ν)]_(⬨)$
+]
+spin-connection also denoted by $∇$
+
+#tag("motivation-of-scalar-field?") can scalar field be related to tautological bundle of projective-lightcone $ℂℙ^1$?
+
+根据 $ℝ^(1,3)$ 时空流形的旋量场的概念, "旋转 720 度", "parity" 应该发生在切空间构造而不是发生在时空流形
+
+因为时空流形的切空间都是 $ℝ^(1,3)$, 所以旋量场可以推广到一般时空流形?
+
+#tag("spinor-on-Lorentz-manifold") *Question*
+#indent[
+  massless-spinor-action
+  $
+    integral #d Vol(g) (ψ^† #i #spin-connection^⬨ ψ)
+  $
+  massless-spinor-equation
+  $
+    #spin-connection^⬨ ψ = 0
+  $
+  可能是概念上错误的定义? 对比平直时空, 尝试证明或证否
+  - $#i #spin-connection^⬨$ 是 self-adjoint 
+  - 只有 $Re (ψ^† #spin-connection^⬨ ψ)$ 对作用量变分起作用
+  - $#spin-connection^⬨ #spin-connection = #spin-connection #spin-connection^⬨ = 1/2 (∇^† ∇ + ∇ ∇^†)$ i.e. square-root-of-spacetime-Laplacian
+
+  massive-spinor-Lagrangian
+  $
+    integral #d Vol(g) Re vec(ϕ,ψ)^† (mat(#i #spin-connection^⬨ ;,#i #spin-connection) + m mat(,𝟙;𝟙)) vec(ϕ,ψ)
+  $
+  massive-spinor-equation
+  $
+    (mat(#i #spin-connection^⬨ ;,#i #spin-connection) + m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0
+  $
+]
+*Question* 只要局部从 $ℂ^2$ quotient 回到 $ℂℙ^1$, 就能回避连续全局单值 lift to $ℂ^2$ 的问题
+
+我们知道 KG eq 有 non-relativity 近似极限 $lim_(c -> ∞)$. massive-spinor 构造存在 non-relativity 近似极限 $lim_(c -> ∞)$ 吗?
+
+static 不需要 non-relativity 近似极限 $lim_(c -> ∞)$, 尽管有 $c$ 的存在, 就像 static 电磁场方程那样也不需要 non-relativity 近似极限 $lim_(c -> ∞)$. 这对 KG 方程也是如此
+
+let $ϕ(t,x) = ϕ(x)$ static
+
+static massless spinor eq
+$
+  σ^i ∂_i ϕ = 0
+$
+static massive spinor eq
+$
+  (mat(- #i σ^i ∂_i ;, #i σ^i ∂_i) + (m c) / (ℏ) mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0
+$
+它们可以 couple 到 static electromagnetic gauge potential $(V(x),A_(1,2,3)(x))$ or just static electric $V(x)$ or just static magnetic $A_(1,2,3)(x)$
+
+在存在 electromagnetic potential 时, massless 的 parity dual 可能不同, 例如 just static electric $σ^i ∂_i ϕ ± #i V ϕ = 0$ 
+
+electromagnetic potential = 0 时, parity dual eq 是相同的
