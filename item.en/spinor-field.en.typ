@@ -150,7 +150,7 @@
 
   Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG
 
-  All partial derivatives of the action $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, giving #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
+  All partial derivatives of the action $S$ is zero $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, giving #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
   $ (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0 $
 ]

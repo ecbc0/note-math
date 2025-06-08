@@ -94,7 +94,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $ 
   第一个等式可以来自微积分基本定理 + 复合函数微分
 
-  一般地, 改变区域 $I$ 通过 $exp(a(t))$ 通过 δ diffeomorphism $a(t)$ 给出
+  一般地, 改变区域 $I$ 通过 $exp(a(t))$ #link(<vector-field-as-δ-diffeomorphism>)[通过 δ diffeomorphism] $a(t)$ 给出
   $
     (#d)/(#d s) limits(integral)_(exp(s a(t)) I) #d t (f(t)) 
     
@@ -128,7 +128,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= (L(t_1) - L(t_0)) ⋅ a \
+    &= L(t)|_(t_0)^(t_1) ⋅ a \
 
     &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
@@ -140,15 +140,15 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $
   得到
   $
-    ((∂ L)/(∂ vel(x)) ⋅ vel(x) - f) |_(t_0)^(t_1) ⋅ a = 0
+    ((∂ L)/(∂ vel(x)) ⋅ vel(x) - L) |_(t_0)^(t_1) ⋅ a = 0
   $
   量
   $
-    E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - f
+    E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - L
   $
   称为作用量 $L$ 的能量, 是沿时间 $t$ 不变的, forall $a ∈ ℝ$, i.e. 守恒
 
-  对于 $f = 1/2 m vel(x)(t)^2 - U(x(t))$ 能量是
+  对于 $L = 1/2 m vel(x)(t)^2 - U(x(t))$ 能量是
   #tag("energy-point-particle-non-relativity") 
   $
     E &= m vel(x)^2 - (1/2 m vel(x)^2 - U) \

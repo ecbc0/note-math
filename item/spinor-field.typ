@@ -150,7 +150,7 @@
 
   整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG
 
-  作用量的全部偏导数 $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, 给出 #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
+  作用量 $S$ 的全部偏导数是零 $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, 给出 #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
   $ (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0 $
 ]

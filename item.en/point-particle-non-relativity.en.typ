@@ -94,7 +94,7 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $ 
   The first equation can come from the fundamental theorem of calculus + derivative of composite functions
 
-  In general, changing the region $I$ by $exp(a(t))$ is given by δ diffeomorphism $a(t)$
+  In general, changing the region $I$ by $exp(a(t))$ #link(<vector-field-as-δ-diffeomorphism>)[by δ diffeomorphism] $a(t)$
   $
     (#d)/(#d s) limits(integral)_(exp(s a(t)) I) #d t (f(t)) 
     
@@ -128,7 +128,7 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= (L(t_1) - L(t_0)) ⋅ a \
+    &= L(t)|_(t_0)^(t_1) ⋅ a \
 
     &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
@@ -140,15 +140,15 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $
   Get
   $
-    ((∂ L)/(∂ vel(x)) ⋅ vel(x) - f) |_(t_0)^(t_1) ⋅ a = 0
+    ((∂ L)/(∂ vel(x)) ⋅ vel(x) - L) |_(t_0)^(t_1) ⋅ a = 0
   $
   Quantity
   $
-    E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - f
+    E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - L
   $
   Called the energy of the action $L$, is invariant along time $t$, forall $a ∈ ℝ$, i.e. conserved
 
-  For $f = 1/2 m vel(x)(t)^2 - U(x(t))$ the energy is
+  For $L = 1/2 m vel(x)(t)^2 - U(x(t))$ the energy is
   #tag("energy-point-particle-non-relativity") 
   $
     E &= m vel(x)^2 - (1/2 m vel(x)^2 - U) \
