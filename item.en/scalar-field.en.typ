@@ -70,7 +70,7 @@ $
 $
 In coordinates $(∂ f)/(∂ (∂_x ϕ)) ⋅ Δ ϕ = ((∂ f)/(∂ (∂_(μ) ϕ)) ⋅ Δ ϕ)_(μ = 0 ,…, 3)$
 
-Divergence-free quantity + zero boundary + forall $Δ ϕ$, collect $Δ ϕ$ term, gets the Lagrange-equation
+Divergence quantity + Stokes theroem + zero boundary + forall $Δ ϕ$, collect $Δ ϕ$ term, gets the Lagrange-equation
 $
   (∂ f)/(∂ ϕ) - ∂_x^† (∂ f)/(∂ (∂_x ϕ)) = 0
 $
@@ -318,7 +318,7 @@ Symmetry and conserved currents
 
     Let $n ∈ ℝ^3$ be the spatial boost axis, then the tangent vector will be $n ⋅ (x_0 ∂ - x ∂_0)$ (the metric of $ℝ^(1,3)$ spacetime has a negative definite space)
 
-  Now use the notation $x,∂_x ∈ ℝ^(1,3)$. The combination of the tangent vectors of rotation and boost is denoted as $[x,∂_x]$, acting on the field $ϕ$ as a δ spacetime rotation $so(1,3)$, as a δ diffeomorphism (for the range of the field)
+  Now use the notation $x,∂_x ∈ ℝ^(1,3)$. The combination of the tangent vectors of rotation and boost is denoted as $[x,∂_x]$, acting on the field $ϕ$ as a δ spacetime rotation $so(1,3)$, as a δ diffeomorphism
   $
     integral_(ℝ^(1,3)) #d x ( [x,∂] f ) 
     
@@ -348,7 +348,7 @@ Symmetry and conserved currents
     &= integral_(ℝ^(1,3)) #d x 1/2 (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) ⋅ ∂ θ
   $ 
-  Use product rule + divergence-free + zero boundary 
+  Use product rule + divergence + Stokes theroem + zero boundary 
   $
     0 = integral_(ℝ^(1,3)) #d x (1/2 ∂^† (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) θ

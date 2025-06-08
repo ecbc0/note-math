@@ -34,6 +34,8 @@ Parser or proof assistants can allow humans to reduce from reviewing all steps t
 
 The human brain compiler can omit and supplement omissions, trading temporary efficiency for error-proneness and forgetfulness
 
+Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and -interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory were not used well.
+
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 
 Because we cannot directly judge the truth or falsehood of a guess, we need a language with undefined truth values.

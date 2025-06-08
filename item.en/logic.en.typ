@@ -218,7 +218,7 @@ A symbolic representation of multiple input or output lines in a computing unit 
   
   + Read the `add` instruction 
     - `add` instruction at `adress_0` (`add x_1 x_2` and `adress_1, adress 2` are from the source code and compiler generation)
-    - The value `adress_0` stored in the fixed memory address `adress_of_instruction` is read, the data in the index area of the `add` instruction is sent to the control signal element (control unit), then the control signal is calculated and output
+    - The value `adress_0` stored in the fixed memory address `adress_of_instruction` is read, the data in the index area of the `add` instruction is sent to the control signal element (control unit), then the control signal is calculated and output (too many details, see @ref-1)
   + Execute the `add` instruction
     - The output control signal is input to the control circuit element of the memory, reading `x_1` in `adress_1` and `x_2` in `adress_2` from the memory, and inputting them to the arithmetic element (ALU)
     - According to the output control signal, the output of the arithmetic element `x_1 + x_2` is written to `adress_1`

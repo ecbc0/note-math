@@ -8,7 +8,7 @@ scalar-field-non-relativity
 projective-lightcone
 spacetime-momentum-spinor-representation
 Lorentz-group
-// spinor-field
+spinor-field
 // spinor-field-current
 // gauge
 // Laplacian-of-tensor-field
