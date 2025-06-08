@@ -91,7 +91,7 @@ from 命题 to 未知命题的, 其真值部分被修改为 (bool, unknow) sum s
 #indent[
   natrual number $0,1,2,...$ and natrual number set $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
 
-  "用有限的语言来表示自然数集" e.g. 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol
+  但是计算机无法处理无限. 为了让计算机能用有限的字符和内存去表示自然数集, 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol, 定义以下为 true proposition
   - $0 ∈ ℕ$
   - $n ∈ ℕ ==> n + 1 ∈ ℕ$
   等价于用指令流告诉计算机如何连续地 $+1$? 也联系到归纳法

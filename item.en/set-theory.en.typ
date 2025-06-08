@@ -91,7 +91,7 @@ The following discusses math-object-construct-rule *alias* set-theory
 #indent[
   natrual number $0,1,2,...$ and natrual number set $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
 
-  "Represent the set of natural numbers with a finite language" e.g. treat $n,ℕ$ and the $+1$ function as finite symbols in memory addresses
+  But computers cannot handle infinity. In order to allow computers to use limited characters and memory to represent natural numbers, let $n,ℕ$ and $+1$ functions be finite symbols in the memory address, and define the following as true proposition
   - $0 ∈ ℕ$
   - $n ∈ ℕ ==> n + 1 ∈ ℕ$
   Equivalent to telling the computer how to continuously $+1$ with instruction streams? Also related to induction

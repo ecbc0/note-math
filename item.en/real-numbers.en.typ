@@ -10,9 +10,9 @@ Natural number $ℕ$ addition
 ]
 _Proof_ The intuition in the real world is that, for counting $+1$, no matter how the counting task is manually divided into several subtasks, it will not affect the result, and the total number of decomposition methods is limited. The associative and commutative laws of addition are just special cases
 
-It seems difficult to express this intuition for computers, but it seems that all finite results must be correct
+It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what we do in #link(<natural-number>)[], in order for computers to use limited characters and memory to express this property that is valid for all natural numbers, it is necessary to define it as true proposition
 
-The usual "proof" needs to assume the associative law of $1$ $(a + b) + 1 = a + (b + 1)$, (still not obvious to the computer?) and then derive the others  
+The usual "proof" is to use the smallest assumption, the associative law of $1$, $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then deduce other
 
 Natural number $ℕ$ multiplication
 #indent[
