@@ -20,8 +20,6 @@ $x in A$ ==> $x$ is a limit point of $A$
 
 For general nets, different types of limit points need to be classified
 
-#let closed(x) = math.macron(x)
-
 #tag("closure") Closure $closed(A)$ := $x in X$, $x$ is a limit point of $A$
 
 The closure $closed(A)$ of $A$ is the set of all limit points of $A$

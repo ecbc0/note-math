@@ -117,3 +117,9 @@
 
 #let And = math.and.big
 #let Or = math.or.big
+
+#let vel(x) = math.dot(x)
+#let acc(x) = math.dot.double(x)
+
+#let closed(x) = math.macron(x)
+#let Closed(x) = math.overline(x)

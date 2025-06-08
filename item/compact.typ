@@ -4,8 +4,7 @@
 #let A = c-bf("A","#919191")
 #let B = c-bf("B","#919191")
 #let T = c-bf("T","#919191")
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
+
 #let open(x) = math.circle(x)
 
 compact 的原初的启发: $ℝ$ 的闭区间网的交集非空 #link(<closed-interval-net-theorem>)[]

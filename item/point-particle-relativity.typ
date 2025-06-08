@@ -1,9 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-#let vel(x) = math.dot(x)
-#let acc(x) = math.dot.double(x)
-
 #tag("action-point-particle-relativity") 作用量 $ integral #d l (m c) = integral #d τ (m c|vel(x)|)  $ 结果是测地线
 
 使用时空 $ℝ^(1,3)$ 的 metric volume form $#d Vol = |det g|^(1/2) #d x$ 限制在一维路径, 得到长度 $#d l$, 使用的是二次型的平方根, 而不是单纯的二次型 

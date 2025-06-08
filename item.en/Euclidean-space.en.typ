@@ -51,9 +51,6 @@ $
   $
 let $A ⊂ ℝ^d$
 
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
-
 #tag("closure") Closure := $closed(A) = {x ∈ ℝ^d : inf_(x ∈ A) |x-a| = 0}$
 
 #tag("closed-set") Closed set := $closed(A) = A$

@@ -36,8 +36,6 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
   _Proof_ $1/R := limsup_(n -> ∞) {|a_n|^(1/n)}$ ==> for infinite terms in $n in ℕ$, $|a_n|^(1/n) ≈ 1/R ==> |a_n|^(1/n) |v| > 1 ==> |a_n v^n| > 1$
 ]
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
 #tag("uniformaly-absolutely-convergence-analytic")
 #indent[
   use $|v| <= r < R$. use #link(<geometric-serise-test>)[geometric series control]

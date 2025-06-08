@@ -3,8 +3,6 @@
 
 #let B = c-bf("B","#919191")
 #let I = c-bf("I","#919191")
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
 
 #tag("net") 
 #indent[

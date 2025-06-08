@@ -1,8 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
 #let T = text("T", fill: rgb("#919191"))
 
 *Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]

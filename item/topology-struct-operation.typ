@@ -3,8 +3,6 @@
 
 #let B = c-bf("B","#919191")
 #let T = c-bf("T","#919191")
-#let closed(x) = math.macron(x)
-#let Closed(x) = math.overline(x)
 
 #tag("topology-subspace")
 #indent[

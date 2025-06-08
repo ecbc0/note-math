@@ -1,9 +1,6 @@
 #import "/module/module.typ": *
 #show: module
 
-#let vel(x) = math.dot(x)
-#let acc(x) = math.dot.double(x)
-
 #tag("action-point-particle-relativity") Action $ integral #d l (m c) = integral #d τ (m c|vel(x)|)  $ The result is a geodesic
 
 Using the spacetime $ℝ^(1,3)$'s metric volume form $#d Vol = |det g|^(1/2) #d x$ restricted to a one-dimensional path, we obtain the length $#d l$, which uses the square root of the quadratic form, rather than the quadratic form alone 

@@ -20,8 +20,6 @@ $x in A$ ==> $x$ 是 $A$ 的极限点
 
 对一般网, 需要分类不同的类型极限点
 
-#let closed(x) = math.macron(x)
-
 #tag("closure") 闭包 $closed(A)$ := $x in X$, $x$ 是 $A$ 极限点
 
 $A$ 的闭包 $closed(A)$ 是所有 $A$ 极限点的集合
