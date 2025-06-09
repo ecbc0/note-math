@@ -9,7 +9,7 @@ For a path, in the "time coordinate" $x^0(t) = c t$, let $v = (#d)/(#d t) x."spa
 
 $ #d l = m c^2 (1 - (v/c)^2)^(1/2) #d t $
 
-#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. Similar to #link(<Euler--Lagrange-point-particle>)[the non-relativistic case], the equation of action 
+#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. Similar to #link(<point-particle-Lagrange-equation>)[the non-relativistic case], the equation of action 
 $ 
   (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ v) 
   

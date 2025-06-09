@@ -1,11 +1,11 @@
 #import "/module/module.typ": *
 #show: module
 
-manifold // few
+manifold // few or none
 manifold-example //
-metric-manifold
-// metric-connection
-// geodesic-derivative
+metric
+metric-connection
+geodesic-derivative
 // curvature-of-metric
 // Einstein-metric
 // Einstein-metric-example

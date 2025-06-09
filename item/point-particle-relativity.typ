@@ -9,7 +9,7 @@
 
 $ #d l = m c^2 (1 - (v/c)^2)^(1/2) #d t $
 
-#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. 类似 #link(<Euler--Lagrange-point-particle>)[非相对论的情况], 作用量的方程 
+#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. 类似 #link(<point-particle-Lagrange-equation>)[非相对论的情况], 作用量的方程 
 $ 
   (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ v) 
   

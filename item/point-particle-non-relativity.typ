@@ -35,7 +35,7 @@ $ integral #d t ((#d)/(#d t) (m vel(x)) ⋅ X) = 0 $
 $
   0 = - integral #d t ((m acc(x) + (#d U)/(#d x)) X)
 $
-对所有 δ diffeomorphism $X(t)$ 成立, 从而给出 Lagrange-equation (*alias* Euler--Lagrange-equation), 对于非相对论点粒子, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
+对所有 δ diffeomorphism $X(t)$ 成立, 从而给出 Lagrange-equation (*alias* Euler--Lagrange-equation), 对于非相对论点粒子, #tag("Newton-equation") 
 
 $ m acc(x) + (∂ U)/(∂ x) = 0 $
 
@@ -43,7 +43,7 @@ $ m acc(x) + (∂ U)/(∂ x) = 0 $
 
 Lagrangian 可以写为函数 $L(x,vel(x)) = 1/2 m vel(x)^2 - U(x)$ (切丛上的函数)
 
-#tag("Euler--Lagrange-point-particle") 
+一般点粒子作用量的 Lagrange-equation
 #indent[
   对一般的 $L$, 重复上述过程. 作用量
   $
@@ -59,7 +59,7 @@ Lagrangian 可以写为函数 $L(x,vel(x)) = 1/2 m vel(x)^2 - U(x)$ (切丛上�
     
     = ((#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X) 
   $
-  在边界是零 + 对所有 δ diffeomorphism $X$, 积分是零 ==> Lagrange-equation
+  在边界是零 + 对所有 δ diffeomorphism $X$, 积分是零 ==> #tag("point-particle-Lagrange-equation")
   $
     (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
   $
@@ -132,9 +132,9 @@ let $t ⇝ x(t)$ 是作用量方程的解
 
     &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
-  use $X = a vel(x)$, 合并
+  use $X = a vel(x)$, 将上一项与下一项合并
   $ 
-    integral_(t_0)^(t_1) (#d)/(#d t) #d t ((∂ L)/(∂ vel(x)) ⋅ X) 
+    integral_(t_0)^(t_1) #d t (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) 
     
     = ((∂ L)/(∂ vel(x)) ⋅ vel(x) ⋅ a) |_(t_0)^(t_1)
   $
@@ -146,7 +146,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $
     E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - L
   $
-  称为作用量 $L$ 的能量, 是沿时间 $t$ 不变的, forall $a ∈ ℝ$, i.e. 守恒
+  称为作用量 $L$ 的能量, 是沿时间 $t$ 不变的, forall $a ∈ ℝ$, i.e. 守恒. 对所有 $t_0 < t_1$ 成立也蕴含 $(#d)/(#d t) E = 0$
 
   对于 $L = 1/2 m vel(x)(t)^2 - U(x(t))$ 能量是
   #tag("energy-point-particle-non-relativity") 

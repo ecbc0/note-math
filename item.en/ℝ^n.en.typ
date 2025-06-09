@@ -63,37 +63,6 @@ There are two ways to extend to $ℝ^n$
 
   linear isomorphism of $ℝ^n$ := $GL(n,ℝ)$
 ]
-#tag("quadratic-form") $ℝ^n$ quadratic-form *alias* #tag("metric") *alias* #tag("inner-product")
-#indent[
-  *Example* $ℝ^2,ℝ^3$ distance $vec(x,y,z) ⇝ x^2 + y^2 + z^2$
-
-  *Example* $ℝ^(1,3)$ spacetime metric $vec(t,x,y,z) ⇝ c^2 ⋅ t^2 - (x^2 + y^2 + z^2)$
-
-  Bilinear function, quadratic form
-
-  in geometry, often use notation $g(x,y),⟨ x,y ⟩$
-
-  in coordinate, metric can be represented by matrix $G$ and matrix multiplication $(X,Y) ⇝ X^⊺ G Y$
-
-  #tag("signature-inertial") signature $(p,q)$ is invariant under $GL(n,ℝ)$. Eigenvalues and diagonalization of symmetric matrices $mat(1; , 0; ,, -1)$ where $N_+$ is the number of $1$s, $N_0$ is the number of $0$s, and $N_-$ is the number of $-1$s
-
-  #tag("quadratic-form-non-degenerated") Non-degenerate := $N_0 = 0$ in signature
-
-  The degenerate quadratic form can be restricted to the $N_+ + N_-$ subspace to obtain a non-degenerate form
-
-  The following are equivalent
-  - Non-degenerate 
-  - quadratic-form-dual is a bijection
-    $
-      dmat( delim: #none ,
-        ℝ^n, ⟶, Lin(ℝ^n -> ℝ);
-        v, ⟿, ⟨v, ⟩ "or" bra(v)
-      )
-    $
-  - The quadratic form matrix is invertible, $det G != 0$
-
-  When fixing a non-degenerate quadratic form, the structure group $≃ #O (p,q)$. Maintaining both directions yields $SO(p,q)$
-]
 $ℝ^n$ algebraic structure
 #indent[
   *Example* 
@@ -104,9 +73,9 @@ $ℝ^n$ algebraic structure
 #indent[
   The multiplication of $ℝ$ has the property $|x y| = |x| |y|$
 
-  The $ℝ^n$ spatial quadratic form has the property $|a x| = |a| |x|$
+  The $ℝ^n$ spatial quadratic form has the property $⟨ a x ⟩^2 = a^2 ⟨ x ⟩^2$
 
-  For $ℝ^n$ algebra, we expect the property $|x y|^2 = |x|^2 |y|^2$
+  For $ℝ^n$ algebra, we expect the property $⟨ x y ⟩^2 = ⟨ x ⟩^2 ⟨ y ⟩^2$
 ]
 *Example*
 - $ℂ$

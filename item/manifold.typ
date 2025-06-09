@@ -22,3 +22,21 @@
 带边流形如果内部可定向, 则边界也可定向. 直觉上, 边界的局部有相同的内部 + 内部可定向 ==> 边界的局部有相同方向 ==> 边界方向被决定了
 
 #tag("manifold-with-boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数. 通常使用几乎处处解析来处理一些奇点
+
+#tag("metric-manifold") 流形上的 metric 是在每个切空间定义 metric, 等价于在流形切丛上选择 orthonormal frame bundle. 对 $SO(p,q)$ oritentable, 可以选择 $SO(p,q)$ 可定向的标架丛
+
+metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
+
+*Example* ...
+
+#tag("isometry") := diffeomorphism 保持 metric $g$. 通常也假设保持可定向流形的方向
+
+微分同胚作用于 metric space, isometry 是这个群作用的 #link(<isotropy>)[]
+
+不同曲率的 metric 不能在相同的 orbit. 特别地, 零曲率和非零曲率的 metric 不能在相同的 oribt
+
+#tag("δ-isometry") *alias* #tag("Killing-field")
+
+  将会用于流形上的作用量守恒流
+
+*Question* δ-isometry 和 isometry 群的维数 $<= dim (ℝ^(p,q) ⋊ SO(p,q))$

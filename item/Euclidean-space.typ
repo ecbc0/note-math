@@ -1,30 +1,15 @@
 #import "/module/module.typ": *
 #show: module
 
-#tag("tensor") 多重线性 (兼容集合积的 `and` 逻辑) + 最小独立无关 (生成基)
+使用 #link(<tensor-induced-quadratic-form>)[] 的交错化
 $
-  dmat( delim: #none ,
-    V_1 × ⋯ × V_k &⟶ V_1 ⊗ ⋯ ⊗ V_k ;
-    (v_1 ,…, v_k) &⟿ v_1 ⊗ ⋯ ⊗ v_k
-  )
+  ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
 $
-#tag("tensor-induced-quadratic-form") 
-#indent[
-  将向量空间的二次型 $⟨ , ⟩$ 导出到张量空间的二次型 $⟨ , ⟩^(⊗ k)$ 
-  $
-    ⟨v_1 ⊗ ⋯ ⊗ v_k , w_1 ⊗ ⋯ ⊗ w_k⟩ = ⟨v_1,w_1⟩ ⋯ ⟨v_k,w_k⟩
-  $  
-  遍历所有 $i_1 ,…, i_k$ 正交基 $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $⟨ e_(i_1) ⊗ ⋯ ⊗ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, 得到 signature
+遍历所有 $i_1 < ⋯ < i_k$, 正交基 $e_(i_1) ∧ ⋯ ∧
+e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, 得到 signature
 
-  交错化 
-  $
-    ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
-  $
-  遍历所有 $i_1 < ⋯ < i_k$, 正交基 $e_(i_1) ∧ ⋯ ∧
-  e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, 得到 signature
+let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 
-  let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
-]
 *Abbreviation* $⟨ v,w ⟩ := ⟨ v , w ⟩, ⟨ v ⟩^2 := ⟨ v , v ⟩, |v| := (⟨ v ⟩^2)^(1/2)$
 
 #tag("quadratic-form-inequality-Euclidean") 内积不等式 (Euclidean). $0 <= ⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2, ⟨ v,w ⟩; ⟨ w,v ⟩, ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ w,v ⟩^2$. i.e. $⟨ w,v ⟩^2 <= ⟨ v ⟩^2 ⟨ w ⟩^2$ or $⟨ v,w ⟩ <= |v| |w|$

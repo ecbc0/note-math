@@ -1,30 +1,15 @@
 #import "/module/module.typ": *
 #show: module
 
-#tag("tensor") multilinear (compatible to `and` logic of set product) + independent minimal (generated base)
+use alternation of #link(<tensor-induced-quadratic-form>)[]  
 $
-  dmat( delim: #none ,
-    V_1 × ⋯ × V_k &⟶ V_1 ⊗ ⋯ ⊗ V_k ;
-    (v_1 ,…, v_k) &⟿ v_1 ⊗ ⋯ ⊗ v_k
-  )
+  ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
 $
-#tag("tensor-induced-quadratic-form") 
-#indent[
-  Derive the quadratic form $⟨ , ⟩$ of the vector space to the quadratic form $⟨ , ⟩^(⊗ k)$ of the tensor space 
-  $
-    ⟨v_1 ⊗ ⋯ ⊗ v_k , w_1 ⊗ ⋯ ⊗ w_k⟩ = ⟨v_1,w_1⟩ ⋯ ⟨v_k,w_k⟩
-  $  
-  Iterate through all $i_1 ,…, i_k$ orthonormal bases $e_(i_1) ⊗ ⋯ ⊗ e_(i_k)$ with $⟨ e_(i_1) ⊗ ⋯ ⊗ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, to obtain the signature
+Iterate through all $i_1 < ⋯ < i_k$, orthonormal bases $e_(i_1) ∧ ⋯ ∧
+e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, to obtain the signature
 
-  Alternation 
-  $
-    ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
-  $
-  Iterate through all $i_1 < ⋯ < i_k$, orthonormal bases $e_(i_1) ∧ ⋯ ∧
-  e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨ e_(i_k) ⟩^2$, to obtain the signature
+let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 
-  let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
-]
 *Abbreviation* $⟨ v,w ⟩ := ⟨ v , w ⟩, ⟨ v ⟩^2 := ⟨ v , v ⟩, |v| := (⟨ v ⟩^2)^(1/2)$
 
 #tag("quadratic-form-inequality-Euclidean") Inner product inequality (Euclidean). $0 <= ⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2, ⟨ v,w ⟩; ⟨ w,v ⟩, ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ w,v ⟩^2$. i.e. $⟨ w,v ⟩^2 <= ⟨ v ⟩^2 ⟨ w ⟩^2$ or $⟨ v,w ⟩ <= |v| |w|$

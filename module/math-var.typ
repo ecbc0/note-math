@@ -123,3 +123,7 @@
 
 #let closed(x) = math.macron(x)
 #let Closed(x) = math.overline(x)
+
+#let dmat(..x) = math.mat(..x.pos().map(y => y.map(math.display)), ..x.named())
+
+#let dcases(..args) = math.cases(..args.pos().map(math.display), ..args.named())

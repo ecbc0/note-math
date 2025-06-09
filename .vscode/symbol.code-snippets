@@ -453,4 +453,12 @@
 		"prefix": "hbar",
 		"body": "ℏ"
 	},
+	"♭":{
+		"prefix": "flat",
+		"body": "♭"
+	},
+	"♯":{
+		"prefix": "sharp",
+		"body": "♯"
+	},
 }

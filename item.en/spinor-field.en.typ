@@ -99,7 +99,7 @@
 
   Similar to $ℂ^2 ≃ ℝ^2$ via $x ± y #i$, varying with respect to $ℂ$-valued $ϕ$ is equivalent to varying with respect to $ℝ$-valued $ϕ,ϕ^†$
 
-  $#spin-d ϕ^⬨ = (σ ⋅ ∂^⬨) ϕ = (σ^μ ∂_μ^⬨) ϕ$ can be interpreted as the gradient momentum of the field (after metric-adjoint) $#i ⋅ (∂_0,-∂_1,-∂_2,-∂_3) ϕ ∈ ℝ^(1,3) ⊗ ℂ^2$, compounded to, the multiplication of momentum and spinor $(#p ⊗ ϕ ⇝ #p ϕ) ∈ ℝ^(1,3) ⊗ ℂ^2 -> ℂ^2$
+  $#spin-d ϕ^⬨ = (σ ⋅ ∂^⬨) ϕ = (σ^μ ∂_μ^⬨) ϕ$ can be interpreted as the gradient momentum of the field (after metric-dual) $#i ⋅ (∂_0,-∂_1,-∂_2,-∂_3) ϕ ∈ ℝ^(1,3) ⊗ ℂ^2$, compounded to, the multiplication of momentum and spinor $(#p ⊗ ϕ ⇝ #p ϕ) ∈ ℝ^(1,3) ⊗ ℂ^2 -> ℂ^2$
 ]
 #tag("Weyl-parity")
 #indent[

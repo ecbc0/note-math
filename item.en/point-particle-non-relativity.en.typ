@@ -35,7 +35,7 @@ So the differential of the action is
 $
   0 = - integral #d t ((m acc(x) + (#d U)/(#d x)) X)
 $
-holds for all δ diffeomorphism $X(t)$, thus giving the Lagrange-equation (*alias* Euler--Lagrange-equation), for non-relativistic point particles, #tag("equation-point-particle-non-relativity") *alias* #tag("Newton-equation") 
+holds for all δ diffeomorphism $X(t)$, thus giving the Lagrange-equation (*alias* Euler--Lagrange-equation), for non-relativistic point particles, #tag("Newton-equation") 
 
 $ m acc(x) + (∂ U)/(∂ x) = 0 $
 
@@ -43,7 +43,7 @@ The momentum part of the action $integral #d t (1/2 m vel(x)^2)$ does not use th
 
 The Lagrangian can be written as a function $L(x,vel(x)) = 1/2 m vel(x)^2 - U(x)$ (a function on the tangent bundle)
 
-#tag("Euler--Lagrange-point-particle") 
+#tag("point-particle-Lagrange-equation") 
 #indent[
   For a general $L$, repeat the above process. Action
   $
@@ -59,7 +59,7 @@ The Lagrangian can be written as a function $L(x,vel(x)) = 1/2 m vel(x)^2 - U(x)
     
     = ((#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X) 
   $
-  is zero at the boundary + integral is zero for all δ diffeomorphism $X$ ==> Lagrange-equation
+  is zero at the boundary + integral is zero for all δ diffeomorphism $X$ ==> #tag("point-particle-Lagrange-equation")
   $
     (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
   $
@@ -132,9 +132,9 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
 
     &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
-  use $X = a vel(x)$, merge
+  use $X = a vel(x)$, merge the previous item with the next item
   $ 
-    integral_(t_0)^(t_1) (#d)/(#d t) #d t ((∂ L)/(∂ vel(x)) ⋅ X) 
+    integral_(t_0)^(t_1) #d t (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) 
     
     = ((∂ L)/(∂ vel(x)) ⋅ vel(x) ⋅ a) |_(t_0)^(t_1)
   $
@@ -146,7 +146,7 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $
     E = (∂ L)/(∂ vel(x)) ⋅ vel(x) - L
   $
-  Called the energy of the action $L$, is invariant along time $t$, forall $a ∈ ℝ$, i.e. conserved
+  Called the energy of the action $L$, is invariant along time $t$, forall $a ∈ ℝ$, i.e. conserved. This is true for $t_0 < t_1$ also imply $(#d)/(#d t) E = 0$
 
   For $L = 1/2 m vel(x)(t)^2 - U(x(t))$ the energy is
   #tag("energy-point-particle-non-relativity") 

@@ -165,7 +165,9 @@
         "diffEditor.insertedTextBackground": "#51e90000",
         "diffEditor.removedTextBackground": "#d1000000",
         "quickInputTitle.background": "#000000",
-        "editor.snippetTabstopHighlightBackground": "#12380041"
+        "editor.snippetTabstopHighlightBackground": "#12380041",
+        "tree.indentGuidesStroke":"#7d0000ab",
+        "tree.inactiveIndentGuidesStroke":"#93a1a127"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [

@@ -63,37 +63,6 @@ $
 
   linear isomorphism of $ℝ^n$ := $GL(n,ℝ)$
 ]
-#tag("quadratic-form") $ℝ^n$ 二次型 *alias* #tag("metric") *alias* 内积 #tag("inner-product")
-#indent[
-  *Example* $ℝ^2,ℝ^3$ 距离 $vec(x,y,z) ⇝ x^2 + y^2 + z^2$
-
-  *Example* $ℝ^(1,3)$ spacetime metric $vec(t,x,y,z) ⇝ c^2 ⋅ t^2 - (x^2 + y^2 + z^2)$
-
-  双线性函数, 二次型
-
-  metric 常用记号 $g(x,y),⟨ x,y ⟩$
-
-  坐标下 metric 可以表示为矩阵 $G$ 和矩阵乘法 $(X,Y) ⇝ X^⊺ G Y$
-
-  #tag("signature-inertial") signature $(p,q)$ 在 $GL(n,ℝ)$ 下不变. 对称矩阵的特征值和对角化 $mat(1; , 0; ,, -1)$ 其中 $N_+$ 个 $1$, $N_0$ 个 $0$, $N_-$ 个 $-1$
-
-  #tag("quadratic-form-non-degenerated") 非退化 := signature 中 $N_0 = 0$
-
-  退化的二次型可以限制在 $N_+ + N_-$ 子空间中得到非退化
-
-  以下等价
-  - 非退化
-  - #tag("quadratic-form-dual") 是双射
-    $
-      dmat( delim: #none ,
-        ℝ^n, ⟶, Lin(ℝ^n -> ℝ);
-        v, ⟿, ⟨v, ⟩ "or" bra(v)
-      )
-    $
-  - 二次型矩阵可逆, $det G != 0$
-
-  固定一个非退化二次型时, 结构群 $≃ #O (p,q)$. 保持两个方向就得到 $SO(p,q)$
-]
 $ℝ^n$ 代数结构
 #indent[
   *Example* 
@@ -104,9 +73,9 @@ $ℝ^n$ 代数结构
 #indent[
   $ℝ$ 的乘法带有性质 $|x y| = |x| |y|$
 
-  $ℝ^n$ spatial 二次型带有性质 $|a x| = |a| |x|$
+  $ℝ^n$ #link(<metric>)[二次型] 带有性质 $⟨ a x ⟩^2 = a^2 ⟨ x ⟩^2$
 
-  $ℝ^n$ algebra 我们期待性质 $|x y|^2 = |x|^2 |y|^2$
+  $ℝ^n$ algebra 我们期待性质 $⟨ x y ⟩^2 = ⟨ x ⟩^2 ⟨ y ⟩^2$
 ]
 *Example*
 - $ℂ$

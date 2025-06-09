@@ -116,7 +116,7 @@
 
   // function
 
-  show regex("∗|′|″|⊺|†|‡|∁|⬨|⟂|⊤|⋆"): it => text(it, fill: rgb("#006dea"))
+  show regex("∗|′|″|⊺|†|‡|∁|⬨|⟂|⊤|⋆|♭|♯"): it => text(it, fill: rgb("#006dea"))
 
   /*
     ⊺ : transpose

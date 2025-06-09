@@ -161,3 +161,4 @@ Linear ODE. The solution of a constant coefficient ODE can be written by transfo
 
   Lie derivative can also be defined for tensor fields ...
 ]
+#tag("linear-PDE-integrable-condition") related to the symmetry of the second-order derivative. This condition allows the solution of a first-order linear PDE to come from successive integration curve of ODEs, and the result does not depend on the choice of path

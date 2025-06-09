@@ -28,3 +28,21 @@ Equivalent to the existence of a coordinate cover, each transition function diff
 If the interior of a manifold with boundary is orientable, then the boundary is also orientable. Intuitively, the local of boundary has the same interior + the interior is orientable ==> local of boundary has the same orientation ==> the boundary orientation is determined
 
 #tag("manifold-with-boundary") Manifold with boundaries. The coordinates can be the region enclosed by the $n-1$-dimensional hyperplane, and the transformation function need to be able to derives the transformation function in the $n-1$-dimensional subspace. Usually use almost everywhere analysis to deal with some singularities
+
+#tag("metric-manifold") metric on manifold (*Abbreviation* metric) is to define metric in each tangent space, which is equivalent to choosing an orthonormal frame bundle on the manifold tangent bundle. For $SO(p,q)$ oritentable, we can choose $SO(p,q)$ orientable frame bundle
+
+metric can be inherited from submanifold or quotient manifold of $ℝ^(p,q)$
+
+*Example* ...
+
+#tag("isometry") := diffeomorphism preserving metric $g$. It is usually also assumed to preserve the orientation of the orientable manifold
+
+Diffeomorphism acts on metric space, isometry is the #link(<isotropy>)[] of this group action
+
+Metrics with different curvatures cannot be in the same orbit. In particular, zero-curvature and non-zero-curvature metrics cannot be in the same oribt
+
+#tag("δ-isometry") *alias* #tag("Killing-field")
+
+  will be used for the momentum conservation flow on the manifold
+
+*Question* dimension of δ-isometry and isometry group $<= dim (ℝ^(p,q) ⋊ SO(p,q))$

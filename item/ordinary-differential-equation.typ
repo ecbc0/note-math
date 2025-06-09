@@ -161,3 +161,4 @@ $
 
   可以对 tensor field 也定义 Lie derivative ...
 ]
+#tag("linear-PDE-integrable-condition") 相关于二阶导数的对称性. 这个条件使得一阶线性 PDE 的解可以来自接连的 ODE 积分曲线, 且结果不依赖于道路的选取
