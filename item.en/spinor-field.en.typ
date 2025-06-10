@@ -79,7 +79,7 @@
 
 
 #show "Δ": it => text(it, fill: rgb("#0056e1"))
-#tag("massless-spinor-Lagrangian") (cf. #link(<Lagrangian>)[]), *alias* #tag("Weyl-Lagrangian")
+#tag("massless-spinor-Lagrangian") *alias* #tag("Weyl-Lagrangian")
 #indent[
   $ ϕ^† #i #spin-d ^⬨ ϕ $
 

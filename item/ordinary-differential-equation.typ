@@ -61,7 +61,7 @@ compare to the result from separable ODE in 1 dimension
 
   *Example* #tag("harmonic-oscillator") 
   #indent[
-    谐振子一阶化 
+    谐振子 $acc(x) = ∓ ω^2 x$ 一阶化 
     $
       mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)
     $ 
@@ -81,6 +81,8 @@ compare to the result from separable ODE in 1 dimension
       x(t) = 1/2 (x_0 - #i v_0/ω) e^(#i ω t) + 1/2 (x_0 + #i v_0/ω) e^(- #i ω t) =: a (ω, #i) e^(#i ω t) + a (ω, -#i) e^(- #i ω t)
     $
     双曲情况类似
+
+    谐振子方程的特征多项式方程是 $ξ^2 ± ω^2 = 0$ or $ξ^2 = ± ω^2$. 我们对三角情况 $ξ^2 + ω^2 = 0$ pr $ξ = ± #i ω$ 感兴趣, 其原型是 $ξ^2 = - 1$ or $ξ^2 = ± #i$ 
   ]
 ]
 - $ℝ -> ℝ$, $v(x) = x^2$

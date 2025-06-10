@@ -41,6 +41,8 @@ There are two ways to extend to $ℝ^n$
   $
     (x + y #i)(x' + y' #i) &= (x x' - y y') + (x y' + y x') #i
   $
+  one of motivation of complex-number or $z^2 = -1$ is the characteristic polynomial equation of #link(<harmonic-oscillator>)[] $ξ^2 + ω^2 = 0$
+
   *Example* #tag("split-complex-number") Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   Addition is the same as $ℝ^2$. Multiplication uses $#i-split^2 = 1$ or $1/#i-split = #i-split$ and the distributive law

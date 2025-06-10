@@ -41,6 +41,8 @@ $
   $
     (x + y #i)(x' + y' #i) &= (x x' - y y') + (x y' + y x') #i
   $
+  复数 or $z^2 = -1$ 的一种来源. #link(<harmonic-oscillator>)[谐振子] ODE 的特征方程 $ξ^2 + ω^2 = 0$
+
   *Example* #tag("split-complex-number") 分裂复数. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i-split^2 = 1$ or $1/#i-split = #i-split$ 和分配律

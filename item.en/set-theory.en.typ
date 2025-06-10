@@ -3,7 +3,7 @@
 
 For people, one way to understand natural numbers is counting 
 
-For computers (cf. #link(<logic>)[]), the ways to represent natural numbers are
+For computers (cf. #link(<logic.typ>)[]), the ways to represent natural numbers are
 - Periodic circuit
 - Arithmetic component $+1$
 - Binary 

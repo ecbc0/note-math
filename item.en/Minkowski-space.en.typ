@@ -191,8 +191,6 @@ _Proof_
 
     - $⟨ v,w ⟩ > 0$ ==> $|v+w| > |v| + |w|$
     - $⟨ v,w ⟩ < 0$ ==> $⟨ v + w ⟩^2 < (|v| - |w|)^2$
-
-    (cf. #link(<same-time-direction>)[])
   ]
   - 1 time, 1 null
   #indent[  

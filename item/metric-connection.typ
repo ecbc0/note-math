@@ -1,7 +1,7 @@
 #import "/module/module.typ": *
 #show: module
 
-cf. #link(<metric>)[]
+cf. #link(<metric.typ>)[]
 
 #tag("geodesic")  
 #indent[

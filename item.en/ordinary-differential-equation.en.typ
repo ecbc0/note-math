@@ -61,7 +61,7 @@ compare to the result from separable ODE in 1 dimension
 
   *Example* #tag("harmonic-oscillator") 
   #indent[
-    make harmonic-oscillator first order 
+    make harmonic-oscillator  $acc(x) = ∓ ω^2 x$ first order 
     $
       mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)
     $ 
@@ -81,6 +81,8 @@ compare to the result from separable ODE in 1 dimension
       x(t) = 1/2 (x_0 - #i v_0/ω) e^(#i ω t) + 1/2 (x_0 + #i v_0/ω) e^(- #i ω t) =: a (ω, #i) e^(#i ω t) + a (ω, -#i) e^(- #i ω t)
     $
     similar for the case of hyperbolic
+
+    The characteristic polynomial equation of harmonic-oscillator is $ξ^2 ± ω^2 = 0$ or $ξ^2 = ± ω^2$. We are interested in the trigonometric case $ξ^2 + ω^2 = 0$ or $ξ = ω #i ω$, its prototype is $ξ^2 = ± 1$ or $ξ^2 = ± i$
   ]
 ]
 - $ℝ -> ℝ$, $v(x) = x^2$

@@ -8,6 +8,10 @@
       "},"
     ]
   },
+  "def":{
+    "prefix": "def",
+    "body": "*Def*"
+  },
   "prop": {
     "prefix": "prop",
     "body": "*Prop*"
