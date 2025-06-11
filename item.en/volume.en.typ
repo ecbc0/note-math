@@ -47,9 +47,13 @@ $
 
 #tag("simplex") := convex hull formed by affinely independent points
 
+#image("../image/simplex.jpeg", width: 70%)
+
 #tag("parallelogram") Due to symmetry, the description of parallelepiped can be simplified from the convex hull of $2n$ points to the description of $n$ points, after selecting the origin 
 
 $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
+
+#image("../image/parallelogram.jpeg", width: 25%)
 
 #tag("parallelogram-simplex-correspond")
 #indent[

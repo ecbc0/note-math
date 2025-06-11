@@ -14,7 +14,7 @@
   $
     sum t_i (v_i + Δ) = (sum t_i v_i) + (sum t_i) Δ = (sum t_i v_i) + Δ
   $
-  关于直觉, 最简单的例子是两点直线的比例点 #image("../image/affine-combination.jpeg", width: 30%)
+  关于直觉, 最简单的例子是两点直线的比例点 #image("../image/affine-combination-1.jpeg", width: 30%)
 
   可以逐次迭代 or 分解 e.g. 三角形 $t_1 x_1 + t_2 x_2 + t_3 x_3 <--> s_1 (t_1 x_1 + t_2 x_2) + s_2 x_3$. 且分解操作可交换. 且可以分解为多个 $>= 1$ 阶的
 
@@ -47,9 +47,13 @@ $
 
 #tag("simplex") := 由仿射无关的点构成的 convex hull
 
+#image("../image/simplex.jpeg", width: 70%)
+
 #tag("parallelogram") 平行体由于对称性, 可以从 $2n$ 点 convex hull 描述简化为 $n$ 点描述, 在选取原点后 
 
 $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
+
+#image("../image/parallelogram.jpeg", width: 25%)
 
 #tag("parallelogram-simplex-correspond")
 #indent[

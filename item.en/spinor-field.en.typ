@@ -250,10 +250,6 @@ Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨
   Changing the gauge is not compatible with taking derivatives of tangent spaces in bundle coordinates, so an additional structure --- #link(<principal-bundle-connection>)[connection] --- must be introduced.
   
   There are many possible connections. A good connection is one with the smallest curvature cf. #link(<electromagnetic-field>)[]
-  
-  There are connections that cannot be local flat; for any local region, the connection field cannot be eliminated by changing the gauge.
-  
-  Similar to gravity, one needs the concept of local flat connection <==> local curvature 0, and chooses the connection by minimizing curvature.
 
   The $ℂ^2$ bundle in curved spacetime can be directly defined in the bundle coordinates of the $SO(1,3)$ principal bundle (orthonormal frame bundle). Using the #link(<Lorentz-group-spinor-representation>)[$SL(1,ℂ) ↠ SO(1,3)$ correspondence], changing $SO(1,3)$ bundle coordinates automatically corresponds to changing $SL(2,ℂ)$ bundle coordinates.
 
