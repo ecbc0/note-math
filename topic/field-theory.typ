@@ -11,10 +11,10 @@ spacetime-momentum-spinor-representation
 Lorentz-group
 spinor-field
 spinor-field-current
-// gauge
-// Laplacian-of-tensor-field
-// Einstein-metric
-// interaction
+electromagnetic-field
+Laplacian-of-tensor-field
+Einstein-metric
+interaction
 // harmonic-oscillator-quantization-real //
 // harmonic-oscillator-quantization-complex //
 // harmonic-oscillator-quantization-spinor //

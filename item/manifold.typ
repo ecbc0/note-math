@@ -29,6 +29,8 @@ metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
 
 *Example* ...
 
+即使用二次型拓扑和微分定义了流形, 也仍然有很多不同的 metric. 一种性质良好的 metric 是 #link(<Einstein-metric.typ>)[]
+
 #tag("isometry") := diffeomorphism 保持 metric $g$. 通常也假设保持可定向流形的方向
 
 微分同胚作用于 metric space, isometry 是这个群作用的 #link(<isotropy>)[]

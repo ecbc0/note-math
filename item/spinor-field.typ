@@ -52,7 +52,7 @@
     )
   $
 ]
-#tag("spinor-field-motivation?") 
+#tag("spinor-field-motivation") 
 #indent[
   - formally 将动量 $p$ 对应到 gradient 动量 $#i ⋅ (∂_0,-∂_1,-∂_2,-∂_3) = #i ⋅ (∂_0,∂_1,∂_2,∂_3)^⬨$, 将 $#p$ 对应到 #link(<spacetime-momentum-spinor-representation>)[] 
     $
@@ -231,7 +231,7 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 
 由于 $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$ 所以变换 $mat(#p ;,#p^⬨) ⇝ mat(,#p ; #p^⬨)$ 不来自 $GL(4,ℂ)$ 换坐标 $T^(-1) ⋅ M ⋅ T$
 
-#tag("motivation-of-gauge-field?") 
+#tag("motivation-of-gauge-field") 
 #indent[
   忽略了一些问题
 
@@ -249,11 +249,7 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 
   改变规范不兼容于在丛坐标中求切空间的导数, 所以要引入额外的结构 --- #link(<principal-bundle-connection>)[connection]
   
-  有很多可能的联络
-  
-  有无法 local flat 的联络, 对任意的局部, 都无法通过改变规范消去联络场
-  
-  类似于 gravity, 需要用 local flat connection <==> local curvature 0 的概念, 用曲率最小来选择 connection
+  有很多可能的联络. 性质好的联络是曲率最小的 cf. #link(<electromagnetic-field>)[]
 
   弯曲时空的 $ℂ^2$ 丛可以直接在 $SO(1,3)$ principal bundle (正交标架丛) 的丛坐标中定义. 使用 #link(<Lorentz-group-spinor-representation>)[$SL(1,ℂ) ↠ SO(1,3)$ 对应], 换 $SO(1,3)$ 丛坐标时, 自动对应到换 $SL(2,ℂ)$ 丛坐标
 
@@ -277,7 +273,7 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 ]
 spin-connection also denoted by $∇$
 
-#tag("motivation-of-scalar-field?") can scalar field be related to tautological bundle of projective-lightcone $ℂℙ^1$?
+#tag("motivation-of-scalar-field") can scalar field be related to tautological bundle of projective-lightcone $ℂℙ^1$?
 
 根据 $ℝ^(1,3)$ 时空流形的旋量场的概念, "旋转 720 度", "parity" 应该发生在切空间构造而不是发生在时空流形
 

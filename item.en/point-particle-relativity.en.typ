@@ -15,7 +15,7 @@ $
   
   <==> (#d)/(#d t) (m c^2 v)/((1 - (v/c)^2)^(1/2)) = 0 
 $
-The relativistic action "approximates" to the non-relativistic action 
+#tag("point-particle-relativity-approximate-to-non-relativity") The relativistic action "approximates" to the non-relativistic action 
 $
   m c^2 (1 - (v/c)^2)^(1/2) = m c^2 - 1/2 m v^2 + O(v/c)^2
 $

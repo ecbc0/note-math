@@ -7,12 +7,6 @@
 - Polar coordinates. Starting from trigonometric functions of $𝕊^1$, construct new latitudes inductively
 - Geodesic coordinates
 
-#tag("orientable") Orientable := there exists a coordinate cover, each transition function differentiation $#d f in SO$
-
-*Example* #link(<Mobius-strip>)[] is not directional
-Send feedback
-Translation results available
-
 *Example* Parametric curves and surfaces of $ℝ^3$. analytic function $f : ℝ^2 -> ℝ^3$, $#d f != 0$ ==> for local parameter, it's local analytic isomorphism
 
 #tag("manifold") minimal structure to define manifold, family of coordinate cards covering $M$ with the same dimension, transition functions using Euclidean or Minkowski or quadratic analysis
@@ -34,6 +28,8 @@ If the interior of a manifold with boundary is orientable, then the boundary is 
 metric can be inherited from submanifold or quotient manifold of $ℝ^(p,q)$
 
 *Example* ...
+
+Although the manifold is defined using quadratic topology and differentials, there are still many different metrics. A well-behaved metric is #link(<Einstein-metric.typ>)[]
 
 #tag("isometry") := diffeomorphism preserving metric $g$. It is usually also assumed to preserve the orientation of the orientable manifold
 

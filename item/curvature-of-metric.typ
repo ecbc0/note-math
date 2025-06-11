@@ -98,7 +98,7 @@
   - $Γ(p) = 0$
 
   有
-  $ R_(i_1 i_2 j_1 j_2) = 1/2 sum_(i, j in 2!)) sign(i) sign(j) ∂_(i_1 j_1) g_(i_2 j_2) $
+  $ R_(i_1 i_2 j_1 j_2) = 1/2 sum_(i, j in 2!) sign(i) sign(j) ∂_(i_1 j_1) g_(i_2 j_2) $
   or
   $
     R_(i i' j j') = 1/2 (∂_(i j) g_(i' j') + ∂_(i' j') g_(i j) - ∂_(i j') g_(i' j) - ∂_(i' j) g_(i j'))

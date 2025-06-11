@@ -131,8 +131,19 @@
 
 $so(1,3)$ have form $mat(0,b^⊺;b,r)$ where $r ∈ so(3), b ∈ ℝ^3$ (@ref-2, Vol.1, p.180)
 
-orbit and isotropy-group of action $SL(2,ℂ)$ on $ℝ^(1,3)$ ...
+#tag("Lorentz-group-orbit-isotropy")
 
+$SO(1,3)$ or $SL(2,ℂ)$ act on $ℝ^(1,3)$
+  
+  #table(
+  columns: 2,
+  [orbit type],[isotropy-group type],
+  [$|x|^2 = 1$],[$SO(3)$ or $SU(2,ℂ)$],
+  [$|x|^2 = -1$],[$SO(1,2)$ or $SL(2,ℝ)$],
+  [$|x|^2 = 0$],[$SO(2) ⋊ ℝ^2$],
+  [${0}$],[$SO(1,3)$ or $SL(2,ℂ)$]
+  )
+  
 #let p = spin($p$)
 
 #tag("isotropy-on-lightcone") *Prop* $SO(1,3)$ acting on lightcone is similar to $SO(2) ⋊ ℝ^2$ (exactly the $ℝ^2$ Euclidean affine group)

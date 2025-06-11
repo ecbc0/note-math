@@ -15,7 +15,7 @@ $
   
   <==> (#d)/(#d t) (m c^2 v)/((1 - (v/c)^2)^(1/2)) = 0 
 $
-相对论作用量 "近似" 到非相对论作用量 
+#tag("point-particle-relativity-approximate-to-non-relativity") 相对论作用量 "近似" 到非相对论作用量 
 $
   m c^2 (1 - (v/c)^2)^(1/2) = m c^2 - 1/2 m v^2 + O(v/c)^2
 $

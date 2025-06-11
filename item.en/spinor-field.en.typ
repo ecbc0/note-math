@@ -52,7 +52,7 @@
     )
   $
 ]
-#tag("spinor-field-motivation?") 
+#tag("spinor-field-motivation") 
 #indent[
   - formally corresponds momentum $p$ to gradient momentum $#i ⋅ (∂_0,-∂_1,-∂_2,-∂_3) = #i ⋅ (∂_0,∂_1,∂_2,∂_3)^⬨$, and $#p$ to #link(<spacetime-momentum-spinor-representation>)[] 
     $
@@ -231,7 +231,7 @@ The latter is a linear equation, so the solution is not difficult. The solution 
 
 Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨) ⇝ mat(,#p ; #p^⬨)$ does not come from $GL(4,ℂ)$ coordinate change $T^(-1) ⋅ M ⋅ T$
 
-#tag("motivation-of-gauge-field?") 
+#tag("motivation-of-gauge-field") 
 #indent[
   Ignored some issues
 
@@ -249,7 +249,7 @@ Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨
 
   Changing the gauge is not compatible with taking derivatives of tangent spaces in bundle coordinates, so an additional structure --- #link(<principal-bundle-connection>)[connection] --- must be introduced.
   
-  There are many possible connections.
+  There are many possible connections. A good connection is one with the smallest curvature cf. #link(<electromagnetic-field>)[]
   
   There are connections that cannot be local flat; for any local region, the connection field cannot be eliminated by changing the gauge.
   
@@ -277,7 +277,7 @@ Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨
 ]
 spin-connection also denoted by $∇$
 
-#tag("motivation-of-scalar-field?") can scalar field be related to tautological bundle of projective-lightcone $ℂℙ^1$?
+#tag("motivation-of-scalar-field") can scalar field be related to tautological bundle of projective-lightcone $ℂℙ^1$?
 
 According to the concept of spinor fields in $ℝ^(1,3)$ spacetime manifold, "rotation by 720 degrees" and "parity" should occur in the tangent space construction, not in the spacetime manifold.
 

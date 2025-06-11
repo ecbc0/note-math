@@ -6,12 +6,13 @@ manifold-example //
 metric
 metric-connection
 geodesic-derivative
-// curvature-of-metric
-// Einstein-metric
-// Einstein-metric-example
+curvature-of-metric
+Einstein-metric
+constant-sectional-curvature
+simple-symmetric-space
 principal-bundle //
 principal-bundle-connection //
-// analysis-on-symmetric-space //
+// analysis-on-simple-symmetric-space //
 
 group-action
 

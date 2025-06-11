@@ -149,17 +149,18 @@ $
 
   for $GL,gl$, $[A,B] ∼ A B - B A$
 ]
+#let L = c-diff($L$)
 #tag("Lie-derivative") Lie derivative *alias* drag derivative
 #indent[
   let $v$ 生成单参数微分同胚 $t ⇝ f_t in "Diff"$
   
   let $w_t = #d f_(t)^(-1) (f_t (x) : "base", w(f_t (x)) : "vector")$
 
-  $L_v (w) := lim_(t -> 0) 1/t (w_t - w_0) $
+  $#L _v (w) := lim_(t -> 0) 1/t (w_t - w_0) $
 
-  $L_v (w) = [v,w]$
+  $#L _v (w) = [v,w]$
   
-  Jacobi identity $L_([v,w]) = [L_v,L_w]$ or $[v_1,[v_2,w_3]] + [v_3,[v_1,v_2]] + [v_2,[v_3,v_1]] = 0$
+  Jacobi identity $#L _([v,w]) = [#L _v,#L _w]$ or $[v_1,[v_2,w_3]] + [v_3,[v_1,v_2]] + [v_2,[v_3,v_1]] = 0$
 
   可以对 tensor field 也定义 Lie derivative ...
 ]
