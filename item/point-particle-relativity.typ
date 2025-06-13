@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("action-point-particle-relativity") 作用量 $ integral #d l (m c) = integral #d τ (m c|vel(x)|)  $ 结果是测地线

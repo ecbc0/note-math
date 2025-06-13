@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("affine-combination") 
@@ -239,7 +239,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
 #tag("polyhedra") 多面体 :=
 #indent[
-  #image("/image/polyhedra.jpeg", width: 40%)
+  #image("../image/polyhedra.jpeg", width: 40%)
   n simplex 有限并 with
 
   - 内部不相交
@@ -248,7 +248,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   传递边界的维数是为了让多面体有最好的连通性
 ]
-#tag("low-dim-polyhedra") 低维子多面体. 作为一种类似子流形的设置? i.e. $ℝ^k$ 维里 $k-1$ 边界的相邻的 simplex 只有两个 -> 分段嵌入到 $ℝ^n$. 若不然, 考虑例子三接边界 #image("/image/tri-intersect-boundary.jpg", width: 40%)
+#tag("low-dim-polyhedra") 低维子多面体. 作为一种类似子流形的设置? i.e. $ℝ^k$ 维里 $k-1$ 边界的相邻的 simplex 只有两个 -> 分段嵌入到 $ℝ^n$. 若不然, 考虑例子三接边界 #image("../image/tri-intersect-boundary.jpg", width: 40%)
 
 可数推广 -> 可数多面体
 

@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 向量场 $Y$ 在方向 $X$ 的导数的定义问题

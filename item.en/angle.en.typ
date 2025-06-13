@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Euclidean $ℝ^2$'s direction space is $𝕊 = 𝕊^1$

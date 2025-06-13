@@ -2,7 +2,7 @@
   "import": {
     "prefix": "import",
     "body": [
-      "#import \"/module/module.typ\": *",
+      "#import \"../module/module.typ\": *",
       "#show: module"
     ]
   },

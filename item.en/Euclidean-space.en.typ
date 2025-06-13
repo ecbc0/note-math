@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 use alternation of #link(<tensor-induced-quadratic-form>)[]  

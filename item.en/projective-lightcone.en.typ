@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #let projective-cone = $"Cone-"ℙ$ // cone projective space

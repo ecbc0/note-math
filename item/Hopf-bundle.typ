@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 $𝕊^3,𝕊^2,𝕊^1$ or 复数 $ℂ$ 版本的 Hopf-bundle 

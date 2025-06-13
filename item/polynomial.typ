@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 在平直空间经常混合线性和仿射. 类似地, 在平直空间, 多项式也是如此. 零阶多项式对应着仿射的使用

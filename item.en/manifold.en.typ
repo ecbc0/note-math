@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 *Example* Euclidean analysis of manifolds, various coordinates of the sphere $𝕊^n$

@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 The power function order in the power series $sum_(0 .. ∞) a_n v^n$ is different, introducing the asymmetry of the coefficient $a_n$, which makes it not necessarily suitable for series rearrangement? Although we will still discuss absolute convergence

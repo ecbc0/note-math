@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Binary relation := Propositional function $p : A × B -> {0,1}$ or a subset of $A × B$
@@ -13,7 +13,7 @@ $n$-ary relation is similar
   Can also use the equivalent $<=$ version
 ]
 *Example* 
-  - Subset inclusion $⊂$ or inclusion and not equal to $⊊$ is an order #image("/image/tree-diagram.svg", width: 70%) 
+  - Subset inclusion $⊂$ or inclusion and not equal to $⊊$ is an order #image("../image/tree-diagram.svg", width: 70%) 
     image modified from wiki media about partial order
   - $<,<=$ of $ℕ,ℤ,ℚ,ℝ$
   - Tree diagram

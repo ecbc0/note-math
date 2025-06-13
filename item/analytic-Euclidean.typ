@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 幂级数 $sum_(0 .. ∞) a_n v^n$ 中的幂函数阶数不同, 引入了系数 $a_n$ 的不对称性, 使得不一定适合级数重排? 虽然我们仍然会讨论绝对收敛

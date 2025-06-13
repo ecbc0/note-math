@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 使用 #link(<tensor-induced-quadratic-form>)[] 的交错化

@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("quadratic-form") $ℝ^n$ 二次型 *alias* #tag("metric") 度规 *alias* 内积 #tag("inner-product")

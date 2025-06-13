@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 相对论纯量场作用量近似到非相对论纯量场作用量

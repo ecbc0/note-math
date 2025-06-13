@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 let mapping $1,…,n ⇝ a_1,…,a_n$

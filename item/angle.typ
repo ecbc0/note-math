@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Euclidean $ℝ^2$ 的方向空间是 $𝕊 = 𝕊^1$

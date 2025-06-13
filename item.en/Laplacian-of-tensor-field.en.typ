@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Gradient and divergence are $L^2$ adjoint to each other.

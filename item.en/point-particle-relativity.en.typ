@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("action-point-particle-relativity") Action $ integral #d l (m c) = integral #d τ (m c|vel(x)|)  $ The result is a geodesic

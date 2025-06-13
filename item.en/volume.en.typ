@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("affine-combination") 
@@ -239,7 +239,7 @@ The reduced set of a simplex may not be a convex hull. But it can still be decom
 
 #tag("polyhedra") Polyhedron :=
 #indent[
-  #image("/image/polyhedra.jpeg", width: 40%)
+  #image("../image/polyhedra.jpeg", width: 40%)
   n simplex finite union with
 
   - internally disjoint
@@ -248,7 +248,7 @@ The reduced set of a simplex may not be a convex hull. But it can still be decom
 
   The dimension of the transitive boundary is to give the polyhedron the best connectivity
 ]
-#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("/image/tri-intersect-boundary.jpg", width: 40%)
+#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("../image/tri-intersect-boundary.jpg", width: 40%)
 
 Countable generalization -> Countable polyhedron
 

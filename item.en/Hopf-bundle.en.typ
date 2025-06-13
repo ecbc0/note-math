@@ -1,5 +1,7 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
+
+At first glance, the quotient $± x$ of Euclidean projective space seems trivial, but once generalized to complex quaternions, the seemingly non-trivial Hopf bundle, a type of fiber bundle, appears. The real case is the $#U (1,ℝ) = #O (1) = ℤ_2$ bundle. The case of the quaternion Hopf bundle may also be related to the construction of exotic $𝕊^7$.
 
 $𝕊^3,𝕊^2,𝕊^1$ or complex number $ℂ$ version of Hopf-bundle 
 

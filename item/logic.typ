@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 命题逻辑
@@ -63,7 +63,7 @@
 
   $and,or,not$ 的数字电路和逻辑门 (gate) 的表示
 
-  #image("/image/gate.jpeg", width: 60%)
+  #image("../image/gate.jpeg", width: 60%)
 
   gate 设计为不允许反向电流?
 
@@ -79,8 +79,8 @@
 
   (image from p.85 of @ref-1)
   #stack( dir: ltr,
-    image("/image/compute-function-input.jpeg", width: 30%),
-    image("/image/decoder.jpeg", width: 30%), 
+    image("../image/compute-function-input.jpeg", width: 30%),
+    image("../image/decoder.jpeg", width: 30%), 
   )
 
   - ${0,1}^n$ 输入的构造
@@ -95,7 +95,7 @@
 
     *Example* `not xor`
 
-    #image("/image/compute-function-output.jpeg", width: 30%)
+    #image("../image/compute-function-output.jpeg", width: 30%)
   ]
     互斥或, ⊕, `xor`
 
@@ -112,15 +112,15 @@
 
   如果函数不需要完整 ${0,1}^n -> {0,1}^m$, 电路计算元件不一定要按这种固定方式来构建. 可以根据情况, 进一步简化, 减少 gate 数量的使用. 但这里不进入细节
 ]
-计算单元中多条输入线或输出线的一种符号表示 #image("/image/multi-lines-symbol.jpeg")
+计算单元中多条输入线或输出线的一种符号表示 #image("../image/multi-lines-symbol.jpeg")
 
 #tag("control-circuit") 控制电路, 选择器 or 复用器 (multiplexer)
 
   $S = 0$ 将 $D_0$ 输出到 $Y$, $S = 1$ 将 $D_1$ 输出到 $Y$
 
   #stack( dir: ltr,
-    image("/image/multiplexer-function.jpeg", width: 20%),
-    image("/image/multiplexer-impl.jpeg", width: 25%)
+    image("../image/multiplexer-function.jpeg", width: 20%),
+    image("../image/multiplexer-impl.jpeg", width: 25%)
   )
   $2^n$ 个输入 $D_0 ,…, D_(2^n - 1)$ 需要 $n$ 条控制电路 $S_0 ,…, S_(n - 1)$
 
@@ -164,15 +164,15 @@
 ]
 #tag("periodic-circuit") 周期电路
 
-  #image("/image/periodic-circuit.jpeg", width: 60%)
+  #image("../image/periodic-circuit.jpeg", width: 60%)
 
   由晶体振荡器实现
 
 #tag("memory-circuit") 电路记忆
 #indent[
-  黑箱模型 #image("/image/memory-1.jpeg", width: 60%)
+  黑箱模型 #image("../image/memory-1.jpeg", width: 60%)
   
-  可能的实现 #image("/image/memory-2.jpeg", width: 70%)
+  可能的实现 #image("../image/memory-2.jpeg", width: 70%)
 
   - 使用环电路重用上一个周期的 $a,overline(a)$ 的 1/0 值
   - 反相器 (`not` gate) 确保电流方向并防止 1 衰减 (通过外部能量) 
@@ -191,13 +191,13 @@
 
   用多位 bit 包含的自然数范围, 例如 3 bit 的 $0, 1 ,…, 7$ 作为参数, 去对应到真实世界的内容. *Example* 计算机的字符的表示方式 e.g. ASCII, Unicode, 屏幕的发光点位置和颜色
 
-  #image("/image/ASCII.jpeg")
+  #image("../image/ASCII.jpeg")
 
   (image modified from wiki media about ASCII)
 
   在实际应用中, 每个地址多个 bit 好于每个地址 1 bit, or 二维内存阵列比一维高效
 
-  #image("/image/memory-array.jpeg", width: 20%)
+  #image("../image/memory-array.jpeg", width: 20%)
 ]
 #tag("instruction") 指令
 #indent[
@@ -212,9 +212,9 @@
 
   *Example* `add` 指令. `add x_1 x_2`. 指令的 bit 数据位分为三个区域, 表示不同类型的信息
 
-  #image("/image/add-instruction.jpeg", width: 70%)
+  #image("../image/add-instruction.jpeg", width: 70%)
 
-  #image("/image/add-instruction-computer.jpeg", width: 80%)
+  #image("../image/add-instruction-computer.jpeg", width: 80%)
   
   + 读取 `add` 指令 
     - `add` 指令在 `adress_0` (`add x_1 x_2` 以及 `adress_1, adress 2` 来自源代码和编译器的生成)
@@ -240,7 +240,7 @@
       i = i + 1;
   } // result = 10
   ```
-  #image("/image/while-computer.jpeg", width: 90%)
+  #image("../image/while-computer.jpeg", width: 90%)
 
   + 读取指令
 

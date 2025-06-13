@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]

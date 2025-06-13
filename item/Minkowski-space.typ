@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 子空间 $span(v,w) ↪ ℝ^(p,q)$ 

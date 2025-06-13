@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("orientation-of-real-linear-space") $ℝ^n$ 方向
@@ -25,7 +25,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   *Example* 四面体, 右手定则, 拇指指向四面体内部得到边界方向 (图片的顶点的指标从 $1$ 而不是 $0$ 开始)
 
-  #image("/image/orientation-of-simplex.jpg", width: 100%)
+  #image("../image/orientation-of-simplex.jpg", width: 100%)
 ]
 #tag("orientable-low-dim-polyhera") 多面体 #link(<orientation-of-boundary-of-simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
 
@@ -49,13 +49,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   - boundary-op-not-injective
 
-    #image("/image/boundary-op-not-injective-1.jpg", width: 70%)
+    #image("../image/boundary-op-not-injective-1.jpg", width: 70%)
 
-    #image("/image/boundary-op-not-injective-2.jpeg", width: 80%)
+    #image("../image/boundary-op-not-injective-2.jpeg", width: 80%)
 
   - #tag("tri-intersect-boundary")
 
-    #image("/image/tri-intersect-boundary.jpg", width: 40%)
+    #image("../image/tri-intersect-boundary.jpg", width: 40%)
 
   cycle $∂ c = 0$
 

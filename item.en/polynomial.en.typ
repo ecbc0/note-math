@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 In flat space, linear and affine are often mixed. Similarly, in flat space, so are polynomials. Zero-order polynomials correspond to the use of affine

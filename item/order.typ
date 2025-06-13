@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 二元关系 := 命题函数 $p : A × B -> {0,1}$ or $A × B$ 的子集
@@ -13,7 +13,7 @@ $n$ 元关系类似
   也可以用等价的 $<=$ 版本
 ]
 *Example* 
-  - 子集的包含 $⊂$ 或者包含且不等于 $⊊$ 是序 #image("/image/tree-diagram.svg", width: 70%) 
+  - 子集的包含 $⊂$ 或者包含且不等于 $⊊$ 是序 #image("../image/tree-diagram.svg", width: 70%) 
     image modified from wiki media about partial order
   - $ℕ,ℤ,ℚ,ℝ$ 的 $<,<=$
   - 树图

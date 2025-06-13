@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 The problem of defining the derivative of a vector field $Y$ in the direction $X$

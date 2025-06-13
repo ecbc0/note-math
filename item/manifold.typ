@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 *Example* Euclidean 解析流形, 球面 $𝕊^n$ 的多种坐标

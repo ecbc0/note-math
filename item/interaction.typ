@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 旋量场, 纯量场, 规范场, 引力场 (Einstein-metric), 或者其它场, 通过以下方式耦合

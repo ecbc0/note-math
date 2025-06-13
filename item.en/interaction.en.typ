@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Spinor fields, scalar fields, gauge fields, gravitational fields (Einstein-metric), or other fields are coupled in the following ways:

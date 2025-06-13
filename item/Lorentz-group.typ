@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("polar-decomposition-of-Lorentz-group") polar decomposition $SO(1,3)$ to rotation and boost (@ref-2, Vol.1, p.165)

@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("orientation-of-real-linear-space") $ℝ^n$ direction
@@ -25,7 +25,7 @@ There are two directions. for vector base of $ℝ^n$, change order once $e_i <->
 
   *Example* Tetrahedron, right-hand rule, with the thumb pointing towards the inside of the tetrahedron to get the boundary direction (the index of the vertices in the picture starts from $1$ instead of $0$)
 
-  #image("/image/orientation-of-simplex.jpg", width: 100%)
+  #image("../image/orientation-of-simplex.jpg", width: 100%)
 ]
 #tag("orientable-low-dim-polyhera") Polyhedron #link(<orientation-of-boundary-of-simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
 
@@ -49,13 +49,13 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   - boundary-op-not-injective
 
-    #image("/image/boundary-op-not-injective-1.jpg", width: 70%)
+    #image("../image/boundary-op-not-injective-1.jpg", width: 70%)
 
-    #image("/image/boundary-op-not-injective-2.jpeg", width: 80%)
+    #image("../image/boundary-op-not-injective-2.jpeg", width: 80%)
 
   - #tag("tri-intersect-boundary")
 
-    #image("/image/tri-intersect-boundary.jpg", width: 40%)
+    #image("../image/tri-intersect-boundary.jpg", width: 40%)
 
   cycle $∂ c = 0$
 

@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 对人来说, 一种理解自然数的方式是数数 (counting) 

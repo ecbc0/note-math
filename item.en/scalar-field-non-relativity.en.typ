@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 Approximation of Relativistic Scalar Field Action to Non-Relativistic Scalar Field Action

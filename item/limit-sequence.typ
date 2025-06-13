@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("sequence-real") 实数列 := $ℕ -> ℝ$. 通常记为 $a_n$. 根据情况, 设置从 $0$ 开始或从 $1$ 开始

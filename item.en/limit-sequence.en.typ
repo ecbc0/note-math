@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("sequence-real") Real number sequence := $ℕ -> ℝ$. Usually denoted as $a_n$. Depending on the situation, set it to start from $0$ or from $1$

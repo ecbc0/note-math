@@ -1,4 +1,4 @@
-#import "/module/module.typ": *
+#import "../module/module.typ": *
 #show: module
 
 #tag("quadratic-form") $ℝ^n$ Quadratic form *alias* #tag("metric") Metric *alias* Inner product #tag("inner-product")
