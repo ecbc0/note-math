@@ -108,11 +108,11 @@ _Proof_
 
   First derivative
 
-  $ ∂_i =& n ( a_i^(n-1) - a_1 ⋯ a_n without a_i) $
+  $ ∂_i = n ( a_i^(n-1) - a_1 ⋯ a_n without a_i) $
 
   The first derivative equals zero, solving the equation yields
   $
-    ∂_1 = ⋯ = ∂_n = 0 ==>& a_1 = ⋯ = a_n 
+    ∂_1 = ⋯ = ∂_n = 0 ==> a_1 = ⋯ = a_n 
   $
   Second derivative
   $

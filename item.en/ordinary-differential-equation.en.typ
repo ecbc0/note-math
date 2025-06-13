@@ -139,9 +139,13 @@ Linear ODE. The solution of a constant coefficient ODE can be written by transfo
 
 #tag("Lie-bracket") Lie bracket
 #indent[
-  Start from the conjugation action of the $"Diff"$ group $g,f ⇝ f g f^(-1)$ // link
+  as generator of conjugate-action of $"Diff"$
+
+  conjugation action of the $"Diff"$ group $g,f ⇝ f g f^(-1)$
 
   Differential := $"ad"(v)(w) = [v,w]$
+
+  note that $g,f ⇝ g f g^(-1)$ is a different map, if we consider the order of $g,f$ 
 
   $[v,w](x) = ∂_(v(x)) w(x) - ∂_(w(x)) v(x)$
 

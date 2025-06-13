@@ -38,7 +38,7 @@ _Proof_
   ]
   - $#projective-cone (1,3) ∖ #projective-cone (1,2) ≃ ℍ𝕪^2$
   #indent[
-    Using $x_1 = 1$ to intercept the lightcone, we get $ℍ𝕪^2 = {x_0^2 - (x_2^2 + x_3^2) = 1}$. Divided into future and past two branches
+    Using $x_1 = 1$ to intercept the lightcone, we get space-like section $ℍ𝕪^2 = {x_0^2 - (x_2^2 + x_3^2) = 1}$. Divided into future and past two branches
 
     $"Cone"(1,2) = {x_0^2 - (x_2^2 + x_3^2) = 0}$'s projection cannot be intercepted by $x_1 = 1$
   ]

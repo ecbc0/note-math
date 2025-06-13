@@ -13,10 +13,11 @@ cf. #link(<motivation-of-gauge-field>)[]
 
 存在局部丛坐标 or 相位, 其中联络是零 $A = 0$ <==> 曲率是零 $F_(i i') = [#D _i,#D _i'] = 0$ where $#D = #d + A$, 在坐标中 $F_(i i') = ∂_i A_i' - ∂_i' A_i + [A_i, A_i']$
 
+不存在 flat connection 坐标时, 则选取基于 metric-volume-form 的 $L^2$ 最小曲率
+
 *Example*
 #indent[
   $#U (1)$ 的情况. $A$ 是 $#u (1)$ 值, 是交换的 $[A,A'] = 0$, 此时 $F = #d A$, 在坐标中 $F_(i j) = ∂_i A_j - ∂_j A_i$
-
 
   从局部 flat-connection 坐标 $A' = 0$ 转换到一般坐标给出 PDE
 

@@ -257,7 +257,7 @@ Countable generalization -> Countable polyhedron
   #image("../image/measure-approximation.jpeg", width: 30%)
   Polyhedron measurable set $A$. Approximate with a countable polyhedron $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
-  Sets $A,B$ define distance 
+  Sets $A,B$ define distance (@ref-12)
 
   $ d(A,B) := inf_("polyhedra" C \ A Δ B ⊂ C) Vol(C) $
 
@@ -288,7 +288,7 @@ Countable generalization -> Countable polyhedron
 
   #stack( dir: ltr,
     image("../image/measure-triangle-inequality-1.jpeg", width: 40%),
-  image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
+    image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
   )
   by
   $
@@ -307,7 +307,6 @@ Countable generalization -> Countable polyhedron
     &<= d((A Δ B) ∪ (A Δ B')) \
     &<= d(A,B) + d(A,B')
   $
-
   For polyhedra $P,P'$ with finite volume and $d(A,P),d(A,P') < ε$
 
   Unique limit

@@ -45,9 +45,9 @@ $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,
 
   Although conceptually it converges to the empty set
 ]
-#tag("integrable-exist-subnet-almost-everywhere-pointwise-convergence") 
+#tag("integrable-exist-subnet-almost-everywhere-pointwise-convergence") (@ref-5, p.129--130)
 #indent[
-  But for all $L^1,L^2$ integral distances, there exists a subnet in the Cauchy net that converges almost everywhere pointwise to the target integrable function. This comes from the fact that there exists a set $A$ with arbitrarily small measure such that it converges absolutely and uniformly on $A^∁$. cf. p.129--130 of @ref-5 
+  But for all $L^1,L^2$ integral distances, there exists a subnet in the Cauchy net that converges almost everywhere pointwise to the target integrable function. This comes from the fact that there exists a set $A$ with arbitrarily small measure such that it converges absolutely and uniformly on $A^∁$
 ]
 The measurable set defined by $𝟙_A in $L^1,L^2$$ is a Lebesgue measurable set, which may be disconnected
 

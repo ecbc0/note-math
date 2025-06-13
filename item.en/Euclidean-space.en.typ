@@ -124,7 +124,7 @@ _Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ is continuous
 
   $closed(𝔹)^1 = [-1,1]$ bounded closed interval compact ==> quotient $𝕊^1 = closed(𝔹)^n/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient preserves compact]
 ]
-#tag("closed(𝔹)-sphere-is-compact") 
+#tag("closed-ball-sphere-is-compact") 
 
 _Proof_ 
 #indent[

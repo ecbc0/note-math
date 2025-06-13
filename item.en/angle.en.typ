@@ -25,10 +25,10 @@ The multiplication of elements in $SO(2)$ is equivalent to the multiplication of
   
   The latter should be the $exp : ℝ -> "Isom" 𝕊$ of $𝕊$'s #link(<Killing-field>)[] as a one-parameter homomorphism to $𝕊$'s isometry
 
-  Calculate $exp$ with #link(<geodesic>)[geodesic]. Calculate geodesic with, for example, #link("stereographic-projection")[stereographic projection coordinates]. For the geodesic starting at $vec(1,0)$, the result is denoted as #tag("trigonometric-function") trigonometric function $vec(cos(t),sin(t))$. The power series expansion of $vec(cos(t),sin(t))$ at $t = 0$ can be calculated using #link(<inverse-analytic>)[inverse function theorem]
+  Calculate $exp$ with #link(<geodesic>)[geodesic]. Calculate geodesic with, for example, #link(<stereographic-projection>)[stereographic projection coordinates]. For the geodesic starting at $vec(1,0)$, the result is denoted as #tag(<trigonometric-function>) trigonometric function $vec(cos(t),sin(t))$. The power series expansion of $vec(cos(t),sin(t))$ at $t = 0$ can be calculated using #link(<inverse-analytic>)[inverse function theorem]
   $
-    cos(t) = sum frac((-1)^n,(2n)!) t^(2n) \
-    sin(t) = sum frac((-1)^n,(2n+1)!) t^(2n+1)
+    cos(t) &= sum frac((-1)^n,(2n)!) t^(2n) \
+    sin(t) &= sum frac((-1)^n,(2n+1)!) t^(2n+1)
   $
   Homomorphism is reflected in, according to power series
   $

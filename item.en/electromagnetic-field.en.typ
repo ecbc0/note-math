@@ -13,10 +13,11 @@ Similar to #link(<flat-metric-iff-curvature-0>)[]
 
 There exist local bundle coordinates or phases, where the connection is zero $A = 0$ <==> the curvature is zero $F_(i i') = [#D _i,#D _i'] = 0$ where $#D = #d + A$, in coordinates $F_(i i') = ∂_i A_i' - ∂_i' A_i + [A_i, A_i']$
 
+When not exist flat connection coordinate, choose $L^2$ minimal curvature, $L^2$ based on metric-volume-form
+
 *Example*
 #indent[
   $#U (1)$ case. $A$ is $#u (1)$ valued, and it is commutative $[A,A'] = 0$. In this case $F = #d A$, in coordinates $F_(i j) = ∂_i A_j - ∂_j A_i$
-
 
   Transforming from local flat-connection coordinates $A' = 0$ to general coordinates gives a PDE
 

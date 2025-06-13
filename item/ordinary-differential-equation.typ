@@ -139,9 +139,13 @@ $
 
 #tag("Lie-bracket") Lie bracket
 #indent[
-  从 $"Diff"$ 群的共轭作用开始 $g,f ⇝ f g f^(-1)$ // link
+  作为 #link(<conjugate-action>)[] of $"Diff"$ 的生成元
+
+  $"Diff"$ 的共轭作用 $g,f ⇝ f g f^(-1)$ 
 
   微分 := $"ad"(v)(w) = [v,w]$
+  
+  注意 $g,f ⇝ g f g^(-1)$ 是不同的映射, 如果考虑 $g,f$ 的顺序的话
 
   $[v,w](x) = ∂_(v(x)) w(x) - ∂_(w(x)) v(x)$
 

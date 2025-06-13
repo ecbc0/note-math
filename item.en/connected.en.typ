@@ -5,7 +5,7 @@
 
 *Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]
 
-#tag("connected") Connected or limit point connected := limit point set decomposition is no longer possible or closed set decomposition is no longer possible
+#tag("connected") Connected or limit connected := limit point set decomposition is no longer possible or closed set decomposition is no longer possible
 
 $X = ⨆_(i in I) A_(i)$ with $A_i$ closed ==> $|I| = 1$
 
@@ -49,7 +49,7 @@ $S$ is $#T _S$ connected or $S$ cannot be $#T _S$ closed set decomposition and $
 
 _Proof_ The closed set decomposition of $#T _S$, $(S ∩ A) ⊔ (S ∩ A')$, results in one of the sets being an empty set
 
-$A$ is a limit point connected set ==> $A$ is in the only one limit point connected component of $X$ 
+$A$ is a limit connected set ==> $A$ is in the only one limit connected component of $X$ 
 
 _Proof_ The points of $A$ must be in $X$ and therefore in some connected component.
 
@@ -117,7 +117,7 @@ _Proof_ Using #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A
 
 Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology?)
 
-#tag("homotopy") homotopy or limit point homotopy := $C(X -> Y)$ is limit point connected
+#tag("homotopy") homotopy or limit point homotopy := $C(X -> Y)$ is limit connected
 
 *Example* $ℝ^(n+1) ∖ 0$ is homotopic to $𝕊^(n)$
 

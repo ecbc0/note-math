@@ -257,7 +257,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   #image("../image/measure-approximation.jpeg", width: 30%)
   多面体可测集 $A$. 用可数多面体 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
 
-  集合 $A,B$ 定义距离 
+  集合 $A,B$ 定义距离 (@ref-12)
 
   $ d(A,B) := inf_("polyhedra" C \ A Δ B ⊂ C) Vol(C) $
 
@@ -270,7 +270,6 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   如果 $A ⊂ A'$ 则 $d(A) <= d(A')$
 
   $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
-
 
   注意, 这种可测集有好的连通性. 在一维中只有区间, 排除了 Smith–Volterra–Cantor 集等. 多面体可测集的并集等操作也受到限制
 ]
@@ -288,7 +287,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   #stack( dir: ltr,
     image("../image/measure-triangle-inequality-1.jpeg", width: 40%),
-  image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
+    image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
   )
   by
   $
@@ -307,7 +306,6 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
     &<= d((A Δ B) ∪ (A Δ B')) \
     &<= d(A,B) + d(A,B')
   $
-
   对多面体 $P,P'$ with 有限体积 and $d(A,P),d(A,P') < ε$
 
   唯一极限

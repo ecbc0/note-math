@@ -167,25 +167,26 @@ _Proof_
 
   取一个 #link(<maximal-linear-order>)[极大线序链] $#C$. 由闭区间套定理, 其交集是非空闭区间 $⋂ #C != ∅$
 
-  由 $#C$ 的极大性, 闭区间 $⋂ #C$ 将小于所有 $#B$ 的闭区间
+  由 $#C$ 的线序极大性, 直觉上, 闭区间 $⋂ #C$ 将小于所有 $#B$ 的闭区间, 从而 $⋂ #C subset ⋂ #B$
 
-  $forall B in #B$, 定义线序链 $#C _B = {B ∩ C in #B : C in #C}$
+  $forall B in #B$, 我们证明 $⋂ #C subset B$ 
+  
+  定义闭区间线序链 $#C _B = {B ∩ C in #B : C in #C}$. $B ∩ C subset B$. 我们证明 $⋂ #C _B = ⋂ #C$
+  
+  反证法. 假设 $⋂ #C _B subset.neq ⋂ #C$. 那么 $⋂ #C _B$ 的 小/大 端点 大/小 于 $⋂ #C$ 的 小/大 端点
   
   $subset$ 线序链满足 $⋂_(A supset A_0) A = A_0$
 
-  闭区间套的端点是上下确界
-
-  如果 $⋂ #C _B subset.neq ⋂ #C$, 那么 $⋂ #C _B$ 的 小/大 端点 大/小 于 $⋂ #C$ 的 小/大 端点
-
-  如果闭区间 $⋂ #C _B ∉ #B$, 那么对端点使用 $ℝ$ 确界原理 
-  $
-    exists B ∩ C_0 in #C _B \
-    B ∩ C_0 in #B \
-    B ∩ C_0 = ⋂_(B ∩ C supset B ∩ C_0) B ∩ C subset.neq ⋂ #C
-  $ 
-  矛盾于 $⋂ #C$ 是 $⊂$ 极大线序链
-  
-  如果闭区间 $⋂ #C _B in #B$, 同理矛盾
+  - 如果闭区间 $⋂ #C _B ∉ #B$, 那么对端点使用 $ℝ$ 确界原理 
+  #indent[
+    $
+      exists B ∩ C_0 in #C _B \
+      B ∩ C_0 in #B \
+      B ∩ C_0 = ⋂_(B ∩ C supset B ∩ C_0) B ∩ C subset.neq ⋂ #C
+    $ 
+    存在 $B ∩ C_0 in #B$ 属于 $⋂ #C$, 矛盾于 $⋂ #C$ 是 $⊂$ 极大线序链
+  ]
+  - 如果闭区间 $⋂ #C _B in #B$, 同理矛盾
 ]
 let $a_n : ℕ -> ℝ$
 

@@ -67,6 +67,8 @@
 
   In flat-metric coordinates $Γ = 0$, so the geodesic ODE is $acc(x) = 0$, so flat-metric coordinates will be geodesic coordinates 
 ]
+When not exist flat metric coordinate, choose #link(<Einstein-metric>)[] as minimal #link(<scalar-curvature>)[]
+
 Now, do not assume flat metric
 
 #tag("curvature-of-metric") 
@@ -227,7 +229,7 @@ $ker(g ⋅)^† ⟂ im(g ⋅) = ⨀^2 V^⊺ = im(g #cvt-prod)^†$
 $
   "curvature" = ker(g #cvt-prod)^† ⟂ ker(g ⋅)^† ⟂ im(g ⋅) 
 $ 
-Orthogonal decomposition into tensor space, and cannot be decomposed further, i.e., irreducible
+Orthogonal decomposition into tensor subspace, and cannot be decomposed further, i.e., irreducible
 
 #tag("curvature-decomposition") forall $T ∈ "curvature"$, exists $S ∈ ⨀^2 V^⊺$, orthogonal decomposition $T = U + g #cvt-prod S ∈ ker(g #cvt-prod)^† ⊕ im(g #cvt-prod)$
 
@@ -255,7 +257,7 @@ _Proof_ if it's true then
 
   trace-free Ricci-curvature $"tr-free-Ric" := "Ric" - 1/n ⋅ g ⋅ "scal" ∈ ker(g ⋅)^†$
 
-  Curvature Orthogonal Decomposition 
+  Curvature Orthogonal Decomposition to Tensor Subspace 
 
     $"curvature" = ker(g #cvt-prod)^† ⊕ ker(g ⋅)^† ⊕ im(g ⋅)$
   $

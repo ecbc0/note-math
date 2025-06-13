@@ -129,6 +129,6 @@ $
 $
 The time component of the Schrodinger field current is positive and its spatial integral is time invariant
 
-Should this quantity be "particle number density" or "probability density"?
+Should this quantity be "particle number density" or "probability density" or "electric charge density"?
 
 *_Warning_* No one can currently solve atoms other than hydrogen atoms using the Schrodinger equation. What form of many-particle interaction model should be used is also not an obvious matter. No repeatable evidence or downstream applications

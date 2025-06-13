@@ -369,7 +369,7 @@ Generalized to higher dimensions
 
 The tangent space of the quadratic manifold $ℚ^(p,q)(± 1)$ can be defined as the (affine) subspace orthogonal to the radial direction
 
-The definition of geodesics of the quadric surface $ℚ^(p,q)(± 1)$ does not require manifold techniques, only use geodesic as secant line of the cross-section span by radial + tangent + embedded $ℍ𝕪$ and its geodesic length. *Question* Is there a better and more intuitive definition?
+The definition of geodesics of the quadric surface $ℚ^(p,q)(± 1)$ does not require manifold techniques, only use geodesic as secant line of the cross-section span by (radial + tangent) + embedded $ℍ𝕪$ and its geodesic length. *Question* Is there a better and more intuitive definition?
 
 $ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
 

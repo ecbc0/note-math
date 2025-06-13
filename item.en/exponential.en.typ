@@ -57,6 +57,6 @@ It can also be expressed as $x^a = exp(a log x)$
   $
   - $ℂ_"split"$
   $
-    exph z &= cosh z + #i sinh z \
+    exph z &= cosh z + #i-split sinh z \
     #i-split &≃ mat(,1;1) ∼ so(1,1)
   $

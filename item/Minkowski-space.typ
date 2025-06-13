@@ -369,7 +369,7 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) 连续 at $f(0) = 0$ 
 
 二次流形 $ℚ^(p,q)(± 1)$ 的切空间可以定义为正交于径向的 (仿射) 子空间
 
-二次流形 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by 径向 + 切向 + 嵌入的 $ℍ𝕪$ 及其测地线长度. *Question* 是否有好的解释?
+二次流形 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by (径向 + 切向) + 嵌入的双曲线 $ℍ𝕪$ 及其测地线长度. *Question* 是否有好的解释?
 
 $ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
 

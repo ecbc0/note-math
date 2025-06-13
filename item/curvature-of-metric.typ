@@ -1,7 +1,7 @@
 #import "/module/module.typ": *
 #show: module
 
-#tag("flat-metric") 
+#tag("flat-metric") (@ref-2, vol)
 #indent[
   flat metric := 存在坐标使得 $forall x, g(x) = η$ 标准 metric
 
@@ -67,6 +67,8 @@
 
   在 flat-metric 坐标 $Γ = 0$ 所以测地线 ODE 是 $acc(x) = 0$,所以 flat-metric 坐标将是测地线坐标 
 ]
+不存在 flate metric 坐标时, 则选取 #link(<Einstein-metric>)[] 作为最小 #link(<scalar-curvature>)[纯量曲率]
+
 现在不假设 flat metric
 
 #tag("curvature-of-metric") 
@@ -227,7 +229,7 @@ $ker(g ⋅)^† ⟂ im(g ⋅) = ⨀^2 V^⊺ = im(g #cvt-prod)^†$
 $
   "curvature" = ker(g #cvt-prod)^† ⟂ ker(g ⋅)^† ⟂ im(g ⋅) 
 $ 
-正交分解为张量空间, 且不可再这样分解 i.e. irreducible
+正交分解为子张量空间, 且不可再这样分解 i.e. irreducible
 
 #tag("curvature-decomposition") forall $T ∈ "curvature"$, exists $S ∈ ⨀^2 V^⊺$, 正交分解 $T = U + g #cvt-prod S ∈ ker(g #cvt-prod)^† ⊕ im(g #cvt-prod)$
 
@@ -255,7 +257,7 @@ _Proof_ if it's true then
 
   trace-free Ricci-curvature $"tr-free-Ric" := "Ric" - 1/n ⋅ g ⋅ "scal" ∈ ker(g ⋅)^†$
 
-  曲率正交分解 
+  曲率正交子张量空间分解 
 
     $"curvature" = ker(g #cvt-prod)^† ⊕ ker(g ⋅)^† ⊕ im(g ⋅)$
   $

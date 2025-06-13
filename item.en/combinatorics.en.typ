@@ -20,7 +20,7 @@ let mapping $1,…,n ⇝ a_1,…,a_n$
 #indent[ 
   $ 
     {a'(1),…,a'(i)} &= {a(1),…,a(i)} \ 
-    {a'(i+1),…,a'(i+j) &= {a(i+1),…,a(i+j)}
+    {a'(i+1),…,a'(i+j)} &= {a(i+1),…,a(i+j)}
   $
 ]
 Define the #tag("quotient") $a ∼ a'$ of permutations with the same partition as a subset of $S_n$ that satisfies the above conditions, i.e., the inverse image of the partitioning possibility $A ⊔ B$

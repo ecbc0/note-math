@@ -5,7 +5,7 @@
 
 *Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]
 
-#tag("connected") 连通 or 极限点连通 := 极限点集分解不再可能 or 闭集分解不再可能
+#tag("connected") 连通 or 极限连通 := 极限点集分解不再可能 or 闭集分解不再可能
 
 $X = ⨆_(i in I) A_(i)$ with $A_i$ closed ==> $|I| = 1$
 
@@ -49,7 +49,7 @@ $S$ is $#T _S$ 连通 or $S$ 不可 $#T _S$ 闭集分解 and $#T _X$ 有闭集�
 
 _Proof_ $#T _S$ 的闭集分解 $(S ∩ A) ⊔ (S ∩ A')$ 导致其中一个集合是空集
 
-$A$ 是极限点连通集 ==> $A$ 在 $X$ 的唯一一个极限点连通分支里 
+$A$ 是极限连通集 ==> $A$ 在 $X$ 的唯一一个极限连通分支里 
 
 _Proof_ $A$ 的点必定在 $X$ 从而在某个连通分支里
 
@@ -117,7 +117,7 @@ _Proof_ 使用 #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) 
 
 定义 (how?) $f in C(X -> Y)$ 的拓扑或极限点之后 (should be something compact open topology?)
 
-#tag("homotopy") 同伦 or 极限点同伦 := $C(X -> Y)$ 是极限点连通的
+#tag("homotopy") 同伦 or 极限点同伦 := $C(X -> Y)$ 是极限连通的
 
 *Example* $ℝ^(n+1) ∖ 0$ 同伦到 $𝕊^(n)$
 

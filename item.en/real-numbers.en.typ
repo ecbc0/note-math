@@ -167,25 +167,26 @@ _Proof_
 
   Take a #link(<maximal-linear-order>)[maximal linearly ordered chain] $#C$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
 
-  Due to the maximality of $#C$, the closed interval $⋂ #C$ will be smaller than all closed intervals of $#B$
+  By the linear order maximality of $#C$, intuitively, the closed interval $⋂ #C$ will be smaller than all closed intervals of $#B$, so $⋂ #C subset ⋂ #B$
 
-  $forall B in #B$, define a linearly ordered chain $#C _B = {B ∩ C in #B : C in #C}$
-  
-  $subset$ linearly ordered chain satisfies $⋂_(A supset A_0) A = A_0$
+  $forall B in #B$, we prove $⋂ #C subset B$
 
-  The endpoints of nested closed intervals are supremum and infimum
+  Define the closed interval linear ordered chain $#C _B = {B ∩ C in #B : C in #C}$. $B ∩ C subset B$. We prove $⋂ #C _B = ⋂ #C$
 
-  If $⋂ #C _B subset.neq ⋂ #C$, then the small/large endpoint of $⋂ #C _B$ is larger/smaller than the small/large endpoint of $⋂ #C$
+  Proof by contradiction. Assume $⋂ #C _B subset.neq ⋂ #C$. Then the small/large endpoint of $⋂ #C _B$ is larger/smaller than the small/large endpoint of $⋂ #C$
 
-  If the closed interval $⋂ #C _B ∉ #B$, then use the $ℝ$ least-upper-bound property for the endpoints 
-  $
-    exists B ∩ C_0 in #C _B \
-    B ∩ C_0 in #B \
-    B ∩ C_0 = ⋂_(B ∩ C supset B ∩ C_0) B ∩ C subset.neq ⋂ #C
-  $ 
-  The contradiction of $⋂ #C$ is that $⊂$ is the maximal linear order chain
-  
-  If the closed interval $⋂ #C _B in #B$, the contradiction is the same
+  The $subset$ linear ordered chain satisfies $⋂_(A supset A_0) A = A_0$
+
+  - If the closed interval $⋂ #C _B ∉ #B$, then use the $ℝ$ exact bound principle for the endpoints
+  #indent[
+    $
+      exists B ∩ C_0 in #C _B \
+      B ∩ C_0 in #B \
+      B ∩ C_0 = ⋂_(B ∩ C supset B ∩ C_0) B ∩ C subset.neq ⋂ #C
+    $
+    There exists $B ∩ C_0 in #B$ that belongs to $⋂ #C$, which contradicts that $⋂ #C$ is a $⊂$ maximal linear ordered chain
+  ]
+  - If the closed interval $⋂ #C _B in #B$, the same contradiction applies
 ]
 let $a_n : ℕ -> ℝ$
 

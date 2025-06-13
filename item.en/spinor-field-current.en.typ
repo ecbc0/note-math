@@ -155,7 +155,7 @@ $
 $
 In fact, one can choose a spacetime decomposition coordinate $ℝ^(1,3)$ and write the spinor eq in the form of unitary evolution of charge $#i ∂_0 ϕ = - #i σ^(i ⬨) ∂_i ϕ = #i σ^i ∂_i ϕ$ where $- #i σ^(i ⬨) ∂_i$ is self-adjoint for $ℂ^2$ quadratic form + $ℝ^3$ integral
 
-(After dropping $#i$) charge *alias* probability density or particle number density
+(After dropping $#i$) charge *alias* probability density or particle number density or electric charge density
 
 The case of massive-spinor is
 $
