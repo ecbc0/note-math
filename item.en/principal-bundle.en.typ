@@ -1,6 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
+Although integration on manifolds considers not being limited to a specific metric, differential manifolds have still not been singled out. 
+
+The situation with fiber bundles is similar; the codomain and its symmetries seem uncertain in the general case.
+
 *Example*
 
 homogeneous space

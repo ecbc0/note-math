@@ -270,6 +270,8 @@ Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨
   The #link(<principal-bundle>)[frame bundle] of $SO(1,3)$ derived from the tangent bundle metric and the #link(<principal-bundle-connection>)[connection] of the $SO(1,3)$ frame bundle derived from #link(<metric-connection>)[] behave as $Γ$ is locally type $(ℝ^(1,3))^⊺ ⊗ so(1,3)$, acting on $ℝ^(1,3)$ tangent vector fields by $∂ + Γ$
 
   The way to derive the spin-connection is to #link(<square-root-of-Lorentz-Lie-algebra>)[map the $so(1,3)$ part of the induced metric-connection $Γ$ to $sl(2,ℂ)$] in the orthonormal-frame, yielding the connection of the $SL(2,ℂ)$ bundle, locally type $(ℝ^(1,3))^⊺ ⊗ ℂ^2$, acting on the spinor field $ℂ^2$ by $∂ + ω$ with $ω = ω^(μ ν) 1/4 [σ_(μ),σ_(ν)]_(⬨)$
+
+  Although the definition of the Pauli matrix $σ$ for spin representation requires $g$, both $g$ and Lie algebra can be expressed by the "square" of $σ$ thereafter.
 ]
 spin-connection also denoted by $∇$
 

@@ -83,6 +83,8 @@ compare to the result from separable ODE in 1 dimension
     similar for the case of hyperbolic
 
     The characteristic polynomial equation of harmonic-oscillator is $ξ^2 ± ω^2 = 0$ or $ξ^2 = ± ω^2$. We are interested in the trigonometric case $ξ^2 + ω^2 = 0$ or $ξ = ω #i ω$, its prototype is $ξ^2 = ± 1$ or $ξ^2 = ± i$
+
+    In the case where the harmonic oscillator $x$ is a real value, for the complex exponential form, in order to remain in $ℝ$, when $x_0,v_0 in ℝ$, the coefficients in front of $e^(± #i ω t)$ are complex conjugates of each other $x_0 ± (v_0)/(#i ω)$
   ]
 ]
 - $ℝ -> ℝ$, $v(x) = x^2$

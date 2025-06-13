@@ -1,13 +1,15 @@
 #import "../module/module.typ": *
 #show: module
 
+虽然流形上的积分是考虑不限制于特殊的 metric, 但是微分流形仍然没被选择出来 
+
+纤维丛的情况也类似, 值域及其对称性选择在一般情况下似乎都不确定
+
 *Example*
 
 homogeneous space
 
 frame bundle
-
-虽然流形上的积分是考虑不限制于特殊的 metric, 但是对于纤维丛的情况, 连值域及其对称性的选择都不确定了, 所以即使一开始就微分同胚系纤维丛, 也还是不够一般
 
 principal bundle connection
 

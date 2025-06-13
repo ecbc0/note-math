@@ -8,9 +8,9 @@ Natural number $ℕ$ addition
   - Associative law: $(a + b) + c = a + (b + c)$
   - Commutative law: $a + b = b + a$
 ]
-_Proof_ The intuition in the real world is that, for counting $+1$, no matter how the counting task is manually divided into several subtasks, it will not affect the result, and the total number of decomposition methods is limited. The associative and commutative laws of addition are just special cases
+_Proof_ The intuition in the real world is that for counting $+1$, no matter how the counting task is manually divided into several subtasks, the result will not be affected, and the total decomposition methods are limited. The associative and commutative laws of addition are just special cases. Just as we recognize natural numbers by counting, we can always recognize the commutative and associative laws by counting. Everything reduces to the case of complete additive decomposition, with only the commutative and associative laws of a large number of $1$s.
 
-It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what we do in #link(<natural-number>)[], in order for computers to use limited characters and memory to express this property that is valid for all natural numbers, it is necessary to define it as true proposition
+It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #link(<natural-number>)[natural numbers], in order for computers to express this property, which holds for all natural numbers, using finite characters, memory, and finite time (and potentially infinite time), it needs to be defined as a true proposition.
 
 The usual "proof" is to use the smallest assumption, the associative law of $1$, $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then deduce other
 

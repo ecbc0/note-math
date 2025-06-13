@@ -4,6 +4,7 @@
 - logic-topic
 #indent[
   - logic
+  
     Introducing simple computer programming as prerequisite knowledge for set theory
 ]
 - calculus
@@ -98,20 +99,20 @@
   #indent[
     - Define the Levi-Civita connection using the geodesics of the metric, and define the Levi-Civita derivative using the derivatives of geodesic coordinates, instead of using abstract algebraic assumptions or abstract bundle theory. Although in applications, expressions in general coordinates still need to be calculated, not just geodesic coordinates.
 
-    - Simplify calculations
+    - simplify some of calculations
   ]
   ]
   - curvature-of-metric
   #indent[
     - The motivation for defining curvature is to find flat metric coordinates. If flat metric coordinates do not exist, then use Einstein-metric as the minimum scalar curvature.
 
-    - Prove the symmetry of curvature in geodesic coordinates and simplify calculations.
+    - Prove the symmetry of curvature in geodesic coordinates and simplify some of calculations.
 
     - Use the curvature product $g #cvt-prod$ and its conjugate $(g #cvt-prod)^†$ to handle algebraic curvature, the orthogonal subspace decomposition of curvature, and define (trace-free) Ric curvature, scalar curvature, and conformal curvature.
   ]
   - Einstein-metric
   #indent[
-    - Simplify calculations
+    - simplify some of calculations
 
     - The variational non-relativistic limit of the Schwarzschild-metric action approximates the variational action of Newton's gravity.
   ]
@@ -121,7 +122,7 @@
   ]
 - field-theory
   #indent[
-  - Simplify calculations
+  - simplify some of calculations
 
   - scalar-field
   #indent[

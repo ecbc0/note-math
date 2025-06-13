@@ -95,6 +95,8 @@ The following discusses math-object-construct-rule *alias* set-theory
   - $0 ∈ ℕ$
   - $n ∈ ℕ ==> n + 1 ∈ ℕ$
   Equivalent to telling the computer how to continuously $+1$ with instruction streams? Also related to induction
+
+  The cost of finite characters is potentially infinite time, always relying on counting or periodic circuits.
 ]
 #tag("empty") $∅$ 
 #indent[
@@ -360,6 +362,8 @@ Other usages of $=$
   $Set 0 ∈ Set 1$
 
   Using object construction rules again, what we get is also defined as belonging to $Set 1$ 
+
+  Anyway, we can always construct such a language with types and bool and various rules in the compiler. Although there are compilers for compilers, the number of compiler layers can also be infinite ...
   
   let $Set 1$ be math object, $Set 1 ∈ Set 2$. And so on ...
 
@@ -379,11 +383,13 @@ Other usages of $=$
 
   $Set 0, Set 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Set ℕ$ again? Then for $Set ℕ$, continue to use the object construct rule ... 
 ]
-Will the above set construction rules lead to contradictions or computer dead loops?
+Will the above construction rules lead to contradictions or computer deadlocks?
+
+If we keep constructing infinitely, does this language have an end?
 
 #tag("universal-set") 
 #indent[
-  Does there exist a "set of every set", a "universal set"? 
+  Does there exist a "set of every set", a "universal set", a "universal-type"? 
   
   Defined using set theory rules
 
@@ -391,7 +397,7 @@ Will the above set construction rules lead to contradictions or computer dead lo
 
   Then let the compiler calculate the bool of the proposition $A in A$. Since $A in "universal-set"$ = `true`, the compiler only calculates the bool of $not (A in A)$, and then discovers the `not` function, so it calculates the bool inside `not`, but this returns to calculating the bool of $A in A$. The compiler may choose to enter a circuit dead loop.
 
-  For a finite set $x ∉ x$ or it's impossible to judge, e.g. ${1} ∉ {1}$, because $1 ≠ {1}$ or $x in 1$ is true proposition is not defined
+  For finite sets, $x ∉ x$ or cannot be judged, e.g. ${1} ∉ {1}$, because $1 ≠ {1}$, or there is no definition that $x in 1$ is a true proposition.
 
   Related to self-referential paradox. *Example* "This sentence is wrong" gives a computer dead loop
 
@@ -406,9 +412,15 @@ Will the above set construction rules lead to contradictions or computer dead lo
   };
   ```
   Or use layering to bypass the self-referential paradox
-  `(this_sentence = false) = true`
+  `(this_sentence = false) = true`. We consider them to be different sentences and judgments, believing that it cannot be self-referential.
 ]
-Define a type, called `math_object_type`, which is used by the rules and compilation of this language. It is not a math object itself, i.e. it does not belong to `math_object_type` itself, cannot be used as a math object for math object construt rule, or cannot be constructed in a non-finite way
+If we can count a number, we consider it a natural number.
+
+If language rules can be written and language objects constructed in a finite number of steps, we consider it constructible and expressible. For set theory, what can be constructed in such a finite number of steps is called a math object.
+
+Regarding the problem of infinite natural numbers, if natural numbers are defined by counting or induction or periodic circuits, then the problem of infinity is pushed to infinite time.
+
+For set theory language, assume that universal-set or universal-type leads to the construction of something that causes the circuit to enter an infinite loop. 
  
 #tag("dependent-distributive") 
 #indent[

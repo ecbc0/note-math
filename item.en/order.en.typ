@@ -3,6 +3,8 @@
 
 Binary relation := Propositional function $p : A × B -> {0,1}$ or a subset of $A × B$
 
+The intuition is that the closer the subset is to $A × B$ or $∅$, the weaker the relation.
+
 $n$-ary relation is similar
 
 #tag("order")

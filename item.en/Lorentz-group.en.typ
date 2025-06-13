@@ -154,9 +154,11 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
 
   $SL(2,ℂ)$ is #link(<action-surjective>)[surjective action], orbit number $1$, so calculate isotropy #link(<isotropy-in-same-orbit-is-isom>)[only need to consider] one point
 
-  Use the point on the light cone projection $p = (1,1,0,0) <-> #p = mat(2;,space) ∈ ℝ^(1,3)$, calculate isotropy $A #p A^† = #p$, where $A #p A^† = mat(2 a a^*,2 a c^*; 2 a^* c, 2 c c^*)$
+  - $c = 0, |a|^2 = 1$ is light cone isotropy
+  - $c = 0, |a|^2 in ℝ$ is a scaling of $vec(1,1,0,0)$
+  - $SU(2)$ is a spatial rotation of $vec(1,0,0) in ℝ^3$. It can give the entire light cone cross-section $𝕊^2$
   
-  ==> $A = mat(e^θ, b;, e^(- θ))$ where $θ ∈ Im(ℂ)$
+  ==> isotropy $A = mat(e^θ, b;, e^(- θ))$ where $θ ∈ Im(ℂ)$
 
   Similar to the calculation of #link(<isotropy-on-projective-lightcone>)[] , here it will be similar to $#U (1) ⋊ ℂ$
 ]
@@ -186,7 +188,7 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
 
     - $r_3$ is rotation in $p_1,p_2$
     - $b_2$ is boost in $p_0,p_2$
-    - $b_2 - r_3$ and $b_3 - r_2$ are analogous to lightcone coordinate $p_0 ± p_1$, keeping $(1,1,0,0)$
+    - $b_2 - r_3$ and $b_3 - r_2$ are analogous to lightcone coordinate $p_0 ± p_1$, keeping $vec(1,1,0,0)$
 
     Or written as
     $
@@ -194,9 +196,9 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
       M_+ \
       M_-
     $
-    where $b_1, M_+$ will change $(1,1,0,0)$, $r_1,M_-$ remains fixed
+    where $b_1, M_+$ will change $vec(1,1,0,0)$, $r_1,M_-$ remains fixed
     
-    Two-dimensional Lie algebra $M_-$ is commutative, corresponding to $#U (1) ⋊ ℂ$ 中的 $b ∈ ℂ$ or $mat(1,b;,1)$
+    Two-dimensional Lie algebra $M_-$ is commutative, corresponding to $b ∈ ℂ$ or $mat(1,b;,1)$ in $#U (1) ⋊ ℂ$
   ]
   On the light cone (figure)
   - Generally $b$ generates a hyperbolic orbit 

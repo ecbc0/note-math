@@ -270,6 +270,8 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
   在切丛 metric 导出的 $SO(1,3)$ #link(<principal-bundle>)[frame bundle] 和 #link(<metric-connection>)[] 导出的 $SO(1,3)$ frame bundle 的 #link(<principal-bundle-connection>)[connection] 表现为 $Γ$ is locally type $(ℝ^(1,3))^⊺ ⊗ so(1,3)$, 作用于 $ℝ^(1,3)$ 切向量场 by $∂ + Γ$
 
   导出到 spin-connection 的方式是, 在 orthonormal-frame 将 induced metric-connection $Γ$ 的 #link(<square-root-of-Lorentz-Lie-algebra>)[$so(1,3)$ 部分对应到 $sl(2,ℂ)$] , 得到 $SL(2,ℂ)$ 丛的 connection, locally type $(ℝ^(1,3))^⊺ ⊗ ℂ^2$, 作用于 spinor field $ℂ^2$ by $∂ + ω$ with $ω = ω^(μ ν) 1/4 [σ_(μ),σ_(ν)]_(⬨)$
+
+  虽然自旋表示的 Pauli matrix $σ$ 的定义需要 $g$, 但是这之后 $g$ 和 Lie algebra 都可以 $σ$ 的 "平方" 来表示
 ]
 spin-connection also denoted by $∇$
 

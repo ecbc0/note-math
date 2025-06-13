@@ -4,6 +4,7 @@
 - logic-topic
 #indent[
   - logic
+  
     介绍简单的计算机编程, 作为集合论的前置知识
 ]
 - calculus
@@ -98,20 +99,20 @@
   #indent[
     - 用 metric 的测地线来定义 Levi-Civita 联络, 用测地线坐标的导数来定义 Levi-Civita 导数, 而不是用抽象的代数假设或者抽象丛理论. 虽然在应用中还是需要计算一般坐标下的表达式, 并不是只用测地线坐标
 
-    - 简化计算
+    - 一些简化计算
   ]
   ]
   - curvature-of-metric
   #indent[
     - 将曲率的定义的动机作为寻找 flat metric 坐标. 不存在 flate metric 坐标时, 则使用 Einstein-metric 作为最小纯量曲率
 
-    - 在测地线坐标中证明曲率的对称性, 并简化计算
+    - 在测地线坐标中证明曲率的对称性, 并进行一些简化计算
 
     - 使用曲率积 $g #cvt-prod$ 及其共轭 $(g #cvt-prod)^†$, 处理代数曲率, 曲率的正交子张量空间分解, 并定义 (trace-free) Ric 曲率和纯量曲率和共形曲率
   ]
   - Einstein-metric
   #indent[
-    - 简化计算
+    - 一些简化计算
 
     - Schwarzschild-metric 的作用量的变分非相对论极限近似到 Newton 引力的作用量的变分
   ]
@@ -121,7 +122,7 @@
   ]
 - field-theory
   #indent[
-  - 简化计算
+  - 一些简化计算
 
   - scalar-field
   #indent[

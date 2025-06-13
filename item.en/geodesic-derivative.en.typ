@@ -94,5 +94,5 @@ _Proof_
   
   But are there more specific and operational calculation results? Regarding calculating orthonormal frames using parallel transport in geodesic coordinates 
   
-  A canonical orthonormal frame may be used for simplified calculations of spinors on curved manifolds, e.g. Pauli-matrix $σ^(0,1,2,3)$
+  A canonical orthonormal frame may be used for simplified some of calculations of spinors on curved manifolds, e.g. Pauli-matrix $σ^(0,1,2,3)$
 ]

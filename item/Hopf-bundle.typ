@@ -1,6 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
+Euclidean 射影空间的 quotient $± x$ 初看起来很 trivial, 但是一旦推广到复数四元数, 就出现看起来不 trivial 的 Hopf bundle, 一种纤维丛. 实数的情况是 $#U (1,ℝ) = #O (1) = ℤ_2$ 丛. 四元数 Hopf bundle 的情况还可能和 exotic $𝕊^7$ 的构造有关
+
 $𝕊^3,𝕊^2,𝕊^1$ or 复数 $ℂ$ 版本的 Hopf-bundle 
 
 #tag("Hopf-bundle")

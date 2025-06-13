@@ -154,9 +154,13 @@ _Proof_ 使用 #link(<spacetime-momentum-aciton-spinor-representation>)[spinor �
 
   $SL(2,ℂ)$ 是 #link(<action-surjective>)[满射作用], orbit 数 $1$, 所以计算 isotropy #link(<isotropy-in-same-orbit-is-isom>)[只需要考虑] 一点
 
-  使用光锥射影上的点 $p = (1,1,0,0) <-> #p = mat(2;,space) ∈ ℝ^(1,3)$, 计算 isotropy $A #p A^† = #p$, where $A #p A^† = mat(2 a a^*,2 a c^*; 2 a^* c, 2 c c^*)$
+  使用光锥射影上的点 $p = vec(1,1,0,0) <-> #p = mat(2;,space) ∈ ℝ^(1,3)$, 计算 isotropy $A #p A^† = #p$, where $A #p A^† = mat(2 a a^*,2 a c^*; 2 a^* c, 2 c c^*)$
   
-  ==> $A = mat(e^θ, b;, e^(- θ))$ where $θ ∈ Im(ℂ)$
+  - $c = 0, |a|^2 = 1$ 是光锥 isotropy
+  - $c = 0, |a|^2 in ℝ$ 是对 $vec(1,1,0,0)$ 的伸缩
+  - $SU(2)$ 是对 $vec(1,0,0) in ℝ^3$ 的空间旋转. 能给出整个光锥截面 $𝕊^2$
+  
+  ==> isotropy $A = mat(e^θ, b;, e^(- θ))$ where $θ ∈ Im(ℂ)$
 
   类似于 #link(<isotropy-on-projective-lightcone>)[] 的计算, 此处将类似于 $#U (1) ⋊ ℂ$
 ]
@@ -186,7 +190,7 @@ _Proof_ 使用 #link(<spacetime-momentum-aciton-spinor-representation>)[spinor �
 
     - $r_3$ is rotation in $p_1,p_2$
     - $b_2$ is boost in $p_0,p_2$
-    - $b_2 - r_3$ and $b_3 - r_2$ 是 lightcone coordinate $p_0 ± p_1$ 类似物, 保持 $(1,1,0,0)$
+    - $b_2 - r_3$ and $b_3 - r_2$ 是 lightcone coordinate $p_0 ± p_1$ 类似物, 保持 $vec(1,1,0,0)$
 
     或者写为
     $
@@ -194,7 +198,7 @@ _Proof_ 使用 #link(<spacetime-momentum-aciton-spinor-representation>)[spinor �
       M_+ \
       M_-
     $
-    where $b_1, M_+$ 将会改变 $(1,1,0,0)$, $r_1,M_-$ 则固定
+    where $b_1, M_+$ 将会改变 $vec(1,1,0,0)$, $r_1,M_-$ 则固定
     
     二维 Lie algebra $M_-$ is commutative, 对应 $#U (1) ⋊ ℂ$ 中的 $b ∈ ℂ$ or $mat(1,b;,1)$
   ]

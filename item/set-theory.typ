@@ -95,6 +95,8 @@ from 命题 to 未知命题的, 其真值部分被修改为 (bool, unknow) sum s
   - $0 ∈ ℕ$
   - $n ∈ ℕ ==> n + 1 ∈ ℕ$
   等价于用指令流告诉计算机如何连续地 $+1$? 也联系到归纳法
+
+  有限的字符的代价是潜在无限的时间, 总是借助了数数或者周期电路
 ]
 #tag("empty") $∅$ 
 #indent[
@@ -360,6 +362,8 @@ $=$ 的其它用法
   $Set 0 ∈ Set 1$
 
   再次使用 object construction rules, 得到的东西也定义为属于 $Set 1$ 
+
+  无论如何我们总是可以在编译器中构造这种带有类型和 bool 和各种规则的语言. 虽然还有编译器的编译器, 编译器的层数也可以是无限的 ...
   
   let $Set 1$ be math object, $Set 1 ∈ Set 2$. 诸如此类 ...
 
@@ -379,11 +383,13 @@ $=$ 的其它用法
 
   $Set 0, Set 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Set ℕ$ 吗? 然后对 $Set ℕ$, 继续使用 object construct rule ... 
 ]
-上面的集合构造规则会导致矛盾或者计算机死循环吗?
+上面的构造规则会导致矛盾或者计算机死循环吗?
+
+一直无限地构造下去, 这种语言是否有终点?
 
 #tag("universal-set") 
 #indent[
-  是否存在 "set of every set", a "universal set"? 
+  是否存在 "set of every set", a "universal set"? or "universal type"?
   
   使用 set theory rules 定义
 
@@ -391,7 +397,7 @@ $=$ 的其它用法
 
   然后让编译器去计算命题 $A in A$ 的 bool, 由于 $A in "universal-set"$ = `true`, 编译器只计算 $not (A in A)$ 的 bool, 然后发现 `not` 函数, 所以计算 `not` 里面的 bool, 但这又回到了计算 $A in A$ 的 bool, 编译器可能选择进入电路死循环
 
-  对于有限集 $x ∉ x$ 或者无法判断 e.g. ${1} ∉ {1}$, 因为 $1 ≠ {1}$ 或者没有定义 $x in 1$ is true proposition
+  对于有限集, $x ∉ x$ 或者无法判断, e.g. ${1} ∉ {1}$, 因为 $1 ≠ {1}$, 或者没有定义 $x in 1$ is true proposition
 
   相关于自指悖论. *Example* "这个句子是错的" 给出计算机死循环
 
@@ -406,9 +412,15 @@ $=$ 的其它用法
   };
   ```
   或者用分层绕过自指悖论
-  `(this_sentence = false) = true`
+  `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
 ]
-定义一个 type, 称为 `math_object_type`, 由这个语言的规则和编译所用. 它本身不是 math object, i.e. 本身不属于 `math_object_type`, 不能作为 math object 用于 math object construt rule, 或者不能用非有限构造方式
+如果对于一个数我们能数出来, 我们就认为它是自然数
+
+如果能用有限步写出语言规则并构造出语言对象, 我们就认为是可构造的, 可说的. 对于集合论, 能够这样有限步构造出来的, 就称其为 math object (数学对象)
+
+对于自然数的无限的问题, 如果用数数或者归纳法或者周期电路来定义自然数, 的则把无限的问题推给了无限时间
+
+对于集合论语言, 假设 universal-set or universal-type 导致能构造出让电路进入死循环
  
 #tag("dependent-distributive") 
 #indent[
