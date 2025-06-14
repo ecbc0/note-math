@@ -263,4 +263,6 @@ Non-relativistic potential $(V,A) ∈ ℝ × ℝ^3$
 - Rigid body
 #indent[
   Parameterized by $SO(3)$ (or $SO(2)$), so it can be regarded as a non-relativistic particle on the Euclidean manifold $SO(3)$. But the use of metric or the use of kinetic energy is not the #link(<Killing-form>)[] of $so(3)$, because for objects that are not uniformly mass-distributed spheres, rotations in different directions have different inertias. Moment of inertia i.e. metric $g$ may need to be calculated additionally
+
+  The moment of inertia can also be used as a symmetric operator under the Killing-form, with the characteristic basis being the principal axes of inertia and the eigenvalues being the moments of inertia.
 ]

@@ -15,8 +15,4 @@ electromagnetic-field
 Laplacian-of-tensor-field
 Einstein-metric
 interaction
-// harmonic-oscillator-quantization-real //
-// harmonic-oscillator-quantization-complex //
-// harmonic-oscillator-quantization-spinor //
-// harmonic-oscillator-quantization-field //
-// hydrogen-atom-electron-quantization //
+quantization

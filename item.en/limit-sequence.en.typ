@@ -104,7 +104,7 @@ _Proof_
 
   Use differential method to calculate the extreme value. Consider the function
 
-  $ (a_1 + ⋯ + a_n)^n - n a_1 ⋯ a_n $
+  $ (a_1) + ⋯ + (a_n)^n - n a_1 ⋯ a_n $
 
   First derivative
 

@@ -5,7 +5,7 @@ Approximation of Relativistic Scalar Field Action to Non-Relativistic Scalar Fie
 
 Using a massive field, extracting the rest energy phase $exp(- m c^2 1/ℏ t #i)$, using time $x_0 = c t$ and the speed of light limit $lim_(c -> ∞)$ 
 
-(Rest energy phase extraction is not a gauge transformation. Can be generalized to $ℍ,𝕆$. Replace $#i$ with any $Im(𝕂)$ identity element) 
+(Static energy phase extraction is not a gauge transformation. Can it be generalized to $ℍ,𝕆$? Replace $#i$ with any $Im(𝕂)$ unit element. $ℝ$ doesn't work? Or is $ℝ$ used for hyperbolic system mass instead of elliptic system mass, and the equation $x^2 = -1$ cannot be solved in one-dimensional $ℝ$) 
 
 for #link(<Klein--Gordon-Lagrangian>)[], restore Planck constant $h$, speed of light $c$, time $x_0 = c t$
 $
@@ -21,7 +21,7 @@ let $θ = m c^2 1/ℏ #i$
 
 use $∂_t ϕ = θ e^(θ t) ψ + e^(θ t) ∂_t ψ$
 $
-  ∂_t ϕ^* ∂_t ϕ &= - (m^2 c^4)/(ℏ^2) ψ^* ψ \
+  ∂_t ϕ^* ∂_t ϕ &= - (m^2 c^4)/(ℏ^2) ψ^* ψ & "use" #i^2 = -1  \
   &quad + (m c^2)/(ℏ) #i (ψ^* ∂_t ψ - ψ ∂_t ψ^*) \
   &quad + ∂_t ψ^* ∂_t ψ
 $

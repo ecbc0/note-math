@@ -263,4 +263,6 @@ let $t ⇝ x(t)$ 是作用量方程的解
 - 刚体
 #indent[
   由 $SO(3)$ (or $SO(2)$) 参数化, 所以可以认为是 Euclidean 型流形 $SO(3)$ 上的非相对论粒子. 但 metric 的使用 or 动能的使用不是 $so(3)$ 的 #link(<Killing-form>)[], 因为 of $so(3)$, 因为对于不是均匀质量分布的球的物体, 在不同方向的旋转有不同的惯性. 转动惯量 moment of inertia i.e. metric $g$ 可能需要额外计算
+  
+  也可以将转动惯量作为 Killing-form 下的对称算子, 特征基成是惯量主轴, 特征值是惯量矩
 ]

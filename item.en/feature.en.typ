@@ -126,7 +126,7 @@
 
   - scalar-field
   #indent[
-    - Imitate the harmonic oscillator of ODE, and define the solution of the Klein-Gordon equation and its plane wave form by using $exp$. The characteristic polynomial quadratic equation of ODE corresponds to the quadratic form equation of the metric of $ℝ^(1,3)$. Prepare for possible eigenvalue quantization later.
+    - Imitate the harmonic oscillator of ODE, and define the solution of the Klein-Gordon equation and its plane wave form by using $exp$. The characteristic polynomial quadratic equation of ODE corresponds to the quadratic form equation of the metric of $ℝ^(1,3)$.
 
     - The $L^2$ integral of the measure of the hyperbolic space where the momentum of the plane wave is located is used as the unitary representation of the Poincare group $SO(1,3) ⋊ ℝ^(1,3)$.
   ]

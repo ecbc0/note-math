@@ -67,7 +67,7 @@ When not exist flat connection coordinate, choose $L^2$ minimal curvature, $L^2$
   $
   Where $ϕ = A."time", #A = A."space"$
 
-  May be related to the behavior of Hodge star in spacetime decomposition coordinates in space $ℝ^3 subset ℝ^(1,3)$
+  Note that $curl, div$ and $ℝ^3$ exterior derivative are related to $ℝ^3$ Hodge star. $#d^†$ can also be related to Hodge star. It may be related to the behavior of Hodge star in the spatial $ℝ^3 subset ℝ^(1,3)$ coordinates of spacetime decomposition.
 
   $⋆(#d x^i ∧ #d x^j) = ± #d t ∧ #d x^k$
 

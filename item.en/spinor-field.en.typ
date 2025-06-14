@@ -231,6 +231,59 @@ The latter is a linear equation, so the solution is not difficult. The solution 
 
 Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨) ⇝ mat(,#p ; #p^⬨)$ does not come from $GL(4,ℂ)$ coordinate change $T^(-1) ⋅ M ⋅ T$
 
+#tag("square-root-of-harmonic-oscillator")
+#indent[
+  Inspired by the treatment of KG field quantization
+  $
+    (∂_0^2 - ∂_x^2 + m^2) e^((p_0(p) x_0 - p x) (± #i)) &= 0 \
+    (∂_0^2 + p^2 + m^2) e^((p_0(p) x_0 - p x) (± #i)) &= 0
+  $
+  We can also define a square root of a point particle complex harmonic oscillator.
+
+  Dirac plane wave $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^⬨) - m mat(,-𝟙;𝟙)) vec(u,v) = 0$
+
+  $
+    (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0 \
+
+    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x)
+  $
+  Lagrangian $L(vec(ϕ,ψ), ∂_0 vec(ϕ,ψ)) = vec(ϕ,ψ)^† mat(#i ∂_0 + #p, -m 𝟙 ; -m 𝟙 ,#i ∂_0 - #p) vec(ϕ,ψ)$
+
+  The conditions satisfied by the $- #i$ plane wave $vec(u,v) e^(#i p x)$ are
+  $
+    (mat( - #p ;,#p) + m mat(,𝟙;𝟙)) vec(u,v) = 0
+  $
+  Write the equation of the harmonic oscillator square root as a constant coefficient ODE
+  $
+    ∂_0 vec(ϕ,ψ)  = -#i mat(
+      -#p , m 𝟙 ;
+      m 𝟙 , #p
+    ) vec(ϕ,ψ)
+  $
+  Perform $exp$ transformation. Use $mat(
+    -#p , m 𝟙 ;
+    m 𝟙 , #p
+  )^2 = (p^2 + m^2) mat(𝟙;,𝟙) = E^2 mat(𝟙;,𝟙)$
+  The series rule is
+  $
+    2n &-> ((-#i E t)^(2n))/((2n)!) mat(𝟙;,𝟙) \
+    &-> cos (E t) * \
+
+    2n+1 &-> ((-#i E t)^(2n+1))/((2n+1)!) 1/E mat(
+      -#p , m 𝟙 ;
+      m 𝟙 , #p
+    ) \
+    &-> - #i sin(E t) *
+  $
+  The result is
+  $
+    dmat(
+      augment: #(hline: 1, vline: 1, stroke: rgb("#676767")),
+      cos(E t) 𝟙 + #i sin(E t) #p/E , - #i sin(E t) m/E 𝟙 ;
+      - #i sin(E t) m/E 𝟙 , cos(E t) 𝟙 - #i sin(E t) #p/E
+    )
+  $
+]
 #tag("motivation-of-gauge-field") 
 #indent[
   Ignored some issues

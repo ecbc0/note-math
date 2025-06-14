@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-separable ODE in 1 dimension 
+一维可分离变量 ODE
 $ 
   (#d x)/(#d t) = f(t) g(x) 
   &--> 1/g(x) #d x = f(t) #d t \

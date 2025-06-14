@@ -126,7 +126,7 @@
 
   - scalar-field
   #indent[
-    - 模仿 ODE 的谐振子, 用 $exp$ 化来定义 Klein--Gordan 方程的解及其平面波形式. ODE 的特征多项式二次方程对应到 $ℝ^(1,3)$ 的 metric 的二次型方程. 为后面可能的特征值量子化做准备
+    - 模仿 ODE 的谐振子, 用 $exp$ 化来定义 Klein--Gordan 方程的解及其平面波形式. ODE 的特征多项式二次方程对应到 $ℝ^(1,3)$ 的 metric 的二次型方程
 
     - 平面波根据动量所在双曲面空间的测度的 $L^2$ 积分作为 Poincare 群 $SO(1,3) ⋊ ℝ^(1,3)$ 的 unitary representation
   ]

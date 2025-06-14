@@ -25,7 +25,7 @@ $SO(2)$ 的元素的乘法等价于 $ℂ$ 的长度 $1$ 元素的乘法. recall 
   
   后者应该是 $𝕊$ 的 #link(<Killing-field>)[] 的 $exp : ℝ -> "Isom" 𝕊$ 作为单参数同态到 $𝕊$ 的 isometry
 
-  用 #link(<geodesic>)[测地线] 计算 $exp$. 用例如 #link(<stereographic-projection>)[球极投影坐标] 计算测地线. 对于 $vec(1,0)$ 为起点的测地线, 结果记为 #tag(<trigonometric-function>) 三角函数 $vec(cos(t),sin(t))$. 用 #link(<inverse-analytic>)[反函数定理] 可以计算 $vec(cos(t),sin(t))$ 的在 $t = 0$ 的幂级数展开
+  用 #link(<geodesic>)[测地线] 计算 $exp$. 用例如 #link(<stereographic-projection>)[球极投影坐标] 计算测地线. 对于 $vec(1,0)$ 为起点的测地线, 结果记为 #tag("trigonometric-function") 三角函数 $vec(cos(t),sin(t))$. 用 #link(<inverse-analytic>)[反函数定理] 可以计算 $vec(cos(t),sin(t))$ 的在 $t = 0$ 的幂级数展开
   $
     cos(t) &= sum frac((-1)^n,(2n)!) t^(2n) \
     sin(t) &= sum frac((-1)^n,(2n+1)!) t^(2n+1)
