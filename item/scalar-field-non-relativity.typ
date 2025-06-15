@@ -5,8 +5,6 @@
 
 使用有质量场, 使用静能量相位提取 $exp(- m c^2 1/ℏ t #i)$, 使用时间 $x_0 = c t$ 和光速极限 $lim_(c -> ∞)$ 
 
-(静能量相位提取不是规范变换. 可推广到 $ℍ,𝕆$? $#i$ 换成任何 $Im(𝕂)$ 单位元. $ℝ$ 不行? 或者 $ℝ$ 是用于双曲系质量而不是椭圆系质量, 一维 $ℝ$ 中无法解方程 $x^2 = -1$) 
-
 for #link(<Klein--Gordon-Lagrangian>)[], 恢复 Planck 常数 $h$, 光速 $c$, 时间 $x_0 = c t$
 $
   integral_(ℝ) #d c t integral_(ℝ^3) #d x 1/2 ( 
@@ -56,11 +54,30 @@ $
 
 $(∂_x + #i/ℏ A)^† (∂_x + #i/h A) ψ = (∆ + #i/h div A + (2 #i)/ℏ A ⋅ ∂_x - 1/ℏ^2 |A|^2) ψ$
 
-*Example* 
-- $V = k r^2$ 谐振子 (一个或多个)
-- $V = k 1/r$ 氢原子模型 (单粒子, 静态, 零自旋)
+#tag("Schrodinger-eq-potential-example") *Example* 
+- $V = k r^2$ 
+
+  谐振子 (一个或多个) 代表 $ℝ^n$ 或球区域内常值电荷密度的电势. $div grad r^2 = "const"$. 异电荷对应椭圆型, 同电荷对应双曲型
+
+- $V = k 1/r$
+
+  $ℝ^3$ 氢原子模型 (单粒子, 静态, 零自旋) 代表由点电荷或球对称电荷球生成的球对称的电势
+  
+  用对称性 + Gauss 定理
+  
+  或者用微分方程, 球对称 $f(x) = f(|x|) = f(r)$ + 电荷集中在一点或球区域, 则在外部 $∆ f(r) = 0$ ==> $2 1/r (#d f)/(#d r) + (#d^2 f)/(#d r^2) = 0$ ==> $f(r) = k 1/r$
+
+  *_Warning_* Schrodinger 方程在氢原子之外的原子分子暂无解析解. 我也不了解现有的多粒子模型及其数值计算的效果如何
+
 - $V = $ 箱/球 势 井/壁 (box/ball potential well/barrier)
+
 - 常值电场或常值磁场
+
+关于非相对论近似极限
+
+- 静能量相位提取 $exp(- m c^2 1/ℏ t #i)$ 不是规范变换
+- $ℂ$ 可推广到 $ℍ,𝕆$? $#i$ 换成任何 $Im(𝕂)$ 单位元. $ℝ$ 不行? 或者 $ℝ$ 是用于双曲系质量 KG 而不是椭圆系质量 KG, 一维 $ℝ$ 中无法解方程 $x^2 = -1$)
+- 这种非相对论近似极限的方式是坐标依赖的. 在弯曲流形上, 由于可能需要多个坐标覆盖整个流形, 非相对论近似极限的的定义问题会更困难 
 
 对称性与守恒流
 
@@ -131,4 +148,39 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
 这个量应该是 "粒子数密度" or "概率密度" or "电荷密度"?
 
-*_Warning_* 现在没人能用 Schrodinger 方程解出氢原子之外的原子. 应该用什么形式的多粒子相互作用模型, 也不是明显的事情. 无可重复证据 or 下游应用
+#tag("motivation-of-quantization")
+#indent[
+  大部分对量子化的处理都会假设
+
+  - $ℂ$ 场的线性 unitary 演化
+
+  - 可能非自由场, 所以无法用平面波
+
+  如果考虑 KG 场的非相对论近似极限, 则会自动得到这些假设
+
+  然后静态规范场的时间分量作为电势, 谐振子 potential $k r^2$ 和氢原子 potential $k 1/r$ 都来自简单的电荷密度
+
+  于是动机问题变成
+
+  - 为什么用 $ℂ$ KG 场
+
+  - 为什么以及如何对应到点粒子
+
+  - 为什么规范场的 potential 会在场的粒子化时变成粒子的 potential
+
+  经典对应是指, 点粒子 Lagrange-equation 的期望值版本 (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]). 如何让点粒子的 Lagrange-equation 的期望值版本对应到场的 Lagrange-equation?
+
+  Schrodinger eq 是 $ℂ$ KG eq 的非相对论极限, Newton 方程是相对论点粒子的非相对论极限. 所以, 是否可以证明, KG eq 也有点粒子极限. 此时 "期望" 的定义是否要用 $#U (1)$ 的 KG 的电荷量密度 $- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*$ (即使不是正定密度) 
+
+  另一些 Schrodinger 波函数对应到点粒子的迹象
+
+  - 平面波 $e^(- #i E t) e^(#i p x)$ 是 Schrodinger eq 的解 <==> $E = p^2/(2m) + V(x)$. 对于非常值 $V(x)$ 这个等式无法成立, 但是在嵌入的点粒子解 $x(t)$ 中成立, 因为点粒子的能量 $E = 1/2 m vel(x)^2 (t) + V(x(t))$ 随时间不变
+
+  - 路径积分使用点粒子 Lagrangian 权重的路径统计来计算 Schrodinger eq 的 propagator
+]
+#let H = c-Lie-algebra("H")
+#let a = c-Lie-algebra("a")
+#let x = c-Lie-algebra("x")
+#let p = c-Lie-algebra("p")
+
+对于谐振子 $k r^2$ 和氢原子 $k 1/r$, 如果假设波函数的相位是 $e^(- #i E t)$ 的振荡, 振幅是静态的 $ψ(x)$, 则 $e^(- #i E t) ψ(x)$ 满足 Schrodinger or Dirac eq <==> $ψ(x)$ 满足 Hermitian 算子的特征方程 $#H ψ = E ψ$, 并且 $E$ 是离散的, for 椭圆型谐振子和氢原子的束缚态

@@ -4,7 +4,7 @@
 
 主题分类在 `topic` 文件夹, 里面指向 `item` 的文件 (vscode `ctrl + p` 来搜索且打开文件)
 
-[HTML version](https://ecbc0.github.io/)
+[HTML 版本](https://ecbc0.github.io/)
 
 如果你熟悉数学, 可以看 [feature](https://ecbc0.github.io/item/feature.html)
 

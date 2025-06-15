@@ -148,7 +148,7 @@
   $
   and $∆ = #spin-d #spin-d^⬨ = #spin-d^⬨ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
-  整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG
+  整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. 如果一个场满足 Dirac eq, 则它满足 KG eq
 
   作用量 $S$ 的全部偏导数是零 $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, 给出 #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
@@ -240,12 +240,12 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
   $
   我们也可以定义一种点粒子复谐振子的平方根
 
-  Dirac 平面波 $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^⬨) - m mat(,-𝟙;𝟙)) vec(u,v) = 0$
+  Dirac 平面波 $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^⬨) - m mat(,𝟙;𝟙)) vec(u,v) = 0$
 
   $
-    (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0 \
+    (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0 \
 
-    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x)
+    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0
   $
   Lagrangian $L(vec(ϕ,ψ), ∂_0 vec(ϕ,ψ)) = vec(ϕ,ψ)^† mat(#i ∂_0 + #p, -m 𝟙 ; -m 𝟙 ,#i ∂_0 - #p) vec(ϕ,ψ)$
   

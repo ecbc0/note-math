@@ -156,7 +156,7 @@ _Proof_ Definition of curvature $R$ in geodesic coordinates, expressed using $Γ
 ]
 *Def* $f(R_i(1234)) := sum_("cyclic" (123)) R_(i(123) i(4))$
 
-- $f$ maps $T ∈ ⨀^2 (⋀^2 V^⊺)$ to itself and $f^2 = f$, i.e. #link(<linear-projection>)[], so $⨀^2 (⋀^2 V^⊺) = ker f ⊕ im f$
+- $f$ maps $T ∈ ⨀^2 (⋀^2 V^⊺)$ to itself and $f^2 = f$, i.e. #link("https://en.wikipedia.org/wiki/Projection_(linear_algebra)")[wiki:Projection\_(linear_algebra)], so $⨀^2 (⋀^2 V^⊺) = ker f ⊕ im f$
 
 - $ker f = "curvature"$
 

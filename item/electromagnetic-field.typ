@@ -67,9 +67,7 @@ cf. #link(<motivation-of-gauge-field>)[]
   $
   其中 $ϕ = A."time", #A = A."space"$
 
-  注意, $curl, div$ 和 $ℝ^3$ 外微分和 $ℝ^3$ Hodge star 有联系. $#d^†$ 也能和 Hodge star 产生联系. 可能联系到时空分解坐标中, Hodge star 在空间 $ℝ^3 subset ℝ^(1,3)$ 的行为
-
-  $⋆(#d x^i ∧ #d x^j) = ± #d t ∧ #d x^k$
+  注意, $curl, div$ 和 $ℝ^3$ 外微分和 $ℝ^3$ Hodge star 有联系. $#d^† ∼ ⋆ #d ⋆$ 也能和 Hodge star 产生联系. 可能联系到时空分解坐标中, Hodge star 在空间 $ℝ^3 subset ℝ^(1,3)$ 的行为. $⋆(#d x^i ∧ #d x^j) = ± #d t ∧ #d x^k$
 
   注意 Hodge star 需要 metric
 

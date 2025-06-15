@@ -91,7 +91,7 @@ $
   $
     mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)
   $
-  进行 #link(<invariant-of-vector-field>)[$exp$ 化] 或者 #link(<integral-curve>)[积分曲线]
+  进行 #link(<exponential-of-vector-field>)[$exp$ 化] 或者 #link(<integral-curve>)[积分曲线]
 
   三角情况
   $

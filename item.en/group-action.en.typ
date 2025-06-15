@@ -3,7 +3,13 @@
 
 Bijection $f : X <-> X$ forms a group 
 
-When a bijection acts on a certain structure of $X$, there is a structure group that preserves the structure, which is a subgroup of $X! := X <-> X$. *Example* $GL$ preserves #link(<linear>)[linear structure]
+Mapping is associative
+
+Composition of mappings is associative.  You can compose functions from either the pre or post: $f ⇝ g ∘ f$ or $f ⇝ f ∘ g$
+
+When a bijection acts on a certain structure of $X$, there is a structure group that preserves the structure, which is a subgroup of $X <-> X$
+
+*Example* $GL$ preserves #link(<linear>)[linear structure]
 
 let $G$ be a subgroup of $X!$. let $x in X$
 

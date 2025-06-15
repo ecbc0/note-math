@@ -71,7 +71,7 @@
 
     - Discuss the possibility of defining integrals on manifolds using linear approximation of transformation functions, similar to the approximation technique used in the change of variable formula, instead of using partition of unity
 
-    - Discuss the difficulty of defining integrals for low-dimensional regions, if there is no differentiable submanifold structure
+    - Discuss the difficulty of defining integrals for low-dimensional regions by approximation limit, if there is no differentiable submanifold structure
   ]
   - divergence
   #indent[
@@ -130,8 +130,6 @@
 
     - The $L^2$ integral of the measure of the hyperbolic space where the momentum of the plane wave is located is used as the unitary representation of the Poincare group $SO(1,3) ⋊ ℝ^(1,3)$.
   ]
-    
-
   - scalar-field-non-relativity
     #indent[
       - The non-relativistic limit approximation of the action variation of the relativistic scalar-field (Klein-Gordon) to the non-relativistic scalar-field (Schrodinger). 
@@ -147,6 +145,8 @@
     - The possible conceptual meaning of the action and Lagrangian of a spinor field
 
     - Discuss the possible motivation for $#U (1)$ gauge theory as part of the redundancy of elevating complex projective space $ℂℙ^1$ to $ℂ^2$
+
+    - Dirac eq give square root of harmonic oscillator
   ]
   - electromagnetic
   #indent[

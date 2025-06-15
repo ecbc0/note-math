@@ -348,7 +348,7 @@ parity 对应到 trace or determinant reversal
 
   $P ∈ GL ==> P^⬨ = (det P) P^(-1)$
 ]
-#tag("trace-reversal") := $P + P^⬨ = tr(A) ⋅ 𝟙$
+#tag("trace-reversal") := $P + P^⬨ = tr(P) ⋅ 𝟙$. or $P^⬨ = mat(d,-b;-c,a)$. $tr P^⬨ = tr P$
 
 $dim = 2$ ==> determinant reversal 相同于 trace reversal
 

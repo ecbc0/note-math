@@ -102,35 +102,23 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 #image("../image/homology-hole.jpeg", width: 100%)
 
-simplex 散度算子 as 边界算子的对偶 $⟨ ∂ σ , ω ⟩ = ⟨ σ , ∂^† ω ⟩$ for $k$ simplex $σ$ & simplicial $k-1$ form $ω$ on $∂ σ$. (考虑修改边界算子的记号, 免于与微分记号冲突)
-
-#tag("homology-divergence-operator") 在 $k = n$ 时只有一种选择 $∂^† ω = frac(integral_(∂ σ) ω,Vol(σ)) Vol$. recall $n$ form 等价于纯量函数
-
-在 $k < n$ 时可能很难处理
-
-对于微分子流形来说, 则变得不难处理了. 此时散度算子类似物是外微分算子 $#d$. 直觉上是某种 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, where $Vol$ 是流形上的 volume. $σ$ 不限制于 simplex, 而是一大类区域
-
-*Question* 即使流形上如果尚未定义 $Vol$ 或者尚未定义 metric, 这个式子在坐标系里只用 box 的 $Vol$ (包括低一维的边界的 $Vol$) 就能得到结果是, $n$ form $#d ω$ 的定义是坐标无关的. 或者说, 外微分的定义不依赖于 volume form 或者 metric 的选取, 只依赖于流形的微分结构. 反过来, 坐标里的 volume form 也可以延拓到整个流形
-
-#tag("exterior-differential") 
-#indent[
-  在坐标里利用 box 计算 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 全部坐标趋于 $0$, 每个坐标轴方向都变成计算对某些东西的偏微分 $∂_i$ 
-  
-  结果是 $#d ω = #d (ω_(i_1  i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1  i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$
-  
-  进一步简化暂略
-
-  *Question* simplex 中心仿射坐标下, 外微分是形式是什么?
-]
 #tag("Stokes-theorem") 
 #indent[
-  for  #link(<orientable>)[可定向] 的几乎处处解析的带边流形, Stokes 定理 $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  类似于一维 #link(<fundamental-theorem-of-calculus>)[微积分基本定理]
+
+  在坐标里定义 #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 其中 $Vol$ 是坐标的体积, $σ$ 是一大类型区域, 计算结果不依赖于坐标选取 
+
+  则有 Stokes-theorem 
+  
+  for #link(<orientable>)[可定向] 的几乎处处解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  
+  坐标中利用 box 计算 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 全部坐标趋于 $0$, 将会是对每个坐标轴方向计算对某些东西的偏微分 $∂_i$, 结果是 $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, 进一步简化暂略
+
+  *Question* simplex 中心仿射坐标下, 外微分的计算结果的形式是什么?
 ]
-也许初看起来很奇怪, 这是有效的, 先无穷小 $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ 再积分 $integral #d ω := lim sum ⋯$, 但是一维微积分基本定理就是这样的
+但是在一维微积分基本定理的证明中, 一维区间的分割, 一维区间的边界, 一维区间的边界的积分, 都太简单了, 高维区域没那么简单
 
-但是一维区间的分割, 一维区间的边界, 一维区间的边界的积分, 都太简单了, 高维没那么简单
-
-#tag("Stokes-theorem-simple") 对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理
+#tag("Stokes-theorem-simple") 对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 + compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
@@ -190,7 +178,7 @@ metric 流形的情况
 
   用 #link(<metric-dual>)[] $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $(⋆ ω)^♯$ 在通量方向 $(Vol_(n-1))^♯$ 上的正交投影
 ]
-*Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$.
+*Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$ (图)
 
 - $0$ form
 #indent[

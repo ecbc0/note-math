@@ -28,8 +28,8 @@ _Proof_
     $det(X) = det(A) det(A^(-1) X)$ and $∂ det(𝟙) = tr$. 所以
     
     $
-      &∂ det(A^(-1) X)("at" A)("direct" Δ X) \
-      =& ∂ det ("at" 𝟙)("direct" ∂(A^(-1) X) ("at" A)("direct" Δ X)) \
+      &∂ det(A^(-1) X)(A : "base", Δ X : "vector") \
+      =& ∂ det (𝟙 : "base", ∂(A^(-1) X) (A : "base", Δ X : "vector") : "vector") \
       =& tr(A^(-1) Δ X)
     $
   ]

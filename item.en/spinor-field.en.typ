@@ -148,7 +148,7 @@
   $
   and $∆ = #spin-d #spin-d^⬨ = #spin-d^⬨ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
-  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG
+  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. If a field satisfy Dirac eq, then itt satisfy KG eq
 
   All partial derivatives of the action $S$ is zero $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, giving #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
@@ -240,12 +240,12 @@ Since $mat(#p ;,#p^⬨)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^⬨
   $
   We can also define a square root of a point particle complex harmonic oscillator.
 
-  Dirac plane wave $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^⬨) - m mat(,-𝟙;𝟙)) vec(u,v) = 0$
+  Dirac plane wave $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^⬨) - m mat(,𝟙;𝟙)) vec(u,v) = 0$
 
   $
-    (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(ϕ,ψ) = 0 \
+    (mat(#i #spin-d^⬨;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0 \
 
-    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x)
+    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0
   $
   Lagrangian $L(vec(ϕ,ψ), ∂_0 vec(ϕ,ψ)) = vec(ϕ,ψ)^† mat(#i ∂_0 + #p, -m 𝟙 ; -m 𝟙 ,#i ∂_0 - #p) vec(ϕ,ψ)$
 

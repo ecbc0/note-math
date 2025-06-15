@@ -21,6 +21,8 @@ $
 $
 Then the constant value $m c^2$ will vary to zero $0$
 
+这种非相对论近似极限的方式是坐标依赖的. 在弯曲流形上, 由于可能需要多个坐标覆盖整个流形, 非相对论近似极限的的定义问题会更困难
+
 Symmetry and conserved quantities
 
 The symmetry group of $ℝ^(1,3)$ spacetime is the isometry $SO(1,3) ⋊ ℝ^(1,3)$ *alias* Poincare group
@@ -100,4 +102,52 @@ potential $A(x) (vel(x)) = A_0 (x) vel(x)^0 + ⋯ + A_3 (x) vel(x)^3$
 point particle in Lorentz-manifold 
 #indent[
   For the action $integral #d l$ and conserved quantities, metric-connection and δ-isometry are needed
+]
+#let A = c-bf("A","#0056e1")
+#let j = c-bf("j","#0056e1")
+#let v = c-bf("v","#0056e1")
+
+*Example*
+
+$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+
+$
+  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+$
+- *Question* 
+#indent[  
+  隐藏的 $#U (1)$ 规范对称性
+
+  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+
+  尽管 invariant 的是方程而不是作用量
+  
+  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+
+  #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
+]
+#let A = c-bf("A","#0056e1")
+#let j = c-bf("j","#0056e1")
+#let v = c-bf("v","#0056e1")
+
+*Example*
+
+$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+
+$
+  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+$
+- *Question* 
+#indent[  
+  隐藏的 $#U (1)$ 规范对称性
+
+  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+
+  尽管 invariant 的是方程而不是作用量
+  
+  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+
+  #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]

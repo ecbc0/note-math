@@ -3,7 +3,7 @@
 
 Binary relation := Propositional function $p : A × B -> {0,1}$ or a subset of $A × B$
 
-The intuition is that the closer the subset is to $A × B$ or $∅$, the weaker the relation.
+when $A × B$ it's called $A,B$ is independent
 
 $n$-ary relation is similar
 

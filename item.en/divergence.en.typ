@@ -102,35 +102,23 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
 #image("../image/homology-hole.jpeg", width: 100%)
 
-simplex divergence operator as the dual of the boundary operator $⟨ ∂ σ , ω ⟩ = ⟨ σ , ∂^† ω ⟩$ for $k$ simplex $σ$ & simplicial $k-1$ form $ω$ on $∂ σ$. (Consider modifying the notation of the boundary operator to avoid conflict with the differential notation)
-
-#tag("homology-divergence-operator") When $k = n$, there is only one choice $∂^† ω = frac(integral_(∂ σ) ω,Vol(σ)) Vol$. recall $n$ form is equivalent to a scalar function
-
-It may be difficult to deal with when $k < n$
-
-For micro-molecular manifolds, it becomes easier to handle. At this time, the divergence operator analogue is the exterior derivative operator $#d$. Intuitively, it's some kind of $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, where $Vol$ is the volume on the manifold. $σ$ is not limited to simplex, but a large class of regions
-
-*Question* Even if $Vol$ is not yet defined on the manifold or the metric is not yet defined, this formula can obtain the result in the coordinate system using only the $Vol$ of the box (including the $Vol$ of the lower dimension boundary), the definition of $n$ form $#d ω$ is coordinate-independent. In other words, the definition of the exterior derivative does not depend on the selection of volume form or metric, but only on the differential structure of the manifold. Conversely, the volume form in the coordinates can also be extended to the entire manifold
-
-#tag("exterior-differential") 
-#indent[
-  Calculate $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ using box in coordinates, all coordinates tend to $0$, each coordinate axis direction becomes calculating partial derivatives $∂_i$ of certain things 
-  
-  The result is $#d ω = #d (ω_(i_1  i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1  i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$
-  
-  Further simplification is omitted for now
-
-  *Question* Under the simplex center affine coordinates, what is the form of the exterior derivative?
-]
 #tag("Stokes-theorem") 
 #indent[
-  for #link(<orientable>)[] almost everywhere analytic manifolds with boundary, Stokes' theorem $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  Similar to the one-dimensional #link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]
+
+  Define #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ in coordinates, where $Vol$ is the volume of the coordinates, $σ$ is a large class of regions, and the calculation result does not depend on the choice of coordinates. 
+
+  Then there is Stokes-theorem 
+  
+  for #link(<orientable>)[orientable] almost everywhere analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  
+  Calculate $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ using a box in coordinates. When all coordinates approach $0$, it will be a partial derivative $∂_i$ of something calculated for each coordinate axis direction. The result is $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, further simplification is omitted for now.
+
+  *Question* What is the form of the exterior derivative calculation result in the barycentric coordinates of a simplex?
 ]
-Perhaps it seems strange at first glance, but this is effective, first infinitesimal $#d ω := lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ))$ then integral $integral #d ω := lim sum ⋯$, but the fundamental theorem of one-dimensional calculus is like this
+However, in the proof of the one-dimensional Fundamental Theorem of Calculus, the division of a one-dimensional interval, the boundary of a one-dimensional interval, and the integral of the boundary of a one-dimensional interval are all too simple. High-dimensional regions are not that simple.
 
-But the division of one-dimensional intervals, the boundary of one-dimensional intervals, and the integral of the boundary of one-dimensional intervals are all too simple, and high dimensions are not that simple
-
-For high dimensions, if it's curved, it's very difficult. First deal with straight things i.e. simplex or parallelepiped. The partition is also of the same type of region, and boundary cancellation is also very simple. Then, similar to one dimension, use the differential mean value theorem to approximate compact control. This proves Stokes' Theorem for $ℝ^n$ simplex or parallelepiped.
+#tag("Stokes-theorem-simple") For higher dimensions, it is difficult if it is curved. First, deal with straight things i.e. simplex or parallelepiped. The division is also the same type of region, and the boundary cancellation is also simple. Then, similar to one dimension, approximate with the Mean Value Theorem of Differential + compact control. This proves Stokes' theorem for $ℝ^n$ simplex or parallelepiped.
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
@@ -190,7 +178,7 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
 #indent[
   Integral of $k$ form $ω$ -> Integral of $⟨ ω , Vol_k ⟩ Vol_k$ -> Integral of $⟨ ⋆ ω, ⋆ Vol_(n-k) ⟩ Vol_k$, interpreted as the quantity $⟨ ⋆ ω , Vol_(n-k) ⟩$ of the orthogonal complement $⋆ Vol_k = Vol_(n-k)$ of $Vol_k$ integrated over $Vol_k$, i.e. flux
 
-  Represent the flux $n-k$ alternating tensor using the inner product duality $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$, the inner product represents the orthogonal projection of the quantity $(⋆ ω)^♯$ onto the flux direction $(Vol_(n-1))^♯$
+  Represent the flux $n-k$ alternating tensor using the inner product duality $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$, the inner product represents the orthogonal projection of the quantity $(⋆ ω)^♯$ onto the flux direction $(Vol_(n-1))^♯$ (image)
 ]
 *Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$.
 

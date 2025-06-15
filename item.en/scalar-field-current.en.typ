@@ -177,4 +177,6 @@ Symmetry and conserved currents
   Fixing the $ℝ^(1,3)$ coordinates, and considering the 4-current components as quantities integrable over $ℝ^3$, then the zero component, i.e., charge conservation, holds #tag("conserved-spatial-integral-charge-KG")
   
   $ 0 = ∂_t integral_(ℝ^3) #d x (- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*) = ∂_t Q $
+
+  note that it's non positive defnite, $(ϕ,ψ) ⇝ -ψ^* ∂_t ϕ + ϕ ∂_t ψ^*$ is anti-Hermitian
 ]

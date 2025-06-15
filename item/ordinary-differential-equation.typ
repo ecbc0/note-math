@@ -13,17 +13,19 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
 - $f(t) = a, g(x) = x$. $x(t) = x(0) exp(a t)$
 - $f(t) = 1, g(x) = x^2$. $x(t) = 1/(1/x(0) - t)$
 
-#tag("invariant-of-vector-field ")
+#tag("exponential-of-vector-field") *Question*
 #indent[
   let $U$ open in $ℝ^n$
 
-  vector-field is analytic function $v : U -> ℝ^n$
+  向量场是解析函数 $v : U -> ℝ^n$
 
-  $ ∂_(v(x)) f (x) = #d f(x) v(x) = v(f(x)) $
+  由向量场 $v$ 生成的 exponential-of-vector-field $(exp v) (x)$ 应该是 invariant 的
 
-  *Question* maybe $exp$ like, Taylor series of vector field 
+  $ ∂_(v(x)) (exp v) (x) = v(f(x)) $
+
+  向量场的 Taylor 级数 
   $ 
-    f(x) 
+    (exp v) (x) 
     &= x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
     &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
   $
@@ -35,7 +37,7 @@ compare to the result from separable ODE in 1 dimension
 
 - $v(x) = A(x), A in gl(d,𝕂)$
 #indent[  
-  expect $f(t,x) = exp(A t)(x)$ for $f(0,x) ⇝ f(1,x)$, expect $x ⇝ exp(A) (x)$
+  compare $vel(x) = A x$, expect $(sum_(0..∞) 1/n! (A t)^n)(x)$ with $t = 1$
   
   $#d v (x) = A$, $n >= 2 ==> #d^k v (x) = 0$
 
@@ -89,7 +91,7 @@ compare to the result from separable ODE in 1 dimension
 ]
 - $ℝ -> ℝ$, $v(x) = x^2$
 #indent[
-  expect $f(t,x) = 1/(1/x - t)$ for $f(0,x) ⇝ f(1,x)$, expect $x ⇝ x/(1-x) = 1 - 1/(1-x)$ 
+  compare $vel(x) = x^2$, expect $1/(1/x - t)$ with $t = 1$ 
 
   $∂_(v(x))v(x) = v'(x) v(x) = 2 ⋅ x^3$
 
@@ -123,9 +125,9 @@ $f(t,x)$ is called flow. exp 道路发射状坐标
 
 ODE
 
-$ (#d)/(#d t) f(t,x) = ∂_(v(x)) f(t,x) = v(f(t,x)) $
+$ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
-#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kowalevski theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<analytic-inverse>)[] 中所作的
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<analytic-inverse>)[] 中所作的
 
 $F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
 

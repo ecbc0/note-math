@@ -15,4 +15,4 @@ electromagnetic-field
 Laplacian-of-tensor-field
 Einstein-metric
 interaction
-quantization
+harmonic-oscillator-quantization

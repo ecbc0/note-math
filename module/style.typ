@@ -45,7 +45,7 @@
 
   set math.limits(inline: true)
 
-  show math.equation.where(block: false): math.display
+  show math.equation: math.display
 
   show math.equation.where(block: true): set align(left)
 

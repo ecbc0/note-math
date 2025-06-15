@@ -55,12 +55,12 @@ What we define is absolutely integrable. Other integral operations, such as $int
 
 The linear change of coordinates $A in GL$ gives the integral change of variable formula formula $det A$
 
-#tag("integral-on-form") Or if it is considered as integrating an $n$ form, i.e. integral of form act on unit volume parallelepiped, then the integral is $GL$ invariant
-
-Almost everywhere analytic
+#tag("integral-on-form") For the integral over an $n$-region, integrating a function over a volume is equivalent to integrating an $n$-form. If considered as an integral of an $n$-form, then the integral is $GL$ invariant.
 
 #tag("integral-change-of-variable-formula") 
 #indent[
+  let $f$ almost everywhere analytic
+
   The change of variable formula formula for diffeomorphisms of integrals is $integral_(ℝ^n) f = integral_(ℝ^n) (f ∘ ϕ) |det #d ϕ|$ or $integral_(ℝ^n) #d y space f(y) = integral_(ℝ^n) #d x space (f ∘ ϕ)(x) |det #d ϕ (x)|$
   
   The differential of the coordinate transformation map $#d f$ at each simplex center as an affine map acting on the domain simplex is used to obtain the range space simplex for approximation, then use (high order) #link(<mean-value-theorem-analytic>)[], then take partition limit (@ref-12, p.92--99)
@@ -109,29 +109,29 @@ Fubini's theorem can be used to prove that the volume calculation below the grap
 
 area coarea formula ...
 
-#tag("try-to-define-low-dim-integral") 
+#tag("low-dim-integral") 
 #indent[
-  Try to define the integral for $k < n$ dimensional simplex or parallelepiped and $k$ form
+  The integral of a form over a $k$-simplex is also invariant, and there's no need to define volume for lower-dimensional simplices.
+
+  constant-type form
+
+  simplicial map type $k$ form := Let $x_0 ,…, x_k$ be the vertices of the simplex, then $ω(sum t_i x_i) = sum t_i ω(x_i)$
+
+  Similar to the $n$-order case, the integral of a simplicial map form on a $k$-chain is defined as $integral_(σ) ω = sum ω("center of" σ_i) Vol(σ_i)$
+
+  Even if two $k$-simplices are adjacent, their orientations might be discontinuous. This is different from the $n$-order case, where the codimension is zero, so all $n$-simplices have the same orientation.
   
-  The action of a form on a simplex or parallelepiped is defined as the action of the form on the unit volume parallelepiped in the $k$ direction where the simplex is located (if it exists)
+  Two adjacent $k$-simplices share common vertices, and the form acting on these points might have different values. The integral of a simplicial type form is also equivalent to taking the average of the directions at the vertices.
 
-  simplicial map type $k$ form := Let $x_0 ,…, x_k$ simplex be the vertices, then $ω(sum t_i x_i) = sum t_i ω(x_i)$
-  
-  If a vertex of a $k$ chain is in adjacent $k$ simplexes with different $k$ directions, then the $k$ form on this vertex has different action values. or the $k$ chain is not continuous in the $k$ direction. This is different from the $n$-th order case, because the codimension is zero, so all $n$ chains have the same direction
+  A good approximation would require the $k$-directions to have good regularity, but without additional structure, it seems difficult to define such a concept (even for a Grassmann manifold?).
 
-  A good approximation should require the $k$ direction to have good regularity, but without extra structure, it seems difficult to define this concept (even the Grassmann manifold?)
-
-  The differential submanifold structure can easily eliminate this $k$ direction discontinuity
-
-  Different $n$-dimensional $k$ forms may have the same action value in a $k$ direction, but this layer of redundancy can be eliminated by considering the action in all $k$ directions
-
-  Similar to the $n$-th order case, the simplicial map form on the $k$ chain defines the integral $integral_(σ) ω = sum ω("center of" σ_i) Vol(σ_i)$
+  submanifold structure can simply eliminate this $k$-direction discontinuity.
 ]
 #tag("integral-on-submanfold") 
 #indent[
   let $M$ be $n$ dimension manifold, $k$ form restrict to #link(<orientable>)[] $k$ submanifold tangent space 
 
-  $n$ form in $M$ is equivalent to scalar function, but how to control $n-1$ form by integral? try $sup(S "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
+  $n$ form in $M$ is equivalent to scalar function, but how to control $n-1$ form by integral? try $sup(S : "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
 
   if unnecessary, do not introduce metric to define $integral_M (⟨ ω ⟩^2)^(1/2)$ or $(integral_M ⟨ ω ⟩^2)^(1/2)$ now
 ]

@@ -156,7 +156,7 @@ _Proof_ 在测地线坐标, 用 $Γ$ or $g$ 表示的曲率 $R$ 的定义
 ]
 *Def* $f(R_i(1234)) := sum_("cyclic" (123)) R_(i(123) i(4))$
 
-- $f$ 将 $T ∈ ⨀^2 (⋀^2 V^⊺)$ 映射到自身且 $f^2 = f$, i.e. #link(<linear-projection>)[], so $⨀^2 (⋀^2 V^⊺) = ker f ⊕ im f$
+- $f$ 将 $T ∈ ⨀^2 (⋀^2 V^⊺)$ 映射到自身且 $f^2 = f$, i.e. #link("https://en.wikipedia.org/wiki/Projection_(linear_algebra)")[wiki:Projection\_(linear_algebra)], so $⨀^2 (⋀^2 V^⊺) = ker f ⊕ im f$
 
 - $ker f = "curvature"$
 

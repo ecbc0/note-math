@@ -71,7 +71,7 @@
 
     - 讨论用转换函数的线性近似的方法来定义流形上的积分的可能性, 类似于变量替换公式中的使用的逼近技术, 而不是用单位分解
 
-    - 讨论低维区域的积分定义的困难, 如果没有微分子流形结构的话
+    - 讨论低维区域的积分的逼近极限定义的困难. 微分子流形结构是更方便的假设
   ]
   - divergence
   #indent[
@@ -130,8 +130,6 @@
 
     - 平面波根据动量所在双曲面空间的测度的 $L^2$ 积分作为 Poincare 群 $SO(1,3) ⋊ ℝ^(1,3)$ 的 unitary representation
   ]
-    
-
   - scalar-field-non-relativity
     #indent[
       - 相对论 scalar-field (Klein--Gordan) 的作用量变分的非相对论极限近似到非相对论 scalar-field (Schrodinger) 
@@ -145,6 +143,8 @@
     - 讨论 $ℝ^(1,3)$ 的 metric 和 Lie algebra 的旋量式平方根的来源的可能性, 来自 Hermitian 型二重张量, 来自复射影空间的对称群中的 $ℤ_2$ quotient
 
     - 旋量场的作用量和 Lagrangian 的可能的概念的意义
+
+    - Dirac eq 给出的谐振子的平方根
 
     - 讨论 $#U (1)$ 规范理论的可能动机, 作为复射影空间 $ℂℙ^1$ 提升到 $ℂ^2$ 的冗余度的一部分
   ]

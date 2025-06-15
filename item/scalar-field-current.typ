@@ -176,4 +176,6 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
   固定 $ℝ^(1,3)$ 坐标, 认为 4 电流分量是可 $ℝ^3$ 积分的量, 则有零分量即电荷守恒 #tag("conserved-spatial-integral-charge-KG")
   
   $ 0 = ∂_t integral_(ℝ^3) #d x (- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*) = ∂_t Q $
+
+  注意非正定性, $(ϕ,ψ) ⇝ -ψ^* ∂_t ϕ + ϕ ∂_t ψ^*$ 是 anti-Hermitian 的
 ]

@@ -91,7 +91,7 @@ Plane wave
   $
     mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)
   $
-  Perform #link(<invariant-of-vector-field>)[$exp$ transformation] or #link(<integral-curve>)[integral curve]
+  Perform #link(<exponential-of-vector-field>)[$exp$ transformation] or #link(<integral-curve>)[integral curve]
 
   Trigonometric case
   $
