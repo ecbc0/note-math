@@ -12,10 +12,11 @@ Can be equivalently understood as positive-cone & positive quotient
 $
   #projective-cone (p,q) ≃ {[λ x] : g(x,x) = 0 and λ > 0}
 $
+Since the metric is zero on the light cone, many analysis cannot be done. Also, the quotient of rays on the light cone corresponds to #link(<metric-cannot-distinguish-colinear-light-like>)[]
 
 $SO(p,q)$ induce bijective of $#projective-cone (p,q)$
 
-_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ induce bijective of 1d linear subspace
+_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ induce bijective of set of 1d linear subspace
 
 identity $𝟙 ∈ GL$ induce $𝟙 ∈ ℝℙ$
 

@@ -42,7 +42,7 @@ let $v$ time-like. Using orthogonal decomposition, let $v = v_0, w = w_0 + bf(w)
 
 *Prop* light-like $v$ is not orthogonal to 
 - time-like
-- light-like other than collinear with itself $k v$
+- light-like other than collinear with itself $k v$ #tag("metric-cannot-distinguish-colinear-light-like")
 
 _Proof_ (@ref-7, (@ref-9, p.13))
 #indent[

@@ -12,10 +12,11 @@
 $
   #projective-cone (p,q) ≃ {[λ x] : g(x,x) = 0 and λ > 0}
 $
+由于 metric 在光锥上是零, 很多分析不能做. 而且光锥上的射线进行 quotient, 也对应 #link(<metric-cannot-distinguish-colinear-light-like>)[metric 完全不能区分共线的类光]
 
-$SO(p,q)$ induce bijective of $#projective-cone (p,q)$
+$SO(p,q)$ 导出 $#projective-cone (p,q)$ 的双射
 
-_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ induce bijective of 1d linear subspace
+_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ 导出一维子空间集的双射
 
 identity $𝟙 ∈ GL$ induce $𝟙 ∈ ℝℙ$
 

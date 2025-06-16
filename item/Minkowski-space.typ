@@ -42,7 +42,7 @@ let $v$ time-like. 使用正交分解, let $v = v_0, w = w_0 + bf(w)$ then $⟨ 
 
 *Prop* light-like $v$ 不正交于 
 - time-like
-- 与自身共线 $k v$ 之外的 light-like
+- 与自身共线 $k v$ 之外的 light-like #tag("metric-cannot-distinguish-colinear-light-like")
 
 _Proof_ (@ref-7, (@ref-9, p.13))
 #indent[

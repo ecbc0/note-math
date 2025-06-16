@@ -15,7 +15,7 @@ Quantization of Schrodinger eq harmonic oscillator ($ℝ$)
   $
   let $#a = #a (#i)$. $#a^† = #a (-#i)$
 
-  let $y = (frac(m ω, ℏ))^(1/2) x, λ = (1/2 ℏ ω)^(-1)$, raising and lowering operators simplify to $#a (± #i) = #x ± 1/#i #p$
+  let raising and lowering operators simplify to $#a (± #i) = #x ± 1/#i #p$
 
   Eigenfunctions of the energy operator
   
