@@ -23,7 +23,9 @@ Quantization of Schrodinger eq harmonic oscillator ($ℝ$)
   
   Obtain the eigenfunctions of the next energy level through the raising operator $#a^†$
   $ 
-    ψ_(n) &= #a^(† n) ψ &&= (-1)^n e^(1/2 y^2) (#d^n)/(#d y^n) e^(-1/2 y^2) ψ
+    ψ_(n) = #a^(† n) ψ 
+    &= (-1)^n e^(1/2 y^2) (#d^n)/(#d y^n) e^(-1/2 y^2) ψ \
+    &= H_(n)(y) exp(-1/2 y^2)
   $
   where
   $ H_(n) (y) = (-1)^n e^(y^2) (#d^n)/(#d y^(n)) e^(- y^2) $ 
