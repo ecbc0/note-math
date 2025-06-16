@@ -70,7 +70,7 @@ _Proof_
   Quadratic manifold co-dimension 1, normal space dimension 1, normal field $Γ^⟂_(i j) = λ n$ with unit normal field $n$
   $
     g(Γ^⟂_(i j), n) &= g(Γ_(i j), n)
-      & "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
+      &quad "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
     &= g(∇_(∂_i) ∂_j, n) \
     &= ∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
     &= - g(∂_j, ∇_(∂_i) n) 

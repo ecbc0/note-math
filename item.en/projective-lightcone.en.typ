@@ -46,8 +46,8 @@ _Proof_
   #indent[
     #link(<stereographic-projection>)[Stereographic projection] transition-function is quadratic inversion
     $ dmat( delim: #none , 
-      ℝ^(n-1) &⟶ ℝ^(n-1) ;
-      ξ &⟿ (1 ± x_1)/(1 ∓ x_1) ξ = ξ/(|ξ|^2)
+      ℝ^(n-1) ,⟶, ℝ^(n-1) ;
+      ξ ,⟿, (1 ± x_1)/(1 ∓ x_1) ξ = ξ/(|ξ|^2)
     ) $ 
     $ℂℙ^1 = {λ vec(z,w) : vec(z,w) ∈ ℂ^2}$ and its coordinate
     
@@ -66,13 +66,13 @@ _Proof_
 #indent[
   $GL(2,ℂ)$ acts on $ℂ^2$, $vec(z,w) ⇝ mat(a,b;c,d) vec(z,w) = vec(a z + b w , c z + d w)$, use the multiplicative inverse of $ℂ$ to restrict it to $ℂℙ^1$, in coordinate 1 $#c_1$
   $ 
-    ℂℙ^1 &⟶ ℂℙ^1 \
-    z/w &⟿ (a z + b w)/(c z + d w) = (a z/w + b)/(c z/w + d) 
+    ℂℙ^1 ,⟶, ℂℙ^1 \
+    z/w ,⟿, (a z + b w)/(c z + d w) = (a z/w + b)/(c z/w + d) 
   $
   in coordinate 2 $#c_2$ 
   $ 
-    ℂℙ^1 &⟶ ℂℙ^1 \
-    w/z &⟿ (c z + d w)/(a z + b w) = (c + d w/z)/(a + b w/z) 
+    ℂℙ^1 ,⟶, ℂℙ^1 \
+    w/z ,⟿, (c z + d w)/(a z + b w) = (c + d w/z)/(a + b w/z) 
   $
 ]
 $mat(d,c;b,a)$ has the same $det$

@@ -1,8 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#import "projective-lightcone.typ": *
-
+#let projective-cone = $"Cone-"ℙ$
 #let p = spin($p$)
 
 *Prop* 一般地, for $A ∈ SL(2,ℂ)$, $A,A^*$ 在换坐标的意义下不等价: 不存在 $B ∈ GL(2,ℂ)$, $A^* = B ⋅ A ⋅ B^(-1)$
@@ -117,8 +116,8 @@ $𝕆$ 的 "矩阵" 表示需要另作处理, $Lin(2,𝕆)$ 复合不能表示�
   双射 
   $
     dmat( delim: #none ,
-      ⨀^(* 2) ℂ^2	&⟶	ℝ^(1,3) ;
-      #spacetime-momentum-spinor	&⟿	#spacetime-momentum
+      ⨀^(* 2) ℂ^2	,⟶,	ℝ^(1,3) ;
+      #spacetime-momentum-spinor	,⟿,	#spacetime-momentum
     )
   $
   metric
@@ -185,8 +184,8 @@ for $#spacetime-momentum-spinor$
   $
     &quad det^(⊙ * 2)(⨀^(* 2)(v_1,w_1),⨀^(* 2)(v_2,w_2)) \
 
-    &= 1/2^4 (det(v_1,v_2) det(w_1^*,w_2^*) + det(w_1,v_2) det(v_1^*,w_2^*) \
-    &quad + det(v_1,w_2) det(w_1^*,v_2^*) + det(w_1,w_2) det(v_1^*,v_2^*))
+    &= 1/2^4 \( det(v_1,v_2) det(w_1^*,w_2^*) + det(w_1,v_2) det(v_1^*,w_2^*) \
+    &quad + det(v_1,w_2) det(w_1^*,v_2^*) + det(w_1,w_2) det(v_1^*,v_2^*) \)
   $
   quadratic-form is
   $
@@ -208,8 +207,8 @@ for $#spacetime-momentum-spinor$
     0 &= det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(1,0),vec(1,0))) \
 
     0 &= det^(⊙ * 2)(⨀^(* 2)(vec(0,1),vec(0,1)),⨀^(* 2)(vec(0,1),vec(0,1))) 
-  $
-  $ 1/4 = det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(0,1),vec(0,1))) $
+  
+   1/4 &= det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(0,1),vec(0,1))) $
 
   orthogonal of sigma matrix 也可以通过计算得到, 从而 $det^(⊙ * 2) = 1/2 g$
 

@@ -35,7 +35,7 @@ The symmetry group of $ℝ^(1,3)$ spacetime is the isometry $SO(1,3) ⋊ ℝ^(1,
     &quad quad p &= (∂ f)/(∂ v) \
 
     E  &= (m c^2)/((1 - (v/c)^2)^(1/2)) 
-    & p &= (m v)/((1 - (v/c)^2)^(1/2)) 
+    &quad quad p &= (m v)/((1 - (v/c)^2)^(1/2)) 
   $
   Denoted as 4-momentum 
   $

@@ -6,8 +6,8 @@ composition (function composition)
   let $ A -->^(f) B -->^(g) C $ 
 
   define $ dmat( delim: #none ,
-    A &⟶^(g ∘ f) C ;
-    a &⟿ g(f(a))
+    A ,⟶^(g ∘ f), C ;
+    a ,⟿, g(f(a))
   ) $
 ]
 Define proposition, parameter $f : A -> B$
@@ -36,8 +36,8 @@ finite <==> $|A| < ℕ$
 $A$ is a finite set ==> ($f : A -> A$ is injective or surjective <==> $f$ is bijective)
 
 *Example* $ℕ$ is an infinite set, $dmat( delim: #none ,
-  ℕ, &⟶, ℕ ;
-  n, &⟿, 2n
+  ℕ, ,⟶,, ℕ ;
+  n, ,⟿,, 2n
 )$ is injective and not surjective, so not bijective
 
 - countably infinite := $|A| = |ℕ|$
@@ -84,8 +84,8 @@ Image $f$ only maintains $∪$, for others
 
   $ 
     Ω : dmat( delim: #none ,
-      (A -> Subset(A)) &⟶ Subset(A);
-      f &⟿ {x ∈ A : p(x,f)}
+      (A -> Subset(A)) ,⟶, Subset(A);
+      f ,⟿, {x ∈ A : p(x,f)}
     )
   $
 

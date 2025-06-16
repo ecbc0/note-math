@@ -88,7 +88,7 @@ $
 "product rule"
 $
   ∇_(⊙)(a_(i j) #d x^i ⊙ #d x^i') 
-  &= quad ∇_(⊙) a_(i j) ⊙ #d x^i ⊙ #d x^i' \
+  &= ∇_(⊙) a_(i j) ⊙ #d x^i ⊙ #d x^i' \
   &quad + a_(i j) (∇_(⊙) #d x^i) ⊙ #d x^(i') \
   &quad + a_(i j) #d x^i ⊙ (∇_(⊙) #d x^i')
 $ 

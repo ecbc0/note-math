@@ -16,16 +16,16 @@ let $G$ 是 $X!$ 的子群. let $x in X$
 #tag("group-action")
 $
   dmat( delim: #none ,
-    G × X &⟶ X ;
-    (g,x) &⟿ g ⋅ x
+    G × X ,⟶, X ;
+    (g,x) ,⟿, g ⋅ x
   )
 $
 
 #tag("orbit") := 
 $
   G ⋅ x = {g x in X : g in G} = im {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}
 $
 *Example* $SO(3)$ 作用在 $ℝ^3$, orbit $𝕊^2(|x|)$
@@ -33,8 +33,8 @@ $
 #tag("isotropy") := 
 $
   G_x = {g in G : g x = x} = im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(x)
 $
 *Example* $SO(3)$ 作用在 $ℝ^3$, isotropy = 绕 $x in 𝕊^2$ 所在轴的旋转, 是嵌入的 $SO(2)$
@@ -48,8 +48,8 @@ $
   &<==> h^(-1) g h in G_x
 $
 映射 $dmat( delim: #none ,
-  G &⟶ G ;
-  g &⟿ h^(-1) g h
+  G ,⟶, G ;
+  g ,⟿, h^(-1) g h
 )$ 
 - 同态 $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - 双射 $h^(-1) g h = g' <==> g = h g' h^(-1)$
@@ -58,21 +58,21 @@ $
 根据 $G$ 作用在 $G x$ 上的逆像, 将 $G$ 分解为子群 $G_x$ 及其 coset $h G_x$
 
 $G = ⨆_(y in G x) im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(y)$ 
 
 计算 $y = h x in G x$ 的逆像 $g x = h x <==> h^(-1) g in G_(x) <==> g in h G_x$ 
 
 $abs(im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(y)) = |h G_x| = |G_x|$
 
 #tag("orbit-istropy-theorem") 存在双射 
 $ dmat( delim: #none ,
-  G x × G_x &<--> G = ⨆_(y in G x) ⋯ ;
-  (y, ⋯) &⟿ ⋯
+  G x × G_x ,<-->, G = ⨆_(y in G x) ⋯ ;
+  (y, ⋯) ,⟿, ⋯
 ) $ 
 所以 $|G| = |G x| ⋅ |G_x|$
 
@@ -86,15 +86,15 @@ _Proof_
 #indent[ 
   $
     dmat( delim: #none ,
-      G &⟶ G ;
-      g &⟿ g h
+      G ,⟶, G ;
+      g ,⟿, g h
     )
   $ 
   是双射. (可逆.) 所以
   $
     G x &= im {dmat( delim: #none ,
-      G &⟶ X ;
-      g &⟿ g x
+      G ,⟶, X ;
+      g ,⟿, g x
     )} \
     &= im {dmat( delim: #none ,
       G , ⟶ , G , ⟶ , X ;
@@ -128,8 +128,8 @@ $
 #tag("conjugate-action") 共轭作用
 $
   c_h : dmat( delim: #none ,
-    G &⟶ G ;
-    g &⟿ h g h^(-1)
+    G ,⟶, G ;
+    g ,⟿, h g h^(-1)
   )
 $
 as 对任意被作用的空间 $X$ 换坐标 $h$ 导致的 $g$ 作用的坐标的变换
@@ -153,8 +153,8 @@ $
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
 - $dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )$ 是满射 $G ↠ X$
 
 *Example* $SO(3)$ 作用在 $ℝ^3 ∖ 0$ 不 transitive. $GL(3,ℝ) $ 作用在 $ℝ^3 ∖ 0$ 是 transitive
@@ -164,6 +164,6 @@ $
 - $g x = h x ==> g = h$
 - $g x = x ==> g = 𝟙$
 - $dmat( delim: #none ,
-      G &⟶ X ;
-      g &⟿ g x
+      G ,⟶, X ;
+      g ,⟿, g x
   )$ 是单射 $G ↪ X$

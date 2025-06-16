@@ -16,16 +16,16 @@ let $G$ be a subgroup of $X!$. let $x in X$
 #tag("group-action")
 $
   dmat( delim: #none ,
-    G × X &⟶ X ;
-    (g,x) &⟿ g ⋅ x
+    G × X ,⟶, X ;
+    (g,x) ,⟿, g ⋅ x
   )
 $
 
 #tag("orbit") := 
 $
   G ⋅ x = {g x in X : g in G} = im {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}
 $
 *Example* $SO(3)$ acts on $ℝ^3$, orbit $𝕊^2(|x|)$
@@ -33,8 +33,8 @@ $
 #tag("isotropy") := 
 $
   G_x = {g in G : g x = x} = im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(x)
 $
 *Example* $SO(3)$ acts on $ℝ^3$, isotropy = rotation around the axis where $x in 𝕊^2$ is located, which is an embedded $SO(2)$
@@ -48,8 +48,8 @@ $
   &<==> h^(-1) g h in G_x
 $
 Mapping $dmat( delim: #none ,
-  G &⟶ G ;
-  g &⟿ h^(-1) g h
+  G ,⟶, G ;
+  g ,⟿, h^(-1) g h
 )$ 
 - Homomorphism $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - Bijection $h^(-1) g h = g' <==> g = h g' h^(-1)$
@@ -58,21 +58,21 @@ Mapping $dmat( delim: #none ,
 According to the inverse image of $G$ acting on $G x$, decompose $G$ into the subgroup $G_x$ and its coset $h G_x$
 
 $G = ⨆_(y in G x) im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(y)$ 
 
 Calculate the inverse image of $y = h x in G x$, $g x = h x <==> h^(-1) g in G_(x) <==> g in h G_x$ 
 
 $abs(im^(-1) {dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )}(y)) = |h G_x| = |G_x|$
 
 #tag("orbit-istropy-theorem") There exists a bijection 
 $ dmat( delim: #none ,
-  G x × G_x &<--> G = ⨆_(y in G x) ⋯ ;
-  (y, ⋯) &⟿ ⋯
+  G x × G_x ,<-->, G = ⨆_(y in G x) ⋯ ;
+  (y, ⋯) ,⟿, ⋯
 ) $ 
 Therefore, $|G| = |G x| ⋅ |G_x|$
 
@@ -86,15 +86,15 @@ _Proof_
 #indent[ 
   $
     dmat( delim: #none ,
-      G &⟶ G ;
-      g &⟿ g h
+      G ,⟶, G ;
+      g ,⟿, g h
     )
   $ 
   is a bijection. (invertible.) So
   $
     G x &= im {dmat( delim: #none ,
-      G &⟶ X ;
-      g &⟿ g x
+      G ,⟶, X ;
+      g ,⟿, g x
     )} \
     &= im {dmat( delim: #none ,
       G , ⟶ , G , ⟶ , X ;
@@ -128,8 +128,8 @@ $
 #tag("conjugate-action") Conjugate action
 $
   c_h : dmat( delim: #none ,
-    G &⟶ G ;
-    g &⟿ h g h^(-1)
+    G ,⟶, G ;
+    g ,⟿, h g h^(-1)
   )
 $
 as the transformation of the coordinates of the action of $g$ caused by changing the coordinates $h$ for any acted space $X$
@@ -153,8 +153,8 @@ $
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
 - $dmat( delim: #none ,
-    G &⟶ X ;
-    g &⟿ g x
+    G ,⟶, X ;
+    g ,⟿, g x
   )$ is a surjective $G ↠ X$
 
 *Example* $SO(3)$ acting on $ℝ^3 ∖ 0$ is not transitive. $GL(3,ℝ) $ acting on $ℝ^3 ∖ 0$ is transitive
@@ -164,6 +164,6 @@ $
 - $g x = h x ==> g = h$
 - $g x = x ==> g = 𝟙$
 - $dmat( delim: #none ,
-      G &⟶ X ;
-      g &⟿ g x
+      G ,⟶, X ;
+      g ,⟿, g x
   )$ is an injective $G ↪ X$

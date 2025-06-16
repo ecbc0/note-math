@@ -6,8 +6,8 @@ composition (函数复合)
   let $ A -->^(f) B -->^(g) C $ 
 
   define $ dmat( delim: #none ,
-    A &⟶^(g ∘ f) C ;
-    a &⟿ g(f(a))
+    A ,⟶^(g ∘ f), C ;
+    a ,⟿, g(f(a))
   ) $
 ]
 定义 proposition, 参数 $f : A -> B$
@@ -36,8 +36,8 @@ finite <==> $|A| < ℕ$
 $A$ 是有限集 ==> ($f : A -> A$ 是单射 or 满射 <==> $f$ 是双射)
 
 *Example* $ℕ$ 是无限集, $dmat( delim: #none ,
-  ℕ, &⟶, ℕ ;
-  n, &⟿, 2n
+  ℕ, ,⟶,, ℕ ;
+  n, ,⟿,, 2n
 )$ 是单射 and 不是满射, so 不是双射
 
 - 可数无限 := $|A| = |ℕ|$
@@ -84,8 +84,8 @@ $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
 
   $ 
     Ω : dmat( delim: #none ,
-      (A -> Subset(A)) &⟶ Subset(A);
-      f &⟿ {x ∈ A : p(x,f)}
+      (A -> Subset(A)) ,⟶, Subset(A);
+      f ,⟿, {x ∈ A : p(x,f)}
     )
   $
 

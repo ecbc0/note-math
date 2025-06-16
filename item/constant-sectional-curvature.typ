@@ -70,7 +70,7 @@ _Proof_
   二次型流形 co-dimension 1, 法空间 dimension 1, 法向场 $Γ^⟂_(i j) = λ n$ with 单位法向场 $n$
   $
     g(Γ^⟂_(i j), n) &= g(Γ_(i j), n)
-      & "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
+      &quad "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
     &= g(∇_(∂_i) ∂_j, n) \
     &= ∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
     &= - g(∂_j, ∇_(∂_i) n) 
