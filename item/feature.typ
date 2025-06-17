@@ -37,7 +37,7 @@
   ] 
   - analytic-Euclidean
   #indent[
-    - 尝试定义幂级数空间的距离 (不是 norm) 而且这种想法也许能用来定义解析版本的 Sobolev 空间
+    - 尝试定义幂级数空间的距离 (不是 norm) $"dist"(A,B) = sup_(n >= 1) |A_n - B_n|^(1/n)$ 而且这种想法也许能用来定义解析版本的 Sobolev 空间
 
     - 尝试定义解析函数空间的网和拓扑
   ]

@@ -37,7 +37,7 @@
   ] 
   - analytic-Euclidean
   #indent[
-    - Attempting to define distance (not norm) in power series spaces, and this idea might be used to define an analytic version of Sobolev spaces
+    - Attempting to define distance (not norm) $"dist"(A,B) = sup_(n >= 1) |A_n - B_n|^(1/n)$ in power series spaces, and this idea might be used to define an analytic version of Sobolev spaces
 
     - Attempting to define nets and topology for analytic function spaces
   ]
