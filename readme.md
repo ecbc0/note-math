@@ -22,6 +22,6 @@ Topics are classified in `topic` folders, which point to files in `item` (vscode
 
 Instead of downloading the file, you can directly view the [HTML version](https://ecbc0.github.io/)
 
-If you are familiar with math, you can see [feature](https://ecbc0.github.io/item-en/feature-en.html)
+If you are familiar with math, you can see [feature](https://ecbc0.github.io/item_en/feature_en.html)
 
 for note, I feel that git is only suitable for viewing update records. Git fork is not very meaningful because it is too troublesome to deal with the large number of conflicts that may frequently occur when merging or rebasing.

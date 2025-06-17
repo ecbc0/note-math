@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#import "Minkowski-space.en.typ": *
+#import "Minkowski-space_en.typ": *
 
 In order to deal with the power series of $ℝ^(1,n)$, we need to deal with the series of the range $ℝ^(1,n)$ first.
 
