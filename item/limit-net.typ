@@ -1,8 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let I = c-bf("I","#919191")
+#let B = c-bf("B")
+#let I = c-bf("I")
 
 #tag("net") 
 #indent[

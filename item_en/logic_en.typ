@@ -63,7 +63,7 @@ Propositional Logic
 
   Representation of $and,or,not$ in digital circuits and logic gates
 
-  #image("../image/gate.jpeg", width: 60%)
+  #html.elem("img", attrs: (src: "../image/gate.jpeg", width: "60%"))
 
   Are gates designed to prevent reverse current?
 
@@ -78,10 +78,9 @@ Propositional Logic
   Logic gates can be used to create any ${0,1}^n -> {0,1}^m$ function
   
   (image from p.85 of @ref-1)
-  #stack( dir: ltr,
-    image("../image/compute-function-input.jpeg", width: 30%),
-    image("../image/decoder.jpeg", width: 30%), 
-  )
+  
+    #html.elem("img", attrs: (src: "../image/compute-function-input.jpeg", width: "30%"))
+    #html.elem("img", attrs: (src: "../image/decoder.jpeg", width: "30%"))
 
   - Construction of ${0,1}^n$ input
   #indent[
@@ -95,7 +94,7 @@ Propositional Logic
 
     *Example* `not xor`
 
-    #image("../image/compute-function-output.jpeg", width: 30%)
+    #html.elem("img", attrs: (src: "../image/compute-function-output.jpeg", width: "30%"))
   ]
     Exclusive or, ⊕, `xor`
 
@@ -112,24 +111,24 @@ Propositional Logic
 
   If the function does not require complete ${0,1}^n -> {0,1}^m$, the circuit calculation components do not necessarily have to be constructed in this fixed way. It can be further simplified and the use of gates can be reduced depending on the situation. But I won't go into details here
 ]
-A symbolic representation of multiple input or output lines in a computing unit #image("../image/multi-lines-symbol.jpeg")
+A symbolic representation of multiple input or output lines in a computing unit #html.elem("img", attrs: (src: "../image/multi-lines-symbol.jpeg"))
 
 #tag("control-circuit") Control circuit, selector or multiplexer (multiplexer)
 
   $S = 0$ outputs $D_0$ to $Y$, $S = 1$ outputs $D_1$ to $Y$
 
-  #stack( dir: ltr,
-    image("../image/multiplexer-function.jpeg", width: 20%),
-    image("../image/multiplexer-impl.jpeg", width: 25%)
-  )
+  
+    #html.elem("img", attrs: (src: "../image/multiplexer-function.jpeg", width: "20%"))
+    #html.elem("img", attrs: (src: "../image/multiplexer-impl.jpeg", width: "25%"))
+  
   $2^n$ inputs $D_0 ,…, D_(2^n - 1)$ require $n$ control circuits $S_0 ,…, S_(n - 1)$
 
 #tag("De-Morgan-law") negative dual law or De Morgan's law 
 
   $
-    not (not A) &= A \
-    not (A and B) &= (not A) or (not B) \
-    not (A or B) &= (not A) and (not B)
+    not (not A) &=&A \
+    not (A and B) &=&(not A) or (not B) \
+    not (A or B) &=&(not A) and (not B)
   $
 
   Proven by exhaustion, just like how humans count numbers is actually also exhaustion. Same below
@@ -141,15 +140,15 @@ A symbolic representation of multiple input or output lines in a computing unit 
   #tag("bool-distributive-law") distributive law
   #indent[
     $
-      (A + B) ⋅ C &= A ⋅ C + B ⋅ C \
-      "or" (A or B) and C &= (A and C) or (B and C) 
+      (A + B) ⋅ C &=&A ⋅ C + B ⋅ C \
+      "or" (A or B) and C &=&(A and C) or (B and C) 
     $
 
     Its negative dual
 
     $
-      (A ⋅ B) + C &= A ⋅ C + B ⋅ C \
-      "or" (A and B) or C &= (A or C) and (B or C) 
+      (A ⋅ B) + C &=&A ⋅ C + B ⋅ C \
+      "or" (A and B) or C &=&(A or C) and (B or C) 
     $
 
     Inductively
@@ -164,15 +163,15 @@ A symbolic representation of multiple input or output lines in a computing unit 
 ]
 #tag("periodic-circuit") Periodic circuit
 
-  #image("../image/periodic-circuit.jpeg", width: 60%)
+  #html.elem("img", attrs: (src: "../image/periodic-circuit.jpeg", width: "60%"))
 
   Implemented by crystal oscillator
 
 #tag("memory-circuit") Circuit memory
 #indent[
-  Black box model #image("../image/memory-1.jpeg", width: 60%)
+  Black box model #html.elem("img", attrs: (src: "../image/memory-1.jpeg", width: "60%"))
   
-  Possible implementation #image("../image/memory-2.jpeg", width: 70%)
+  Possible implementation #html.elem("img", attrs: (src: "../image/memory-2.jpeg", width: "70%"))
 
   - Use a ring circuit to reuse the 1/0 value of $a,overline(a)$ from the previous cycle
   - Inverter (`not` gate) ensures current direction and prevents 1 from decaying (through external energy) 
@@ -191,13 +190,13 @@ A symbolic representation of multiple input or output lines in a computing unit 
 
   The range of natural numbers contained in multiple bits, for example, 3 bits of $0, 1 ,…, 7$ as parameters, to correspond to the real world content. *Example* Computer's character representation e.g. ASCII, Unicode, the position and color of the light-emitting points on the screen
 
-  #image("../image/ASCII.jpeg")
+  #html.elem("img", attrs: (src: "../image/ASCII.jpeg"))
 
   (image modified from wiki media about ASCII)
 
   In practical applications, multiple bits per address are better than 1 bit per address, or a two-dimensional memory array is more efficient than one-dimensional
 
-  #image("../image/memory-array.jpeg", width: 20%)
+  #html.elem("img", attrs: (src: "../image/memory-array.jpeg", width: "20%"))
 ]
 #tag("instruction") Instruction
 #indent[
@@ -212,9 +211,9 @@ A symbolic representation of multiple input or output lines in a computing unit 
 
   *Example* `add` instruction. `add x_1 x_2`. The bit data of the instruction is divided into three regions, representing different types of information
 
-  #image("../image/add-instruction.jpeg", width: 70%)
+  #html.elem("img", attrs: (src: "../image/add-instruction.jpeg", width: "70%"))
 
-  #image("../image/add-instruction-computer.jpeg", width: 80%)
+  #html.elem("img", attrs: (src: "../image/add-instruction-computer.jpeg", width: "80%"))
   
   + Read the `add` instruction 
     - `add` instruction at `adress_0` (`add x_1 x_2` and `adress_1, adress 2` are from the source code and compiler generation)
@@ -240,7 +239,7 @@ Instruction stream
       i = i + 1;
   } // result = 10
   ```
-  #image("../image/while-computer.jpeg", width: 90%)
+  #html.elem("img", attrs: (src: "../image/while-computer.jpeg", width: "90%"))
 
   + Reading instructions
 

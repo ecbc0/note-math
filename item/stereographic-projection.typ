@@ -1,10 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
-#stack( dir: ltr,
-  image("../image/stereographic-projection-1.jpeg", width: 40%),
-  image("../image/stereographic-projection-2.jpeg", width: 50%)
-)
+
+  #html.elem("img", attrs: (src: "../image/stereographic-projection-1.jpeg", width: "40%"))
+  #html.elem("img", attrs: (src: "../image/stereographic-projection-2.jpeg", width: "50%"))
+
 使用二次型反演 $|x| x/(|x|) ⇝ 1/(|x|) x/(|x|)$. 共形变换的一种
 
 $𝕊^(n-1)$ 南北极球极投影坐标. $dmat( delim: #none ,

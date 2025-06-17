@@ -13,7 +13,7 @@ For now, only consider the timelike future case.
 
   $⟨v,w⟩ > 0$
 
-  $|v+w| >= |v| + |w|$ (#link(<quadratic-form-inequality-Minkowski>)[Triangle Inequality])
+  $|v+w| >= |v| + |w|$ (#raw("#link(<quadratic-form-inequality-Minkowski>)[Triangle Inequality]"))
 
   $|v+w| > |v|,|w|$
 ]
@@ -26,7 +26,7 @@ $|x_1 + ⋯ + x_n| >= |x_1| + ⋯ + |x_n|$
 
 $|x_1 + ⋯ + x_n| >= |x_1 + ⋯ + x_(n-1)|$, or $n ⇝ |x_1 + ⋯ + x_n| >= 0$ monotonically increasing #tag("increasing-length-of-time-future-series")
 
-let $v,w$ time future, not co-linear. $span(v,w) ≃ ℝ^(1,1)$ cf. #link(<signature-of-2d-subspace-of-spacetime>)[]
+let $v,w$ time future, not co-linear. $span(v,w) ≃ ℝ^(1,1)$ cf. #raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")
 
 Through $SO(1,n)$ transformation, we can assume that the center of the geodesic ball is $(0 ,…, 0, 1)$
 
@@ -49,16 +49,16 @@ _Proof_
   Mapping the geodesic length $r$ of the hyperbola to the spatial axis $sinh r$ is a monotonically bijective map (Figure)
   The geodesic length of a hyperbola, $r$, is a bijection. The hyperbola map to the spatial axis and is a bijection. After composition, it is $sinh r$, a bijection, remains monotone.
 
-  #image("../image/hyperbolic-to-space-bijective.jpeg", width: 60%)
+  #html.elem("img", attrs: (src: "../image/hyperbolic-to-space-bijective.jpeg", width: "60%"))
   $ 
     argh ((v+w)/(|v+w|)) 
-    &-> im (v+w)/(|v+w|) &(im "of" ℂ_"split") \
-    &= (|v| sinh ϕ + |w| sinh ψ)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (ψ - ϕ))^(1/2))  & cosh >= 1 \
-    &<= (|v| sinh R + |w| sinh R)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (R - R))^(1/2)) \
-    &= sinh R \
+    &->&im (v+w)/(|v+w|) &(im "of" ℂ_"split") \
+    &=&(|v| sinh ϕ + |w| sinh ψ)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (ψ - ϕ))^(1/2))  & cosh >= 1 \
+    &<=&(|v| sinh R + |w| sinh R)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (R - R))^(1/2)) \
+    &=&sinh R \
     
     abs(argh ((v+w)/(|v+w|))) 
-    &<= R
+    &<=&R
   $
 ]
 let $x_n$ direction $x_n/(|x_n|)$ in $ℍ𝕪^n (time,future)$ geodesic ball $𝔹$
@@ -73,22 +73,22 @@ _Proof_ use $span(x_1 + ⋯ + x_(n-1) , x_n)$ signature $1,1$, embed $ℍ𝕪$, 
 
   ==> $⟨v,w⟩ <= |v| |w| cosh(2 R)$
 ]
-_Proof_ use $⟨v,w⟩ = |v| |w| cosh (ψ - ϕ)$ cf. #link(<hyperbolic-cosine-formula>)[]
+_Proof_ use $⟨v,w⟩ = |v| |w| cosh (ψ - ϕ)$ cf. #raw("#link(<hyperbolic-cosine-formula>)[]")
 
 let $x_n$ time future, direction $x_n/(|x_n|)$ in $ℍ𝕪^n (time,future)$ geodesic sphere $𝔹$ with radius $R$
 
 $
   |x_1 + ⋯ + x_n|^2 
-  &= |x_1|^2 + ⋯ + |x_n|^2 + 2 sum_(1 <= i < j <= n ) ⟨x_i,x_j⟩ \
-  &<= |x_1|^2 + ⋯ + |x_n|^2 + 2 cosh(2 R) sum_(1 <= i < j <= n ) |x_i| |x_j| \
+  &=&|x_1|^2 + ⋯ + |x_n|^2 + 2 sum_(1 <= i < j <= n ) ⟨x_i,x_j⟩ \
+  &<=&|x_1|^2 + ⋯ + |x_n|^2 + 2 cosh(2 R) sum_(1 <= i < j <= n ) |x_i| |x_j| \
 $ 
 
 ==> use $cosh >= 1$
 $
   |x_1 + ⋯ + x_n|^2 
-  &<= cosh(2 R) (|x_1| + ⋯ + |x_n|)^2
+  &<=&cosh(2 R) (|x_1| + ⋯ + |x_n|)^2
 $
-#tag("absolute-convergence-Minkowski-distance") $sum_(i = 1)^∞ |x_i| < ∞$ ==> #link(<increasing-length-of-time-future-series>)[monotonically increasing] bounded $lim_(n -> ∞) |x_1 + ⋯ + x_n| < ∞$ limit exists
+#tag("absolute-convergence-Minkowski-distance") $sum_(i = 1)^∞ |x_i| < ∞$ ==> #raw("#link(<increasing-length-of-time-future-series>)[monotonically increasing]") bounded $lim_(n -> ∞) |x_1 + ⋯ + x_n| < ∞$ limit exists
 
 #tag("Minkowski-power-series") 
 #indent[
@@ -110,7 +110,7 @@ _Proof_ of convergence in direction space
   #indent[
     *Question* Is there a more direct proof
     
-    use #link(<isom-top-hyperbolic-Euclidean>)[]. $ℝ^(1,n)$ distance restricted in $ℍ𝕪^n (time,future)$ is equivalent to the geodesic distance as a Riemman manifold, $ℍ𝕪^n$ subtraction of two elements is $ℝ^(1,n)$ spacelike 
+    use #raw("#link(<isom-top-hyperbolic-Euclidean>)[]"). $ℝ^(1,n)$ distance restricted in $ℍ𝕪^n (time,future)$ is equivalent to the geodesic distance as a Riemman manifold, $ℍ𝕪^n$ subtraction of two elements is $ℝ^(1,n)$ spacelike 
     
     we prove $(x_1 + ⋯ + x_n)/(|x_1 + ⋯ + x_n|)$ Cauchy in $ℍ𝕪^n (time,future)$
     
@@ -126,14 +126,14 @@ _Proof_ of convergence in direction space
 
     $ 
       0 
-      &<= - ⟨ v/(|v|) - (w)/(|w|) ⟩^2 \
-      &= - 2 (1 - ⟨v/(|v|),w/(|w|)⟩) \
-      &= 2 ((⟨v,w⟩ - |v| |w|)/(|v| |w|))
+      &<=&- ⟨ v/(|v|) - (w)/(|w|) ⟩^2 \
+      &=&- 2 (1 - ⟨v/(|v|),w/(|w|)⟩) \
+      &=&2 ((⟨v,w⟩ - |v| |w|)/(|v| |w|))
     $
 
     use $1/(|v| |w|) = 1/(|x_1 + ⋯ + x_(n+m)| |x_1 + ⋯ + x_(n)|) <= 1/(|x_1|^2)$ (or other) does not affect the limit $->_(n->∞) 0$  
 
-    use #link(<sum-preserve-time-future>)[]. $w - v$ is time-like, $|w| > |v|$. use #link(<triangel-inequality-Minkowski>)[triangle inequality] $|w| >= |w - v| + |v|$, use Cauchy $|w| - |v| < ε$ 
+    use #raw("#link(<sum-preserve-time-future>)[]"). $w - v$ is time-like, $|w| > |v|$. use #raw("#link(<triangel-inequality-Minkowski>)[triangle inequality]") $|w| >= |w - v| + |v|$, use Cauchy $|w| - |v| < ε$ 
     
     ==> $|w - v| <= |w| - |v| < ε$
 
@@ -152,19 +152,19 @@ _Proof_ of convergence in direction space
     for $y_n -> y$ use hyperbolic cosine
     $
       ⟨y,z⟩ 
-      &= |y| |z| cosh (|ϕ - ψ|) \
-      &= lim_(n -> ∞) |y_n| |z| cosh(|ϕ_n - ψ|) &quad "distance" |y_n| and "direction" ϕ_n \
-      &= lim_(n -> ∞) ⟨y_n,z⟩
+      &=&|y| |z| cosh (|ϕ - ψ|) \
+      &=&lim_(n -> ∞) |y_n| |z| cosh(|ϕ_n - ψ|) &quad& "distance" |y_n| and "direction" ϕ_n \
+      &=&lim_(n -> ∞) ⟨y_n,z⟩
     $
   ]
   - $y - (x_1 + ⋯ + x_n)$ is time-like
   #indent[
     $
       ⟨ y - (x_1 + ⋯ + x_n) ⟩^2 
-      &= ⟨ y - y_n ⟩^2 \
-      &= y^2 + y_n^2 - 2 ⟨y,y_n⟩ \
-      &= lim_(m -> ∞) (y_(n+m)^2 + y_n^2 - 2 ⟨y_(n+m),y_n⟩) \
-      &= lim_(m -> ∞) ⟨ y_(n+m) - y_n ⟩^2
+      &=&⟨ y - y_n ⟩^2 \
+      &=&y^2 + y_n^2 - 2 ⟨y,y_n⟩ \
+      &=&lim_(m -> ∞) (y_(n+m)^2 + y_n^2 - 2 ⟨y_(n+m),y_n⟩) \
+      &=&lim_(m -> ∞) ⟨ y_(n+m) - y_n ⟩^2
     $
     where $⟨ y_(n+m) - y_n ⟩^2 = ⟨ x_(n+1) + ⋯ + x_(n+m) ⟩^2 >= 0$
   ]
@@ -172,15 +172,15 @@ _Proof_ of convergence in direction space
   #indent[
     $
       ⟨y - (x_1 + ⋯ + x_n) , x_1 + ⋯ + x_n⟩ 
-      &= ⟨y,y_n⟩ - ⟨y_n,y_n⟩ \
-      &= (lim_(m -> ∞) ⟨y_(n+m),y_n⟩) - ⟨y_n,y_n⟩ \
-      &= lim_(m -> ∞) ⟨y_(n+m) - y_n , y_n⟩
+      &=&⟨y,y_n⟩ - ⟨y_n,y_n⟩ \
+      &=&(lim_(m -> ∞) ⟨y_(n+m),y_n⟩) - ⟨y_n,y_n⟩ \
+      &=&lim_(m -> ∞) ⟨y_(n+m) - y_n , y_n⟩
     $
     where $⟨y_(n+m) - y_n , y_n⟩ = ⟨x_(n+1) + ⋯ + x_(n+m),x_1 + ⋯ + x_n⟩ >= 0$
     $
       lim_(n -> ∞)⟨ y - (x_1 + ⋯ + x_n) ⟩^2 
-      &= lim_(n -> ∞) (y^2 + y_n^2 - 2 ⟨y,y_n⟩) \
-      &= 0
+      &=&lim_(n -> ∞) (y^2 + y_n^2 - 2 ⟨y,y_n⟩) \
+      &=&0
     $
   ]
 ]
@@ -200,11 +200,11 @@ let $A_n in Lin(⊙^n ℝ^(1,3) -> ℝ^(1,3))$
 
   - Defining the norm gives absolute convergence
   #indent[
-    use geometric series control like #link(<linear-map-induced-norm>)[the case of Euclidean]
+    use geometric series control like #raw("#link(<linear-map-induced-norm>)[the case of Euclidean]")
     $ 
-      |A_n|(R) &:= sup_(v in ℍ𝕪^n \ |argh(v)| <= R) |A_n (v^n)| = sup_(|argh(v)| <= R) (|A_n (v^n)|)/(|v|^n) \
+      |A_n|(R) &:=&sup_(v in ℍ𝕪^n \ |argh(v)| <= R) |A_n (v^n)| = sup_(|argh(v)| <= R) (|A_n (v^n)|)/(|v|^n) \
       
-      ρ(R) &:= limsup_(n in ℕ) {|A_n|(R)^(1/n)} ^(-1)
+      ρ(R) &:=&limsup_(n in ℕ) {|A_n|(R)^(1/n)} ^(-1)
     $
     ==> $|argh(v)| < R$ and $|v| < ρ(R)$ ==> $sum |A_n (v^n)| <= sum ((|v|)/(ρ(R)))^n = 1/(1 - (|v|)/(ρ(R))) - 1 < ∞$
   ]
@@ -220,7 +220,7 @@ let $A_n in Lin(⊙^n ℝ^(1,3) -> ℝ^(1,3))$
 
 *Question* let $f : ℝ^(1,d) -> ℝ^(1,d)$ Euclidean analytic $ℝ^(1+d)$, $#d f in SO(1,d)$ ==> $f$ Minkowski analytic?
 
-*Question* Regarding Minkowski analytic, consider corresponding to Euclidean's #link(<analytic-continuation>)[], #link(<power-series-space>)[], #link(<analytic-space>)[] 
+*Question* Regarding Minkowski analytic, consider corresponding to Euclidean's #raw("#link(<analytic-continuation>)[]"), #raw("#link(<power-series-space>)[]"), #raw("#link(<analytic-space>)[]") 
 
 More $|argh(v)| <= R$, parameter $R$
 

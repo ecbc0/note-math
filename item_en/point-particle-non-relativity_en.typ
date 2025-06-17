@@ -68,7 +68,7 @@ Euclidean metric-manifold
 #indent[
   Generalize to Euclidean metric-manifold
 
-  Needs #link(<metric-connection>)[]
+  Needs #raw("#link(<metric-connection>)[]")
 
   Although the metric volume form is not used, due to the form of the kinetic energy part of the action, it is still related to the metric geodesic 
 ]
@@ -88,25 +88,25 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= (L(t_1) - L(t_0)) ⋅ a \
+    &=&(L(t_1) - L(t_0)) ⋅ a \
 
-    &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
+    &=&integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $ 
   The first equation can come from the fundamental theorem of calculus + derivative of composite functions
 
-  In general, changing the region $I$ by $exp(a(t))$ #link(<vector-field-as-δ-diffeomorphism>)[by δ diffeomorphism] $a(t)$
+  In general, changing the region $I$ by $exp(a(t))$ #raw("#link(<vector-field-as-δ-diffeomorphism>)[by δ diffeomorphism]") $a(t)$
   $
     (#d)/(#d s) limits(integral)_(exp(s a(t)) I) #d t (f(t)) 
     
     = integral_(I) #d t ((#d)/(#d t) f(t) ⋅ a(t))
   $
-  On the other side, use #link(<integral-change-of-variable-formula>)[change of variable formula] 
+  On the other side, use #raw("#link(<integral-change-of-variable-formula>)[change of variable formula]") 
   $ 
     integral_(t_0 + s a)^(t_1 + s a) #d t (L(t)) = integral_(t_0)^(t_1) #d t (L(t + s a)) 
   $
   Apply it to
   $ 
-    L(t) &= L(x(t),vel(x)(t))  
+    L(t) &=&L(x(t),vel(x)(t))  
   $
   Then use the exchange of differential and integral
   $ 
@@ -118,19 +118,19 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   is the variation of the action on the (changing endpoints) δ differentiation $(#d)/(#d s)(0) x(t + s a) = a vel(x)(t) = X(t)$ at the solution $x(t)$ #tag("calculation-2-action-point-particle-non-relativity")
   $
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
-    &= integral #d t ((∂ L)/(∂ x) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X)) \
-    &= integral #d t (((∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
-    &quad "by product-rule of" (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) \
-    &= integral #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
-    &quad "Lagrange-equation" (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
+    &=&integral #d t ((∂ L)/(∂ x) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X)) \
+    &=&integral #d t (((∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
+    &quad& "by product-rule of" (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) \
+    &=&integral #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
+    &quad& "Lagrange-equation" (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
   $
   recall 
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= L(t)|_(t_0)^(t_1) ⋅ a \
+    &=&L(t)|_(t_0)^(t_1) ⋅ a \
 
-    &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
+    &=&integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
   use $X = a vel(x)$, merge the previous item with the next item
   $ 
@@ -151,8 +151,8 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   For $L = 1/2 m vel(x)(t)^2 - U(x(t))$ the energy is
   #tag("energy-point-particle-non-relativity") 
   $
-    E &= m vel(x)^2 - (1/2 m vel(x)^2 - U) \
-    &= 1/2 m vel(x)^2 + U 
+    E &=&m vel(x)^2 - (1/2 m vel(x)^2 - U) \
+    &=&1/2 m vel(x)^2 + U 
   $
   Homogeneity of Time ==> Conservation of Energy
 ]
@@ -164,13 +164,13 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
 
   Although the spatial translation δ diffeomorphism is not zero at the boundary or changes the path endpoints, the time endpoints remain unchanged, and spatial translation does not change kinetic energy. with $x + s a$, $(#d)/(#d t)(x + s a) = vel(x)$
   $ 
-    &quad (#d)/(#d s)(s = 0) integral_(t_0)^(t_1) #d t (1/2 m ((#d)/(#d t)(x + s a))^2) \
+    &quad& (#d)/(#d s)(s = 0) integral_(t_0)^(t_1) #d t (1/2 m ((#d)/(#d t)(x + s a))^2) \
     
-    &= (#d)/(#d s) integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2) \
+    &=&(#d)/(#d s) integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2) \
     
-    &= 0
+    &=&0
   $
-  So similar to #link(<calculation-2-action-point-particle-non-relativity>)[the case of energy], with δ diffeomorphism $(#d)/(#d s) (x + s a) = a = X(t)$
+  So similar to #raw("#link(<calculation-2-action-point-particle-non-relativity>)[the case of energy]"), with δ diffeomorphism $(#d)/(#d s) (x + s a) = a = X(t)$
   $
     0 = integral_(t_0)^(t_1) #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) = (∂ L)/(∂ vel(x)) |_(t_0)^(t_1) ⋅ a
   $
@@ -224,7 +224,7 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
   $
   Isotropy of Space ==> Rotational Invariance of $L$ ==> Conservation of Total Angular Momentum
 
-  $a ⋅ (b × c)$ = #link(<volume-of-parallelogram>)[parallelepiped directed volume] span by $a,b,c$ in Euclidean $ℝ^3$
+  $a ⋅ (b × c)$ = #raw("#link(<volume-of-parallelogram>)[parallelepiped directed volume]") span by $a,b,c$ in Euclidean $ℝ^3$
 
   The rotational momentum $x × m vel(x)$ is constant with respect to time, so $span(x × vel(x))^⟂$ is a constant 2d plane. Since $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊂ span(x × vel(x))^⟂$, $x(t)$ is in the constant two-dimensional plane $span(x × vel(x))^⟂$
 
@@ -262,7 +262,7 @@ Non-relativistic potential $(V,A) ∈ ℝ × ℝ^3$
 
 - Rigid body
 #indent[
-  Parameterized by $SO(3)$ (or $SO(2)$), so it can be regarded as a non-relativistic particle on the Euclidean manifold $SO(3)$. But the use of metric or the use of kinetic energy is not the #link(<Killing-form>)[] of $so(3)$, because for objects that are not uniformly mass-distributed spheres, rotations in different directions have different inertias. Moment of inertia i.e. metric $g$ may need to be calculated additionally
+  Parameterized by $SO(3)$ (or $SO(2)$), so it can be regarded as a non-relativistic particle on the Euclidean manifold $SO(3)$. But the use of metric or the use of kinetic energy is not the #raw("#link(<Killing-form>)[]") of $so(3)$, because for objects that are not uniformly mass-distributed spheres, rotations in different directions have different inertias. Moment of inertia i.e. metric $g$ may need to be calculated additionally
 
   The moment of inertia can also be used as a symmetric operator under the Killing-form, with the characteristic basis being the principal axes of inertia and the eigenvalues being the moments of inertia.
 ]

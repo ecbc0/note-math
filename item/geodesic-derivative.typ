@@ -5,15 +5,15 @@
 #indent[
   $p$ 附近的向量场 $Y$, 在 $X$ 方向, 尝试在坐标里求导数 $(∂ Y)/(∂ X) = lim_(t -> 0) 1/t (Y(p + t X) - Y(p))$
 
-  然而, #link(<difference-polynomial>)[difference] 操作不线性兼容于一般 diffeomorphism 的换坐标
+  然而, #raw("#link(<difference-polynomial>)[difference]") 操作不线性兼容于一般 diffeomorphism 的换坐标
 
-  但是在 metric-manifold, 有特殊的坐标 --- #link(<geodesic-coordinate>)[测地线坐标]. $p$ 的不同测地线坐标的变换方式是 $SO$, 是线性的
+  但是在 metric-manifold, 有特殊的坐标 --- #raw("#link(<geodesic-coordinate>)[测地线坐标]"). $p$ 的不同测地线坐标的变换方式是 $SO$, 是线性的
 ]
 #tag("geodesic-derivative") 测地线导数 *alias* #tag("Levi-Civita-derivative") Levi-Civita 导数 :=
 #indent[
   在 $p$ 点测地线坐标, 在 $p$ 点的导数, $∇_X Y := (∂ Y)/(∂ X)$
 
-  也可以对 #link(<tensor>)[] 场求导数 $∇_X T$. 根据张量结构带有的纯量乘法, 计算可以使用 #link(<Leibniz-law>)[product-rule] *Example* $∇_X (Y ⊗ Z) = (∇_X Y) ⊗ Z + Y ⊗ (∇_X Z)$
+  也可以对 #raw("#link(<tensor>)[]") 场求导数 $∇_X T$. 根据张量结构带有的纯量乘法, 计算可以使用 #raw("#link(<Leibniz-law>)[product-rule]") *Example* $∇_X (Y ⊗ Z) = (∇_X Y) ⊗ Z + Y ⊗ (∇_X Z)$
 ]
 *Prop* $∇ g = 0$. _Proof_ 在测地线坐标 $∂ g (p) = 0$
 
@@ -29,14 +29,14 @@
   $
     ∇_X Y (x)
     
-    &= (∂ x)/(∂ y) (y) ⋅ (∂ Y)/(∂ X) (y) \
+    &=&(∂ x)/(∂ y) (y) ⋅ (∂ Y)/(∂ X) (y) \
 
-    &= (∂)/(∂ X) ((∂ x)/(∂ y) ⋅ Y) - (∂)/(∂ X)((∂ x)/(∂ y)) ⋅ Y &quad "by product-rule"
+    &=&(∂)/(∂ X) ((∂ x)/(∂ y) ⋅ Y) - (∂)/(∂ X)((∂ x)/(∂ y)) ⋅ Y &quad& "by product-rule"
   $
-  使用 #link(<connection-transformation>)[联络的变换] 
+  使用 #raw("#link(<connection-transformation>)[联络的变换]") 
   $
-    0 &= Γ(y) \
-    &= (∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
+    0 &=&Γ(y) \
+    &=&(∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
   $
   ==> $(∂)/(∂ y) ((∂ x)/(∂ y)) = - Γ(x) ⋅ (#d x)/(#d y)$
 
@@ -47,8 +47,8 @@
   $p$ 切空间将 $∇_X Y (y)$ 线性转换 $(∂ x)/(∂ y) (y)$ 到 $∇_X Y (x)$, 但保持 in coordinate $x$, but keep $X,Y$ in coordinate $y$
   $
     &∇_X Y (x) \
-    &=(∂)/(∂ ((∂ x)/(∂ y) (y) ⋅ X(y))) ((∂ x)/(∂ y) (y) ⋅ Y(y)) + ((∂ x)/(∂ y) (y) ⋅ X(y))^⊺ ⋅ Γ(x) ⋅ (∂ x)/(∂ y) (y) ⋅ Y(y) \
-    &= (∂)/(∂ (X(x))) Y(x) + X(x)^⊺ ⋅ Γ(x) ⋅ Y(x)
+    &=&(∂)/(∂ ((∂ x)/(∂ y) (y) ⋅ X(y))) ((∂ x)/(∂ y) (y) ⋅ Y(y)) + ((∂ x)/(∂ y) (y) ⋅ X(y))^⊺ ⋅ Γ(x) ⋅ (∂ x)/(∂ y) (y) ⋅ Y(y) \
+    &=&(∂)/(∂ (X(x))) Y(x) + X(x)^⊺ ⋅ Γ(x) ⋅ Y(x)
   $
   或者写为, 在一般坐标, 测地线导数
   $
@@ -60,7 +60,7 @@
   $
   有无更直观的解释, 而不是直接使用联络的变换? 
   
-  如果只看线性兼容, 那么有很多 #link(<principal-bundle-connection>)[线性 connection], 重合于 geodesic-derivative 的是 metric-connection
+  如果只看线性兼容, 那么有很多 #raw("#link(<principal-bundle-connection>)[线性 connection]"), 重合于 geodesic-derivative 的是 metric-connection
 ]
 #tag("geodesic-derivative-of-co-vector") *Prop* 对于 co-vector 场 
 $ 

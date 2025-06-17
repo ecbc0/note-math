@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
+cf. #raw("#link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]")
 
 对称性与守恒流
 
@@ -11,7 +11,7 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
   $
     (#d)/(#d s) integral_(U + s a) #d x (f(x)) = integral_(U) #d x (∂_x f(x) ⋅ a)
   $
-  一般地, 区域改变通过 $exp(a(x))$ #link(<vector-field-as-δ-diffeomorphism>)[通过 δ diffeomorphism] $a(x)$ 给出 
+  一般地, 区域改变通过 $exp(a(x))$ #raw("#link(<vector-field-as-δ-diffeomorphism>)[通过 δ diffeomorphism]") $a(x)$ 给出 
   $
     (#d)/(#d s) limits(integral)_(exp(s a(x)) U) #d x (f(x)) 
     
@@ -27,15 +27,15 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
   $
   将其应用于 
   $
-    f(x) &= L(ϕ(x),∂ ϕ(x)) 
+    f(x) &=& L(ϕ(x),∂ ϕ(x)) 
   $
   考虑 $a = e_ν in ℝ^(1,3)$ 平移的变分的作用量的微分. let $Δ ϕ = lim_(tau -> 0) 1/τ (ϕ(x + τ e_ν) - ϕ(x)) = ∂_(ν) ϕ$. 一阶微分 $Δ S =$
   $
-    (#d)/(#d s) integral_(U + s a) #d x (L) &= integral_(U) #d x (#d)/(#d s) f(x + s a) \
+    (#d)/(#d s) integral_(U + s a) #d x (L) &=& integral_(U) #d x (#d)/(#d s) f(x + s a) \
     
     integral_(U) #d x (∂_ν L) 
     
-    &= integral_(U) #d x (
+    &=& integral_(U) #d x (
       (∂ L)/(∂ ϕ) ⋅ Δ ϕ + (∂ L)/(∂ (∂_x ϕ)) ⋅ ∂_x Δ ϕ
     )
   $
@@ -52,7 +52,7 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
   $
     integral_(U) #d x (∂_(ν) L)
     
-    &= integral_(U) #d x (
+    &=& integral_(U) #d x (
       ∂_x^† ((∂ L)/(∂ (∂_x ϕ)) ⋅ Δ ϕ)
     )
   $
@@ -90,11 +90,11 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
     固定 $ℝ^(1,3)$ 坐标, 认为 $T^0_μ$ 是可 $ℝ^3$ 积分的量
     $
       ∂_0 integral_(ℝ^3) #d x (T_μ^0)
-      &= integral_(ℝ^3) #d x (∂_0 T_μ^0) \
-      &= - integral_(ℝ^3) #d x (∂_1 T_μ^1 + ∂_2 T_μ^2 + ∂_3 T_μ^3) 
+      &=& integral_(ℝ^3) #d x (∂_0 T_μ^0) \
+      &=& - integral_(ℝ^3) #d x (∂_1 T_μ^1 + ∂_2 T_μ^2 + ∂_3 T_μ^3) 
         " by " ∂^† T_μ = 0 \
-      &= - lim_(r -> ∞) integral_(𝔹^3(r)) #d x (div T_μ^x) \
-      &= - lim_(r -> ∞) integral_(𝕊^2(r)) #d Vol (T_μ^x ⋅ x/(|x|))
+      &=& - lim_(r -> ∞) integral_(𝔹^3(r)) #d x (div T_μ^x) \
+      &=& - lim_(r -> ∞) integral_(𝕊^2(r)) #d Vol (T_μ^x ⋅ x/(|x|))
     $
     只要假设通量密度 $r -> ∞ ==> T_μ^x ⋅ x/(|x|) -> 0$ 就有 time invariant of $integral_(ℝ^3) #d x (T_μ^0)$
 
@@ -152,11 +152,11 @@ cf. #link(<Klein--Gordon-Lagrangian>)[纯量场的作用量]
 #indent[
   let $ϕ(x)$ 是 KG eq 的解. 相位改变 $e^(θ(x)) ϕ(x)$ 及其 δ 改变 $θ ϕ$ 属于解附近的边界固定的变分, 所以
   $
-    0 &= integral_(ℝ^(1,3)) #d x 1/2 (
+    0 &=& integral_(ℝ^(1,3)) #d x 1/2 (
         ∂(- θ ϕ^*) ⋅ ∂ ϕ +  ∂ ϕ^* ⋅ ∂(θ ϕ)
     ) \
     
-    &= integral_(ℝ^(1,3)) #d x 1/2 (
+    &=& integral_(ℝ^(1,3)) #d x 1/2 (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) ⋅ ∂ θ
   $ 
   使用 product rule + 散度量 + Stokes 定理 + 边界零 

@@ -10,7 +10,7 @@ Natural number $ℕ$ addition
 ]
 _Proof_ The intuition in the real world is that for counting $+1$, no matter how the counting task is manually divided into several subtasks, the result will not be affected, and the total decomposition methods are limited. The associative and commutative laws of addition are just special cases. Just as we recognize natural numbers by counting, we can always recognize the commutative and associative laws by counting. Everything reduces to the case of complete additive decomposition, with only the commutative and associative laws of a large number of $1$s.
 
-It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #link(<natural-number>)[natural numbers], in order for computers to express this property, which holds for all natural numbers, using finite characters, memory, and finite time (and potentially infinite time), it needs to be defined as a true proposition.
+It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #raw("#link(<natural-number>)[]"), in order for computers to express this property, which holds for all natural numbers, using finite characters, memory, and finite time (and potentially infinite time), it needs to be defined as a true proposition.
 
 The usual "proof" is to use the smallest assumption, the associative law of $1$, $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then deduce other
 
@@ -88,7 +88,7 @@ let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"dis
 $
   forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
 $
-You can change the $ℕ$ rational number interval nesting to a general rational number interval whose length #link(<hom-limit>)[limit] tends to zero $⊂$ #link(<maximal-linear-order>)[linearly ordered chain] or a more general rational number interval whose length tends to zero (maximal) #link(<net>)[net]
+You can change the $ℕ$ rational number interval nesting to a general rational number interval whose length #raw("#link(<hom-limit>)[limit]") tends to zero $⊂$ #raw("#link(<maximal-linear-order>)[linearly ordered chain]") or a more general rational number interval whose length tends to zero (maximal) #raw("#link(<net>)[net]")
 
 A rational number interval is a subset $A ⊂ ℚ$ with property order uninterrupted 
 
@@ -117,10 +117,10 @@ $
 - #tag("add-real") $ℝ$ addition. let $x,y ∈ ℝ$
 #indent[  
   $
-    x + y &:= (ℚ_(< x) + ℚ_(< y) , ℚ_(> x) + ℚ_(>  y)) 
+    x + y &:=&(ℚ_(< x) + ℚ_(< y) , ℚ_(> x) + ℚ_(>  y)) 
     &&"expect" (ℚ_(< x + y) , ℚ_(>  x + y)) \
 
-    -x &:= (- ℚ_(> x), - ℚ_(< x)) 
+    -x &:=&(- ℚ_(> x), - ℚ_(< x)) 
     &&"expect" (ℚ_(< -x),ℚ_(>  -x))
   $
   ]
@@ -129,10 +129,10 @@ Because of the existence of $< 0$, multiplication does not preserve order. But t
 - #tag("multiply-real") $ℝ$ multiplication. let $x,y > 0$
 #indent[
   $
-    x ⋅ y &:= (ℚ_((0,x)) ⋅ ℚ_((0,y)) , ℚ_((x,∞)) ⋅ ℚ_((y,∞))) 
+    x ⋅ y &:=&(ℚ_((0,x)) ⋅ ℚ_((0,y)) , ℚ_((x,∞)) ⋅ ℚ_((y,∞))) 
     && "expect" (ℚ_((0,x y)) , ℚ_((x y,∞))) \
 
-    1/x &:= (1/(ℚ_((x,∞))) , 1/(ℚ_((0,x)))) 
+    1/x &:=&(1/(ℚ_((x,∞))) , 1/(ℚ_((0,x)))) 
     && "expect" (ℚ_((0,1/x)),ℚ_((1/x,∞)))
   $
 ]
@@ -151,21 +151,21 @@ $ℝ$ completeness #tag("completeness-real")
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
 
-  #tag("monotone-convergence") monotone bound #link(<limit-sequence-real>)[convergence] _Proof_ use exact-bound
+  #tag("monotone-convergence") monotone bound #raw("#link(<limit-sequence-real>)[convergence]") _Proof_ use exact-bound
 ]
 #tag("nested-closed-interval-theorem") Nested interval theorem
 #indent[
   Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ and infimum $a_0$ for the endpoints with $a_0 <= a_1$ to get the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 ] 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
-#tag("closed-interval-net-theorem") Closed interval #link(<net>)[net] $#B$ intersection is non-empty $⋂ #B != ∅$
+#let B = c-bf("B")
+#let C = c-bf("C")
+#tag("closed-interval-net-theorem") Closed interval #raw("#link(<net>)[net]") $#B$ intersection is non-empty $⋂ #B != ∅$
 
 _Proof_
 #indent[
   Supplement the net $#B$ with all finite intersections
 
-  Take a #link(<maximal-linear-order>)[maximal linearly ordered chain] $#C$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
+  Take a #raw("#link(<maximal-linear-order>)[maximal linearly ordered chain]") $#C$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
 
   By the linear order maximality of $#C$, intuitively, the closed interval $⋂ #C$ will be smaller than all closed intervals of $#B$, so $⋂ #C subset ⋂ #B$
 
@@ -204,9 +204,9 @@ $ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) 
 
   - $a_k = 1 + 1/k$
     $ 
-      sup_(n in ℕ) {a_n} &= 2 \ 
-      sup_(n >= k) {a_k} &= 1 + 1/k \
-      lim_(n -> ∞) sup_(n >= k) {a_k} &= 1 
+      sup_(n in ℕ) {a_n} &=&2 \ 
+      sup_(n >= k) {a_k} &=&1 + 1/k \
+      lim_(n -> ∞) sup_(n >= k) {a_k} &=&1 
     $
   - $a_k = 1 + (-1)^k$
 
@@ -242,7 +242,7 @@ Sequence $ℕ -> ℝ$ or net $#B$ converges to $a$ <==> limit-distance-vanish
 
 #tag("uncountable-real") The real number is uncountable $|ℕ| < |ℝ|$ 
 #indent[
-  It has been proved that $|ℕ| < |Subset(ℕ)|$. cf. #link(<cardinal-increase>)[]
+  It has been proved that $|ℕ| < |Subset(ℕ)|$. cf. #raw("#link(<cardinal-increase>)[]")
 
   recall ${0,1}^ℕ ≃ (ℕ -> "bool") ≃ Subset(ℕ)$
 
@@ -271,8 +271,8 @@ Sequence $ℕ -> ℝ$ or net $#B$ converges to $a$ <==> limit-distance-vanish
       Compare ${0,1}^ℕ$, $1/2^(m_1) + 1/2^(m_2) + ⋯$ vs $1/2^(n_1) + 1/2^(n_1 + n_2) + ⋯$
       
       $ 
-        m_1 &= n_1 \ 
-        m_2 &= n_1 + n_2 \ 
+        m_1 &=&n_1 \ 
+        m_2 &=&n_1 + n_2 \ 
         &⋯
       $
       

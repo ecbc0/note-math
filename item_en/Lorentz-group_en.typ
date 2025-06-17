@@ -6,16 +6,16 @@
   let $A = mat(τ,v^⊺;u,a) ∈ SO(1,3)$ where $τ in ℝ, u,v ∈ ℝ^(1,3), a in "Matrix"(3,ℝ)$
   $
     A 
-    &= mat(1;, R) mat((1 + v^⊺ v)^(1/2), v^⊺; v, (𝟙 + v v^⊺)^(1/2)) 
+    &=&mat(1;, R) mat((1 + v^⊺ v)^(1/2), v^⊺; v, (𝟙 + v v^⊺)^(1/2)) 
   $
   (Using $A in SO(1,3) ==> A^⊺ η A = η = A η A^⊺$ and polar decomposition of positive definite symmetric matrix) 
   
   where 
   $
-    a &= R (a^⊺ a)^(1/2) & \
-    a^⊺ a &= 𝟙 + v v^⊺ \
-    τ^2 &= 1 + v^⊺ v = 1 + u^⊺ u \  
-    a v &= τ u 
+    a &=&R (a^⊺ a)^(1/2) & \
+    a^⊺ a &=&𝟙 + v v^⊺ \
+    τ^2 &=&1 + v^⊺ v = 1 + u^⊺ u \  
+    a v &=&τ u 
   $
   $B(v) = mat((1 + v^⊺ v)^(1/2), v^⊺; v, (𝟙 + v v^⊺)^(1/2))$ is boost, map $(1,0)$ to $(τ,v)$
   
@@ -31,8 +31,8 @@
 
   in $SO(3)$, $θ ∈ [0,π], θ_1,θ_2 ∈ [0,2 π]$
   $
-    &quad R(θ,θ_1,θ_2) \
-    &= mat(
+    &quad& R(θ,θ_1,θ_2) \
+    &=&mat(
       1;
       , cos θ_1, - sin θ_1;
       , sin θ_1, cos θ_1
@@ -52,14 +52,14 @@
   $
     R(θ,θ_1,θ_2) 
     
-    &= mat(e^(1/2 θ_1 #i) ; , e^(- 1/2 θ_1 #i)) 
+    &=&mat(e^(1/2 θ_1 #i) ; , e^(- 1/2 θ_1 #i)) 
     ⋅ mat(
     cos 1/2 θ, #i sin 1/2 θ;
     #i sin 1/2 θ, cos 1/2 θ
     ) 
     ⋅ mat(e^(1/2 θ_2 #i) ; , e^(- 1/2 θ_2 #i)) \
     
-    &= mat(
+    &=&mat(
       cos 1/2 θ ⋅ e^(1/2 (θ_1 + θ_2) #i), #i sin 1/2 θ ⋅ e^(1/2 (θ_1 - θ_2) #i);
       #i sin 1/2 θ ⋅ e^(- 1/2 (θ_1 - θ_2) #i), cos 1/2 θ ⋅ e^(- 1/2 (θ_1 + θ_2) #i)
     )
@@ -71,8 +71,8 @@
 
   in $SO(1,3)$
   $
-    &quad B(φ,φ_1,φ_2) \
-    &= mat(
+    &quad& B(φ,φ_1,φ_2) \
+    &=&mat(
       cosh φ_1, sinh φ_1;
       sinh φ_1, cosh φ_1;
       ,, 1;
@@ -94,14 +94,14 @@
   $
     B(φ,φ_1,φ_2) 
     
-    &= mat(e^(1/2 φ_1) ; , e^(- 1/2 φ_1)) 
+    &=&mat(e^(1/2 φ_1) ; , e^(- 1/2 φ_1)) 
     ⋅ mat(
     cosh 1/2 φ, sinh 1/2 φ;
     sinh 1/2 φ, cosh 1/2 φ
     ) 
     ⋅ mat(e^(1/2 φ_2) ; , e^(- 1/2 φ_2)) \
     
-    &= mat(
+    &=&mat(
       cosh 1/2 φ ⋅ e^(1/2 (φ_1 + φ_2)), sinh 1/2 φ ⋅ e^(1/2 (φ_1 - φ_2));
       sinh 1/2 φ ⋅ e^(- 1/2 (φ_1 - φ_2)), cosh 1/2 φ ⋅ e^(- 1/2 (φ_1 + φ_2))
     )
@@ -111,11 +111,11 @@
 #tag("Lorentz-group-Lie-bracket") $so(1,3)$ with boost and rotation decomposition $b + r = (φ_1 b_1 + φ_2 b_2 + φ_3 b_3) + (θ_1 r_1 + θ_2 r_2 + θ_3 r_3)$ and Lie-bracket
 #indent[
   $
-    b × b &= - r \
-    b × r &= b \
-    r × b &= b \
-    r × r &= r \
-    b ⋅ r &= r ⋅ b
+    b × b &=&- r \
+    b × r &=&b \
+    r × b &=&b \
+    r × r &=&r \
+    b ⋅ r &=&r ⋅ b
   $ 
   Where $×$ mimics $ℝ^3$ cross product. *Example* $b × b = vec([b_2,b_3],[b_3,b_1],[b_1,b_2])$
   
@@ -123,9 +123,9 @@
 
   Written to mimic $ℂ^3$ cross product
   $
-    1/2 (r + b #i) × 1/2 (r + b #i) &= 1/2 #i (r + b #i) \
-    (r + b #i) × (r - b #i) &= 0 \
-    (r + b #i) ⋅ (r - b #i) &= r^2 + b^2
+    1/2 (r + b #i) × 1/2 (r + b #i) &=&1/2 #i (r + b #i) \
+    (r + b #i) × (r - b #i) &=&0 \
+    (r + b #i) ⋅ (r - b #i) &=&r^2 + b^2
   $
 ]
 
@@ -148,11 +148,11 @@ $SO(1,3)$ or $SL(2,ℂ)$ act on $ℝ^(1,3)$
 
 #tag("isotropy-on-lightcone") *Prop* $SO(1,3)$ acting on lightcone is similar to $SO(2) ⋊ ℝ^2$ (exactly the $ℝ^2$ Euclidean affine group)
 
-_Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor technology]
+_Proof_ Using #raw("#link(<spacetime-momentum-aciton-spinor-representation>)[spinor technology]")
 #indent[
-  *Prop* $SL(2,ℂ)$ acting on lightcone (not projective-lightcone), #link(<isotropy>)[] is similar to $#U (1) ⋊ ℂ$
+  *Prop* $SL(2,ℂ)$ acting on lightcone (not projective-lightcone), #raw("#link(<isotropy>)[]") is similar to $#U (1) ⋊ ℂ$
 
-  $SL(2,ℂ)$ is #link(<action-surjective>)[surjective action], orbit number $1$, so calculate isotropy #link(<isotropy-in-same-orbit-is-isom>)[only need to consider] one point
+  $SL(2,ℂ)$ is #raw("#link(<action-surjective>)[surjective action]"), orbit number $1$, so calculate isotropy #raw("#link(<isotropy-in-same-orbit-is-isom>)[only need to consider]") one point
 
   - $c = 0, |a|^2 = 1$ is light cone isotropy
   - $c = 0, |a|^2 in ℝ$ is a scaling of $vec(1,1,0,0)$
@@ -160,7 +160,7 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
   
   ==> isotropy $A = mat(e^θ, b;, e^(- θ))$ where $θ ∈ Im(ℂ)$
 
-  Similar to the calculation of #link(<isotropy-on-projective-lightcone>)[] , here it will be similar to $#U (1) ⋊ ℂ$
+  Similar to the calculation of #raw("#link(<isotropy-on-projective-lightcone>)[]") , here it will be similar to $#U (1) ⋊ ℂ$
 ]
 
 #tag("isotropy-on-lightcone-intuition") Intuition of the isotropy-group of orbit lightcone. According to
@@ -189,7 +189,7 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
     - $r_3$ is rotation in $p_1,p_2$
     - $b_2$ is boost in $p_0,p_2$
     - $b_2 - r_3$ and $b_3 - r_2$ are analogous to lightcone coordinate $p_0 ± p_1$, keeping $vec(1,1,0,0)$
-
+    
     Or written as
     $
       b_1, r_1 \
@@ -209,9 +209,9 @@ _Proof_ Using #link(<spacetime-momentum-aciton-spinor-representation>)[spinor te
   #indent[
     let $z = p_0 + p_1, z^*' = p_0 - p_1, w = p_2 + p_3 #i, w^* = p_2 - p_3 #i$. metric will be $|z|'^2 + |w|^2 = z z^*' + w w^*$
     $
-      &quad mat(1,b;,1) mat(z,w;w^*,z^*') mat(1,;b^*,1) \
+      &quad& mat(1,b;,1) mat(z,w;w^*,z^*') mat(1,;b^*,1) \
 
-      &= mat(z + |b|^2 z^*' + 2 Re(b w), w + b z^*'; w^* + b^* z^*' , z^*')
+      &=&mat(z + |b|^2 z^*' + 2 Re(b w), w + b z^*'; w^* + b^* z^*' , z^*')
     $
     in $ℝ^(1,3)$
     $

@@ -34,8 +34,8 @@ $ℝ^(1,3)$ δ diffeomorphism of field $Δ ϕ$, 在边界是零 (边界 of $ℝ^
 
 $
   integral_(ℝ^(1,3)) #d x Re (∂^† (Δ ϕ^* ∂ ϕ)) 
-  &= lim_(r -> ∞) integral_(ℚ^(1,3)(± r)) (Δ ϕ^* ∂ ϕ) ⋅ n \
-  &= 0
+  &=& lim_(r -> ∞) integral_(ℚ^(1,3)(± r)) (Δ ϕ^* ∂ ϕ) ⋅ n \
+  &=& 0
 $
 作用量的微分
 $
@@ -87,11 +87,11 @@ $
 
 *Question* #tag("motivation-of-plane-wave-solution")
 #indent[
-  平面波的动机? 启发自常系数线性 ODE 的解的 $exp$ 的出现, 特别是谐振子 eq $(#d^2 x)/(#d t^2) ± ω^2 x = 0$, 类似 #link(<harmonic-oscillator>)[谐振子] 的一阶化 $mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)$, 对 KG 方程
+  平面波的动机? 启发自常系数线性 ODE 的解的 $exp$ 的出现, 特别是谐振子 eq $(#d^2 x)/(#d t^2) ± ω^2 x = 0$, 类似 #raw("#link(<harmonic-oscillator>)[谐振子]") 的一阶化 $mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)$, 对 KG 方程
   $
     mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)
   $
-  进行 #link(<exponential-of-vector-field>)[$exp$ 化] 或者 #link(<integral-curve>)[积分曲线]
+  进行 #raw("#link(<exponential-of-vector-field>)[$exp$ 化]") 或者 #raw("#link(<integral-curve>)[积分曲线]")
 
   三角情况
   $
@@ -109,8 +109,8 @@ $
   或者写为复指数的形式 
   $
     ϕ(x) 
-    &= 1/2 (ϕ(0) - #i (p ⋅ ψ(0))/(m^2)) e^(#i p x) + 1/2 (ϕ(0) + #i (p ⋅ ψ(0))/(m^2)) e^(- #i p x) \
-    &=: a (p, #i) e^(#i p x) + a (p, - #i) e^(- #i p x)
+    &=& 1/2 (ϕ(0) - #i (p ⋅ ψ(0))/(m^2)) e^(#i p x) + 1/2 (ϕ(0) + #i (p ⋅ ψ(0))/(m^2)) e^(- #i p x) \
+    &=:& a (p, #i) e^(#i p x) + a (p, - #i) e^(- #i p x)
   $
   双曲情况类似
 ]

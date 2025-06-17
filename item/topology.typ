@@ -1,16 +1,16 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B")
+#let T = c-bf("T")
 
-#tag("topology") 拓扑 := $X$ 每个点都有一个 #link(<net>)[点网] $#B (x)$. 这样的点网系统记为 $#T _X$, 是 Euclidean 空间的类似物
+#tag("topology") 拓扑 := $X$ 每个点都有一个 #raw("#link(<net>)[点网]") $#B (x)$. 这样的点网系统记为 $#T _X$, 是 Euclidean 空间的类似物
 
 *Example* Euclidean 空间的所有球 $𝔹(x,r)$ 组成的点网系统
 
-#link(<Minkowski-space>)[] 中, 一点 $x$ 有多个不极限等价的网
+#raw("#link(<Minkowski-space>)[]") 中, 一点 $x$ 有多个不极限等价的网
 
-#tag("continuous") 拓扑连续 := $f : X -> Y$ 在每一点都是 #link(<hom-limit>)[]
+#tag("continuous") 拓扑连续 := $f : X -> Y$ 在每一点都是 #raw("#link(<hom-limit>)[]")
 
 let $A ⊂ X$
 

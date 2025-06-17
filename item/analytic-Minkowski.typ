@@ -13,7 +13,7 @@
 
   $⟨v,w⟩ > 0$
 
-  $|v+w| >= |v| + |w|$ (#link(<quadratic-form-inequality-Minkowski>)[三角不等式])
+  $|v+w| >= |v| + |w|$ (#raw("#link(<quadratic-form-inequality-Minkowski>)[三角不等式]"))
 
   $|v+w| > |v|,|w|$
 ]
@@ -26,7 +26,7 @@ $|x_1 + ⋯ + x_n| >= |x_1| + ⋯ + |x_n|$
 
 $|x_1 + ⋯ + x_n| >= |x_1 + ⋯ + x_(n-1)|$, or $n ⇝ |x_1 + ⋯ + x_n| >= 0$ 单调递增 #tag("increasing-length-of-time-future-series")
 
-let $v,w$ time future, not co-linear. $span(v,w) ≃ ℝ^(1,1)$ cf. #link(<signature-of-2d-subspace-of-spacetime>)[]
+let $v,w$ time future, not co-linear. $span(v,w) ≃ ℝ^(1,1)$ cf. #raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")
 
 通过 $SO(1,n)$ 变换, 可以假设测地线球的中心是 $(0 ,…, 0, 1)$
 
@@ -48,16 +48,16 @@ _Proof_
 
   双曲线的测地线长度 $r$ 是双射. 双曲线映射到到空间轴是单射. 复合后是 $sinh r$ 保持单调的双射 
 
-  #image("../image/hyperbolic-to-space-bijective.jpeg", width: 60%)
+  #html.elem("img", attrs: (src: "../image/hyperbolic-to-space-bijective.jpeg", width: "60%"))
   $ 
     argh ((v+w)/(|v+w|)) 
-    &-> im (v+w)/(|v+w|) &(im "of" ℂ_"split") \
-    &= (|v| sinh ϕ + |w| sinh ψ)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (ψ - ϕ))^(1/2))  & cosh >= 1 \
-    &<= (|v| sinh R + |w| sinh R)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (R - R))^(1/2)) \
-    &= sinh R \
+    &->&im (v+w)/(|v+w|) &(im "of" ℂ_"split") \
+    &=&(|v| sinh ϕ + |w| sinh ψ)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (ψ - ϕ))^(1/2))  & cosh >= 1 \
+    &<=&(|v| sinh R + |w| sinh R)/((|v|^2 + |w|^2 + 2 |v| |w| cosh (R - R))^(1/2)) \
+    &=&sinh R \
     
     abs(argh ((v+w)/(|v+w|))) 
-    &<= R
+    &<=&R
   $
 ]
 let $x_n$ 方向 $x_n/(|x_n|)$ in $ℍ𝕪^n (time,future)$ 测地线球 $𝔹$
@@ -72,22 +72,22 @@ _Proof_ use $span(x_1 + ⋯ + x_(n-1) , x_n)$ signature $1,1$, 嵌入 $ℍ𝕪$,
 
   ==> $⟨v,w⟩ <= |v| |w| cosh(2 R)$
 ]
-_Proof_ use $⟨v,w⟩ = |v| |w| cosh (ψ - ϕ)$ cf. #link(<hyperbolic-cosine-formula>)[]
+_Proof_ use $⟨v,w⟩ = |v| |w| cosh (ψ - ϕ)$ cf. #raw("#link(<hyperbolic-cosine-formula>)[]")
 
 let $x_n$ time future, 方向 $x_n/(|x_n|)$ 在 $ℍ𝕪^n (time,future)$ 测地线球 $𝔹$ with 半径 $R$
 
 $
   |x_1 + ⋯ + x_n|^2 
-  &= |x_1|^2 + ⋯ + |x_n|^2 + 2 sum_(1 <= i < j <= n ) ⟨x_i,x_j⟩ \
-  &<= |x_1|^2 + ⋯ + |x_n|^2 + 2 cosh(2 R) sum_(1 <= i < j <= n ) |x_i| |x_j| \
+  &=&|x_1|^2 + ⋯ + |x_n|^2 + 2 sum_(1 <= i < j <= n ) ⟨x_i,x_j⟩ \
+  &<=&|x_1|^2 + ⋯ + |x_n|^2 + 2 cosh(2 R) sum_(1 <= i < j <= n ) |x_i| |x_j| \
 $ 
 
 ==> use $cosh >= 1$
 $
   |x_1 + ⋯ + x_n|^2 
-  &<= cosh(2 R) (|x_1| + ⋯ + |x_n|)^2
+  &<=&cosh(2 R) (|x_1| + ⋯ + |x_n|)^2
 $
-#tag("absolute-convergence-Minkowski-distance") $sum_(i = 1)^∞ |x_i| < ∞$ ==> #link(<increasing-length-of-time-future-series>)[单调递增] 有界 $lim_(n -> ∞) |x_1 + ⋯ + x_n| < ∞$ 存在极限
+#tag("absolute-convergence-Minkowski-distance") $sum_(i = 1)^∞ |x_i| < ∞$ ==> #raw("#link(<increasing-length-of-time-future-series>)[单调递增]") 有界 $lim_(n -> ∞) |x_1 + ⋯ + x_n| < ∞$ 存在极限
 
 #tag("Minkowski-power-series") 
 #indent[
@@ -109,7 +109,7 @@ _Proof_ of convergence in direction space
   #indent[
     *Question* 有无更直接的证明
     
-    use #link(<isom-top-hyperbolic-Euclidean>)[]. $ℝ^(1,n)$ 距离限制在 $ℍ𝕪^n (time,future)$ 等价于作为 Riemman manifold 的测地线距离, $ℍ𝕪^n$ 两个元素相减是 $ℝ^(1,n)$ 类空 
+    use #raw("#link(<isom-top-hyperbolic-Euclidean>)[]"). $ℝ^(1,n)$ 距离限制在 $ℍ𝕪^n (time,future)$ 等价于作为 Riemman manifold 的测地线距离, $ℍ𝕪^n$ 两个元素相减是 $ℝ^(1,n)$ 类空 
     
     we prove $(x_1 + ⋯ + x_n)/(|x_1 + ⋯ + x_n|)$ Cauchy in $ℍ𝕪^n (time,future)$
     
@@ -125,14 +125,14 @@ _Proof_ of convergence in direction space
 
     $ 
       0 
-      &<= - ⟨ v/(|v|) - (w)/(|w|) ⟩^2 \
-      &= - 2 (1 - ⟨v/(|v|),w/(|w|)⟩) \
-      &= 2 ((⟨v,w⟩ - |v| |w|)/(|v| |w|))
+      &<=&- ⟨ v/(|v|) - (w)/(|w|) ⟩^2 \
+      &=&- 2 (1 - ⟨v/(|v|),w/(|w|)⟩) \
+      &=&2 ((⟨v,w⟩ - |v| |w|)/(|v| |w|))
     $
 
     use $1/(|v| |w|) = 1/(|x_1 + ⋯ + x_(n+m)| |x_1 + ⋯ + x_(n)|) <= 1/(|x_1|^2)$ (or other) 不影响极限 $->_(n->∞) 0$  
 
-    use #link(<sum-preserve-time-future>)[]. $w - v$ 类时, $|w| > |v|$. use #link(<triangel-inequality-Minkowski>)[三角不等式] $|w| >= |w - v| + |v|$, use Cauchy $|w| - |v| < ε$ 
+    use #raw("#link(<sum-preserve-time-future>)[]"). $w - v$ 类时, $|w| > |v|$. use #raw("#link(<triangel-inequality-Minkowski>)[三角不等式]") $|w| >= |w - v| + |v|$, use Cauchy $|w| - |v| < ε$ 
     
     ==> $|w - v| <= |w| - |v| < ε$
 
@@ -151,19 +151,19 @@ _Proof_ of convergence in direction space
     for $y_n -> y$ use 双曲余弦
     $
       ⟨y,z⟩ 
-      &= |y| |z| cosh (|ϕ - ψ|) \
-      &= lim_(n -> ∞) |y_n| |z| cosh(|ϕ_n - ψ|) &quad "distance" |y_n| and "direction" ϕ_n \
-      &= lim_(n -> ∞) ⟨y_n,z⟩
+      &=&|y| |z| cosh (|ϕ - ψ|) \
+      &=&lim_(n -> ∞) |y_n| |z| cosh(|ϕ_n - ψ|) &quad& "distance" |y_n| and "direction" ϕ_n \
+      &=&lim_(n -> ∞) ⟨y_n,z⟩
     $
   ]
   - $y - (x_1 + ⋯ + x_n)$ 类时
   #indent[
     $
       ⟨ y - (x_1 + ⋯ + x_n) ⟩^2 
-      &= ⟨ y - y_n ⟩^2 \
-      &= y^2 + y_n^2 - 2 ⟨y,y_n⟩ \
-      &= lim_(m -> ∞) (y_(n+m)^2 + y_n^2 - 2 ⟨y_(n+m),y_n⟩) \
-      &= lim_(m -> ∞) ⟨ y_(n+m) - y_n ⟩^2
+      &=&⟨ y - y_n ⟩^2 \
+      &=&y^2 + y_n^2 - 2 ⟨y,y_n⟩ \
+      &=&lim_(m -> ∞) (y_(n+m)^2 + y_n^2 - 2 ⟨y_(n+m),y_n⟩) \
+      &=&lim_(m -> ∞) ⟨ y_(n+m) - y_n ⟩^2
     $
     where $⟨ y_(n+m) - y_n ⟩^2 = ⟨ x_(n+1) + ⋯ + x_(n+m) ⟩^2 >= 0$
   ]
@@ -171,15 +171,15 @@ _Proof_ of convergence in direction space
   #indent[
     $
       ⟨y - (x_1 + ⋯ + x_n) , x_1 + ⋯ + x_n⟩ 
-      &= ⟨y,y_n⟩ - ⟨y_n,y_n⟩ \
-      &= (lim_(m -> ∞) ⟨y_(n+m),y_n⟩) - ⟨y_n,y_n⟩ \
-      &= lim_(m -> ∞) ⟨y_(n+m) - y_n , y_n⟩
+      &=&⟨y,y_n⟩ - ⟨y_n,y_n⟩ \
+      &=&(lim_(m -> ∞) ⟨y_(n+m),y_n⟩) - ⟨y_n,y_n⟩ \
+      &=&lim_(m -> ∞) ⟨y_(n+m) - y_n , y_n⟩
     $
     where $⟨y_(n+m) - y_n , y_n⟩ = ⟨x_(n+1) + ⋯ + x_(n+m),x_1 + ⋯ + x_n⟩ >= 0$
     $
       lim_(n -> ∞)⟨ y - (x_1 + ⋯ + x_n) ⟩^2 
-      &= lim_(n -> ∞) (y^2 + y_n^2 - 2 ⟨y,y_n⟩) \
-      &= 0
+      &=&lim_(n -> ∞) (y^2 + y_n^2 - 2 ⟨y,y_n⟩) \
+      &=&0
     $
   ]
 ]
@@ -199,11 +199,11 @@ let $A_n in Lin(⊙^n ℝ^(1,3) -> ℝ^(1,3))$
 
   - 定义范数给出绝对收敛
   #indent[
-    use 几何级数控制 like #link(<linear-map-induced-norm>)[the case of Euclidean]
+    use 几何级数控制 like #raw("#link(<linear-map-induced-norm>)[the case of Euclidean]")
     $ 
-      |A_n|(R) &:= sup_(v in ℍ𝕪^n \ |argh(v)| <= R) |A_n (v^n)| = sup_(|argh(v)| <= R) (|A_n (v^n)|)/(|v|^n) \
+      |A_n|(R) &:=&sup_(v in ℍ𝕪^n \ |argh(v)| <= R) |A_n (v^n)| = sup_(|argh(v)| <= R) (|A_n (v^n)|)/(|v|^n) \
       
-      ρ(R) &:= limsup_(n in ℕ) {|A_n|(R)^(1/n)} ^(-1)
+      ρ(R) &:=&limsup_(n in ℕ) {|A_n|(R)^(1/n)} ^(-1)
     $
     ==> $|argh(v)| < R$ and $|v| < ρ(R)$ ==> $sum |A_n (v^n)| <= sum ((|v|)/(ρ(R)))^n = 1/(1 - (|v|)/(ρ(R))) - 1 < ∞$
   ]
@@ -219,7 +219,7 @@ let $A_n in Lin(⊙^n ℝ^(1,3) -> ℝ^(1,3))$
 
 *Question* let $f : ℝ^(1,d) -> ℝ^(1,d)$ Euclidean 解析 $ℝ^(1+d)$, $#d f in SO(1,d)$ ==> $f$ Minkowski 解析?
 
-*Question* 对于 Minkowski 解析, 考虑对应到 Euclidean 的 #link(<analytic-continuation>)[], #link(<power-series-space>)[], #link(<analytic-space>)[] 
+*Question* 对于 Minkowski 解析, 考虑对应到 Euclidean 的 #raw("#link(<analytic-continuation>)[]"), #raw("#link(<power-series-space>)[]"), #raw("#link(<analytic-space>)[]") 
 
 多了 $|argh(v)| <= R$, 参数 $R$
 

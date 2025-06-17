@@ -5,7 +5,7 @@ The power function order in the power series $sum_(0 .. ∞) a_n v^n$ is differe
 
 One-dimensional case begins
 
-#link(<geometric-series>)[Geometric series]
+#raw("#link(<geometric-series>)[Geometric series]")
 
 $ |a| < 1 ==> sum_(n ∈ ℕ) a^n = lim_(n -> ∞) (1 - a^(n+1))/(1-a) = 1/(1-a) $
 
@@ -15,10 +15,10 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
 #tag("convergence-radius-1d") Radius of convergence
 #indent[
-  (cf. #link(<limsup>)[])
+  (cf. #raw("#link(<limsup>)[]"))
   $ 
-    R &:= 1/(limits(limsup)_(n -> ∞) {|a_n|^(1/n)}) in [0,∞] \
-    "or " 1/R &:= limsup_(n -> ∞) {|a_n|^(1/n)}
+    R &:=&1/(limits(limsup)_(n -> ∞) {|a_n|^(1/n)}) in [0,∞] \
+    "or " 1/R &:=&limsup_(n -> ∞) {|a_n|^(1/n)}
   $
   ==> $|a_n|^(1/n) <= 1/R$
 ]
@@ -28,7 +28,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
   _Proof_ 
   #indent()[  
-    use #link(<geometric-series-test>)[geometric series test] and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
+    use #raw("#link(<geometric-series-test>)[geometric series test]") and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
 
     $ abs(sum_(n in ℕ) a_n v^n) <= sum_(n ∈ ℕ) ((|v|)/R)^n = 1/(1 - (|v|)/R) $
   ]
@@ -38,7 +38,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 ]
 #tag("uniformaly-absolutely-convergence-analytic")
 #indent[
-  use $|v| <= r < R$. use #link(<geometric-serise-test>)[geometric series control]
+  use $|v| <= r < R$. use #raw("#link(<geometric-serise-test>)[geometric series control]")
 
   in the closed ball $Closed(𝔹)(r)$ with radius $r < R$, $sum a_n v^n$ uniformly absolutely converges 
 ]
@@ -53,15 +53,15 @@ Function defined by power series within the radius of convergence
   $R > 0$ ==> continuous
 
   $|f(x+v) - f(x)| 
-  &= abs(sum_(n = 0)^∞ a_n v^n - a_0) \
-  &<= sum_(n=1)^∞ ((|v|)/R)^n \
-  &= 1/(1 - (|v|)/R) - 1$
+  &=&abs(sum_(n = 0)^∞ a_n v^n - a_0) \
+  &<=&sum_(n=1)^∞ ((|v|)/R)^n \
+  &=&1/(1 - (|v|)/R) - 1$
 
   $lim_(v -> 0) 1/(1 - (|v|)/R) - 1 = 0$
 ]
-Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
+Extending the #raw("#link(<change-base-point-polynomial>)[]") of polynomials to series
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+#show "Δ": it => text(it)
 
 #tag("change-base-point-analytic") 
 #indent[
@@ -73,7 +73,7 @@ Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
   $
   There is also a non-zero radius of convergence $R' > 0$ at $x+Δ$. (Figure) According to the triangle inequality, $R' >= R - |Δ|$
 
-  #image("../image/change-base-point-analytic.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/change-base-point-analytic.jpeg", width: "30%"))
 
 ]
 *Example* 
@@ -94,7 +94,7 @@ Now consider the higher-dimensional case. $𝕂^d -> 𝕂^(d')$ power series
 
 Note the $|v|$ symmetry, for example $#O (d)$ of $ℝ^d$, $#U (d)$ of $ℂ^d$
 
-Generalize the polynomial function #link(<polynomial-function>)[] to the power series $sum A_n (v^n)$
+Generalize the polynomial function #raw("#link(<polynomial-function>)[]") to the power series $sum A_n (v^n)$
 
 Unlike one-dimensional, in higher dimensions, generally there is no $|A_n (v^n)| = |A_n| |v|^n$. There isn't even a definition for $|A_n|$
 
@@ -122,7 +122,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 
 #tag("absolute-convergence-analytic")
 #indent[
-  #link(<absolute-convergence-analytic-1d>)[same as] $𝕂^1$
+  #raw("#link(<absolute-convergence-analytic-1d>)[same as]") $𝕂^1$
 
   - $|v| < R$ ==> $A_n (v^n)$ absolutely converges
 
@@ -130,7 +130,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 ]
 _Proof_ (of divergence) 
 #indent[
-  use #link(<linear-map-induced-norm>)[] $|A_n|$, there exists $v_n in 𝕂ℙ^(d-1)$ such that $|A_n ((v_n)^n)| ≈ |A_n|$
+  use #raw("#link(<linear-map-induced-norm>)[]") $|A_n|$, there exists $v_n in 𝕂ℙ^(d-1)$ such that $|A_n ((v_n)^n)| ≈ |A_n|$
 
   use $limsup$ definition, for infinitely many terms $n in ℕ$, $|A_n|^(1/n) ≈ limsup {|A_n|^(1/n)} = 1/R$
 
@@ -152,13 +152,13 @@ Another point of view: for each direction $v in 𝕂ℙ^(d-1)$, consider the rad
 
 Similar to one-dimensional case also have 
 
-- #link(<uniformaly-absolutely-convergence-analytic>)[]
+- #raw("#link(<uniformaly-absolutely-convergence-analytic>)[]")
   
-- #link(<analytic-imply-continuous>)[]
+- #raw("#link(<analytic-imply-continuous>)[]")
 
-- #link(<change-base-point-analytic>)[]
+- #raw("#link(<change-base-point-analytic>)[]")
 
-for $f(x+v) = sum A_n (v^n)$, the $n$-th order #link(<difference-polynomial>)[difference] gives 
+for $f(x+v) = sum A_n (v^n)$, the $n$-th order #raw("#link(<difference-polynomial>)[difference]") gives 
 
 $ n! A_n (v_1 ⋯ v_n) + o(v^n) $
 
@@ -176,20 +176,20 @@ $lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n)$ can recover the $n$-th order monomial
 #indent[
   $n$th order differential $#d^n f(x) in Lin(⊙^n 𝕂^d -> 𝕂^(d'))$
   $
-    #d^n f(x) (v_1 ⋯ v_n) &:= n! A_n (v_1 ⋯ v_n) \
+    #d^n f(x) (v_1 ⋯ v_n) &:=&n! A_n (v_1 ⋯ v_n) \
     
-    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
+    &=&lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
   $
 ]
 *Example* 
 #indent[
-  $ #d f(x)(v) &= lim_(t -> 0) 1/t (f(x + t v) - f(x)) $
+  $ #d f(x)(v) &=&lim_(t -> 0) 1/t (f(x + t v) - f(x)) $
   $ 
-    #d^2 f(x)(v_1 v_2) = lim_(t_1,t_2 -> 0) 1/(t_1 t_2) (
-      &+ f(x + t_1 v_1 + t_2 v_2) \
-      &- f(x + t_1 v_1) \
-      &- f(x + t_2 v_2) \
-      &+ f(x))
+    #d^2 f(x)(v_1 v_2) = lim_(t_1,t_2 -> 0) 1/(t_1 t_2) 
+      &+&f(x + t_1 v_1 + t_2 v_2) \
+      &-&f(x + t_1 v_1) \
+      &-&f(x + t_2 v_2) \
+      &+&f(x)
   $
 ]  
 The definition of difference and differential can be used for any function, it does not need to be a function defined by power series
@@ -205,22 +205,22 @@ $ (∂ f)/(∂ v) (x) := #d f(x)(v) = lim 1/t (f(x + t v) - f(x)) $
 Successive difference and difference quotient $#d^2 f(x)(v_1 v_2) =$
 $
   #d^2 f(x)(v_1 v_2) 
-  &=lim_(t_2) 1/(t_2) 
+  &=&lim_(t_2) 1/(t_2) 
   sum_(B_2 ⊂ {2}) lim_(t_1) 1/(t_1) 
   sum_(B_1 ⊂ {1}) (-1)^(|B_1|+|B_2|-2) 
   f(x + ...) \
 
-  &= lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
+  &=&lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
 
-  &= (∂^2 f)/(∂ v_2 ∂ v_1) (x)
+  &=&(∂^2 f)/(∂ v_2 ∂ v_1) (x)
 $
-#link(<successive-difference>)[Successive difference] does not depend on the order + limit exchange ==> $(∂^2 f)/(∂ v_1 ∂ v_2) = (∂^2 f)/(∂ v_2 ∂ v_1)$
+#raw("#link(<successive-difference>)[Successive difference]") does not depend on the order + limit exchange ==> $(∂^2 f)/(∂ v_1 ∂ v_2) = (∂^2 f)/(∂ v_2 ∂ v_1)$
 
 #tag("successive-derivative") Successive difference quotient   
   $ 
     (∂^n f)/(∂ v_1 ⋯ ∂ v_n) (x) 
-    &:= lim_(t_n -> 0) 1/(t_n) ((∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x + t_n v_n) - (∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x)) \ 
-    &= #d^n f(x)(v_1 ⋯ v_n) 
+    &:=&lim_(t_n -> 0) 1/(t_n) ((∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x + t_n v_n) - (∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x)) \ 
+    &=&#d^n f(x)(v_1 ⋯ v_n) 
   $
 ==> Directional derivative representation of power series $f(x+v) = sum 1/(n!) (∂^n f)/(∂ v^n) (x)$
 
@@ -234,17 +234,17 @@ The concept of successive difference quotient uses the subtraction of tangent ve
 
   and so on
 ]
-let $v = a_1 e_1 + ⋯ + a_d e_d$. use #link(<successive-derivative>)[], #link(<partial-derivative>)[]
+let $v = a_1 e_1 + ⋯ + a_d e_d$. use #raw("#link(<successive-derivative>)[]"), #raw("#link(<partial-derivative>)[]")
 
-==> Partial derivative representation of power series (also cf. #link(<multi-combination>)[])
+==> Partial derivative representation of power series (also cf. #raw("#link(<multi-combination>)[]"))
 $ 
   f(x+v) 
-  &= 
+  &=&
     sum_n 1/(n!) 
     sum_(i_1 ⋯ i_n = 1 ,…, d) 
     (∂^n f)/(∂ x_(i_1) ⋯ ∂ x_(i_n)) (x)
     a_(i_1) ⋯ a_(i_n) \
-  &= 
+  &=&
     sum_n 1/(n!) 
     sum_(k_1 + ⋯ + k_d = n)
     binom(n, k_1 ⋯ k_d) 
@@ -293,8 +293,8 @@ $
 #tag("differential-function") Differential function
   $
     mat( delim: #none ,
-      𝕂^d &⟶ Lin(⊙^n 𝕂^d -> 𝕂^(d')) ;
-      x &⟿ #d^n f(x)
+      𝕂^d ,⟶, Lin(⊙^n 𝕂^d -> 𝕂^(d')) ;
+      x ,⟿, #d^n f(x)
     ) 
   $
 Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using the power norm, it can be expanded as a power series
@@ -304,8 +304,8 @@ Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using t
   isomorphism
   $
     mat( delim: #none ,
-      Lin(⊙^m 𝕂^d -> Lin(⊙^n 𝕂^d -> 𝕂^(d'))) &⟶ Lin(⊙^(m+n) 𝕂^d -> 𝕂^(d')) ;
-      #d^m (#d^n f) &⟿ #d^(m+n) f
+      Lin(⊙^m 𝕂^d -> Lin(⊙^n 𝕂^d -> 𝕂^(d'))) ,⟶, Lin(⊙^(m+n) 𝕂^d -> 𝕂^(d')) ;
+      #d^m (#d^n f) ,⟿, #d^(m+n) f
     )
   $
   with 
@@ -316,7 +316,7 @@ Taking the range $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ as a linear space, and using t
 
   same norm $|#d^m (#d^n f)| = |#d^(m+n) f|$
 
-  same convergence radius (#link(<exponential-root-of-power-function>)[use] $lim_(m -> ∞) (m+n)^(1/m) = 1$)
+  same convergence radius (#raw("#link(<exponential-root-of-power-function>)[use]") $lim_(m -> ∞) (m+n)^(1/m) = 1$)
 ]
 _Proof_ (draft) Commutativity of derivatives $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
 
@@ -348,7 +348,7 @@ _Proof_
   - $f ≡ 0$ 
   - $exists a',b' in (a,b), a' < b', sign f(a') ≠ sign f(b')$ 
   
-  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #link(<mean-value-theorem-continuous>)[intermediate value theorem]
+  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #raw("#link(<mean-value-theorem-continuous>)[intermediate value theorem]")
 
   The intermediate value theorem uses the complete order of $ℝ$
   
@@ -366,13 +366,13 @@ Mean Value Theorem compact uniform linear control ver. + compact partition unifo
   #indent[
     $ f(x+v) = f(x) + integral_0^1 #d t space f'(x + t v) v $ 
     
-    by Fundamental Theorem of Calculus and #link(<chain-rule-1d>)[] and $(#d)/(#d t) (x + t v) = v$
+    by Fundamental Theorem of Calculus and #raw("#link(<chain-rule-1d>)[]") and $(#d)/(#d t) (x + t v) = v$
   
     remainder estimation, uniform linear control
     $ 
       f(x+v) - f(x) 
-      &= o(1) "or" O(v) \
-      &<= |v| sup_(t in [0,1]) |f'(x + t v)| 
+      &=&o(1) "or" O(v) \
+      &<=&|v| sup_(t in [0,1]) |f'(x + t v)| 
     $
     ]
   - Higher order 
@@ -382,16 +382,16 @@ Mean Value Theorem compact uniform linear control ver. + compact partition unifo
     by integration by parts 
     $
       1/m! #d^m f (x + t v) v^m 
-      &= - (((1-t)^m)/(m!) #d^m f(x + t v) v^m)|_0^1 \
-      &= - integral_0^1 #d t (#d)/(#d t) (((1-t)^m)/(m!) #d^m f(x + t v) v^m) \
-      &= integral_0^1 #d t (((1-t)^(m-1))/((m-1)!) #d^m f(x + t v) v^m) \
-      &quad  - integral_0^1 #d t (((1-t)^m)/(m!) #d^(m+1) f(x + t v) v^(m+1))
+      &=&- (((1-t)^m)/(m!) #d^m f(x + t v) v^m)|_0^1 \
+      &=&- integral_0^1 #d t (#d)/(#d t) (((1-t)^m)/(m!) #d^m f(x + t v) v^m) \
+      &=&integral_0^1 #d t (((1-t)^(m-1))/((m-1)!) #d^m f(x + t v) v^m) \
+      &quad&  - integral_0^1 #d t (((1-t)^m)/(m!) #d^(m+1) f(x + t v) v^(m+1))
     $
     remainder estimation, uniform $m+1$ order power control
 
     $ f(x+v) - sum_(n=0)^m 1/(n!) #d^n f(x)(v^n) 
-    &= o(v^m) "or" O(v^(m+1)) \
-    &<= 1/(m+1)! |v|^(m+1)  sup_(t in [0,1]) |#d^(m+1) f (x + t v)| $
+    &=&o(v^m) "or" O(v^(m+1)) \
+    &<=&1/(m+1)! |v|^(m+1)  sup_(t in [0,1]) |#d^(m+1) f (x + t v)| $
   ]
 ]
 let power series $sum A_n (v^n)$
@@ -400,9 +400,9 @@ let power series $sum A_n (v^n)$
 
 Calculating the coefficients after switching the base point of the power series uses the exchange of summation
 
-for polynomials, the summation is finite, the order of summation is exchanged, so switching the base point is well-defined #link(<change-base-point-polynomial>)[]
+for polynomials, the summation is finite, the order of summation is exchanged, so switching the base point is well-defined #raw("#link(<change-base-point-polynomial>)[]")
 
-However, the limit of infinite summation, if not absolutely convergent, is not always compatible with changing the order of summation #link(<series-rearrangement>)[]
+However, the limit of infinite summation, if not absolutely convergent, is not always compatible with changing the order of summation #raw("#link(<series-rearrangement>)[]")
 
 Switching the base point of a power series may change the domain of convergence
 
@@ -510,7 +510,7 @@ Attempt to define distance on the power series space. Inspired by
   
     $ ⨁_(n = 1)^∞ Lin(⊙^n 𝕂^d -> 𝕂^(d')) $
 
-    #link(<net>)[] (note: $|A|$ is #link(<linear-map-induced-norm>)[])
+    #raw("#link(<net>)[]") (note: $|A|$ is #raw("#link(<linear-map-induced-norm>)[]"))
   
     $ 𝔹(A,ε) := {B : forall n in ℕ_(>= 1), |A_n - B_n|^(1/n) < ε} $ (or $|A_n - B_n| < ε^n$)
 
@@ -547,12 +547,12 @@ The closeness of the converged values
   $abs( 
     sum_(n >= 1) A_n (v^n) - sum_(n >= 1) B_n (v^n) 
   )
-  &<= sum_(n >= 1) |A_n - B_n| |v|^n \ 
-  &<= sum_(n >= 1) ε^n |v|^n \
-  &= 1/(1 - ε |v|) - 1 \
-  &-> 0$
+  &<=&sum_(n >= 1) |A_n - B_n| |v|^n \ 
+  &<=&sum_(n >= 1) ε^n |v|^n \
+  &=&1/(1 - ε |v|) - 1 \
+  &->&0$
 ]
-#tag("Sobolev-space") for Sobolev anayltic space, try use almost-everywhere analytic + $integral abs(1/n! #d^n f)^(1/n)$ as the control function to approximate the objective function $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ is the #tag("weak-differential") of $ϕ$. (note: $|A|$ is #link(<linear-map-induced-norm>)[]) Or just use the almost-everywhere analytic space with analytic integral norm restrictions, or perform Cauchy net completion of this space with integral norm
+#tag("Sobolev-space") for Sobolev anayltic space, try use almost-everywhere analytic + $integral abs(1/n! #d^n f)^(1/n)$ as the control function to approximate the objective function $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ is the #tag("weak-differential") of $ϕ$. (note: $|A|$ is #raw("#link(<linear-map-induced-norm>)[]")) Or just use the almost-everywhere analytic space with analytic integral norm restrictions, or perform Cauchy net completion of this space with integral norm
 
 Weaker net control
 #indent[
@@ -576,12 +576,12 @@ Comparison of power series distance control at different base points
 
   $ 
     |A_m (x+Δ) - B_m (x+Δ)| 
-    &= abs( 
+    &=&abs( 
       sum_(n=m>=1)^∞ (A_n (x) - B_n (x)) binom(n,m,n-m) Δ^(n-m)
     ) \
-    &<= sum_(n=m>=1)^∞ ε^n binom(n,m,n-m) |Δ|^(n-m) \ 
-    &= ε^m sum_(p = 0)^∞ binom(p+m , m, p) |ε Δ|^p ("use" p = n-m) \
-    &= ε^m 1/((1-|ε Δ|)^(m+1)) 
+    &<=&sum_(n=m>=1)^∞ ε^n binom(n,m,n-m) |Δ|^(n-m) \ 
+    &=&ε^m sum_(p = 0)^∞ binom(p+m , m, p) |ε Δ|^p ("use" p = n-m) \
+    &=&ε^m 1/((1-|ε Δ|)^(m+1)) 
   $
 
   ==> $ |A_m (x+Δ) - B_m (x+Δ)|^(1/m) <= ε 1/((1-|ε Δ|)^(1 + 1/m)) $
@@ -610,7 +610,7 @@ Comparison of power series distance control at different base points
 
   let $f$ be analytic, with domain $D_f$
 
-  The #link(<net>)[mesh] of $f$
+  The #raw("#link(<net>)[mesh]") of $f$
   #indent[
     - let $ε > 0$
 
@@ -670,4 +670,4 @@ in analytic space and its net
 
 The properties of singularities within connected components are invariant under analytic homeomorphism
 
-#tag("homotopy-analytic") analytic #link(<homotopy>)[homotopy]
+#tag("homotopy-analytic") analytic #raw("#link(<homotopy>)[homotopy]")

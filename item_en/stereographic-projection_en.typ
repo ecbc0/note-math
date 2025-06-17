@@ -1,10 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
-#stack( dir: ltr,
-  image("../image/stereographic-projection-1.jpeg", width: 40%),
-  image("../image/stereographic-projection-2.jpeg", width: 50%)
-)
+
+  #html.elem("img", attrs: (src: "../image/stereographic-projection-1.jpeg", width: "40%"))
+  #html.elem("img", attrs: (src: "../image/stereographic-projection-2.jpeg", width: "50%"))
+
 Using quadratic form inversion $|x| x/(|x|) ⇝ 1/(|x|) x/(|x|)$. A type of conformal transformation
 
 $𝕊^(n-1)$ Stereographic projection coordinates of the North and South poles. $dmat( delim: #none ,

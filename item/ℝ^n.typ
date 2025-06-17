@@ -4,9 +4,9 @@
 $(ℝ,+,⋅)$ 代数结构 or 
 $
 & ℝ ∈ Set \
-& + : ℝ^2 -> ℝ \
-& ⋅ : ℝ^2 -> ℝ \
-& "property-real-algebra"
+&+& ℝ^2 -> ℝ \
+&⋅& ℝ^2 -> ℝ \
+&& "property-real-algebra"
 $
 
 有两种推广到 $ℝ^n$ 的方式
@@ -15,15 +15,15 @@ $
 #indent[  
   $
   & ℝ^n ∈ Set \
-  & + : (ℝ^n)^2 -> ℝ^n \
-  & ⋅ : ℝ × ℝ^n -> ℝ^n \
-  & "property-linear-algebra"
+  &+& (ℝ^n)^2 -> ℝ^n \
+  &⋅& ℝ × ℝ^n -> ℝ^n \
+  && "property-linear-algebra"
   $
   *Example* 实 2 维空间. $vec(x,y),vec(x',y') ∈ ℝ^2, a ∈ ℝ$
   $
-    vec(x,y) + vec(x',y') &= vec(x+x',y+y') \
+    vec(x,y) + vec(x',y') &=&vec(x+x',y+y') \
 
-    a vec(x,y) &= vec(a x, a y) \
+    a vec(x,y) &=&vec(a x, a y) \
   $
   以及分配律. $ℝ^n$ property-linear-algebra 的构造使用了 $ℝ$ 的 property-real-algebra
 ]
@@ -31,23 +31,23 @@ $
 #indent[
   $
   & (ℝ^n) ∈ Set \
-  & + : (ℝ^n)^2 -> ℝ^n \
-  & ⋅ : (ℝ^n)^2 -> ℝ^n \
-  & "property-algebra"
+  &+& (ℝ^n)^2 -> ℝ^n \
+  &⋅& (ℝ^n)^2 -> ℝ^n \
+  && "property-algebra"
   $
   *Example* #tag("complex-number") 复数. $x + y #i, x' + y' #i ∈ ℂ$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i^2 = -1$ or $1/#i = -#i$ 和分配律
   $
-    (x + y #i)(x' + y' #i) &= (x x' - y y') + (x y' + y x') #i
+    (x + y #i)(x' + y' #i) &=&(x x' - y y') + (x y' + y x') #i
   $
-  复数 or $z^2 = -1$ 的一种来源. #link(<harmonic-oscillator>)[谐振子] ODE 的特征方程 $ξ^2 + ω^2 = 0$
+  复数 or $z^2 = -1$ 的一种来源. #raw("#link(<harmonic-oscillator>)[谐振子]") ODE 的特征方程 $ξ^2 + ω^2 = 0$
 
   *Example* #tag("split-complex-number") 分裂复数. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i-split^2 = 1$ or $1/#i-split = #i-split$ 和分配律
   $
-    (x + y #i-split)(x' + y' #i-split) &= (x x' + y y') + (x y' + y x') #i-split
+    (x + y #i-split)(x' + y' #i-split) &=&(x x' + y y') + (x y' + y x') #i-split
   $
 ]
 #tag("linear") $ℝ^n$ 线性结构
@@ -75,7 +75,7 @@ $ℝ^n$ 代数结构
 #indent[
   $ℝ$ 的乘法带有性质 $|x y| = |x| |y|$
 
-  $ℝ^n$ #link(<metric>)[二次型] 带有性质 $⟨ a x ⟩^2 = a^2 ⟨ x ⟩^2$
+  $ℝ^n$ #raw("#link(<metric>)[二次型]") 带有性质 $⟨ a x ⟩^2 = a^2 ⟨ x ⟩^2$
 
   $ℝ^n$ algebra 我们期待性质 $⟨ x y ⟩^2 = ⟨ x ⟩^2 ⟨ y ⟩^2$
 ]
@@ -91,8 +91,8 @@ $ℝ^n$ 代数结构
   $|z z'|^2 = |z|^2 |z'|^2$ by
   $
     (x x' - y y')^2 + (x y' + y x')^2 
-    &= x^2 x'^2 + y^2 y'^2 + x^2 y'^2 + y^2 x'^2 \
-    &= (x^2 + y^2) (x'^2 + y'^2)
+    &=&x^2 x'^2 + y^2 y'^2 + x^2 y'^2 + y^2 x'^2 \
+    &=&(x^2 + y^2) (x'^2 + y'^2)
   $
 ]
 - $ℂ_"split"$ 
@@ -102,8 +102,8 @@ $ℝ^n$ 代数结构
   $|z z'|^2 = |z|^2 |z'|^2$ by
   $
     (x x' + y y')^2 - (x y' + y x')^2 
-    &= x^2 x'^2 + y^2 y'^2 - x^2 y'^2 - y^2 x'^2 \
-    &= (x^2 - y^2) (x'^2 - y'^2)
+    &=&x^2 x'^2 + y^2 y'^2 - x^2 y'^2 - y^2 x'^2 \
+    &=&(x^2 - y^2) (x'^2 - y'^2)
   $
   null elements 没有乘法逆
 ]
@@ -122,8 +122,8 @@ $ℝ^n$ 代数结构
     - 不同虚数元反交换 $#i _2 #i _1 := - #i _1 #i _2$
 
     - 虚数元共轭取反 or $1/#i = -#i$
-      - $(#i _2)^* &:= - #i _2$ 
-      - $(#i _3)^* &:= - #i _3$
+      - $(#i _2)^* &:=&-& #i _2$ 
+      - $(#i _3)^* &:=&-& #i _3$
 
     反交换 + 共轭取反使得 $x^* x = x x^* = |x|^2$, 也给出 $(x x')^* = x'^* x^*$
     
@@ -133,8 +133,8 @@ $ℝ^n$ 代数结构
 
     $(#i _3)^2 = #i _1 #i _2 #i _1 #i _2 = - #i _1^2 #i _2^2 = #i _2^2$
     $
-      (#i _2)^2 &= -1 && "give" (#i _3)^2 = -1 "and" ℍ \
-      (#i _2)^2 &= +1 && "give" (#i _3)^2 = +1 "and" ℍ_("split") "with" (2,2) "signature"
+      (#i _2)^2 &=&-1 && "give" (#i _3)^2 = -1 "and" ℍ \
+      (#i _2)^2 &=&+1 && "give" (#i _3)^2 = +1 "and" ℍ_("split") "with" (2,2) "signature"
     $
   ]
   *Example* 如果用 split complex $#i _1^2 = 1$ 则 $(#i _3)^2 = - #i _1^2 #i _2^2 = - #i _2^2$ 从而 $#i _2^2 = ± 1$ 都给出 split quaternion
@@ -147,9 +147,9 @@ $ℝ^n$ 代数结构
   #indent[
     定义其它虚数元 
     $
-      #i _5 &:= #i _1 #i _4 \
-      #i _6 &:= #i _2 #i _4 \
-      #i _7 &:= #i _3 #i _4 \
+      #i _5 &:=&#i _1 #i _4 \
+      #i _6 &:=&#i _2 #i _4 \
+      #i _7 &:=&#i _3 #i _4 \
     $
     不同虚数元反交换 $#i _i' #i _i := - #i _i #i _i'$
 

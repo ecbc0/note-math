@@ -3,10 +3,10 @@
 
 $(ℝ,+,⋅)$ algebraic structure or 
 $
-& ℝ ∈ Set \
-& + : ℝ^2 -> ℝ \
-& ⋅ : ℝ^2 -> ℝ \
-& "property-real-algebra"
+&ℝ ∈ Set \
+&+& ℝ^2 -> ℝ \
+&⋅& ℝ^2 -> ℝ \
+&& "property-real-algebra"
 $
 
 There are two ways to extend to $ℝ^n$
@@ -15,15 +15,15 @@ There are two ways to extend to $ℝ^n$
 #indent[  
   $
   & ℝ^n ∈ Set \
-  & + : (ℝ^n)^2 -> ℝ^n \
-  & ⋅ : ℝ × ℝ^n -> ℝ^n \
-  & "property-linear-algebra"
+  &+& (ℝ^n)^2 -> ℝ^n \
+  &⋅& ℝ × ℝ^n -> ℝ^n \
+  && "property-linear-algebra"
   $
   *Example* Real 2-dimensional space. $vec(x,y),vec(x',y') ∈ ℝ^2, a ∈ ℝ$
   $
-    vec(x,y) + vec(x',y') &= vec(x+x',y+y') \
+    vec(x,y) + vec(x',y') &=&vec(x+x',y+y') \
 
-    a vec(x,y) &= vec(a x, a y) \
+    a vec(x,y) &=&vec(a x, a y) \
   $
   and the distributive law. The construction of $ℝ^n$ property-linear-algebra uses the property-real-algebra of $ℝ$
 ]
@@ -31,23 +31,23 @@ There are two ways to extend to $ℝ^n$
 #indent[
   $
   & (ℝ^n) ∈ Set \
-  & + : (ℝ^n)^2 -> ℝ^n \
-  & ⋅ : (ℝ^n)^2 -> ℝ^n \
-  & "property-algebra"
+  &+& (ℝ^n)^2 -> ℝ^n \
+  &⋅& (ℝ^n)^2 -> ℝ^n \
+  && "property-algebra"
   $
   *Example* #tag("complex-number") Complex number. $x + y #i, x' + y' #i ∈ ℂ$
 
   Addition is the same as $ℝ^2$. Multiplication uses $#i^2 = -1$ or $1/#i = -#i$ and the distributive law
   $
-    (x + y #i)(x' + y' #i) &= (x x' - y y') + (x y' + y x') #i
+    (x + y #i)(x' + y' #i) &=&(x x' - y y') + (x y' + y x') #i
   $
-  one of motivation of complex-number or $z^2 = -1$ is the characteristic polynomial equation of #link(<harmonic-oscillator>)[] $ξ^2 + ω^2 = 0$
+  one of motivation of complex-number or $z^2 = -1$ is the characteristic polynomial equation of #raw("#link(<harmonic-oscillator>)[]") $ξ^2 + ω^2 = 0$
 
   *Example* #tag("split-complex-number") Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   Addition is the same as $ℝ^2$. Multiplication uses $#i-split^2 = 1$ or $1/#i-split = #i-split$ and the distributive law
   $
-    (x + y #i-split)(x' + y' #i-split) &= (x x' + y y') + (x y' + y x') #i-split
+    (x + y #i-split)(x' + y' #i-split) &=&(x x' + y y') + (x y' + y x') #i-split
   $
 ]
 #tag("linear") $ℝ^n$ linear structure
@@ -91,8 +91,8 @@ $ℝ^n$ algebraic structure
   $|z z'|^2 = |z|^2 |z'|^2$ by
   $
     (x x' - y y')^2 + (x y' + y x')^2 
-    &= x^2 x'^2 + y^2 y'^2 + x^2 y'^2 + y^2 x'^2 \
-    &= (x^2 + y^2) (x'^2 + y'^2)
+    &=&x^2 x'^2 + y^2 y'^2 + x^2 y'^2 + y^2 x'^2 \
+    &=&(x^2 + y^2) (x'^2 + y'^2)
   $
 ]
 - $ℂ_"split"$ 
@@ -102,8 +102,8 @@ $ℝ^n$ algebraic structure
   $|z z'|^2 = |z|^2 |z'|^2$ by
   $
     (x x' + y y')^2 - (x y' + y x')^2 
-    &= x^2 x'^2 + y^2 y'^2 - x^2 y'^2 - y^2 x'^2 \
-    &= (x^2 - y^2) (x'^2 - y'^2)
+    &=&x^2 x'^2 + y^2 y'^2 - x^2 y'^2 - y^2 x'^2 \
+    &=&(x^2 - y^2) (x'^2 - y'^2)
   $
   null elements have no multiplicative inverse
 ]
@@ -122,8 +122,8 @@ New imaginary unit construction method
     - Different imaginary units anticommute $#i _2 #i _1 := - #i _1 #i _2$
 
     - Invert the imaginary unit conjugate or $1/#i = -#i$
-      - $(#i _2)^* &:= - #i _2$ 
-      - $(#i _3)^* &:= - #i _3$
+      - $(#i _2)^* &:=&-& #i _2$ 
+      - $(#i _3)^* &:=&-& #i _3$
 
     Anti-commutation + conjugate inversion makes $x^* x = x x^* = |x|^2$, and also gives $(x x')^* = x'^* x^*$
     
@@ -133,8 +133,8 @@ New imaginary unit construction method
 
     $(#i _3)^2 = #i _1 #i _2 #i _1 #i _2 = - #i _1^2 #i _2^2 = #i _2^2$
     $
-      (#i _2)^2 &= -1 && "give" (#i _3)^2 = -1 "and" ℍ \
-      (#i _2)^2 &= +1 && "give" (#i _3)^2 = +1 "and" ℍ_("split") "with" (2,2) "signature"
+      (#i _2)^2 &=&-1 && "give" (#i _3)^2 = -1 "and" ℍ \
+      (#i _2)^2 &=&+1 && "give" (#i _3)^2 = +1 "and" ℍ_("split") "with" (2,2) "signature"
     $
   ]
   *Example* If split complex $#i _1^2 = 1$ is used, then $(#i _3)^2 = - #i _1^2 #i _2^2 = - #i _2^2$, so $#i _2^2 = ± 1$ both give split quaternion
@@ -147,9 +147,9 @@ New imaginary unit construction method
   #indent[
     Define other imaginary units 
     $
-      #i _5 &:= #i _1 #i _4 \
-      #i _6 &:= #i _2 #i _4 \
-      #i _7 &:= #i _3 #i _4 \
+      #i _5 &:=&#i _1 #i _4 \
+      #i _6 &:=&#i _2 #i _4 \
+      #i _7 &:=&#i _3 #i _4 \
     $
     Anti-commutation of different imaginary units $#i _i' #i _i := - #i _i #i _i'$
 

@@ -19,8 +19,8 @@ let mapping $1,…,n ⇝ a_1,…,a_n$
 - Select a permutation $a$ with $A = {a(1),…,a(i)}, B = {a(i+1),…,a(i+j)}$ and another permutation $a'$ gives the same partition if
 #indent[ 
   $ 
-    {a'(1),…,a'(i)} &= {a(1),…,a(i)} \ 
-    {a'(i+1),…,a'(i+j)} &= {a(i+1),…,a(i+j)}
+    {a'(1),…,a'(i)} &=&{a(1),…,a(i)} \ 
+    {a'(i+1),…,a'(i+j)} &=&{a(i+1),…,a(i+j)}
   $
 ]
 Define the #tag("quotient") $a ∼ a'$ of permutations with the same partition as a subset of $S_n$ that satisfies the above conditions, i.e., the inverse image of the partitioning possibility $A ⊔ B$
@@ -37,9 +37,9 @@ $
 $
 All $i = 0 ,…, n$ combinations <==> All $i = 0 ,…, n$ select subsets $A$ with $|A| = i$ in $Subset {1,…,n}$
 $
-  sum_(i+j = n) binom(n,i,j) &"or" sum_(i=0..n) binom(n,i) \
-  &= |Subset {1,…,n}| \
-  &= 2^n
+  sum_(i+j = n) binom(n,i,j) &"or"& sum_(i=0..n) binom(n,i) \
+  &=&|Subset {1,…,n}| \
+  &=&2^n
 $
 is the number of repeatable selections of $n$ from $2$
 
@@ -51,8 +51,8 @@ $
 $
 #tag("binom-expansion") 
 $
-  (x+y)^n &= sum_(i+j=n) binom(n,i,j) x^i y^j \
-  (x_1 + ⋯ + x_d)^n &= sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
+  (x+y)^n &=&sum_(i+j=n) binom(n,i,j) x^i y^j \
+  (x_1 + ⋯ + x_d)^n &=&sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
 $
 vs Newton binomial $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
 
@@ -94,7 +94,7 @@ what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$?
 
 The repetition number $binom(n,k_1 ,…, k_d)$ will be used for example to calculate $L^2$ normalization
 
-#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> cycle := permutation $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
+#tag("conjugate-class-of-permutation-is-cycle") #raw("#link(<conjugate-class>)[]") of $S_n$ <==> cycle := permutation $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
 
 The $sign$ decomposition of permutation
 

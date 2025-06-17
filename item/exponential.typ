@@ -11,9 +11,9 @@
 
   两边展开
   $
-    sum (f^((n)) (0))/n! (x+y)^n &= sum (f^((n)) (0))/n! x^n sum (f^((n)) (0))/n! y^n \
+    sum (f^((n)) (0))/n! (x+y)^n &=&sum (f^((n)) (0))/n! x^n sum (f^((n)) (0))/n! y^n \
 
-    sum_n sum_(i+j=n) (f^((n)) (0))/n! n!/(i! j!) x^i y^j &=  sum_n sum_(i+j=n) (f^((i)) (0))/i! (f^((j)) (0))/j! x^i y^j
+    sum_n sum_(i+j=n) (f^((n)) (0))/n! n!/(i! j!) x^i y^j &=& sum_n sum_(i+j=n) (f^((i)) (0))/i! (f^((j)) (0))/j! x^i y^j
   $
   令系数相同 $forall n, forall i+j=n, f^((n)) (0) = f^((i)) (0) f^((j)) (0)$ \
   ==>
@@ -23,22 +23,22 @@
   $
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
-  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #raw("#link(<natural-constant>)[]")
 
-  从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #link(<inverse-analytic>)[解析逆]
+  从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #raw("#link(<inverse-analytic>)[解析逆]")
 
   #tag("natural-logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
 
   for $a > 0$, def $f^1 (0) := log a in ℝ$
   $
-    a^1 &= f(1) \
-    &= sum 1/n! (log a)^n \
-    & = exp log a \
-    & = a \
+    a^1 &=&f(1) \
+    &=&sum 1/n! (log a)^n \
+    &=& exp log a \
+    &=& a \
 
-    a^x &= f(x) \
-    &= sum 1/n! (log a ⋅ x)^n \
-    &= exp (x log a)
+    a^x &=&f(x) \
+    &=&sum 1/n! (log a ⋅ x)^n \
+    &=&exp (x log a)
   $
 ]
 #tag("power-function") 定义了指数函数意味着对每个 $a in ℝ$ 定义了每个实数指数 $x$, 因此也定义了幂函数 $a ⇝ a^x$ 或者改写为 $x ⇝ x^a$
@@ -49,11 +49,11 @@
 
   - $ℂ$
   $
-    exp z &= cos z + #i sin z \
-    #i &≃ mat(,-1;1) ∼ so(2)
+    exp z &=&cos z + #i sin z \
+    #i &≃& mat(,-1;1) ∼ so(2)
   $
   - $ℂ_"split"$
   $
-    exph z &= cosh z + #i-split sinh z \
-    #i-split &≃ mat(,1;1) ∼ so(1,1)
+    exph z &=&cosh z + #i-split sinh z \
+    #i-split &≃& mat(,1;1) ∼ so(1,1)
   $

@@ -18,8 +18,8 @@
 #let bf(x) = $bold(upright(#x))$
 #let c-bf(x,color) = text(bf(x),fill: rgb(color)) // prefix "c" represent "color"
 
-#let i = c-bf("i","#0056e1") // Im(ℂ) i
-#let i-split = c-bf("i","#c10047")
+#let i = c-bf("i") // Im(ℂ) i
+#let i-split = c-bf("i")
 
 /*
   It's tedious

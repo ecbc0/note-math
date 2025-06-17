@@ -8,17 +8,17 @@
     sum_(0 .. N) t_i ⋅ x_i \
     t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 1
   $
-  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+  #show "Δ": it => text(it)
 
   is a well-defined affine point, or rather the coordinate definition does not depend on the choice of origin. Let the coordinates of $x_i$ be $v_i$. Change the origin $v_i' = v_i + Δ$
   $
     sum t_i (v_i + Δ) = (sum t_i v_i) + (sum t_i) Δ = (sum t_i v_i) + Δ
   $
-  Regarding intuition, the simplest example is the proportional point of a straight line between two points #image("../image/affine-combination-1.jpeg", width: 30%)
+  Regarding intuition, the simplest example is the proportional point of a straight line between two points #html.elem("img", attrs: (src: "../image/affine-combination-1.jpeg", width: "30%"))
 
   Can be iteratively or decomposed e.g. triangle $t_1 x_1 + t_2 x_2 + t_3 x_3 <--> s_1 (t_1 x_1 + t_2 x_2) + s_2 x_3$. And the decomposition operation is commutative. And it can be decomposed into multiple $>= 1$ order
 
-  #image("../image/affine-combination-2.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/affine-combination-2.jpeg", width: "30%"))
 ]
 #tag("affine-coordinate") $t_i$ can be considered as a coordinate based on the point $x_i$. Affine coordinates. *alias* Barycentric coordinates #tag("barycentric-coordinate")
 
@@ -47,19 +47,19 @@ $
 
 #tag("simplex") := convex hull formed by affinely independent points
 
-#image("../image/simplex.jpeg", width: 70%)
+#html.elem("img", attrs: (src: "../image/simplex.jpeg", width: "70%"))
 
 #tag("parallelogram") Due to symmetry, the description of parallelepiped can be simplified from the convex hull of $2n$ points to the description of $n$ points, after selecting the origin 
 
 $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
-#image("../image/parallelogram.jpeg", width: 25%)
+#html.elem("img", attrs: (src: "../image/parallelogram.jpeg", width: "25%"))
 
 #tag("parallelogram-simplex-correspond")
 #indent[
   A parallelepiped can be $⨆$ decomposed into $n!$ simplexes that are equivalent under translation and reflection
 
-  #image("../image/shear-transformation.jpg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/shear-transformation.jpg", width: "30%"))
 
   The $n$ permutations of points $v_1 ,…, v_n$
   $
@@ -73,10 +73,10 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
   $
   with
   $
-    v_(i(n)) &= s_n \
-    v_(i(n-1)) &= s_n + s_(n-1)\
+    v_(i(n)) &=&s_n \
+    v_(i(n-1)) &=&s_n + s_(n-1)\
     &⋮ \
-    v_(i(1)) &= s_n + s_(n-1) + ⋯ + s_1
+    v_(i(1)) &=&s_n + s_(n-1) + ⋯ + s_1
   $
   Conversely, a simplex also gives many parallelepipeds with it as one of the $n!$ simplex blocks
   
@@ -92,7 +92,7 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
 #tag("shear-transformation") After decomposing the parallelepiped into simplexes, cut and translate to form a new parallelepiped with the same volume. Called shear transformation. e.g. $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$
 
-#image("../image/shear-transformation.jpg", width: 30%)
+#html.elem("img", attrs: (src: "../image/shear-transformation.jpg", width: "30%"))
 
 (image from p.587 of @ref-3)
 
@@ -137,8 +137,8 @@ Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(�
 
   So for a general parallelepiped $v_1 ∧ ⋯ ∧ v_k = (v_1^(i_1) e_(i_1)) ∧ ⋯ ∧ (v_k^(i_k) e_(i_k)) = sum_(#index-alt) #coefficent-alt #base-alt$ the volume is 
   $
-    Vol(v_1 ∧ ⋯ ∧ v_k) &:= sum_(#index-alt) #coefficent-alt \
-    "or " &:= abs(sum_(#index-alt) #coefficent-alt)
+    Vol(v_1 ∧ ⋯ ∧ v_k) &:=&sum_(#index-alt) #coefficent-alt \
+    "or " &:=&abs(sum_(#index-alt) #coefficent-alt)
   $
   The volume of a nonzero decomposable alternating tensor can be zero, $A = mat(1,0;-1,1) in GL(2,ℝ)$ such that $Vol(2,1)(A e_1) = 1 - 1 = 0$. The shear transformation of order $n$ does not hold for order $k$
 
@@ -167,24 +167,24 @@ Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(�
     a^2_1, a^2_2
   )$ satisfies
   $
-    a^1_1 a^2_2 - a^2_1 a^1_2 &= 1 \
-    a^1_1 + a^2_1 &= 1 \
-    a^1_2 + a^2_2 &= 1
+    a^1_1 a^2_2 - a^2_1 a^1_2 &=&1 \
+    a^1_1 + a^2_1 &=&1 \
+    a^1_2 + a^2_2 &=&1
   $
   a coordinate representation of the solution
   $
-    x &in ℝ \
-    a^1_1 &= 1 - x \
-    a^2_1 &= x \
-    a^1_2 &= -x \
-    a^2_2 &= 1 + x \
-    A &= mat(1-x,-x;x,1+x)
+    x &in&ℝ \
+    a^1_1 &=&1 - x \
+    a^2_1 &=&x \
+    a^1_2 &=&-x \
+    a^2_2 &=&1 + x \
+    A &=&mat(1-x,-x;x,1+x)
   $
   is an affine line of $gl(2,ℝ)$ passing through $𝟙 = mat(1;,1)$. $SO(2)$ or $SO(1,1)$ is not its subset
 ]
 2. Select a non-degenerate quadratic form
 #indent[
-  #link(<tensor-induced-quadratic-form>)[Derive] the quadratic form of the alternating space $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$. Undirected volume $|det ⟨ v_i , v_j ⟩|^(1/2)$ or $abs(det mat(
+  #raw("#link(<tensor-induced-quadratic-form>)[Derive]") the quadratic form of the alternating space $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$. Undirected volume $|det ⟨ v_i , v_j ⟩|^(1/2)$ or $abs(det mat(
     ⟨ v_1 , v_1 ⟩, ⋯, ⟨ v_1 , v_n ⟩;
     ⋮,,⋮;
     ⟨ v_n , v_1 ⟩, ⋯, ⟨ v_n , v_n ⟩
@@ -194,12 +194,12 @@ Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(�
     v_1^(i_k) , ⋯ , v_k^(i_k)
   ) e_(i_1) ∧ ⋯ ∧ e_(i_k)$, write it as a standard quadratic form
   $
-    ⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2 &= sum_(#index-alt) (det mat(
+    ⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2 &=&sum_(#index-alt) (det mat(
       v_1^(i_1) , ⋯ , v_k^(i_1) ;
       ⋮,,⋮;
       v_1^(i_k) , ⋯ , v_k^(i_k)
     ))^2 ⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 \
-    Vol_(n,k)(v_1 ∧ ⋯ ∧ v_k) &:= abs(sum_(#index-alt) (det mat(
+    Vol_(n,k)(v_1 ∧ ⋯ ∧ v_k) &:=&abs(sum_(#index-alt) (det mat(
       v_1^(i_1) , ⋯ , v_k^(i_1) ;
       ⋮,,⋮;
       v_1^(i_k) , ⋯ , v_k^(i_k)
@@ -219,27 +219,27 @@ The two volume definitions coincide for $k = n$
 
 $ℝ^2$ 's $4$ points
 
-#image("../image/convex-hull-decomposition-1.jpg", width: 40%)
+#html.elem("img", attrs: (src: "../image/convex-hull-decomposition-1.jpg", width: "40%"))
 
 $ℝ^2$ 's $5$ points. First select $2$ simplex, that is, select $3$ vertices
 
-#image("../image/convex-hull-decomposition-2.jpg", width: 80%)
+#html.elem("img", attrs: (src: "../image/convex-hull-decomposition-2.jpg", width: "80%"))
 
 Find out which simplex combinations are decompositions of the convex hull
 
-#image("../image/convex-hull-decomposition-3.jpg", width: 50%)
+#html.elem("img", attrs: (src: "../image/convex-hull-decomposition-3.jpg", width: "50%"))
 
 The intersection of convex hulls is a convex hull
 
-*Example* #image("../image/simplex-intersection.jpg", width: 60%)
+*Example* #html.elem("img", attrs: (src: "../image/simplex-intersection.jpg", width: "60%"))
 
 The reduced set of a simplex may not be a convex hull. But it can still be decomposed into simplex 
 
-*Example* #image("../image/simplex-substraction.jpg", width: 20%)
+*Example* #html.elem("img", attrs: (src: "../image/simplex-substraction.jpg", width: "20%"))
 
 #tag("polyhedra") Polyhedron :=
 #indent[
-  #image("../image/polyhedra.jpeg", width: 40%)
+  #html.elem("img", attrs: (src: "../image/polyhedra.jpeg", width: "40%"))
   n simplex finite union with
 
   - internally disjoint
@@ -248,14 +248,14 @@ The reduced set of a simplex may not be a convex hull. But it can still be decom
 
   The dimension of the transitive boundary is to give the polyhedron the best connectivity
 ]
-#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("../image/tri-intersect-boundary.jpg", width: 40%)
+#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #html.elem("img", attrs: (src: "../image/tri-intersect-boundary.jpg", width: "40%"))
 
 Countable generalization -> Countable polyhedron
 
 #tag("polyhedra-measurable") 
 #indent[
-  #image("../image/measure-approximation.jpeg", width: 30%)
-  Polyhedron measurable set $A$. Approximate with a countable polyhedron $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
+  #html.elem("img", attrs: (src: "../image/measure-approximation.jpeg", width: "30%"))
+  Polyhedron measurable set $A$. Approximate with a countable polyhedron $P$, #raw("#link(<symmetric-set-minus>)[symmetric difference]") $A Δ P$ cover with countable simplexes as a measure estimate error
 
   Sets $A,B$ define distance (@ref-12)
 
@@ -271,7 +271,6 @@ Countable generalization -> Countable polyhedron
 
   $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
 
-
   Note that such measurable sets have good connectivity. In one dimension, there are only intervals, excluding the Smith–Volterra–Cantor set, etc. Operations such as the union of polyhedral measurable sets are also restricted.
 ]
 #tag("Lebesgue-measurable") If transitive connectivity is not used, then the definition of a general measurable set is obtained. alias: Lebesgue measurable set. Non-measurable sets exist.
@@ -285,35 +284,35 @@ Countable generalization -> Countable polyhedron
   Corresponding triangle inequality $d(B,B') <= d(A,B) + d(A,B')$
 
   _Proof_ $B ∖ B' ⊂ (B ∖ A) ∪ (A ∖ B')$ 
-
-  #stack( dir: ltr,
-    image("../image/measure-triangle-inequality-1.jpeg", width: 40%),
-    image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
-  )
+  
+    #html.elem("img", attrs: (src: "../image/measure-triangle-inequality-1.jpeg", width: "40%"))
+    #html.elem("img", attrs: (src: "../image/measure-triangle-inequality-2.jpeg", width: "50%"))
+  
   by
   $
     x in B ∖ B' 
-    &<==>x in B and x in.not B' \
-    &<==> (x in B and x in.not B') and (x in.not A or x in A) \
-    &<==> (x in B and x in.not B' and x in.not A) or (x in B and x in.not B' and x in A) \
-    &==> (x in B and x in.not A) or (x in A and x in.not B') \
-    &<==> x in (B ∖ A) ∪ (A ∖ B') 
+    &<==>&x in B and x in.not B' \
+    &<==>&(x in B and x in.not B') and (x in.not A or x in A) \
+    &<==>&(x in B and x in.not B' and x in.not A) or (x in B and x in.not B' and x in A) \
+    &==>&(x in B and x in.not A) or (x in A and x in.not B') \
+    &<==>&x in (B ∖ A) ∪ (A ∖ B') 
   $
   The other side is similar
 
   Triangle inequality
   $
-    d(B,B') &= d(B Δ B') \
-    &<= d((A Δ B) ∪ (A Δ B')) \
-    &<= d(A,B) + d(A,B')
+    d(B,B') &=&d(B Δ B') \
+    &<=&d((A Δ B) ∪ (A Δ B')) \
+    &<=&d(A,B) + d(A,B')
   $
+
   For polyhedra $P,P'$ with finite volume and $d(A,P),d(A,P') < ε$
 
   Unique limit
   $
     |Vol(P) - Vol(P')| = Vol(P Δ P') = d(P,P') <= d(A,P) + d(A,P') < 2 ε
   $
-  If we use the #link(<net>)[net] of a polyhedron approximating $A$, then there is a #link(<hom-limit>)[limit homomorphism] $Vol(A) := lim_(d(A,P) -> 0) Vol(P)$ 
+  If we use the #raw("#link(<net>)[net]") of a polyhedron approximating $A$, then there is a #raw("#link(<hom-limit>)[limit homomorphism]") $Vol(A) := lim_(d(A,P) -> 0) Vol(P)$ 
   
   Obtain the definition of finite measure. The definition of infinite measure comes from the countable approximation of finite measure, or $sum_(n=1..∞) ε_n < ε$ technique
 ]
@@ -351,4 +350,4 @@ Lebesgue differentiation theorem says that the measure of the boundary is zero
 - Connecting the center of a simplex to $n$ points has $binom(n+1,n) = n$ ways to divide a simplex into $n$ sub simplices
 - Or use the midpoint of all lower-dimensional simplices on the boundary
 
-#image("../image/measure-subdivision.jpeg", width: 100%)
+#html.elem("img", attrs: (src: "../image/measure-subdivision.jpeg", width: "100%"))

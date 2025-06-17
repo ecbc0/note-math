@@ -1,21 +1,21 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<metric.typ>)[]
+cf. #raw("#link(<metric.typ>)[]")
 
 #tag("geodesic")  
 #indent[
   Geodesics as possible "shortest length paths". Action 
   $ 
     &&integral #d l 
-    &= integral #d t |vel(x)| 
+    &=&integral #d t |vel(x)| 
     = integral #d t |g(vel(x))^2|^(1/2) \ 
 
     "or " && 
-    &= integral #d t |g_(i i') ⋅ vel(x)^i ⋅ vel(x)^i'|^(1/2) \
+    &=&integral #d t |g_(i i') ⋅ vel(x)^i ⋅ vel(x)^i'|^(1/2) \
 
     "or " &&
-    &= integral #d t |vel(x)^⊺ g vel(x)|^(1/2)
+    &=&integral #d t |vel(x)^⊺ g vel(x)|^(1/2)
   $ 
   ODE initial value $x(0), vel(x)(0)$. The definition of geodesics does not depend on coordinate selection
 
@@ -28,19 +28,19 @@ cf. #link(<metric.typ>)[]
   The Lagrange equation is 
   $
     (#d)/(#d t) ( frac(g vel(x) , |g(vel(x))^2|^(1/2)) ) 
-    &= 1/2 (vel(x)^⊺ (∂ g) vel(x))/(|g(vel(x))^2|^(1/2))
+    &=&1/2 (vel(x)^⊺ (∂ g) vel(x))/(|g(vel(x))^2|^(1/2))
       & "where" ∂ g ≃ vec(∂_1 g , ⋮ , ∂_n g) \ 
 
     "or " (#d)/(#d t) ((g_(j i') x^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))) 
-    &= 1/2 ((∂_j g_(i i')) vel(x)^i vel(x)^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))
+    &=&1/2 ((∂_j g_(i i')) vel(x)^i vel(x)^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))
   $
   For unit length parameter of the path, $|vel(x)| = |g(vel(x))^2|^(1/2) = 1$, the equation becomes
   $
     (#d)/(#d t) (g vel(x)) 
-    &= 1/2 vel(x)^⊺ (∂ g) vel(x) \
+    &=&1/2 vel(x)^⊺ (∂ g) vel(x) \
 
     "or " (#d)/(#d t) (g_(j i') x^i') 
-    &= 1/2 (∂_j g_(i i')) vel(x)^i vel(x)^i' 
+    &=&1/2 (∂_j g_(i i')) vel(x)^i vel(x)^i' 
   $
   product-rule expansion $(#d)/(#d t) (g vel(x)) = (∂ (vel(x)) g) vel(x) + g acc(x)$, where $∂ (vel(x)) g = (∂)/(∂ vel(x)) g = (#d)/(#d t) g(x(t))$. Transposing terms and using $g^(-1)$, the equation becomes
   $
@@ -48,23 +48,23 @@ cf. #link(<metric.typ>)[]
   $
   Or written as
   $
-    acc(x) + vel(x)^⊺ Gamma vel(x) &= 0 \
+    acc(x) + vel(x)^⊺ Gamma vel(x) &=&0 \
 
-    "or " acc(x)^j + Gamma_(i i')^j ⋅ vel(x)^i ⋅ vel(x)^i' &= 0 
+    "or " acc(x)^j + Gamma_(i i')^j ⋅ vel(x)^i ⋅ vel(x)^i' &=&0 
   $
 ]
 where $Γ$ is #tag("metric-connection") *alias* #tag("Levi-Civita-connection")
 #indent[
   $
     && v^⊺ Γ v
-    &= g^(-1) ((∂ (v) g) v - 1/2 v^⊺ (∂ g) v) in ℝ^(p,q) \
+    &=&g^(-1) ((∂ (v) g) v - 1/2 v^⊺ (∂ g) v) in ℝ^(p,q) \
 
     "or "&& v'^⊺ Γ v 
-    &= 1/2 g^(-1) ((∂ (v') g) v + (∂ (v) g) v' - v'^⊺ (∂ g) v) 
-      &quad ("cf. " #link(<difference-symmetric-tensor>)[difference]) \
+    &=&1/2 g^(-1) ((∂ (v') g) v + (∂ (v) g) v' - v'^⊺ (∂ g) v) 
+      &quad& ("cf. " #raw("#link(<difference-symmetric-tensor>)[difference]")) \
 
     "or "&& Gamma_(i i')^j 
-    &= 1/2 sum_i'' g^(j i'') (∂_i g_(i' i'') + ∂_i' g_(i i'') - ∂_i'' g_(i i'))
+    &=&1/2 sum_i'' g^(j i'') (∂_i g_(i' i'') + ∂_i' g_(i i'') - ∂_i'' g_(i i'))
   $
   metric-connection is not a tensor. The transformation of metric-connection #tag("connection-transformations")
   $
@@ -118,7 +118,7 @@ _Proof_
 
   - 1st. 
   #indent[
-    #tag("differenial-of-metric-vs-connection") *Prop* $v^⊺ (∂(v'') g) v' = v'^⊺ g (v''^⊺ Γ v) + v'^⊺ g (v''^⊺ Γ v)$ _Proof_ Directly substitute the #link(<metric-connection>)[definition] of $Γ$ into the formula
+    #tag("differenial-of-metric-vs-connection") *Prop* $v^⊺ (∂(v'') g) v' = v'^⊺ g (v''^⊺ Γ v) + v'^⊺ g (v''^⊺ Γ v)$ _Proof_ Directly substitute the #raw("#link(<metric-connection>)[definition]") of $Γ$ into the formula
 
     Then use $Γ(p) = 0$ to get $∂ g (p) = 0$ at point $p$
 

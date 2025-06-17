@@ -1,8 +1,6 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link("https://en.wikipedia.org/wiki/Symmetric_space")[wiki:Symmetric_space] #link("https://en.wikipedia.org/wiki/Simple_Lie_group")[wiki:Simple_Lie_group]
-
 #tag("symmetric-space-locally") := $∇ R = 0$ 
 
 *Example* quadratic manifold, simple-Lie-group and related symmetric-space
@@ -25,8 +23,6 @@ simple-Lie-group <==> Killing-form 非退化
 
 simple-Lie-group and its symmetric-space 的 Killing-form 是 Einstein-metric 
 
-#let L = c-diff($L$)
-
 _Proof_ of simple-Lie-group 的情况
 #indent[
   - $g([X,X'],X'') + g (X',[X,X'']) = 0$ for Lie algebra $X,X',X''$
@@ -39,10 +35,10 @@ _Proof_ of simple-Lie-group 的情况
 
     对于 $X,X',X''$ 生成的场
     $
-      0 &= #L _X (g (X',X'')) \
-      &= (∂_X g) (X',X'') \
-        &quad - (g(#L _X X',X'') + g(X',#L _X X'')) \
-      &= g([X,X'],X'') + g (X',[X,X''])
+      0 &=&#L _X (g (X',X'')) \
+      &=&(∂_X g) (X',X'') \
+        &quad& s - (g(#L _X X',X'') + g(X',#L _X X'')) \
+      &=&g([X,X'],X'') + g (X',[X,X''])
     $
   ]
   - geodesic-derivative $∇ = 1/2 [,]$. _Proof_ see below

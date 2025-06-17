@@ -1,12 +1,12 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B")
+#let T = c-bf("T")
 
 #tag("topology-subspace")
 #indent[
-  子拓扑 := let $S subset X$. 继承 #link(<topology>)[点网系统] $#T _S = {S ∩ B : B in #T _X}$
+  子拓扑 := let $S subset X$. 继承 #raw("#link(<topology>)[点网系统]") $#T _S = {S ∩ B : B in #T _X}$
 
   等价地定义, 子拓扑是使得嵌入映射 $S ↪ X$ 连续的最小拓扑
 ]
@@ -15,13 +15,13 @@
 
 _Proof_ 根据 $∩$ 的结合性 + $S' subset S <==> S' ∩ S = S'$
 
-#tag("closed-in-subspace") #link(<closed>)[] in subspace 的刻画
+#tag("closed-in-subspace") #raw("#link(<closed>)[]") in subspace 的刻画
 #indent[
   $S' ⊂ S ==> "closed"(S',#T _S) = S ∩ "closed"(S',#T _X)$
 
   *Example* $"closed"((0,1],#T _((0,1])) = (0,1] ≠ [0,1] = "closed"((0,1],#T _ ℝ)$
 
-  说明 $"closed"(S',#T _X)$ 可能存在 #link(<limit-point>)[极限点] $∉ S$ or $in "closed"(S,#T _X) ∖ S$ 但 $"closed"(S',#T _S)$ 极限点只能 $in S$
+  说明 $"closed"(S',#T _X)$ 可能存在 #raw("#link(<limit-point>)[极限点]") $∉ S$ or $in "closed"(S,#T _X) ∖ S$ 但 $"closed"(S',#T _S)$ 极限点只能 $in S$
 
   $S$ 是闭集 
   - ==> $S = "closed"(S,#T _X) supset "closed"(S',#T _X)$

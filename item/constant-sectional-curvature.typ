@@ -3,7 +3,7 @@
 
 #tag("sectional-curvature") 
 #indent[
-  根据 #link(<symmetry-of-curvature>)[], $"curvature" subset ⨀^2 ⋀^2 V^⊺$
+  根据 #raw("#link(<symmetry-of-curvature>)[]"), $"curvature" subset ⨀^2 ⋀^2 V^⊺$
   
   截面曲率是二次型 (可能退化) 限制在 $⋀^2 V^⊺$ 方向空间 i.e. 限制在单位长度
   $
@@ -69,12 +69,12 @@ _Proof_
   
   二次型流形 co-dimension 1, 法空间 dimension 1, 法向场 $Γ^⟂_(i j) = λ n$ with 单位法向场 $n$
   $
-    g(Γ^⟂_(i j), n) &= g(Γ_(i j), n)
-      &quad "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
-    &= g(∇_(∂_i) ∂_j, n) \
-    &= ∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
-    &= - g(∂_j, ∇_(∂_i) n) 
-      &quad "by" ∂_j perp n ==> g(n, ∂_j) = 0
+    g(Γ^⟂_(i j), n) &=&g(Γ_(i j), n)
+      &quad& "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
+    &=&g(∇_(∂_i) ∂_j, n) \
+    &=&∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
+    &=&- g(∂_j, ∇_(∂_i) n) 
+      &quad& "by" ∂_j perp n ==> g(n, ∂_j) = 0
   $   
   所以 $Γ^⟂_(i j) = - g(∇_(∂_i) n,∂_j) n$
   
@@ -84,8 +84,8 @@ _Proof_
 
   ==>
   $
-  R^⊤_(i j i' j') &= 1/a^2 g(n,n) (g_(i j) g_(i' j') - g_(i j') g_(i' j)) \
-  &= 1/(± 2a^2) (g #cvt-prod g)_(i j i' j')
+  R^⊤_(i j i' j') &=&1/a^2 g(n,n) (g_(i j) g_(i' j') - g_(i j') g_(i' j)) \
+  &=&1/(± 2a^2) (g #cvt-prod g)_(i j i' j')
   $
   宇宙常数 $Λ = ± ((n-1)(n-2))/(2 a^2)$
 ]
@@ -97,10 +97,10 @@ _Proof_
   
   坐标 $(t,r,𝕊^(n-2))$ with
   $
-    r^2 &= x_3^2 + ⋯ + x_(n+1)^2 \
-    x_1 &= (a^2 - r^2)^(1/2) sinh(1/a t) \
-    x_2 &= (a^2 - r^2)^(1/2) cosh(1/a t) \
-    x_i &= r x_i/r 
+    r^2 &=&x_3^2 + ⋯ + x_(n+1)^2 \
+    x_1 &=&(a^2 - r^2)^(1/2) sinh(1/a t) \
+    x_2 &=&(a^2 - r^2)^(1/2) cosh(1/a t) \
+    x_i &=&r x_i/r 
   $
   metric 将是
   $
@@ -113,10 +113,10 @@ _Proof_
   
   坐标 $(t,r,𝕊^(n-2))$ with
   $
-    r^2 &= x_3^2 + ⋯ + x_(n+1)^2 \ 
-    x_1 &= (a^2 + r^2)^(1/2) cos(1/a t) \
-    x_2 &= (a^2 + r^2)^(1/2) sin(1/a t) \
-    x_i &= r x_i/r
+    r^2 &=&x_3^2 + ⋯ + x_(n+1)^2 \ 
+    x_1 &=&(a^2 + r^2)^(1/2) cos(1/a t) \
+    x_2 &=&(a^2 + r^2)^(1/2) sin(1/a t) \
+    x_i &=&r x_i/r
   $
   metric 将是
   $
@@ -129,8 +129,8 @@ $ℚ^(2,n-1)(a^2)$ 的时间轴的行为存在 $𝕊^1$ like. 而且存在 close
 
 $ℚ^(1,n)(- a^2)$ 可以 "时间切片" 化为 $ℝ × 𝕊^(n-1)$. $sinh$ 是 $ℝ$ 的微分同胚
 $
-  x_1 &= a sinh(1/a t) \
-  x_i &= a cosh(1/a t) x_i/(a cosh(1/a t))
+  x_1 &=&a sinh(1/a t) \
+  x_i &=&a cosh(1/a t) x_i/(a cosh(1/a t))
 $
 metric
 $

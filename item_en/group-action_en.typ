@@ -11,7 +11,7 @@ for octonion with non associative multiplication, for the action defined by mult
 
 When a bijection acts on a certain structure of $X$, there is a structure group that preserves the structure, which is a subgroup of $X <-> X$
 
-*Example* $GL$ preserves #link(<linear>)[linear structure]
+*Example* $GL$ preserves #raw("#link(<linear>)[linear structure]")
 
 let $G$ be a subgroup of $X!$. let $x in X$
 
@@ -46,8 +46,8 @@ $G_x$ is a subgroup of $G$. a map $f$ that fix a point $x in X$ constitutes a su
 Isotropy after changing the orbit base point $x ⇝ h x$ 
 $
   g (h x) = h x 
-  &<==> h^(-1) g h x = x \
-  &<==> h^(-1) g h in G_x
+  &<==>& h^(-1) g h x = x \
+  &<==>& h^(-1) g h in G_x
 $
 Mapping $dmat( delim: #none ,
   G ,⟶, G ;
@@ -94,15 +94,15 @@ _Proof_
   $ 
   is a bijection. (invertible.) So
   $
-    G x &= im {dmat( delim: #none ,
+    G x &=& im {dmat( delim: #none ,
       G ,⟶, X ;
       g ,⟿, g x
     )} \
-    &= im {dmat( delim: #none ,
+    &=& im {dmat( delim: #none ,
       G , ⟶ , G , ⟶ , X ;
       g , ⟿ , g h , ⟿ , g h x
     )} \
-    &= G (h x)
+    &=& G (h x)
   $
 ]
 
@@ -146,8 +146,8 @@ Commutator #tag("commutator")
 
 $
   (h g h^(-1) = g) 
-  & <==> (h g <==> g h) \
-  & <==> 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
+  &<==>& (h g <==> g h) \
+  &<==>& 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
 $
 
 #tag("action-surjective") *alias* #tag("action-transitive") := The following definitions are equivalent

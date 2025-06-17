@@ -7,7 +7,7 @@ $𝕊^3,𝕊^2,𝕊^1$ or 复数 $ℂ$ 版本的 Hopf-bundle
 
 #tag("Hopf-bundle")
 #indent[
-  嵌入 $𝕊^2 ↪ ℝ^3 ↪ ℂ^2$, in $ℝ^3 ≃ ℝ × ℂ$ 使用 $w/z ∈ ℂ$ 作为 #link(<stereographic-projection>)[球极投影] 坐标
+  嵌入 $𝕊^2 ↪ ℝ^3 ↪ ℂ^2$, in $ℝ^3 ≃ ℝ × ℂ$ 使用 $w/z ∈ ℂ$ 作为 #raw("#link(<stereographic-projection>)[球极投影]") 坐标
   $
     dmat( delim: #none , 
       ℂ^2 , ⟶ , ℂ , ⟶ , ℝ × ℂ ;

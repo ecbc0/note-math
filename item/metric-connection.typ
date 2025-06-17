@@ -1,21 +1,21 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<metric.typ>)[]
+cf. #raw("#link(<metric.typ>)[]")
 
 #tag("geodesic")  
 #indent[
   测地线作为可能的 "最小长度路径". 作用量 
   $ 
     &&integral #d l 
-    &= integral #d t |vel(x)| 
+    &=&integral #d t |vel(x)| 
     = integral #d t |g(vel(x))^2|^(1/2) \ 
 
     "or " && 
-    &= integral #d t |g_(i i') ⋅ vel(x)^i ⋅ vel(x)^i'|^(1/2) \
+    &=&integral #d t |g_(i i') ⋅ vel(x)^i ⋅ vel(x)^i'|^(1/2) \
 
     "or " &&
-    &= integral #d t |vel(x)^⊺ g vel(x)|^(1/2)
+    &=&integral #d t |vel(x)^⊺ g vel(x)|^(1/2)
   $ 
   ODE 初值 $x(0), vel(x)(0)$. 测地线的定义不依赖于坐标选取
 
@@ -28,19 +28,19 @@ cf. #link(<metric.typ>)[]
   Lagrange 方程是 
   $
     (#d)/(#d t) ( frac(g vel(x) , |g(vel(x))^2|^(1/2)) ) 
-    &= 1/2 (vel(x)^⊺ (∂ g) vel(x))/(|g(vel(x))^2|^(1/2))
+    &=&1/2 (vel(x)^⊺ (∂ g) vel(x))/(|g(vel(x))^2|^(1/2))
       & "where" ∂ g ≃ vec(∂_1 g , ⋮ , ∂_n g) \ 
 
     "or " (#d)/(#d t) ((g_(j i') x^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))) 
-    &= 1/2 ((∂_j g_(i i')) vel(x)^i vel(x)^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))
+    &=&1/2 ((∂_j g_(i i')) vel(x)^i vel(x)^i')/(|g_(i i') vel(x)^i vel(x)^i'|^(1/2))
   $
   对于路径的单位长度参数, $|vel(x)| = |g(vel(x))^2|^(1/2) = 1$, 方程变成
   $
     (#d)/(#d t) (g vel(x)) 
-    &= 1/2 vel(x)^⊺ (∂ g) vel(x) \
+    &=&1/2 vel(x)^⊺ (∂ g) vel(x) \
 
     "or " (#d)/(#d t) (g_(j i') x^i') 
-    &= 1/2 (∂_j g_(i i')) vel(x)^i vel(x)^i' 
+    &=&1/2 (∂_j g_(i i')) vel(x)^i vel(x)^i' 
   $
   product-rule 展开 $(#d)/(#d t) (g vel(x)) = (∂ (vel(x)) g) vel(x) + g acc(x)$, where $∂ (vel(x)) g = (∂)/(∂ vel(x)) g = (#d)/(#d t) g(x(t))$. 移项并使用 $g^(-1)$, 方程变成
   $
@@ -48,23 +48,23 @@ cf. #link(<metric.typ>)[]
   $
   或者写为
   $
-    acc(x) + vel(x)^⊺ Gamma vel(x) &= 0 \
+    acc(x) + vel(x)^⊺ Gamma vel(x) &=&0 \
 
-    "or " acc(x)^j + Gamma_(i i')^j ⋅ vel(x)^i ⋅ vel(x)^i' &= 0 
+    "or " acc(x)^j + Gamma_(i i')^j ⋅ vel(x)^i ⋅ vel(x)^i' &=&0 
   $
 ]
 其中 $Γ$ 是 #tag("metric-connection") *alias* #tag("Levi-Civita-connection")
 #indent[
   $
     && v^⊺ Γ v
-    &= g^(-1) ((∂ (v) g) v - 1/2 v^⊺ (∂ g) v) in ℝ^(p,q) \
+    &=&g^(-1) ((∂ (v) g) v - 1/2 v^⊺ (∂ g) v) in ℝ^(p,q) \
 
     "or "&& v'^⊺ Γ v 
-    &= 1/2 g^(-1) ((∂ (v') g) v + (∂ (v) g) v' - v'^⊺ (∂ g) v) 
-      &quad ("cf. " #link(<difference-symmetric-tensor>)[difference]) \
+    &=&1/2 g^(-1) ((∂ (v') g) v + (∂ (v) g) v' - v'^⊺ (∂ g) v) 
+      &quad& ("cf. " #raw("#link(<difference-symmetric-tensor>)[difference]")) \
 
     "or "&& Gamma_(i i')^j 
-    &= 1/2 sum_i'' g^(j i'') (∂_i g_(i' i'') + ∂_i' g_(i i'') - ∂_i'' g_(i i'))
+    &=&1/2 sum_i'' g^(j i'') (∂_i g_(i' i'') + ∂_i' g_(i i'') - ∂_i'' g_(i i'))
   $
   metric-connection 不是 tensor. metric-connection 的变换方式 #tag("connection-transformations")
   $
@@ -118,7 +118,7 @@ _Proof_
 
   - 1st. 
   #indent[
-    #tag("differenial-of-metric-vs-connection") *Prop* $v^⊺ (∂(v'') g) v' = v'^⊺ g (v''^⊺ Γ v) + v'^⊺ g (v''^⊺ Γ v)$ _Proof_ 直接把 $Γ$ 的 #link(<metric-connection>)[定义] 代入式子
+    #tag("differenial-of-metric-vs-connection") *Prop* $v^⊺ (∂(v'') g) v' = v'^⊺ g (v''^⊺ Γ v) + v'^⊺ g (v''^⊺ Γ v)$ _Proof_ 直接把 $Γ$ 的 #raw("#link(<metric-connection>)[定义]") 代入式子
 
     然后用 $Γ(p) = 0$ 得到 $p$ 点 $∂ g (p) = 0$
 

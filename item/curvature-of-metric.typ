@@ -5,7 +5,7 @@
 #indent[
   flat metric := 存在坐标使得 $forall x, g(x) = η$ 标准 metric
 
-  $𝕊^2$ 的继承自 $ℝ^3$ 的子流形 metric 不是 #link(<flat-metric>)[], 而是 #link(<quadratic-manifold-is-constant-sectional-curvature>)[constant-sectional-curvature].
+  $𝕊^2$ 的继承自 $ℝ^3$ 的子流形 metric 不是 #raw("#link(<flat-metric>)[]"), 而是 #raw("#link(<quadratic-manifold-is-constant-sectional-curvature>)[constant-sectional-curvature]").
 
   何时存在 flat metric?
 
@@ -19,7 +19,7 @@
 
   - $(∂ x)/(∂ y) ⋅ g^(-1) ⋅ (∂ x)/(∂ y)#none ^⊺ = η$
 
-  #link(<connection-transformations>)[联络的变换] 
+  #raw("#link(<connection-transformations>)[联络的变换]") 
   $
     Γ(y) 
     = (∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
@@ -40,26 +40,26 @@
   #indent[
     product-rule 展开以上的微分
     $
-      &= ((∂)/(∂ y) ((∂ x)/(∂ y))) ⋅ g^(-1) ⋅ ((∂ x)/(∂ y))^⊺ \
-      &quad + (∂ x)/(∂ y) ⋅ ((∂)/(∂ y) (g^(-1))) ⋅ ((∂ x)/(∂ y))^⊺ \
-      &quad + (∂ x)/(∂ y) ⋅ g^(-1) ⋅ ((∂)/(∂ y) ((∂ x)/(∂ y))^⊺) 
-        &quad "then use" (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) \
+      &=& ((∂)/(∂ y) ((∂ x)/(∂ y))) ⋅ g^(-1) ⋅ ((∂ x)/(∂ y))^⊺ \
+      &quad& + (∂ x)/(∂ y) ⋅ ((∂)/(∂ y) (g^(-1))) ⋅ ((∂ x)/(∂ y))^⊺ \
+      &quad& + (∂ x)/(∂ y) ⋅ g^(-1) ⋅ ((∂)/(∂ y) ((∂ x)/(∂ y))^⊺) 
+        &quad& "then use" (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) \
 
-      &= (∂ x)/(∂ y) ⋅ (g^(-1)(Γ,) + ∂ g^(-1) + g^(-1)(,Γ)) ⋅ ((∂ x)/(∂ y))^⊺
-        &quad "see" #link(<differenial-of-metric-inverse-vs-connection>)[link] \
+      &=& (∂ x)/(∂ y) ⋅ (g^(-1)(Γ,) + ∂ g^(-1) + g^(-1)(,Γ)) ⋅ ((∂ x)/(∂ y))^⊺
+        &quad& "see" #raw("#link(<differenial-of-metric-inverse-vs-connection>)[link]") \
 
-      &= 0
+      &=& 0
     $
   ]
   关于 $(∂ x)/(∂ y)$ 的线性 PDE 
   
   $ (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) $ 
   
-  是可解的 <==> 满足 #link(<linear-PDE-integrable-condition>)[]
+  是可解的 <==> 满足 #raw("#link(<linear-PDE-integrable-condition>)[]")
   $
     [∇_i,∇_i'] = 0
   $
-  where $∇ = ∂ + Γ$ is #link(<geodesic-derivative>)[]
+  where $∇ = ∂ + Γ$ is #raw("#link(<geodesic-derivative>)[]")
 
   or $ [∇_v, ∇_v'] - ∇_([v,v']) = 0 $
 
@@ -67,7 +67,7 @@
 
   在 flat-metric 坐标 $Γ = 0$ 所以测地线 ODE 是 $acc(x) = 0$,所以 flat-metric 坐标将是测地线坐标 
 ]
-不存在 flate metric 坐标时, 则选取 #link(<Einstein-metric>)[] 作为最小 #link(<scalar-curvature>)[纯量曲率]
+不存在 flate metric 坐标时, 则选取 #raw("#link(<Einstein-metric>)[]") 作为最小 #raw("#link(<scalar-curvature>)[纯量曲率]")
 
 现在不假设 flat metric
 
@@ -80,7 +80,7 @@
 
   $[∇_i,∇_i']$ 是张量 (尽管 $∇$ 不是)
 
-  name-overload: 曲率 := 曲率的 #link(<metric-dual>)[] $R := g [∇_i,∇_i'] $
+  name-overload: 曲率 := 曲率的 #raw("#link(<metric-dual>)[]") $R := g [∇_i,∇_i'] $
 
   在坐标中 $R_(i i j' j') = g_(j' k) (R_(i i'))_j^k$ 
 ]
@@ -96,7 +96,7 @@
 #indent[
   在测地线坐标的原点 $p$, 通过计算, 通过
 
-  - #link(<metric-connection>)[] $Γ$ 的定义和曲率 $R$ 定义
+  - #raw("#link(<metric-connection>)[]") $Γ$ 的定义和曲率 $R$ 定义
   - $Γ(p) = 0$
 
   有
@@ -136,7 +136,7 @@ _Proof_ 在测地线坐标, 用 $Γ$ or $g$ 表示的曲率 $R$ 的定义
 
 #tag("curvature-product")  
 #indent[
-  模仿 #link(<curvature-in-geodesic-coordinate>)[曲率在测地线坐标的定义], 对于二阶对称张量 $T, S ∈ ⨀^2 V^⊺$ 定义 curvature-product
+  模仿 #raw("#link(<curvature-in-geodesic-coordinate>)[曲率在测地线坐标的定义]"), 对于二阶对称张量 $T, S ∈ ⨀^2 V^⊺$ 定义 curvature-product
   $
     (T #cvt-prod S)_(i_1 i_2 j_1 j_2) 
     
@@ -148,7 +148,7 @@ _Proof_ 在测地线坐标, 用 $Γ$ or $g$ 表示的曲率 $R$ 的定义
     
     = T_(i j) S_(i' j') + T_(i' j') S_(i j) - T_(i j') S_(i' j) - T_(i' j) S_(i j')
   $
-  $T #cvt-prod S$ 满足 #link(<symmetry-of-curvature>)[], 从而 $T #cvt-prod S in "curvature"$, or $#cvt-prod : (⨀^2 V^⊺)^2 -> "curvature"$
+  $T #cvt-prod S$ 满足 #raw("#link(<symmetry-of-curvature>)[]"), 从而 $T #cvt-prod S in "curvature"$, or $#cvt-prod : (⨀^2 V^⊺)^2 -> "curvature"$
 
   在测地线坐标的原点, 曲率是 (formally) 
   
@@ -166,8 +166,8 @@ _Proof_ 在测地线坐标, 用 $Γ$ or $g$ 表示的曲率 $R$ 的定义
 
 $
   dim("curvature") 
-  &= dim(⨀^2 (⋀^2 V^⊺)) - dim(⋀^4 V^⊺) \
-  &= 1/12 n^2 (n^2 - 1)
+  &=& dim(⨀^2 (⋀^2 V^⊺)) - dim(⋀^4 V^⊺) \
+  &=& 1/12 n^2 (n^2 - 1)
 $ 
 
 where $n = dim V$ 
@@ -178,7 +178,7 @@ metric 是一种张量 $g ∈ ⨀^2 V^⊺$
 
 #tag("adjoint-of-curvature-product") $(g #cvt-prod)^† : "curvature" -> ⨀^2 V^⊺$ :=
 #indent[
-  对于 $T ∈ ⨀^2 V^⊺$ 和 $S ∈ "curvature"$ 和 $"curvature",⨀^2 V^⊺$ 的 #link(<tensor-induced-metric>)[]
+  对于 $T ∈ ⨀^2 V^⊺$ 和 $S ∈ "curvature"$ 和 $"curvature",⨀^2 V^⊺$ 的 #raw("#link(<tensor-induced-metric>)[]")
   $
     g(g #cvt-prod T, S) = g(T, (g #cvt-prod)^† S)
   $
@@ -197,7 +197,7 @@ metric 是一种张量 $g ∈ ⨀^2 V^⊺$
   在坐标中 $((g #cvt-prod)^† S)_(i j) = 4 g^(i' j') S_(i i' j j')$
 ]
 
-$g #cvt-prod$ 是单射, $(g #cvt-prod)^†$ 是满射. _Proof_ 使用复合映射的前置逆和后置逆, 构造方式参考 #link(<curvature-decomposition>)[] 的计算
+$g #cvt-prod$ 是单射, $(g #cvt-prod)^†$ 是满射. _Proof_ 使用复合映射的前置逆和后置逆, 构造方式参考 #raw("#link(<curvature-decomposition>)[]") 的计算
 
 $dim(im(g #cvt-prod)^†) = dim(im(g #cvt-prod)) = dim ⨀^2 V^⊺$
 
@@ -235,11 +235,11 @@ $
 
 _Proof_ if it's true then 
 #indent[
-  $1/4 (g #cvt-prod)^† T &= (g #cvt-prod)^† (g #cvt-prod) S \
-  &= (n-2) S + g ⋅ g(g,S)$ 
+  $1/4 (g #cvt-prod)^† T &=& (g #cvt-prod)^† (g #cvt-prod) S \
+  &=& (n-2) S + g ⋅ g(g,S)$ 
 
-  $1/4 (g ⋅)^† (g #cvt-prod)^† T &= (n-2) ⋅ g(g,S) + g(g,g) ⋅ g(g,S) \
-  &= 2(n-1) ⋅ g(g,S)$
+  $1/4 (g ⋅)^† (g #cvt-prod)^† T &=& (n-2) ⋅ g(g,S) + g(g,g) ⋅ g(g,S) \
+  &=& 2(n-1) ⋅ g(g,S)$
 
   $S = 1/(4(n-2)) ((g #cvt-prod)^† T - 1/(2(n-1)) g ⋅ (g ⋅)^† (g #cvt-prod)^† T)$
 
@@ -262,15 +262,15 @@ _Proof_ if it's true then
     $"curvature" = ker(g #cvt-prod)^† ⊕ ker(g ⋅)^† ⊕ im(g ⋅)$
   $
     R =
-    &quad W \
-    & + 1/(n-2) ⋅ g #cvt-prod "tr-free-Ric" \ 
-    & + 1/(2n(n-1)) ⋅ "scal" ⋅ g #cvt-prod g
+    &quad& W \
+    &+& 1/(n-2) ⋅ g #cvt-prod "tr-free-Ric" \ 
+    &+& 1/(2n(n-1)) ⋅ "scal" ⋅ g #cvt-prod g
   $
   quadratic-form
   $
-    |R|^2 &= |W|^2 + 4/(n-2) |"tr-free-Ric"|^2 + 2/(n(n-1)) "scal"^2 \
+    |R|^2 &=& |W|^2 + 4/(n-2) |"tr-free-Ric"|^2 + 2/(n(n-1)) "scal"^2 \
 
-    &= |W|^2 + 4/(n-2) |"Ric"|^2 - 2/(n(n-1)) "scal"^2
+    &=& |W|^2 + 4/(n-2) |"Ric"|^2 - 2/(n(n-1)) "scal"^2
   $
 ]
 #tag("curvature-low-dimension") low dimension curvature
@@ -296,7 +296,7 @@ let $(∂ g_(i i'))/(∂ x^j ∂ x^j') = g_(i i', j j')$
 metric 测地线坐标展开也有曲率的出现
 #indent[
   $
-    g_(i i') &= η_(i i') + (∂_(j j') g_(i i')) v^j v^j' + o(v^2) 
+    g_(i i') &=& η_(i i') + (∂_(j j') g_(i i')) v^j v^j' + o(v^2) 
   $
   且满足
   $
@@ -322,7 +322,7 @@ $∇_X Y - ∇_Y X = [X,Y]$
   - curvature $[∇_i,∇_i']$
   - curvature metric-dual $λ g [∇_i,∇_i']$
   - Ricci-curvature $1/λ "Ric"$
-  - #link(<sectional_curvature>)[] $1/λ K$
+  - #raw("#link(<sectional_curvature>)[]") $1/λ K$
   - scalar-curvature $1/λ "scal"$
 
 用 signature $(3,1)$ 来表示时空 metric 时, 就是对 $(1,3)$ signature 乘以 $λ = -1$

@@ -1,12 +1,12 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B")
+#let T = c-bf("T")
 
 #tag("topology-subspace")
 #indent[
-  Subtopology := let $S subset X$. Inherit #link(<topology>)[net system] $#T _S = {S ∩ B : B in #T _X}$
+  Subtopology := let $S subset X$. Inherit #raw("#link(<topology>)[net system]") $#T _S = {S ∩ B : B in #T _X}$
 
   Equivalently defined, the subtopology is the smallest topology that makes the embedding map $S ↪ X$ continuous
 ]
@@ -15,13 +15,13 @@ Inheritance of subtopology. $S' subset S$ is a $#T _S$ subtopology <==> $S' subs
 
 _Proof_ According to the associativity of $∩$ + $S' subset S <==> S' ∩ S = S'$
 
-#tag("closed-in-subspace") #link(<closed>)[] Characterization of in subspace
+#tag("closed-in-subspace") #raw("#link(<closed>)[]") Characterization of in subspace
 #indent[
   $S' ⊂ S ==> "closed"(S',#T _S) = S ∩ "closed"(S',#T _X)$
 
   *Example* $"closed"((0,1],#T _((0,1])) = (0,1] ≠ [0,1] = "closed"((0,1],#T _ ℝ)$
 
-  Indicates that $"closed"(S',#T _X)$ may have #link(<limit-point>)[limit point] $∉ S$ or $in "closed"(S,#T _X) ∖ S$, but the limit point of $"closed"(S',#T _S)$ can only be $in S$
+  Indicates that $"closed"(S',#T _X)$ may have #raw("#link(<limit-point>)[limit point]") $∉ S$ or $in "closed"(S,#T _X) ∖ S$, but the limit point of $"closed"(S',#T _S)$ can only be $in S$
 
   $S$ is a closed set 
   - ==> $S = "closed"(S,#T _X) supset "closed"(S',#T _X)$

@@ -34,8 +34,8 @@ $ℝ^(1,3)$ δ diffeomorphism of field $Δ ϕ$, is zero at the boundary (boundar
 
 $
   integral_(ℝ^(1,3)) #d x Re (∂^† (Δ ϕ^* ∂ ϕ)) 
-  &= lim_(r -> ∞) integral_(ℚ^(1,3)(± r)) (Δ ϕ^* ∂ ϕ) ⋅ n \
-  &= 0
+  &=& lim_(r -> ∞) integral_(ℚ^(1,3)(± r)) (Δ ϕ^* ∂ ϕ) ⋅ n \
+  &=& 0
 $
 Differential of the action
 $
@@ -87,11 +87,11 @@ Plane wave
 
 *Question* #tag("motivation-of-plane-wave-solution")
 #indent[
-  Motivation for plane waves? Inspired by the appearance of $exp$ in the solutions of linear ODEs with constant coefficients, especially the harmonic oscillator eq $(#d^2 x)/(#d t^2) ± ω^2 x = 0$, similar to the first-order linearization of #link(<harmonic-oscillator>)[harmonic oscillator] $mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)$, for the KG equation
+  Motivation for plane waves? Inspired by the appearance of $exp$ in the solutions of linear ODEs with constant coefficients, especially the harmonic oscillator eq $(#d^2 x)/(#d t^2) ± ω^2 x = 0$, similar to the first-order linearization of #raw("#link(<harmonic-oscillator>)[harmonic oscillator]") $mat((#d)/(#d t) ; , (#d)/(#d t)) vec(x,v) = mat(, 1 ; ∓ ω^2) vec(x,v)$, for the KG equation
   $
     mat(∂ ; , ∂^†) vec(ϕ,ψ) = mat(, -𝟙 ; ∓m^2) vec(ϕ,ψ)
   $
-  Perform #link(<exponential-of-vector-field>)[$exp$ transformation] or #link(<integral-curve>)[integral curve]
+  Perform #raw("#link(<exponential-of-vector-field>)[$exp$ transformation]") or #raw("#link(<integral-curve>)[integral curve]")
 
   Trigonometric case
   $
@@ -109,8 +109,8 @@ Plane wave
   Or written in the form of a complex exponential 
   $
     ϕ(x) 
-    &= 1/2 (ϕ(0) - #i (p ⋅ ψ(0))/(m^2)) e^(#i p x) + 1/2 (ϕ(0) + #i (p ⋅ ψ(0))/(m^2)) e^(- #i p x) \
-    &=: a (p, #i) e^(#i p x) + a (p, - #i) e^(- #i p x)
+    &=& 1/2 (ϕ(0) - #i (p ⋅ ψ(0))/(m^2)) e^(#i p x) + 1/2 (ϕ(0) + #i (p ⋅ ψ(0))/(m^2)) e^(- #i p x) \
+    &=:& a (p, #i) e^(#i p x) + a (p, - #i) e^(- #i p x)
   $
   Hyperbolic case is similar
 ]

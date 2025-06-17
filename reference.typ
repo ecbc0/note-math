@@ -1,0 +1,67 @@
+#import "./module/module.typ": *
+#show: module
+```
+ref-1:
+  title: Digital Design and Computer Architecture, RISC-V Edition
+  author:
+    - S.L. Harris
+    - D.M. Harris
+
+ref-2:
+  title: Differential Geometry and Lie Groups, A Second Course
+  author:
+  - J. Gallier
+  - J. Quaintance
+
+ref-3:
+  title: Undergraduate Analysis
+  author: S. Lang
+
+ref-4:
+  title: Complex Analysis
+  author: S. Lang
+
+ref-5:
+  title: Real and Functional Analysis
+  author: S. Lang
+
+ref-6:
+  title: Riemannian Geometry
+  author: Z.Q. Wang
+  url: http://staff.ustc.edu.cn/~wangzuoq/Courses/24S-RiemGeom/index.html
+
+ref-7:
+  title: Orthogonal lightlike (null) vectors are colinear
+  url: https://math.stackexchange.com/a/2502338
+
+ref-8:
+  title: Representations of Finite and Compact Groups
+  author: B. Simon
+
+ref-9:
+  title: General Relativity
+  author: C. Bar
+  url: https://www.math.uni-potsdam.de/fileadmin/user_upload/Prof-Geometrie/Dokumente/Lehre/Lehrmaterialien/GR.pdf
+
+ref-10:
+  title: Modern Geometric Structures and Fields
+  author: Novikov S.P., Taimanov I.A.
+
+ref-11:
+  title: Modern Geometry
+  author: B.A. Dubrovin, S.P. Novikov, A.T. Fomenko
+
+ref-12:
+  title: Measure Theory and Probability
+  author: A. Grigoryan
+  url: https://www.math.uni-bielefeld.de/~grigor/mwlect.pdf
+
+ref-13:
+  title: Representations of the rotation and Lorentz groups and their applications
+  author: Gelfand I.M., Minlos R.A., Shapiro Z.Ya.
+
+ref-14:
+  title: Geometric Methods in Mathematical Physics I: Multi-Linear Algebra, Tensors, a little Spinors and Special Relativity,
+  author: V. Moretti
+  url: https://sites.google.com/unitn.it/valter-moretti/lecture-notes
+```

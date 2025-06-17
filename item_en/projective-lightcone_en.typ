@@ -12,7 +12,7 @@ Can be equivalently understood as positive-cone & positive quotient
 $
   #projective-cone (p,q) ≃ {[λ x] : g(x,x) = 0 and λ > 0}
 $
-Since the metric is zero on the light cone, many analysis cannot be done. Also, the quotient of rays on the light cone corresponds to #link(<metric-cannot-distinguish-colinear-light-like>)[]
+Since the metric is zero on the light cone, many analysis cannot be done. Also, the quotient of rays on the light cone corresponds to #raw("#link(<metric-cannot-distinguish-colinear-light-like>)[]")
 
 $SO(p,q)$ induce bijective of $#projective-cone (p,q)$
 
@@ -25,7 +25,7 @@ identity $𝟙 ∈ GL$ induce $𝟙 ∈ ℝℙ$
   - Elliptic $#projective-cone (1,3) ≃ 𝕊^2 ≃ ℂℙ^1$
   - Hyperbolic $#projective-cone (1,3) ∖ #projective-cone (1,2) ≃ ℍ𝕪^2$ \ 
     The hyperbolic case has two separate branches. There is a singularity region $#projective-cone (1,2)$ between the future light cone section and the past light cone section. \
-    Is there a $ℂℙ^1$ analogue? But $ℍ𝕪^2$ is a Euclidean manifold, which is not suitable for the $1,1$ signature of split complex numbers $ℂ_"split"$, and #link(<stereographic-projective-hyperbolic>)[stereographic projective hyperbolic projection] seems quite complicated \
+    Is there a $ℂℙ^1$ analogue? But $ℍ𝕪^2$ is a Euclidean manifold, which is not suitable for the $1,1$ signature of split complex numbers $ℂ_"split"$, and #raw("#link(<stereographic-projective-hyperbolic>)[stereographic projective hyperbolic projection]") seems quite complicated \
     Since the light cone can intercept $𝕊^2$, it is reasonable to lose the symmetry of $ℍ𝕪^2 = ℚ^(1,2)(1)$ corresponding to $ℚ^(1,2)(-1)$
 #let c_1 = ${λ vec(z,w) ∈ ℂ^2 : w != 0}$
 #let c_2 = ${λ vec(z,w) ∈ ℂ^2 : z != 0}$
@@ -45,7 +45,7 @@ _Proof_
   ]
   - $𝕊^2 ≃ ℂℙ^1$
   #indent[
-    #link(<stereographic-projection>)[Stereographic projection] transition-function is quadratic inversion
+    #raw("#link(<stereographic-projection>)[Stereographic projection]") transition-function is quadratic inversion
     $ dmat( delim: #none , 
       ℝ^(n-1) ,⟶, ℝ^(n-1) ;
       ξ ,⟿, (1 ± x_1)/(1 ∓ x_1) ξ = ξ/(|ξ|^2)
@@ -60,7 +60,7 @@ _Proof_
     
     vs $𝕊^2$ stereographic projection transition-function $ξ ⇝ 1/(ξ^*) = ξ/(|ξ|^2)$
 
-    A more direct mapping between the coordinates of $ℂℙ^1 -> 𝕊^2$, cf. #link(<Hopf-bundle>)[] 
+    A more direct mapping between the coordinates of $ℂℙ^1 -> 𝕊^2$, cf. #raw("#link(<Hopf-bundle>)[]") 
   ]
 ]
 #tag("linear-fractional")  
@@ -84,7 +84,7 @@ Scaling $λ ∈ ℂ ∖ 0 , λ mat(a,b;c,d) $ gives the same linear-fractional, 
 
 *Prop* (@ref-13, p.172--174)
 
-- $SO(1,3)$ acts on $ℂℙ^1$ in coordinate can be expressed as $SL(2,ℂ)$ #link(<linear-fractional>)[] 
+- $SO(1,3)$ acts on $ℂℙ^1$ in coordinate can be expressed as $SL(2,ℂ)$ #raw("#link(<linear-fractional>)[]") 
 
 - $SL(2,ℂ)/ℤ_2 = SO(1,3)$ #tag("Lorentz-group-spinor-representation") 
 
@@ -151,14 +151,14 @@ _Proof_
 
   - $so(1,3)$ have form $mat(0,b^⊺;b,r)$ where $r ∈ so(3), b ∈ ℝ^3$ (@ref-2, Vol.1, p.180)
 
-  - from $SO(1,3)$ to $SL(2,ℂ)$. Solve it from the following $SL(2,ℂ)$ to $SO(1,3)$. Or use $SO(1,3)$ #link(<polar-decomposition-of-Lorentz-group>)[Polar decomposition] to rotation boost + #link(<Euler-angle-Lorentz-group>)[Euler angle] 
+  - from $SO(1,3)$ to $SL(2,ℂ)$. Solve it from the following $SL(2,ℂ)$ to $SO(1,3)$. Or use $SO(1,3)$ #raw("#link(<polar-decomposition-of-Lorentz-group>)[Polar decomposition]") to rotation boost + #raw("#link(<Euler-angle-Lorentz-group>)[Euler angle]") 
 
   - from $A = mat(a,b;c,d) in SL(2,ℂ)$ to $Λ in SO(1,3)$, where $a d - b c = 1$ 
   #indent[
-    Use #link(<spacetime-momentum-spinor-representation>)[] to directly calculate $A #spin($p$) A^† in ℝ^(1,3)$  
+    Use #raw("#link(<spacetime-momentum-spinor-representation>)[]") to directly calculate $A #spin($p$) A^† in ℝ^(1,3)$  
     $ 
       Λ^ μ _ ν = 1/2 tr (σ_ μ A σ_ ν A^†) = 1/2 tr (A σ_ ν A^† σ_  μ) = \
-      mat( delim: #none ,
+      mat(
         |a|^2 + |b|^2 + |c|^2 + |d|^2, 2 Re(a b^* + c d^*), 2 Im(a b^* + c d^*), |a|^2 - |b|^2 + |c^2| - |d|^2;
 
         2 Re(a c^* + b d^*), 2 Re(a d^* + b c^*), 2 Im(a d^* + b c^*), 2 Re(a c^* - b d^*);
@@ -176,9 +176,9 @@ $SO(1,3)$ is the conformal transformation group of $ℂℙ^1 ≃ 𝕊^2$, repres
 
 To calculate the conformal transformation factor of the metric, use $ℂℙ^1$ coordinate and 3 rotation, 3 boost ...
 
-#tag("isotropy-on-projective-lightcone") *Prop* $SL(2,ℂ)$ acts on projective-lightcone $ℂℙ^1$, #link(<isotropy>)[] is similar to $GL(1,ℂ) ⋊ ℂ$
+#tag("isotropy-on-projective-lightcone") *Prop* $SL(2,ℂ)$ acts on projective-lightcone $ℂℙ^1$, #raw("#link(<isotropy>)[]") is similar to $GL(1,ℂ) ⋊ ℂ$
 #indent[
-  $GL(2,ℂ),SL(2,ℂ)$ are #link(<action-surjective>)[surjective action], orbit number $1$, so calculate isotropy #link(<isotropy-in-same-orbit-is-isom>)[only need to consider] one point
+  $GL(2,ℂ),SL(2,ℂ)$ are #raw("#link(<action-surjective>)[surjective action]"), orbit number $1$, so calculate isotropy #raw("#link(<isotropy-in-same-orbit-is-isom>)[only need to consider]") one point
 
   Use the points $z = 1, w = 0 in ℂ^2$, in coordinates #c_2, $w/z = 0$, corresponding to the point on the light cone projection $(1,1,0,0) ∈ ℝ^(1,3)$
   
@@ -190,9 +190,9 @@ To calculate the conformal transformation factor of the metric, use $ℂℙ^1$ c
   $
   is similar to $GL(1,ℂ) ⋊ ℂ$ because
   $
-    mat(a, 0;, a^(-1)) mat(1,b;,1) mat(a, 0;, a^(-1))^† &= mat(1,a^2 b;,1) \
+    mat(a, 0;, a^(-1)) mat(1,b;,1) mat(a, 0;, a^(-1))^† &=& mat(1,a^2 b;,1) \
 
-    mat(1,b;,1) mat(1,b';,1) &= mat(1,b + b';,1)
+    mat(1,b;,1) mat(1,b';,1) &=& mat(1,b + b';,1)
   $
   the group multiplication is 
   $

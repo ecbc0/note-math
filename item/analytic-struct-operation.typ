@@ -79,10 +79,10 @@
     try 归纳证明 $|B_m| <= R^m$
 
     $|A_0| |B_m| 
-    &<= sum_(n=1)^m |A_n| |B_(m-n)| \ 
-    &<= sum_(n=1)^m |A_n| R^(m-n) quad ("by induction" B_1 ,…, B_(m-1)) \
-    &= R^m sum_(n=1)^m |A_n| (1/R)^n \
-    &<= R^m sum_(n=1)^∞ |A_n| (1/R)^n$
+    &<=&sum_(n=1)^m |A_n| |B_(m-n)| \ 
+    &<=&sum_(n=1)^m |A_n| R^(m-n) quad ("by induction" B_1 ,…, B_(m-1)) \
+    &=&R^m sum_(n=1)^m |A_n| (1/R)^n \
+    &<=&R^m sum_(n=1)^∞ |A_n| (1/R)^n$
 
     为完成归纳, use $R$ with $1/(|A_0|) sum_(n=1)^∞ |A_n| (1/R)^n <= 1$
   ]
@@ -96,9 +96,9 @@
     with $a_0 = f(y) = f(g(x)) = f(b_0)$
 
     $f(g(x+v)) ∘ 
-    &= f(b_0 + sum_(m=1)^∞ b_m v^m) \
-    &= a_0 + sum_(n=1)^∞ a_n (sum_(m=1)^∞ b_m v^m)^n \
-    &= c_0 + sum_(l=1)^∞ c_l v^l$
+    &=&f(b_0 + sum_(m=1)^∞ b_m v^m) \
+    &=&a_0 + sum_(n=1)^∞ a_n (sum_(m=1)^∞ b_m v^m)^n \
+    &=&c_0 + sum_(l=1)^∞ c_l v^l$
 
     where 复合后的 $v^l$ 的所有可能来源 
     
@@ -107,7 +107,7 @@
     从而只能来自 for $k = 1 ,…, l$ 
     
     $(b_1 v + ⋯ + b_l v^l)^k 
-    = sum_(i_1 + ⋯ + i_l = k) binom(k,i_1,...,i_l) b_1^(i_1) ⋯ b_l^(i_l)$ (cf. #link(<multi-combination>)[])
+    = sum_(i_1 + ⋯ + i_l = k) binom(k,i_1,...,i_l) b_1^(i_1) ⋯ b_l^(i_l)$ (cf. #raw("#link(<multi-combination>)[]"))
 
     ==> 
     $ 
@@ -190,9 +190,9 @@
     ==> (省略 $(v^l)$)
     $
       0 
-      &= C_l \
-      &= A_1 B_l \
-      &quad + sum_(k = 2 ,…, l) 
+      &=&C_l \
+      &=&A_1 B_l \
+      &quad& + sum_(k = 2 ,…, l) 
       sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
       binom(k,i_1,...,i_l) A_k B_1^(i_1) ⋯ B_(l-1)^(i_(l-1))
     $
@@ -223,7 +223,7 @@
     ==>
     $
       &|B_l| 
-      &<= 1/(|A_1|) 
+      &<=&1/(|A_1|) 
       sum_(k = 2 ,…, l) 
       sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
       binom(k,i_1,...,i_l) |A_k| |B_1|^(i_1) ⋯ |B_(l-1)|^(i_(l-1))  
@@ -250,11 +250,11 @@
     ==> 
     $
       |B_l| 
-      &<= 1/(|A_1|) 
+      &<=&1/(|A_1|) 
       sum_(k = 2 ,…, l) 
       sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
       binom(k,i_1,...,i_l) |A_k| |B_1|^(i_1) ⋯ |B_(l-1)|^(i_(l-1)) \
-      &<= (-a_1)/(|A_1|) b_l
+      &<=&(-a_1)/(|A_1|) b_l
     $
     
     $|B_1| = 1/(|A_1|)$, $b_1 = 1/(-a_1)$
@@ -266,9 +266,9 @@
     now prove 幂级数 $a_k$ 的逆幂级数 $b_k$ 收敛半径非零
     $
       sum_(n >= 1) a_k v^k 
-      &= α v + sum_(n >= 2) β^k v^k \
-      &∼ α v + 1/(1 - β v) - 1 - β v \
-      &= α v + ((β v)^2)/(1- β v) 
+      &=&α v + sum_(n >= 2) β^k v^k \
+      &∼&α v + 1/(1 - β v) - 1 - β v \
+      &=&α v + ((β v)^2)/(1- β v) 
     $
     let $f(v) = α v + ((β v)^2)/(1- β v) ∼ sum a_k v^k$, $f^(-1)(v) = g(v) ∼ sum b_j v^j$
 
@@ -297,7 +297,7 @@ or $(f^(-1))'(x) = 1/(f'(f^(-1)(x)))$
 
 #tag("implicit-function")
 
-use #link(<analytic-struct-product>)[]
+use #raw("#link(<analytic-struct-product>)[]")
 
 $F(x,y) = 0$ and $(∂ F)/(∂ y)(x,y) in GL$
 
@@ -325,9 +325,9 @@ $F(x,y) = 0$ and $(∂ F)/(∂ y)(x,y) in GL$
 
   $
     F^((n))_(>q) 
-    &:= sum_(k ∈ ℕ \ k > q) e^(-sqrt(2^k)) (2^k)^n cos(2^k x) \
-    &= sum_(k ∈ ℕ \ k > q) e^(-sqrt(2^k)) (2^k)^n \
-    &>= e^(-n) n^(2 n) ("as" n -> ∞ )
+    &:=&sum_(k ∈ ℕ \ k > q) e^(-sqrt(2^k)) (2^k)^n cos(2^k x) \
+    &=&sum_(k ∈ ℕ \ k > q) e^(-sqrt(2^k)) (2^k)^n \
+    &>=&e^(-n) n^(2 n) ("as" n -> ∞ )
   $
 
   where we used the fact that $cos(2^k x) = 1$ for forall $2^k > 2^q$, and we bounded the first sum from below by the term with $2^k = 2^(2 m) = n^2$. 

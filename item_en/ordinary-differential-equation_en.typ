@@ -4,8 +4,8 @@
 separable ODE in 1 dimension 
 $ 
   (#d x)/(#d t) = f(t) g(x) 
-  &--> 1/g(x) #d x = f(t) #d t \
-  &--> x = G^(-1)(F(t)) 
+  &-->& 1/g(x) #d x = f(t) #d t \
+  &-->& x = G^(-1)(F(t)) 
 $ 
 where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, initial value undetermined
 
@@ -26,8 +26,8 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, initial value undeterm
   Taylor series of vector field 
   $ 
     (exp v) (x) 
-    &= x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
-    &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
+    &=& x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
+    &=& x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
   $
   $n+1$ polynomial like $(∂_(λ v(x)))^n λ v (x) = λ^(n+1) (∂_(v(x)))^n v (x)$
 ]
@@ -42,13 +42,13 @@ compare to the result from separable ODE in 1 dimension
   $#d v (x) = A$, $n >= 2 ==> #d^k v (x) = 0$
 
   $∂_(v(x)) v(x) 
-  &= A(v(x)) \
-  &= A^2 (x)$
+  &=& A(v(x)) \
+  &=& A^2 (x)$
 
   $(∂_(v(x)))^2 v(x) 
-  &= #d (A^2(x))(v(x)) \
-  &= A^2(v(x)) \
-  &= A^3(x) $ 
+  &=& #d (A^2(x))(v(x)) \
+  &=& A^2(v(x)) \
+  &=& A^3(x) $ 
   
   ...
 
@@ -57,9 +57,9 @@ compare to the result from separable ODE in 1 dimension
   $f(x) = (𝟙 + A + 1/2! A^2 + ⋯) (x) = (sum 1/n! A^n ) (x) = (exp A) (x)$
 
   $#d f(x) v(x) 
-  &= (exp A)(A (x)) \
-  &= A(exp(A)(x)) \
-  &= v(f(x))$
+  &=& (exp A)(A (x)) \
+  &=& A(exp(A)(x)) \
+  &=& v(f(x))$
 
   *Example* #tag("harmonic-oscillator") 
   #indent[
@@ -102,14 +102,14 @@ compare to the result from separable ODE in 1 dimension
   $(∂_(v(x)))^n v (x) = (n+1)! ⋅ x^(n+2)$
 
   $f(x) 
-  &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
-  &= sum_(m=1)^∞ x^m \
-  &= 1 - 1/(1-x)$
+  &=& x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
+  &=& sum_(m=1)^∞ x^m \
+  &=& 1 - 1/(1-x)$
 
   $#d f(x) v(x) 
-  &= (1/(1-x))^2 x^2 \
-  &= (x/(1-x))^2 \
-  &= v(f(x))$
+  &=& (1/(1-x))^2 x^2 \
+  &=& (x/(1-x))^2 \
+  &=& v(f(x))$
 ]
 *Question* 
 #indent[
@@ -121,13 +121,13 @@ compare to the result from separable ODE in 1 dimension
 ]
 $f(t,x)$ is called flow. exp road emission-like coordinates
 
-#tag("vector-field-as-δ-diffeomorphism") Near $𝟙$, the vector field is the coordinate of the diffeomorphism group $v ⇝ exp v$, similar to #link(<geodesic-coordinate>)[]
+#tag("vector-field-as-δ-diffeomorphism") Near $𝟙$, the vector field is the coordinate of the diffeomorphism group $v ⇝ exp v$, similar to #raw("#link(<geodesic-coordinate>)[]")
 
 ODE
 
 $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
-#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], the estimation of the radius of convergence uses a special upper bound control method, similar to what is done in #link(<inverse-analytic>)[]
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], the estimation of the radius of convergence uses a special upper bound control method, similar to what is done in #raw("#link(<inverse-analytic>)[]")
 
 $F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
 

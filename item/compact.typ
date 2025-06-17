@@ -1,15 +1,15 @@
 #import "../module/module.typ": *
 #show: module
 
-#let A = c-bf("A","#919191")
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let A = c-bf("A")
+#let B = c-bf("B")
+#let T = c-bf("T")
 
 #let open(x) = math.circle(x)
 
-compact 的原初的启发: $ℝ$ 的闭区间网的交集非空 #link(<closed-interval-net-theorem>)[]
+compact 的原初的启发: $ℝ$ 的闭区间网的交集非空 #raw("#link(<closed-interval-net-theorem>)[]")
 
-$0$ 是 $(0,1)$ 的 $#T _ ℝ$ 的 #link(<limit-point>)[极限点]. #link(<net>)[网] $(0,1/n)$ 看似收敛到 $0$
+$0$ 是 $(0,1)$ 的 $#T _ ℝ$ 的 #raw("#link(<limit-point>)[极限点]"). #raw("#link(<net>)[网]") $(0,1/n)$ 看似收敛到 $0$
 
 但是 $⋂ (0,1/n) = ∅$
 
@@ -19,13 +19,13 @@ $ℝ$ 没有 $∞$ 对应到可能的极限 $0$
 
 比较 $⋂ [0,1/n) = {0}$
 
-let $#T _X$ #link(<topology>)[拓扑空间]. let $A subset X$
+let $#T _X$ #raw("#link(<topology>)[拓扑空间]"). let $A subset X$
 
 #tag("compact") $A$ compact := forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
 
-含义: 任何 #link(<net>)[网] $#B$ 的元素在拓扑 $#T _X$ 下有共同的极限点集. 或者, 经过 $#T _X$ 闭包后网 $#B$ 收敛到非空集 or 交集非空, 而不是收敛到空集 (例如 Euclidean $ℝ^d$ 收敛到空集或者收敛到无穷远, 但还有很多其它复杂的情况)
+含义: 任何 #raw("#link(<net>)[网]") $#B$ 的元素在拓扑 $#T _X$ 下有共同的极限点集. 或者, 经过 $#T _X$ 闭包后网 $#B$ 收敛到非空集 or 交集非空, 而不是收敛到空集 (例如 Euclidean $ℝ^d$ 收敛到空集或者收敛到无穷远, 但还有很多其它复杂的情况)
 
-任何网都可以补充所有的有限交集并保持 #link(<net-same-limit>)[相同的极限], 所以对于 compact, 等价的描述是 
+任何网都可以补充所有的有限交集并保持 #raw("#link(<net-same-limit>)[相同的极限]"), 所以对于 compact, 等价的描述是 
 
 $#T _X$ compact <==> 
 $
@@ -40,9 +40,9 @@ $
   ⋃_(A in #A) open(A) = X ==> exists A_1 ,…, A_n in #A, open(A)_1 ∩ ⋯ ∩ open(A)_n = X
 $
 
-#tag("compact-subset") $S subset X$ := #link(<topology-subspace>)[] $#T _S$ compact
+#tag("compact-subset") $S subset X$ := #raw("#link(<topology-subspace>)[]") $#T _S$ compact
 
-recall #link(<closed-in-subspace>)[], $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, 记为 $S ∩ closed(A)$
+recall #raw("#link(<closed-in-subspace>)[]"), $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, 记为 $S ∩ closed(A)$
 
 compact-subset 逻辑等价于
 $
@@ -63,7 +63,7 @@ compact-subset 对有限并集封闭. this is easy to proof
 
 _Proof_
 #indent[
-  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed-in-subspace>)[]
+  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #raw("#link(<closed-in-subspace>)[]")
 
   再利用 $#T _X$ compact 得到 $⋂_(A in #A) closed(A) != ∅$ 从而得到 $S$ compact
 ]
@@ -84,7 +84,7 @@ _Proof_
 
   $#T _X$ compact ==> $⋂_(A in #A) Closed(f^(-1)(A)) != 0$
 
-  连续函数逆像保持 closed $Closed(f^(-1)(A)) = f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #link(<inverse-image>)[性质]
+  连续函数逆像保持 closed $Closed(f^(-1)(A)) = f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #raw("#link(<inverse-image>)[性质]")
   $
     ∅ != f(⋂_(A in #A) f^(-1)(closed(A))) subset ⋂_(A in #A) f(f^(-1)(closed(A)))
   $
@@ -94,11 +94,11 @@ _Proof_
 ]
 逆否命题: 连续函数下, non-compact 逆像是 non-compact 的
 
-#tag("quotient-topology-preserve-compact") 对于 #link(<quotient-topology>)[] $π : X ⇝ X/∼$, 源空间 $X$ compact ==> 商空间 $X/∼$ compact. by 商映射 $π$ 连续所以保持 compact
+#tag("quotient-topology-preserve-compact") 对于 #raw("#link(<quotient-topology>)[]") $π : X ⇝ X/∼$, 源空间 $X$ compact ==> 商空间 $X/∼$ compact. by 商映射 $π$ 连续所以保持 compact
 
 #let prod = $limits(product)_(i in I) X_i$ 
 
-#tag("product-topology-preserve-compact") #link(<product-topology>)[] 保持 compact
+#tag("product-topology-preserve-compact") #raw("#link(<product-topology>)[]") 保持 compact
 
 _Proof_
 #indent[
@@ -117,8 +117,8 @@ _Proof_
   $
   ==> 
   $
-    ∅ &!= (f_i "restrict to" A)^(-1) (f_i (A) ∩ B_(x_i)) \
-    &= A ∩ f_i^(-1)(B_(x_i))
+    ∅ &!=&(f_i "restrict to" A)^(-1) (f_i (A) ∩ B_(x_i)) \
+    &=&A ∩ f_i^(-1)(B_(x_i))
   $
   由积拓扑的点网系统定义和闭包 $closed(A)$ 的定义
 

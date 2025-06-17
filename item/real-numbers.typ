@@ -10,9 +10,9 @@
 ]
 _Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任务手动分成几个子任务, 都不会影响结果, 而且总的分解方式有限. 加法结合律和交换律只是其中的特殊情况. 就像我们通过数数来认识自然数一样, 我们总是可以通过数数认识交换律和结合律. 所有东西都 reduce to 完全加法分解的情况, 只有大量 $1$ 的交换律和结合律
 
-对计算机来说似乎难以表达这种直观, 但似乎所有的有限结果一定会正确. 类似于 #link(<natural-number>)[自然数中所做的], 为了让计算机能用有限的字符和内存以及有限的时间 (以及潜在的无限时间) 去表达这种对所有自然数成立的性质, 需要定义它是 true proposition
+对计算机来说似乎难以表达这种直观, 但似乎所有的有限结果一定会正确. 类似于 #raw("#link(<natural-number>)[自然数中所做的]"), 为了让计算机能用有限的字符和内存以及有限的时间 (以及潜在的无限时间) 去表达这种对所有自然数成立的性质, 需要定义它是 true proposition
 
-通常的 "证明" 是使用最小的假设, $1$ 的结合律 $(a + b) + 1 = a + (b + 1)$ 或者加法的定义 $(a + 1) + b = (a + b) + 1$, 然后推出其它 
+_Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任务手动分成几个子任务, 都不会影响结果, 而且总的分解方式有限. 加法结合律和交换律只是其中的特殊情况
 
 自然数 $ℕ$ 的乘法
 #indent[
@@ -88,7 +88,7 @@ let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"dis
 $
   forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
 $
-可以把 $ℕ$ 有理数区间套改为一般的长度 #link(<hom-limit>)[极限] 趋于零的有理数区间 $⊂$ #link(<maximal-linear-order>)[线序链] 或者更一般的长度趋于零的有理数区间 (极大的) #link(<net>)[网]
+可以把 $ℕ$ 有理数区间套改为一般的长度 #raw("#link(<hom-limit>)[极限]") 趋于零的有理数区间 $⊂$ #raw("#link(<maximal-linear-order>)[线序链]") 或者更一般的长度趋于零的有理数区间 (极大的) #raw("#link(<net>)[网]")
 
 有理数区间是子集 $A ⊂ ℚ$ with property 序不中断 
 
@@ -117,10 +117,10 @@ $
 - #tag("add-real") $ℝ$ 加法. let $x,y ∈ ℝ$
 #indent[  
   $
-    x + y &:= (ℚ_(< x) + ℚ_(< y) , ℚ_(> x) + ℚ_(>  y)) 
+    x + y &:=&(ℚ_(< x) + ℚ_(< y) , ℚ_(> x) + ℚ_(>  y)) 
     &&"expect" (ℚ_(< x + y) , ℚ_(>  x + y)) \
 
-    -x &:= (- ℚ_(> x), - ℚ_(< x)) 
+    -x &:=&(- ℚ_(> x), - ℚ_(< x)) 
     &&"expect" (ℚ_(< -x),ℚ_(>  -x))
   $
   ]
@@ -129,10 +129,10 @@ $
 - #tag("multiply-real") $ℝ$ 乘法. let $x,y > 0$
 #indent[
   $
-    x ⋅ y &:= (ℚ_((0,x)) ⋅ ℚ_((0,y)) , ℚ_((x,∞)) ⋅ ℚ_((y,∞))) 
+    x ⋅ y &:=&(ℚ_((0,x)) ⋅ ℚ_((0,y)) , ℚ_((x,∞)) ⋅ ℚ_((y,∞))) 
     && "expect" (ℚ_((0,x y)) , ℚ_((x y,∞))) \
 
-    1/x &:= (1/(ℚ_((x,∞))) , 1/(ℚ_((0,x)))) 
+    1/x &:=&(1/(ℚ_((x,∞))) , 1/(ℚ_((0,x)))) 
     && "expect" (ℚ_((0,1/x)),ℚ_((1/x,∞)))
   $
 ]
@@ -151,21 +151,21 @@ $ℝ$ 完备性 #tag("completeness-real")
   - $forall a ∈ A, a <= sup A$ 
   - $forall ε > 0, exists a in A, sup A - ε < a <= sup A$
 
-  #tag("monotone-convergence") 单调有界 #link(<limit-sequence-real>)[收敛] _Proof_ use 确界原理
+  #tag("monotone-convergence") 单调有界 #raw("#link(<limit-sequence-real>)[收敛]") _Proof_ use 确界原理
 ]
 #tag("nested-closed-interval-theorem") 闭区间套定理
 #indent[
   无论是 $ℕ$ 区间套还是 $⊂$ 线序链区间套, 线序意味着区间端点单调性, 对端点用上确界 $a_1$ 下确界 $a_0$ with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ 可以理解为 $⊂$ 线序链区间套的最小元
 ] 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
-#tag("closed-interval-net-theorem") 闭区间 #link(<net>)[网] $#B$ 交集非空 $⋂ #B != ∅$
+#let B = c-bf("B")
+#let C = c-bf("C")
+#tag("closed-interval-net-theorem") 闭区间 #raw("#link(<net>)[网]") $#B$ 交集非空 $⋂ #B != ∅$
 
 _Proof_
 #indent[
   对网 $#B$ 补充所有的有限交集
 
-  取一个 #link(<maximal-linear-order>)[极大线序链] $#C$. 由闭区间套定理, 其交集是非空闭区间 $⋂ #C != ∅$
+  取一个 #raw("#link(<maximal-linear-order>)[极大线序链]") $#C$. 由闭区间套定理, 其交集是非空闭区间 $⋂ #C != ∅$
 
   由 $#C$ 的线序极大性, 直觉上, 闭区间 $⋂ #C$ 将小于所有 $#B$ 的闭区间, 从而 $⋂ #C subset ⋂ #B$
 
@@ -204,9 +204,9 @@ $ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) 
 
   - $a_k = 1 + 1/k$
     $ 
-      sup_(n in ℕ) {a_n} &= 2 \ 
-      sup_(n >= k) {a_k} &= 1 + 1/k \
-      lim_(n -> ∞) sup_(n >= k) {a_k} &= 1 
+      sup_(n in ℕ) {a_n} &=&2 \ 
+      sup_(n >= k) {a_k} &=&1 + 1/k \
+      lim_(n -> ∞) sup_(n >= k) {a_k} &=&1 
     $
   - $a_k = 1 + (-1)^k$
 
@@ -243,7 +243,7 @@ _Proof_
 
 #tag("uncountable-real") 实数不可数 $|ℕ| < |ℝ|$ 
 #indent[
-  已经证明了 $|ℕ| < |Subset(ℕ)|$. cf. #link(<cardinal-increase>)[]
+  已经证明了 $|ℕ| < |Subset(ℕ)|$. cf. #raw("#link(<cardinal-increase>)[]")
 
   recall ${0,1}^ℕ ≃ (ℕ -> "bool") ≃ Subset(ℕ)$
 
@@ -272,8 +272,8 @@ _Proof_
       对比 ${0,1}^ℕ$, $1/2^(m_1) + 1/2^(m_2) + ⋯$ vs $1/2^(n_1) + 1/2^(n_1 + n_2) + ⋯$
       
       $ 
-        m_1 &= n_1 \ 
-        m_2 &= n_1 + n_2 \ 
+        m_1 &=&n_1 \ 
+        m_2 &=&n_1 + n_2 \ 
         &⋯
       $
       

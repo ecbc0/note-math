@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<Klein--Gordon-Lagrangian>)[Action of scalar field]
+cf. #raw("#link(<Klein--Gordon-Lagrangian>)[Action of scalar field]")
 
 Symmetry and conserved currents
 
@@ -11,7 +11,7 @@ Symmetry and conserved currents
   $
   (#d)/(#d s) integral_(ℝ^(1,3) + s a) #d x (f(x)) = integral_(ℝ^(1,3)) #d x (∂_x f(x) ⋅ a)
   $
-  Generally, region change is given by $exp(a(x))$ #link(<vector-field-as-δ-diffeomorphism>)[by δ diffeomorphism] $a(x)$ 
+  Generally, region change is given by $exp(a(x))$ #raw("#link(<vector-field-as-δ-diffeomorphism>)[by δ diffeomorphism]") $a(x)$ 
   $
     (#d)/(#d s) limits(integral)_(exp(s a(x)) U) #d x (f(x)) 
     
@@ -27,13 +27,13 @@ Symmetry and conserved currents
   $
   Apply it to 
   $
-    f(x) &= L(ϕ(x),∂ ϕ(x)) 
+    f(x) &=& L(ϕ(x),∂ ϕ(x)) 
   $
   Consider the derivative of the action for a variation that is a translation in the $ν in ℝ^(1,3)$ direction. let $Δ ϕ = ∂_(ν) ϕ$, first order derivative $Δ S =$
   $
     integral_(ℝ^(1,3)) #d x (∂_(ν) L)
     
-    &= integral_(ℝ^(1,3)) #d x (
+    &=& integral_(ℝ^(1,3)) #d x (
       (∂ L)/(∂ ϕ) ⋅ Δ ϕ + (∂ L)/(∂ (∂_x ϕ)) ⋅ ∂_x Δ ϕ
     )
   $
@@ -50,7 +50,7 @@ Symmetry and conserved currents
   $
     integral_(ℝ^(1,3)) #d x (∂_(ν) L)
     
-    &= integral_(ℝ^(1,3)) #d x (
+    &=& integral_(ℝ^(1,3)) #d x (
       ∂_x^† ((∂ L)/(∂ (∂_x ϕ)) ⋅ Δ ϕ)
     )
   $
@@ -91,11 +91,11 @@ Symmetry and conserved currents
     Fixing the $ℝ^(1,3)$ coordinates, assume $T^0_μ$ is a quantity integrable over $ℝ^3$
     $
       ∂_0 integral_(ℝ^3) #d x (T_μ^0)
-      &= integral_(ℝ^3) #d x (∂_0 T_μ^0) \
-      &= - integral_(ℝ^3) #d x (∂_1 T_μ^1 + ∂_2 T_μ^2 + ∂_3 T_μ^3) 
+      &=& integral_(ℝ^3) #d x (∂_0 T_μ^0) \
+      &=& - integral_(ℝ^3) #d x (∂_1 T_μ^1 + ∂_2 T_μ^2 + ∂_3 T_μ^3) 
         " by " ∂^† T_μ = 0 \
-      &= - lim_(r -> ∞) integral_(𝔹^3(r)) #d x (div T_μ^x) \
-      &= - lim_(r -> ∞) integral_(𝕊^2(r)) #d Vol (T_μ^x ⋅ x/(|x|))
+      &=& - lim_(r -> ∞) integral_(𝔹^3(r)) #d x (div T_μ^x) \
+      &=& - lim_(r -> ∞) integral_(𝕊^2(r)) #d Vol (T_μ^x ⋅ x/(|x|))
     $
     As long as we assume that the flux density $r -> ∞ ==> T_μ^x ⋅ x/(|x|) -> 0$, then we have time invariance of $integral_(ℝ^3) #d x (T_μ^0)$
 
@@ -153,11 +153,11 @@ Symmetry and conserved currents
 #indent[
   let $ϕ(x)$ be the solution of KG eq. The phase change $e^(θ(x)) ϕ(x)$ and its δ change $θ ϕ$ belong to variations near the solution with fixed boundaries, so
   $
-    0 &= integral_(ℝ^(1,3)) #d x 1/2 (
+    0 &=& integral_(ℝ^(1,3)) #d x 1/2 (
         ∂(- θ ϕ^*) ⋅ ∂ ϕ +  ∂ ϕ^* ⋅ ∂(θ ϕ)
     ) \
     
-    &= integral_(ℝ^(1,3)) #d x 1/2 (
+    &=& integral_(ℝ^(1,3)) #d x 1/2 (
       - ϕ^* ∂ ϕ + ϕ ∂ ϕ^*) ⋅ ∂ θ
   $ 
   Using product rule + divergence + Stokes' theorem + zero boundary 

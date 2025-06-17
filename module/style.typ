@@ -38,14 +38,14 @@
   show heading: set text(fill: rgb("#b30042"))
 
   show math.equation: set text(
-    font: "noto sans math",
+    font: ("noto sans math","New Computer Modern Math"),
     fill: rgb("#2b8900"),
     size: 15pt,
   )
 
   set math.limits(inline: true)
 
-  show math.equation: math.display
+  show math.equation.where(block: false): math.display
 
   show math.equation.where(block: true): set align(left)
 

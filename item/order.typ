@@ -15,7 +15,7 @@ $n$ 元关系类似
   也可以用等价的 $<=$ 版本
 ]
 *Example* 
-  - 子集的包含 $⊂$ 或者包含且不等于 $⊊$ 是序 #image("../image/tree-diagram.svg", width: 70%) 
+  - 子集的包含 $⊂$ 或者包含且不等于 $⊊$ 是序 #html.elem("img", attrs: (src: "../image/tree-diagram.svg", width: "70%")) 
     image modified from wiki media about partial order
   - $ℕ,ℤ,ℚ,ℝ$ 的 $<,<=$
   - 树图
@@ -41,5 +41,5 @@ $n$ 元关系类似
 ]
 #tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists 
 #indent[
-  related to #link(<axiom-of-choice>)[]?
+  related to #raw("#link(<axiom-of-choice>)[]")?
 ]

@@ -13,19 +13,19 @@ $ℕ$ exponential power function $k ∈ ℕ, dmat( delim: #none ,
 #tag("polynomial-function-1d") A polynomial function is a finite linear combination of power functions. (Affine) base point $x$, (vector) offset $v$
 $
   f(x+v) 
-  &= a_0 + a_1 v + ⋯ + a_n v^n \
-  &= sum_(k = 0 .. n) a_k v^k \
+  &=&a_0 + a_1 v + ⋯ + a_n v^n \
+  &=&sum_(k = 0 .. n) a_k v^k \
 
-  f(x) &= a_0
+  f(x) &=&a_0
 $
 Polynomial function representation is not affine invariant, i.e. switching the base point $x ⇝ x + Δ = y$ will result in a polynomial function representation of the same order but with different coefficients. Scaling $v ⇝ λ v$ is also the case
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+#show "Δ": it => text(it)
 
 #tag("change-base-point-polynomial") Switch base point $x ⇝ x + Δ = y$
 $
-  f(x + v) &= a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \
-  f(y + w) &= a_0 (y) + a_1 (y) w + ⋯ + a_n (y) w^n
+  f(x + v) &=&a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \
+  f(y + w) &=&a_0 (y) + a_1 (y) w + ⋯ + a_n (y) w^n
 $
 Represents the same affine function
 $
@@ -34,23 +34,23 @@ $
 then
 $
   a_p (y) 
-  &= a_p (x + Δ) \
-  &= sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
+  &=&a_p (x + Δ) \
+  &=&sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
 $
 _Proof_ $f(y + v) = f(x + (Δ + v))$ expand the calculation, to compare coefficients, collect $v$ power function terms, by the exchange of summation 
 
 $
   sum_(k = 0 .. n) a_k (x) (v + Δ)^k 
-  &= sum_(k = 0 .. n) a_k (x) sum_(p= 0 .. k) binom(k,p) v^p Δ^(k-p) \
-  &= sum_(p = 0 .. n) (sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)) v^k
+  &=&sum_(k = 0 .. n) a_k (x) sum_(p= 0 .. k) binom(k,p) v^p Δ^(k-p) \
+  &=&sum_(p = 0 .. n) (sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)) v^k
 $
 
 If the base point is $0$ in the coordinates and the symbol $v ⇝ x$ is changed, then the polynomial function is expressed as $f(x) = a_0 + a_1 x + ⋯ + a_n x^n$
 
 Extending from polynomial as a finite linear combination to a countably infinite linear combination is called the $ℕ$ exponential power series of a function
 $
-  f(x+v) &≈ a_0 + a_1 v + ⋯ + a_n v^n \
-  f(x+v) &= lim_(n -> ∞) a_0 + a_1 v + ⋯ + a_n v^n
+  f(x+v) &≈& a_0 + a_1 v + ⋯ + a_n v^n \
+  f(x+v) &=&lim_(n -> ∞) a_0 + a_1 v + ⋯ + a_n v^n
 $
 The definitions of some functions do not come directly from the $ℕ$ exponential power series, *Example* $1/x , 1/z$
 
@@ -79,10 +79,10 @@ If not necessary, there is no need to take the linear direct sum of tensors of a
 #tag("polynomial-function") Using the range $ℝ^d'$ and multilinear function $a_k ∈ Lin((ℝ^d)^(⊗ k) → ℝ^d')$. Base point $x$, offset $v$, define polynomial function
 $
   f(x+v) 
-  &= a_0 + a_1 v + ⋯ + a_n v^(⊗ n) \
-  &= sum_(0 .. n) a_k v^(⊗ k) \
+  &=&a_0 + a_1 v + ⋯ + a_n v^(⊗ n) \
+  &=&sum_(0 .. n) a_k v^(⊗ k) \
 
-  f(x) &= a_0
+  f(x) &=&a_0
 $
 Affine transformations, i.e., changing the base point i.e. translation, or linear transformations i.e. $GL$ (including scaling), do not change the order of the polynomial
 
@@ -123,11 +123,11 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 Due to the commutativity of summation, the order of successive differences does not affect the final result
 
-_Proof_ of #link(<difference-symmetric-tensor>)[]
+_Proof_ of #raw("#link(<difference-symmetric-tensor>)[]")
 #indent[
   $
     sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
-    &= sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
+    &=&sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
   $
   Forcibly write it as a summation over all $μ : {1 ,…, m} -> {1 ,…, n}$, with a weight to calculate the number of repetitions
   $
@@ -141,13 +141,13 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
 
   _Proof_
   #indent[
-    #link(<combination>)[] $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ there are $binom(|X|,|A|)$ choices
+    #raw("#link(<combination>)[]") $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ there are $binom(|X|,|A|)$ choices
 
     $
       sum_(A ⊂ X) (-1)^(|A|) 
-      &= sum_(|A| = 0 .. |X|) binom(|X|,|A|) (-1)^(|A|) \
-      &= (1 - 1)^(|X|) \
-      &= 0   
+      &=&sum_(|A| = 0 .. |X|) binom(|X|,|A|) (-1)^(|A|) \
+      &=&(1 - 1)^(|X|) \
+      &=&0   
     $
   ]
   for ${I ∈ Subset{1 ,…, n} : μ{1 ,…, m} ⊂ I}$
@@ -159,8 +159,8 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $A(I)$ is a bijection
   $
     (-1)^(|I|) 
-    &= (-1)^(|I ∖ μ{1 ,…, m}| + |μ{1 ,…, m}|) \
-    &= (-1)^(|A|) ⋅ (-1)^(μ{1 ,…, m})
+    &=&(-1)^(|I ∖ μ{1 ,…, m}| + |μ{1 ,…, m}|) \
+    &=&(-1)^(|A|) ⋅ (-1)^(μ{1 ,…, m})
   $
   Weight
   $
@@ -168,8 +168,8 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $
   $
     "weight"(μ) = 0
-    &<==> X != ∅ \
-    &<==> μ{1 ,…, m} ⊊ {1 ,…, n}
+    &<==>&X != ∅ \
+    &<==>&μ{1 ,…, m} ⊊ {1 ,…, n}
   $
   The last condition
   - When $m < n$, it must hold for all $μ$
@@ -179,7 +179,7 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
 
   There are $n!$ $n$-th order permutations
 ]
-The *symmetry* of the *symmetric* multilinear function $a_m$ allows the properties of #link(<difference-symmetric-tensor>)[difference] to be inherited
+The *symmetry* of the *symmetric* multilinear function $a_m$ allows the properties of #raw("#link(<difference-symmetric-tensor>)[difference]") to be inherited
 
 #tag("difference-polynomial") The $n$-th order difference of $f(x + v) = a_n v^n$ is $n! ⋅ a_n (v_1 ⋯ v_n)$
 
@@ -192,8 +192,8 @@ For power series, finite-order difference can never give zero
 Formally, division and limits can be used to eliminate higher-order terms
 $
   1/(t^n) (a_n (t v)^n + a_(n+1) (t v)^(n+1) + ⋯) 
-  &= a_n v^n + a_(n+1) v^(n+1) t + ⋯ \
-  &= a_n v^n + o(1) \
+  &=&a_n v^n + a_(n+1) v^(n+1) t + ⋯ \
+  &=&a_n v^n + o(1) \
   lim_(t -> 0) 
-  &= a_n v^n
+  &=&a_n v^n
 $

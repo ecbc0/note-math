@@ -15,7 +15,7 @@ $n$-ary relation is similar
   Can also use the equivalent $<=$ version
 ]
 *Example* 
-  - Subset inclusion $⊂$ or inclusion and not equal to $⊊$ is an order #image("../image/tree-diagram.svg", width: 70%) 
+  - Subset inclusion $⊂$ or inclusion and not equal to $⊊$ is an order #html.elem("img", attrs: (src: "../image/tree-diagram.svg", width: "70%")) 
     image modified from wiki media about partial order
   - $<,<=$ of $ℕ,ℤ,ℚ,ℝ$
   - Tree diagram
@@ -41,5 +41,5 @@ Partial order can be decomposed into comparable-components that are not comparab
 ]
 #tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists 
 #indent[
-  related to #link(<axiom-of-choice>)[]?
+  related to #raw("#link(<axiom-of-choice>)[]")?
 ]

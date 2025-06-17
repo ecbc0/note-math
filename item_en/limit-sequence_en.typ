@@ -15,15 +15,15 @@ Operations of limits
 
 _Proof_
 #indent[
-  $x < y$ #link(<order-real>)[equivalent to]
+  $x < y$ #raw("#link(<order-real>)[equivalent to]")
 
   $ℚ_(< x) ⊊ ℚ_(< y) \ 
   ℚ_(> x) ⊋ ℚ_(> y)$
 
   Accurate to at most a little bit difference, there is
   
-  $ℚ &≈ ℚ_(< x) ⊔ ℚ_(> x) \
-  &≈ ℚ_(< y) ⊔ ℚ_(> y)$
+  $ℚ &≈& ℚ_(< x) ⊔ ℚ_(> x) \
+  &≈& ℚ_(< y) ⊔ ℚ_(> y)$
 
   so $ℚ_(> x) ∩ ℚ_(< y) != ∅$
 ]
@@ -116,8 +116,8 @@ _Proof_
   $
   Second derivative
   $
-    ∂_i ∂_i &= n (n-1) a_i^(n-2) \
-    ∂_i ∂_j &= - n a_1 ⋯ a_n without a_i a_j
+    ∂_i ∂_i &=&n (n-1) a_i^(n-2) \
+    ∂_i ∂_j &=&- n a_1 ⋯ a_n without a_i a_j
   $
   Determine the positive definiteness of the quadratic form $∂_i ∂_j$
 
@@ -143,9 +143,9 @@ _Proof_
       ⋮, ⋮, ⋱, ⋮;
       -1, -1, ⋯, n-1
     ) vec(b_1 , ⋮ , b_n) 
-    &=(n-1) (b_1^2 + ⋯ + b_n^2) - 2 sum_(i < j) b_i b_j \
-    &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
-    &= sum_(i < j) (b_i - b_j)^2 
+    &=&(n-1) (b_1^2 + ⋯ + b_n^2) - 2 sum_(i < j) b_i b_j \
+    &=&sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
+    &=&sum_(i < j) (b_i - b_j)^2 
   $
   So at $a_1 = ⋯ = a_n$ the first derivative is zero and the second derivative is positive definite, the function will not become smaller nearby, so that's the minimum, and it's $0$
 ]
@@ -196,8 +196,8 @@ _Proof_
   $
   For each $k ∈ ℕ$
   $
-    lim_(n -> ∞) (1 + 1/n)^n &>= 1/0! + 1/1! + ⋯ + 1/k! \
-    lim_(n -> ∞) (1 + 1/n)^n &>= lim_(k -> ∞) 1/0! + 1/1! + ⋯ + 1/k!
+    lim_(n -> ∞) (1 + 1/n)^n &>=&1/0! + 1/1! + ⋯ + 1/k! \
+    lim_(n -> ∞) (1 + 1/n)^n &>=&lim_(k -> ∞) 1/0! + 1/1! + ⋯ + 1/k!
   $
   also
   $
@@ -246,7 +246,7 @@ _Proof_ of $e = lim_(n -> ∞) n/((n!)^(1/n))$
 
 #tag("harmonic-series-diverge") Harmonic series diverges $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n = +∞$
 
-_Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges because it is not #link(<Cauchy-completeness-real>)[limit-distance-vanish]. e.g.
+_Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges because it is not #raw("#link(<Cauchy-completeness-real>)[limit-distance-vanish]"). e.g.
 
   $ forall n ∈ ℕ, a_(2n) - a_n = 1/(n+1) + ⋯ + 1/(2n) >= n ⋅ 1/(2n) = 1/2 $
 
@@ -274,8 +274,8 @@ _Proof_
   $
   $a_n$ is monotonically decreasing 
   $
-    a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
-    &< 1/(n+1) - 1/(n+1) \
-    &= 0
+    a_(n+1) - a_n &=&1/(n+1) - log((n+1)/n) \
+    &<&1/(n+1) - 1/(n+1) \
+    &=&0
   $ 
 ]

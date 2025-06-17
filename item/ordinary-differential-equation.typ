@@ -4,8 +4,8 @@
 一维可分离变量 ODE
 $ 
   (#d x)/(#d t) = f(t) g(x) 
-  &--> 1/g(x) #d x = f(t) #d t \
-  &--> x = G^(-1)(F(t)) 
+  &-->& 1/g(x) #d x = f(t) #d t \
+  &-->& x = G^(-1)(F(t)) 
 $ 
 where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
 
@@ -26,8 +26,8 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
   向量场的 Taylor 级数 
   $ 
     (exp v) (x) 
-    &= x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
-    &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
+    &=& x + v(x) + 1/2! ∂_(v(x)) v(x) + 1/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
+    &=& x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
   $
   $n+1$ polynomial like $(∂_(λ v(x)))^n λ v (x) = λ^(n+1) (∂_(v(x)))^n v (x)$
 ]
@@ -42,13 +42,13 @@ compare to the result from separable ODE in 1 dimension
   $#d v (x) = A$, $n >= 2 ==> #d^k v (x) = 0$
 
   $∂_(v(x)) v(x) 
-  &= A(v(x)) \
-  &= A^2 (x)$
+  &=& A(v(x)) \
+  &=& A^2 (x)$
 
   $(∂_(v(x)))^2 v(x) 
-  &= #d (A^2(x))(v(x)) \
-  &= A^2(v(x)) \
-  &= A^3(x) $ 
+  &=& #d (A^2(x))(v(x)) \
+  &=& A^2(v(x)) \
+  &=& A^3(x) $ 
   
   ...
 
@@ -57,9 +57,9 @@ compare to the result from separable ODE in 1 dimension
   $f(x) = (𝟙 + A + 1/2! A^2 + ⋯) (x) = (sum 1/n! A^n ) (x) = (exp A) (x)$
 
   $#d f(x) v(x) 
-  &= (exp A)(A (x)) \
-  &= A(exp(A)(x)) \
-  &= v(f(x))$
+  &=& (exp A)(A (x)) \
+  &=& A(exp(A)(x)) \
+  &=& v(f(x))$
 
   *Example* #tag("harmonic-oscillator") 
   #indent[
@@ -102,14 +102,14 @@ compare to the result from separable ODE in 1 dimension
   $(∂_(v(x)))^n v (x) = (n+1)! ⋅ x^(n+2)$
 
   $f(x) 
-  &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
-  &= sum_(m=1)^∞ x^m \
-  &= 1 - 1/(1-x)$
+  &=& x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
+  &=& sum_(m=1)^∞ x^m \
+  &=& 1 - 1/(1-x)$
 
   $#d f(x) v(x) 
-  &= (1/(1-x))^2 x^2 \
-  &= (x/(1-x))^2 \
-  &= v(f(x))$
+  &=& (1/(1-x))^2 x^2 \
+  &=& (x/(1-x))^2 \
+  &=& v(f(x))$
 ]
 *Question* 
 #indent[
@@ -121,13 +121,13 @@ compare to the result from separable ODE in 1 dimension
 ]
 $f(t,x)$ is called flow. exp 道路发射状坐标
 
-#tag("vector-field-as-δ-diffeomorphism") 在 $𝟙$ 附近, 向量场是微分同胚群的坐标 $v ⇝ exp v$, 类似于 #link(<geodesic-coordinate>)[]
+#tag("vector-field-as-δ-diffeomorphism") 在 $𝟙$ 附近, 向量场是微分同胚群的坐标 $v ⇝ exp v$, 类似于 #raw("#link(<geodesic-coordinate>)[]")
 
 ODE
 
 $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
-#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<inverse-analytic>)[] 中所作的
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #raw("#link(<inverse-analytic>)[]") 中所作的
 
 $F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
 
@@ -143,7 +143,7 @@ $
 
 #tag("Lie-bracket") Lie bracket
 #indent[
-  作为 #link(<conjugate-action>)[] of $"Diff"$ 的生成元
+  作为 #raw("#link(<conjugate-action>)[]") of $"Diff"$ 的生成元
 
   $"Diff"$ 的共轭作用 $g,f ⇝ f g f^(-1)$ 
 

@@ -33,11 +33,11 @@ $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,
 #indent[
   The bisection walk sequence is Cauchy in integral distance, and the measure tends to $0$
   $ 
-    f_1 &= 𝟙_([0,1/2]) \
-    f_2 &= 𝟙_([1/2,1]) \
-    f_3 &= 𝟙_([0,1/4]) \
+    f_1 &=& 𝟙_([0,1/2]) \
+    f_2 &=& 𝟙_([1/2,1]) \
+    f_3 &=& 𝟙_([0,1/4]) \
     &⋯ \
-    f_(2 + ⋯ + 2^k + p) &= 𝟙_([(p-1)/2^k, p/2^k])
+    f_(2 + ⋯ + 2^k + p) &=& 𝟙_([(p-1)/2^k, p/2^k])
   $ 
   It does not follow the definition of pointwise convergence
 
@@ -63,21 +63,21 @@ The linear change of coordinates $A in GL$ gives the integral change of variable
 
   The change of variable formula formula for diffeomorphisms of integrals is $integral_(ℝ^n) f = integral_(ℝ^n) (f ∘ ϕ) |det #d ϕ|$ or $integral_(ℝ^n) #d y space f(y) = integral_(ℝ^n) #d x space (f ∘ ϕ)(x) |det #d ϕ (x)|$
   
-  The differential of the coordinate transformation map $#d f$ at each simplex center as an affine map acting on the domain simplex is used to obtain the range space simplex for approximation, then use (high order) #link(<mean-value-theorem-analytic>)[], then take partition limit (@ref-12, p.92--99)
+  The differential of the coordinate transformation map $#d f$ at each simplex center as an affine map acting on the domain simplex is used to obtain the range space simplex for approximation, then use (high order) #raw("#link(<mean-value-theorem-analytic>)[]"), then take partition limit (@ref-12, p.92--99)
   
   It is necessary to first perform compact uniform control on the bounded region for the approximation of the differential mean value theorem
   
   Then the unbounded region is a countable approximation from the bounded region, using the $sum_(i = 1 .. ∞) ε_i < ε$ technique
 
-  If it is considered as integrating an $n$ form, (cf. #link(<integral-on-form>)[]) then the integral change of variable formula is equivalent to $n$ form integration is diffeomorphism invariant
+  If it is considered as integrating an $n$ form, (cf. #raw("#link(<integral-on-form>)[]")) then the integral change of variable formula is equivalent to $n$ form integration is diffeomorphism invariant
 ]
 #tag("integral-on-manfold") *Question*
 #indent[
-  According to the change of variable formula, the integral of $n$ form in the coordinates on the manifold is invariant (cf. #link(<integral-on-form>)[])
+  According to the change of variable formula, the integral of $n$ form in the coordinates on the manifold is invariant (cf. #raw("#link(<integral-on-form>)[]"))
 
-  But what if we want to integrate the $n$ form defined on the entire #link(<orientable>)[] manifold?
+  But what if we want to integrate the $n$ form defined on the entire #raw("#link(<orientable>)[]") manifold?
 
-  One way is, similar to the proof of #link(<integral-change-of-variable-formula>)[], in coordinate, linear approximation + compact uniformly control + partition limit, then use countable cover to approximate entire manifold
+  One way is, similar to the proof of #raw("#link(<integral-change-of-variable-formula>)[]"), in coordinate, linear approximation + compact uniformly control + partition limit, then use countable cover to approximate entire manifold
 
   In order to define the integral, some kind of countability assumption is needed. The simplest assumption is that the manifold can be covered by countable coordinate cards. Let's use this assumption
 
@@ -87,7 +87,7 @@ The linear change of coordinates $A in GL$ gives the integral change of variable
 
   Instead, I will use the linear approximation version of triangulation. Under linear approximation, simplex is closed under intersection and set-minus (polyhedra decompose to to simplex) 
 
-  e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #link(<affine-map-point-ver>)[] (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
+  e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #raw("#link(<affine-map-point-ver>)[]") (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
 
   Taking the limit of this approximation, require $L^1,L^2$ style absolute convergence, gives the integral on the manifold
 
@@ -129,7 +129,7 @@ area coarea formula ...
 ]
 #tag("integral-on-submanfold") 
 #indent[
-  let $M$ be $n$ dimension manifold, $k$ form restrict to #link(<orientable>)[] $k$ submanifold tangent space 
+  let $M$ be $n$ dimension manifold, $k$ form restrict to #raw("#link(<orientable>)[]") $k$ submanifold tangent space 
 
   $n$ form in $M$ is equivalent to scalar function, but how to control $n-1$ form by integral? try $sup(S : "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
 

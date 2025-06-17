@@ -50,15 +50,15 @@ $ ∇^† : ⨂^(k+1) (⊤ M)^⊺ -> ⨂^(k) (⊤ M)^⊺ $
 
 In coordinates
 $
-  ∇ (#d x^i) &= - Γ^i_(i' i'') #d x^i' ⊗ #d x^i'' \
+  ∇ (#d x^i) &=&- Γ^i_(i' i'') #d x^i' ⊗ #d x^i'' \
 
-  ∇ (a_i #d x^i) &= (∂_i' a_i'' - a_i Γ^i_(i' i'')) #d x^i' ⊗ #d x^i''
+  ∇ (a_i #d x^i) &=&(∂_i' a_i'' - a_i Γ^i_(i' i'')) #d x^i' ⊗ #d x^i''
 $
 adjoint
 $
-  ∇^† (#d x^i) &= - g^(i i') Γ^i_(i' i) \
+  ∇^† (#d x^i) &=&- g^(i i') Γ^i_(i' i) \
 
-  ∇^† (a_i #d x^i) &= g^(i i')(∂_i' a_i - Γ^i_(i' i))
+  ∇^† (a_i #d x^i) &=&g^(i i')(∂_i' a_i - Γ^i_(i' i))
 $
 $- g^(i i') Γ_(i i')^j = 1/(|g|) ∂_i (|g| g^(i j))$
 
@@ -88,9 +88,9 @@ $
 "product rule"
 $
   ∇_(⊙)(a_(i j) #d x^i ⊙ #d x^i') 
-  &= ∇_(⊙) a_(i j) ⊙ #d x^i ⊙ #d x^i' \
-  &quad + a_(i j) (∇_(⊙) #d x^i) ⊙ #d x^(i') \
-  &quad + a_(i j) #d x^i ⊙ (∇_(⊙) #d x^i')
+  &=& ∇_(⊙) a_(i j) ⊙ #d x^i ⊙ #d x^i' \
+  &quad& + a_(i j) (∇_(⊙) #d x^i) ⊙ #d x^(i') \
+  &quad& + a_(i j) #d x^i ⊙ (∇_(⊙) #d x^i')
 $ 
 
 Then define the adjoint $∇_(⊙)^†$. Also there is 

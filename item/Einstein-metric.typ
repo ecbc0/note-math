@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<curvature-of-metric.typ>)[]
+cf. #raw("#link(<curvature-of-metric.typ>)[]")
 
 #show "Δ": it => text(it, fill: rgb("#0056e1"))
 
@@ -35,13 +35,13 @@ _Proof_
   ]
   所以 volume form 的变分是
   $
-    Δ|g| &= Δ|det g|^(1/2) \
-    &= 1 / 2|det g|^(1/2) tr(g^(-1) Δ g)
+    Δ|g| &=& Δ|det g|^(1/2) \
+    &=& 1 / 2|det g|^(1/2) tr(g^(-1) Δ g)
   $
   将 $"Ric"$ 作为矩阵, 则 adjoint $(g ⋅)^†$ 可以写为
   $
-    "scal" &= (g ⋅)^† "Ric" \
-    &= tr(g^(-1) "Ric") 
+    "scal" &=& (g ⋅)^† "Ric" \
+    &=& tr(g^(-1) "Ric") 
   $
   *Prop* $A ⇝ A^(-1)$ 的微分是 $- A^(-1) (∂ A) A^(-1)$. _Proof_ 使用 $0 = ∂ 𝟙 = ∂ (A A^(-1)) = ∂ A ⋅ A^(-1) + A ⋅ ∂(A^(-1))$
 
@@ -59,7 +59,7 @@ _Proof_
   $
     tr (g^(-1) Δ "Ric") = ∇^† ∇ tr (g^(-1) Δ g) + ∇_⊙^† ∇_⊙^† Δ g
   $
-  是散度量 (cf. #link(<Laplacian-of-tensor-field.typ>)[] for $∇^†,∇_(⊙),∇_(⊙)^†$)
+  是散度量 (cf. #raw("#link(<Laplacian-of-tensor-field.typ>)[]") for $∇^†,∇_(⊙),∇_(⊙)^†$)
 
   - $tr(g^(-1) Δ g) = g(Δ g, g)$
   - $tr(- g^(-1) (Δ g) g^(-1) "Ric") = g(Δ g, - "Ric")$
@@ -83,8 +83,8 @@ $ "Ric" - (1 / 2 ⋅ "scal" - Λ) ⋅ g = 0 $
 
 等价于 (by taking $(g ⋅)^†$)
 $
-  "Ric" &= (2 Λ) / (n-2) ⋅ g \
-  &= 1 / n ⋅ "scal" ⋅ g
+  "Ric" &=& (2 Λ) / (n-2) ⋅ g \
+  &=& 1 / n ⋅ "scal" ⋅ g
 $
 with $Λ = (1/2 - 1/n) "scal"$
 
@@ -92,8 +92,8 @@ i.e. $"Ric"$ 常值比例于 $g$ 且 scalar-curvature 是常数
 
 等价地
 $
-  "tr-free-Ric" &= 0 \
-  "scal" &= (2Λ) / (n - 2)
+  "tr-free-Ric" &=& 0 \
+  "scal" &=& (2Λ) / (n - 2)
 $
 i.e. trace-free Ricci-curvature 是零, 且 scalar-curvature 是常数
 
@@ -111,9 +111,9 @@ _Proof_
   
   因为 Einstein 作用量是微分同胚不变的, 所以 δ diffeomorphism $X$ 变分的结果是零
 $
-  0 &= integral g(Δ g, T) #d Vol(g) \
-  &= integral g(∇_⊙ X, T) #d Vol(g) \
-  &= integral g(X, ∇_⊙^† T) #d Vol(g)
+  0 &=& integral g(Δ g, T) #d Vol(g) \
+  &=& integral g(∇_⊙ X, T) #d Vol(g) \
+  &=& integral g(X, ∇_⊙^† T) #d Vol(g)
 $
 forall $X$, 所以 $∇_⊙^† T = 0$
 $
@@ -159,17 +159,17 @@ $
   $
   在时间坐标, 对这个 metric, 从相对论点粒子作用量近似到非相对论 
   $
-    m c |vel(x)| &= m c^2 (
+    m c |vel(x)| &=& m c^2 (
       1 - (2 G M)/(c^2 r) - 1/c^2 ((1 - (2 G M)/(c^2 r))^(-1) v_r^2  + r^2 v_(𝕊^2)^2 )
     )^(1/2) \
 
-    &= m c^2 (
+    &=& m c^2 (
       1 - 1/2(
         (2 G M)/(c^2 r) + 1/c^2 (v_r^2 + r^2 v_(𝕊^2)^2)
       ) + o(1/c^2)
     ) \
 
-    &= m c^2 - (1/2 m v^2 - (- (G M m)/r)) + o(1)
+    &=& m c^2 - (1/2 m v^2 - (- (G M m)/r)) + o(1)
   $
   - $m c^2$ 是静能量, 将会变分到 $0$
   - $1/2 m v^2$ 是非相对论点粒子的动能
@@ -179,7 +179,7 @@ $
 *Question* 如果引力源是 $T = "constant"$ 或者 $T_(00) = "constant"$, 则 metric 是什么?
 
 一些 Einstein-metric 例子
-- #link(<constant-sectional-curvature-imply-Einstein-metric>)[常值截面曲率]
-- #link(<simple-symmetric-space>)[]
+- #raw("#link(<constant-sectional-curvature-imply-Einstein-metric>)[常值截面曲率]")
+- #raw("#link(<simple-symmetric-space>)[]")
 
 Einstein ==> harmonics. Einstein-equation satisfy eq defined by Lagrangian $|R|^2 #d Vol$

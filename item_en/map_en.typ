@@ -25,7 +25,7 @@ Define proposition, parameter $f : A -> B$
 
   or there exists a surjection $f : A ↠ B$ <==> there exists an injection $g : B ↪ A$
 
-#tag("cardinal-always-comparable") Trichotomy of element number order $<$ or order is always #link(<order-comparable>)[comparable]
+#tag("cardinal-always-comparable") Trichotomy of element number order $<$ or order is always #raw("#link(<order-comparable>)[comparable]")
 
 $ forall A,B ∈ Set, (|A| = |B|) ⊕ (|A| < |B|) ⊕ (|B| < |A|) $
 
@@ -60,15 +60,15 @@ let $S ⊂ B$
 
 #tag("inverse-image") Inverse image $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
 
-$f(a) in S &<==> exists b in S, b = f(a) \
-&<==> a in f^(-1) (S)$
+$f(a) in S &<==>&exists b in S, b = f(a) \
+&<==>&a in f^(-1) (S)$
 
 ==> 
 
 $f(S_A) subset S_B 
-&<==> forall a in S_A, f(a) in S_B \
-&<==> forall a in S_A, a in f^(-1) (S_B) \
-&<==> S_A subset f^(-1) (S_B)$
+&<==>&forall a in S_A, f(a) in S_B \
+&<==>&forall a in S_A, a in f^(-1) (S_B) \
+&<==>&S_A subset f^(-1) (S_B)$
 
 Inverse image $f^(-1)$ maintains $∪,∩,∖$, e.g. \
 
@@ -78,7 +78,7 @@ Image $f$ only maintains $∪$, for others
 - $f(S ∩ S') ⊂ f(S) ∩ f(S')$
 - $f(S ∖ S') ⊂ f(S) ∖ f(S')$ 
 
-#tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
+#tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #raw("#link(<cardinal>)[]"))
 #indent[
   $f : A -> Subset(A)$ is not surjective <==> $Subset(A) ∖ "range"(f) != ∅$
 

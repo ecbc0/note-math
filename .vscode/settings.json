@@ -1,4 +1,5 @@
 {
+    "tinymist.exportTarget": "html",
     "editor.fontFamily": "'Source Code Pro', 'Noto Sans SC', 'noto sans math', Monospace",
     "editor.fontSize": 14.5,
     "[typst]": {

@@ -11,7 +11,7 @@
 
 双射作用在某个 $X$ 的结构上时, 有保持结构的结构群, 是 $X <-> X$ 的子群
 
-*Example* $GL$ 保持 #link(<linear>)[线性结构]
+*Example* $GL$ 保持 #raw("#link(<linear>)[线性结构]")
 
 let $G$ 是 $X!$ 的子群. let $x in X$
 
@@ -46,8 +46,8 @@ $G_x$ 是 $G$ 的子群. a map $f$ that fix a point $x in X$ 组成 $X!$ 的子�
 换 orbit 基点 $x ⇝ h x$ 后的 isotropy 
 $
   g (h x) = h x 
-  &<==> h^(-1) g h x = x \
-  &<==> h^(-1) g h in G_x
+  &<==>& h^(-1) g h x = x \
+  &<==>& h^(-1) g h in G_x
 $
 映射 $dmat( delim: #none ,
   G ,⟶, G ;
@@ -94,15 +94,15 @@ _Proof_
   $ 
   是双射. (可逆.) 所以
   $
-    G x &= im {dmat( delim: #none ,
+    G x &=& im {dmat( delim: #none ,
       G ,⟶, X ;
       g ,⟿, g x
     )} \
-    &= im {dmat( delim: #none ,
+    &=& im {dmat( delim: #none ,
       G , ⟶ , G , ⟶ , X ;
       g , ⟿ , g h , ⟿ , g h x
     )} \
-    &= G (h x)
+    &=& G (h x)
   $
 ]
 
@@ -146,8 +146,8 @@ as 对任意被作用的空间 $X$ 换坐标 $h$ 导致的 $g$ 作用的坐标�
 
 $
   (h g h^(-1) = g) 
-  & <==> (h g <==> g h) \
-  & <==> 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
+  &<==>& (h g <==> g h) \
+  &<==>& 𝟙 = h^(-1) ⋅ g ⋅ h ⋅ g^(-1)
 $
 
 #tag("action-surjective") *alias* #tag("action-transitive") := 以下定义等价

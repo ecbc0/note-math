@@ -9,7 +9,7 @@
 
 $ #d l = m c^2 (1 - (v/c)^2)^(1/2) #d t $
 
-#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. 类似 #link(<point-particle-Lagrange-equation>)[非相对论的情况], 作用量的方程 
+#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. 类似 #raw("#link(<point-particle-Lagrange-equation>)[非相对论的情况]"), 作用量的方程 
 $ 
   (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ v) 
   
@@ -29,13 +29,13 @@ $ℝ^(1,3)$ 时空的对称群是 isometry $SO(1,3) ⋊ ℝ^(1,3)$ *alias* Poinc
 
 - 平移
 #indent[
-  使用时间坐标. 类似于非相对论的情况, #link(<energy-point-particle-non-relativity>)[能量] 和 #link(<momentum-point-particle-non-relativity>)[动量] 的相对论版本是 #tag("energy-momentum-point-particle-relativity")
+  使用时间坐标. 类似于非相对论的情况, #raw("#link(<energy-point-particle-non-relativity>)[能量]") 和 #raw("#link(<momentum-point-particle-non-relativity>)[动量]") 的相对论版本是 #tag("energy-momentum-point-particle-relativity")
   $
-    E &= (∂ f)/(∂ v) ⋅ v - f 
-    &quad quad p &= (∂ f)/(∂ v) \
+    E &=& (∂ f)/(∂ v) ⋅ v - f 
+    &quad& &quad& p &=& (∂ f)/(∂ v) \
 
-    E  &= (m c^2)/((1 - (v/c)^2)^(1/2)) 
-    &quad quad p &= (m v)/((1 - (v/c)^2)^(1/2)) 
+    E  &=& (m c^2)/((1 - (v/c)^2)^(1/2)) 
+    &quad& &quad& p &=& (m v)/((1 - (v/c)^2)^(1/2)) 
   $
   记为 4-动量 
   $
@@ -46,14 +46,14 @@ $ℝ^(1,3)$ 时空的对称群是 isometry $SO(1,3) ⋊ ℝ^(1,3)$ *alias* Poinc
 
 - 旋转
 #indent[
-  类似于非相对论的情况, #link(<rotation-momentum-point-particle-non-relativity>)[momentum-point-particle-non-relativity] 的相对论版本是 #tag("rotation-momentum-point-particle-relativity")
+  类似于非相对论的情况, #raw("#link(<rotation-momentum-point-particle-non-relativity>)[momentum-point-particle-non-relativity]") 的相对论版本是 #tag("rotation-momentum-point-particle-relativity")
   $
     x × p = (x × m v)/((1 - (v/c)^2)^(1/2))
   $
 ]
 - boost
 #indent[
-  boost by #link(<hyperbolic-angle>)[双曲角度]
+  boost by #raw("#link(<hyperbolic-angle>)[双曲角度]")
   $
     exph θ #i-split = mat(
       cosh θ, sinh θ; 
@@ -77,9 +77,9 @@ $ℝ^(1,3)$ 时空的对称群是 isometry $SO(1,3) ⋊ ℝ^(1,3)$ *alias* Poinc
   $
     vec(E/c,p) ⋅ (n × vec(c t,x)) 
     
-    &= n ⋅ vec(E t - p ⋅ x, c t p - 1/c E x) \
+    &=& n ⋅ vec(E t - p ⋅ x, c t p - 1/c E x) \
 
-    "spatial-part" &= n ⋅ vec(c t p - 1/c E x) 
+    "spatial-part" &=& n ⋅ vec(c t p - 1/c E x) 
   $
   注意 $(1,3)$ 时空 metric 有负定的空间 metric
 
@@ -103,17 +103,17 @@ point particle in Lorentz-manifold
 #indent[
   对于作用量 $integral #d l$ 和守恒量, 需要用 metric-connection 和 δ-isometry
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A")
+#let j = c-bf("j")
+#let v = c-bf("v")
 
 *Example*
 
 $ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
 
 $
-  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
-  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+  &quad& integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &=& integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
 $
 - *Question* 
 #indent[  
@@ -127,17 +127,17 @@ $
 
   #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A")
+#let j = c-bf("j")
+#let v = c-bf("v")
 
 *Example*
 
 $ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
 
 $
-  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
-  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+  &quad& integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &=& integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
 $
 - *Question* 
 #indent[  

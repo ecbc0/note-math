@@ -18,4 +18,4 @@ $
 $
 可以让一些场是零或者固定某些场来得到部分耦合 (引力的情况 $Γ = 0$ ==> flat-metric)
 
-在方程中, 场的 4-电流成为 gauge potential 的源 (#link(<current-gauge-spinor>)[旋量场 4-电流] #link(<current-gauge-KG>)[纯量场 4-电流] #link(<current-gauge-particle>)[点粒子 4-电流])
+在方程中, 场的 4-电流成为 gauge potential 的源 (#raw("#link(<current-gauge-spinor>)[旋量场 4-电流]") #raw("#link(<current-gauge-KG>)[纯量场 4-电流]") #raw("#link(<current-gauge-particle>)[点粒子 4-电流]"))

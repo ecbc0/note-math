@@ -3,7 +3,7 @@
 
 For people, one way to understand natural numbers is counting 
 
-For computers (cf. #link(<logic.typ>)[]), the ways to represent natural numbers are
+For computers (cf. #raw("#link(<logic.typ>)[]")), the ways to represent natural numbers are
 - Periodic circuit
 - Arithmetic component $+1$
 - Binary 
@@ -14,7 +14,7 @@ The problem of infinite space: Reality cannot build circuits and memory with inf
 
 But potentially infinite time can be used to achieve "potential infinity"
 
-However, there are even sets with an #link(<uncountable>)[uncountable] number of elements. *Example* 
+However, there are even sets with an #raw("#link(<uncountable>)[uncountable]") number of elements. *Example* 
 - the set of all subset of $ℕ$, $Subset(ℕ)$
 - all function from $ℕ$ to itself, $ℕ -> ℕ$
 
@@ -97,6 +97,7 @@ The following discusses math-object-construct-rule *alias* set-theory
   Equivalent to telling the computer how to continuously $+1$ with instruction streams? Also related to induction
 
   The cost of finite characters is potentially infinite time, always relying on counting or periodic circuits.
+
 ]
 #tag("empty") $∅$ 
 #indent[
@@ -136,19 +137,19 @@ define $A ⊂ B := forall a ∈ A, a ∈ B$
 #indent[
   Some equivalent uses. For computer data, it can be proved by exhaustion that the following calculation results are equal
   $ 
-    not (not p) &<==> p \
-    not (p and q) &<==> (not p) or (not q)
+    not (not p) &<==>&p \
+    not (p and q) &<==>&(not p) or (not q)
   $
   Similarly, in order to represent the case of "infinite elements", define language expansion or specify language transformation. For example, De Morgan law of infinite elements
   $
-    not (And_(a ∈ A) p(a)) &<==> Or_(a ∈ A) not p(a) \
-    "or" not (forall a in A, p(a)) &<==> exists a in A, not p(a)
+    not (And_(a ∈ A) p(a)) &<==>&Or_(a ∈ A) not p(a) \
+    "or" not (forall a in A, p(a)) &<==>&exists a in A, not p(a)
   $
-  The concept of "infinity" is limited by using the symbol string $a in A$ of #link(<declare-element-of-set>)[]
+  The concept of "infinity" is limited by using the symbol string $a in A$ of #raw("#link(<declare-element-of-set>)[]")
 ]
 formula, proposition is a special data structure in memory. It can be considered that math_object, formula, proposition are the type of programming language
 
-Many propositions are equivalent, so we can consider the "quotient" type of propositions, but the possibility of equivalence is infinite, whether it is possible to have an exhaustive algorithm, first depends on whether it is #link(<countable>)[] ...
+Many propositions are equivalent, so we can consider the "quotient" type of propositions, but the possibility of equivalence is infinite, whether it is possible to have an exhaustive algorithm, first depends on whether it is #raw("#link(<countable>)[]") ...
 
 Similar to the redundancy of $and,or,not$, set theory construction rules may also have redundancy, or there are many equivalent definitions
 
@@ -158,7 +159,7 @@ $=$ transitive := $(a = b) and (b = c) ==> (a = c)$
 
 $<=>$ transitive := $(p <=> q) and (q <=> r) ==> (p <=> r)$
 
-follow #link(<bool-algebra>)[various rules of bool in the finite case], define language transformation rules: let $p(a,b)$ is formula built with independent/parallel $a,b$ i.e. independent/parallel in memory read and used by specific cuntion, then
+follow #raw("#link(<bool-algebra>)[various rules of bool in the finite case]"), define language transformation rules: let $p(a,b)$ is formula built with independent/parallel $a,b$ i.e. independent/parallel in memory read and used by specific cuntion, then
 
 #tag("commutative-forall-exists") 
 #indent[
@@ -222,7 +223,7 @@ Deductive proof also requires syllogism
 Where "all living things die" is a specially constructed proposition
 
 #tag("syllogism") Syllogistic reasoning is a language rule
-- The compiler reads the formula $(forall a in A, p(a))$ is true proposition (possibly from a definition e.g. #link(<union>)[])) 
+- The compiler reads the formula $(forall a in A, p(a))$ is true proposition (possibly from a definition e.g. #raw("#link(<union>)[]"))) 
 - The compiler reads the declaration let $a' in A$ is true proposition
 - The compiler reads the formula $p(a')$
 - Then the compiler sets $p(a')$ is true proposition according to this condition (from memory)
@@ -231,7 +232,7 @@ That is, the compiler implements the specific construction of data (finite) acco
 
 Or understand it as, this rule and behavior are defining the concept of $(forall a in A, p(a))$ itself
 
-It is also usually written as the equivalent rule let $a' in A$, then the special inference formula $(forall a in A, p(a)) ==> p(a')$ is always true proposition. This form is often used in what #link(<proof>)[previously] said, "proving is compiling passes $p => q$ is true proposition"
+It is also usually written as the equivalent rule let $a' in A$, then the special inference formula $(forall a in A, p(a)) ==> p(a')$ is always true proposition. This form is often used in what #raw("#link(<proof>)[previously]") said, "proving is compiling passes $p => q$ is true proposition"
  
 Reverse syllogism: let $a' ∈ A$, then the equivalent formula $not p(a') ==> not (forall a ∈ A, p(a)) "or" exists a in A, not p(a)$  is true proposition
 
@@ -247,14 +248,14 @@ The following object construction rules, except for the intersection, generally 
 
 #tag("union")  
 #indent[
-  #image("../image/union.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/union.jpeg", width: "30%"))
 
   define object $⋃ A$ and language expansion
   $ 
-    x ∈ a ∪ a' &:= (x ∈ a) or (x ∈ a') \ 
+    x ∈ a ∪ a' &:=&(x ∈ a) or (x ∈ a') \ 
     \
-    x ∈ ⋃ A &:= Or_(a ∈ A) x ∈ a \ 
-    &:= exists a ∈ A, x ∈ a
+    x ∈ ⋃ A &:=&Or_(a ∈ A) x ∈ a \ 
+    &:=&exists a ∈ A, x ∈ a
   $
   is non-emtpy unless $forall a ∈ A, a = ∅$
 
@@ -264,12 +265,12 @@ The following object construction rules, except for the intersection, generally 
 ]
 #tag("sum")
 #indent[
-  #image("../image/sum.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/sum.jpeg", width: "30%"))
   $
-    x ∈ a ⊔ a' &:= (x ∈ a) xor (x ∈ a') \
+    x ∈ a ⊔ a' &:=&(x ∈ a) xor (x ∈ a') \
     \
-    x ∈ ⨆ A &:= ⨁_(a ∈ A) x ∈ a \
-    &:= exists! a ∈ A, x ∈ a
+    x ∈ ⨆ A &:=&⨁_(a ∈ A) x ∈ a \
+    &:=&exists! a ∈ A, x ∈ a
   $
 
   is non-emtpy unless $forall a ∈ A, a = ∅$
@@ -280,24 +281,24 @@ enum is special case of sum/union?
 
 #tag("intersection") 
 #indent[
-  #image("../image/intersection.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/intersection.jpeg", width: "30%"))
   $
-    x ∈ a ∩ a' &:= (x ∈ a) and (x ∈ a') \
+    x ∈ a ∩ a' &:=&(x ∈ a) and (x ∈ a') \
     \
-    x ∈ ⋂ A &:= And_(a ∈ A) x ∈ a \
-    &:= forall a ∈ A, x ∈ a
+    x ∈ ⋂ A &:=&And_(a ∈ A) x ∈ a \
+    &:=&forall a ∈ A, x ∈ a
   $
 
   $A ∩ A = A$
 ]
 #tag("product") 
 #indent[
-  #image("../image/product.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/product.jpeg", width: "30%"))
   $
-    x ∈ a × a' &:= (x(a) ∈ a) and (x(a') ∈ a') \
+    x ∈ a × a' &:=&(x(a) ∈ a) and (x(a') ∈ a') \
     \
-    x ∈ product A &:= And_(a ∈ A) x(a) ∈ a \
-    &:= forall a ∈ A, x(a) ∈ a 
+    x ∈ product A &:=&And_(a ∈ A) x(a) ∈ a \
+    &:=&forall a ∈ A, x(a) ∈ a 
   $
   is non-emtpy unless $exists a ∈ A, a = ∅$ (related to #tag("axiom-of-choice"))
 
@@ -307,12 +308,12 @@ enum is special case of sum/union?
 ]
 #tag("map") 
 #indent[
-  #image("../image/map.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/map.jpeg", width: "30%"))
 
   let $A,B$ is math object. The rule for defining map space $A -> B$, map $f$ as math object is
   $
-    f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
-    &:= forall a ∈ A, f(a) ∈ B
+    f ∈ (A -> B) &:=&And_(a ∈ A) f(a) ∈ B \
+    &:=&forall a ∈ A, f(a) ∈ B
   $
   denoted by $f : A -> B$ 
   
@@ -324,16 +325,16 @@ enum is special case of sum/union?
 ]
 #tag("subset") 
 #indent[
-  #image("../image/subset.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/subset.jpeg", width: "30%"))
   $ S ∈ Subset(A) := S ⊂ A $
 
-  denoted by $2^A$. According to #link(<proposition-function>)[] equivalent to map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
+  denoted by $2^A$. According to #raw("#link(<proposition-function>)[]") equivalent to map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
 
   define $∅ ⊂ A$ be true proposition
 ]
 map space and subset introduce high-level infinity
 
-One seemingly counterintuitive thing at first glance is that we _seemingly_ know all $S ⊂ ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. However, what exactly does "know all $S ⊂ ℕ$" mean? In fact, trying to consider the question of "finding an infinite subset of $ℕ$ in a general way" reveals that this is not simple.
+One seemingly counterintuitive thing at first glance is that we _seemingly_ know all $S ⊂ ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #raw("#link(<cardinal-increase>)[]") #raw("#link(<uncountable>)[]"). However, what exactly does "know all $S ⊂ ℕ$" mean? In fact, trying to consider the question of "finding an infinite subset of $ℕ$ in a general way" reveals that this is not simple.
 
 Similarly, although countable can already define some real numbers e.g. $sum 1/n! = e$, if not with the help of subset or map, countable construction cannot obtain all $ℝ$
 
@@ -364,7 +365,7 @@ Other usages of $=$
   Using object construction rules again, what we get is also defined as belonging to $Set 1$ 
 
   Anyway, we can always construct such a language with types and bool and various rules in the compiler. Although there are compilers for compilers, the number of compiler layers can also be infinite ...
-  
+
   let $Set 1$ be math object, $Set 1 ∈ Set 2$. And so on ...
 
   *Example* 
@@ -372,12 +373,11 @@ Other usages of $=$
   - $(Set -> Set) ∈ Set 1$
   - $"Group" ∈ Set 1$ \
     $ 
-    & (G,m) ∈ "Group" := { \
-    & quad G ∈ Set \
-    & quad m ∈ Set \
-    & quad "property-group-multiplication"(G,m) \
-    & quad ("e.g. " m ∈ (G^2 -> G))  \  
-    & } 
+    &(G,m) ∈ "Group" := \
+    &quad& G ∈ Set \
+    &quad& m ∈ Set \
+    &quad& "property-group-multiplication"(G,m) \
+    &quad& ("e.g. " m ∈ (G^2 -> G))  
     $
     Can be divided into multiple sentences, so that it is convenient to add/remove properties to get different structs
 
@@ -436,20 +436,20 @@ For set theory language, assume that universal-set or universal-type leads to th
 
   $ ⨆_(a ∈ A) product_(x ∈ product A) x(a) = product_(x ∈ product A) ⨆_(a ∈ A) x(a) $
 
-  draft of proof: expand, use parallel distributive cf. #link(<distributive-forall-exists>)[]
+  draft of proof: expand, use parallel distributive cf. #raw("#link(<distributive-forall-exists>)[]")
 ]
-#tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
+#tag("set-minus") #html.elem("img", attrs: (src: "../image/set-minus.jpeg", width: "30%"))
 
 $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
 
-#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
+#tag("symmetric-set-minus") #html.elem("img", attrs: (src: "../image/set-symmetric-minus.jpeg", width: "30%"))
 
 $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
 
 #tag("coordinate-component")
 - product component 
   $ 
-    dmat( delim: #none ,
+    dmat( 
     product A, ⟶, a ;
     x, ⟿, x(a)
     ) 

@@ -25,13 +25,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   *Example* 四面体, 右手定则, 拇指指向四面体内部得到边界方向 (图片的顶点的指标从 $1$ 而不是 $0$ 开始)
 
-  #image("../image/orientation-of-simplex.jpg", width: 100%)
+  #html.elem("img", attrs: (src: "../image/orientation-of-simplex.jpg", width: "100%"))
 ]
-#tag("orientable-low-dim-polyhera") 多面体 #link(<orientation-of-boundary-of-simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
+#tag("orientable-low-dim-polyhera") 多面体 #raw("#link(<orientation-of-boundary-of-simplex>)[可定向]") 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
 
 #tag("Mobius-strip") *Example* 不可定向的 Mobius 型多面体 (image modified from wiki)
 
-#image("../image/Moebius.svg", width: 50%)
+#html.elem("img", attrs: (src: "../image/Moebius.svg", width: "50%"))
 
 不管怎么定义每个 $k$ simplex 的方向, 都存在一对相邻 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向不兼容. i.e. simplex 分割没有良定义的内部和外部
 
@@ -49,13 +49,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   - boundary-op-not-injective
 
-    #image("../image/boundary-op-not-injective-1.jpg", width: 70%)
+    #html.elem("img", attrs: (src: "../image/boundary-op-not-injective-1.jpg", width: "70%"))
 
-    #image("../image/boundary-op-not-injective-2.jpeg", width: 80%)
+    #html.elem("img", attrs: (src: "../image/boundary-op-not-injective-2.jpeg", width: "80%"))
 
   - #tag("tri-intersect-boundary")
 
-    #image("../image/tri-intersect-boundary.jpg", width: 40%)
+    #html.elem("img", attrs: (src: "../image/tri-intersect-boundary.jpg", width: "40%"))
 
   cycle $∂ c = 0$
 
@@ -86,31 +86,31 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
   so existence of boundary of nonzero $n$ chain
   $ 
     forall c in C_n, ∂ c = 0 
-    &==> c in ker ∂_n = 0 \
-    &==> c = 0 
+    &==>& c in ker ∂_n = 0 \
+    &==>& c = 0 
   $
   and uniqueness of $n$ dim region surround by $codim = 1$ boundary
   $
-    (c,c' in C_n) and (∂_n c = ∂_n c') &==> ∂_n (c-c') = 0 \
-    &==> c - c' in ker ∂_n = 0 \
-    &==> c=c'
+    (c,c' in C_n) and (∂_n c = ∂_n c') &==>& ∂_n (c-c') = 0 \
+    &==>& c - c' in ker ∂_n = 0 \
+    &==>& c=c'
   $
 ]
 #show "δ": it => text(it, fill: rgb("#d25b00"))
 
 #tag("homology-hole") 对于集合 $ℝ^n$ 减去有限个或可数个分离的线性子空间或者多面体, homology 不是零
 
-#image("../image/homology-hole.jpeg", width: 100%)
+#html.elem("img", attrs: (src: "../image/homology-hole.jpeg", width: "100%"))
 
 #tag("Stokes-theorem") 
 #indent[
-  类似于一维 #link(<fundamental-theorem-of-calculus>)[微积分基本定理]
+  类似于一维 #raw("#link(<fundamental-theorem-of-calculus>)[微积分基本定理]")
 
   在坐标里定义 #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 其中 $Vol$ 是坐标的体积, $σ$ 是一大类型区域, 计算结果不依赖于坐标选取 
 
   则有 Stokes-theorem 
   
-  for #link(<orientable>)[可定向] 的几乎处处解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #raw("#link(<orientable>)[可定向]") 的几乎处处解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   坐标中利用 box 计算 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 全部坐标趋于 $0$, 将会是对每个坐标轴方向计算对某些东西的偏微分 $∂_i$, 结果是 $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, 进一步简化暂略
 
@@ -122,11 +122,11 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  使用流形上的对 form 积分的定义所使用的近似方法 #link(<integral-on-manfold>)[]
+  使用流形上的对 form 积分的定义所使用的近似方法 #raw("#link(<integral-on-manfold>)[]")
 
   近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 内部边界抵消, 就只剩下真正的流形的边界
 
-  需要使用 $n-1$ form $ω$ 对子流形的积分 #link(<integral-on-submanfold>)[]
+  需要使用 $n-1$ form $ω$ 对子流形的积分 #raw("#link(<integral-on-submanfold>)[]")
 
   边界上的逼近可能需要特别注意. 例如, 应该让边界上的逼近使用中心在边界上的 simplex (box) 以及微分 at 边界上的点
 
@@ -176,7 +176,7 @@ metric 流形的情况
 #indent[
   对 $k$ form $ω$ 积分 -> 对 $⟨ ω , Vol_k ⟩ Vol_k$ 积分 -> 对 $⟨ ⋆ ω, ⋆ Vol_(n-k) ⟩ Vol_k$ 积分, 解释为通过 $Vol_k$ 的正交补 $⋆ Vol_k = Vol_(n-k)$ 的量 $⟨ ⋆ ω , Vol_(n-k) ⟩$ 对 $Vol_k$ 积分, i.e. 通量
 
-  用 #link(<metric-dual>)[] $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $(⋆ ω)^♯$ 在通量方向 $(Vol_(n-1))^♯$ 上的正交投影
+  用 #raw("#link(<metric-dual>)[]") $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $(⋆ ω)^♯$ 在通量方向 $(Vol_(n-1))^♯$ 上的正交投影
 ]
 *Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$ (图)
 
@@ -189,9 +189,9 @@ metric 流形的情况
   Stokes 定理 #tag("gradient")
   $
     ω(x_1) - ω(x_0) 
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_l ⟨ grad ω , #d l ⟩
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_l ⟨ grad ω , #d l ⟩
   $
 ]
 - $1$ form
@@ -205,9 +205,9 @@ metric 流形的情况
   Stokes 定理 #tag("curl")
   $
     integral_(∂ S) ⟨ ω^♯ , #d l ⟩ 
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_S ⟨ curl ω^♯ , #d S ⟩
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_S ⟨ curl ω^♯ , #d S ⟩
   $
   where $n = ⋆ Vol_2 = Vol_1$
 ]
@@ -222,9 +222,9 @@ metric 流形的情况
   Stokes 定理 #tag("divergence")
   $
     integral_(∂ V) ⟨ ω^♯ , #d S ⟩
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_V ⟨ div ω^♯ , #d V ⟩ 
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_V ⟨ div ω^♯ , #d V ⟩ 
   $
 ]
 in Minkowski $ℝ^(1,3)$, $⋀^2 ℝ^(1,3) ≃ ⋀^(4-2) ℝ^(1,3)$

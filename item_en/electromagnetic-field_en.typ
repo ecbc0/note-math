@@ -3,13 +3,13 @@
 
 May migrate to principal-bundle-connection in the future?
 
-cf. #link(<motivation-of-gauge-field>)[]
+cf. #raw("#link(<motivation-of-gauge-field>)[]")
 
 There are many possible connections
   
 There are connections that cannot be local flat. For any local region, the connection field cannot be eliminated by changing the gauge.
 
-Similar to #link(<flat-metric-iff-curvature-0>)[]
+Similar to #raw("#link(<flat-metric-iff-curvature-0>)[]")
 
 There exist local bundle coordinates or phases, where the connection is zero $A = 0$ <==> the curvature is zero $F_(i i') = [#D _i,#D _i'] = 0$ where $#D = #d + A$, in coordinates $F_(i i') = ∂_i A_i' - ∂_i' A_i + [A_i, A_i']$
 
@@ -43,8 +43,8 @@ When not exist flat connection coordinate, choose $L^2$ minimal curvature, $L^2$
 
   In coordinates 
   $
-    && sum_i ∂_i (∂_i A_j - ∂_j A_i) &= 0 \
-    "or"&& sum_i ∂_i F_(i j) &= 0
+    && sum_i ∂_i (∂_i A_j - ∂_j A_i) &=& 0 \
+    "or"&& sum_i ∂_i F_(i j) &=& 0
   $
   In spacetime decomposition coordinates 
   $
@@ -52,18 +52,18 @@ When not exist flat connection coordinate, choose $L^2$ minimal curvature, $L^2$
   $
   Of course, this decomposition method is not $SO(1,3)$ invariant
 
-  #let A = c-bf("A","#0056e1")
+  #let A = c-bf("A")
 
   *Question* How to make $sum_i ∂_i (∂_i A_j - ∂_j A_i) = 0$ obviously imply the $div, curl$ form of the electromagnetic field $E,B$ equations? #tag("Maxwell-equation")
   $
-    div B &= 0 &quad ∂_t B + curl E &= 0 \
+    div B &=& 0 &quad& ∂_t B + curl E &=& 0 \
 
-    div E &= ρ &quad - ∂_t E + curl B &= j 
+    div E &=& ρ &quad& - ∂_t E + curl B &=& j 
   $
   Also
   $
-    E &= - (∂_t #A + grad ϕ) \
-    B &= curl #A
+    E &=& - (∂_t #A + grad ϕ) \
+    B &=& curl #A
   $
   Where $ϕ = A."time", #A = A."space"$
 

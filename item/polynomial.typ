@@ -13,19 +13,19 @@ $ℕ$ 指数幂函数 $k ∈ ℕ, dmat( delim: #none ,
 #tag("polynomial-function-1d") 多项式函数是幂函数的有限线性组合. (仿射) 基点 $x$, (向量) 偏移 $v$
 $
   f(x+v) 
-  &= a_0 + a_1 v + ⋯ + a_n v^n \
-  &= sum_(k = 0 .. n) a_k v^k \
+  &=&a_0 + a_1 v + ⋯ + a_n v^n \
+  &=&sum_(k = 0 .. n) a_k v^k \
 
-  f(x) &= a_0
+  f(x) &=&a_0
 $
 多项式函数表示并不是仿射不变的, i.e. 切换基点 $x ⇝ x + Δ = y$ 会得到相同阶数但系数不同的多项式函数表示. 伸缩 $v ⇝ λ v$ 也是如此
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+#show "Δ": it => text(it)
 
 #tag("change-base-point-polynomial") 切换基点 $x ⇝ x + Δ = y$
 $
-  f(x + v) &= a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \
-  f(y + w) &= a_0 (y) + a_1 (y) w + ⋯ + a_n (y) w^n
+  f(x + v) &=&a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \
+  f(y + w) &=&a_0 (y) + a_1 (y) w + ⋯ + a_n (y) w^n
 $
 表示相同的仿射函数
 $
@@ -34,23 +34,23 @@ $
 则
 $
   a_p (y) 
-  &= a_p (x + Δ) \
-  &= sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
+  &=&a_p (x + Δ) \
+  &=&sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)
 $
 _Proof_ $f(y + v) = f(x + (Δ + v))$ 展开计算, 为对比系数, 收集 $v$ 幂函数项, by 求和的交换 
 
 $
   sum_(k = 0 .. n) a_k (x) (v + Δ)^k 
-  &= sum_(k = 0 .. n) a_k (x) sum_(p= 0 .. k) binom(k,p) v^p Δ^(k-p) \
-  &= sum_(p = 0 .. n) (sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)) v^k
+  &=&sum_(k = 0 .. n) a_k (x) sum_(p= 0 .. k) binom(k,p) v^p Δ^(k-p) \
+  &=&sum_(p = 0 .. n) (sum_(k = p .. n) a_k (x) binom(k,p) Δ^(k-p)) v^k
 $
 
 如果在坐标中以 $0$ 为基点 and 改用符号 $v ⇝ x$, 则多项式函数表示为 $f(x) = a_0 + a_1 x + ⋯ + a_n x^n$
 
 从多项式 as 有限线性组合推广到可数无限线性组合, 称为函数的 $ℕ$ 指数幂级数
 $
-  f(x+v) &≈ a_0 + a_1 v + ⋯ + a_n v^n \
-  f(x+v) &= lim_(n -> ∞) a_0 + a_1 v + ⋯ + a_n v^n
+  f(x+v) &≈& a_0 + a_1 v + ⋯ + a_n v^n \
+  f(x+v) &=&lim_(n -> ∞) a_0 + a_1 v + ⋯ + a_n v^n
 $
 有些函数的定义并不直接来自 $ℕ$ 指数幂级数, *Example* $1/x , 1/z$
 
@@ -79,10 +79,10 @@ $
 #tag("polynomial-function") 使用值域 $ℝ^d'$ 和多重线性函数 $a_k ∈ Lin((ℝ^d)^(⊗ k) → ℝ^d')$. 基点 $x$, 偏移 $v$, 定义多项式函数
 $
   f(x+v) 
-  &= a_0 + a_1 v + ⋯ + a_n v^(⊗ n) \
-  &= sum_(0 .. n) a_k v^(⊗ k) \
+  &=&a_0 + a_1 v + ⋯ + a_n v^(⊗ n) \
+  &=&sum_(0 .. n) a_k v^(⊗ k) \
 
-  f(x) &= a_0
+  f(x) &=&a_0
 $
 仿射变换, 即, 改变基点 i.e. 平移, 或者线性变换 i.e. $GL$ (包括了伸缩), 都不改变多项式的阶数
 
@@ -123,11 +123,11 @@ where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 由于求和的交换性, 逐次差分的顺序不影响最终结果
 
-_Proof_ of #link(<difference-symmetric-tensor>)[]
+_Proof_ of #raw("#link(<difference-symmetric-tensor>)[]")
 #indent[
   $
     sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
-    &= sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
+    &=&sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
   $
   强行写为对所有 $μ : {1 ,…, m} -> {1 ,…, n}$ 求和, 附带 weight 来计算重复次数
   $
@@ -141,13 +141,13 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
 
   _Proof_
   #indent[
-    #link(<combination>)[] $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ 有 $binom(|X|,|A|)$ 种选择
+    #raw("#link(<combination>)[]") $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ 有 $binom(|X|,|A|)$ 种选择
 
     $
       sum_(A ⊂ X) (-1)^(|A|) 
-      &= sum_(|A| = 0 .. |X|) binom(|X|,|A|) (-1)^(|A|) \
-      &= (1 - 1)^(|X|) \
-      &= 0   
+      &=&sum_(|A| = 0 .. |X|) binom(|X|,|A|) (-1)^(|A|) \
+      &=&(1 - 1)^(|X|) \
+      &=&0   
     $
   ]
   for ${I ∈ Subset{1 ,…, n} : μ{1 ,…, m} ⊂ I}$
@@ -159,8 +159,8 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $A(I)$ 是双射
   $
     (-1)^(|I|) 
-    &= (-1)^(|I ∖ μ{1 ,…, m}| + |μ{1 ,…, m}|) \
-    &= (-1)^(|A|) ⋅ (-1)^(μ{1 ,…, m})
+    &=&(-1)^(|I ∖ μ{1 ,…, m}| + |μ{1 ,…, m}|) \
+    &=&(-1)^(|A|) ⋅ (-1)^(μ{1 ,…, m})
   $
   权重
   $
@@ -168,8 +168,8 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $
   $
     "weight"(μ) = 0
-    &<==> X != ∅ \
-    &<==> μ{1 ,…, m} ⊊ {1 ,…, n}
+    &<==>&X != ∅ \
+    &<==>&μ{1 ,…, m} ⊊ {1 ,…, n}
   $
   最后的条件
   - $m < n$ 时对所有 $μ$ 一定成立
@@ -179,7 +179,7 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
 
   $n$ 阶置换有 $n!$ 个
 ]
-*对称* 多重线性函数 $a_m$ 的 *对称性* 使得 #link(<difference-symmetric-tensor>)[差分] 的性质能够被继承
+*对称* 多重线性函数 $a_m$ 的 *对称性* 使得 #raw("#link(<difference-symmetric-tensor>)[差分]") 的性质能够被继承
 
 #tag("difference-polynomial") $f(x + v) = a_n v^n$ 的 $n$ 阶差分是 $n! ⋅ a_n (v_1 ⋯ v_n)$
 
@@ -192,8 +192,8 @@ $f(x + v) = a_n v^m, m < n$ 的 $n$ 阶差分是 $0$
 形式上, 可以利用除法和极限来消除高阶项
 $
   1/(t^n) (a_n (t v)^n + a_(n+1) (t v)^(n+1) + ⋯) 
-  &= a_n v^n + a_(n+1) v^(n+1) t + ⋯ \
-  &= a_n v^n + o(1) \
+  &=&a_n v^n + a_(n+1) v^(n+1) t + ⋯ \
+  &=&a_n v^n + o(1) \
   lim_(t -> 0) 
-  &= a_n v^n
+  &=&a_n v^n
 $

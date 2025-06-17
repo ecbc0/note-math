@@ -5,15 +5,15 @@ The problem of defining the derivative of a vector field $Y$ in the direction $X
 #indent[
   For a vector field $Y$ near $p$, in the $X$ direction, try to calculate the derivative in coordinates $(∂ Y)/(∂ X) = lim_(t -> 0) 1/t (Y(p + t X) - Y(p))$
 
-  However, the #link(<difference-polynomial>)[difference] operation is not linearly compatible with coordinate changes of general diffeomorphisms.
+  However, the #raw("#link(<difference-polynomial>)[difference]") operation is not linearly compatible with coordinate changes of general diffeomorphisms.
 
-  But in a metric-manifold, there are special coordinates --- #link(<geodesic-coordinate>)[geodesic coordinates]. The transformation method for different geodesic coordinates at $p$ is $SO$, which is linear.
+  But in a metric-manifold, there are special coordinates --- #raw("#link(<geodesic-coordinate>)[geodesic coordinates]"). The transformation method for different geodesic coordinates at $p$ is $SO$, which is linear.
 ]
 #tag("geodesic-derivative") Geodesic derivative *alias* #tag("Levi-Civita-derivative") Levi-Civita derivative :=
 #indent[
   In geodesic coordinates at point $p$, the derivative at point $p$, $∇_X Y := (∂ Y)/(∂ X)$
 
-  It is also possible to take the derivative of a #link(<tensor>)[] field $∇_X T$. According to the scalar multiplication associated with the tensor structure, calculations can be performed using the #link(<Leibniz-law>)[product-rule] *Example* $∇_X (Y ⊗ Z) = (∇_X Y) ⊗ Z + Y ⊗ (∇_X Z)$
+  It is also possible to take the derivative of a #raw("#link(<tensor>)[]") field $∇_X T$. According to the scalar multiplication associated with the tensor structure, calculations can be performed using the #raw("#link(<Leibniz-law>)[product-rule]") *Example* $∇_X (Y ⊗ Z) = (∇_X Y) ⊗ Z + Y ⊗ (∇_X Z)$
 ]
 *Prop* $∇ g = 0$. _Proof_ In geodesic coordinates $∂ g (p) = 0$
 
@@ -29,14 +29,14 @@ Other coordinates may be needed to compute geodesic coordinates, and thus other 
   $
     ∇_X Y (x)
     
-    &= (∂ x)/(∂ y) (y) ⋅ (∂ Y)/(∂ X) (y) \
+    &=&(∂ x)/(∂ y) (y) ⋅ (∂ Y)/(∂ X) (y) \
 
-    &= (∂)/(∂ X) ((∂ x)/(∂ y) ⋅ Y) - (∂)/(∂ X)((∂ x)/(∂ y)) ⋅ Y &quad "by product-rule"
+    &=&(∂)/(∂ X) ((∂ x)/(∂ y) ⋅ Y) - (∂)/(∂ X)((∂ x)/(∂ y)) ⋅ Y &quad& "by product-rule"
   $
-  Using #link(<connection-transformation>)[connection transformation] 
+  Using #raw("#link(<connection-transformation>)[connection transformation]") 
   $
-    0 &= Γ(y) \
-    &= (∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
+    0 &=&Γ(y) \
+    &=&(∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
   $
   ==> $(∂)/(∂ y) ((∂ x)/(∂ y)) = - Γ(x) ⋅ (#d x)/(#d y)$
 
@@ -47,8 +47,8 @@ Other coordinates may be needed to compute geodesic coordinates, and thus other 
   The $p$ tangent space linearly transforms $∇_X Y (y)$ to $∇_X Y (x)$ by $(∂ x)/(∂ y) (y)$, but keeps in coordinate $x$, but keep $X,Y$ in coordinate $y$
   $
     &∇_X Y (x) \
-    &=(∂)/(∂ ((∂ x)/(∂ y) (y) ⋅ X(y))) ((∂ x)/(∂ y) (y) ⋅ Y(y)) + ((∂ x)/(∂ y) (y) ⋅ X(y))^⊺ ⋅ Γ(x) ⋅ (∂ x)/(∂ y) (y) ⋅ Y(y) \
-    &= (∂)/(∂ (X(x))) Y(x) + X(x)^⊺ ⋅ Γ(x) ⋅ Y(x)
+    &=&(∂)/(∂ ((∂ x)/(∂ y) (y) ⋅ X(y))) ((∂ x)/(∂ y) (y) ⋅ Y(y)) + ((∂ x)/(∂ y) (y) ⋅ X(y))^⊺ ⋅ Γ(x) ⋅ (∂ x)/(∂ y) (y) ⋅ Y(y) \
+    &=&(∂)/(∂ (X(x))) Y(x) + X(x)^⊺ ⋅ Γ(x) ⋅ Y(x)
   $
   Or written as, in general coordinates, geodesic derivative
   $
@@ -60,7 +60,7 @@ Other coordinates may be needed to compute geodesic coordinates, and thus other 
   $
   Is there a more intuitive explanation, rather than directly using the transformation of connection? 
   
-  If we only consider linear compatibility, then there are many #link(<principal-bundle-connection>)[linear connections], and the one that coincides with the geodesic-derivative is the metric-connection
+  If we only consider linear compatibility, then there are many #raw("#link(<principal-bundle-connection>)[linear connections]"), and the one that coincides with the geodesic-derivative is the metric-connection
 ]
 #tag("geodesic-derivative-of-co-vector") *Prop* For co-vector field 
 $ 

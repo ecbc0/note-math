@@ -19,8 +19,8 @@ let 映射 $1,…,n ⇝ a_1,…,a_n$
 - 选取置换 $a$ with $A = {a(1),…,a(i)}, B = {a(i+1),…,a(i+j)}$ 并且另一个置换 $a'$ 给出相同的划分 if
 #indent[ 
   $ 
-    {a'(1),…,a'(i)} &= {a(1),…,a(i)} \ 
-    {a'(i+1),…,a'(i+j)} &= {a(i+1),…,a(i+j)}
+    {a'(1),…,a'(i)} &=&{a(1),…,a(i)} \ 
+    {a'(i+1),…,a'(i+j)} &=&{a(i+1),…,a(i+j)}
   $
 ]
 定义这种相同的划分的置换的 #tag("quotient") $a ∼ a'$ as $S_n$ 的子集满足上述条件, i.e. 划分可能性 $A ⊔ B$ 的逆像
@@ -37,9 +37,9 @@ $
 $
 所有 $i = 0 ,…, n$ 组合 <==> 所有 $i = 0 ,…, n$ 在 $Subset {1,…,n}$ 中选取子集 $A$ with $|A| = i$
 $
-  sum_(i+j = n) binom(n,i,j) &"or" sum_(i=0..n) binom(n,i) \
-  &= |Subset {1,…,n}| \
-  &= 2^n
+  sum_(i+j = n) binom(n,i,j) &"or"& sum_(i=0..n) binom(n,i) \
+  &=&|Subset {1,…,n}| \
+  &=&2^n
 $
 是从 $2$ 个中可重复选 $n$ 次的数量
 
@@ -51,8 +51,8 @@ $
 $
 #tag("binom-expansion") 
 $
-  (x+y)^n &= sum_(i+j=n) binom(n,i,j) x^i y^j \
-  (x_1 + ⋯ + x_d)^n &= sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
+  (x+y)^n &=&sum_(i+j=n) binom(n,i,j) x^i y^j \
+  (x_1 + ⋯ + x_d)^n &=&sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
 $
 vs Newton 二项式 $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
 
@@ -94,7 +94,7 @@ what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$?
 
 重复数量 $binom(n,k_1 ,…, k_d)$ 会有用于例如计算 $L^2$ 归一化
 
-#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> cycle := 置换 $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
+#tag("conjugate-class-of-permutation-is-cycle") #raw("#link(<conjugate-class>)[]") of $S_n$ <==> cycle := 置换 $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
 
 置换的 $sign$ 分解
 

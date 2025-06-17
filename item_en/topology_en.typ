@@ -1,16 +1,16 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B")
+#let T = c-bf("T")
 
-#tag("topology") Topology := $X$ Every point has a #link(<net>)[point net] $#B (x)$. Such a point net system is denoted as $#T _X$, which is similar to Euclidean space
+#tag("topology") Topology := $X$ Every point has a #raw("#link(<net>)[point net]") $#B (x)$. Such a point net system is denoted as $#T _X$, which is similar to Euclidean space
 
 *Example* The point net system composed of all spheres $𝔹(x,r)$ in Euclidean space
 
-In #link(<Minkowski-space>)[], a point $x$ has multiple nets that are not limit-equivalent
+In #raw("#link(<Minkowski-space>)[]"), a point $x$ has multiple nets that are not limit-equivalent
 
-#tag("continuous") Topological continuity := $f : X -> Y$ is #link(<hom-limit>)[] at every point
+#tag("continuous") Topological continuity := $f : X -> Y$ is #raw("#link(<hom-limit>)[]") at every point
 
 let $A ⊂ X$
 

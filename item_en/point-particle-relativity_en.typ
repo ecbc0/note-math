@@ -9,7 +9,7 @@ For a path, in the "time coordinate" $x^0(t) = c t$, let $v = (#d)/(#d t) x."spa
 
 $ #d l = m c^2 (1 - (v/c)^2)^(1/2) #d t $
 
-#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. Similar to #link(<point-particle-Lagrange-equation>)[the non-relativistic case], the equation of action 
+#tag("equation-point-particle-relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. Similar to #raw("#link(<point-particle-Lagrange-equation>)[the non-relativistic case]"), the equation of action 
 $ 
   (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ v) 
   
@@ -29,13 +29,13 @@ The symmetry group of $ℝ^(1,3)$ spacetime is the isometry $SO(1,3) ⋊ ℝ^(1,
 
 - Translation
 #indent[
-  Using time coordinates. Similar to the non-relativistic case, the relativistic versions of #link(<energy-point-particle-non-relativity>)[energy] and #link(<momentum-point-particle-non-relativity>)[momentum] are #tag("energy-momentum-point-particle-relativity")
+  Using time coordinates. Similar to the non-relativistic case, the relativistic versions of #raw("#link(<energy-point-particle-non-relativity>)[energy]") and #raw("#link(<momentum-point-particle-non-relativity>)[momentum]") are #tag("energy-momentum-point-particle-relativity")
   $
-    E &= (∂ f)/(∂ v) ⋅ v - f 
-    &quad quad p &= (∂ f)/(∂ v) \
+    E &=& (∂ f)/(∂ v) ⋅ v - f 
+    &quad& &quad& p &=& (∂ f)/(∂ v) \
 
-    E  &= (m c^2)/((1 - (v/c)^2)^(1/2)) 
-    &quad quad p &= (m v)/((1 - (v/c)^2)^(1/2)) 
+    E  &=& (m c^2)/((1 - (v/c)^2)^(1/2)) 
+    &quad& &quad& p &=& (m v)/((1 - (v/c)^2)^(1/2)) 
   $
   Denoted as 4-momentum 
   $
@@ -46,14 +46,14 @@ The relativistic Lagrangian $|vel(x)|$ is invariant under $SO(1,3)$, but the boo
 
 - Rotation
 #indent[
-  Similar to the non-relativistic case, the relativistic version of #link(<rotation-momentum-point-particle-non-relativity>)[momentum-point-particle-non-relativity] is #tag("rotation-momentum-point-particle-relativity")
+  Similar to the non-relativistic case, the relativistic version of #raw("#link(<rotation-momentum-point-particle-non-relativity>)[momentum-point-particle-non-relativity]") is #tag("rotation-momentum-point-particle-relativity")
   $
     x × p = (x × m v)/((1 - (v/c)^2)^(1/2))
   $
 ]
 - boost
 #indent[
-  boost by #link(<hyperbolic-angle>)[hyperbolic angle]
+  boost by #raw("#link(<hyperbolic-angle>)[hyperbolic angle]")
   $
     exph θ #i-split = mat(
       cosh θ, sinh θ; 
@@ -77,9 +77,9 @@ The relativistic Lagrangian $|vel(x)|$ is invariant under $SO(1,3)$, but the boo
   $
     vec(E/c,p) ⋅ (n × vec(c t,x)) 
     
-    &= n ⋅ vec(E t - p ⋅ x, c t p - 1/c E x) \
+    &=& n ⋅ vec(E t - p ⋅ x, c t p - 1/c E x) \
 
-    "spatial-part" &= n ⋅ vec(c t p - 1/c E x) 
+    "spatial-part" &=& n ⋅ vec(c t p - 1/c E x) 
   $
   Note that the $(1,3)$ spacetime metric has a negative definite spatial metric
 
@@ -103,17 +103,17 @@ point particle in Lorentz-manifold
 #indent[
   For the action $integral #d l$ and conserved quantities, metric-connection and δ-isometry are needed
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A")
+#let j = c-bf("j")
+#let v = c-bf("v")
 
 *Example*
 
 $ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
 
 $
-  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
-  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+  &quad& integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &=& integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
 $
 - *Question* 
 #indent[  
@@ -127,17 +127,17 @@ $
 
   #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A")
+#let j = c-bf("j")
+#let v = c-bf("v")
 
 *Example*
 
 $ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
 
 $
-  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
-  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+  &quad& integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &=& integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
 $
 - *Question* 
 #indent[  

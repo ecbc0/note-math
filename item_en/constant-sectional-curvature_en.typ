@@ -3,7 +3,7 @@
 
 #tag("sectional-curvature") 
 #indent[
-  According to #link(<symmetry-of-curvature>)[], $"curvature" subset ⨀^2 ⋀^2 V^⊺$
+  According to #raw("#link(<symmetry-of-curvature>)[]"), $"curvature" subset ⨀^2 ⋀^2 V^⊺$
   
   Sectional curvature is a quadratic form (possibly degenerate) restricted to the direction space $⋀^2 V^⊺$ i.e. restricted to unit length
   $
@@ -69,12 +69,12 @@ _Proof_
   
   Quadratic manifold co-dimension 1, normal space dimension 1, normal field $Γ^⟂_(i j) = λ n$ with unit normal field $n$
   $
-    g(Γ^⟂_(i j), n) &= g(Γ_(i j), n)
-      &quad "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
-    &= g(∇_(∂_i) ∂_j, n) \
-    &= ∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
-    &= - g(∂_j, ∇_(∂_i) n) 
-      &quad "by" ∂_j perp n ==> g(n, ∂_j) = 0
+    g(Γ^⟂_(i j), n) &=&g(Γ_(i j), n)
+      &quad& "by" Γ_(i j)^(⊤) ⟂ n ==> g(Γ_(i j), n) = 0 \
+    &=&g(∇_(∂_i) ∂_j, n) \
+    &=&∂_i (g(∂_j, n)) - g(∂_j, ∇_(∂_i) n) \
+    &=&- g(∂_j, ∇_(∂_i) n) 
+      &quad& "by" ∂_j perp n ==> g(n, ∂_j) = 0
   $   
   So $Γ^⟂_(i j) = - g(∇_(∂_i) n,∂_j) n$
   
@@ -84,8 +84,8 @@ _Proof_
 
   ==>
   $
-  R^⊤_(i j i' j') &= 1/a^2 g(n,n) (g_(i j) g_(i' j') - g_(i j') g_(i' j)) \
-  &= 1/(± 2a^2) (g #cvt-prod g)_(i j i' j')
+  R^⊤_(i j i' j') &=&1/a^2 g(n,n) (g_(i j) g_(i' j') - g_(i j') g_(i' j)) \
+  &=&1/(± 2a^2) (g #cvt-prod g)_(i j i' j')
   $
   Cosmological constant $Λ = ± ((n-1)(n-2))/(2 a^2)$
 ]
@@ -97,10 +97,10 @@ Lorentz manifolds $ℚ^(1,n)(- a^2), ℚ^(2,n-1)(a^2)$ in quadratic manifolds ha
   
   Coordinates $(t,r,𝕊^(n-2))$ with
   $
-    r^2 &= x_3^2 + ⋯ + x_(n+1)^2 \
-    x_1 &= (a^2 - r^2)^(1/2) sinh(1/a t) \
-    x_2 &= (a^2 - r^2)^(1/2) cosh(1/a t) \
-    x_i &= r x_i/r 
+    r^2 &=&x_3^2 + ⋯ + x_(n+1)^2 \
+    x_1 &=&(a^2 - r^2)^(1/2) sinh(1/a t) \
+    x_2 &=&(a^2 - r^2)^(1/2) cosh(1/a t) \
+    x_i &=&r x_i/r 
   $
   metric will be
   $
@@ -113,10 +113,10 @@ Lorentz manifolds $ℚ^(1,n)(- a^2), ℚ^(2,n-1)(a^2)$ in quadratic manifolds ha
   
   Coordinates $(t,r,𝕊^(n-2))$ with
   $
-    r^2 &= x_3^2 + ⋯ + x_(n+1)^2 \ 
-    x_1 &= (a^2 + r^2)^(1/2) cos(1/a t) \
-    x_2 &= (a^2 + r^2)^(1/2) sin(1/a t) \
-    x_i &= r x_i/r
+    r^2 &=&x_3^2 + ⋯ + x_(n+1)^2 \ 
+    x_1 &=&(a^2 + r^2)^(1/2) cos(1/a t) \
+    x_2 &=&(a^2 + r^2)^(1/2) sin(1/a t) \
+    x_i &=&r x_i/r
   $
   metric will be
   $
@@ -129,8 +129,8 @@ The time axis behavior of the "single-sheeted hyperboloid" $ℚ^(1,n)(- a^2)$ is
 
 $ℚ^(1,n)(- a^2)$ can be "time-sliced" into $ℝ × 𝕊^(n-1)$. $sinh$ is a diffeomorphism of $ℝ$
 $
-  x_1 &= a sinh(1/a t) \
-  x_i &= a cosh(1/a t) x_i/(a cosh(1/a t))
+  x_1 &=&a sinh(1/a t) \
+  x_i &=&a cosh(1/a t) x_i/(a cosh(1/a t))
 $
 metric
 $

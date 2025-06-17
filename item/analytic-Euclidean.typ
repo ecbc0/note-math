@@ -5,7 +5,7 @@
 
 一维情况开始
 
-#link(<geometric-series>)[几何级数]
+#raw("#link(<geometric-series>)[几何级数]")
 
 $ |a| < 1 ==> sum_(n ∈ ℕ) a^n = lim_(n -> ∞) (1 - a^(n+1))/(1-a) = 1/(1-a) $
 
@@ -15,10 +15,10 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
 #tag("convergence-radius-1d") 收敛半径
 #indent[
-  (cf. #link(<limsup>)[])
+  (cf. #raw("#link(<limsup>)[]"))
   $ 
-    R &:= 1/(limits(limsup)_(n -> ∞) {|a_n|^(1/n)}) in [0,∞] \
-    "or " 1/R &:= limsup_(n -> ∞) {|a_n|^(1/n)}
+    R &:=&1/(limits(limsup)_(n -> ∞) {|a_n|^(1/n)}) in [0,∞] \
+    "or " 1/R &:=&limsup_(n -> ∞) {|a_n|^(1/n)}
   $
   ==> $|a_n|^(1/n) <= 1/R$
 ]
@@ -28,7 +28,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
   _Proof_ 
   #indent()[  
-    use #link(<geometric-series-test>)[几何级数判别] and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
+    use #raw("#link(<geometric-series-test>)[几何级数判别]") and $|a_n v^n|^(1/n) = |a_n|^(1/n) |v| <= (|v|)/R < 1$
 
     $ abs(sum_(n in ℕ) a_n v^n) <= sum_(n ∈ ℕ) ((|v|)/R)^n = 1/(1 - (|v|)/R) $
   ]
@@ -38,7 +38,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 ]
 #tag("uniformaly-absolutely-convergence-analytic")
 #indent[
-  use $|v| <= r < R$. use #link(<geometric-serise-test>)[几何级数控制]
+  use $|v| <= r < R$. use #raw("#link(<geometric-serise-test>)[几何级数控制]")
 
   in 半径 $r < R$ 的闭球 $Closed(𝔹)(r)$, $sum a_n v^n$ 一致绝对收敛 
 ]
@@ -53,15 +53,15 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   $R > 0$ ==> 连续
 
   $|f(x+v) - f(x)| 
-  &= abs(sum_(n = 0)^∞ a_n v^n - a_0) \
-  &<= sum_(n=1)^∞ ((|v|)/R)^n \
-  &= 1/(1 - (|v|)/R) - 1$
+  &=&abs(sum_(n = 0)^∞ a_n v^n - a_0) \
+  &<=&sum_(n=1)^∞ ((|v|)/R)^n \
+  &=&1/(1 - (|v|)/R) - 1$
 
   $lim_(v -> 0) 1/(1 - (|v|)/R) - 1 = 0$
 ]
-将多项式的 #link(<change-base-point-polynomial>)[] 推广到级数
+将多项式的 #raw("#link(<change-base-point-polynomial>)[]") 推广到级数
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+#show "Δ": it => text(it)
 
 #tag("change-base-point-analytic") 
 #indent[
@@ -73,7 +73,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   $
   在 $x+Δ$ 也有非零收敛半径 $R' > 0$. 根据三角不等式, $R' >= R - |Δ|$
   
-  #image("../image/change-base-point-analytic.jpeg", width: 30%)
+  #html.elem("img", attrs: (src: "../image/change-base-point-analytic.jpeg", width: "30%"))
 ]
 *Example* 
 
@@ -93,7 +93,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 
 注意 $|v|$ 对称性, 例如 $ℝ^d$ 的 $#O (d)$, $ℂ^d$ 的 $#U (d)$
 
-将多项式函数 #link(<polynomial-function>)[] 推广到幂级数 $sum A_n (v^n)$
+将多项式函数 #raw("#link(<polynomial-function>)[]") 推广到幂级数 $sum A_n (v^n)$
 
 不同于一维, 在高维, 一般没有 $|A_n (v^n)| = |A_n| |v|^n$. 甚至还没有定义 $|A_n|$
 
@@ -121,7 +121,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 
 #tag("absolute-convergence-analytic")
 #indent[
-  #link(<absolute-convergence-analytic-1d>)[same as] $𝕂^1$
+  #raw("#link(<absolute-convergence-analytic-1d>)[same as]") $𝕂^1$
 
   - $|v| < R$ ==> $A_n (v^n)$ 绝对收敛
 
@@ -129,7 +129,7 @@ $ R = 1/(limits(limsup)_(n -> ∞) {|A_n|^(1/n)}) $
 ]
 _Proof_ (of 发散) 
 #indent[
-  use #link(<linear-map-induced-norm>)[] $|A_n|$, 存在 $v_n in 𝕂ℙ^(d-1)$ 使 $|A_n ((v_n)^n)| ≈ |A_n|$
+  use #raw("#link(<linear-map-induced-norm>)[]") $|A_n|$, 存在 $v_n in 𝕂ℙ^(d-1)$ 使 $|A_n ((v_n)^n)| ≈ |A_n|$
 
   use $limsup$ 定义, $n in ℕ$ 中无限项 $|A_n|^(1/n) ≈ limsup {|A_n|^(1/n)} = 1/R$
 
@@ -151,13 +151,13 @@ _Proof_ (of 发散)
 
 类似一维 also have 
 
-- #link(<uniformaly-absolutely-convergence-analytic>)[]
+- #raw("#link(<uniformaly-absolutely-convergence-analytic>)[]")
   
-- #link(<analytic-imply-continuous>)[]
+- #raw("#link(<analytic-imply-continuous>)[]")
 
-- #link(<change-base-point-analytic>)[]
+- #raw("#link(<change-base-point-analytic>)[]")
 
-for $f(x+v) = sum A_n (v^n)$, $n$ 阶 #link(<difference-polynomial>)[差分] 给出 
+for $f(x+v) = sum A_n (v^n)$, $n$ 阶 #raw("#link(<difference-polynomial>)[差分]") 给出 
 
 $ n! A_n (v_1 ⋯ v_n) + o(v^n) $
 
@@ -175,20 +175,19 @@ $lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n)$ 可以恢复 $n$ 阶单项式
 #indent[
   $n$ 阶微分 $#d^n f(x) in Lin(⊙^n 𝕂^d -> 𝕂^(d'))$
   $
-    #d^n f(x) (v_1 ⋯ v_n) &:= n! A_n (v_1 ⋯ v_n) \
+    #d^n f(x) (v_1 ⋯ v_n) &:=&n! A_n (v_1 ⋯ v_n) \
     
-    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
+    &=&lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
   $
 ]
 *Example* 
 #indent[
-  $ #d f(x)(v) &= lim_(t -> 0) 1/t (f(x + t v) - f(x)) $
-  $ 
-    #d^2 f(x)(v_1 v_2) = lim_(t_1,t_2 -> 0) 1/(t_1 t_2) (
-      &+ f(x + t_1 v_1 + t_2 v_2) \
-      &- f(x + t_1 v_1) \
-      &- f(x + t_2 v_2) \
-      &+ f(x))
+  $ #d f(x)(v) &=&lim_(t -> 0) 1/t (f(x + t v) - f(x)) \
+    #d^2 f(x)(v_1 v_2) &=& lim_(t_1,t_2 -> 0) 1/(t_1 t_2) 
+      &+&f(x + t_1 v_1 + t_2 v_2) \
+      && &-&f(x + t_1 v_1) \
+      && &-&f(x + t_2 v_2) \
+      && &+&f(x)
   $
 ]  
 差分和微分的定义可以用于任何函数, 不需要是由幂级数定义的函数
@@ -204,22 +203,22 @@ $ (∂ f)/(∂ v) (x) := #d f(x)(v) = lim 1/t (f(x + t v) - f(x)) $
 接连的差分和微商 $#d^2 f(x)(v_1 v_2) =$
 $
   #d^2 f(x)(v_1 v_2) 
-  &=lim_(t_2) 1/(t_2) 
+  &=&lim_(t_2) 1/(t_2) 
   sum_(B_2 ⊂ {2}) lim_(t_1) 1/(t_1) 
   sum_(B_1 ⊂ {1}) (-1)^(|B_1|+|B_2|-2) 
   f(x + ...) \
 
-  &= lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
+  &=&lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
 
-  &= (∂^2 f)/(∂ v_2 ∂ v_1) (x)
+  &=&(∂^2 f)/(∂ v_2 ∂ v_1) (x)
 $
-#link(<successive-difference>)[逐次差分] 不依赖于顺序 + 极限交换 ==> $(∂^2 f)/(∂ v_1 ∂ v_2) = (∂^2 f)/(∂ v_2 ∂ v_1)$
+#raw("#link(<successive-difference>)[逐次差分]") 不依赖于顺序 + 极限交换 ==> $(∂^2 f)/(∂ v_1 ∂ v_2) = (∂^2 f)/(∂ v_2 ∂ v_1)$
 
 #tag("successive-derivative") 逐次微商   
   $ 
     (∂^n f)/(∂ v_1 ⋯ ∂ v_n) (x) 
-    &:= lim_(t_n -> 0) 1/(t_n) ((∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x + t_n v_n) - (∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x)) \ 
-    &= #d^n f(x)(v_1 ⋯ v_n) 
+    &:=&lim_(t_n -> 0) 1/(t_n) ((∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x + t_n v_n) - (∂ f)/(∂ v_1 ⋯ ∂ v_(n-1)) (x)) \ 
+    &=&#d^n f(x)(v_1 ⋯ v_n) 
   $
 ==> 幂级数的方向导数表示 $f(x+v) = sum 1/(n!) (∂^n f)/(∂ v^n) (x)$
 
@@ -233,17 +232,17 @@ $
 
   and so on
 ]
-let $v = a_1 e_1 + ⋯ + a_d e_d$. use #link(<successive-derivative>)[], #link(<partial-derivative>)[]
+let $v = a_1 e_1 + ⋯ + a_d e_d$. use #raw("#link(<successive-derivative>)[]"), #raw("#link(<partial-derivative>)[]")
 
-==> 幂级数的偏导数表示 (also cf. #link(<multi-combination>)[])
+==> 幂级数的偏导数表示 (also cf. #raw("#link(<multi-combination>)[]"))
 $ 
   f(x+v) 
-  &= 
+  &=&
     sum_n 1/(n!) 
     sum_(i_1 ⋯ i_n = 1 ,…, d) 
     (∂^n f)/(∂ x_(i_1) ⋯ ∂ x_(i_n)) (x)
     a_(i_1) ⋯ a_(i_n) \
-  &= 
+  &=&
     sum_n 1/(n!) 
     sum_(k_1 + ⋯ + k_d = n)
     binom(n, k_1 ⋯ k_d) 
@@ -292,8 +291,8 @@ $
 #tag("differential-function") 微分函数
   $
     mat( delim: #none ,
-      𝕂^d &⟶ Lin(⊙^n 𝕂^d -> 𝕂^(d')) ;
-      x &⟿ #d^n f(x)
+      𝕂^d ,⟶, Lin(⊙^n 𝕂^d -> 𝕂^(d')) ;
+      x ,⟿, #d^n f(x)
     ) 
   $
 将值域 $Lin(⊙^n 𝕂^d -> 𝕂^(d'))$ 作为 linear space, 使用 power norm, 可以幂级数展开
@@ -303,8 +302,8 @@ $
   isomorphism
   $
     mat( delim: #none ,
-      Lin(⊙^m 𝕂^d -> Lin(⊙^n 𝕂^d -> 𝕂^(d'))) &⟶ Lin(⊙^(m+n) 𝕂^d -> 𝕂^(d')) ;
-      #d^m (#d^n f) &⟿ #d^(m+n) f
+      Lin(⊙^m 𝕂^d -> Lin(⊙^n 𝕂^d -> 𝕂^(d'))) ,⟶, Lin(⊙^(m+n) 𝕂^d -> 𝕂^(d')) ;
+      #d^m (#d^n f) ,⟿, #d^(m+n) f
     )
   $
   with 
@@ -315,7 +314,7 @@ $
 
   same norm $|#d^m (#d^n f)| = |#d^(m+n) f|$
 
-  same convergence radius (#link(<exponential-root-of-power-function>)[use] $lim_(m -> ∞) (m+n)^(1/m) = 1$)
+  same convergence radius (#raw("#link(<exponential-root-of-power-function>)[use]") $lim_(m -> ∞) (m+n)^(1/m) = 1$)
 ]
 _Proof_ (draft) 导数的交换性 $#d^m, (v_1 ⋯ v_m)$ and $#d^n, (v_(m+1) ⋯ v_(m+n))$. norm estimation $|#d^(m+n) f (v_1 ⋯ v_(m+n))| <= |#d^(m+n) f| |v_1| ⋯ |v_(m+n)|$
 
@@ -347,7 +346,7 @@ _Proof_
   - $f ≡ 0$ 
   - $exists a',b' in (a,b), a' < b', sign f(a') ≠ sign f(b')$ 
   
-  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #link(<mean-value-theorem-continuous>)[介值定理]
+  ==> $exists c in (a',b'), f'(c) = 0$ _Proof_ by #raw("#link(<mean-value-theorem-continuous>)[介值定理]")
 
   介值定理使用了完整的 $ℝ$ 的序
   
@@ -365,13 +364,13 @@ $ f(b) - f(a) = integral_a^b f'(x) #d x $
   #indent[
     $ f(x+v) = f(x) + integral_0^1 #d t space f'(x + t v) v $ 
     
-    by 微积分基本定理 and #link(<chain-rule-1d>)[] and $(#d)/(#d t) (x + t v) = v$
+    by 微积分基本定理 and #raw("#link(<chain-rule-1d>)[]") and $(#d)/(#d t) (x + t v) = v$
   
     remainder estimation, 一致线性控制
     $ 
       f(x+v) - f(x) 
-      &= o(1) "or" O(v) \
-      &<= |v| sup_(t in [0,1]) |f'(x + t v)| 
+      &=&o(1) "or" O(v) \
+      &<=&|v| sup_(t in [0,1]) |f'(x + t v)| 
     $
     ]
   - 高阶 
@@ -381,16 +380,16 @@ $ f(b) - f(a) = integral_a^b f'(x) #d x $
     by 分部积分 
     $
       1/m! #d^m f (x + t v) v^m 
-      &= - (((1-t)^m)/(m!) #d^m f(x + t v) v^m)|_0^1 \
-      &= - integral_0^1 #d t (#d)/(#d t) (((1-t)^m)/(m!) #d^m f(x + t v) v^m) \
-      &= integral_0^1 #d t (((1-t)^(m-1))/((m-1)!) #d^m f(x + t v) v^m) \
-      &quad  - integral_0^1 #d t (((1-t)^m)/(m!) #d^(m+1) f(x + t v) v^(m+1))
+      &=&- (((1-t)^m)/(m!) #d^m f(x + t v) v^m)|_0^1 \
+      &=&- integral_0^1 #d t (#d)/(#d t) (((1-t)^m)/(m!) #d^m f(x + t v) v^m) \
+      &=&integral_0^1 #d t (((1-t)^(m-1))/((m-1)!) #d^m f(x + t v) v^m) \
+      &quad&  - integral_0^1 #d t (((1-t)^m)/(m!) #d^(m+1) f(x + t v) v^(m+1))
     $
     remainder estimation, 一致 $m+1$ 阶幂控制
 
     $ f(x+v) - sum_(n=0)^m 1/(n!) #d^n f(x)(v^n) 
-    &= o(v^m) "or" O(v^(m+1)) \
-    &<= 1/(m+1)! |v|^(m+1)  sup_(t in [0,1]) |#d^(m+1) f (x + t v)| $
+    &=&o(v^m) "or" O(v^(m+1)) \
+    &<=&1/(m+1)! |v|^(m+1)  sup_(t in [0,1]) |#d^(m+1) f (x + t v)| $
   ]
 ]
 let 幂级数 $sum A_n (v^n)$
@@ -399,9 +398,9 @@ let 幂级数 $sum A_n (v^n)$
 
 计算幂级数的切换基点后的系数使用了求和的交换
 
-for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #link(<change-base-point-polynomial>)[]
+for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #raw("#link(<change-base-point-polynomial>)[]")
 
-但是, 无限求和的极限, 如果不是绝对收敛, 并不总是兼容于求和顺序改变 #link(<series-rearrangement>)[]
+但是, 无限求和的极限, 如果不是绝对收敛, 并不总是兼容于求和顺序改变 #raw("#link(<series-rearrangement>)[]")
 
 幂级数切换基点可能导致收敛域改变
 
@@ -509,7 +508,7 @@ for 多项式, 求和有限, 求和顺序交换, 从而切换基点良定义 #li
   
     $ ⨁_(n = 1)^∞ Lin(⊙^n 𝕂^d -> 𝕂^(d')) $
 
-    #link(<net>)[网] (note: $|A|$ is #link(<linear-map-induced-norm>)[])
+    #raw("#link(<net>)[网]") (note: $|A|$ is #raw("#link(<linear-map-induced-norm>)[]")
   
     $ 𝔹(A,ε) := {B : forall n in ℕ_(>= 1), |A_n - B_n|^(1/n) < ε} $ (or $|A_n - B_n| < ε^n$)
 
@@ -546,12 +545,12 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
   $abs( 
     sum_(n >= 1) A_n (v^n) - sum_(n >= 1) B_n (v^n) 
   )
-  &<= sum_(n >= 1) |A_n - B_n| |v|^n \ 
-  &<= sum_(n >= 1) ε^n |v|^n \
-  &= 1/(1 - ε |v|) - 1 \
-  &-> 0$
+  &<=&sum_(n >= 1) |A_n - B_n| |v|^n \ 
+  &<=&sum_(n >= 1) ε^n |v|^n \
+  &=&1/(1 - ε |v|) - 1 \
+  &->&0$
 ]
-#tag("Sobolev-space") for Sobolev anayltic space, try use 几乎处处解析 + $integral abs(1/n! #d^n f)^(1/n)$ 作为控制函数去逼近目标函数 $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ 是 $ϕ$ 的 #tag("weak-differential"). (note: $|A|$ is #link(<linear-map-induced-norm>)[]) 或者只用带解析型积分 norm 限制的几乎处处解析空间, 或者对此空间进行积分 norm 的 Cauchy 网完备化
+#tag("Sobolev-space") for Sobolev anayltic space, try use 几乎处处解析 + $integral abs(1/n! #d^n f)^(1/n)$ 作为控制函数去逼近目标函数 $integral abs(1/n! ϕ_n - 1/n! #d^n g)^(1/n) <= integral abs(1/n! #d^n f)^(1/n)$, where $ϕ_n$ 是 $ϕ$ 的 #tag("weak-differential"). (note: $|A|$ is #raw("#link(<linear-map-induced-norm>)[]")) 或者只用带解析型积分 norm 限制的几乎处处解析空间, 或者对此空间进行积分 norm 的 Cauchy 网完备化
 
 更弱的网控制
 #indent[
@@ -575,12 +574,12 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 
   $ 
     |A_m (x+Δ) - B_m (x+Δ)| 
-    &= abs( 
+    &=&abs( 
       sum_(n=m>=1)^∞ (A_n (x) - B_n (x)) binom(n,m,n-m) Δ^(n-m)
     ) \
-    &<= sum_(n=m>=1)^∞ ε^n binom(n,m,n-m) |Δ|^(n-m) \ 
-    &= ε^m sum_(p = 0)^∞ binom(p+m , m, p) |ε Δ|^p ("use" p = n-m) \
-    &= ε^m 1/((1-|ε Δ|)^(m+1)) 
+    &<=&sum_(n=m>=1)^∞ ε^n binom(n,m,n-m) |Δ|^(n-m) \ 
+    &=&ε^m sum_(p = 0)^∞ binom(p+m , m, p) |ε Δ|^p ("use" p = n-m) \
+    &=&ε^m 1/((1-|ε Δ|)^(m+1)) 
   $
 
   ==> $ |A_m (x+Δ) - B_m (x+Δ)|^(1/m) <= ε 1/((1-|ε Δ|)^(1 + 1/m)) $
@@ -609,7 +608,7 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 
   let $f$ 解析, with domain $D_f$
 
-  $f$ 的 #link(<net>)[网]
+  $f$ 的 #raw("#link(<net>)[网]")
   #indent[
     - let $ε > 0$
 
@@ -669,4 +668,4 @@ in 解析空间及其网
 
 连通分支内奇点的性质在解析同胚下不变
 
-#tag("homotopy-analytic") 解析 #link(<homotopy>)[同伦]
+#tag("homotopy-analytic") 解析 #raw("#link(<homotopy>)[同伦]")

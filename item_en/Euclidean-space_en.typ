@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-use alternation of #link(<tensor-induced-quadratic-form>)[]  
+use alternation of #raw("#link(<tensor-induced-quadratic-form>)[]")  
 $
   ⟨v_1 ∧ ⋯ ∧ v_k , w_1 ∧ ⋯ ∧ w_k⟩ = det ⟨v_i,w_j⟩ 
 $
@@ -19,16 +19,16 @@ let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 
     _Proof_
       $
-        ⟨ v+w ⟩^2 &= ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \
-        &>= ⟨ v ⟩^2 + 2 |v| |w| + ⟨ w ⟩^2 \
-        &= (|v| + |w|)^2
+        ⟨ v+w ⟩^2 &=&⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \
+        &>=&⟨ v ⟩^2 + 2 |v| |w| + ⟨ w ⟩^2 \
+        &=&(|v| + |w|)^2
       $
   - $|v - w| >= stretch(|, size: #120%)|v| - |w|stretch(|, size: #120%)$
 
     _Proof_
       $
-        |v| &<= |v-w| + |w| \
-        |w| &<= |v-w| + |v|
+        |v| &<=&|v-w| + |w| \
+        |w| &<=&|v-w| + |v|
       $
 #tag("Euclidean-space-topology") Euclidean $ℝ^d$ topology. $f : ℝ^d -> ℝ^d'$ is continuous at $a ∈ ℝ^d$ :=
   $
@@ -46,8 +46,8 @@ let $A ⊂ ℝ^d$
 
 $A$ open <==> $A^∁$ closed 
 
-#let I = c-bf("I","#919191")
-#let J = c-bf("J","#919191")
+#let I = c-bf("I")
+#let J = c-bf("J")
 
 #tag("interval") Interval refers to a subset $I$ of $ℝ$ with property that the order is uninterrupted
 $ 
@@ -61,7 +61,7 @@ $
 
   Due to the existence of single-point intervals, $#J != ∅$ and $⋃ #J = A$
 
-  $#J (A)$ has a $⊂$ #link(<linear-order>)[linear order chain]. Taking $⋃$ for each maximal linear order chain will continue to yield intervals. The set of these intervals is denoted as $#I (A)$
+  $#J (A)$ has a $⊂$ #raw("#link(<linear-order>)[linear order chain]"). Taking $⋃$ for each maximal linear order chain will continue to yield intervals. The set of these intervals is denoted as $#I (A)$
 
   $#I (A) != ∅$ and $⨆ #I (A) = A$  
 
@@ -72,25 +72,25 @@ $
 
   If $A$ is a closed set, then the intervals in $#I (A)$ are all closed intervals
 ]
-recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)[intersection of nested closed intervals is non-empty]
+recall the $⊂$ #raw("#link(<linear-order>)[]") #raw("#link(<nested-closed-interval-theorem>)[intersection of nested closed intervals is non-empty]")
 
-#tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
+#tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #raw("#link(<compact>)[]")
 
 _Proof_ 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
+#let B = c-bf("B")
+#let C = c-bf("C")
 #indent[
-  let $#B$ be a #link(<net>)[net] of $A$. let $B in #B$
+  let $#B$ be a #raw("#link(<net>)[net]") of $A$. let $B in #B$
 
   Since $A ⊂ ℝ$ is bounded and closed, $closed(B) ⊂ A$
 
   Take the optimal closed interval decomposition $closed(B) = ⨆ #I (closed(B))$
 
-  For all decomposed closed intervals of $B in #B$, consider any $⊂$ maximal linear order chain #link(<maximal-linear-order>)[] $#C$
+  For all decomposed closed intervals of $B in #B$, consider any $⊂$ maximal linear order chain #raw("#link(<maximal-linear-order>)[]") $#C$
 
-  According to #link(<nested-closed-interval-theorem>)[], the intersection of a nested set of closed intervals in the $⊂$ linear order is a non-empty closed interval $⋂ #C != ∅$
+  According to #raw("#link(<nested-closed-interval-theorem>)[]"), the intersection of a nested set of closed intervals in the $⊂$ linear order is a non-empty closed interval $⋂ #C != ∅$
 
-  Similar to the proof of #link(<closed-interval-net-theorem>)[], prove that $⋂ #C$ is the smallest closed interval, thus $subset$ every $B in #B$
+  Similar to the proof of #raw("#link(<closed-interval-net-theorem>)[]"), prove that $⋂ #C$ is the smallest closed interval, thus $subset$ every $B in #B$
 ]
 #tag("compact-imply-subsequence-converge") $A$ compact ==> sequence ${x_n} ⊂ A$ has a convergent subsequence. The same applies to nets
 
@@ -120,9 +120,9 @@ _Proof_
 
 _Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ is continuous
 #indent[
-  $𝕊^1$ is continuously isomorphic to $ℝ/ℤ$ (#link(<quotient-topology>)[]) is continuously isomorphic to $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ collapsing endpoints ${-1,1} = 𝕊^0$ (quotient-topology)
+  $𝕊^1$ is continuously isomorphic to $ℝ/ℤ$ (#raw("#link(<quotient-topology>)[]")) is continuously isomorphic to $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ collapsing endpoints ${-1,1} = 𝕊^0$ (quotient-topology)
 
-  $closed(𝔹)^1 = [-1,1]$ bounded closed interval compact ==> quotient $𝕊^1 = closed(𝔹)^n/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient preserves compact]
+  $closed(𝔹)^1 = [-1,1]$ bounded closed interval compact ==> quotient $𝕊^1 = closed(𝔹)^n/𝕊^0$ compact. by #raw("#link(<quotient-topology-preserve-compact>)[quotient preserves compact]")
 ]
 #tag("closed-ball-sphere-is-compact") 
 
@@ -140,7 +140,7 @@ _Proof_
     $
     (Draw a picture) continuous. Isomorphism is obtained after quotienting the origin $0 ∈ ℝ^(n+1)$
 
-    $𝕊^n × [0,1]$ compact. by #link(<product-topology-preserve-compact>)[]
+    $𝕊^n × [0,1]$ compact. by #raw("#link(<product-topology-preserve-compact>)[]")
 
     $(𝕊^n × [0,1])/{0 ∈ ℝ^(n+1)} ≃ closed(𝔹)^(n+1)$ compact
   ]
@@ -187,7 +187,7 @@ _Proof_
   #indent[
     The bounded closed set $A$ of $ℝ^n$ corresponds to a closed set of $ℝ^n ⊔ {∞}$ and does not include $∞$
 
-    $𝕊^n$ compact + #link(<closed-set-in-compact-space-is-compact>)[] ==> $A$ is compact in $𝕊^n$
+    $𝕊^n$ compact + #raw("#link(<closed-set-in-compact-space-is-compact>)[]") ==> $A$ is compact in $𝕊^n$
 
     From $ℝ^n ⊔ {∞}$ topology, restrict back to subspace $ℝ^n$ topology + $A subset ℝ^n$
 
@@ -209,7 +209,7 @@ _Proof_
     ]
     - Bounded
     #indent[
-      The open ball of $ℝ^d$ does not contain $∞$. The open ball family ${𝔹(x,r) ⊂ ℝ^n : (x ∈ A) and (r > 0)}$ covers $A$. Take #link(<compact-finite-open-cover>)[finite cover], still does not contain $∞$
+      The open ball of $ℝ^d$ does not contain $∞$. The open ball family ${𝔹(x,r) ⊂ ℝ^n : (x ∈ A) and (r > 0)}$ covers $A$. Take #raw("#link(<compact-finite-open-cover>)[finite cover]"), still does not contain $∞$
     ]
   ]
 ]
@@ -236,7 +236,7 @@ A net can be composed of tails $B_n = {x_n,x_(n+1),...}$
 
   limit-distance-vanish $lim_(B ∈ #B)|B| = 0$ ==> $⋂_(B ∈ #B) closed(B) = {x}$
 ]
-Some infinite-dimensional linear spaces e.g. #link(<Lebesgue-integrable>)[] $L^1$, bounded closed sets cannot be compact but still satisfy limit-distance-vanish net converging to a point
+Some infinite-dimensional linear spaces e.g. #raw("#link(<Lebesgue-integrable>)[]") $L^1$, bounded closed sets cannot be compact but still satisfy limit-distance-vanish net converging to a point
 
 According to induction, finite summation is associative and commutative. But this does not guarantee infinite summation i.e. 
 
@@ -281,13 +281,13 @@ _Proof_
 ]
 def
 $
-  a_n^+ &:= "switch"(a_n) cases(>= 0 => a_n , < 0 => 0) \
+  a_n^+ &:=&"switch"(a_n) cases(>= 0 => a_n , < 0 => 0) \
 
-  a_n^- &:= "switch"(a_n) cases(>= 0 => 0 , < 0 => - a_n) \
+  a_n^- &:=&"switch"(a_n) cases(>= 0 => 0 , < 0 => - a_n) \
 
-  a_n^+,a_n^- &>= 0 \
+  a_n^+,a_n^- &>=&0 \
 
-  a_n &= a_n^+ - a_n^-
+  a_n &=&a_n^+ - a_n^-
 $
 $ sum |a_n| < ∞ <==> sum a_n^+, sum a_n^- < ∞ $
 
@@ -340,12 +340,12 @@ _Proof_
     $
       0 
 
-      &< (sum_1^(p_(N+1)) a_n^+ - sum_1^(q_N) a_n^-) - A \
+      &<&(sum_1^(p_(N+1)) a_n^+ - sum_1^(q_N) a_n^-) - A \
 
-      &<= (sum_1^(p_(N+1)) a_n^+ - sum_1^(q_N) a_n^-) 
+      &<=&(sum_1^(p_(N+1)) a_n^+ - sum_1^(q_N) a_n^-) 
       - (sum_1^(p_(N+1) - 1) a_n^+ - sum_1^(q_N) a_n^-) \
 
-      &= a_(p_(N+1))^+
+      &=&a_(p_(N+1))^+
     $
     According to the definition of $q_(N+1)$
     $
@@ -394,7 +394,7 @@ $sum a_n$ converges ==> $lim_(n -> ∞) a_n = 0$
 ]
 _Proof_ 
 #indent[
-  - $sum a_n$ converges. by using the triangle inequality $abs(sum_(N+1)^∞ a_n) <= sum_(N+1)^∞ |a_n|$ and $ℝ^d$ #link(<Cauchy-completeness-Euclidean>)[Cauchy sequence converges]
+  - $sum a_n$ converges. by using the triangle inequality $abs(sum_(N+1)^∞ a_n) <= sum_(N+1)^∞ |a_n|$ and $ℝ^d$ #raw("#link(<Cauchy-completeness-Euclidean>)[Cauchy sequence converges]")
 
   - Rearrangement invariant
   #indent[

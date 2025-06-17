@@ -25,13 +25,13 @@ There are two directions. for vector base of $ℝ^n$, change order once $e_i <->
 
   *Example* Tetrahedron, right-hand rule, with the thumb pointing towards the inside of the tetrahedron to get the boundary direction (the index of the vertices in the picture starts from $1$ instead of $0$)
 
-  #image("../image/orientation-of-simplex.jpg", width: 100%)
+  #html.elem("img", attrs: (src: "../image/orientation-of-simplex.jpg", width: "100%"))
 ]
-#tag("orientable-low-dim-polyhera") Polyhedron #link(<orientation-of-boundary-of-simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
+#tag("orientable-low-dim-polyhera") Polyhedron #raw("#link(<orientation-of-boundary-of-simplex>)[Orientable]") is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
 
 #tag("Mobius-strip") *Example* Non-orientable Mobius-type polyhedron (image modified from wiki)
 
-#image("../image/Moebius.svg", width: 50%)
+#html.elem("img", attrs: (src: "../image/Moebius.svg", width: "50%"))
 
 No matter how the direction of each $k$ simplex is defined, there exists a pair of adjacent $k$ simplex $A,B$ whose $k-1$ connected boundary simplex directions are incompatible. i.e. Simplex partitioning has no well-defined inside and outside
 
@@ -49,13 +49,13 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   - boundary-op-not-injective
 
-    #image("../image/boundary-op-not-injective-1.jpg", width: 70%)
+    #html.elem("img", attrs: (src: "../image/boundary-op-not-injective-1.jpg", width: "70%"))
 
-    #image("../image/boundary-op-not-injective-2.jpeg", width: 80%)
+    #html.elem("img", attrs: (src: "../image/boundary-op-not-injective-2.jpeg", width: "80%"))
 
   - #tag("tri-intersect-boundary")
 
-    #image("../image/tri-intersect-boundary.jpg", width: 40%)
+    #html.elem("img", attrs: (src: "../image/tri-intersect-boundary.jpg", width: "40%"))
 
   cycle $∂ c = 0$
 
@@ -86,31 +86,31 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
   so existence of boundary of nonzero $n$ chain
   $ 
     forall c in C_n, ∂ c = 0 
-    &==> c in ker ∂_n = 0 \
-    &==> c = 0 
+    &==>& c in ker ∂_n = 0 \
+    &==>& c = 0 
   $
   and uniqueness of $n$ dim region surround by $codim = 1$ boundary
   $
-    (c,c' in C_n) and (∂_n c = ∂_n c') &==> ∂_n (c-c') = 0 \
-    &==> c - c' in ker ∂_n = 0 \
-    &==> c=c'
+    (c,c' in C_n) and (∂_n c = ∂_n c') &==>& ∂_n (c-c') = 0 \
+    &==>& c - c' in ker ∂_n = 0 \
+    &==>& c=c'
   $
 ]
 #show "δ": it => text(it, fill: rgb("#d25b00"))
 
 #tag("homology-hole") For a set $ℝ^n$ minus a finite number or a countable number of separated linear subspaces or polyhedra, homology is not zero
 
-#image("../image/homology-hole.jpeg", width: 100%)
+#html.elem("img", attrs: (src: "../image/homology-hole.jpeg", width: "100%"))
 
 #tag("Stokes-theorem") 
 #indent[
-  Similar to the one-dimensional #link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]
+  Similar to the one-dimensional #raw("#link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]")
 
   Define #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ in coordinates, where $Vol$ is the volume of the coordinates, $σ$ is a large class of regions, and the calculation result does not depend on the choice of coordinates. 
 
   Then there is Stokes-theorem 
   
-  for #link(<orientable>)[orientable] almost everywhere analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #raw("#link(<orientable>)[orientable]") almost everywhere analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   Calculate $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ using a box in coordinates. When all coordinates approach $0$, it will be a partial derivative $∂_i$ of something calculated for each coordinate axis direction. The result is $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, further simplification is omitted for now.
 
@@ -122,13 +122,13 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  use the approximation method used in defining #link(<integral-on-manfold>)[]
+  use the approximation method used in defining #raw("#link(<integral-on-manfold>)[]")
 
-  Use countable + linear approximation + partition limit that used in the definition of form integral on manifold #link(<integral-on-manfold>)[] 
+  Use countable + linear approximation + partition limit that used in the definition of form integral on manifold #raw("#link(<integral-on-manfold>)[]") 
 
   Approximately decompose into simplex or box, then use Stokes theorem of simplex + internal boundary cancellation, only the real boundary of manifold is left
 
-  Need to use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
+  Need to use $n-1$ form $ω$ and #raw("#link(<integral-on-submanfold>)[]")
 
   Approximation on the boundary may require special attention. For example, approximations on boundaries shoud use simplex (box) centered on the boundary and differential at points on the boundary.
 
@@ -191,9 +191,9 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
   Stokes' theorem #tag("gradient")
   $
     ω(x_1) - ω(x_0) 
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_l ⟨ grad ω , #d l ⟩
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_l ⟨ grad ω , #d l ⟩
   $
 ]
 - $1$ form
@@ -207,9 +207,9 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
   Stokes' Theorem #tag("curl")
   $
     integral_(∂ S) ⟨ ω^♯ , #d l ⟩ 
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_S ⟨ curl ω^♯ , #d S ⟩
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_S ⟨ curl ω^♯ , #d S ⟩
   $
   where $n = ⋆ Vol_2 = Vol_1$
 ]
@@ -224,9 +224,9 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
   Stokes' Theorem #tag("divergence")
   $
     integral_(∂ V) ⟨ ω^♯ , #d S ⟩
-    &= integral_(∂ M) ω \
-    &= integral_M #d ω \
-    &= integral_V ⟨ div ω^♯ , #d V ⟩
+    &=& integral_(∂ M) ω \
+    &=& integral_M #d ω \
+    &=& integral_V ⟨ div ω^♯ , #d V ⟩
   $
 ]
 in Minkowski $ℝ^(1,3)$, $⋀^2 ℝ^(1,3) ≃ ⋀^(4-2) ℝ^(1,3)$

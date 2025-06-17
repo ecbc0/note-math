@@ -5,7 +5,7 @@
 #indent[
   flat metric := a metric such that there exist coordinates $y$ where $forall x, g(x) = η$ standard metric
 
-  The submanifold metric of $𝕊^2$ inherited from $ℝ^3$ is not #link(<flat-metric>)[], but rather #link(<quadratic-manifold-is-constant-sectional-curvature>)[constant-sectional-curvature].
+  The submanifold metric of $𝕊^2$ inherited from $ℝ^3$ is not #raw("#link(<flat-metric>)[]"), but rather #raw("#link(<quadratic-manifold-is-constant-sectional-curvature>)[constant-sectional-curvature]").
 
   When does a flat metric exist?
 
@@ -19,7 +19,7 @@
 
   - $(∂ x)/(∂ y) ⋅ g^(-1) ⋅ (∂ x)/(∂ y)#none ^⊺ = η$
 
-  #link(<connection-transformations>)[Connection transformations] 
+  #raw("#link(<connection-transformations>)[Connection transformations]") 
   $
     Γ(y) 
     = (∂ y)/(∂ x) ⋅ Γ(x) ⋅ (∂ x)/(∂ y) + (∂ y)/(∂ x) ⋅ (∂)/(∂ y) ((∂ x)/(∂ y))
@@ -40,26 +40,26 @@
   #indent[
     product-rule expansion of the above differential
     $
-      &= ((∂)/(∂ y) ((∂ x)/(∂ y))) ⋅ g^(-1) ⋅ ((∂ x)/(∂ y))^⊺ \
-      &quad + (∂ x)/(∂ y) ⋅ ((∂)/(∂ y) (g^(-1))) ⋅ ((∂ x)/(∂ y))^⊺ \
-      &quad + (∂ x)/(∂ y) ⋅ g^(-1) ⋅ ((∂)/(∂ y) ((∂ x)/(∂ y))^⊺) 
-        &quad "then use" (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) \
+      &=& ((∂)/(∂ y) ((∂ x)/(∂ y))) ⋅ g^(-1) ⋅ ((∂ x)/(∂ y))^⊺ \
+      &quad& + (∂ x)/(∂ y) ⋅ ((∂)/(∂ y) (g^(-1))) ⋅ ((∂ x)/(∂ y))^⊺ \
+      &quad& + (∂ x)/(∂ y) ⋅ g^(-1) ⋅ ((∂)/(∂ y) ((∂ x)/(∂ y))^⊺) 
+        &quad& "then use" (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) \
 
-      &= (∂ x)/(∂ y) ⋅ (g^(-1)(Γ,) + ∂ g^(-1) + g^(-1)(,Γ)) ⋅ ((∂ x)/(∂ y))^⊺
-        &quad "see" #link(<differenial-of-metric-inverse-vs-connection>)[link] \
+      &=& (∂ x)/(∂ y) ⋅ (g^(-1)(Γ,) + ∂ g^(-1) + g^(-1)(,Γ)) ⋅ ((∂ x)/(∂ y))^⊺
+        &quad& "see" #raw("#link(<differenial-of-metric-inverse-vs-connection>)[link]") \
 
-      &= 0
+      &=& 0
     $
   ]
   linear PDE for $(∂ x)/(∂ y)$ 
   
   $ (∂)/(∂ y) ((∂ x)/(∂ y)) = (∂ x)/(∂ y) ⋅ Γ(y) $ 
   
-  is solvable <==> satisfies #link(<linear-PDE-integrable-condition>)[]
+  is solvable <==> satisfies #raw("#link(<linear-PDE-integrable-condition>)[]")
   $
     [∇_i,∇_i'] = 0
   $
-  where $∇ = ∂ + Γ$ is #link(<geodesic-derivative>)[]
+  where $∇ = ∂ + Γ$ is #raw("#link(<geodesic-derivative>)[]")
 
   or $ [∇_v, ∇_v'] - ∇_([v,v']) = 0 $
 
@@ -67,7 +67,7 @@
 
   In flat-metric coordinates $Γ = 0$, so the geodesic ODE is $acc(x) = 0$, so flat-metric coordinates will be geodesic coordinates 
 ]
-When not exist flat metric coordinate, choose #link(<Einstein-metric>)[] as minimal #link(<scalar-curvature>)[]
+When not exist flat metric coordinate, choose #raw("#link(<Einstein-metric>)[]") as minimal #raw("#link(<scalar-curvature>)[]")
 
 Now, do not assume flat metric
 
@@ -80,7 +80,7 @@ Now, do not assume flat metric
 
   $[∇_i,∇_i']$ is a tensor (even though $∇$ is not)
 
-  name-overload: Curvature := #link(<metric-dual>)[] of curvature $R := g [∇_i,∇_i'] $
+  name-overload: Curvature := #raw("#link(<metric-dual>)[]") of curvature $R := g [∇_i,∇_i'] $
 
   In coordinates $R_(i i j' j') = g_(j' k) (R_(i i'))_j^k$ 
 ]
@@ -96,7 +96,7 @@ Now, do not assume flat metric
 #indent[
   At the origin $p$ of geodesic coordinates, by calculation, through
 
-  - #link(<metric-connection>)[] definition of $Γ$ and definition of curvature $R$
+  - #raw("#link(<metric-connection>)[]") definition of $Γ$ and definition of curvature $R$
   - $Γ(p) = 0$
 
   we have
@@ -136,7 +136,7 @@ _Proof_ Definition of curvature $R$ in geodesic coordinates, expressed using $Γ
 
 #tag("curvature-product")  
 #indent[
-  Mimicking #link(<curvature-in-geodesic-coordinate>)[the definition of curvature in geodesic coordinates], for second-order symmetric tensors $T, S ∈ ⨀^2 V^⊺$, define the curvature-product
+  Mimicking #raw("#link(<curvature-in-geodesic-coordinate>)[the definition of curvature in geodesic coordinates]"), for second-order symmetric tensors $T, S ∈ ⨀^2 V^⊺$, define the curvature-product
   $
     (T #cvt-prod S)_(i_1 i_2 j_1 j_2) 
     
@@ -148,7 +148,7 @@ _Proof_ Definition of curvature $R$ in geodesic coordinates, expressed using $Γ
     
     = T_(i j) S_(i' j') + T_(i' j') S_(i j) - T_(i j') S_(i' j) - T_(i' j) S_(i j')
   $
-  $T #cvt-prod S$ satisfies #link(<symmetry-of-curvature>)[], so $T #cvt-prod S in "curvature"$, or $#cvt-prod : (⨀^2 V^⊺)^2 -> "curvature"$
+  $T #cvt-prod S$ satisfies #raw("#link(<symmetry-of-curvature>)[]"), so $T #cvt-prod S in "curvature"$, or $#cvt-prod : (⨀^2 V^⊺)^2 -> "curvature"$
 
   At the origin of geodesic coordinates, the curvature is (formally) 
   
@@ -166,8 +166,8 @@ _Proof_ Definition of curvature $R$ in geodesic coordinates, expressed using $Γ
 
 $
   dim("curvature") 
-  &= dim(⨀^2 (⋀^2 V^⊺)) - dim(⋀^4 V^⊺) \
-  &= 1/12 n^2 (n^2 - 1)
+  &=& dim(⨀^2 (⋀^2 V^⊺)) - dim(⋀^4 V^⊺) \
+  &=& 1/12 n^2 (n^2 - 1)
 $ 
 
 where $n = dim V$ 
@@ -178,7 +178,7 @@ Mapping $g #cvt-prod : ⨀^2 V^⊺ -> "curvature"$
 
 #tag("adjoint-of-curvature-product") $(g #cvt-prod)^† : "curvature" -> ⨀^2 V^⊺$ :=
 #indent[
-  For $T ∈ ⨀^2 V^⊺$ and $S ∈ "curvature"$ and the #link(<tensor-induced-metric>)[] of $"curvature",⨀^2 V^⊺$
+  For $T ∈ ⨀^2 V^⊺$ and $S ∈ "curvature"$ and the #raw("#link(<tensor-induced-metric>)[]") of $"curvature",⨀^2 V^⊺$
   $
     g(g #cvt-prod T, S) = g(T, (g #cvt-prod)^† S)
   $
@@ -197,7 +197,7 @@ Mapping $g #cvt-prod : ⨀^2 V^⊺ -> "curvature"$
   In coordinates $((g #cvt-prod)^† S)_(i j) = 4 g^(i' j') S_(i i' j j')$
 ]
 
-$g #cvt-prod$ is injective, and $(g #cvt-prod)^†$ is surjective. _Proof_ uses the pre-inverse and post-inverse of composite mappings. The construction method refers to the calculation in #link(<curvature-decomposition>)[]
+$g #cvt-prod$ is injective, and $(g #cvt-prod)^†$ is surjective. _Proof_ uses the pre-inverse and post-inverse of composite mappings. The construction method refers to the calculation in #raw("#link(<curvature-decomposition>)[]")
 
 $dim(im(g #cvt-prod)^†) = dim(im(g #cvt-prod)) = dim ⨀^2 V^⊺$
 
@@ -235,11 +235,11 @@ Orthogonal decomposition into tensor subspace, and cannot be decomposed further,
 
 _Proof_ if it's true then 
 #indent[
-  $1/4 (g #cvt-prod)^† T &= (g #cvt-prod)^† (g #cvt-prod) S \
-  &= (n-2) S + g ⋅ g(g,S)$ 
+  $1/4 (g #cvt-prod)^† T &=& (g #cvt-prod)^† (g #cvt-prod) S \
+  &=& (n-2) S + g ⋅ g(g,S)$ 
 
-  $1/4 (g ⋅)^† (g #cvt-prod)^† T &= (n-2) ⋅ g(g,S) + g(g,g) ⋅ g(g,S) \
-  &= 2(n-1) ⋅ g(g,S)$
+  $1/4 (g ⋅)^† (g #cvt-prod)^† T &=& (n-2) ⋅ g(g,S) + g(g,g) ⋅ g(g,S) \
+  &=& 2(n-1) ⋅ g(g,S)$
 
   $S = 1/(4(n-2)) ((g #cvt-prod)^† T - 1/(2(n-1)) g ⋅ (g ⋅)^† (g #cvt-prod)^† T)$
 
@@ -262,15 +262,15 @@ _Proof_ if it's true then
     $"curvature" = ker(g #cvt-prod)^† ⊕ ker(g ⋅)^† ⊕ im(g ⋅)$
   $
     R =
-    &quad W \
-    & + 1/(n-2) ⋅ g #cvt-prod "tr-free-Ric" \ 
-    & + 1/(2n(n-1)) ⋅ "scal" ⋅ g #cvt-prod g
+    &quad& W \
+    &+& 1/(n-2) ⋅ g #cvt-prod "tr-free-Ric" \ 
+    &+& 1/(2n(n-1)) ⋅ "scal" ⋅ g #cvt-prod g
   $
   quadratic-form
   $
-    |R|^2 &= |W|^2 + 4/(n-2) |"tr-free-Ric"|^2 + 2/(n(n-1)) "scal"^2 \
+    |R|^2 &=& |W|^2 + 4/(n-2) |"tr-free-Ric"|^2 + 2/(n(n-1)) "scal"^2 \
 
-    &= |W|^2 + 4/(n-2) |"Ric"|^2 - 2/(n(n-1)) "scal"^2
+    &=& |W|^2 + 4/(n-2) |"Ric"|^2 - 2/(n(n-1)) "scal"^2
   $
 ]
 #tag("curvature-low-dimension") low dimension curvature
@@ -296,7 +296,7 @@ let $(∂ g_(i i'))/(∂ x^j ∂ x^j') = g_(i i', j j')$
 Curvature also appears in the Taylor expansion of metric geodesic coordinates
 #indent[
   $
-    g_(i i') &= η_(i i') + (∂_(j j') g_(i i')) v^j v^j' + o(v^2) 
+    g_(i i') &=& η_(i i') + (∂_(j j') g_(i i')) v^j v^j' + o(v^2) 
   $
   and satisfies
   $
@@ -322,7 +322,7 @@ $∇_X Y - ∇_Y X = [X,Y]$
   - curvature $[∇_i,∇_i']$
   - curvature metric-dual $λ g [∇_i,∇_i']$
   - Ricci-curvature $1/λ "Ric"$
-  - #link(<sectional_curvature>)[] $1/λ K$
+  - #raw("#link(<sectional_curvature>)[]") $1/λ K$
   - scalar-curvature $1/λ "scal"$
 
 When representing spacetime metric with signature $(3,1)$, it is obtained by multiplying the $(1,3)$ signature by $λ = -1$

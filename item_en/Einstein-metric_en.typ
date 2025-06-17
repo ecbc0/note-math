@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-cf. #link(<curvature-of-metric.typ>)[]
+cf. #raw("#link(<curvature-of-metric.typ>)[]")
 
 #show "Δ": it => text(it, fill: rgb("#0056e1"))
 
@@ -35,13 +35,13 @@ _Proof_
   ]
   So the variation of the volume form is
   $
-    Δ|g| &= Δ|det g|^(1/2) \
-    &= 1 / 2|det g|^(1/2) tr(g^(-1) Δ g)
+    Δ|g| &=& Δ|det g|^(1/2) \
+    &=& 1 / 2|det g|^(1/2) tr(g^(-1) Δ g)
   $
   Treating $"Ric"$ as a matrix, the adjoint $(g ⋅)^†$ can be written as
   $
-    "scal" &= (g ⋅)^† "Ric" \
-    &= tr(g^(-1) "Ric") 
+    "scal" &=& (g ⋅)^† "Ric" \
+    &=& tr(g^(-1) "Ric") 
   $
   *Prop* The differential of $A ⇝ A^(-1)$ is $- A^(-1) (∂ A) A^(-1)$. _Proof_ Using $0 = ∂ 𝟙 = ∂ (A A^(-1)) = ∂ A ⋅ A^(-1) + A ⋅ ∂(A^(-1))$
 
@@ -59,7 +59,7 @@ _Proof_
   $
     tr (g^(-1) Δ "Ric") = ∇^† ∇ tr (g^(-1) Δ g) + ∇_⊙^† ∇_⊙^† Δ g
   $
-  is a divergence (cf. #link(<Laplacian-of-tensor-field.typ>)[] for $∇^†,∇_(⊙),∇_(⊙)^†$)
+  is a divergence (cf. #raw("#link(<Laplacian-of-tensor-field.typ>)[]") for $∇^†,∇_(⊙),∇_(⊙)^†$)
 
   - $tr(g^(-1) Δ g) = g(Δ g, g)$
   - $tr(- g^(-1) (Δ g) g^(-1) "Ric") = g(Δ g, - "Ric")$
@@ -83,8 +83,8 @@ $ "Ric" - (1 / 2 ⋅ "scal" - Λ) ⋅ g = 0 $
 
 is equivalent to (by taking $(g ⋅)^†$)
 $
-  "Ric" &= (2 Λ) / (n-2) ⋅ g \
-  &= 1 / n ⋅ "scal" ⋅ g
+  "Ric" &=& (2 Λ) / (n-2) ⋅ g \
+  &=& 1 / n ⋅ "scal" ⋅ g
 $
 with $Λ = (1/2 - 1/n) "scal"$
 
@@ -92,8 +92,8 @@ i.e. $"Ric"$ is constant proportionally to $g$ and scalar-curvature is constant
 
 equivalently
 $
-  "tr-free-Ric" &= 0 \
-  "scal" &= (2Λ) / (n - 2)
+  "tr-free-Ric" &=& 0 \
+  "scal" &=& (2Λ) / (n - 2)
 $
 i.e. trace-free Ricci-curvature is zero, and scalar-curvature is constant
 
@@ -111,9 +111,9 @@ _Proof_
   
   Because Einstein action is diffeomorphism invariant, the result of the δ diffeomorphism $X$ variation is zero
 $
-  0 &= integral g(Δ g, T) #d Vol(g) \
-  &= integral g(∇_⊙ X, T) #d Vol(g) \
-  &= integral g(X, ∇_⊙^† T) #d Vol(g)
+  0 &=& integral g(Δ g, T) #d Vol(g) \
+  &=& integral g(∇_⊙ X, T) #d Vol(g) \
+  &=& integral g(X, ∇_⊙^† T) #d Vol(g)
 $
 forall $X$, therefore $∇_⊙^† T = 0$
 $
@@ -148,6 +148,7 @@ $
     g = f_t (r)^2 #d t^2 - (f_r (r)^2 #d r^2 + f_(𝕊^2) (r)^2 g_(𝕊^2))
   $
   Point particle gravity source i.e. outside the point particle Einstein equations with $Λ = 0$ give $f_r = (a f_t)^(-1), f_(𝕊^2) = r$
+
   
   Asymptotically flat i.e. approaches $ℝ^(1,3)$ metric $#d t^2 - (#d r^2 + r^2 g_(𝕊^2))$ when $r -> ∞$, gives $a = 1$, then Einstein equation gives $f_t (r)^2 = 1 - (2m)/r$
 ]
@@ -159,17 +160,17 @@ $
   $
   In time coordinates, for this metric, approximate from relativistic point particle action to non-relativistic 
   $
-    m c |vel(x)| &= m c^2 (
+    m c |vel(x)| &=& m c^2 (
       1 - (2 G M)/(c^2 r) - 1/c^2 ((1 - (2 G M)/(c^2 r))^(-1) v_r^2  + r^2 v_(𝕊^2)^2 )
     )^(1/2) \
 
-    &= m c^2 (
+    &=& m c^2 (
       1 - 1/2(
         (2 G M)/(c^2 r) + 1/c^2 (v_r^2 + r^2 v_(𝕊^2)^2)
       ) + o(1/c^2)
     ) \
 
-    &= m c^2 - (1/2 m v^2 - (- (G M m)/r)) + o(1)
+    &=& m c^2 - (1/2 m v^2 - (- (G M m)/r)) + o(1)
   $
   - $m c^2$ is rest energy, which will vary to $0$
   - $1/2 m v^2$ is the kinetic energy of a non-relativistic point particle
@@ -179,7 +180,7 @@ $
 *Question* If the gravitational source is $T = "constant"$ or $T_(00) = "constant"$, what is the metric?
 
 Some Einstein-metric examples
-- #link(<constant-sectional-curvature-imply-Einstein-metric>)[constant sectional curvature]
-- #link(<simple-symmetric-space>)[]
+- #raw("#link(<constant-sectional-curvature-imply-Einstein-metric>)[constant sectional curvature]")
+- #raw("#link(<simple-symmetric-space>)[]")
 
 Einstein ==> harmonics. Einstein-equation satisfy eq defined by Lagrangian $|R|^2 #d Vol$

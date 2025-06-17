@@ -68,7 +68,7 @@ Euclidean 型 metric-manifold
 #indent[
   推广到 Euclidean 型 metric-manifold
 
-  需要 #link(<metric-connection>)[]
+  需要 #raw("#link(<metric-connection>)[]")
 
   尽管没有使用 metric volume form, 由于作用量的动能部分的形式, 仍然联系到 metric 测地线 
 ]
@@ -88,25 +88,25 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= (L(t_1) - L(t_0)) ⋅ a \
+    &=&(L(t_1) - L(t_0)) ⋅ a \
 
-    &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
+    &=&integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $ 
   第一个等式可以来自微积分基本定理 + 复合函数微分
 
-  一般地, 改变区域 $I$ 通过 $exp(a(t))$ #link(<vector-field-as-δ-diffeomorphism>)[通过 δ diffeomorphism] $a(t)$ 给出
+  一般地, 改变区域 $I$ 通过 $exp(a(t))$ #raw("#link(<vector-field-as-δ-diffeomorphism>)[通过 δ diffeomorphism]") $a(t)$ 给出
   $
     (#d)/(#d s) limits(integral)_(exp(s a(t)) I) #d t (f(t)) 
     
     = integral_(I) #d t ((#d)/(#d t) f(t) ⋅ a(t))
   $
-  另一边, use #link(<integral-change-of-variable-formula>)[变量替换公式] 
+  另一边, use #raw("#link(<integral-change-of-variable-formula>)[变量替换公式]") 
   $ 
     integral_(t_0 + s a)^(t_1 + s a) #d t (L(t)) = integral_(t_0)^(t_1) #d t (L(t + s a)) 
   $
   将其应用到
   $ 
-    L(t) &= L(x(t),vel(x)(t))  
+    L(t) &=&L(x(t),vel(x)(t))  
   $
   然后使用微分积分的交换
   $ 
@@ -118,19 +118,19 @@ let $t ⇝ x(t)$ 是作用量方程的解
   是作用量对 (改变端点的) δ differentiation $(#d)/(#d s)(0) x(t + s a) = a vel(x)(t) = X(t)$ 在解 $x(t)$ 处的变分 #tag("calculation--action-point-particle-non-relativity")
   $
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
-    &= integral #d t ((∂ L)/(∂ x) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X)) \
-    &= integral #d t (((∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
-    &quad "by product-rule of" (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) \
-    &= integral #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
-    &quad "Lagrange-equation" (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
+    &=&integral #d t ((∂ L)/(∂ x) ⋅ X + (∂ L)/(∂ vel(x)) ⋅ vel(X)) \
+    &=&integral #d t (((∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x))) ⋅ X + (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
+    &quad& "by product-rule of" (#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X) \
+    &=&integral #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) \
+    &quad& "Lagrange-equation" (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ vel(x)) = 0
   $
-  recall #link(<calculation-1-action-point-particle-non-relativity>)[]
+  recall #raw("#link(<calculation-1-action-point-particle-non-relativity>)[]")
   $ 
     (#d)/(#d s) integral_(t_0 + s a)^(t_1 + s a) #d t (L(t))
 
-    &= L(t)|_(t_0)^(t_1) ⋅ a \
+    &=&L(t)|_(t_0)^(t_1) ⋅ a \
 
-    &= integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
+    &=&integral_(t_0)^(t_1) #d t ((#d)/(#d t) L(t) ⋅ a)
   $
   use $X = a vel(x)$, 将上一项与下一项合并
   $ 
@@ -151,8 +151,8 @@ let $t ⇝ x(t)$ 是作用量方程的解
   对于 $L = 1/2 m vel(x)(t)^2 - U(x(t))$ 能量是
   #tag("energy-point-particle-non-relativity") 
   $
-    E &= m vel(x)^2 - (1/2 m vel(x)^2 - U) \
-    &= 1/2 m vel(x)^2 + U 
+    E &=&m vel(x)^2 - (1/2 m vel(x)^2 - U) \
+    &=&1/2 m vel(x)^2 + U 
   $
   Homogeneity of Time ==> Conservation of Energy
 ]
@@ -164,13 +164,13 @@ let $t ⇝ x(t)$ 是作用量方程的解
 
   尽管空间平移 δ diffeomorphism 不在边界是零或者会改变路径端点, 时间端点没有变, 且空间平移不改变动能. with $x + s a$, $(#d)/(#d t)(x + s a) = vel(x)$
   $ 
-    &quad (#d)/(#d s)(s = 0) integral_(t_0)^(t_1) #d t (1/2 m ((#d)/(#d t)(x + s a))^2) \
+    &quad& (#d)/(#d s)(s = 0) integral_(t_0)^(t_1) #d t (1/2 m ((#d)/(#d t)(x + s a))^2) \
     
-    &= (#d)/(#d s) integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2) \
+    &=&(#d)/(#d s) integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2) \
     
-    &= 0
+    &=&0
   $
-  所以类似 #link(<calculation-2-action-point-particle-non-relativity>)[能量的情况], with δ diffeomorphism $(#d)/(#d s) (x + s a) = a = X(t)$
+  所以类似 #raw("#link(<calculation-2-action-point-particle-non-relativity>)[能量的情况]"), with δ diffeomorphism $(#d)/(#d s) (x + s a) = a = X(t)$
   $
     0 = integral_(t_0)^(t_1) #d t ((#d)/(#d t) ((∂ L)/(∂ vel(x)) ⋅ X)) = (∂ L)/(∂ vel(x)) |_(t_0)^(t_1) ⋅ a
   $
@@ -224,7 +224,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
   $
   Isotropy of Space ==> Rotational Invariance of $L$ ==> Conservation of Total Angular Momentum
 
-  $a ⋅ (b × c)$ = #link(<volume-of-parallelogram>)[平行体有向体积] span by $a,b,c$ in Euclidean $ℝ^3$
+  $a ⋅ (b × c)$ = #raw("#link(<volume-of-parallelogram>)[平行体有向体积]") span by $a,b,c$ in Euclidean $ℝ^3$
 
   旋转动量 $x × m vel(x)$ 是对时间的常值, 所以 $span(x × vel(x))^⟂$ 是常值 2d 平面. 由于 $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊂ span(x × vel(x))^⟂$, $x(t)$ 在常值二维平面 $span(x × vel(x))^⟂$
 
@@ -262,7 +262,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
 
 - 刚体
 #indent[
-  由 $SO(3)$ (or $SO(2)$) 参数化, 所以可以认为是 Euclidean 型流形 $SO(3)$ 上的非相对论粒子. 但 metric 的使用 or 动能的使用不是 $so(3)$ 的 #link(<Killing-form>)[], 因为 of $so(3)$, 因为对于不是均匀质量分布的球的物体, 在不同方向的旋转有不同的惯性. 转动惯量 moment of inertia i.e. metric $g$ 可能需要额外计算
-  
+  由 $SO(3)$ (or $SO(2)$) 参数化, 所以可以认为是 Euclidean 型流形 $SO(3)$ 上的非相对论粒子. 但 metric 的使用 or 动能的使用不是 $so(3)$ 的 #raw("#link(<Killing-form>)[]"), 因为 of $so(3)$, 因为对于不是均匀质量分布的球的物体, 在不同方向的旋转有不同的惯性. 转动惯量 moment of inertia i.e. metric $g$ 可能需要额外计算
+
   也可以将转动惯量作为 Killing-form 下的对称算子, 特征基成是惯量主轴, 特征值是惯量矩
 ]

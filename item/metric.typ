@@ -42,30 +42,30 @@ let 向量空间的基 $e_1 ,…, e_n in V$ 的对偶基 $e^1 ,…, e^n in (V ->
 
 let $α = α_i e^i$ then 
 $
-  α(e_j) &= α_i e^i (e_j) \
-  &= α_i δ^i_j \
-  &= α_j
+  α(e_j) &=&α_i e^i (e_j) \
+  &=&α_i δ^i_j \
+  &=&α_j
 $
 
 #tag("rasing-and-lowring-index") 升降指标
 #indent[
   quadratic-form-dual 在坐标中的矩阵表示
   $
-    g(v,) ⇝ v^⊺ g &= mat(v^1 , ⋯ , v^n) mat(
+    g(v,) ⇝ v^⊺ g &=&mat(v^1 , ⋯ , v^n) mat(
       g_(1 1), ⋯ , g_(1 n) ;
       ⋮ , ⋱ , ⋮ ;
       g_(n 1), ⋯ , g_(n n)
     ) \
-    &= mat(v^j g_(j 1) , ⋯ , v^j g_(j n)) := mat(v_1 , ⋯ , v_n)
+    &=&mat(v^j g_(j 1) , ⋯ , v^j g_(j n)) := mat(v_1 , ⋯ , v_n)
   $
   其中 $v^j g_(i j) = v_i$ 是降指标. 或者
   $
-    g(,v) ⇝ g v &= mat(
+    g(,v) ⇝ g v &=&mat(
       g_(1 1), ⋯ , g_(1 n) ;
       ⋮ , ⋱ , ⋮ ;
       g_(n 1), ⋯ , g_(n n)
     ) vec(v^1 , ⋮ , v^n) \
-    &= vec(v^j g_(1 j), ⋮ , v^j g_(n j)) := vec(v_(1), ⋮ , v_(n))
+    &=&vec(v^j g_(1 j), ⋮ , v^j g_(n j)) := vec(v_(1), ⋮ , v_(n))
   $
   注意 metric 矩阵是对称 $g^⊺ = g$ or $g_(i j) = g_(j i)$
 
@@ -74,10 +74,10 @@ $
   对于 metric 矩阵的逆, 定义 dual 空间 $V^⊺$ 的 metric $g^(-1)$, 满足 
   $
     g^(-1)(v^♭,w^♭) 
-    &= (g v)^⊺ g^(-1) (g w) \
-    &= v^⊺ (g g^(-1) g) w \
-    &= v^⊺ g w \
-    &= g(v,w) 
+    &=&(g v)^⊺ g^(-1) (g w) \
+    &=&v^⊺ (g g^(-1) g) w \
+    &=&v^⊺ g w \
+    &=&g(v,w) 
   $
   在坐标中
   - $g^(i i') α_i β_i'$
@@ -86,9 +86,9 @@ $
   - $α^i β_i$
   $g^(-1)$ 的 metric dual 就是 $g$ metric dual $♭$ 的逆 $♯$
   $
-    v &⇝ g v \
-    &⇝ g^(-1) g v \
-    &= v
+    v &⇝&g v \
+    &⇝&g^(-1) g v \
+    &=&v
   $
   因此也有升指标 $g^(-1)(v^♭,e_j) = v_j g^(i j) = v^i$
 
@@ -108,8 +108,8 @@ $
 由张量的性质
 $
   v_1 ⊗ ⋯ ⊗ v_k 
-  &= (v_1^(i_1) e_(1,i_1)) ⊗ ⋯ ⊗ (v_k^(i_k) e_(k,i_k)) \
-  &= (v_1^(i_1) ⋯ v_k^(i_k)) e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)
+  &=&(v_1^(i_1) e_(1,i_1)) ⊗ ⋯ ⊗ (v_k^(i_k) e_(k,i_k)) \
+  &=&(v_1^(i_1) ⋯ v_k^(i_k)) e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)
 $
 
 #tag("tensor-induced-quadratic-form") 

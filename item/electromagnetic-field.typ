@@ -3,13 +3,13 @@
 
 可能以后会迁移到 principal-bundle-connection?
 
-cf. #link(<motivation-of-gauge-field>)[]
+cf. #raw("#link(<motivation-of-gauge-field>)[]")
 
 有很多可能的联络
   
 有无法 local flat 的联络, 对任意的局部, 都无法通过改变规范消去联络场
 
-类似于 #link(<flat-metric-iff-curvature-0>)[]
+类似于 #raw("#link(<flat-metric-iff-curvature-0>)[]")
 
 存在局部丛坐标 or 相位, 其中联络是零 $A = 0$ <==> 曲率是零 $F_(i i') = [#D _i,#D _i'] = 0$ where $#D = #d + A$, 在坐标中 $F_(i i') = ∂_i A_i' - ∂_i' A_i + [A_i, A_i']$
 
@@ -43,8 +43,8 @@ cf. #link(<motivation-of-gauge-field>)[]
 
   在坐标中 
   $
-    && sum_i ∂_i (∂_i A_j - ∂_j A_i) &= 0 \
-    "or"&& sum_i ∂_i F_(i j) &= 0
+    && sum_i ∂_i (∂_i A_j - ∂_j A_i) &=& 0 \
+    "or"&& sum_i ∂_i F_(i j) &=& 0
   $
   在时空分解坐标 
   $
@@ -52,18 +52,18 @@ cf. #link(<motivation-of-gauge-field>)[]
   $
   当然这种分解方式不是 $SO(1,3)$ invariant 的
 
-  #let A = c-bf("A","#0056e1")
+  #let A = c-bf("A")
 
   *Question* 如何让 $sum_i ∂_i (∂_i A_j - ∂_j A_i) = 0$ 显然地蕴含电磁场 $E,B$ 的方程的 $div, curl$ 形式? #tag("Maxwell-equation")
   $
-    div B &= 0 &quad ∂_t B + curl E &= 0 \
+    div B &=& 0 &quad& ∂_t B + curl E &=& 0 \
 
-    div E &= ρ &quad - ∂_t E + curl B &= j 
+    div E &=& ρ &quad& - ∂_t E + curl B &=& j 
   $
   也有
   $
-    E &= - (∂_t #A + grad ϕ) \
-    B &= curl #A
+    E &=& - (∂_t #A + grad ϕ) \
+    B &=& curl #A
   $
   其中 $ϕ = A."time", #A = A."space"$
 

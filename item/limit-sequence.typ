@@ -15,15 +15,15 @@ $ lim_(n -> ∞) a_n = a := forall ε > 0, exists N ∈ ℕ, forall n ∈ ℕ, |
 
 _Proof_
 #indent[
-  $x < y$ #link(<order-real>)[等价于]
+  $x < y$ #raw("#link(<order-real>)[等价于]")
 
   $ℚ_(< x) ⊊ ℚ_(< y) \ 
   ℚ_(> x) ⊋ ℚ_(> y)$
 
   精确到最多差一点之下, 有
   
-  $ℚ &≈ ℚ_(< x) ⊔ ℚ_(> x) \
-  &≈ ℚ_(< y) ⊔ ℚ_(> y)$
+  $ℚ &≈& ℚ_(< x) ⊔ ℚ_(> x) \
+  &≈& ℚ_(< y) ⊔ ℚ_(> y)$
 
   so $ℚ_(> x) ∩ ℚ_(< y) != ∅$
 ]
@@ -104,7 +104,7 @@ _Proof_
 
   用微分方法计算最值. 考虑函数
 
-  $ (a_1)^n + ⋯ + (a_n)^n - n a_1 ⋯ a_n $
+  $ (a_1) + ⋯ + (a_n)^n - n a_1 ⋯ a_n $
 
   一阶微分
 
@@ -116,8 +116,8 @@ _Proof_
   $
   二阶微分
   $
-    ∂_i ∂_i &= n (n-1) a_i^(n-2) \
-    ∂_i ∂_j &= - n a_1 ⋯ a_n without a_i a_j
+    ∂_i ∂_i &=&n (n-1) a_i^(n-2) \
+    ∂_i ∂_j &=&- n a_1 ⋯ a_n without a_i a_j
   $
   判断二次型 $∂_i ∂_j$ 的正定性
 
@@ -143,9 +143,9 @@ _Proof_
       ⋮, ⋮, ⋱, ⋮;
       -1, -1, ⋯, n-1
     ) vec(b_1 , ⋮ , b_n) 
-    &=(n-1) (b_1^2 + ⋯ + b_n^2) - 2 sum_(i < j) b_i b_j \
-    &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
-    &= sum_(i < j) (b_i - b_j)^2 
+    &=&(n-1) (b_1^2 + ⋯ + b_n^2) - 2 sum_(i < j) b_i b_j \
+    &=&sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
+    &=&sum_(i < j) (b_i - b_j)^2 
   $
   所以 $a_1 = ⋯ = a_n$ 处一阶微分零 and 二阶微分正定, 函数在附近不会变小, 所以那里是最小值, 且是 $0$
 ]
@@ -196,8 +196,8 @@ _Proof_
   $
   对每个 $k ∈ ℕ$
   $
-    lim_(n -> ∞) (1 + 1/n)^n &>= 1/0! + 1/1! + ⋯ + 1/k! \
-    lim_(n -> ∞) (1 + 1/n)^n &>= lim_(k -> ∞) 1/0! + 1/1! + ⋯ + 1/k!
+    lim_(n -> ∞) (1 + 1/n)^n &>=&1/0! + 1/1! + ⋯ + 1/k! \
+    lim_(n -> ∞) (1 + 1/n)^n &>=&lim_(k -> ∞) 1/0! + 1/1! + ⋯ + 1/k!
   $
   also
   $
@@ -246,7 +246,7 @@ _Proof_ of $e = lim_(n -> ∞) n/((n!)^(1/n))$
 
 #tag("harmonic-series-diverge") 调和级数发散 $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n = +∞$
 
-_Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ 发散 by 它不是 #link(<Cauchy-completeness-real>)[limit-distance-vanish]. e.g.
+_Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ 发散 by 它不是 #raw("#link(<Cauchy-completeness-real>)[limit-distance-vanish]"). e.g.
 
   $ forall n ∈ ℕ, a_(2n) - a_n = 1/(n+1) + ⋯ + 1/(2n) >= n ⋅ 1/(2n) = 1/2 $
 
@@ -274,8 +274,8 @@ _Proof_
   $
   $a_n$ 单调减 
   $
-    a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
-    &< 1/(n+1) - 1/(n+1) \
-    &= 0
+    a_(n+1) - a_n &=&1/(n+1) - log((n+1)/n) \
+    &<&1/(n+1) - 1/(n+1) \
+    &=&0
   $ 
 ]

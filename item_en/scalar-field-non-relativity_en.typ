@@ -5,7 +5,7 @@ Approximation of Relativistic Scalar Field Action to Non-Relativistic Scalar Fie
 
 Using a massive field, extracting the rest energy phase $exp(- m c^2 1/ℏ t #i)$, using time $x_0 = c t$ and the speed of light limit $lim_(c -> ∞)$ 
 
-for #link(<Klein--Gordon-Lagrangian>)[], restore Planck constant $h$, speed of light $c$, time $x_0 = c t$
+for #raw("#link(<Klein--Gordon-Lagrangian>)[]"), restore Planck constant $h$, speed of light $c$, time $x_0 = c t$
 $
   integral_(ℝ) #d c t integral_(ℝ^3) #d x 1/2 ( 
     1/c^2 (∂_t ϕ^* ∂_t ϕ) 
@@ -19,9 +19,9 @@ let $θ = m c^2 1/ℏ #i$
 
 use $∂_t ϕ = θ e^(θ t) ψ + e^(θ t) ∂_t ψ$
 $
-  ∂_t ϕ^* ∂_t ϕ &= - (m^2 c^4)/(ℏ^2) ψ^* ψ & "use" #i^2 = -1  \
-  &quad + (m c^2)/(ℏ) #i (ψ^* ∂_t ψ - ψ ∂_t ψ^*) \
-  &quad + ∂_t ψ^* ∂_t ψ
+  ∂_t ϕ^* ∂_t ϕ &=& - (m^2 c^4)/(ℏ^2) ψ^* ψ & "use" #i^2 = -1  \
+  &quad& + (m c^2)/(ℏ) #i (ψ^* ∂_t ψ - ψ ∂_t ψ^*) \
+  &quad& + ∂_t ψ^* ∂_t ψ
 $
 the term $- (m^2 c^4)/(ℏ^2) ψ^* ψ$ multiplied by $1/c^2$ will cancel out the mass term $(m^2 c^2)/(ℏ^2) ϕ^* ϕ$
 
@@ -98,14 +98,14 @@ $
 Time
 $
   (∂ L)/(∂ (∂_t ϕ)) ⋅ ∂_(ν) ψ 
-  &= 1/2 ℏ #i (ψ^* ∂_(ν) ψ - ψ ∂_(ν) ψ^*) \
-  &= ℏ #i Im(ψ^* ∂_(ν) ψ) \
+  &=& 1/2 ℏ #i (ψ^* ∂_(ν) ψ - ψ ∂_(ν) ψ^*) \
+  &=& ℏ #i Im(ψ^* ∂_(ν) ψ) \
 $
 Space
 $
   (∂ L)/(∂ (∂_x ϕ)) ⋅ ∂_(ν) ψ 
-  &= - (ℏ^2)/(2m) (∂_(ν) ψ^*  ∂_x ψ + ∂_x ψ^* ∂_(ν) ψ) \
-  &= - (ℏ^2)/(2m) Re(∂_x ψ^* ∂_(ν) ψ)
+  &=& - (ℏ^2)/(2m) (∂_(ν) ψ^*  ∂_x ψ + ∂_x ψ^* ∂_(ν) ψ) \
+  &=& - (ℏ^2)/(2m) Re(∂_x ψ^* ∂_(ν) ψ)
 $
 Energy
 $
@@ -141,8 +141,8 @@ Assume $j$ is an integrable quantity in $ℝ^3$
 time-invariant $∂_0 integral_(ℝ^3) #d x ( j^0 ) = 0$ by $∂^† T = 0$ #tag("conserved-spatial-integral-charge-Schrodinger")
 $ 
   integral_(ℝ^3) #d x ( j^0 ) 
-  &= integral_(ℝ^3) #d x (ψ^* ψ) \
-  &= integral_(ℝ^3) #d x |ψ|^2 
+  &=& integral_(ℝ^3) #d x (ψ^* ψ) \
+  &=& integral_(ℝ^3) #d x |ψ|^2 
 $
 The time component of the Schrodinger field current is positive and its spatial integral is time invariant
 
