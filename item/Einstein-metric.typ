@@ -147,7 +147,7 @@ $
   $
     g = f_t (r)^2 #d t^2 - (f_r (r)^2 #d r^2 + f_(𝕊^2) (r)^2 g_(𝕊^2))
   $
-  Einstein 方程 with $Λ = 0$ 给出 $f_r = (a f_t)^(-1), f_(𝕊^2) = r$
+  点粒子引力源 i.e. 点粒子之外 Einstein 方程 with $Λ = 0$ 给出 $f_r = (a f_t)^(-1), f_(𝕊^2) = r$
   
   渐进平坦 i.e. 逼近 $ℝ^(1,3)$ metric $#d t^2 - (#d r^2 + r^2 g_(𝕊^2))$ when $r -> ∞$, 给出 $a = 1$, 然后 Einstein 方程给出 $f_t (r)^2 = 1 - (2m)/r$
 ]
@@ -176,6 +176,8 @@ $
   - $- (G M m)/r$ 是非相对论引力势能
   - $o(1)$ 在极限 $lim_(c -> ∞)$ 时消失
 ]
+*Question* 如果引力源是 $T = "constant"$ 或者 $T_(00) = "constant"$, 则 metric 是什么?
+
 一些 Einstein-metric 例子
 - #link(<constant-sectional-curvature-imply-Einstein-metric>)[常值截面曲率]
 - #link(<simple-symmetric-space>)[]

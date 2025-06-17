@@ -147,7 +147,7 @@ $
   $
     g = f_t (r)^2 #d t^2 - (f_r (r)^2 #d r^2 + f_(𝕊^2) (r)^2 g_(𝕊^2))
   $
-  Einstein equation with $Λ = 0$ gives $f_r = (a f_t)^(-1), f_(𝕊^2) = r$
+  Point particle gravity source i.e. outside the point particle Einstein equations with $Λ = 0$ give $f_r = (a f_t)^(-1), f_(𝕊^2) = r$
   
   Asymptotically flat i.e. approaches $ℝ^(1,3)$ metric $#d t^2 - (#d r^2 + r^2 g_(𝕊^2))$ when $r -> ∞$, gives $a = 1$, then Einstein equation gives $f_t (r)^2 = 1 - (2m)/r$
 ]
@@ -176,6 +176,8 @@ $
   - $- (G M m)/r$ is the non-relativistic gravitational potential energy
   - $o(1)$ disappears in the limit $lim_(c -> ∞)$
 ]
+*Question* If the gravitational source is $T = "constant"$ or $T_(00) = "constant"$, what is the metric?
+
 Some Einstein-metric examples
 - #link(<constant-sectional-curvature-imply-Einstein-metric>)[constant sectional curvature]
 - #link(<simple-symmetric-space>)[]

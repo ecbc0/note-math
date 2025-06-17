@@ -108,7 +108,7 @@
 
     - 在测地线坐标中证明曲率的对称性, 并进行一些简化计算
 
-    - 使用曲率积 $g #cvt-prod$ 及其共轭 $(g #cvt-prod)^†$, 处理代数曲率, 曲率的正交子张量空间分解, 并定义 (trace-free) Ric 曲率和纯量曲率和共形曲率
+    - 使用曲率积 $g #cvt-prod$ 及其共轭 $(g #cvt-prod)^†$, 处理代数曲率, 曲率的正交子张量空间分解, 并定义 (trace-free) Ricci 曲率和纯量曲率和共形曲率
   ]
   - Einstein-metric
   #indent[

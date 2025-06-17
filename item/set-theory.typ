@@ -36,7 +36,7 @@ parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to �
 
 而且证明辅助还会有其它作用, 类似于, IDE/LSP/友好且互动的编译器错误信息/documentation 时代之前的编程是痛苦的, 数据和信息的组织和结构化和复用做得不好, 也没利用好计算机的强大记忆容量和时间
 
-#tag("proposition") proposition 是特殊的 (string, bool) product struct (字符串, 真假值的逻辑乘积结构) 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula (公式)
+#tag("proposition") proposition 是特殊的 (string, bool) product struct ((字符串, 真假值) 的逻辑乘积结构) 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula (公式)
 
 因为我们无法直接判断一个猜测的真假, 所以我们需要一种具有未定义真假值的语言
 
@@ -54,7 +54,7 @@ from 命题 to 未知命题的, 其真值部分被修改为 (bool, unknow) sum s
 #indent[
   - in (属于)
   #indent[
-    let symbol $a,A$ be type of math object, then $a in A$ is a formula
+    let symbol (符号) $a,A$ be type of math object, then $a in A$ is a formula
     
     $a in A$ 类似于 `value : type` or `variable_name : type` in programming language
     
@@ -76,22 +76,22 @@ from 命题 to 未知命题的, 其真值部分被修改为 (bool, unknow) sum s
   ]
   - forall, exists (所有, 存在) 
   #indent[
-    设 $p(a)$ 是用 $a$ 构造的公式 i.e. read $a ∈ A$ in memory, used by some specific function call, then
+    设 $p(a)$ 是用 $a$ 构造的公式 i.e. 在内存中读取 $a ∈ A$, 使用特殊的函数调用, 则
     $
       And_(a ∈ A) p(a) " or " forall a ∈ A, p(a) \
       Or_(a ∈ A) p(a) " or " exists a ∈ A, p(a)
     $
     is formula
   ]
-  - inference (推导) $p => q$, equivalent $p <=> q$ is formula
+  - inference (推导) $p => q$, equivalent (等价) $p <=> q$ is formula
 ]
-以下讨论 math-object-construct-rule (数学对象构造规则) *alias* set-theory
+以下讨论 math-object-construct-rule (数学对象构造规则) *alias* set-theory (集合论)
 
 #tag("natural-number") $ℕ$ 
 #indent[
   natrual number (自然数) $0,1,2,...$ and natrual number set (自然数集) $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
 
-  但是计算机无法处理无限. 为了让计算机能用有限的字符和内存去表示自然数集, 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol (符号), 定义以下为 true proposition
+  但是计算机无法处理无限. 为了让计算机能用有限的字符和内存去表示自然数集, 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol, 定义以下为 true proposition
   - $0 ∈ ℕ$
   - $n ∈ ℕ ==> n + 1 ∈ ℕ$
   等价于用指令流告诉计算机如何连续地 $+1$? 也联系到归纳法

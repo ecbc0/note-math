@@ -127,7 +127,7 @@ ODE
 
 $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
-#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], the estimation of the radius of convergence uses a special upper bound control method, similar to what is done in #link(<analytic-inverse>)[]
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], the estimation of the radius of convergence uses a special upper bound control method, similar to what is done in #link(<inverse-analytic>)[]
 
 $F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
 

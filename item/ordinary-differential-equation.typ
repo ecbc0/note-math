@@ -127,7 +127,7 @@ ODE
 
 $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
-#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<analytic-inverse>)[] 中所作的
+#link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 收敛半径估计使用了特殊上界控制方法, 类似 #link(<inverse-analytic>)[] 中所作的
 
 $F(x,γ) = (c x)/(x-γ)$, $(#d)/(#d t) γ = F(x,γ)$ ==> $γ(t,x) = x - (x^2 - 2 c t x)^(1/2)$
 

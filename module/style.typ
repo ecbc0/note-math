@@ -38,7 +38,7 @@
   show heading: set text(fill: rgb("#b30042"))
 
   show math.equation: set text(
-    font: "Stix Two Math",
+    font: "noto sans math",
     fill: rgb("#2b8900"),
     size: 15pt,
   )

@@ -108,7 +108,7 @@
 
     - Prove the symmetry of curvature in geodesic coordinates and simplify some of calculations.
 
-    - Use the curvature product $g #cvt-prod$ and its conjugate $(g #cvt-prod)^†$ to handle algebraic curvature, the orthogonal subspace decomposition of curvature, and define (trace-free) Ric curvature, scalar curvature, and conformal curvature.
+    - Use the curvature product $g #cvt-prod$ and its conjugate $(g #cvt-prod)^†$ to handle algebraic curvature, the orthogonal subspace decomposition of curvature, and define (trace-free) Ricci curvature, scalar curvature, and conformal curvature.
   ]
   - Einstein-metric
   #indent[

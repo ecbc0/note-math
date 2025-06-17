@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Source Code Pro', 'Noto Sans SC', 'Stix Two Math', Monospace",
+    "editor.fontFamily": "'Source Code Pro', 'Noto Sans SC', 'noto sans math', Monospace",
     "editor.fontSize": 14.5,
     "[typst]": {
         "editor.codeLens": false

@@ -8,6 +8,8 @@
 
 如果你熟悉数学, 可以看 [feature](https://ecbc0.github.io/item/feature.html)
 
+对于 note, 感觉 git 最多只合适用来看更新记录, git fork 的意义不大, 因为合并或变基时处理可能频繁出现的大量冲突太麻烦了
+
 ---
 
 English ver. are machine translation without check from gemini-flash and [LinguaGacha](https://github.com/neavo/LinguaGacha)
@@ -21,3 +23,5 @@ Topics are classified in `topic` folders, which point to files in `item` (vscode
 Instead of downloading the file, you can directly view the [HTML version](https://ecbc0.github.io/)
 
 If you are familiar with math, you can see [feature](https://ecbc0.github.io/item-en/feature-en.html)
+
+for note, I feel that git is only suitable for viewing update records. Git fork is not very meaningful because it is too troublesome to deal with the large number of conflicts that may frequently occur when merging or rebasing.
