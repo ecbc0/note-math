@@ -206,7 +206,7 @@ for $#spacetime-momentum-spinor$
   $
     0 &=& det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(1,0),vec(1,0))) \
 
-    0 &=& det^(⊙ * 2)(⨀^(* 2)(vec(0,1),vec(0,1)),⨀^(* 2)(vec(0,1),vec(0,1))) 
+    0 &=& det^(⊙ * 2)(⨀^(* 2)(vec(0,1),vec(0,1)),⨀^(* 2)(vec(0,1),vec(0,1))) \
   
    1/4 &=& det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(0,1),vec(0,1))) $
 
@@ -323,15 +323,15 @@ $
 
   let $P ∈ ⨀^(* 2) ℂ^2$. $P^* = P^⊺$
     
-  $ P^⬨ := #j ⋅ P^* ⋅ #j^(-1) " with " #j = mat(,-1;1) $ 
+  $ P^◊ := #j ⋅ P^* ⋅ #j^(-1) " with " #j = mat(,-1;1) $ 
 
   parity 对应到 space inversion
   
-  $#spacetime-momentum-spinor ^⬨
+  $#spacetime-momentum-spinor ^◊
   = mat(p_0 - p_1 , -(p_2 + p_3 #i) ; -(p_2 - p_3 #i) , p_0 + p_1) 
   <--> vec(p_0,-p_2,-p_3,-p_1)$
 
-  $- P^⬨$ 对应到 time inversion
+  $- P^◊$ 对应到 time inversion
 ]
 parity 对应到 trace or determinant reversal
 
@@ -339,15 +339,15 @@ parity 对应到 trace or determinant reversal
 #indent[  
   let $P = mat(a,b;c,d) ∈ "Matrix"(2,ℂ)$
 
-  determinant reversal $P^⬨ := mat(d,-b;-c,a)$ with
+  determinant reversal $P^◊ := mat(d,-b;-c,a)$ with
   
-  $P P^⬨ = P^⬨ P = det(P) ⋅ 𝟙$
+  $P P^◊ = P^◊ P = det(P) ⋅ 𝟙$
 
-  $det P^⬨ = det P$
+  $det P^◊ = det P$
 
-  $P ∈ GL ==> P^⬨ = (det P) P^(-1)$
+  $P ∈ GL ==> P^◊ = (det P) P^(-1)$
 ]
-#tag("trace-reversal") := $P + P^⬨ = tr(P) ⋅ 𝟙$. or $P^⬨ = mat(d,-b;-c,a)$. $tr P^⬨ = tr P$
+#tag("trace-reversal") := $P + P^◊ = tr(P) ⋅ 𝟙$. or $P^◊ = mat(d,-b;-c,a)$. $tr P^◊ = tr P$
 
 $dim = 2$ ==> determinant reversal 相同于 trace reversal
 
@@ -356,73 +356,73 @@ $dim = 2$ ==> determinant reversal 相同于 trace reversal
   let $#p ∈ ⨀^(* 2) ℂ^2 ≃ ℝ^(1,3)$. $det(#p) = g(p,p) = |p|^2$
   $
     |p|^2 𝟙 &=& det(#p) 𝟙 \
-    &=& #p^⬨ #p \
-    &=& #p #p^⬨
+    &=& #p^◊ #p \
+    &=& #p #p^◊
   $ 
   $2 g(p,p') = |p+p'|^2 - (|p|^2 + |p'|^2)$ give
   $
-    g(p,p') 𝟙 &=& 1/2 (#p^⬨ #p' + #p'^⬨ #p) \
-    &=& 1/2 (#p #p'^⬨ + #p' #p^⬨)
+    g(p,p') 𝟙 &=& 1/2 (#p^◊ #p' + #p'^◊ #p) \
+    &=& 1/2 (#p #p'^◊ + #p' #p^◊)
   $
-  也有 $g(p,p') = 1/2 Re(tr(#p^⬨ #p')) = 1/2 Re(tr(#p #p'^⬨))$
+  也有 $g(p,p') = 1/2 Re(tr(#p^◊ #p')) = 1/2 Re(tr(#p #p'^◊))$
 
   for #raw("#link(<Pauli-matrix>)[]")
 
-  - $σ_μ^⬨ σ_ν + σ_ν^⬨ σ_μ = 2 g_(μ ν) 𝟙$ or ${σ_(μ),σ_(ν)}_(⬨) = 2 g_(μ ν) 𝟙$
+  - $σ_μ^◊ σ_ν + σ_ν^◊ σ_μ = 2 g_(μ ν) 𝟙$ or ${σ_(μ),σ_(ν)}_(◊) = 2 g_(μ ν) 𝟙$
 
-  - $σ_0^⬨ = σ_0$, $σ_i^⬨ = - σ_i$ for $i = 1,2,3$ (因为 parity 是 spatial inversion)
+  - $σ_0^◊ = σ_0$, $σ_i^◊ = - σ_i$ for $i = 1,2,3$ (因为 parity 是 spatial inversion)
 
   这种 "平方根" 的更好的解释? 
 
   没有 parity 时的直接的矩阵乘法将会给出 $ℝ^4$ metric 的平方根, with $σ_μ^2 = 𝟙$, $σ_μ^(-1) = σ_μ$
 ]
-这使得时空动量自旋表示有可能联系到经典 fermion 的概念. 旋量属于光锥射影 $ℂℙ^1$. 如果 $#p$ 在光锥上, 那么其平方 $1/2(#p^⬨ #p + #p #p^⬨) = g(#p,#p) 𝟙 = 0$. 看起来能联系到 Pauli 不相容的要求. 但注意, 一般地 $g(#p,#p') != 0$ 除非 $#p,#p'$ 共线 (#raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")). 所以这种乘法的结果, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, 将不会在光锥上 
+这使得时空动量自旋表示有可能联系到经典 fermion 的概念. 旋量属于光锥射影 $ℂℙ^1$. 如果 $#p$ 在光锥上, 那么其平方 $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. 看起来能联系到 Pauli 不相容的要求. 但注意, 一般地 $g(#p,#p') != 0$ 除非 $#p,#p'$ 共线 (#raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")). 所以这种乘法的结果, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, 将不会在光锥上 
 
 #tag("square-root-of-Lorentz-Lie-algebra") spacetime Lie-algebra 的 "平方根"
 #indent[
-  $ [1/2 σ_(μ), 1/2 σ_(ν)]_(⬨) := 1/4(σ_(μ)^⬨ σ_(ν) - σ_(ν)^⬨ σ_(μ)) ≃ L_(μ ν) $ 
+  $ [1/2 σ_(μ), 1/2 σ_(ν)]_(◊) := 1/4(σ_(μ)^◊ σ_(ν) - σ_(ν)^◊ σ_(μ)) ≃ L_(μ ν) $ 
 
   where $L_(μ ν)$ is #raw("#link(<rotation-boost-spinor-representation>)[Lorentz-Lie-algebra]")
 
   _Proof_
   
-  - $[1/2 σ_(i), 1/2 σ_(i')]_(⬨) = 1/2 #i σ_i'' ≃ L_(i i')$ is δ rotation in $p_i''$ where $i,i',i''$ is any cyclic $123$ 
+  - $[1/2 σ_(i), 1/2 σ_(i')]_(◊) = 1/2 #i σ_i'' ≃ L_(i i')$ is δ rotation in $p_i''$ where $i,i',i''$ is any cyclic $123$ 
   
-  - $[1/2 σ_(0), 1/2 σ_(i)]_(⬨) = 1/2 σ_i ≃ L_(0i)$ where $i = 1,2,3$
+  - $[1/2 σ_(0), 1/2 σ_(i)]_(◊) = 1/2 σ_i ≃ L_(0i)$ where $i = 1,2,3$
 
   *Question* 更好的解释? 表示?
 ]
 #tag("property-of-parity") 
 
-  - $forall a,b ∈ ℂ, (a A + b B)^⬨ = a A^⬨ + b B^⬨$
+  - $forall a,b ∈ ℂ, (a A + b B)^◊ = a A^◊ + b B^◊$
 
-  - $(A B)^⬨ = B^⬨ A^⬨$
+  - $(A B)^◊ = B^◊ A^◊$
 
-  - $𝟙^⬨ = 𝟙$
+  - $𝟙^◊ = 𝟙$
 
-  - $(A^†)^⬨ = (A^⬨)^†$
+  - $(A^†)^◊ = (A^◊)^†$
   
-  - $⬨ : ⨀^(* 2) ℂ^2 -> "self"$  i.e. parity 保持 Hermitian
+  - $◊ : ⨀^(* 2) ℂ^2 -> "self"$  i.e. parity 保持 Hermitian
 
-  - $A ∈ GL(2,ℂ) ==> A^⬨ = det(A) ⋅ A^(-1)$
+  - $A ∈ GL(2,ℂ) ==> A^◊ = det(A) ⋅ A^(-1)$
   
-  - $A ∈ SL(2,ℂ) ==> A^⬨ = A^(-1), A A^⬨ = 𝟙, (A^⬨)^⬨ = A$
+  - $A ∈ SL(2,ℂ) ==> A^◊ = A^(-1), A A^◊ = 𝟙, (A^◊)^◊ = A$
 
 #tag("parity-Euclidean-invariant") parity 和 spatial action $SU(2)$ 交换. 在 $ℝ^3$ 中表现为 $- 𝟙$ 和 $SO(3)$ 交换. let $p ∈ ℝ^3, A ∈ SU(2)$
 
-  $A ∈ SU(2) ==> A^† = A^(-1) = A^⬨ ==> (A^(⊙ * 2)(#p))^⬨ = A^(⊙ * 2)(#p^⬨)$
+  $A ∈ SU(2) ==> A^† = A^(-1) = A^◊ ==> (A^(⊙ * 2)(#p))^◊ = A^(⊙ * 2)(#p^◊)$
 
 一般情况下不交换, 例如 $𝟙_(ℝ^3)$ 当然不交换于 $SO(1,3)$ 中的时间改变部分
 #indent[
   let $#p = σ_0 = mat(1;,1) = 𝟙, A = mat(e^(φ/2);,e^(-φ/2)), A^† = A$
 
-  $#p^⬨ = #p$
+  $#p^◊ = #p$
 
   $A #p A^† = mat(e^(φ);,e^(-φ))$ or $cases(p_0 = cosh φ, p_1 = sinh φ, p_2 = p_3 = 0)$
 
-  $(A #p A^†)^⬨ = mat(e^(-φ);,e^(φ))$ or $cases(p_0 = cosh φ = cosh(-φ), p_1 = -sinh φ = sinh (-φ))$ 
+  $(A #p A^†)^◊ = mat(e^(-φ);,e^(φ))$ or $cases(p_0 = cosh φ = cosh(-φ), p_1 = -sinh φ = sinh (-φ))$ 
 
-  $(A #p A^†)^⬨ != A #p A^† = A #p^⬨ A^†$
+  $(A #p A^†)^◊ != A #p A^† = A #p^◊ A^†$
 ]
 #tag("parity-reverse-boost") parity 对 Lie-algebra 的影响是, 不改变 δ 旋转, 对 δ boost 乘 $-1$
 
