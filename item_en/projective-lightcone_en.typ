@@ -158,7 +158,7 @@ _Proof_
     Use #link(<spacetime-momentum-spinor-representation>)[] to directly calculate $A #spin($p$) A^† in ℝ^(1,3)$  
     $ 
       Λ^ μ _ ν = 1/2 tr (σ_ μ A σ_ ν A^†) = 1/2 tr (A σ_ ν A^† σ_  μ) = \
-      mat(
+      mat( delim: #none ,
         |a|^2 + |b|^2 + |c|^2 + |d|^2, 2 Re(a b^* + c d^*), 2 Im(a b^* + c d^*), |a|^2 - |b|^2 + |c^2| - |d|^2;
 
         2 Re(a c^* + b d^*), 2 Re(a d^* + b c^*), 2 Im(a d^* + b c^*), 2 Re(a c^* - b d^*);

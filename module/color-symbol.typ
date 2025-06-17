@@ -56,7 +56,7 @@
   show "∅": it => text(it, fill: rgb("#cf9f00"))
 
   show regex(":|≕|≔"): it => text(it, fill: rgb("#cf9f00"))
-  show ",": it => text(it, fill: rgb("#006dea"))
+  show ",": it => text(it, fill: rgb("#2f00ff"))
 
   show "≈": it => text(it, fill: rgb("#2f00ff"))
 
@@ -116,13 +116,13 @@
 
   // function
 
-  show regex("∗|′|″|⊺|†|‡|∁|⬨|⟂|⊤|⋆|♭|♯"): it => text(it, fill: rgb("#006dea"))
+  show regex("∗|′|″|⊺|†|‡|∁|◊|⟂|⊤|⋆|♭|♯"): it => text(it, fill: rgb("#006dea"))
 
   /*
     ⊺ : transpose
     † : adjoint
     ∁ : complement
-    ⬨ : parity
+    ◊ : parity
     ⟂ : perpendicular, orthogonal_complement
   */
 

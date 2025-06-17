@@ -322,7 +322,7 @@
 			"lozenge",
 			"parity"
 		],
-		"body": "⬨" // lozenge.stroked.medium
+		"body": "◊" //  // "⬨" lozenge.stroked.medium
 	},
 	"⟂": {
 		"prefix": [

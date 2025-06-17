@@ -206,7 +206,7 @@ for $#spacetime-momentum-spinor$
   $
     0 &= det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(1,0),vec(1,0))) \
 
-    0 &= det^(⊙ * 2)(⨀^(* 2)(vec(0,1),vec(0,1)),⨀^(* 2)(vec(0,1),vec(0,1))) 
+    0 &= det^(⊙ * 2)(⨀^(* 2)(vec(0,1),vec(0,1)),⨀^(* 2)(vec(0,1),vec(0,1))) \
   
    1/4 &= det^(⊙ * 2)(⨀^(* 2)(vec(1,0),vec(1,0)),⨀^(* 2)(vec(0,1),vec(0,1))) $
 
@@ -323,15 +323,15 @@ $
 
   let $P ∈ ⨀^(* 2) ℂ^2$. $P^* = P^⊺$
     
-  $ P^⬨ := #j ⋅ P^* ⋅ #j^(-1) " with " #j = mat(,-1;1) $ 
+  $ P^◊ := #j ⋅ P^* ⋅ #j^(-1) " with " #j = mat(,-1;1) $ 
 
   parity corresponds to space inversion
   
-  $#spacetime-momentum-spinor ^⬨
+  $#spacetime-momentum-spinor ^◊
   = mat(p_0 - p_1 , -(p_2 + p_3 #i) ; -(p_2 - p_3 #i) , p_0 + p_1) 
   <--> vec(p_0,-p_2,-p_3,-p_1)$
 
-  $- P^⬨$ corresponds to time inversion
+  $- P^◊$ corresponds to time inversion
 ]
 parity corresponds to trace or determinant reversal
 
@@ -339,15 +339,15 @@ parity corresponds to trace or determinant reversal
 #indent[  
   let $P = mat(a,b;c,d) ∈ "Matrix"(2,ℂ)$
 
-  determinant reversal $P^⬨ := mat(d,-b;-c,a)$ with
+  determinant reversal $P^◊ := mat(d,-b;-c,a)$ with
   
-  $P P^⬨ = P^⬨ P = det(P) ⋅ 𝟙$
+  $P P^◊ = P^◊ P = det(P) ⋅ 𝟙$
 
-  $det P^⬨ = det P$
+  $det P^◊ = det P$
 
-  $P ∈ GL ==> P^⬨ = (det P) P^(-1)$
+  $P ∈ GL ==> P^◊ = (det P) P^(-1)$
 ]
-#tag("trace-reversal") := $P + P^⬨ = tr(P) ⋅ 𝟙$. or $P^⬨ = mat(d,-b;-c,a)$. $tr P^⬨ = tr P$
+#tag("trace-reversal") := $P + P^◊ = tr(P) ⋅ 𝟙$. or $P^◊ = mat(d,-b;-c,a)$. $tr P^◊ = tr P$
 
 $dim = 2$ ==> determinant reversal is the same as trace reversal
 
@@ -356,73 +356,73 @@ $dim = 2$ ==> determinant reversal is the same as trace reversal
   let $#p ∈ ⨀^(* 2) ℂ^2 ≃ ℝ^(1,3)$. $det(#p) = g(p,p) = |p|^2$
   $
     |p|^2 𝟙 &= det(#p) 𝟙 \
-    &= #p^⬨ #p \
-    &= #p #p^⬨
+    &= #p^◊ #p \
+    &= #p #p^◊
   $ 
   $2 g(p,p') = |p+p'|^2 - (|p|^2 + |p'|^2)$ give
   $
-    g(p,p') 𝟙 &= 1/2 (#p^⬨ #p' + #p'^⬨ #p) \
-    &= 1/2 (#p #p'^⬨ + #p' #p^⬨)
+    g(p,p') 𝟙 &= 1/2 (#p^◊ #p' + #p'^◊ #p) \
+    &= 1/2 (#p #p'^◊ + #p' #p^◊)
   $
-  Also have $g(p,p') = 1/2 Re(tr(#p^⬨ #p')) = 1/2 Re(tr(#p #p'^⬨))$
+  Also have $g(p,p') = 1/2 Re(tr(#p^◊ #p')) = 1/2 Re(tr(#p #p'^◊))$
 
   for #link(<Pauli-matrix>)[]
 
-  - $σ_μ^⬨ σ_ν + σ_ν^⬨ σ_μ = 2 g_(μ ν) 𝟙$ or ${σ_(μ),σ_(ν)}_(⬨) = 2 g_(μ ν) 𝟙$
+  - $σ_μ^◊ σ_ν + σ_ν^◊ σ_μ = 2 g_(μ ν) 𝟙$ or ${σ_(μ),σ_(ν)}_(◊) = 2 g_(μ ν) 𝟙$
 
-  - $σ_0^⬨ = σ_0$, $σ_i^⬨ = - σ_i$ for $i = 1,2,3$ (because parity is spatial inversion)
+  - $σ_0^◊ = σ_0$, $σ_i^◊ = - σ_i$ for $i = 1,2,3$ (because parity is spatial inversion)
 
   A better explanation of this "square root"? 
 
   Direct matrix multiplication without parity will give the square root of the $ℝ^4$ metric, with $σ_μ^2 = 𝟙$, $σ_μ^(-1) = σ_μ$
 ]
-This makes it possible for the spacetime momentum spin representation to be connected to the concept of classical fermions. Spinors belong to the light cone projection $ℂℙ^1$. If $#p$ is on the light cone, then its square $1/2(#p^⬨ #p + #p #p^⬨) = g(#p,#p) 𝟙 = 0$. This seems to be related to the Pauli exclusion principle. But note that, in general, $g(#p,#p') != 0$ unless $#p,#p'$ are collinear (#link(<signature-of-2d-subspace-of-spacetime>)[]). Therefore, the result of this multiplication, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, will not be on the light cone. 
+This makes it possible for the spacetime momentum spin representation to be connected to the concept of classical fermions. Spinors belong to the light cone projection $ℂℙ^1$. If $#p$ is on the light cone, then its square $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. This seems to be related to the Pauli exclusion principle. But note that, in general, $g(#p,#p') != 0$ unless $#p,#p'$ are collinear (#link(<signature-of-2d-subspace-of-spacetime>)[]). Therefore, the result of this multiplication, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, will not be on the light cone. 
 
 #tag("square-root-of-Lorentz-Lie-algebra") "square root" of spacetime Lie-algebra
 #indent[
-  $ [1/2 σ_(μ), 1/2 σ_(ν)]_(⬨) := 1/4(σ_(μ)^⬨ σ_(ν) - σ_(ν)^⬨ σ_(μ)) ≃ L_(μ ν) $ 
+  $ [1/2 σ_(μ), 1/2 σ_(ν)]_(◊) := 1/4(σ_(μ)^◊ σ_(ν) - σ_(ν)^◊ σ_(μ)) ≃ L_(μ ν) $ 
 
   where $L_(μ ν)$ is #link(<rotation-boost-spinor-representation>)[Lorentz-Lie-algebra]
 
   _Proof_
   
-  - $[1/2 σ_(i), 1/2 σ_(i')]_(⬨) = 1/2 #i σ_i'' ≃ L_(i i')$ is δ rotation in $p_i''$ where $i,i',i''$ is any cyclic $123$ 
+  - $[1/2 σ_(i), 1/2 σ_(i')]_(◊) = 1/2 #i σ_i'' ≃ L_(i i')$ is δ rotation in $p_i''$ where $i,i',i''$ is any cyclic $123$ 
   
-  - $[1/2 σ_(0), 1/2 σ_(i)]_(⬨) = 1/2 σ_i ≃ L_(0i)$ where $i = 1,2,3$
+  - $[1/2 σ_(0), 1/2 σ_(i)]_(◊) = 1/2 σ_i ≃ L_(0i)$ where $i = 1,2,3$
 
   *Question* A better explanation? Representation?
 ]
 #tag("property-of-parity") 
 
-  - $forall a,b ∈ ℂ, (a A + b B)^⬨ = a A^⬨ + b B^⬨$
+  - $forall a,b ∈ ℂ, (a A + b B)^◊ = a A^◊ + b B^◊$
 
-  - $(A B)^⬨ = B^⬨ A^⬨$
+  - $(A B)^◊ = B^◊ A^◊$
 
-  - $𝟙^⬨ = 𝟙$
+  - $𝟙^◊ = 𝟙$
 
-  - $(A^†)^⬨ = (A^⬨)^†$
+  - $(A^†)^◊ = (A^◊)^†$
   
-  - $⬨ : ⨀^(* 2) ℂ^2 -> "self"$ i.e. parity preserve Hermitian
+  - $◊ : ⨀^(* 2) ℂ^2 -> "self"$ i.e. parity preserve Hermitian
 
-  - $A ∈ GL(2,ℂ) ==> A^⬨ = det(A) ⋅ A^(-1)$
+  - $A ∈ GL(2,ℂ) ==> A^◊ = det(A) ⋅ A^(-1)$
   
-  - $A ∈ SL(2,ℂ) ==> A^⬨ = A^(-1), A A^⬨ = 𝟙, (A^⬨)^⬨ = A$
+  - $A ∈ SL(2,ℂ) ==> A^◊ = A^(-1), A A^◊ = 𝟙, (A^◊)^◊ = A$
 
 #tag("parity-Euclidean-invariant") parity commutes with spatial action $SU(2)$. In $ℝ^3$, it manifests as $- 𝟙$ and commutes with $SO(3)$. let $p ∈ ℝ^3, A ∈ SU(2)$
 
-  $A ∈ SU(2) ==> A^† = A^(-1) = A^⬨ ==> (A^(⊙ * 2)(#p))^⬨ = A^(⊙ * 2)(#p^⬨)$
+  $A ∈ SU(2) ==> A^† = A^(-1) = A^◊ ==> (A^(⊙ * 2)(#p))^◊ = A^(⊙ * 2)(#p^◊)$
 
 Generally, they do not commute, for example, $𝟙_(ℝ^3)$ certainly does not commute with the time-changing part in $SO(1,3)$
 #indent[
   let $#p = σ_0 = mat(1;,1) = 𝟙, A = mat(e^(φ/2);,e^(-φ/2)), A^† = A$
 
-  $#p^⬨ = #p$
+  $#p^◊ = #p$
 
   $A #p A^† = mat(e^(φ);,e^(-φ))$ or $cases(p_0 = cosh φ, p_1 = sinh φ, p_2 = p_3 = 0)$
 
-  $(A #p A^†)^⬨ = mat(e^(-φ);,e^(φ))$ or $cases(p_0 = cosh φ = cosh(-φ), p_1 = -sinh φ = sinh (-φ))$ 
+  $(A #p A^†)^◊ = mat(e^(-φ);,e^(φ))$ or $cases(p_0 = cosh φ = cosh(-φ), p_1 = -sinh φ = sinh (-φ))$ 
 
-  $(A #p A^†)^⬨ != A #p A^† = A #p^⬨ A^†$
+  $(A #p A^†)^◊ != A #p A^† = A #p^◊ A^†$
 ]
 #tag("parity-reverse-boost") The effect of parity on the Lie-algebra is that it does not change δ rotation, but multiplies δ boost by $-1$
 

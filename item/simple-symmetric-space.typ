@@ -1,6 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
+cf. #link("https://en.wikipedia.org/wiki/Symmetric_space")[wiki:Symmetric_space] #link("https://en.wikipedia.org/wiki/Simple_Lie_group")[wiki:Simple_Lie_group]
+
 #tag("symmetric-space-locally") := $∇ R = 0$ 
 
 *Example* quadratic manifold, simple-Lie-group and related symmetric-space
