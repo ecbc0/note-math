@@ -8,7 +8,7 @@
 
 如果你熟悉数学, 可以看 [feature](https://ecbc0.github.io/item/feature.html)
 
-对于 note, 感觉 git 最多只合适用来看更新记录, git fork 的意义不大, 因为合并或变基时处理可能频繁出现的大量冲突太麻烦了
+对于 note, 感觉 git 最多只合适用来看更新记录, git fork 的意义不大, 因为合并或变基或 cherry-pick 时处理可能频繁出现的大量冲突太麻烦了
 
 ---
 
@@ -24,4 +24,4 @@ Instead of downloading the file, you can directly view the [HTML version](https:
 
 If you are familiar with math, you can see [feature](https://ecbc0.github.io/item_en/feature_en.html)
 
-for note, I feel that git is only suitable for viewing update records. Git fork is not very meaningful because it is too troublesome to deal with the large number of conflicts that may frequently occur when merging or rebasing.
+for note, I feel that git is only suitable for viewing update records. Git fork is not very meaningful because it is too troublesome to deal with the large number of conflicts that may frequently occur when merging or rebasing or cherry-pick.

@@ -376,7 +376,7 @@ $dim = 2$ ==> determinant reversal is the same as trace reversal
 
   Direct matrix multiplication without parity will give the square root of the $ℝ^4$ metric, with $σ_μ^2 = 𝟙$, $σ_μ^(-1) = σ_μ$
 ]
-This makes it possible for the spacetime momentum spin representation to be connected to the concept of classical fermions. Spinors belong to the light cone projection $ℂℙ^1$. If $#p$ is on the light cone, then its square $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. This seems to be related to the Pauli exclusion principle. But note that, in general, $g(#p,#p') != 0$ unless $#p,#p'$ are collinear (#raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")). Therefore, the result of this multiplication, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, will not be on the light cone. 
+This makes it possible for the spacetime momentum spin representation to be connected to the concept of classical fermions. Spinors belong to the light cone projection $ℂℙ^1$. If $#p$ is on the light cone, then its square $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. This seems to be related to the Pauli exclusion principle. But note that, in general, $g(#p,#p') != 0$ unless $#p,#p'$ are collinear (#raw("#link(<signature-of-2d-subspace-of-spacetime>)[]")). Therefore, the result of this multiplication, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, will not be on the light cone. If you want you can extend it to Clifford algebra 
 
 #tag("square-root-of-Lorentz-Lie-algebra") "square root" of spacetime Lie-algebra
 #indent[

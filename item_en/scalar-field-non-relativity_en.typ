@@ -178,7 +178,7 @@ Should this quantity be "particle number density" or "probability density" or "e
 
   - A plane wave $e^(- #i E t) e^(#i p x)$ is a solution to the Schrodinger eq <==> $E = p^2/(2m) + V(x)$. This equality cannot hold for a non-constant $V(x)$, but it holds in the embedded point particle solution $x(t)$, because the energy of the point particle $E = 1/2 m vel(x)^2 (t) + V(x(t))$ is constant over time.
 
-  - Path integrals use the path statistics weighted by the point particle Lagrangian to calculate the propagator of the Schrodinger eq.
+  - Feynman path integrals use the path statistics weighted by the point particle Lagrangian to calculate the propagator of the Schrodinger eq.
 ]
 #let H = c-Lie-algebra("H")
 #let a = c-Lie-algebra("a")

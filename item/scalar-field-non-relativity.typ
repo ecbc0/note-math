@@ -176,7 +176,7 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
   - 平面波 $e^(- #i E t) e^(#i p x)$ 是 Schrodinger eq 的解 <==> $E = p^2/(2m) + V(x)$. 对于非常值 $V(x)$ 这个等式无法成立, 但是在嵌入的点粒子解 $x(t)$ 中成立, 因为点粒子的能量 $E = 1/2 m vel(x)^2 (t) + V(x(t))$ 随时间不变
 
-  - 路径积分使用点粒子 Lagrangian 权重的路径统计来计算 Schrodinger eq 的 propagator
+  - Feynman 路径积分使用点粒子 Lagrangian 权重的路径统计来计算 Schrodinger eq 的 propagator
 ]
 #let H = c-Lie-algebra("H")
 #let a = c-Lie-algebra("a")

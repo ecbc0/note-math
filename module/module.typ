@@ -24,14 +24,16 @@ to delete color, regex replace in workspace `, fill: (rgb\([\w|#|"]+?\)|[\w]+?)`
 for html
 - `(#link\(<.+?>\)\[[^\]]*\])` => `#raw("$1")` // html export not support link
 - `c-bf\((.+?), *"#.+?"\)` => `c-bf($1)` // mathyml
-- `image\("([^\)]*)", *width: *([^\)]*)\)` => `html.elem("img", attrs: (src: "$1", width: "$2"))`
+- `image\("([^\)]*)", *width: *([^\)]*)\)` => `html.elem("img", attrs: (src: "$1", width: "$2"))` // html export not support image
 - `image\("([^\)]*)"\)` => `html.elem("img", attrs: (src: "$1"))`
-- `#stack\( dir: ltr,` => ` `
+- `#stack\( dir: ltr,` => ` ` // html export not support stack
 - `%")),
     #html` => `%"))
-    #html`
+    #html` // delete extra `,` for html export
 - `%"))
-  )` => `&"))
-  `
-- `& *(<==>|==>|<-->|<=|>=|>=|:=|=:|=|\+|-->|->|-|<|>|⟶|↠|↪|⇝|⟿|∼|≃|!=|≠|in |∈|∉|in.not|subset.neq|subset|⊂|⊊|supset.neq|supset|⊃|⊋|quad|≈|"or"|⋅)&` => `&$1`
-- `& *(<==>|==>|<-->|<=|>=|>=|:=|=:|=|\+|-->|->|-|<|>|⟶|↠|↪|⇝|⟿|∼|≃|!=|≠|in |∈|∉|in.not|subset.neq|subset|⊂|⊊|supset.neq|supset|⊃|⊋|quad|≈|"or"|⋅)` => `&$1&` 
+  )` => `%"))
+  ` // extra `)` of stack
+- `& *(<==>|==>|<-->|<=|>=|>=|:=|=:|=|\+|-->|->|-|<|>|⟶|↠|↪|⇝|⟿|∼|≃|!=|≠|in |∈|∉|in.not|subset.neq|subset|⊂|⊊|supset.neq|supset|⊃|⊋|quad|≈|"or"|⋅)&` => `&$1` // 
+- `& *(<==>|==>|<-->|<=|>=|>=|:=|=:|=|\+|-->|->|-|<|>|⟶|↠|↪|⇝|⟿|∼|≃|!=|≠|in |∈|∉|in.not|subset.neq|subset|⊂|⊊|supset.neq|supset|⊃|⊋|quad|≈|"or"|⋅)` => `&$1&` // mathyml align
+- nested align, e.g. if align in bracket, need to escape lr bracket `( & )` => `\( & \)`
+- cherry-pick main to html

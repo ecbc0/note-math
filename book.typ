@@ -5,7 +5,7 @@
 #book-meta(
   title: "note-math",
   summary: [
-    #prefix-chapter("item/HTML-notice.typ")[HTML-notice]
+    #prefix-chapter("item/notice.typ")[notice]
     = 中文
     #chapter("item/feature.typ")[feature]
     = 逻辑
@@ -65,7 +65,7 @@
       - #chapter("item/harmonic-oscillator-quantization.typ")[谐振子量子化]
     - #chapter("reference.typ")[参考]
     = English
-    #chapter("item_en/HTML-notice_en.typ")[HTML-notice]
+    #chapter("item_en/notice_en.typ")[notice]
     #chapter("item_en/feature_en.typ")[feature]
     = logic-topic
       - #chapter("item_en/logic_en.typ")[logic]
