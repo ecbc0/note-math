@@ -53,7 +53,7 @@ cf. #link(<metric.typ>)[]
     "or " acc(x)^j + Gamma_(i i')^j ⋅ vel(x)^i ⋅ vel(x)^i' &= 0 
   $
 ]
-其中 $Γ$ 是 #tag("metric-connection") *alias* #tag("Levi-Civita-connection")
+其中 $Γ$ 是 #tag("metric-connection") *alias* #tag("Levi-Civita-connection") *alias* #tag("Christoffel-symbols")
 #indent[
   $
     && v^⊺ Γ v
