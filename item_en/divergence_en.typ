@@ -198,6 +198,8 @@ The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol
 ]
 - $1$ form
 #indent[  
+  Note that at this time, you can add a directional two-dimensional "rotation 90 degrees" to change the two-dimensional divergence into a two-dimensional curl, and the normal flux to the boundary becomes the tangent flow to the boundary.
+
   $#d ω in ⋀^2 ℝ^3 <--> (⋆ #d ω)^♯ = curl ω^♯ in ⋀^1 ℝ^3$
 
   Coordinates $ curl vec(v_1,v_2,v_3) = vec(∂_2 v_3 - ∂_3 v_2, ∂_3 v_1 - ∂_1 v_3, ∂_1 v_2 - ∂_2 v_1) $

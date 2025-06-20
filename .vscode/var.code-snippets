@@ -2,10 +2,10 @@
   "let quantum operator": {
     "prefix": "let-quantum-operator",
     "body": [
-      "#let H = c-Lie-algebra(\"H\")",
-      "#let a = c-Lie-algebra(\"a\")",
-      "#let q = c-Lie-algebra(\"q\")",
-      "#let p = c-Lie-algebra(\"p\")"
+      "#let H = text(\"H\", fill: rgb(\"#d25b00\"))",
+      "#let a = text(\"a\", fill: rgb(\"#d25b00\"))",
+      "#let x = text(\"x\", fill: rgb(\"#006dea\"))",
+      "#let p = text(\"p\", fill: rgb(\"#d25b00\"))"
     ]
   },
   "blue Δ": {
