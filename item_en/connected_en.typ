@@ -115,7 +115,7 @@ $ product_(i in I) A_(i, j(i)) : j in product_(i in I) J(i) $
 
 _Proof_ Using #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and the product being connected implies product connectedness, so $product_(i in I) A_(i, j(i))$ is connected, thus it can no longer be decomposed
 
-Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology?)
+Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology? cf. #link(<analytic-space>)[definition of net of analytic-space])
 
 #tag("homotopy") homotopy or limit point homotopy := $C(X -> Y)$ is limit connected
 

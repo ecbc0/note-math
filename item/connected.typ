@@ -115,7 +115,7 @@ $ product_(i in I) A_(i, j(i)) : j in product_(i in I) J(i) $
 
 _Proof_ 使用 #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and 连通的 product 连通, 所以 $product_(i in I) A_(i, j(i))$ 连通, 从而已经不能再分解
 
-定义 (how?) $f in C(X -> Y)$ 的拓扑或极限点之后 (should be something compact open topology?)
+定义 (how?) $f in C(X -> Y)$ 的拓扑或极限点之后 (should be something compact open topology? 参考 #link(<analytic-space>)[解析空间的 net 的定义])
 
 #tag("homotopy") 同伦 or 极限点同伦 := $C(X -> Y)$ 是极限连通的
 

@@ -365,7 +365,14 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) continuous at $f(0) =
     (|f| < ε) and (|argh (f)| < Epsilon)
   $
 ]
-Generalized to higher dimensions
+Generalization to higher dimensions, rough intuition: 
+#indent[
+  Minkowski $ℝ^(1,n)$ can be decomposed into a $1$ dim distance space $ℝ_(>= 0)$ and an $n$ dim direction space ${⟨ x ⟩^2 = ±1}$. Let's use their product topology.
+
+  Now we need to define the topology of the direction space $ℚ^(1,n) (± 1)$. We can use the $n$ dim geodesic coordinates of $ℚ^(1,n) (± 1)$. We can use the topology of geodesic coordinates, which is of $ℝ^n$ type or $ℝ^(1,n-1)$ type. By induction on dimension, we need to define the topology of $ℝ^(1,1)$, which again decomposes into a $1$ dim radial space and a $1$ dim direction space $ℚ^(1,1)$. Now the $1$ dim direction space is just a hyperbolic curve, which is a Riemann submanifold, metric inherited from the metric of $ℝ^(1,1)$.
+
+  To define geodesics using pure quadratic form techniques, a geodesic starting from $p in ℚ^(1,n) (± 1)$ is an embedded hyperbola $ℍ𝕪$, defined as $ℚ^(1,n) (± 1)$ and the $2$ dim space spanned by $p$ and $q in p^⟂$.
+]
 
 The tangent space of the quadratic manifold $ℚ^(p,q)(± 1)$ can be defined as the (affine) subspace orthogonal to the radial direction
 

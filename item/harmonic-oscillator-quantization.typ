@@ -1,10 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
-#let H = c-Lie-algebra("H")
-#let a = c-Lie-algebra("a")
-#let x = c-Lie-algebra("x")
-#let p = c-Lie-algebra("p")
+#let H = text("H", fill: rgb("#d25b00"))
+#let a = text("a", fill: rgb("#d25b00"))
+#let x = text("x", fill: rgb("#006dea"))
+#let p = text("p", fill: rgb("#d25b00"))
 
 Schrodinger eq 谐振子 ($ℝ$) 的量子化
 #indent[
@@ -34,7 +34,7 @@ Schrodinger eq 谐振子 ($ℝ$) 的量子化
 
   特征函数归一化 
 
-  $ (1/(2^n n!) (frac(m ω , ℏ π))^(1/2))^(1/2) e^(-1/2 frac(m ω, ℏ q^2)) H_n ((frac(m ω , ℏ π) q)^(1/2)) $
+  $ (1/(2^n n!) (frac(m ω , ℏ π))^(1/2))^(1/2) e^(-1/2 frac(m ω, ℏ) x^2) H_n ((frac(m ω , ℏ π) x)^(1/2)) $
 ]
 谐振子路径积分量子化
 
@@ -66,7 +66,7 @@ $
 
 #tag("path-integral-quantization") 
 #indent[
-  propagator $K$ 表示用路径积分 Lagrangian 来构造 unitary. 对于谐振子, 用 Fourier 变换方法. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
+  propagator $K$ 表示用 Feynman 路径积分和 Lagrangian 来构造 unitary. 对于谐振子, 用 Fourier 变换方法. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
 
   let $T = t_1 - t_0$
 
@@ -93,7 +93,7 @@ $e^(-E/h t #i) ψ(x)$ 给出的特征方程
 $
   #H ψ = E ψ
 $
-特征规范正交基 $ket(n)$ 给出的对 $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,q)$ 的分解
+特征规范正交基 $ket(n)$ 给出的对 $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,x)$ 的分解
 $
   #H &= sum_(n) E_n ket(n) bra(n) \
   e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \

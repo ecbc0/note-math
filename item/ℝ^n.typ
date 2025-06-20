@@ -43,6 +43,8 @@ $
   $
   复数 or $z^2 = -1$ 的一种来源. #link(<harmonic-oscillator>)[谐振子] ODE 的特征方程 $ξ^2 + ω^2 = 0$
 
+  也参见 #link(<complex-numbler-geometric-meaning>)[复数的直观解释]
+
   *Example* #tag("split-complex-number") 分裂复数. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i-split^2 = 1$ or $1/#i-split = #i-split$ 和分配律
@@ -60,6 +62,8 @@ $
   so $f(x+x')$ map to $f(x) f(+) f(x')$ 或者简写为 $f(x) + f(x')$
 
   linear struct hom 也称为线性映射
+
+  这种同态也可以认为是类似于纯量乘法的分配律, 先向量加法再线性映射等于先线性映射再向量加法
 
   到自身的双射 + $f,f^(-1)$ hom = isomorphism
 

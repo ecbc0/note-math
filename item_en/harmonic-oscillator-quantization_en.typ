@@ -1,10 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
-#let H = c-Lie-algebra("H")
-#let a = c-Lie-algebra("a")
-#let x = c-Lie-algebra("x")
-#let p = c-Lie-algebra("p")
+#let H = text("H", fill: rgb("#d25b00"))
+#let a = text("a", fill: rgb("#d25b00"))
+#let x = text("x", fill: rgb("#006dea"))
+#let p = text("p", fill: rgb("#d25b00"))
 
 Quantization of Schrodinger eq harmonic oscillator ($ℝ$)
 #indent[
@@ -34,7 +34,7 @@ Quantization of Schrodinger eq harmonic oscillator ($ℝ$)
 
   Eigenfunction normalization 
 
-  $ (1/(2^n n!) (frac(m ω , ℏ π))^(1/2))^(1/2) e^(-1/2 frac(m ω, ℏ q^2)) H_n ((frac(m ω , ℏ π) q)^(1/2)) $
+  $ (1/(2^n n!) (frac(m ω , ℏ π))^(1/2))^(1/2) e^(-1/2 frac(m ω, ℏ) x^2) H_n ((frac(m ω , ℏ π) x)^(1/2)) $
 ]
 Harmonic oscillator path integral quantization
 
@@ -66,7 +66,7 @@ For time only depending on the difference $t_1 - t_0$
 
 #tag("path-integral-quantization") 
 #indent[
-  Propagator $K$ represents constructing a unitary using the path integral Lagrangian. For the harmonic oscillator, use the Fourier transform method. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
+  Propagator $K$ represents constructing a unitary using the Feynman path integral with Lagrangian. For the harmonic oscillator, use the Fourier transform method. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
 
   let $T = t_1 - t_0$
 
@@ -93,7 +93,7 @@ Characteristic equation given by $e^(-E/h t #i) ψ(x)$
 $
   #H ψ = E ψ
 $
-Decomposition of $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,q)$ given by characteristic orthonormal basis $ket(n)$
+Decomposition of $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,x)$ given by characteristic orthonormal basis $ket(n)$
 $
   #H &= sum_(n) E_n ket(n) bra(n) \
   e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \

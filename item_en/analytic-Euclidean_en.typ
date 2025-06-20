@@ -78,9 +78,9 @@ Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
 ]
 *Example* 
 
-  - $log(1-z) ∼ sum 1/n z^n$ 的 radius of convergence is $1$ // link to definition of log as inverse of exp
+  - $log(1-z) ∼ sum 1/n z^n$ radius of convergence is $1$ // link to definition of log as inverse of exp
 
-  - $e^z ∼ sum 1/(n!) z^n$ 的 radius of convergence is $∞$
+  - $e^z ∼ sum 1/(n!) z^n$ radius of convergence is $∞$
 
   Convergence problem on the boundary
 
@@ -606,11 +606,11 @@ Comparison of power series distance control at different base points
 ]
 #tag("analytic-space")
 #indent[
-  Mesh of analytic space
+  Net of analytic space
 
   let $f$ be analytic, with domain $D_f$
 
-  The #link(<net>)[mesh] of $f$
+  The #link(<net>)[net] of $f$
   #indent[
     - let $ε > 0$
 

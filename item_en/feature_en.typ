@@ -92,6 +92,8 @@
   - angle
 
     Discuss the conceptual problem of defining angles in Euclidean $ℝ^2$
+
+    the geometric meanning of $ℂ$ multiplication is in $SO(2)$ rotation 
 ]
 - geometry
   #indent[

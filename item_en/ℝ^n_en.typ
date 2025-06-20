@@ -45,6 +45,8 @@ There are two ways to extend to $ℝ^n$
 
   *Example* #tag("split-complex-number") Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
+  also cf. #link(<complex-numbler-geometric-meaning>)[]
+
   Addition is the same as $ℝ^2$. Multiplication uses $#i-split^2 = 1$ or $1/#i-split = #i-split$ and the distributive law
   $
     (x + y #i-split)(x' + y' #i-split) &= (x x' + y y') + (x y' + y x') #i-split
@@ -60,6 +62,8 @@ There are two ways to extend to $ℝ^n$
   so $f(x+x')$ map to $f(x) f(+) f(x')$ or abbreviated as $f(x) + f(x')$
 
   linear struct hom is also called linear mapping
+
+  This homomorphism can also be considered similar to the distributive law of scalar multiplication. Vector addition followed by linear mapping is equivalent to linear mapping followed by vector addition.
 
   bijection to itself + $f,f^(-1)$ hom = isomorphism
 

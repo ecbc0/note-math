@@ -92,6 +92,8 @@
   - angle
 
     讨论 Euclidean $ℝ^2$ 的角度的定义的概念问题
+
+    复数乘法的几何意义在于 $SO(2)$ 旋转
 ]
 - geometry
   #indent[
