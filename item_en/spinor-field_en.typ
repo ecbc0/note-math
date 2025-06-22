@@ -148,7 +148,7 @@
   $
   and $∆ = #spin-d #spin-d^◊ = #spin-d^◊ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
-  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. If a field satisfy Dirac eq, then itt satisfy KG eq
+  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. If a field satisfies the Dirac eq, then it satisfies the KG eq. Therefore, the KG eq can be used as a spinless approximation of the Dirac eq.
 
   All partial derivatives of the action $S$ is zero $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, giving #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 

@@ -1,6 +1,11 @@
 #import "../module/module.typ": *
 #show: module
 
+#let H = text("H", fill: rgb("#d25b00"))
+#let a = text("a", fill: rgb("#d25b00"))
+#let x = text("x", fill: rgb("#006dea"))
+#let p = text("p", fill: rgb("#d25b00"))
+
 相对论纯量场作用量近似到非相对论纯量场作用量
 
 使用有质量场, 使用静能量相位提取 $exp(- m c^2 1/ℏ t #i)$, 使用时间 $x_0 = c t$ 和光速极限 $lim_(c -> ∞)$ 
@@ -114,6 +119,12 @@ $
   E = integral_(ℝ^3) #d x (T^0_0) 
   = integral_(ℝ^3) #d x ((ℏ^2)/(2m) |∂_x ψ|^2)
 $
+用 product rule $∂_x^† (ψ^* ∂_x ψ) = ∂_x ψ^* ∂_x ψ + ψ^* ∂^†_x ∂_x ψ$ + 散度量 + 边界是零, 转为 
+$
+  integral_(ℝ^3) #d x (- (ℏ^2)/(2m) ψ^* ∆ ψ) = ⟨ #H ⟩_(ψ)
+$
+如果有静电 potential $V(x)$, 则将仍然是 $⟨ #H ⟩_(ψ)$, 但可能会变成非正定
+
 由于能动张量散度零, 能量对时间 $t$ 守恒 $∂_t E = 0$
 
 非相对论纯量场, Schrodinger 场的能量是实数且是正的且 time invariant
@@ -150,11 +161,6 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
 这个量应该是 "粒子数密度" or "概率密度" or "电荷密度"?
 
-#let H = text("H", fill: rgb("#d25b00"))
-#let a = text("a", fill: rgb("#d25b00"))
-#let x = text("x", fill: rgb("#006dea"))
-#let p = text("p", fill: rgb("#d25b00"))
-
 #tag("motivation-of-quantization")
 #indent[
   大部分对量子化的处理都会假设
@@ -175,13 +181,15 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
   - 为什么规范场的 potential 会在场的粒子化时变成粒子的 potential
 
-  经典对应是指, 点粒子 Lagrange-equation 的期望值版本 (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]), e.g. $m (#d^2)/(#d t^2) ⟨ #x ⟩_(ψ_t) = ⟨ - (#d V)/(#d x) ⟩_(ψ_t)$ 
+  经典对应是指, 点粒子 Lagrange-equation 的期望值版本 (@ref-15, p.116) (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]), e.g. $m (#d^2)/(#d t^2) ⟨ #x ⟩_(ψ_t) = ⟨ - (#d V)/(#d x) ⟩_(ψ_t)$ 
 
   期望的速度中也出现了新的算子 $m (#d)/(#d t) ⟨ #x ⟩_(ψ_t) = 1/(#i ℏ) ⟨ [#x,#H] ⟩_(ψ_t) = ⟨ - #i h (∂)/(∂ x) ⟩_(ψ_t) =: ⟨ #p ⟩_(ψ_t)$
   
   其中非交换性 $[#x,#H] = #i ℏ #p$ or $⟨ [#x,#H] ⟩_(ψ) = #i ℏ ⟨ #p ⟩_(ψ)$ 被很小的 Planck 常量 $ℏ$ 所控制
 
-  Schrodinger eq 是 $ℂ$ KG eq 的非相对论极限, Newton 方程是相对论点粒子的非相对论极限. 所以, 是否可以证明, KG eq 也有点粒子极限. 此时 "期望" 的定义是否要用 $#U (1)$ 的 KG 的电荷量密度 $- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*$. 但是非正定使得更加远离经典粒子的含义 
+  注意经典能量和量子能量的不同, 类似平均值和方差的不同. 例如, $⟨ #p ⟩^2 != ⟨ #p^2 ⟩$. 可以考虑标准差 $Δ #p = (⟨ #p^2 ⟩ - ⟨ #p ⟩^2)^(1/2)$. 有不确定性原理 $1/2 ℏ = 1/2 |#i [#x,#p]| <= Δ #x ⋅ Δ #p$. 取得等式 <==> #link(<harmonic-oscillator-ground-state>)[]
+
+  Schrodinger eq 是 $ℂ$ KG eq 的非相对论极限, Newton 方程是相对论点粒子的非相对论极限. 所以, 是否可以证明, KG eq 也有点粒子极限. 此时 "期望" 的定义是否要用 $#U (1)$ 的 KG 的电荷量密度 $- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*$. 但是 KG eq 的电荷是非正定的, 使得更加远离经典粒子的含义. 然而 KG eq 的能量是正定的 (即使有电磁 potential). Dirac eq 则电荷正定但能量不正定
 
   如何让点粒子的 Lagrange-equation 的期望值版本对应到场的 Lagrange-equation?
 
@@ -190,3 +198,41 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
   - Feynman 路径积分使用点粒子 Lagrangian 权重的路径统计来计算 Schrodinger eq 的 propagator. *Question* 证明它满足 Ehrenfest theorem 从而满足 Schrodinger eq
 ]
 对于谐振子 $k r^2$ 和氢原子 $k 1/r$, 如果假设波函数的相位是 $e^(- #i E t)$ 的振荡, 振幅是静态的 $ψ(x)$, 则 $e^(- #i E t) ψ(x)$ 满足 Schrodinger or Dirac eq <==> $ψ(x)$ 满足 Hermitian 算子的特征方程 $#H ψ = E ψ$, 并且 $E$ 是离散的, for 椭圆型谐振子和氢原子的束缚态
+#tag("quamtum-operator-motivation") 
+#indent[
+  Galileo boost $x + v t, v in ℝ^3_"boost"$ 给出波函数 $ψ$ 的变换 $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, 此 action 的 δ action 是算子 $#i/ℏ (m #x - t #p)$
+
+  时间平移 $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamitonian
+
+  空间平移 $x + a, a in ℝ^3_"space"$ -> δ action $∂_x = #i/ℏ #p $, 动量算子
+
+  旋转 $R x, R in SO(3)$ -> δ action $#i/h (#x × #p)$, 角动量算子
+
+  相位 $e^(#i ℏ θ) ψ, e^(#i ℏ θ) in #U (1)$ -> δ action $#i ℏ 𝟙$
+
+  对于 $ℝ^1$ 空间的 QM, boost 和空间平移的 Lie bracket $[#i/ℏ (m #x - t #p), #i/ℏ #p] = - m/ℏ^2 [#x,#p] = - m #i/ℏ 𝟙$, 或等价地 $[#x,#p] = #i ℏ 𝟙$
+]
+#tag("motivation-of-eigenstate") 
+#indent[
+  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+
+  模仿有限维的情况, 用微分来寻找 Hermitian 算子 $#H$ 的极值 or 一阶稳定值
+
+  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$
+  $
+  ⟨ ψ + Δ ψ mid(|) #H mid(|) ψ + Δ ψ ⟩ = Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ + o(Δ ψ) 
+  $
+  forall $Δ ψ in ψ^⟂$ ==> $#H ψ in span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
+
+  $E in ℝ$ 是因为 Hermitian ==> $⟨ ψ mid(|) #H mid(|) ψ ⟩ = E|ψ|^2 = E^*|ψ|^2$ ==> $E = E^*$
+
+  不同特征值的态正交
+  $
+  ⟨ ψ' mid(|) #H mid(|) ψ ⟩ = E ⟨ ψ' , ψ ⟩ = E^' ⟨ ψ' , ψ ⟩ 
+  &==> (E - E') ⟨ ψ' , ψ ⟩ = 0 \
+  &==> ⟨ ψ' , ψ ⟩ = 0
+  $
+  Schrodinger eq 演化保持特征值空间, 因为 unitary ==> $∂_t ψ in ψ^⟂$ ==> $∂_t ⟨ #H ⟩_(ψ_t) = (∂)/(∂ ψ) (ψ_0 : "base", ∂_t (t = 0) ψ : "vector") ⟨ #H ⟩_(ψ_t) = 0$ + (在某种 Sobolev 空间) ODE 由初值唯一决定 ==> $⟨ #H ⟩_(ψ_t) ≡ ⟨ #H ⟩_(ψ_0) = E$
+
+  特征值空间的 Schrodinger eq 演化的具体解. $#i ℏ ∂_t ψ (t,x) = #H ψ (t,x) = E ψ (t,x)$ 对每个空间点 $x$ 都是 $ℝ -> ℂ$ 的常系数线性 ODE, 解 $ψ (t,x) = e^(- #i E t) ψ (0,x)$ i.e. 除了复指数按时间进行 $#U (1)$ 振荡的相位因子 $e^(- #i E t)$, 本质上是静态 $ψ (0,x)$
+]

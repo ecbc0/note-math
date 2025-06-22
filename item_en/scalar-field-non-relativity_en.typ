@@ -1,6 +1,11 @@
 #import "../module/module.typ": *
 #show: module
 
+#let H = text("H", fill: rgb("#d25b00"))
+#let a = text("a", fill: rgb("#d25b00"))
+#let x = text("x", fill: rgb("#006dea"))
+#let p = text("p", fill: rgb("#d25b00"))
+
 Approximation of Relativistic Scalar Field Action to Non-Relativistic Scalar Field Action
 
 Using a massive field, extracting the rest energy phase $exp(- m c^2 1/ℏ t #i)$, using time $x_0 = c t$ and the speed of light limit $lim_(c -> ∞)$ 
@@ -114,6 +119,12 @@ $
   E = integral_(ℝ^3) #d x (T^0_0) 
   = integral_(ℝ^3) #d x ((ℏ^2)/(2m) |∂_x ψ|^2)
 $
+Using the product rule $∂_x^† (ψ^* ∂_x ψ) = ∂_x ψ^* ∂_x ψ + ψ^* ∂^†_x ∂_x ψ$ + divergence term + zero at boundary, it becomes 
+$
+  integral_(ℝ^3) #d x (- (ℏ^2)/(2m) ψ^* ∆ ψ) = ⟨ #H ⟩_(ψ)
+$
+If there is an electrostatic potential $V(x)$, it will still be $⟨ #H ⟩_(ψ)$, but it might become non-positive definite
+
 Due to the zero divergence of the energy-momentum tensor, energy is conserved with respect to time $t$, $∂_t E = 0$
 
 For non-relativistic scalar fields, the energy of the Schrodinger field is real, positive and time invariant
@@ -148,12 +159,7 @@ $
 $
 The time component of the Schrodinger field current is positive and its spatial integral is time invariant
 
-Should this quantity be "particle number density" or "probability density" or "electric charge density"?
-
-#let H = text("H", fill: rgb("#d25b00"))
-#let a = text("a", fill: rgb("#d25b00"))
-#let x = text("x", fill: rgb("#006dea"))
-#let p = text("p", fill: rgb("#d25b00"))
+Should this quantity be "particle number density" or "probability density" or "charge density"?
 
 #tag("motivation-of-quantization")
 #indent[
@@ -175,13 +181,15 @@ Should this quantity be "particle number density" or "probability density" or "e
 
   - Why does the potential of a gauge field become the potential of a particle when the field is quantized into particles?
 
-  Classical correspondence refers to the expected value version of the point particle Lagrange-equation (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]), e.g. $m (#d^2)/(#d t^2) ⟨ #x ⟩_(ψ_t) = ⟨ - (#d V)/(#d x) ⟩_(ψ_t)$ 
+  Classical correspondence refers to the expectation value version of the point particle Lagrange-equation (@ref-15, p.116) (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]), e.g. $m (#d^2)/(#d t^2) ⟨ #x ⟩_(ψ_t) = ⟨ - (#d V)/(#d x) ⟩_(ψ_t)$ 
 
   there also new operator in the speed of expectation $m (#d)/(#d t) ⟨ #x ⟩_(ψ_t) = 1/(#i ℏ) ⟨ [#x,#H] ⟩_(ψ_t) = ⟨ - #i h (∂)/(∂ x) ⟩_(ψ_t) =: ⟨ #p ⟩_(ψ_t)$
   
-  where non-commutativity $[#x,#H] = #i ℏ #p$ or $⟨ [#x,#H] ⟩_(ψ) = #i ℏ ⟨ #p ⟩_(ψ)$ is control by very small Planck constant $ℏ$
-  
-  Schrodinger eq is the non-relativistic limit of $ℂ$ KG eq, and Newton's equation is the non-relativistic limit of relativistic point particles. So, can it be proven that KG eq also has a point particle limit? At this point, should the definition of "expectation" use the charge density of $#U (1)$'s KG $- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*$. But the non positive definite make it more far away from meaning of Classical particle 
+  Where the non-commutativity $[#x,#H] = #i ℏ #p$ or $⟨ [#x,#H] ⟩_(ψ) = #i ℏ ⟨ #p ⟩_(ψ)$ is controlled by the very small Planck constant $ℏ$
+
+  Note the difference between classical energy and quantum energy, similar to the difference between mean and variance. For example, $⟨ #p ⟩^2 != ⟨ #p^2 ⟩$. We can consider the standard deviation $Δ #p = (⟨ #p^2 ⟩ - ⟨ #p ⟩^2)^(1/2)$. There is the uncertainty principle $1/2 ℏ = 1/2 |#i [#x,#p]| <= Δ #x ⋅ Δ #p$. The equality holds <==> #link(<harmonic-oscillator-ground-state>)[]
+
+  The Schrodinger eq is the non-relativistic limit of the $ℂ$ KG eq, and Newton's equation is the non-relativistic limit of relativistic point particles. So, can it be proven that the KG eq also has a point particle limit? At this point, should the definition of "expectation" use the charge density of the $#U (1)$ KG, $- ϕ^* ∂_t ϕ + ϕ ∂_t ϕ^*$. However, the charge of the KG eq is not positive definite, making it even further from the meaning of classical particles. However, the energy of the KG eq is positive definite (even with electromagnetic potential). For the Dirac eq, the charge is positive definite but the energy is not positive definite.
 
   How to make the expected value version of the point particle Lagrange-equation correspond to the Lagrange-equation of the field?
 
@@ -189,4 +197,42 @@ Should this quantity be "particle number density" or "probability density" or "e
 
   - Feynman path integrals use the path statistics weighted by the point particle Lagrangian to calculate the propagator of the Schrodinger eq. *Question* proof that it satisfies Ehrenfest theorem and then satisfies Schrodinger eq
 ]
-For harmonic oscillator $k r^2$ and hydrogen atom $k 1/r$, if we assume the phase of the wave function oscillates as $e^(- #i E t)$ and the amplitude is static $ψ(x)$, then $e^(- #i E t) ψ(x)$ satisfies the Schrodinger or Dirac eq <==> $ψ(x)$ satisfies the eigenvalue equation $#H ψ = E ψ$ for a Hermitian operator, and $E$ is discrete, for bound states of elliptic harmonic oscillators and hydrogen atoms.
+For the harmonic oscillator $k r^2$ and the hydrogen atom $k 1/r$, if we assume the phase of the wave function is an oscillation of $e^(- #i E t)$ and the amplitude is static $ψ(x)$, then $e^(- #i E t) ψ(x)$ satisfies the Schrodinger or Dirac eq <==> $ψ(x)$ satisfies the eigenvalue equation of the Hermitian operator $#H ψ = E ψ$, and $E$ is discrete, for the elliptic harmonic oscillator and the bound states of the hydrogen atom.
+#tag("quamtum-operator-motivation") 
+#indent[
+  Galileo boost $x + v t, v in ℝ^3_"boost"$ gives the transformation of the wave function $ψ$ as $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, the δ action of this action is the operator $#i/ℏ (m #x - t #p)$
+
+  Time translation $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamiltonian
+
+  Spatial translation $x + a, a in ℝ^3_"space"$ -> δ action $∂_x = #i/ℏ #p $, momentum operator
+
+  Rotation $R x, R in SO(3)$ -> δ action $#i/h (#x × #p)$, angular momentum operator
+
+  Phase $e^(#i ℏ θ) ψ, e^(#i ℏ θ) in #U (1)$ -> δ action $#i ℏ 𝟙$
+
+  For QM in $ℝ^1$ space, the Lie bracket of boost and spatial translation $[#i/ℏ (m #x - t #p), #i/ℏ #p] = - m/ℏ^2 [#x,#p] = - m #i/ℏ 𝟙$, or equivalently $[#x,#p] = #i ℏ 𝟙$
+]
+#tag("motivation-of-eigenstate") 
+#indent[
+  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+
+  Mimicking the finite-dimensional case, use differentiation to find the extremum or first-order stable value of the Hermitian operator $#H$
+
+  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$
+  $
+  ⟨ ψ + Δ ψ mid(|) #H mid(|) ψ + Δ ψ ⟩ = Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ + o(Δ ψ) 
+  $
+  forall $Δ ψ in ψ^⟂$ ==> $#H ψ in span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
+
+  $E in ℝ$ is because Hermitian ==> $⟨ ψ mid(|) #H mid(|) ψ ⟩ = E|ψ|^2 = E^*|ψ|^2$ ==> $E = E^*$
+
+  States with different eigenvalues are orthogonal
+  $
+  ⟨ ψ' mid(|) #H mid(|) ψ ⟩ = E ⟨ ψ' , ψ ⟩ = E^' ⟨ ψ' , ψ ⟩ 
+  &==> (E - E') ⟨ ψ' , ψ ⟩ = 0 \
+  &==> ⟨ ψ' , ψ ⟩ = 0
+  $
+  Schrodinger eq evolution maintains the eigenvalue space, because unitary ==> $∂_t ψ in ψ^⟂$ ==> $∂_t ⟨ #H ⟩_(ψ_t) = (∂)/(∂ ψ) (ψ_0 : "base", ∂_t (t = 0) ψ : "vector") ⟨ #H ⟩_(ψ_t) = 0$ + (in some Sobolev space) ODE is uniquely determined by initial values ==> $⟨ #H ⟩_(ψ_t) ≡ ⟨ #H ⟩_(ψ_0) = E$
+
+  Specific solution for the Schrodinger eq evolution in the eigenvalue space. $#i ℏ ∂_t ψ (t,x) = #H ψ (t,x) = E ψ (t,x)$ is a constant-coefficient linear ODE from $ℝ -> ℂ$ for each spatial point $x$, solution $ψ (t,x) = e^(- #i E t) ψ (0,x)$ i.e., essentially static $ψ (0,x)$ except for the phase factor $e^(- #i E t)$ which oscillates in time according to $#U (1)$.
+]

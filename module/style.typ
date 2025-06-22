@@ -53,6 +53,8 @@
 
   show link: underline
 
+  show ref: set text(fill: rgb("#008690"))
+
   set list(marker: [#text("‣", fill: rgb("#e90000"))])
 
   set enum(full: true)

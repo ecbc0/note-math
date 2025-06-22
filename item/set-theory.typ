@@ -134,7 +134,7 @@ define $A ⊂ B := forall a ∈ A, a ∈ B$
 
 #tag("equivalent") $<==>$ 
 #indent[
-  等价的一些使用. 对计算机数据来说, 可以穷举证明以下计算结果相等
+  等价的一些使用. 对有限的计算机数据来说, 可以穷举证明以下计算结果相等
   $ 
     not (not p) &<==> p \
     not (p and q) &<==> (not p) or (not q)
@@ -321,6 +321,8 @@ enum is special case of sum/union?
   $f,f(a),f(a) in B$ 的使用虽然看起来有问题, 但它们仍然在 symbol & symbol 串方面是可以定义的
   
   如果谈到 map $f$ 具体代表什么, 由于非具体构造性, 没有一般编程语言那样的具体的 `return`, 或者 `return` 的是新定义的 symbol, math object, 语言展开
+
+  *Prop* $C^(A × B) ≃ (C^B)^A$
 ]
 #tag("subset") 
 #indent[
@@ -350,6 +352,8 @@ define $ A = B := (x ∈ A) <==> (x ∈ B) $
 $=$ 的其它用法
   + 内存里的 identifier 的别名
   + 内存里的函数返回值. so $1 + 1 = 2$ 应该理解为 add function 的返回值是 $2$
+
+注意, 我自己也觉得我无法完全清晰地处理下面的集合的阶层和 universal-type 的概念
 
 #tag("hierarchy-order-of-set")
 #indent[
@@ -411,17 +415,20 @@ $=$ 的其它用法
     goto loop
   };
   ```
-  或者用分层绕过自指悖论
-  `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
-]
-如果对于一个数我们能数出来, 我们就认为它是自然数
+  或者用分层绕过自指悖论 `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
 
-如果能用有限步写出语言规则并构造出语言对象, 我们就认为是可构造的, 可说的. 对于集合论, 能够这样有限步构造出来的, 就称其为 math object (数学对象)
+  如果对于一个数我们能数出来, 我们就认为它是自然数
 
-对于自然数的无限的问题, 如果用数数或者归纳法或者周期电路来定义自然数, 的则把无限的问题推给了无限时间
+  如果能用有限步写出语言规则并构造出语言对象, 我们就认为是可构造的, 可说的. 对于集合论, 能够这样有限步构造出来的, 就称其为 math object (数学对象)
 
-对于集合论语言, 假设 universal-set or universal-type 导致能构造出让电路进入死循环
- 
+  对于自然数的无限的问题, 如果用数数或者归纳法或者周期电路来定义自然数, 的则把无限的问题推给了无限时间
+
+  对于集合论语言, 假设 universal-set or universal-type 导致能构造出让电路进入死循环
+
+  但也可以认为, 对于 $"type" : "type"$, 只要不一直判断下去, 就能停止, 而一直判断下去就无法停止, 但还是能每步都判断. 只是, 可能无法在所有情况判断是否应该在有限步之后停止
+
+  但是 universal-type 的使用是很方便的. 因此也可以使用它, 额外条件是不允许判断 $"type" : "type"$. 更一般地, 例如, 也不允许 $"type" × "type" : "type"$
+] 
 #tag("dependent-distributive") 
 #indent[
   union & interset 

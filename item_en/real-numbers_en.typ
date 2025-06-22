@@ -10,9 +10,11 @@ Natural number $ℕ$ addition
 ]
 _Proof_ The intuition in the real world is that for counting $+1$, no matter how the counting task is manually divided into several subtasks, the result will not be affected, and the total decomposition methods are limited. The associative and commutative laws of addition are just special cases. Just as we recognize natural numbers by counting, we can always recognize the commutative and associative laws by counting. Everything reduces to the case of complete additive decomposition, with only the commutative and associative laws of a large number of $1$s.
 
-It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #link(<natural-number>)[natural numbers], in order for computers to express this property, which holds for all natural numbers, using finite characters, memory, and finite time (and potentially infinite time), it needs to be defined as a true proposition.
+It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #link(<natural-number>)[natural numbers], in order for a computer to express the property that holds for all natural numbers using finite characters, memory, and finite time (and potentially infinite time), it is necessary to define (assume, axiom) that it is a true proposition.
 
-The usual "proof" is to use the smallest assumption, the associative law of $1$, $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then deduce other
+The usual proof is to use minimal assumptions (axioms), the associativity of $1$ $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then derive others.
+
+To an extreme, if we always set conclusions that can be proven with a few axioms as axioms, then we will have no proofs at all. So we may use minimal axiom, but at least let us choose the more symmetric assumption $(a + b) + 1 = (a + 1) + b = a + (b + 1)$.
 
 Natural number $ℕ$ multiplication
 #indent[
@@ -82,17 +84,18 @@ Decimal (nested interval) seems very intuitive
 
 However, decimal cannot natively handle $e = sum_(n = 0)^∞ 1/n!$
 
-Many different $ℕ$ nested intervals have the same limit, e.g. $[0,1/n]$ vs $[-1/n,0]$, need limit-distance-vanish system quotient. let $"distance" (A) = sup_(x,x' in A) |x - x'|$
+Many different nested intervals of $ℕ$ have the same limit, e.g. $[0,1/n]$ vs $[-1/n,0]$, which requires a limit-distance-vanish quotient.
+#indent[
+  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, define the limit-distance-vanish equivalence relation (*alias* Cauchy convergence) for $A,B$ :=
+  $
+    forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
+  $
+  The nested rational intervals of $ℕ$ can be changed to general rational intervals whose length #link(<hom-limit>)[limit] approaches zero $⊂$ #link(<maximal-linear-order>)[linear order chain] or more general rational intervals (maximal) whose length approaches zero #link(<net>)[net].
 
-let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish relation (*alias* Cauchy convergence) 
-$
-  forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
-$
-You can change the $ℕ$ rational number interval nesting to a general rational number interval whose length #link(<hom-limit>)[limit] tends to zero $⊂$ #link(<maximal-linear-order>)[linearly ordered chain] or a more general rational number interval whose length tends to zero (maximal) #link(<net>)[net]
+  A rational interval is a subset $A ⊂ ℚ$ with the property that the order is uninterrupted.
 
-A rational number interval is a subset $A ⊂ ℚ$ with property order uninterrupted 
-
-$ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
+  $ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
+]
 
 From an operational simplicity perspective, Dedekind-cut should be used. "Operational simplicity" means 
 - let $x ∈ ℝ$, ${x} <-> ℝ ∖ {x}$ one-to-one correspondence

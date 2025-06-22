@@ -34,7 +34,7 @@ Parser or proof assistants can allow humans to reduce from reviewing all steps t
 
 The human brain compiler can omit and supplement omissions, trading temporary efficiency for error-proneness and forgetfulness
 
-Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and -interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory were not used well.
+Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and-interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory of computer were not used well.
 
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 
@@ -134,7 +134,7 @@ define $A ⊂ B := forall a ∈ A, a ∈ B$
 
 #tag("equivalent") $<==>$ 
 #indent[
-  Some equivalent uses. For computer data, it can be proved by exhaustion that the following calculation results are equal
+  Some equivalent uses. For finite computer data, the following calculation results can be exhaustively proven to be equal
   $ 
     not (not p) &<==> p \
     not (p and q) &<==> (not p) or (not q)
@@ -320,7 +320,9 @@ enum is special case of sum/union?
 
   Although the usage of $f,f(a),f(a) in B$ seems problematic, they can still be defined in terms of symbol & symbol strings
   
-  If we talk about what the map $f$ specifically represents, due to non-concrete constructiveness, there is no specific `return` like in general programming languages, or what `return` is a newly defined symbol, math object, language expansion
+  If we talk about what map $f$ specifically represents, due to non-concrete constructibility, there is no specific `return` like in general programming languages, or the `return` is a newly defined symbol, math object, language expansion.
+
+  *Prop* $C^(A × B) ≃ (C^B)^A$
 ]
 #tag("subset") 
 #indent[
@@ -333,7 +335,7 @@ enum is special case of sum/union?
 ]
 map space and subset introduce high-level infinity
 
-One seemingly counterintuitive thing at first glance is that we _seemingly_ know all $S ⊂ ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. However, what exactly does "know all $S ⊂ ℕ$" mean? In fact, trying to consider the question of "finding an infinite subset of $ℕ$ in a general way" reveals that this is not simple.
+One seemingly counterintuitive thing at first glance is that we _seemingly_ know all $S ⊂ ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. However, what exactly does "know all $S ⊂ ℕ$" mean? In fact, trying to consider the question of "finding an subset of $ℕ$ with infinite elements in a general way" reveals that this is not simple.
 
 Similarly, although countable can already define some real numbers e.g. $sum 1/n! = e$, if not with the help of subset or map, countable construction cannot obtain all $ℝ$
 
@@ -347,9 +349,11 @@ Similarly, although countable can already define some real numbers e.g. $sum 1/n
 ]
 define $ A = B := (x ∈ A) <==> (x ∈ B) $
 
-Other usages of $=$
-  + Alias of identifier in memory
-  + Return value of function in memory. so $1 + 1 = 2$ should be understood as the return value of the add function is $2$
+Other uses of $=$
+  + Alias for identifier in memory
+  + Function return value in memory. So $1 + 1 = 2$ should be understood as the return value of the add function is $2$.
+
+Note that I myself feel that I cannot fully clearly deal with the concept of the hierarchy of the following sets and universal-type.
 
 #tag("hierarchy-order-of-set")
 #indent[
@@ -411,17 +415,20 @@ If we keep constructing infinitely, does this language have an end?
     goto loop
   };
   ```
-  Or use layering to bypass the self-referential paradox
-  `(this_sentence = false) = true`. We consider them to be different sentences and judgments, believing that it cannot be self-referential.
-]
-If we can count a number, we consider it a natural number.
+  Or use layering to bypass self-referential paradoxes `(this_sentence = false) = true`. It is believed that they are different sentences and judgments, and that it cannot be self-referential.
 
-If language rules can be written and language objects constructed in a finite number of steps, we consider it constructible and expressible. For set theory, what can be constructed in such a finite number of steps is called a math object.
+  If we can count a number, we consider it a natural number.
 
-Regarding the problem of infinite natural numbers, if natural numbers are defined by counting or induction or periodic circuits, then the problem of infinity is pushed to infinite time.
+  If language rules can be written and language objects constructed in a finite number of steps, we consider them constructible and speakable. For set theory, what can be constructed in such a finite number of steps is called a math object.
 
-For set theory language, assume that universal-set or universal-type leads to the construction of something that causes the circuit to enter an infinite loop. 
- 
+  For the problem of the infinity of natural numbers, if natural numbers are defined by counting or induction or periodic circuits, then the problem of infinity is pushed to infinite time.
+
+  For set theory language, assume universal-set or universal-type causes the circuit to enter a dead loop.
+
+  But it can also be considered that for $"type" : "type"$, as long as you don't keep judging, you can stop, and if you keep judging, you can't stop, but you can still judge every step. It's just that, it may not be possible to judge in all cases whether it should stop after a finite number of steps.
+
+  However, the use of universal-type is very convenient. Therefore, it can also be used, with the additional condition that judging $"type" : "type"$ is not allowed. More generally, for example, $"type" × "type" : "type"$ is also not allowed.
+] 
 #tag("dependent-distributive") 
 #indent[
   union & interset 

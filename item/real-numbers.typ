@@ -10,9 +10,11 @@
 ]
 _Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任务手动分成几个子任务, 都不会影响结果, 而且总的分解方式有限. 加法结合律和交换律只是其中的特殊情况. 就像我们通过数数来认识自然数一样, 我们总是可以通过数数认识交换律和结合律. 所有东西都 reduce to 完全加法分解的情况, 只有大量 $1$ 的交换律和结合律
 
-对计算机来说似乎难以表达这种直观, 但似乎所有的有限结果一定会正确. 类似于 #link(<natural-number>)[自然数中所做的], 为了让计算机能用有限的字符和内存以及有限的时间 (以及潜在的无限时间) 去表达这种对所有自然数成立的性质, 需要定义它是 true proposition
+对计算机来说似乎难以表达这种直观, 但似乎所有的有限结果一定会正确. 类似于 #link(<natural-number>)[自然数中所做的], 为了让计算机能用有限的字符和内存以及有限的时间 (以及潜在的无限时间) 去表达这种对所有自然数成立的性质, 需要定义 (假设, 公理) 它是 true proposition
 
-通常的 "证明" 是使用最小的假设, $1$ 的结合律 $(a + b) + 1 = a + (b + 1)$ 或者加法的定义 $(a + 1) + b = (a + b) + 1$, 然后推出其它 
+通常的证明是使用最小的假设 (公理), $1$ 的结合律 $(a + b) + 1 = a + (b + 1)$ 或者加法的定义 $(a + 1) + b = (a + b) + 1$, 然后推出其它 
+
+极端地说, 如果我们总是将可以用少量公理证明的结论设为公理, 那么我们就没有任何证明了. 因此我们可能会使用最少公理, 不过至少我让选择假设更对称性的 $(a + b) + 1 = (a + 1) + b = a + (b + 1)$
 
 自然数 $ℕ$ 的乘法
 #indent[
@@ -82,17 +84,18 @@ _Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任
 
 然而十进制并不能原生地处理 $e = sum_(n = 0)^∞ 1/n!$
 
-很多不同 $ℕ$ 区间套有相同极限, e.g. $[0,1/n]$ vs $[-1/n,0]$, 需要 limit-distance-vanish 系 quotient. let $"distance" (A) = sup_(x,x' in A) |x - x'|$
+很多不同 $ℕ$ 区间套有相同极限, e.g. $[0,1/n]$ vs $[-1/n,0]$, 需要 limit-distance-vanish 系 quotient
+#indent[
+  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, 定义 $A,B$ 的 limit-distance-vanish 等价关系 (*alias* Cauchy 收敛) :=
+  $
+    forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
+  $
+  可以把 $ℕ$ 有理数区间套改为一般的长度 #link(<hom-limit>)[极限] 趋于零的有理数区间 $⊂$ #link(<maximal-linear-order>)[线序链] 或者更一般的长度趋于零的有理数区间 (极大的) #link(<net>)[网]
 
-let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, limit-distance-vanish 关系 (*alias* Cauchy 收敛) 
-$
-  forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
-$
-可以把 $ℕ$ 有理数区间套改为一般的长度 #link(<hom-limit>)[极限] 趋于零的有理数区间 $⊂$ #link(<maximal-linear-order>)[线序链] 或者更一般的长度趋于零的有理数区间 (极大的) #link(<net>)[网]
+  有理数区间是子集 $A ⊂ ℚ$ with property 序不中断 
 
-有理数区间是子集 $A ⊂ ℚ$ with property 序不中断 
-
-$ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
+  $ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
+]
 
 从操作简单性来说, 应该用 Dedekind-cut. "操作简单" 是指 
 - let $x ∈ ℝ$, ${x} <-> ℝ ∖ {x}$ 一一对应
@@ -217,7 +220,6 @@ $ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) 
 对于一般 net 定义 $"distance"(B) = sup_(a,a' in B) |a - a'|$
 
 #tag("limit-distance-vanish-sequence") := $lim_(n -> ∞) abs({a_(n),a_(n+1),...}) = 0$. i.e. tail distance vanish
-
 
 #tag("limit-distance-vanish-net") := $forall ε > 0, exists B in #B, "distance"(B) < ε$
 
