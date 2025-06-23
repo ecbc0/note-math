@@ -171,7 +171,7 @@ Should this quantity be "particle number density" or "probability density" or "c
 
   If the non-relativistic approximation limit of the KG field is considered, these assumptions will be automatically obtained.
 
-  Then, the time component of the static gauge field acts as the electric potential. Both the harmonic oscillator potential $k r^2$ and the hydrogen atom potential $k 1/r$ originate from simple charge densities.
+  Then, the time component of the static gauge field acts as the electric potential. Both the harmonic oscillator potential $k r^2$ (uniform Charge) (probably should not be interpreted this way) and the hydrogen atom potential $k 1/r$ (point charge) originate from simple charge densities.
 
   Thus, the motivation problem becomes:
 
@@ -197,7 +197,6 @@ Should this quantity be "particle number density" or "probability density" or "c
 
   - Feynman path integrals use the path statistics weighted by the point particle Lagrangian to calculate the propagator of the Schrodinger eq. *Question* proof that it satisfies Ehrenfest theorem and then satisfies Schrodinger eq
 ]
-For the harmonic oscillator $k r^2$ and the hydrogen atom $k 1/r$, if we assume the phase of the wave function is an oscillation of $e^(- #i E t)$ and the amplitude is static $ψ(x)$, then $e^(- #i E t) ψ(x)$ satisfies the Schrodinger or Dirac eq <==> $ψ(x)$ satisfies the eigenvalue equation of the Hermitian operator $#H ψ = E ψ$, and $E$ is discrete, for the elliptic harmonic oscillator and the bound states of the hydrogen atom.
 #tag("quamtum-operator-motivation") 
 #indent[
   Galileo boost $x + v t, v in ℝ^3_"boost"$ gives the transformation of the wave function $ψ$ as $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, the δ action of this action is the operator $#i/ℏ (m #x - t #p)$

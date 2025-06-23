@@ -376,7 +376,7 @@ $dim = 2$ ==> determinant reversal 相同于 trace reversal
 
   没有 parity 时的直接的矩阵乘法将会给出 $ℝ^4$ metric 的平方根, with $σ_μ^2 = 𝟙$, $σ_μ^(-1) = σ_μ$
 ]
-这使得时空动量自旋表示有可能联系到经典 fermion 的概念. 旋量属于光锥射影 $ℂℙ^1$. 如果 $#p$ 在光锥上, 那么其平方 $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. 看起来能联系到 Pauli 不相容的要求. 但注意, 一般地 $g(#p,#p') != 0$ 除非 $#p,#p'$ 共线 (#link(<signature-of-2d-subspace-of-spacetime>)[]). 所以这种乘法的结果, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, 将不会在光锥上. 或者如果你愿意地话, 将其拓展到 Clifford 代数
+这使得时空动量自旋表示有可能联系到经典 fermion 的概念吗? 旋量属于光锥射影 $ℂℙ^1$. 如果 $#p$ 在光锥上, 那么其平方 $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. 看起来能联系到 Pauli 不相容的要求. 但注意, 一般地 $g(#p,#p') != 0$ 除非 $#p,#p'$ 共线 (#link(<signature-of-2d-subspace-of-spacetime>)[]). 所以这种乘法的结果, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, 将不会在光锥上. 或者如果你愿意地话, 将其拓展到 Clifford 代数
 
 #tag("square-root-of-Lorentz-Lie-algebra") spacetime Lie-algebra 的 "平方根"
 #indent[

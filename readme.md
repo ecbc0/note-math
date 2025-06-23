@@ -6,7 +6,7 @@
 
 你可以不下载文件, 而是直接看 [HTML 版本](https://ecbc0.github.io/)
 
-如果你熟悉数学, 可以看 [feature](https://ecbc0.github.io/item/feature.html)
+如果你熟悉数学, 可以看 [feature](https://ecbc0.github.io/item/feature.html) 和主流的处理相比这份 notes 里有什么更好的处理 (一份长的清单)
 
 对于 note, 感觉 git 最多只合适用来看更新记录, 大幅同步的 git fork 的意义不大, 因为合并或变基或 cherry-pick 时处理可能频繁出现的大量冲突太麻烦了
 
@@ -22,6 +22,6 @@ Topics are classified in `topic` folders, which point to files in `item` (vscode
 
 Instead of downloading the file, you can directly view the [HTML version](https://ecbc0.github.io/)
 
-If you are familiar with math, you can see [feature](https://ecbc0.github.io/item_en/feature_en.html)
+If you are familiar with mathematics, you can look at [feature](https://ecbc0.github.io/item_en/feature_en.html) and see what is better in this note compared to the mainstream treatment. (a long list)
 
 for note, I feel that git is only suitable for viewing update records. A large-scale synced git fork is not very meaningful because it is too troublesome to deal with the large number of conflicts that may frequently occur when merging or rebasing or cherry-pick.

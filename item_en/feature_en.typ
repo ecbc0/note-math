@@ -136,7 +136,13 @@
     #indent[
       - The non-relativistic limit approximation of the action variation of the relativistic scalar-field (Klein-Gordon) to the non-relativistic scalar-field (Schrodinger). 
 
-    - The time component of the Noether conserved quantity of the $#U (1)$ gauge transformation as the particle number density or probability density or charge density in the Schrodinger equation
+      - The time component of the Noether conserved quantity of the $#U (1)$ gauge transformation as the particle number density or probability density or charge density in the Schrodinger equation
+
+      - Motivation for quantization, corresponding to the classical point particle equations with expectation values
+
+      - Motivation for operators in quantum mechanics and their Lie brackets: infinitesimal actions from the Galileo group
+
+      - Motivation for eigenvalues ​​and eigenstates: energy expectation of extreme values ​​or stable via first-order differentials vanishing
     ]
   - projective-lightcone, spacetime-momentum-spinor-representation, spinor-field
   #indent[
@@ -158,4 +164,7 @@
   #indent[
     Inspired by the Hodge Laplacian, an adjoint part might need to be added to the action
   ]
+  - harmonic-oscillator-quantization
+    #let H = text("H")
+    Motivation of ladder operators: The special potential of the harmonic oscillator makes the Hamiltonian operator, position operator, and momentum operator have a Lie bracket with good properties, similar to $so(3)$. The complexified eigenvalue technique can be used to obtain the eigenvalue operator of $[#H,*]$, and the uniformly spaced $(1/2 + n) ℏ ω$ eigenvalues ​​of can be obtained.
 ]

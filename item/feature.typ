@@ -136,7 +136,13 @@
     #indent[
       - 相对论 scalar-field (Klein--Gordan) 的作用量变分的非相对论极限近似到非相对论 scalar-field (Schrodinger) 
 
-    - $#U (1)$ 规范变换的 Noether 守恒量的时间分量作为 Schrodinger 方程的粒子数密度或概率密度或电荷密度
+      - $#U (1)$ 规范变换的 Noether 守恒量的时间分量作为 Schrodinger 方程的粒子数密度或概率密度或电荷密度
+
+      - 量子化的动机, 对应到期望值的经典点粒子方程
+            
+      - 量子力学的算子及其 Lie bracket 的动机: 来自 Galileo 群的无穷小作用
+      
+      - 特征值和特征态的动机: 极值 or 一阶微分零稳定的能量期望
     ]
   - projective-lightcone, spacetime-momentum-spinor-representation, spinor-field
   #indent[
@@ -158,4 +164,7 @@
   #indent[
     启发自 Hodge Laplacian, 作用量中可能要加上 adjoint 部分
   ]
+  - 谐振子量子化
+    #let H = text("H")
+    升降算子的动机: 谐振子的特殊 potential 使得 Hamiltonian 算子, 位置算子, 动量算子有很好性质的 Lie bracket, 类似 $so(3)$, 可以复化特征值技术来得到 $[#H,*]$ 的特征算子, 可以得到均匀间隔 $(1/2 + n) ℏ ω$ 的特征值
 ]

@@ -171,7 +171,7 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
   如果考虑 KG 场的非相对论近似极限, 则会自动得到这些假设
 
-  然后静态规范场的时间分量作为电势, 谐振子 potential $k r^2$ 和氢原子 potential $k 1/r$ 都来自简单的电荷密度
+  然后静态规范场的时间分量作为电势, 谐振子 potential $k r^2$ (均匀电荷) (可能不应该用这种解释) 和氢原子 potential $k 1/r$ (点电荷) 都来自简单的电荷密度
 
   于是动机问题变成
 
@@ -197,12 +197,11 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
   - Feynman 路径积分使用点粒子 Lagrangian 权重的路径统计来计算 Schrodinger eq 的 propagator. *Question* 证明它满足 Ehrenfest theorem 从而满足 Schrodinger eq
 ]
-对于谐振子 $k r^2$ 和氢原子 $k 1/r$, 如果假设波函数的相位是 $e^(- #i E t)$ 的振荡, 振幅是静态的 $ψ(x)$, 则 $e^(- #i E t) ψ(x)$ 满足 Schrodinger or Dirac eq <==> $ψ(x)$ 满足 Hermitian 算子的特征方程 $#H ψ = E ψ$, 并且 $E$ 是离散的, for 椭圆型谐振子和氢原子的束缚态
 #tag("quamtum-operator-motivation") 
 #indent[
   Galileo boost $x + v t, v in ℝ^3_"boost"$ 给出波函数 $ψ$ 的变换 $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, 此 action 的 δ action 是算子 $#i/ℏ (m #x - t #p)$
 
-  时间平移 $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamitonian
+  时间平移 $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamiltonian
 
   空间平移 $x + a, a in ℝ^3_"space"$ -> δ action $∂_x = #i/ℏ #p $, 动量算子
 

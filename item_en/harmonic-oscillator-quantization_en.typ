@@ -29,7 +29,7 @@ $
   ==> #H #a _ ± ψ &= #a _ ± #H ψ ± ℏ ω #a _ ± ψ \
   &= (E ± ℏ ω) #a _ ± ψ
 $
-*Question* Try to generalize the technique here to (if possible) $ℂ$ classical harmonic oscillator and #link(<square-root-of-harmonic-oscillator>)[spin harmonic oscillator] quantization
+*Question* Try to generalize the technique here to (if possible) $ℂ$ classical harmonic oscillator
 
 The lowest energy state $ψ$ of the $ℕ$ $L^2$ eigenstates given by the ladder operator of $ℝ$ harmonic oscillator quantization satisfies #tag("harmonic-oscillator-ground-state")
 $
@@ -69,7 +69,7 @@ It can be proven that this $ℕ$ eigenstate series orthogonally expands $L^2$
 ]
 The quadratic form interpretation of the $L^2$ expansion coefficients $sum c_n ψ_n, sum |c_n|^2 = 1$ is the probability in $ψ_n$. The expected energy is $⟨ #H ⟩ = sum |c_n|^2 E_n$
 
-In addition to making the eigenvalues of $#H$ uniformly spaced, the raising operator also satisfies $1/2 [#a _ + , #a _ -] = ℏ/(m ω) 𝟙$, so that it can correspond to 
+In addition to making the eigenvalues of $#H$ uniformly spaced, the ladder operator also satisfies $1/2 [#a _ + , #a _ -] = ℏ/(m ω) 𝟙$, so that it can correspond to 
 - metric symmetric tensor space $#a _ + (ϕ) = ϕ ⊙, #a _ - (ϕ) = (ϕ ⊙)^†, [#a _ + (ϕ), #a _ - (ϕ)] = ⟨ ϕ , ϕ ⟩ 𝟙$ 
 - symmetric polynomial space $#a _ + = z, #a _ - = (#d)/(#d z)$
 Also satisfies $1/2 {#a _ + , #a _ -} = (1/2 m ω^2)^(-1) #H$
@@ -126,15 +126,16 @@ For time only depending on the difference $t_1 - t_0$
 ]
 #tag("eigen-decomposition") 
 #indent[
-Characteristic equation given by $e^(-E/h t #i) ψ(x)$
-$
-  #H ψ = E ψ
-$
-Decomposition of $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,x)$ given by characteristic orthonormal basis $ket(n)$
-$
-  #H &= sum_(n) E_n ket(n) bra(n) \
-  e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \
-  K &= sum_(n) e^(- #i 1/ℏ E_n t) ⟨ x ket(n) bra(n) x_0 ⟩ 
-$
-$K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
+  Characteristic equation given by $e^(-E/h t #i) ψ(x)$
+  $
+    #H ψ = E ψ
+  $
+  Decomposition of $#H, e^(- #i 1/ℏ #H t), K(t_0,t,x_0,x)$ given by characteristic orthonormal basis $ket(n)$
+  $
+    #H &= sum_(n) E_n ket(n) bra(n) \
+    e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \
+    K &= sum_(n) e^(- #i 1/ℏ E_n t) ⟨ x ket(n) bra(n) x_0 ⟩ 
+  $
+  $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
 ]
+*Question* Does the Dirac field have a harmonic oscillator model?

@@ -31,11 +31,10 @@
 
   #link(<parity>)[] dual and $(0,1/2)$ induced action
   $
-    #p ⇝ ϕ^† #p^◊ ϕ ⇝ (A^† ϕ)^† #p^◊ (A^† ϕ) 
-    &= ϕ^† (A #p^◊ A^†) ϕ \
-    &= ϕ^† (A^(† -1) #p A^(-1))^◊ ϕ &quad "by" #link(<property-of-parity>)[] \
-    &= ϕ^† (f(A^(† -1)) #p)^◊ ϕ \
-    &= ϕ^† f(A)^(⊺ -1) ϕ 
+    #p ⇝ ϕ^† #p^◊ ϕ ⇝ (A^(† -1) ϕ)^† #p^◊ (A^(† -1) ϕ) 
+    &= ϕ^† (A^(-1) #p^◊ A^(† -1)) ϕ \
+    &= ϕ^† (A #p A^†)^◊ ϕ &quad "by" #link(<property-of-parity>)[] \
+    &= ϕ^† (f(A) #p)^◊ ϕ 
   $
   Similarly, co-vectors can also be defined for anti-Hermitian tensors
   $
@@ -132,6 +131,8 @@
   invariant non couple term $vec(ϕ,ψ)^† mat(#i #spin-d^◊;,#i#spin-d) vec(ϕ,ψ) = #i ϕ^† #spin-d^◊ ϕ + #i ψ^† #spin-d ψ$
 
   non-couple term variation with respect to $ϕ$ gives $integral 2 Re (Δ ϕ)^† #i #spin-d^◊ ϕ$ 
+
+  according to cancelation by parity $A^(† -1 †) A = 𝟙$
 
   invariant couple term $- vec(ϕ,ψ)^† m mat(,𝟙;𝟙) vec(ϕ,ψ) = - m (ϕ^† ψ + ψ^† ϕ) = - 2 Re m ϕ^† ψ$
 
