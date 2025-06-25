@@ -262,4 +262,5 @@
     ],
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "search.useGlobalIgnoreFiles": false,
+    "git-log--graph.hide-sidebar-buttons": false
 }

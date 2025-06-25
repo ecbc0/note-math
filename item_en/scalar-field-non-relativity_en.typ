@@ -217,21 +217,23 @@ Should this quantity be "particle number density" or "probability density" or "c
 
   Mimicking the finite-dimensional case, use differentiation to find the extremum or first-order stable value of the Hermitian operator $#H$
 
-  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$
-  $
-  ⟨ ψ + Δ ψ mid(|) #H mid(|) ψ + Δ ψ ⟩ = Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ + o(Δ ψ) 
-  $
-  forall $Δ ψ in ψ^⟂$ ==> $#H ψ in span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
+  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$ (in the sense of $Re ⟨ Δ ψ , ψ ⟩ = 0$)
 
-  $E in ℝ$ is because Hermitian ==> $⟨ ψ mid(|) #H mid(|) ψ ⟩ = E|ψ|^2 = E^*|ψ|^2$ ==> $E = E^*$
+  The energy expectation is a quadratic form, its first-order differential $Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ = 0$ forall $Δ ψ in ψ^⟂$ ==> $#H ψ in ψ^(⟂ ⟂) = span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
 
   States with different eigenvalues are orthogonal
   $
-  ⟨ ψ' mid(|) #H mid(|) ψ ⟩ = E ⟨ ψ' , ψ ⟩ = E^' ⟨ ψ' , ψ ⟩ 
-  &==> (E - E') ⟨ ψ' , ψ ⟩ = 0 \
-  &==> ⟨ ψ' , ψ ⟩ = 0
+    ⟨ ψ' mid(|) #H mid(|) ψ ⟩ = E ⟨ ψ' , ψ ⟩ = E^' ⟨ ψ' , ψ ⟩ 
+    &==> (E - E') ⟨ ψ' , ψ ⟩ = 0 \
+    &==> ⟨ ψ' , ψ ⟩ = 0
   $
-  Schrodinger eq evolution maintains the eigenvalue space, because unitary ==> $∂_t ψ in ψ^⟂$ ==> $∂_t ⟨ #H ⟩_(ψ_t) = (∂)/(∂ ψ) (ψ_0 : "base", ∂_t (t = 0) ψ : "vector") ⟨ #H ⟩_(ψ_t) = 0$ + (in some Sobolev space) ODE is uniquely determined by initial values ==> $⟨ #H ⟩_(ψ_t) ≡ ⟨ #H ⟩_(ψ_0) = E$
+  Schrodinger eq evolution preserves the eigenvalue space
+  
+  The energy expectation is a quadratic form, and its second-order differential polynomial is $⟨ Δ ψ mid(|) #H mid(|) Δ ψ ⟩$
+  
+  Divide the space into the $E$ eigenspace $V_E$ and its orthogonal complement $V_E^(⟂)$. In the $V_E^⟂$ direction, the second-order differential is positive definite or negative definite, and the energy will increase or decrease. According to Lagrangian variational theory, the energy of the Schrodinger eq is a time-conserved quantity $⟨ #H ⟩_(ψ_t) ≡ ⟨ #H ⟩_(ψ_0) = E$
+  
+  $V_E, V_E^⟂$ are separated in the sense of limit, unless at $0$. $⟨ ψ , ψ ⟩ = 1 ==> ψ != 0$, so the evolution will be confined to the $E$ eigenspace $ψ_t in V_E$
 
   Specific solution for the Schrodinger eq evolution in the eigenvalue space. $#i ℏ ∂_t ψ (t,x) = #H ψ (t,x) = E ψ (t,x)$ is a constant-coefficient linear ODE from $ℝ -> ℂ$ for each spatial point $x$, solution $ψ (t,x) = e^(- #i E t) ψ (0,x)$ i.e., essentially static $ψ (0,x)$ except for the phase factor $e^(- #i E t)$ which oscillates in time according to $#U (1)$.
 ]
