@@ -118,6 +118,8 @@
 
   show regex("∗|′|″|⊺|†|‡|∁|◊|⟂|⊤|⋆|♭|♯"): it => text(it, fill: rgb("#006dea"))
 
+  show "Δ": it => text(it, fill: rgb("#0056e1"))
+
   /*
     ⊺ : transpose
     † : adjoint

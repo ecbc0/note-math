@@ -20,7 +20,7 @@ $
 $
 多项式函数表示并不是仿射不变的, i.e. 切换基点 $x ⇝ x + Δ = y$ 会得到相同阶数但系数不同的多项式函数表示. 伸缩 $v ⇝ λ v$ 也是如此
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 #tag("change-base-point-polynomial") 切换基点 $x ⇝ x + Δ = y$
 $

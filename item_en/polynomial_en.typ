@@ -20,7 +20,7 @@ $
 $
 Polynomial function representation is not affine invariant, i.e. switching the base point $x ⇝ x + Δ = y$ will result in a polynomial function representation of the same order but with different coefficients. Scaling $v ⇝ λ v$ is also the case
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 #tag("change-base-point-polynomial") Switch base point $x ⇝ x + Δ = y$
 $

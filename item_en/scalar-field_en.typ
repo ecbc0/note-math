@@ -20,7 +20,7 @@ $
   integral_(ℝ^(1,3)) #d x ( 1/2 (∂ ϕ^* ⋅ ∂ ϕ ∓ m^2 ϕ^* ϕ) ) 
 $
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 let δ diffeomorphism $Δ ϕ$, let the differential of the action be zero
 $

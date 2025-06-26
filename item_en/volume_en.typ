@@ -8,7 +8,7 @@
     sum_(0 .. N) t_i ⋅ x_i \
     t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 1
   $
-  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+  
 
   is a well-defined affine point, or rather the coordinate definition does not depend on the choice of origin. Let the coordinates of $x_i$ be $v_i$. Change the origin $v_i' = v_i + Δ$
   $

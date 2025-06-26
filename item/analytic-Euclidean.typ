@@ -61,7 +61,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 ]
 将多项式的 #link(<change-base-point-polynomial>)[] 推广到级数
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 #tag("change-base-point-analytic") 
 #indent[

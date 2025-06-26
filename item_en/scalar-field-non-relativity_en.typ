@@ -213,7 +213,7 @@ Should this quantity be "particle number density" or "probability density" or "c
 ]
 #tag("motivation-of-eigenstate") 
 #indent[
-  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+  
 
   Mimicking the finite-dimensional case, use differentiation to find the extremum or first-order stable value of the Hermitian operator $#H$
 

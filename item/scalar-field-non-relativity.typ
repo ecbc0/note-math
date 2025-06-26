@@ -213,7 +213,7 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 ]
 #tag("motivation-of-eigenstate") 
 #indent[
-  #show "Δ": it => text(it, fill: rgb("#0056e1"))
+  
 
   模仿有限维的情况, 用微分来寻找 Hermitian 算子 $#H$ 的极值 or 一阶稳定值
 

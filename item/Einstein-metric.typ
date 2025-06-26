@@ -3,7 +3,7 @@
 
 cf. #link(<curvature-of-metric.typ>)[]
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 #tag("Einstein-Lagrangian") := $("scal" - 2 Λ) #d Vol$. 在坐标中 $#d Vol = |g| #d x$
 

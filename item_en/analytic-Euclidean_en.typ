@@ -61,7 +61,7 @@ Function defined by power series within the radius of convergence
 ]
 Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
 
-#show "Δ": it => text(it, fill: rgb("#0056e1"))
+
 
 #tag("change-base-point-analytic") 
 #indent[
