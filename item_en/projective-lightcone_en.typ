@@ -103,7 +103,7 @@ _Proof_
   - boost in $x_1$
   #indent[
     - $e^(φ #i-split)$ act on $x_0 + x_1 #i-split ∈ ℂ_"split" ≃ ℝ^(1,1)$ 
-    - $A = mat(e^(1/2 φ) ; , a^(-1/2))$ act on $ℂ^2$, generator $1/2 mat(1;,-1) ∈ #i su(2)$
+    - $A = mat(e^(1/2 φ) ; , e^(-1/2 φ))$ act on $ℂ^2$, generator $1/2 mat(1;,-1) ∈ #i su(2)$
   ]
   Because the $x_1$ direction was chosen to construct the stereographic projection, the cases in the $x_2, x_3$ directions will be more complicated (I have not done the calculation and verification below)
 

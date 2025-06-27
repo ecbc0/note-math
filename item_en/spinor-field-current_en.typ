@@ -1,6 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
+#let p = spin($p$)
+
 cf. #link(<massless-spinor-Lagrangian>)[Action of spinor field]
 
 - spinor-current-translation-of-spacetime 
@@ -17,7 +19,7 @@ cf. #link(<massless-spinor-Lagrangian>)[Action of spinor field]
     
     &= vec(ϕ,ψ)^† mat(#i #spin-d^◊ , - m 𝟙 ; - m 𝟙 , #i #spin-d) vec(ϕ,ψ) \
 
-    &= #i ⋅ (ϕ^† σ^μ ∂_ μ ^◊ ϕ + ψ^† σ^μ ∂_ μ ψ) - m ((ϕ^† ψ + ψ^† ϕ))   
+    &= #i ⋅ (ϕ^† σ^μ ∂_ μ ^◊ ϕ + ψ^† σ^μ ∂_ μ ψ) - m (ϕ^† ψ + ψ^† ϕ)
   $
   Since only the $Re$ part of the spinor field action plays a role, a $Re$ type theory can also be used.
 
@@ -59,9 +61,14 @@ cf. #link(<massless-spinor-Lagrangian>)[Action of spinor field]
 
   massive-spinor energy
   $
-    E = integral_(ℝ^3) #d x (T^0_0) 
+    E &= integral_(ℝ^3) #d x (T^0_0) \ 
     
-    &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† #i ∂_0 vec(ϕ,ψ)
+    &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† #i ∂_0 vec(ϕ,ψ) \
+
+    &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† mat(
+      #i #spin-d _x , m 𝟙 ;
+      m 𝟙 , - #i #spin-d _x
+    ) vec(ϕ,ψ)
   $
 ]
 - spinor-current-rotation-boost-of-spacetime
@@ -118,7 +125,14 @@ cf. #link(<massless-spinor-Lagrangian>)[Action of spinor field]
   ]
   The case of massive-spinor is similar. It should be possible to prove by calculation that angular momentum is not affected by the mass term.
   $
-    J &= L + S = #i ⋅ vec(ϕ,ψ)^† mat(
+    J^(λ)_(μ ν) &= #i ⋅ vec(ϕ,ψ)^† mat(
+      σ^(λ ◊) ([x_(μ),∂_(ν)] + 1/4 [σ_(μ),σ_(ν)]_(◊));
+      , σ^(λ) ([x_(μ),∂_(ν)] + 1/4 [σ_(μ),σ_(ν)]_(◊))
+    ) vec(ϕ,ψ)
+  $
+  or
+  $
+    J &= #i ⋅ vec(ϕ,ψ)^† mat(
       σ^◊ ([x,∂] + 1/4 [σ,σ]_(◊));
       , σ ([x,∂] + 1/4 [σ,σ]_(◊))
     ) vec(ϕ,ψ)

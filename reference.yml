@@ -65,3 +65,17 @@ ref-14:
 ref-15:
   title: Lectures on Quantum Mechanics, A Primer for Mathematicians
   author: P.L. Bowers
+
+ref-16:
+  url: https://physics.stackexchange.com/a/716202/526709
+
+ref-17:
+  title: Quantum Field Theory
+  author: D. Tong
+  url: https://www.damtp.cam.ac.uk/user/tong/qft.html
+  date: 2025-06-28
+
+ref-18:
+  title: Quantum Theory, Groups and Representations: An Introduction
+  author: P. Woit
+  url: https://www.math.columbia.edu/~woit/QMbook/qmbook-latest.pdf

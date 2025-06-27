@@ -191,7 +191,7 @@ for $#spacetime-momentum-spinor$
   $
     det^(⊙ * 2)(⨀^(* 2)(v,w),⨀^(* 2)(v,w)) = - 1/2^3 |det(v,w)|^2
   $
-  cf. #link(<Pauli-matrix>)[]
+  cf. #link(<Pauli-matrix>)[] 
   $
     mat(delim: #none, augment: #(hline: (1,2,3,4,5), vline : 2 , stroke: rgb("#1c1c1c")),
     v , w , ⨀^(* 2) (v,w) ;
@@ -315,7 +315,7 @@ $
   p_0 = 1/2 Re(v_1 w_1^* + v_2 w_2^*) \
   p_1 = 1/2 Re(v_1 w_1^* - v_2 w_2^*) \
   p_2 = 1/2 Re(v_1 w_2^* + v_2 w_1^*) \
-  p_3 = 1/2 Im(v_1 w_2^* - v_2 w_1^*)
+  p_3 = 1/2 Im(v_1 w_2^* + v_2 w_1^*)
 $
 #tag("parity") 
 #indent[  
@@ -376,8 +376,6 @@ $dim = 2$ ==> determinant reversal is the same as trace reversal
 
   Direct matrix multiplication without parity will give the square root of the $ℝ^4$ metric, with $σ_μ^2 = 𝟙$, $σ_μ^(-1) = σ_μ$
 ]
-Does this make it possible for the spacetime momentum spin representation to be connected to the concept of classical fermions? Spinors belong to the light cone projection $ℂℙ^1$. If $#p$ is on the light cone, then its square $1/2(#p^◊ #p + #p #p^◊) = g(#p,#p) 𝟙 = 0$. This seems to be related to the Pauli exclusion principle. But note that, in general, $g(#p,#p') != 0$ unless $#p,#p'$ are collinear (#link(<signature-of-2d-subspace-of-spacetime>)[]). Therefore, the result of this multiplication, $g(#p,#p') 𝟙 ≃ vec(g(#p,#p'),0,0,0)$, will not be on the light cone. If you want you can extend it to Clifford algebra 
-
 #tag("square-root-of-Lorentz-Lie-algebra") "square root" of spacetime Lie-algebra
 #indent[
   $ [1/2 σ_(μ), 1/2 σ_(ν)]_(◊) := 1/4(σ_(μ)^◊ σ_(ν) - σ_(ν)^◊ σ_(μ)) ≃ L_(μ ν) $ 

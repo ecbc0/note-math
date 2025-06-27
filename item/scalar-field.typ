@@ -160,7 +160,7 @@ $
 ]
 #tag("unitary-representation-KG-field") 
 #indent[
-  对于 $L^2$ 叠加自由场场, 有 $L^2$ 内积, 且 $SO(1,3) ⋊ ℝ^(1,3)$ invariant. 保持二次型蕴含保持内积
+  对于 $L^2$ 叠加自由场, 有 $L^2$ 内积, 且 $SO(1,3) ⋊ ℝ^(1,3)$ invariant. 保持二次型蕴含保持内积
   
   平移 $x -> x + a$ 使得 $|a(p) exp(p a #i)|^2 = |a(p)|^2$
   

@@ -199,7 +199,16 @@ Should this quantity be "particle number density" or "probability density" or "c
 ]
 #tag("quamtum-operator-motivation") 
 #indent[
-  Galileo boost $x + v t, v in ℝ^3_"boost"$ gives the transformation of the wave function $ψ$ as $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, the δ action of this action is the operator $#i/ℏ (m #x - t #p)$
+  The derivation of the behavior of the Schrodinger wave function under Galileo transformation, in brief, assumes that in addition to the non-relativistic space-time coordinate transformation $(t',x') = (t + Δ t, R x + v t + Δ x)$, it is also assumed that the wave function changes phase $ψ(t,x) ⇝ e^(#i/ℏ f(t',x')) ψ(t',x')$, the result will be (@ref-16)
+  
+  $
+    f(t',x') &= - m v ⋅ x' + 1/2 m v^2 t' \
+    &= - m v (R x + v t + Δ x) + 1/2 m v^2 (t + Δ t)
+  $
+
+  *Question* Simplified calculations and better motivated explanations for the phase transformation? Perhaps it can be related to the use of static energy phase when KG eq is approximated to Schrodinger eq. In short, neither Schrodinger eq nor electromagnetic field are purely Galileo transformation invariant.
+  
+  Galileo boost $x + v t, v in ℝ^3_"boost"$ gives the transformation of the wave function $ψ$ as $e^(- #i/ℏ (m v x + 1/2 m v^2 t)) ψ(t,x + v t)$, the δ action of this action is the operator $#i/ℏ (t #p - m #x)$
 
   Time translation $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamiltonian
 
@@ -209,7 +218,7 @@ Should this quantity be "particle number density" or "probability density" or "c
 
   Phase $e^(#i ℏ θ) ψ, e^(#i ℏ θ) in #U (1)$ -> δ action $#i ℏ 𝟙$
 
-  For QM in $ℝ^1$ space, the Lie bracket of boost and spatial translation $[#i/ℏ (m #x - t #p), #i/ℏ #p] = - m/ℏ^2 [#x,#p] = - m #i/ℏ 𝟙$, or equivalently $[#x,#p] = #i ℏ 𝟙$
+  For QM in $ℝ^1$ space, the Lie bracket of boost and spatial translation $[#i/ℏ (t #p - m #x), #i/ℏ #p] = m/ℏ^2 [#x,#p] = m #i/ℏ 𝟙$, or equivalently $[#x,#p] = #i ℏ 𝟙$
 ]
 #tag("motivation-of-eigenstate") 
 #indent[

@@ -16,3 +16,4 @@ Laplacian-of-tensor-field
 Einstein-metric
 interaction
 harmonic-oscillator-quantization
+spinor-field-misc

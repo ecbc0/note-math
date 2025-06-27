@@ -199,7 +199,16 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 ]
 #tag("quamtum-operator-motivation") 
 #indent[
-  Galileo boost $x + v t, v in ℝ^3_"boost"$ 给出波函数 $ψ$ 的变换 $e^(#i/ℏ (m v x - 1/2 m v^2 t)) ψ(t,x + v t)$, 此 action 的 δ action 是算子 $#i/ℏ (m #x - t #p)$
+  Schrodinger wave function 在 Galileo 变换下的行为的推导, 简要地说, 是假设非相对论时空的换坐标 $(t',x') = (t + Δ t, R x + v t + Δ x)$ 之余, 还假设波函数改变相位 $ψ(t,x) ⇝ e^(#i/ℏ f(t',x')) ψ(t',x')$, 结果将会是 (@ref-16)
+  
+  $
+    f(t',x') &= - m v ⋅ x' + 1/2 m v^2 t' \
+    &= - m v (R x + v t + Δ x) + 1/2 m v^2 (t + Δ t)
+  $
+
+  *Question* 简化计算以及相位变换使用的更好的动机解释? 也许能联系到 KG eq 近似到 Schrodinger eq 时的静态能量相位的使用. 总之, Schrodinger eq 和电磁场都不是纯 Galileo 变换不变的
+  
+  Galileo boost $x + v t, v in ℝ^3_"boost"$ 给出波函数 $ψ$ 的变换 $e^(- #i/ℏ (m v x + 1/2 m v^2 t)) ψ(t,x + v t)$, 此 action 的 δ action 是算子 $#i/ℏ (t #p - m #x)$
 
   时间平移 $t + a, a in ℝ_"time"$ -> δ action $∂_t = - #i/ℏ #H$, Hamiltonian
 
@@ -209,7 +218,7 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 
   相位 $e^(#i ℏ θ) ψ, e^(#i ℏ θ) in #U (1)$ -> δ action $#i ℏ 𝟙$
 
-  对于 $ℝ^1$ 空间的 QM, boost 和空间平移的 Lie bracket $[#i/ℏ (m #x - t #p), #i/ℏ #p] = - m/ℏ^2 [#x,#p] = - m #i/ℏ 𝟙$, 或等价地 $[#x,#p] = #i ℏ 𝟙$
+  对于 $ℝ^1$ 空间的 QM, boost 和空间平移的 Lie bracket $[#i/ℏ (t #p - m #x), #i/ℏ #p] = m/ℏ^2 [#x,#p] = m #i/ℏ 𝟙$, 或等价地 $[#x,#p] = #i ℏ 𝟙$
 ]
 #tag("motivation-of-eigenstate") 
 #indent[

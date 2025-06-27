@@ -19,7 +19,7 @@ This commutation relation is partially similar to $so(3)$ complexification eigen
 
 Complexify to get the characteristic operator of $[#H,*]$, obtaining #tag("ladder-operator")
 $
-  #a _ ± &= #x ∓ #i/(m ω) #p = (#x ∓ ℏ/(m ω) (#d)/(#d x)) \
+  #a _ ± &= (m ω)/ℏ #x ∓ #i/ℏ #p = ((m ω) / ℏ #x ∓ (#d)/(#d x)) \
   #a _ ± ^† &= #a _ ∓ \
   [#H, #a _ ±] &= ± ℏ ω #a _ ±
 $
@@ -40,7 +40,7 @@ Calculate the action of the $#H$ operator, obtaining the lowest energy of $1/2 �
 
 high order energy states (normalized)
 $
-  ψ_n = 1/(n!)^(1/2) (1/2 (m ω)/ℏ)^(n/2) #a _ + ^n ψ
+  ψ_n = 1/(n!)^(1/2) (2 (m ω)/ℏ)^(-n/2) #a _ + ^n ψ
 $ 
 Energy is $E_n = (1/2 + n) ℏ ω$
 
@@ -69,10 +69,10 @@ It can be proven that this $ℕ$ eigenstate series orthogonally expands $L^2$
 ]
 The quadratic form interpretation of the $L^2$ expansion coefficients $sum c_n ψ_n, sum |c_n|^2 = 1$ is the probability in $ψ_n$. The expected energy is $⟨ #H ⟩ = sum |c_n|^2 E_n$
 
-In addition to making the eigenvalues of $#H$ uniformly spaced, the ladder operator also satisfies $1/2 [#a _ + , #a _ -] = ℏ/(m ω) 𝟙$, so that it can correspond to 
+In addition to causing the eigenvalues of $#H$ to be uniformly spaced, the ladder operators also satisfy $1/2 [#a _ + , #a _ -] = (m ω)/ℏ 𝟙$, which allows them to correspond to 
 - metric symmetric tensor space $#a _ + (ϕ) = ϕ ⊙, #a _ - (ϕ) = (ϕ ⊙)^†, [#a _ + (ϕ), #a _ - (ϕ)] = ⟨ ϕ , ϕ ⟩ 𝟙$ 
 - symmetric polynomial space $#a _ + = z, #a _ - = (#d)/(#d z)$
-Also satisfies $1/2 {#a _ + , #a _ -} = (1/2 m ω^2)^(-1) #H$
+They also satisfy $1/2 {#a _ + , #a _ -} = (ℏ/(2 m))^(-1) #H$
 
 Since it is not $[#a _ + , #a _ -] ∼ #H$, the situation for different states to $so(3)$ complexified eigenvalue technique
 
@@ -138,4 +138,89 @@ For time only depending on the difference $t_1 - t_0$
   $
   $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
 ]
-*Question* Does the Dirac field have a harmonic oscillator model?
+Regarding field quantization
+
+recall #link(<Klein--Gordon-equation>)[] Consider the plane wave solution
+$
+  (∂_t^2 - ∂_x^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0 \
+  (∂_t^2 + p^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0
+$
+If we ignore plane waves, even if we might lose accuracy, we get an ODE
+$
+  (∂_t^2 + p^2 + m^2) ϕ = 0
+$
+This is the $ℂ$-valued point particle harmonic oscillator equation, with frequency $ω = E = p_0 = (p^2 + m^2)^(1/2)$
+
+Then the point particle harmonic oscillator can be quantized
+
+recall #link(<linear-superposition-of-KG-eq>)[] $L^2$ superposition of KG plane waves on the hyperboloid $ℍ𝕪^3 = {p^2 = m^2}$
+$ 
+  ϕ(t, x) = integral_(ℍ𝕪^3) #d p  
+  (
+    a(p,#i) e^(E t #i) e^(- p x #i) 
+    + a(p,-#i) e^(- E t #i) e^(p x #i)
+  )
+$
+*Question* Homomorphize the quantum harmonic oscillator of point particles to the quantum harmonic oscillator of the KG field, with $L^2 (ℍ𝕪^3,ℂ)$ coefficient constraint (Sobolev), the coefficient constraint of multiple升降 corresponds to $L^2$ symmetric tensors, the entire space is $⨁_(n in ℕ) ⨀^n L^2 (ℍ𝕪^3, L^2(ℂ,ℂ))$ (where $L^2(ℂ,ℂ)$ is the space of $ℂ$ harmonic oscillator quantization)
+
+*Question* Is this tensor based on the $L^2 (ℍ𝕪^3,ℂ)$ module? 
+
+Vacuum $0$ is something lower than zero order
+
+The energy operator of the KG field quantum harmonic oscillator can also be expressed in the form of KG field operator + energy of the KG field, even if this is not calculating the energy of the KG field (field operator after differential plane wave expansion) 
+$
+  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) + #a (p,#i) #a (p,#i)^†) 
+
+  = integral_(ℝ^3) #d x 1/2 (∂_t ϕ^† ∂_t ϕ + ∂_x ϕ^† ∂_x ϕ + m^2 ϕ^† ϕ)
+$
+For the Dirac field, it seems that there is no need to do what the KG field does, because "once" quantization already exists, but it is finite-dimensional, a representation comes from the two eigenvalues of $su(2), ℂ^2$ #link(<Pauli-matrix>)[] (@ref-18, p.305--308)
+
+- $#H = 1/2 σ_1 = 1/2 mat(1 ;, -1) \ 
+  #i #H in su(2)$
+  
+- $#H vec(1,0) &= 1/2 vec(1,0) \
+  #H vec(0,1) &= - 1/2 vec(0,1)$
+  
+- $#a _(±) &= 1/2 (σ_2 ± 1/#i σ_3) \ 
+  #a _+ &= mat(,1;0) \ 
+  #a _- &= mat(,0;1)$
+
+- $(#a _(±))^† = a_(∓)$
+
+- $(#a _(±))^2 = 0$
+
+- $#a _+ vec(0,1) = vec(1,0) \
+  #a _- vec(1,0) = vec(0,1)$
+
+- $1/2 {#a _+,#a _-} = 𝟙$
+
+- $1/2 [#a _+,#a _-] = #H$
+
+- $[#H, #a _(±)] = ± #a _(±)$
+
+After adding parity, it is $ℂ^2 ⊕ ℂ^(2 ◊)$
+
+#let p = spin($p$)
+
+recall #link(<linear-superposition-of-Dirac-eq>)[] $L^2$ superposition of Dirac plane waves on $ℍ𝕪^3$
+$
+  limits(integral)_(ℍ𝕪^3) #d p
+    (vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ)(p) e^(- p x #i) + vec(#p^(◊ 1/2) η, - #p^(1/2) η)(p) e^(p x #i))
+$
+*Question* Homomorphically map it to the quantum field of the Dirac field, plus $L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$ coefficient restriction (Sobolev), the coefficient restriction of multiple raising and lowering corresponds to $L^2$ alternating tensor, the entire space is $⨁_(n in ℕ) ⋀^n L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$
+
+*Question* Is this tensor based on the $L^2 (ℍ𝕪^3,ℂ)$ module? 
+
+Vacuum $0$ is something lower than zero order
+
+The energy operator of the Dirac field quantum field can also be expressed in the form of Dirac field operator + energy of the Dirac field, even if this is not calculating the energy of the Dirac field
+$
+  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) - #a (p,#i) #a (p,#i)^†) 
+
+  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† #i ∂_0 vec(ϕ,ψ) \
+
+  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† mat(
+      #i #spin-d _x , m 𝟙 ;
+      m 𝟙 , - #i #spin-d _x
+    ) vec(ϕ,ψ)
+$

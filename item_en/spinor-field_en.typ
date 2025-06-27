@@ -161,10 +161,35 @@ If the couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ is replaced by $-mat(,n 𝟙;
 
 *Question* For any $A ∈ SL(2,ℂ)$, the invariant matrix $mat(A ;, (A^†)^(-1))^† mat(M_1,M_2;M_3,M_4) mat(A ;, (A^†)^(-1)) = mat(A^† M_1 A, A^† M_2 (A^†)^(-1); A^(-1) M_3 A, A^(-1) M_4 (A^†)^(-1)) = mat(M_1,M_2;M_3,M_4)$ is probably only $mat(,n 𝟙;m 𝟙),m,n ∈ ℂ$
 
-#tag("Dirac-eq-plane-wave") Plane wave solution $vec(Φ, Ψ) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^◊) - m mat(,𝟙;𝟙)) vec(Φ,Ψ) = 0$ 
+#tag("Dirac-eq-plane-wave") 
+#indent[
+  Plane wave solution $vec(Φ, Ψ) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^◊) - m mat(,𝟙;𝟙)) vec(Φ,Ψ) = 0$ 
   
-The latter is a linear equation, so the solution is not difficult. The solution space is two-dimensional, and the solution can be written as $vec(Φ,Ψ) = vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ), ξ ∈ ℂ^2$
+  The latter is a linear equation, so the solution is not difficult. The solution space is two-dimensional, and the solution can be written as $vec(Φ,Ψ) = vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ), ξ ∈ ℂ^2$ (@ref-17, p.100)
+  $
+    mat( #p ;,#p^◊) vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ) 
+    
+    &= vec( 
+      #p^(1/2) (#p^(1/2) #p^(◊ 1/2)) ξ ,
+      #p^(◊ 1/2) (#p^(◊ 1/2) #p^(1/2)) ξ 
+    ) \
 
+    &= m vec( 
+      #p^(1/2) ξ ,
+      #p^(◊ 1/2) ξ 
+    ) \
+  c
+    &= m mat(,𝟙;𝟙) vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ) 
+  $
+
+  The conjugate phase plane wave $vec(u,v) e^(#i p x)$ satisfies the condition $(mat( #p ;,#p^◊) + m mat(,𝟙;𝟙)) vec(u,v) = 0$, and the solution can be written as $vec(Φ,Ψ) = vec(#p^(◊ 1/2) ξ, - #p^(1/2) ξ), ξ ∈ ℂ^2$
+
+  Similar to #link(<linear-superposition-of-KG-eq>)[the scalar field case], $L^2$ superposition can be performed on the hyperboloid $ℍ𝕪^3$ where the momentum lies. #tag("linear-superposition-of-Dirac-eq")
+  $
+    limits(integral)_(ℍ𝕪^3) #d p
+      (vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ)(p) e^(- p x #i) + vec(#p^(◊ 1/2) η, - #p^(1/2) η)(p) e^(p x #i))
+  $
+]
 #tag("squrae-root-of-spacetime-momentum-spinor-representation") 
 #indent[
   Although it might be possible to use the eigenvalues of the Hermite matrix $#p$ ($p_0 ± (p_0^2 - m^2)^(1/2)$), we will calculate it directly here. let $#p = #q^2$ or
@@ -220,71 +245,14 @@ The latter is a linear equation, so the solution is not difficult. The solution 
   #indent[
     $p = (p_0,p_1,0,0), p_0 > 0$ then $#p^(1/2) = mat((p_0 + p_1)^(1/2);,(p_0 - p_1)^(1/2)), #p^(◊ 1/2) = mat((p_0 - p_1)^(1/2);,(p_0 + p_1)^(1/2))$
     
-    If $p_1 = 0$ then $vec(#p^(1/2) ξ, #p^(◊ 1/2) ξ) = (p_0)^(1/2) vec(ξ,ξ)$
+    If $p_1 = 0$, then $vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ) = (p_0)^(1/2) vec(ξ,ξ)$
   ]
-
-  $vec(#p^(1/2) ξ, #p^(◊ 1/2) ξ)^† vec(#p^(1/2) ξ, #p^(◊ 1/2) ξ) &= ξ^† (#p + #p^◊) ξ \
-  &= (2 p_0) |ξ|^2 \
-  &= (tr #p) |ξ|^2$ 
 ]
 
 1,3 metric square root or $∆$ square root $mat(#p^◊;,#p) mat(#p ;,#p^◊) = (det #p) mat(𝟙;,𝟙)$. But you can also use $#p ⇝ mat(,#p^◊;#p)$ to get the true square $mat(,#p^◊;#p)^2 = (det #p) 𝟙$
 
 Since $mat(#p ;,#p^◊)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^◊) ⇝ mat(,#p ; #p^◊)$ does not come from $GL(4,ℂ)$ coordinate change $T^(-1) ⋅ M ⋅ T$
 
-#tag("square-root-of-harmonic-oscillator")
-#indent[
-  Inspired by the treatment of KG field quantization
-  $
-    (∂_0^2 - ∂_x^2 + m^2) e^((p_0(p) x_0 - p x) (± #i)) &= 0 \
-    (∂_0^2 + p^2 + m^2) e^((p_0(p) x_0 - p x) (± #i)) &= 0
-  $
-  We can also define a square root of a point particle complex harmonic oscillator.
-
-  Dirac plane wave $vec(u,v) e^(- #i p x)$ with $p^2 = m^2$ and $(mat( #p ;,#p^◊) - m mat(,𝟙;𝟙)) vec(u,v) = 0$
-
-  $
-    (mat(#i #spin-d^◊;,#i #spin-d) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0 \
-
-    (mat(#i ∂_0 ; , #i ∂_0) + mat(#p ;,-#p) - m mat(,𝟙;𝟙)) vec(u,v) e^(- #i p x) &= 0
-  $
-  Lagrangian $L(vec(ϕ,ψ), ∂_0 vec(ϕ,ψ)) = vec(ϕ,ψ)^† mat(#i ∂_0 + #p, -m 𝟙 ; -m 𝟙 ,#i ∂_0 - #p) vec(ϕ,ψ)$
-
-  The conditions satisfied by the $- #i$ plane wave $vec(u,v) e^(#i p x)$ are
-  $
-    (mat( - #p ;,#p) + m mat(,𝟙;𝟙)) vec(u,v) = 0
-  $
-  Write the equation of the harmonic oscillator square root as a constant coefficient ODE
-  $
-    ∂_0 vec(ϕ,ψ)  = -#i mat(
-      -#p , m 𝟙 ;
-      m 𝟙 , #p
-    ) vec(ϕ,ψ)
-  $
-  Perform $exp$ transformation. Use $mat(
-    -#p , m 𝟙 ;
-    m 𝟙 , #p
-  )^2 = (p^2 + m^2) mat(𝟙;,𝟙) = E^2 mat(𝟙;,𝟙)$
-  The series rule is
-  $
-    2n &-> ((-#i E t)^(2n))/((2n)!) mat(𝟙;,𝟙) \
-    &-> cos (E t) * \
-
-    2n+1 &-> ((-#i E t)^(2n+1))/((2n+1)!) 1/E mat(
-      -#p , m 𝟙 ;
-      m 𝟙 , #p
-    ) \
-    &-> - #i sin(E t) *
-  $
-  The result is
-  $
-    dmat(
-      augment: #(hline: 1, vline: 1, stroke: rgb("#676767")),
-      cos(E t) 𝟙 + #i sin(E t) #p/E , - #i sin(E t) m/E 𝟙 ;
-      - #i sin(E t) m/E 𝟙 , cos(E t) 𝟙 - #i sin(E t) #p/E
-    )
-  $
-]
 #tag("motivation-of-gauge-field") 
 #indent[
   Ignored some issues
