@@ -1,5 +1,5 @@
-#import "style.typ": *
-#show: style
+//#import "style.typ": *
+//#show: style
 
 // see .vscode/color.code-snippets
 
@@ -112,7 +112,7 @@
 
 // other
 
-#let cvt-prod = rotate(90deg, $⧀$)
+#let cvt-prod = $⧀$ // shiroa 543c1f4 problem
 #let lim = math.limits(text("lim", fill: rgb("#0056e1")))
 
 #let And = math.and.big

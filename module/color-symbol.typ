@@ -1,5 +1,5 @@
-#import "style.typ": *
-#show: style
+//#import "style.typ": *
+//#show: style
 
 // sample color, see .vscode/color.code-snippets
 

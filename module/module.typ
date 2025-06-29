@@ -1,7 +1,7 @@
-#import "style.typ": * 
+#import "style-html.typ": * 
 #import "color-symbol.typ": * 
 #import "math-var.typ": * 
-#import "function.typ": *
+#import "function-html.typ": *
 #import "link-setting.typ": * 
 
 #let module(body) = {
