@@ -40,7 +40,7 @@ Rational number $ℚ$
 ]
 Real number $ℝ$
 #indent[
-  One intuition of real numbers is length
+  One intuition of real numbers is length. Or contain rational number + linear order + order completeness
 
   Given the intuitiveness of real numbers, we can assume that it exists and use many axioms to define real numbers i.e. assume a true proposition. But you can also "recover" real numbers from rational numbers
 ]

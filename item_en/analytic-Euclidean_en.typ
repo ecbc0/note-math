@@ -396,7 +396,7 @@ Mean Value Theorem compact uniform linear control ver. + compact partition unifo
 ]
 let power series $sum A_n (v^n)$
 
-#tag("convergence-domain") domain of convergence := ${v in 𝕂^d : lim_(N -> ∞) sum_(n=0)^N A_n (v^n) "converge"}$
+#tag("convergence-domain") domain of convergence at one point := ${v in 𝕂^d : lim_(N -> ∞) sum_(n=0)^N A_n (v^n) "converge"}$
 
 Calculating the coefficients after switching the base point of the power series uses the exchange of summation
 
@@ -564,6 +564,8 @@ Weaker net control
 
   *Example* including the truncated polynomial approximation of $A$, i.e. Taylor polynomial by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
 ]
+As for the topology of analytic-space, the intuition is, pointwise use distance of power-series, then for global domain, use compact-open topology technique that similar to what topology of continuous function space use
+
 For symmetry considerations, the definition of analytic should not depend on the specific power series expansion base point
 
 Comparison of power series distance control at different base points
@@ -671,3 +673,9 @@ in analytic space and its net
 The properties of singularities within connected components are invariant under analytic homeomorphism
 
 #tag("homotopy-analytic") analytic #link(<homotopy>)[homotopy]
+
+#tag("power-series-analytic-equivalent") Analytic equivalent power series := Two power series come from the power series expansion of the same analytic function at different points
+
+#tag("power-series-analytic-homotopy-equivalent") Analytic homotopy equivalent power series := Two power series come from the power series expansion of the same homotopy class of analytic function at different points
+
+And then we can define the non-equivalent version property between power-series 

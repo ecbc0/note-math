@@ -395,7 +395,7 @@ $ f(b) - f(a) = integral_a^b f'(x) #d x $
 ]
 let 幂级数 $sum A_n (v^n)$
 
-#tag("convergence-domain") 收敛域 := ${v in 𝕂^d : lim_(N -> ∞) sum_(n=0)^N A_n (v^n) "converge"}$
+#tag("convergence-domain") 在一点的收敛域 := ${v in 𝕂^d : lim_(N -> ∞) sum_(n=0)^N A_n (v^n) "converge"}$
 
 计算幂级数的切换基点后的系数使用了求和的交换
 
@@ -563,6 +563,8 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 
   *Example* 包括 $A$ 的截断多项式逼近, i.e. Taylor 多项式 by $sum_(n = 0 .. ∞) |A_n| r^n < ∞ ==> lim_(N -> ∞) sum_(n = N .. ∞) = 0$
 ]
+至于解析函数空间的拓扑, 直观是, 逐点用幂级数之间的距离, 然后全局定义域用类似连续函数空间所使用的 compact-open topology 技术
+
 出于对称性的考虑, 解析的定义应该不依赖于特定的幂级数展开基点
 
 不同基点的幂级数距离控制对比
@@ -670,3 +672,9 @@ in 解析空间及其网
 连通分支内奇点的性质在解析同胚下不变
 
 #tag("homotopy-analytic") 解析 #link(<homotopy>)[同伦]
+
+#tag("power-series-analytic-equivalent") 解析等价的幂级数 := 两个幂级数来自同一个解析函数在不同点的幂级数展开
+
+#tag("power-series-analytic-homotopy-equivalent") 解析同伦等价的幂级数 := 两个幂级数来自同一个解析函数同伦类在不同点的幂级数展开
+
+然后可以幂级数之间的定义不等价版本的性质
