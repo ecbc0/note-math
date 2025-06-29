@@ -14,6 +14,8 @@
     cjk-latin-spacing: auto,
   )
 
+  set underline(offset: .1em, stroke: .05em, evade: false)
+
   show strong: set text(fill: rgb("#2f00ff"))
 
   show emph: set text(

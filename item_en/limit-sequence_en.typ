@@ -147,7 +147,7 @@ _Proof_
     &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
     &= sum_(i < j) (b_i - b_j)^2 
   $
-  So at $a_1 = ⋯ = a_n$ the first derivative is zero and the second derivative is positive definite, the function will not become smaller nearby, so that's the minimum, and it's $0$
+  So at $a_1 = ⋯ = a_n$ the first derivative is zero and the second derivative is (semi) positive definite, the function will not become smaller nearby, so that's the minimum, and it's $0$
 ]
 #tag("best-multiplication-decomposition") Optimal multiplication decomposition 
 #indent[

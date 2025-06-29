@@ -75,9 +75,6 @@
       ⟨ ϕ, #i #spin-d^◊ ψ ⟩_(L^2) = ⟨ #i #spin-d^◊ ϕ, ψ ⟩_(L^2)
     $
   ]
-
-
-
 #tag("massless-spinor-Lagrangian") *alias* #tag("Weyl-Lagrangian")
 #indent[
   $ ϕ^† #i #spin-d ^◊ ϕ $
@@ -178,10 +175,9 @@ If the couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ is replaced by $-mat(,n 𝟙;
       #p^(1/2) ξ ,
       #p^(◊ 1/2) ξ 
     ) \
-  c
+  
     &= m mat(,𝟙;𝟙) vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ) 
   $
-
   The conjugate phase plane wave $vec(u,v) e^(#i p x)$ satisfies the condition $(mat( #p ;,#p^◊) + m mat(,𝟙;𝟙)) vec(u,v) = 0$, and the solution can be written as $vec(Φ,Ψ) = vec(#p^(◊ 1/2) ξ, - #p^(1/2) ξ), ξ ∈ ℂ^2$
 
   Similar to #link(<linear-superposition-of-KG-eq>)[the scalar field case], $L^2$ superposition can be performed on the hyperboloid $ℍ𝕪^3$ where the momentum lies. #tag("linear-superposition-of-Dirac-eq")

@@ -149,15 +149,15 @@
       
       Extract $l! , 1/(k!) , (1/(j!))^(i_j)$
       
-      Place in $binom(k,i_1,...,i_l) = (k!)/(i_1! ⋯ i_l!)$ 
+      Place in $binom(k,i_1,...,i_l) = (k!)/(i_1 ! ⋯ i_l !)$ 
       
-      Get $(l!)/((1!)^(i_1) ⋅ i_1! ⋯ (l!)^(i_l) ⋅ i_l!)$ 
+      Get $(l!)/((1!)^(i_1) ⋅ i_1 ! ⋯ (l!)^(i_l) ⋅ i_l !)$ 
       (this is _not_ $(l!)/((1 ⋅ i_1)! ⋯ (l ⋅ i_l)!) = binom(l , 1 ⋅ i_1 ,…, l ⋅ i_l)$)
       $
         #d^l (f ∘ g) = 
         sum_(k = 1 ,…, l) 
         sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
-        (l!)/((1!)^(i_1) ⋅ i_1! ⋯ (l!)^(i_l) ⋅ i_l!) 
+        (l!)/((1!)^(i_1) ⋅ i_1 ! ⋯ (l!)^(i_l) ⋅ i_l !) 
         #d^k f (#d^1 g) ^(i_1) ⋯ (#d^l g)^(i_l)
       $
     ]

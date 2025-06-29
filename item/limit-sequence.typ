@@ -147,7 +147,7 @@ _Proof_
     &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
     &= sum_(i < j) (b_i - b_j)^2 
   $
-  所以 $a_1 = ⋯ = a_n$ 处一阶微分零 and 二阶微分正定, 函数在附近不会变小, 所以那里是最小值, 且是 $0$
+  所以 $a_1 = ⋯ = a_n$ 处一阶微分零 and 二阶微分 (半) 正定, 函数在附近不会变小, 所以那里是最小值, 且是 $0$
 ]
 #tag("best-multiplication-decomposition") 最优乘法分解 
 #indent[

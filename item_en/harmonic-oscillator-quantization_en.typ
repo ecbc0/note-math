@@ -20,7 +20,7 @@ This commutation relation is partially similar to $so(3)$ complexification eigen
 Complexify to get the characteristic operator of $[#H,*]$, obtaining #tag("ladder-operator")
 $
   #a _ ± &= (m ω)/ℏ #x ∓ #i/ℏ #p = ((m ω) / ℏ #x ∓ (#d)/(#d x)) \
-  #a _ ± ^† &= #a _ ∓ \
+  (#a _ ±) ^† &= #a _ ∓ \
   [#H, #a _ ±] &= ± ℏ ω #a _ ±
 $
 This commutation relation indicates that $#H$ has eigenvalues with uniform spacing $ℏ ω$

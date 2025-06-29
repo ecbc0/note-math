@@ -117,7 +117,7 @@ The "matrix" representation of $𝕆$ needs to be handled separately, the compos
   $
     dmat( delim: #none ,
       ⨀^(* 2) ℂ^2	,⟶,	ℝ^(1,3) ;
-      #spacetime-momentum-spinor	,⟿,	#spacetime-momentum
+      #spacetime-momentum-spinor ,⟿, #spacetime-momentum
     )
   $
   metric
@@ -184,8 +184,8 @@ for $#spacetime-momentum-spinor$
   $
     &quad det^(⊙ * 2)(⨀^(* 2)(v_1,w_1),⨀^(* 2)(v_2,w_2)) \
 
-    &= 1/2^4 \(det(v_1,v_2) det(w_1^*,w_2^*) + det(w_1,v_2) det(v_1^*,w_2^*) \
-    &quad + det(v_1,w_2) det(w_1^*,v_2^*) + det(w_1,w_2) det(v_1^*,v_2^*)\)
+    &= 1/2^4 (det(v_1,v_2) det(w_1^*,w_2^*) + det(w_1,v_2) det(v_1^*,w_2^*) \
+    &quad + det(v_1,w_2) det(w_1^*,v_2^*) + det(w_1,w_2) det(v_1^*,v_2^*))
   $
   quadratic-form is
   $

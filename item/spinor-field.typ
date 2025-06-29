@@ -75,9 +75,6 @@
       ⟨ ϕ, #i #spin-d^◊ ψ ⟩_(L^2) = ⟨ #i #spin-d^◊ ϕ, ψ ⟩_(L^2)
     $
   ]
-
-
-
 #tag("massless-spinor-Lagrangian") *alias* #tag("Weyl-Lagrangian")
 #indent[
   $ ϕ^† #i #spin-d ^◊ ϕ $
@@ -178,10 +175,9 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
       #p^(1/2) ξ ,
       #p^(◊ 1/2) ξ 
     ) \
-  c
+
     &= m mat(,𝟙;𝟙) vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ) 
   $
-
   共轭相位平面波 $vec(u,v) e^(#i p x)$ 满足的条件是 $(mat( #p ;,#p^◊) + m mat(,𝟙;𝟙)) vec(u,v) = 0$, 解可以写为 $vec(Φ,Ψ) = vec(#p^(◊ 1/2) ξ, - #p^(1/2) ξ), ξ ∈ ℂ^2$
 
   类似 #link(<linear-superposition-of-KG-eq>)[纯量场的情况], 可以对动量所在的双曲面 $ℍ𝕪^3$ 进行 $L^2$ 叠加 #tag("linear-superposition-of-Dirac-eq")

@@ -85,7 +85,7 @@
   ]
   - connected
   #indent[
-     - A closed set is a set of limit points. Define connectedness or limit connectedness based on the intuition of decomposing a set of limit points. Connected components are the optimal decomposition of a set of limit points, similar to the optimal interval decomposition of $ℝ$
+    - A closed set is a set of limit points. Define connectedness or limit connectedness based on the intuition of decomposing a set of limit points. Connected components are the optimal decomposition of a set of limit points, similar to the optimal interval decomposition of $ℝ$
 
     - Discuss the possibility of defining homotopy classes as limit connected components of continuous function spaces
   ]
