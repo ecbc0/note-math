@@ -35,7 +35,7 @@ $
   & ⋅ : (ℝ^n)^2 -> ℝ^n \
   & "property-algebra"
   $
-  *Example* #tag("complex-number") 复数. $x + y #i, x' + y' #i ∈ ℂ$
+  #tag("complex-number") *Example* 复数. $x + y #i, x' + y' #i ∈ ℂ$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i^2 = -1$ or $1/#i = -#i$ 和分配律
   $
@@ -45,7 +45,7 @@ $
 
   也参见 #link(<complex-numbler-geometric-meaning>)[复数的直观解释]
 
-  *Example* #tag("split-complex-number") 分裂复数. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
+  #tag("split-complex-number") *Example* 分裂复数. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   加法和 $ℝ^2$ 相同. 乘法使用 $#i-split^2 = 1$ or $1/#i-split = #i-split$ 和分配律
   $
@@ -117,7 +117,7 @@ $ℝ^n$ 代数结构
 
 新虚数元构造方法
 #indent[
-  *Example* 
+  #tag("quaternion") *Example* 
   #indent[
     在复数 $x_0 + x_1 #i _1$ with $(#i _1)^2 = -1$ 中使用新的虚数元 $#i _2$
 
@@ -147,7 +147,7 @@ $ℝ^n$ 代数结构
 
   - $exp(Im(ℍ_"split"))$ give $#U (1,ℍ_"split") ≃ ℚ^(2,2)(1) ↠ SO(1,2)$
   
-  *Example* 在四元数 $x_0 + x_1 #i _1 + x_2 #i _2 + x_3 #i _3$ 中使用新的虚数元 $#i _4$
+  #tag("octonion") *Example* 在四元数 $x_0 + x_1 #i _1 + x_2 #i _2 + x_3 #i _3$ 中使用新的虚数元 $#i _4$
   #indent[
     定义其它虚数元 
     $
@@ -173,13 +173,13 @@ $ℝ^n$ 代数结构
 
   从 $ℍ$ 和虚数元结合律得到的是另一种代数 $ℍ ⊕ ℍ$, _不_满足 $|x y|^2 = |x|^2 |y|^2$
 
-  *Question* 反结合不能进一步推广到十六维及以后
+  *Question* 反结合不能进一步推广到十六维及以后?
 ]
-新虚数元构造方法并不是无坐标的, 所以我们需要考虑虚数元的 automorphism $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$. 由于保持乘法, 所以自动保持距离
+#tag("imaginary-automorphism") 新虚数元构造方法并不是无坐标的, 所以我们需要考虑虚数元的 automorphism $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$. 由于保持乘法, 所以自动保持距离
   
   *Example* for $ℂ$ it's $ℤ_2 = #O (1)$ symmetric $#i -> -#i$
 
-  *Question* 
+  *Question* (@ref-21, p.35) (@ref-22, p.85)
   - $SO(3)$ for $ℍ$
   - $G_2$ for $𝕆$. $dim G_2 = 14 < 21 = dim (SO(7))$
 

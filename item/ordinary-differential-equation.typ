@@ -21,7 +21,7 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
 
   由向量场 $v$ 生成的 exponential-of-vector-field $(exp v) (x)$ 应该是 invariant 的
 
-  $ ∂_(v(x)) (exp v) (x) = v(f(x)) $
+  $ ∂_(v(x)) (exp v) (x) = v((exp v) (x)) $
 
   向量场的 Taylor 级数 
   $ 
@@ -30,10 +30,18 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
     &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
   $
   $n+1$ polynomial like $(∂_(λ v(x)))^n λ v (x) = λ^(n+1) (∂_(v(x)))^n v (x)$
+
+  或者加上 $t$ 
+  $ 
+    (exp t v) (x) 
+    &= x + t v(x) + t^2/2! ∂_(v(x)) v(x) + t^3/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
+    &= x + sum_(n=0)^∞ t^(n+1)/((n+1)!) (∂_(v(x)))^n v (x) 
+  $
+  使得对应到 ODE $∂_t (exp t v) (x) = ∂_(v(x)) (exp t v) (x) = v((exp t v) (x))$
 ]
 *Example* 
 
-compare to the result from separable ODE in 1 dimension
+对比到一维的分离 ODE 的情况
 
 - $v(x) = A(x), A in gl(d,𝕂)$
 #indent[  
@@ -60,6 +68,10 @@ compare to the result from separable ODE in 1 dimension
   &= (exp A)(A (x)) \
   &= A(exp(A)(x)) \
   &= v(f(x))$
+
+  或者 
+  
+  $f(t,x) = (𝟙 + t A + t^2/2! A^2 + ⋯) (x) = (sum t^n/n! A^n ) (x) = (exp t A) (x)$
 
   *Example* #tag("harmonic-oscillator") 
   #indent[
@@ -104,17 +116,24 @@ compare to the result from separable ODE in 1 dimension
   $f(x) 
   &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) \
   &= sum_(m=1)^∞ x^m \
-  &= 1 - 1/(1-x)$
+  &= 1/(1-x) - 1$
 
   $#d f(x) v(x) 
   &= (1/(1-x))^2 x^2 \
   &= (x/(1-x))^2 \
   &= v(f(x))$
+
+  或者
+
+  $f(t,x) 
+  &= x + sum_(n=0)^∞ t^(n+1)/((n+1)!) (∂_(v(x)))^n v (x) \
+  &= 1/t sum_(m=1)^∞ (t x)^m \
+  &= 1/t (1/(1 - t x) - 1) \
+  &= 1/t ((t x)/(1 - t x)) \
+  &= 1/(1/x - t)$
 ]
 *Question* 
 #indent[
-  $f(0,x) = x, f(1,x) = f(x)$ 中间的 $f(t,x)$ 应该对应伸缩的向量场 $t ⋅ v(x)$ 的情况
-
   单参数同态嵌入 $f(t,x) : ℝ ↪ "Diff"$
 
   $-v$ 和初值 $y = f(x)$ 给出 $f^(-1)$. $f^(-1)(t,y) = f(-t,y)$

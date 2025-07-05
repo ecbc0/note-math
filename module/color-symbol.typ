@@ -118,8 +118,6 @@
 
   show regex("∗|′|″|⊺|†|‡|∁|◊|⟂|⊤|⋆|♭|♯"): it => text(it, fill: rgb("#006dea"))
 
-  show "Δ": it => text(it, fill: rgb("#0056e1"))
-
   /*
     ⊺ : transpose
     † : adjoint
@@ -127,6 +125,10 @@
     ◊ : parity
     ⟂ : perpendicular, orthogonal_complement
   */
+
+  show "♭": it => scale(it,140%) // noto sans mans problem? 
+
+  show "Δ": it => text(it, fill: rgb("#0056e1"))
 
   body
 }

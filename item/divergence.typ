@@ -104,7 +104,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 #tag("Stokes-theorem") 
 #indent[
-  类似于一维 #link(<fundamental-theorem-of-calculus>)[微积分基本定理]
+  类似于一维 #link(<fundamental-theorem-of-calculus>)[微积分基本定理]. 直观上, 散度和散度定理 = 高维微积分基本定理
 
   在坐标里定义 #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 其中 $Vol$ 是坐标的体积, $σ$ 是一大类型区域, 计算结果不依赖于坐标选取 
 
@@ -132,6 +132,8 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   大概需要 $n-1$ form 的某种 Sobolev 控制?
 ]
+像 Gauss--Bonnet 定理 of Euclidean metric manifold 这样的东西应该也可以用这种方法来证明. 虽然还需要继续考虑, 为什么结果是不受 metric 影响的 homology invariant Euler characteristic (差一个 $n$ 维 Euclidean 的体积因子, 以 $π$ 的幂表示)
+
 我并没有对没有边界的流形处理 Stokes 定理, 并没有定义 $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. 没有的边界流形 *Example* $ℝ^n$
 
 边界算子与外微分的对应性质

@@ -140,6 +140,12 @@ For time only depending on the difference $t_1 - t_0$
 ]
 Regarding field quantization
 
+One perspective is path integral quantization of fields.
+
+#tag("field-path-integral-quantization") *Question* Since the harmonic oscillator can perform Foureir transform path integral, why don't KG eq (or Dirac eq) similar to the harmonic oscillator eq also perform #link(<linear-superposition-of-KG-eq>)[Foureir transform] path integral?
+
+Another (?) perspective is field operator quantization of fields.
+
 recall #link(<Klein--Gordon-equation>)[] Consider the plane wave solution
 $
   (∂_t^2 - ∂_x^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0 \

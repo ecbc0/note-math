@@ -35,7 +35,7 @@ There are two ways to extend to $ℝ^n$
   & ⋅ : (ℝ^n)^2 -> ℝ^n \
   & "property-algebra"
   $
-  *Example* #tag("complex-number") Complex number. $x + y #i, x' + y' #i ∈ ℂ$
+  #tag("complex-number") *Example* Complex number. $x + y #i, x' + y' #i ∈ ℂ$
 
   Addition is the same as $ℝ^2$. Multiplication uses $#i^2 = -1$ or $1/#i = -#i$ and the distributive law
   $
@@ -43,7 +43,7 @@ There are two ways to extend to $ℝ^n$
   $
   one of motivation of complex-number or $z^2 = -1$ is the characteristic polynomial equation of #link(<harmonic-oscillator>)[] $ξ^2 + ω^2 = 0$
 
-  *Example* #tag("split-complex-number") Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
+  #tag("split-complex-number") *Example* Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   also cf. #link(<complex-numbler-geometric-meaning>)[]
 
@@ -117,7 +117,7 @@ $ℝ^n$ algebraic structure
 
 New imaginary unit construction method
 #indent[
-  *Example* 
+  #tag("quaternion") *Example* 
   #indent[
     Use a new imaginary unit $#i _2$ in the complex number $x_0 + x_1 #i _1$ with $(#i _1)^2 = -1$
 
@@ -147,7 +147,7 @@ New imaginary unit construction method
 
   - $exp(Im(ℍ_"split"))$ give $#U (1,ℍ_"split") ≃ ℚ^(2,2)(1) ↠ SO(1,2)$
   
-  *Example* Using a new imaginary unit $#i _4$ in quaternion $x_0 + x_1 #i _1 + x_2 #i _2 + x_3 #i _3$
+  #tag("octonion") *Example* Using a new imaginary unit $#i _4$ in quaternion $x_0 + x_1 #i _1 + x_2 #i _2 + x_3 #i _3$
   #indent[
     Define other imaginary units 
     $
@@ -173,13 +173,13 @@ New imaginary unit construction method
 
   What is obtained from $ℍ$ and the associative law of imaginary units is another algebra $ℍ ⊕ ℍ$, which does _not_ satisfy $|x y|^2 = |x|^2 |y|^2$
 
-  *Question* Anti-combination cannot be further extended to sixteen dimensions and beyond
+  *Question* Anti-combination cannot be further extended to sixteen dimensions and beyond?
 ]
-The new imaginary unit construction method is not coordinate-free, so we need to consider the automorphism of imaginary units $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$. Since it preserves multiplication, it automatically preserves distance
+#tag("imaginary-automorphism") The new imaginary unit construction method is not coordinate-free, so we need to consider the automorphism of imaginary units $f : Im(𝕂) -> Im(𝕂)$ with $f(x y) = f(x) f(y)$. Since it preserves multiplication, it automatically preserves distance
   
   *Example* for $ℂ$ it's $ℤ_2 = #O (1)$ symmetric $#i -> -#i$
 
-  *Question* 
+  *Question* (@ref-21, p.35) (@ref-22, p.85)
   - $SO(3)$ for $ℍ$
   - $G_2$ for $𝕆$. $dim G_2 = 14 < 21 = dim (SO(7))$
 

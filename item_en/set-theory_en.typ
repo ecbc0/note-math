@@ -428,6 +428,8 @@ If we keep constructing infinitely, does this language have an end?
   But it can also be considered that for $"type" : "type"$, as long as you don't keep judging, you can stop, and if you keep judging, you can't stop, but you can still judge every step. It's just that, it may not be possible to judge in all cases whether it should stop after a finite number of steps.
 
   However, the use of universal-type is very convenient. Therefore, it can also be used, with the additional condition that judging $"type" : "type"$ is not allowed. More generally, for example, $"type" × "type" : "type"$ is also not allowed.
+
+  The use of homomorphisms between types can bring convenience to proofs. Sometimes, calculations can derive proofs for general cases from special cases. If the proof for the special case does not use the specific properties of the special case, it is actually a hidden proof for the general case.
 ] 
 #tag("dependent-distributive") 
 #indent[

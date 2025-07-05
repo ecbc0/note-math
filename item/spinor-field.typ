@@ -87,7 +87,7 @@
 
   变分给出 linear part $integral 2 Re (Δ ϕ)^† #i #spin-d^◊ ϕ$ 
 ]
-#tag("massless-spinor-equation"), *alias* #tag("Weyl-equation")
+#tag("massless-spinor-equation") *alias* #tag("Weyl-equation")
 #indent[
   $ #spin-d^◊ ϕ = 0 $
 
@@ -282,6 +282,20 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
   似乎要同时考虑基于底流形的所有类型的 $#U (1)$ bundle type
 
   在 homotopy 意义下, $ℝ^(p,q)$ 只有一种类型的 $#U (1)$ bundle type
+]
+#tag("spinor-field-gauge-imaginary-automorphism")
+#indent[
+  虽然代价是使用 $1 + 9$ 维时空, 切空间 $ℝ^(1,9)$, 但如果考虑八元数 $𝕆$, 如果选取一个单位虚数元 $#i$ 来构造 spinor Lagrangian, 那么八元数的 #link("imaginary-automorphism")[虚数元对称群] $G_2$ 对 $#i$ 的 isotropy 导出分解 $ℂ + ℂ^3$, isotropy 群同构到 $SU(3)$, 且导出在 $SU(3)$ 在 $ℂ^3$ 上的作用. cf. (@ref-19, th.4)
+
+  注意八元数虚数元对称群 $G_2$ 不是 $#U (1,𝕆) ≃ 𝕊^7$. 所以这不是传统意义上的 group of gauge connection
+  
+  据说 $SU(3)$ 是强相互作用的规范群. 这里的八元数方法的优势是, 不再需要额外假设 $ℂ^3$ 和 $SU(3)$ 的单独存在且凭空而来地对 $ℂ^3$ 和 Dirac spinor 进行张量操作. 和 $ℂ^3$ 的张量来自 $#u (1,𝕆) ≃ Im(𝕆) = #i + ℂ^3$ 的 connection 作用于旋量 $𝕆^2$ or $𝕆^2 + 𝕆^(2 ◊)$.
+  
+  $G_2$ 中同构到 $SU(3)$ 的 isotropy 会改变 $#u (1,𝕆)$ 相位 or $#U (1,𝕆)$ 规范变换的 $#u (1,𝕆)$ 规范场, 导出 $SU(3)$ 作用在 $ℂ^3$ 部分. 是否应该说, 有一种 $#U (1,𝕆)$ 规范变换的 $#u (1,𝕆)$ or $ℂ^3$ 规范场的 $SU(3) ↪ G_2$ 规范变换的 $su (3)$ 规范场, 然后再次像电磁场那样引入最小曲率的 Yang--Mills eq?
+
+  also cf. (@ref-20, th.6)
+
+  *Question* 四元数 $ℍ$ 的情况如何?
 ]
 #tag("spin-connection")
 #indent[
