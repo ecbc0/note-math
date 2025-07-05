@@ -2,7 +2,7 @@
 #import "color-symbol.typ": * 
 #import "math-var.typ": * 
 #import "function-html.typ": *
-#import "link-setting.typ": * 
+#import "link-setting-html.typ": * 
 
 #let module(body) = {
   show: style // can be deleted (or comment out)

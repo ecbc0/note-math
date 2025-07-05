@@ -56,6 +56,8 @@
 
   use $f = 1 - g$ and $1/(1 - g) = 1 + g + g^2 + ⋯$
 
+  The convergence radius of $1/(1-g)$ is controlled by the convergence radius of $1/(1-x)$, which is $1$.
+
   or calculate directly
 
     let $1/f = sum B_m v^m$, $1/f ⋅ f = 1$, use multiplication
@@ -284,6 +286,11 @@
     use $|B_l| <= b_l$ ==> $sum B_j v^j$ non-zero radius of convergence 
       
     Although the exact radius of convergence cannot be given here, the method of proving the inverse function by the compression fixed point principle cannot give the exact maximal local reversible region for the pure differential method.
+
+    *Question* Both methods seem very ad hoc? Is there a method more inspired by the intuition of the inverse function itself? For example, can it be related to the "analyticity" of the mapping $dmat( delim: #none ,
+      GL &⟶ GL ;
+      A &⟿ A^(-1)
+    )$?
   ]
 ]
 #tag("differential-of-inverse") 

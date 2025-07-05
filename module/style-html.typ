@@ -1,3 +1,5 @@
+#import "@preview/shiroa:0.2.3": *
+
 #let to-string(content) = {
   if type(content) == none {
     return ""
@@ -123,13 +125,72 @@
 
   show math.equation: math.display
 
-  show math.equation.where(block: true): it => p-frame(attrs: ("class": "block-equation"), it)
-
-  show math.equation.where(block: false): it => span-frame(attrs: (class: "inline-equation"), it)
+  show math.equation.where(block: true): it => context if shiroa-sys-target() == "html" {
+    p-frame(attrs: ("class": "block-equation"), it)
+  } else {
+    it
+  }
+  show math.equation.where(block: false): it => context if shiroa-sys-target() == "html" {
+    span-frame(attrs: (class: "inline-equation"), it)
+  } else {
+    it
+  }
 
   show stack: it => {
     html.elem("div", attrs: (class: "stack"), it.children.join(none))
   }
+
+  set text(
+    font: (
+      "Source Code Pro",
+      "Noto Sans SC",
+    ),
+    fill: rgb("#0058b1"),
+    cjk-latin-spacing: auto,
+  )
+
+  set underline(offset: .1em, stroke: .05em, evade: false)
+
+  show strong: set text(fill: rgb("#2f00ff"))
+
+  show emph: set text(
+    fill: rgb("#d10000"),
+    /* font: (
+      "Source Code Pro",
+
+    ), */
+  )
+
+  show raw: set text(
+    fill: rgb("#2f00ff"),
+    font: "Source Code Pro",
+  )
+
+  set table(
+    stroke: rgb("#1c1c1c"),
+    // align: center
+  )
+
+  show heading: set text(fill: rgb("#b30042"))
+
+  show math.equation: set text(
+    font: "noto sans math",
+    fill: rgb("#2b8900"),
+  )
+
+  set math.limits(inline: true)
+
+  show math.equation.where(block: true): set align(left)
+
+  show link: set text(fill: rgb("#008690"))
+
+  show link: underline
+
+  show ref: set text(fill: rgb("#008690"))
+
+  set list(marker: [#text("‣", fill: rgb("#e90000"))])
+
+  set enum(full: true)
 
   body
 }
