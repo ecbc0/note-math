@@ -10,12 +10,12 @@ Approximation of Relativistic Scalar Field Action to Non-Relativistic Scalar Fie
 
 Using a massive field, extracting the rest energy phase $exp(- m c^2 1/ℏ t #i)$, using time $x_0 = c t$ and the speed of light limit $lim_(c -> ∞)$ 
 
-for #link(<Klein--Gordon-Lagrangian>)[], restore Planck constant $h$, speed of light $c$, time $x_0 = c t$
+for #link(<Klein--Gordon-Lagrangian>)[], restore Planck constant $ℏ$, speed of light $c$, time $x_0 = c t$
 $
   integral_(ℝ) #d c t integral_(ℝ^3) #d x 1/2 ( 
     1/c^2 (∂_t ϕ^* ∂_t ϕ) 
     - ∂_x ϕ^* ⋅ ∂_x ϕ    
-    + (m^2 c^2)/(h^2) ϕ^* ϕ
+    + (m^2 c^2)/(ℏ^2) ϕ^* ϕ
   )
 $
 use $ϕ = exp(- m c^2 1/ℏ t #i) ψ$
@@ -57,9 +57,9 @@ $
 $
 One can also add static magnetic potential, $∂_x$ is changed to $(∂_x + #i/ℏ A) ψ$, with 
 
-$(∂_x + #i/ℏ A)^† (∂_x + #i/h A) ψ = (∆ + #i/h div A + (2 #i)/ℏ A ⋅ ∂_x - 1/ℏ^2 |A|^2) ψ$
+$(∂_x + #i/ℏ A)^† (∂_x + #i/ℏ A) ψ = (∆ + #i/ℏ div A + (2 #i)/ℏ A ⋅ ∂_x - 1/ℏ^2 |A|^2) ψ$
 
-#tag("Schrodinger-eq-potential-example") *Example* 
+*Eaxmple* #tag("Schrodinger-eq-potential-example") 
 - $V = k r^2$ 
 
   Resonator (one or more) represents the electric potential of constant charge density in $ℝ^n$ or spherical regions. $div grad r^2 = "const"$. Opposite charges correspond to elliptical type, same charges correspond to hyperbolic type.
@@ -183,7 +183,7 @@ Should this quantity be "particle number density" or "probability density" or "c
 
   Classical correspondence refers to the expectation value version of the point particle Lagrange-equation (@ref-15, p.116) (#link("https://en.wikipedia.org/wiki/Ehrenfest_theorem")[wiki:Ehrenfest_theorem]), e.g. $m (#d^2)/(#d t^2) ⟨ #x ⟩_(ψ_t) = ⟨ - (#d V)/(#d x) ⟩_(ψ_t)$ 
 
-  there also new operator in the speed of expectation $m (#d)/(#d t) ⟨ #x ⟩_(ψ_t) = 1/(#i ℏ) ⟨ [#x,#H] ⟩_(ψ_t) = ⟨ - #i h (∂)/(∂ x) ⟩_(ψ_t) =: ⟨ #p ⟩_(ψ_t)$
+  there also new operator in the speed of expectation $m (#d)/(#d t) ⟨ #x ⟩_(ψ_t) = 1/(#i ℏ) ⟨ [#x,#H] ⟩_(ψ_t) = ⟨ - #i ℏ (∂)/(∂ x) ⟩_(ψ_t) =: ⟨ #p ⟩_(ψ_t)$
   
   Where the non-commutativity $[#x,#H] = #i ℏ #p$ or $⟨ [#x,#H] ⟩_(ψ) = #i ℏ ⟨ #p ⟩_(ψ)$ is controlled by the very small Planck constant $ℏ$
 
@@ -222,13 +222,15 @@ Should this quantity be "particle number density" or "probability density" or "c
 ]
 #tag("motivation-of-eigenstate") 
 #indent[
-  
+  Mimicking the finite-dimensional case, diagonalize one quadratic form with an orthonormal basis in a (positive definite) quadratic form space.
 
-  Mimicking the finite-dimensional case, use differentiation to find the extremum or first-order stable value of the Hermitian operator $#H$
+  Using differentiation to find the extreme values or first-order stable values of the Hermitian operator $#H$
 
-  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$ (in the sense of $Re ⟨ Δ ψ , ψ ⟩ = 0$)
+  on ${|ψ|^2 = 1}$, let $Δ ψ in ψ^⟂$ (orthogonal in the sense of $Re ⟨ Δ ψ , ψ ⟩ = 0$)
 
-  The energy expectation is a quadratic form, its first-order differential $Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ = 0$ forall $Δ ψ in ψ^⟂$ ==> $#H ψ in ψ^(⟂ ⟂) = span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
+  Another quadratic form $x^⊺ H x$ on a finite-dimensional standard quadratic form corresponds to an infinite-dimensional case where the wave function is in some $L^2$ or Hilbert space, acting as a quadratic form space. The energy $⟨ ψ mid(|) #H mid(|) ψ ⟩$ is another quadratic form.
+
+  Its first derivative $Re ⟨ Δ ψ mid(|) #H mid(|) ψ ⟩ = 0$ forall $Δ ψ in ψ^⟂$ ==> $#H ψ in ψ^(⟂ ⟂) = span{ψ}$ ==> exists $E in ℝ, #H ψ = E ψ$
 
   States with different eigenvalues are orthogonal
   $
@@ -236,13 +238,21 @@ Should this quantity be "particle number density" or "probability density" or "c
     &==> (E - E') ⟨ ψ' , ψ ⟩ = 0 \
     &==> ⟨ ψ' , ψ ⟩ = 0
   $
+  There exists an orthogonal basis $e_1 ,…, e_n$ for a finite-dimensional standard quadratic form, such that $x = x_1 e_1 + ⋯ + x_n e_n$, and $H$ is in a form close to a standard quadratic form, i.e., diagonalizing $x^⊺ H x = λ_1 x_1^2 + ⋯ + λ_n x_n^2$. $H$ can be written as $mat(λ_1 ; , ⋱ ; ,, λ_n)$ or $sum_(k = 1 .. n) λ_k ket(e_k) bra(e_k)$. The corresponding infinite-dimensional case is that there exists an orthogonal basis of the Hilbert space such that the energy $⟨ ψ mid(|) #H mid(|) ψ ⟩$ is diagonalized. However, in the case of Hilbert space, diagonalization of the energy expectation might be in the form of a countable sum.
+  $
+    ψ &= sum_(k in ℕ) a_k ψ_k \
+    ⟨ ψ mid(|) #H mid(|) ψ ⟩ &= sum_(k in ℕ) λ_k |a_k|^2 \
+    #H &= sum_(k in ℕ) λ_k ket(ψ_k) bra(ψ_k)
+  $
+  However, sometimes a countable sum is not enough, and an integral form is required, and the orthogonal basis is not the $L^2$ space where the wave function resides, even if the coefficients of the wave function's orthogonal basis expansion might be in the $L^2$ space of the eigenvalues. (*Question* What is the specific construction method for the $L^2$ structure of the eigenvalue space?) An example is the existence of unbound states in the electrostatic hydrogen atom model.
+
   Schrodinger eq evolution preserves the eigenvalue space
-  
-  The energy expectation is a quadratic form, and its second-order differential polynomial is $⟨ Δ ψ mid(|) #H mid(|) Δ ψ ⟩$
+
+  The energy is a quadratic form, and its second-order differential polynomial is $⟨ Δ ψ mid(|) #H mid(|) Δ ψ ⟩$
   
   Divide the space into the $E$ eigenspace $V_E$ and its orthogonal complement $V_E^(⟂)$. In the $V_E^⟂$ direction, the second-order differential is positive definite or negative definite, and the energy will increase or decrease. According to Lagrangian variational theory, the energy of the Schrodinger eq is a time-conserved quantity $⟨ #H ⟩_(ψ_t) ≡ ⟨ #H ⟩_(ψ_0) = E$
   
   $V_E, V_E^⟂$ are separated in the sense of limit, unless at $0$. $⟨ ψ , ψ ⟩ = 1 ==> ψ != 0$, so the evolution will be confined to the $E$ eigenspace $ψ_t in V_E$
 
-  Specific solution for the Schrodinger eq evolution in the eigenvalue space. $#i ℏ ∂_t ψ (t,x) = #H ψ (t,x) = E ψ (t,x)$ is a constant-coefficient linear ODE from $ℝ -> ℂ$ for each spatial point $x$, solution $ψ (t,x) = e^(- #i E t) ψ (0,x)$ i.e., essentially static $ψ (0,x)$ except for the phase factor $e^(- #i E t)$ which oscillates in time according to $#U (1)$.
+  Specific solution for the Schrodinger eq evolution in the eigenvalue space. $#i ℏ ∂_t ψ (t,x) = #H ψ (t,x) = E ψ (t,x)$ is a constant-coefficient linear ODE from $ℝ -> ℂ$ for each spatial point $x$, solution $ψ (t,x) = e^(- #i/ℏ E t) ψ (0,x)$ i.e., essentially static $ψ (0,x)$ except for the phase factor $e^(- #i/ℏ E t)$ which oscillates in time according to $#U (1)$.
 ]

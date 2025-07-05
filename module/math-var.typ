@@ -112,7 +112,7 @@
 
 // other
 
-#let cvt-prod = $⧀$ // shiroa 543c1f4 problem
+#let cvt-prod = rotate(90deg, $⧀$)
 #let lim = math.limits(text("lim", fill: rgb("#0056e1")))
 
 #let And = math.and.big

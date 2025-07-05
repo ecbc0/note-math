@@ -1,4 +1,4 @@
-#let tag(s) = [#str(" ") #raw(s)#emph("_(tag)") #str(" ") #label(s)]
+#let tag(s) = [#str(" ") #raw(s)\_(#emph("tag")) #str(" ") #label(s)]
 
 #let indent(x) = html.elem("div", attrs: (
   class: "indent",
