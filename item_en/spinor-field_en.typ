@@ -87,7 +87,7 @@
 
   variation gives linear part $integral 2 Re (Δ ϕ)^† #i #spin-d^◊ ϕ$ 
 ]
-#tag("massless-spinor-equation"), *alias* #tag("Weyl-equation")
+#tag("massless-spinor-equation") *alias* #tag("Weyl-equation")
 #indent[
   $ #spin-d^◊ ϕ = 0 $
 
@@ -282,6 +282,20 @@ Since $mat(#p ;,#p^◊)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^◊
   It seems that all types of $#U (1)$ bundle types based on the base manifold must be considered simultaneously.
 
   In the homotopy sense, $ℝ^(p,q)$ has only one type of $#U (1)$ bundle type.
+]
+#tag("spinor-field-gauge-imaginary-automorphism")
+#indent[
+  Although the cost is using $1 + 9$ dimensional spacetime, tangent space $ℝ^(1,9)$, but if we consider octonions $𝕆$, and if we choose a unit imaginary element $#i$ to construct the spinor Lagrangian, then the octonion's #link(<imaginary-automorphism>)[imaginary automorphism group] $G_2$'s isotropy on $#i$ leads to the decomposition $ℂ + ℂ^3$, the isotropy group is isomorphic to $SU(3)$, and it derives the action of $SU(3)$ on $ℂ^3$. cf. (@ref-19, th.4)
+
+  Note that the octonion imaginary automorphism group $G_2$ is not $#U (1,𝕆) ≃ 𝕊^7$. So this is not a group of gauge connection in the traditional sense.
+
+  It is said that $SU(3)$ is the gauge group of strong interaction. The advantage of the octonion method here is that there is no longer a need to additionally assume the separate existence of $ℂ^3$ and $SU(3)$ and perform tensor operations on $ℂ^3$ and Dirac spinor out of thin air. The tensor from $ℂ^3$ comes from the connection of $#u (1,𝕆) ≃ Im(𝕆) = #i + ℂ^3$ acting on the spinor $𝕆^2$ or $𝕆^2 + 𝕆^(2 ◊)$.
+
+  The isotropy in $G_2$ isomorphic to $SU(3)$ will change the $#u (1,𝕆)$ phase or the $#u (1,𝕆)$ gauge field of the $#U (1,𝕆)$ gauge transformation, leading to the $SU(3)$ action on the $ℂ^3$ part. Should it be said that there is a $su (3)$ gauge field of the $SU(3) ↪ G_2$ gauge transformation for the $#u (1,𝕆)$ or $ℂ^3$ gauge field of a $#U (1,𝕆)$ gauge transformation, and then introduce the Yang--Mills eq of minimal curvature again like the electromagnetic field?
+
+  also cf. (@ref-20, th.6)
+
+  *Question* What about the case of quaternions $ℍ$?
 ]
 #tag("spin-connection")
 #indent[

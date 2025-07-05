@@ -7,9 +7,5 @@
       "#let x = text(\"x\", fill: rgb(\"#006dea\"))",
       "#let p = text(\"p\", fill: rgb(\"#d25b00\"))"
     ]
-  },
-  "blue Δ": {
-    "prefix": "blue-Delta",
-    "body": "#show \"Δ\": it => text(it, fill: rgb(\"#0056e1\"))"
   }
 }

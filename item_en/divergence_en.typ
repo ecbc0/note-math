@@ -29,7 +29,7 @@ There are two directions. for vector base of $ℝ^n$, change order once $e_i <->
 ]
 #tag("orientable-low-dim-polyhera") Polyhedron #link(<orientation-of-boundary-of-simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
 
-#tag("Mobius-strip") *Example* Non-orientable Mobius-type polyhedron (image modified from wiki)
+*Eaxmple* #tag("Mobius-strip") Non-orientable Mobius-type polyhedron (image modified from wiki)
 
 #image("../image/Moebius.svg", width: 50%)
 
@@ -104,7 +104,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
 #tag("Stokes-theorem") 
 #indent[
-  Similar to the one-dimensional #link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]
+  Similar to the one-dimensional #link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]. Intuitively, divergence and the divergence theorem = high-dimensional Fundamental Theorem of Calculus
 
   Define #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ in coordinates, where $Vol$ is the volume of the coordinates, $σ$ is a large class of regions, and the calculation result does not depend on the choice of coordinates. 
 
@@ -134,6 +134,8 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 
   Probably need some kind of Sobolev control?
 ]
+Things like the Gauss--Bonnet theorem of Euclidean metric manifold should also be provable using this method. Although it still needs to be considered why the result is a homology invariant Euler characteristic (off by an $n$-dimensional Euclidean volume factor, expressed as a power of $π$) that is independent of the metric.
+
 I have not deal with the Stokes theorem for manifold without boundary, have not define $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. *Example* of manifold without $ℝ^n$
 
 Correspondence between boundary operator and exterior derivative

@@ -386,49 +386,46 @@ $=$ 的其它用法
     可以被分成多句, 使得可以方便的加入/移除 property, 来得到不同的 struct
 
   $Set 0, Set 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Set ℕ$ 吗? 然后对 $Set ℕ$, 继续使用 object construct rule ... 
+
+  $Set 0$ 语言是潜无穷的, hierarchy-order-of-set 语言也是如此. 当然绝大多数编程语言都是潜无穷的
 ]
-上面的构造规则会导致矛盾或者计算机死循环吗?
+似乎有两种 math object
 
-一直无限地构造下去, 这种语言是否有终点?
++ 已经用有限步构造出来的 math object
 
-#tag("universal-set") 
++ 直接假设的 math object 类型, 内存中的变量作为一种 place holder (占位符)
+
+type 之间的同态的使用可以对证明带来方便. 有时可以让计算从特殊情况推出一般情况的证明, 如果特殊情况的证明没有用到特殊情况的专有性质, 则实际上是隐藏的对一般情况的证明
+
+#tag("universal-type")
 #indent[
-  是否存在 "set of every set", a "universal set"? or "universal type"?
-  
-  使用 set theory rules 定义
+  如果不假设可以随意使用 universal-type, 我发现自己真的无法理解很多事情. 所以, 我的选择是, 可以随意使用 universal-type, 即使进入了死循环或自指悖论, 也是正确的语言, 虽然此时是无用的结果
 
-  $ A := {x ∈ "universal-set" : not (x ∈ x)} ∈ "universal-set" $ 
+  *Example* #tag("Russell-paradox")
+  #indent[
+    使用 set theory rules 定义
 
-  然后让编译器去计算命题 $A in A$ 的 bool, 由于 $A in "universal-set"$ = `true`, 编译器只计算 $not (A in A)$ 的 bool, 然后发现 `not` 函数, 所以计算 `not` 里面的 bool, 但这又回到了计算 $A in A$ 的 bool, 编译器可能选择进入电路死循环
+    $ A := {x ∈ "universal-set" : not (x ∈ x)} ∈ "universal-set" $ 
 
-  对于有限集, $x ∉ x$ 或者无法判断, e.g. ${1} ∉ {1}$, 因为 $1 ≠ {1}$, 或者没有定义 $x in 1$ is true proposition
+    然后让编译器去计算命题 $A in A$ 的 bool, 由于 $A in "universal-set"$ = `true`, 编译器只计算 $not (A in A)$ 的 bool, 然后发现 `not` 函数, 所以计算 `not` 里面的 bool, 但这又回到了计算 $A in A$ 的 bool, 编译器可能选择进入电路死循环
 
-  相关于自指悖论. *Example* "这个句子是错的" 给出计算机死循环
-
-  ```
-  this_sentence_is_false : bool = false;
-  loop:
-    switch (this_sentence_is_false) {
-      false => this_sentence_is_false = true,
-      true => this_sentence_is_false = false
-    } 
-    goto loop
-  };
-  ```
-  或者用分层绕过自指悖论 `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
-
-  如果对于一个数我们能数出来, 我们就认为它是自然数
-
-  如果能用有限步写出语言规则并构造出语言对象, 我们就认为是可构造的, 可说的. 对于集合论, 能够这样有限步构造出来的, 就称其为 math object (数学对象)
-
-  对于自然数的无限的问题, 如果用数数或者归纳法或者周期电路来定义自然数, 的则把无限的问题推给了无限时间
-
-  对于集合论语言, 假设 universal-set or universal-type 导致能构造出让电路进入死循环
-
-  但也可以认为, 对于 $"type" : "type"$, 只要不一直判断下去, 就能停止, 而一直判断下去就无法停止, 但还是能每步都判断. 只是, 可能无法在所有情况判断是否应该在有限步之后停止
-
-  但是 universal-type 的使用是很方便的. 因此也可以使用它, 额外条件是不允许判断 $"type" : "type"$. 更一般地, 例如, 也不允许 $"type" × "type" : "type"$
-] 
+    对于有限集, $x ∉ x$, 或者无法判断 $x in x$, e.g. ${1} ∉ {1}$, 因为 ${1} ≠ 1 in {1}$, 或者没有定义 $x in 1$ 这个命题是 true proposition
+  ]
+  *Example* #tag("self-referential-paradox") 自指悖论. "这个句子是错的"
+  #indent[
+    ```
+    this_sentence_is_false : bool = false;
+    loop:
+      switch (this_sentence_is_false) {
+        false => this_sentence_is_false = true,
+        true => this_sentence_is_false = false
+      } 
+      goto loop
+    };
+    ```
+    或者用分层绕过自指悖论 `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
+  ]
+]
 #tag("dependent-distributive") 
 #indent[
   union & interset 

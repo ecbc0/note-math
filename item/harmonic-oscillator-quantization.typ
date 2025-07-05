@@ -140,6 +140,12 @@ $
 ]
 关于场量子化
 
+一种观点是路径积分式的场量子化
+
+#tag("field-path-integral-quantization") *Question* 既然谐振子可以 Foureir 变换路径积分, 为什么类似谐振子 eq 的 KG eq (or Dirac eq) 不也进行 #link(<linear-superposition-of-KG-eq>)[Foureir 变换] 路径积分? 
+
+另一种 (?) 观点是场算子式的场量子化
+
 recall #link(<Klein--Gordon-equation>)[] 考虑平面波解
 $
   (∂_t^2 - ∂_x^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0 \

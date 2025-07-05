@@ -386,49 +386,46 @@ Note that I myself feel that I cannot fully clearly deal with the concept of the
     Can be divided into multiple sentences, so that it is convenient to add/remove properties to get different structs
 
   $Set 0, Set 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Set ℕ$ again? Then for $Set ℕ$, continue to use the object construct rule ... 
+
+  $Set 0$ language is potentially infinite, and so is hierarchy-order-of-set language. Of course most of programming language is potentially infinite
 ]
-Will the above construction rules lead to contradictions or computer deadlocks?
+There seem to be two types of math objects
 
-If we keep constructing infinitely, does this language have an end?
++ Math objects already constructed in a finite number of steps
 
-#tag("universal-set") 
++ Math object types directly assumed, with variables in memory acting as place holders
+
+The use of homomorphisms between types can facilitate proofs. Sometimes, it can allow calculations to deduce a general case proof from a special case proof; if the special case proof does not use properties specific to the special case, then it is actually a hidden proof of the general case.
+
+#tag("universal-type")
 #indent[
-  Does there exist a "set of every set", a "universal set", a "universal-type"? 
-  
-  Defined using set theory rules
+  If I don't assume that universal-type can be used at will, I find that I really can't understand many things. Therefore, my choice is that universal-type can be used at will, even if it enters an infinite loop or self-referential paradox, it is still a correct language, although the result is useless at this time.
 
-  $ A := {x ∈ "universal-set" : not (x ∈ x)} ∈ "universal-set" $ 
+  *Example* #tag("Russell-paradox")
+  #indent[
+    Defined using set theory rules
 
-  Then let the compiler calculate the bool of the proposition $A in A$. Since $A in "universal-set"$ = `true`, the compiler only calculates the bool of $not (A in A)$, and then discovers the `not` function, so it calculates the bool inside `not`, but this returns to calculating the bool of $A in A$. The compiler may choose to enter a circuit dead loop.
+    $ A := {x ∈ "universal-set" : not (x ∈ x)} ∈ "universal-set" $
 
-  For finite sets, $x ∉ x$ or cannot be judged, e.g. ${1} ∉ {1}$, because $1 ≠ {1}$, or there is no definition that $x in 1$ is a true proposition.
+    Then let the compiler calculate the boolean value of the proposition $A in A$. Since $A in "universal-set"$ = `true`, the compiler only calculates the boolean value of $not (A in A)$, and then finds the `not` function, so it calculates the boolean value inside `not`, but this goes back to calculating the boolean value of $A in A$, and the compiler may choose to enter a circuit dead loop.
 
-  Related to self-referential paradox. *Example* "This sentence is wrong" gives a computer dead loop
-
-  ```
-  this_sentence_is_false : bool = false;
-  loop:
-    switch (this_sentence_is_false) {
-      false => this_sentence_is_false = true,
-      true => this_sentence_is_false = false
-    } 
-    goto loop
-  };
-  ```
-  Or use layering to bypass self-referential paradoxes `(this_sentence = false) = true`. It is believed that they are different sentences and judgments, and that it cannot be self-referential.
-
-  If we can count a number, we consider it a natural number.
-
-  If language rules can be written and language objects constructed in a finite number of steps, we consider them constructible and speakable. For set theory, what can be constructed in such a finite number of steps is called a math object.
-
-  For the problem of the infinity of natural numbers, if natural numbers are defined by counting or induction or periodic circuits, then the problem of infinity is pushed to infinite time.
-
-  For set theory language, assume universal-set or universal-type causes the circuit to enter a dead loop.
-
-  But it can also be considered that for $"type" : "type"$, as long as you don't keep judging, you can stop, and if you keep judging, you can't stop, but you can still judge every step. It's just that, it may not be possible to judge in all cases whether it should stop after a finite number of steps.
-
-  However, the use of universal-type is very convenient. Therefore, it can also be used, with the additional condition that judging $"type" : "type"$ is not allowed. More generally, for example, $"type" × "type" : "type"$ is also not allowed.
-] 
+    For finite sets, $x ∉ x$, or it is impossible to judge $x in x$, e.g. ${1} ∉ {1}$, because ${1} ≠ 1 in {1}$, or the proposition $x in 1$ is not defined as a true proposition.
+  ]
+  *Example* #tag("self-referential-paradox") "This sentence is false"
+  #indent[
+    ```
+    this_sentence_is_false : bool = false;
+    loop:
+      switch (this_sentence_is_false) {
+        false => this_sentence_is_false = true,
+        true => this_sentence_is_false = false
+      }
+      goto loop
+    };
+    ```
+    Or use layering to bypass the self-referential paradox `(this_sentence = false) = true`. It is considered that they are different sentences and judgments, and that it cannot refer to itself.
+  ]
+]
 #tag("dependent-distributive") 
 #indent[
   union & interset 

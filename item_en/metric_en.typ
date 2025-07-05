@@ -21,7 +21,7 @@
 
   The following are equivalent
   - metric is non-degenerate
-  - #tag("quadratic-form-dual") is a bijection
+  - #tag("quadratic-form-dual") is a bijection *alias* #tag("musical-isomorphism") 
     $
       dmat( delim: #none ,
         V, ⟶, Lin(V -> ℝ) "or" V^⊺;

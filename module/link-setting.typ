@@ -18,15 +18,13 @@
       if it.body == [] {
         return link(it.dest)[#str(it.dest)]
       }
-    }
-    it
+    } else { return it }
   }
 
   show ref: it => {
     if query(it.target).len() == 0 {
       return underline(str(it.target))
-    }
-    it
+    } else { return it }
   }
 
   body

@@ -7,8 +7,8 @@ ref-1:
 ref-2: 
   title: Differential Geometry and Lie Groups, A Second Course 
   author: 
-  - J. Gallier 
-  - J. Quaintance
+    - J. Gallier 
+    - J. Quaintance
 
 ref-3: 
   title: Undergraduate Analysis 
@@ -42,11 +42,16 @@ ref-9:
   
 ref-10:
   title: Modern Geometric Structures and Fields
-  author: Novikov S.P., Taimanov I.A.
+  author: 
+    - Novikov S.P.
+    - Taimanov I.A.
 
 ref-11:
   title: Modern Geometry
-  author: B.A. Dubrovin, S.P. Novikov, A.T. Fomenko
+  author: 
+    - B.A. Dubrovin
+    - S.P. Novikov
+    - A.T. Fomenko
 
 ref-12:
   title: Measure Theory and Probability
@@ -55,7 +60,10 @@ ref-12:
 
 ref-13:
   title: Representations of the rotation and Lorentz groups and their applications
-  author: Gelfand I.M., Minlos R.A., Shapiro Z.Ya.
+  author: 
+    - Gelfand I.M.
+    - Minlos R.A.
+    - Shapiro Z.Ya.
 
 ref-14:
   title: Geometric Methods in Mathematical Physics I: Multi-Linear Algebra, Tensors, a little Spinors and Special Relativity,
@@ -79,3 +87,24 @@ ref-18:
   title: Quantum Theory, Groups and Representations: An Introduction
   author: P. Woit
   url: https://www.math.columbia.edu/~woit/QMbook/qmbook-latest.pdf
+
+ref-19: 
+  title: Octonions and the Standard Model (Part 3)
+  author: J. Baez
+  url: https://golem.ph.utexas.edu/category/2020/07/octonions_and_the_standard_mod_2.html
+
+ref-20: 
+  title: Octonions and the Standard Model (Part 4)
+  author: J. Baez
+  url: https://golem.ph.utexas.edu/category/2020/08/octonions_and_the_standard_mod_3.html
+
+ref-21: 
+  title: The Octonions
+  author: J. Baez
+  url: http://arxiv.org/abs/math/0105155v4
+
+ref-22: 
+  title: The Geometry of the Octonions
+  author: 
+    - T. Dary
+    - C.A. Manogue

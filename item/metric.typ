@@ -21,7 +21,7 @@
 
   以下等价
   - metric 非退化
-  - #tag("quadratic-form-dual") 是双射
+  - #tag("quadratic-form-dual") 是双射 *alias* #tag("musical-isomorphism") 
     $
       dmat( delim: #none ,
         V, ⟶, Lin(V -> ℝ) "or" V^⊺;
@@ -92,7 +92,7 @@ $
   $
   因此也有升指标 $g^(-1)(v^♭,e_j) = v_j g^(i j) = v^i$
 
-  也可以反过来, 从 $b$ 的逆 $♯$ 出发, 证明它是 $V^⊺$ 的某个 metric 的 metric dual, 且这个 metric 在矩阵表示下是 $g^(-1)$
+  也可以反过来, 从 $♭$ 的逆 $♯$ 出发, 证明它是 $V^⊺$ 的某个 metric 的 metric dual, 且这个 metric 在矩阵表示下是 $g^(-1)$
 
   metric $g^(-1) = g^(i j) e_i e_j$ 在 $(V^(⊺ ⊙ 2))^⊺$ 的 metric 下的 metric dual 是 $g = g_(i j) e^i e^j in (V^(⊙ 2))^⊺$. 反过来也一样
 ]
