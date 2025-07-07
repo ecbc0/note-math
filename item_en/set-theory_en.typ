@@ -391,9 +391,9 @@ Note that I myself feel that I cannot fully clearly deal with the concept of the
 ]
 There seem to be two types of math objects
 
-+ Math objects already constructed in a finite number of steps
++ Math objects already constructed in a finite number of steps. It represents type constructed by some rules 
 
-+ Math object types directly assumed, with variables in memory acting as place holders
++ Math object types directly assumed, or abstract type, with type and its variables in memory acting as placeholders. In programming it's called generics. It represent the type relation between abstract symbols
 
 The use of homomorphisms between types can facilitate proofs. Sometimes, it can allow calculations to deduce a general case proof from a special case proof; if the special case proof does not use properties specific to the special case, then it is actually a hidden proof of the general case.
 

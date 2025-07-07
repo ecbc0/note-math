@@ -197,6 +197,9 @@
         "minimapSlider.background":"#6a6a6a1a",
         "minimapSlider.hoverBackground":"#6c6c6c1b",
         "minimapSlider.activeBackground":"#6c6c6c1b",
+        "dropdown.background":"#000000",
+        "dropdown.border":"#007a7059",
+        "dropdown.foreground":"#097000"
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
