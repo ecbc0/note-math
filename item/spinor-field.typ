@@ -295,7 +295,9 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 
   also cf. (@ref-20, th.6)
 
-  *Question* 四元数 $ℍ$ 的情况如何?
+  *Question* 四元数 $ℍ$ 的情况如何? $ℍ$ 的情况的虚数元对称群是 $SO(3)$. 固定一个虚数元 $#i$ 之后, 是什么?
+
+  $ℂ$ 的情况的虚数元对称群是 $ℤ_2$. 显然固定一个虚数元就变成 $𝟙$
 ]
 #tag("spin-connection")
 #indent[
