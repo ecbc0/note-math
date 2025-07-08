@@ -17,8 +17,8 @@
       }
       if it.body == [] {
         return link(it.dest)[#str(it.dest)]
-      }
-    } else { return it }
+      } else { return it }
+    }
   }
 
   show ref: it => {
