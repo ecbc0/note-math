@@ -13,7 +13,7 @@ $integral #d Vol g(X, grad f) = - integral #d Vol g(div X, f)$
 
 $∇ : "tensor" -> (⊤ M)^⊺ ⊗ "tensor"$
 
-则 adjoint 是 
+则 adjoint 是
 
 $∇^† : (⊤ M)^⊺ ⊗ "tensor" -> "tensor"$
 
@@ -64,7 +64,7 @@ $- g^(i i') Γ_(i i')^j = 1/(|g|) ∂_i (|g| g^(i j))$
 
 $⊙,∧$ 是构造 mix 对称性的基本构件
 
-用代数技术, 定义
+用代数技术, 定义 (@ref-24, p.34--35)
 $
   ∇_(⊙) : ⨀^(k) (⊤ M)^⊺ -> ⨀^(k+1) (⊤ M)^⊺ \
   ∇_(∧) : ⋀^(k) (⊤ M)^⊺ -> ⋀^(k+1) (⊤ M)^⊺ 

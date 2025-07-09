@@ -64,7 +64,7 @@ $- g^(i i') Γ_(i i')^j = 1/(|g|) ∂_i (|g| g^(i j))$
 
 $⊙,∧$ are the basic building blocks for constructing mixed symmetry.
 
-Using algebraic techniques, define
+Using algebraic techniques, define (@ref-24, p.34--35)
 $
   ∇_(⊙) : ⨀^(k) (⊤ M)^⊺ -> ⨀^(k+1) (⊤ M)^⊺ \
   ∇_(∧) : ⋀^(k) (⊤ M)^⊺ -> ⋀^(k+1) (⊤ M)^⊺ 

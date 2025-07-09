@@ -13,7 +13,7 @@
 
   坐标下 metric $g$ 可以表示为矩阵 $G$ 和矩阵乘法 $(X,Y) ⇝ X^⊺ G Y$
 
-  #tag("signature-inertial") signature $(p,q)$ 在 $GL(n,ℝ)$ 下不变. 对称矩阵 $G$ 的特征值和对角化 $mat(1; , 0; ,, -1)$ 其中 $n_+$ 个 $1$, $n_0$ 个 $0$, $n_-$ 个 $-1$. 可以理解为群作用的 orbit 分类
+  #tag("signature-inertia") signature $(p,q)$ 在 $GL(n,ℝ)$ 下不变. 对称矩阵 $G$ 的特征值和对角化 $mat(1; , 0; ,, -1)$ 其中 $n_+$ 个 $1$, $n_0$ 个 $0$, $n_-$ 个 $-1$. 可以理解为群作用的 orbit 分类
 
   #tag("quadratic-form-non-degenerated") 非退化 := signature 中 $N_0 = 0$
 

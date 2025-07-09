@@ -222,7 +222,7 @@ Schrodinger 场电流的时间分量是正的且空间积分 time invariant
 ]
 #tag("motivation-of-eigenstate") 
 #indent[
-  模仿有限维的情况, 在一个 (正定) 二次型空间用一个正交基对另一个二次型进行对角化 
+  模仿有限维的情况, (@ref-3, p.143--144. @ref-23, p.218--222) 在一个 (正定) 二次型空间用一个正交基对另一个二次型进行对角化 
   
   用微分来寻找 Hermitian 算子 $#H$ 的极值 or 一阶稳定值
 

@@ -146,7 +146,7 @@
   $
   and $∆ = #spin-d #spin-d^◊ = #spin-d^◊ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
-  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. If a field satisfies the Dirac eq, then it satisfies the KG eq. Therefore, the KG eq can be used as a spinless approximation of the Dirac eq.
+  Overall $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. If a field satisfies the Dirac eq, then it satisfies the KG eq. Therefore, Dirac eq can approximate to KG eq, or further approximate to Schrodinger eq. But note that compared to the case of $ℂ$ value, the difference from $ℂ^2 ⊕ ℂ^(2 ◊)$ is that the angular momentum operator represented by $so(1,3)$ or $so(3)$ will have a spin part that affects the range space, similar to #link(<spinor-angular-momentum>)[]
 
   All partial derivatives of the action $S$ is zero $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, giving #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 

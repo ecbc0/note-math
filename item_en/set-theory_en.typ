@@ -399,7 +399,7 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
 
 #tag("universal-type")
 #indent[
-  If I don't assume that universal-type can be used at will, I find that I really can't understand many things. Therefore, my choice is that universal-type can be used at will, even if it enters an infinite loop or self-referential paradox, it is still a correct language, although the result is useless at this time.
+  If I don't assume that universal-type can be used at will, I find that I really can't understand many things. Therefore, my choice is that universal-type can be used at will, even if it enters an infinite loop or self-referential paradox, it is still a correct language, although the result is useless at this time. Something similar is that general programming languages ​​can manually construct infinite loops, but this does not mean that such programming languages ​​are wrong.
 
   *Example* #tag("Russell-paradox")
   #indent[

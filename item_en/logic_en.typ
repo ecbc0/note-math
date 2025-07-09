@@ -290,4 +290,4 @@ Complex data structures and calculation functions can be constructed in memory. 
 
 The motivation for variables or variable names is that humans cannot remember so many addresses. Variable names are designed to assist humans with semantics and allow the computer to convert variable names into addresses, based on the variable's position in the overall program logic.
 
-Variables or variable names allow the values stored in memory to be reused through addresses, rather than being one-time use
+Variables or variable names allow the values stored in memory to be reused through addresses, which can minimize the memory and use of new addresses.

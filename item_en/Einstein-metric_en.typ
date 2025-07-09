@@ -3,7 +3,9 @@
 
 cf. #link(<curvature-of-metric.typ>)[]
 
+In finite dimensions, a space of symmetric bilinear forms $S(n_+,n_-)$ with a non-degenerate signature is a submanifold of a space $S$ of symmetric bilinear forms, and its tangent space can be embedded into $S$, with $Δ g$ as the notation for the tangent vector at $g$
 
+In manifold $M$, a space of symmetric bilinear forms $S(n_+,n_-)$ with a non-degenerate signature metric is a submanifold of a space $S$ of field of symmetric bilinear forms, and its tangent space can be embedded into $S$, with $Δ g$ as the notation for the tangent vector at $g$
 
 #tag("Einstein-Lagrangian") := $("scal" - 2 Λ) #d Vol$. In coordinates $#d Vol = |g| #d x$
 

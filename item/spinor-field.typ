@@ -146,7 +146,7 @@
   $
   and $∆ = #spin-d #spin-d^◊ = #spin-d^◊ #spin-d$ as "square root of $∆$" #tag("square-root-of-spacetime-Laplacian") 
 
-  整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. 如果一个场满足 Dirac eq, 则它满足 KG eq. 从而 KG eq 可以作为 Dirac eq 的无自旋近似
+  整体 $(∆ + m^2) vec(ϕ,ψ) = 0$, square root of KG. 如果一个场满足 Dirac eq, 则它满足 KG eq. 从而 Dirac eq 可以近似到 KG eq, 或者继续近似到 Schrodinger eq. 但是注意, 此时相比于 $ℂ$ 值的情况, $ℂ^2 ⊕ ℂ^(2 ◊)$ 的不同之处在于, $so(1,3)$ or $so(3)$ 表示的角动量算子会有影响值域的自旋部分, 情况类似于 #link(<spinor-angular-momentum>)[]
 
   作用量 $S$ 的全部偏导数是零 $(∂ S)/(∂ ϕ) = (∂ S)/(∂ ψ) = 0$, 给出 #tag("massive-spinor-equation"), *alias* #tag("Dirac-equation")
 
