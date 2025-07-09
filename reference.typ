@@ -45,11 +45,16 @@
 
 #tag("ref-10"):\
   title: Modern Geometric Structures and Fields\
-  author: Novikov S.P., Taimanov I.A.
+  author: 
+    - Novikov S.P.
+    - Taimanov I.A.
 
 #tag("ref-11"):\
   title: Modern Geometry\
-  author: B.A. Dubrovin, S.P. Novikov, A.T. Fomenko
+  author: 
+    - B.A. Dubrovin
+    - S.P. Novikov
+    - A.T. Fomenko
 
 #tag("ref-12"):\
   title: Measure Theory and Probability\
@@ -58,7 +63,10 @@
 
 #tag("ref-13"):\
   title: Representations of the rotation and Lorentz groups and their applications\
-  author: Gelfand I.M., Minlos R.A., Shapiro Z.Ya.
+  author: 
+    - Gelfand I.M.
+    - Minlos R.A.
+    - Shapiro Z.Ya.
 
 #tag("ref-14"):\
   title: Geometric Methods in Mathematical Physics I: Multi-Linear Algebra, Tensors, a little Spinors and Special Relativity\
@@ -81,3 +89,32 @@
   title: Quantum Theory, Groups and Representations: An Introduction\
   author: P. Woit\
   url: https://www.math.columbia.edu/~woit/QMbook/qmbook-latest.pdf
+
+#tag("ref-19"):\
+  title: Octonions and the Standard Model (Part 3)\
+  author: J. Baez\
+  url: https://golem.ph.utexas.edu/category/2020/07/octonions_and_the_standard_mod_2.html
+
+#tag("ref-20"):\
+  title: Octonions and the Standard Model (Part 4)\
+  author: J. Baez\
+  url: https://golem.ph.utexas.edu/category/2020/08/octonions_and_the_standard_mod_3.html
+
+#tag("ref-21"):\
+  title: The Octonions\
+  author: J. Baez\
+  url: http://arxiv.org/abs/math/0105155v4
+
+#tag("ref-22"):\
+  title: The Geometry of the Octonions\
+  author:
+    - T. Dary
+    - C.A. Manogue
+
+#tag("ref-23"):\
+  title: Linear Algebra\
+  author: S. Lang
+
+#tag("ref-24"):\
+  title: Einstein Manifolds\
+  author: A.L. Besse

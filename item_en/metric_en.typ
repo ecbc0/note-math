@@ -13,7 +13,7 @@
 
   Under coordinates, metric $g$ can be represented as matrix $G$ and matrix multiplication $(X,Y) ⇝ X^⊺ G Y$
 
-  #tag("signature-inertial") signature $(p,q)$ is invariant under $GL(n,ℝ)$. The eigenvalues and diagonalization of symmetric matrix $G$ are $mat(1; , 0; ,, -1)$ where there are $n_+$ ones, $n_0$ zeros, and $n_-$ negative ones. This can be understood as orbit classification of group action
+  #tag("signature-inertia") signature $(p,q)$ is invariant under $GL(n,ℝ)$. The eigenvalues and diagonalization of symmetric matrix $G$ are $mat(1; , 0; ,, -1)$ where there are $n_+$ ones, $n_0$ zeros, and $n_-$ negative ones. This can be understood as orbit classification of group action
 
   #tag("quadratic-form-non-degenerated") Non-degenerate := $N_0 = 0$ in signature
 

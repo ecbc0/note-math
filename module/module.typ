@@ -17,3 +17,5 @@
 to delete color, regex replace in workspace `, fill: (rgb\([\w|#|"]+?\)|[\w]+?)`. _warning_: you may neeed to backup first
 
 you can delete my `.vscode/setting.json`
+
+HTML ver. is built via #link("https://github.com/Myriad-Dreamin/shiroa")[shiroa]

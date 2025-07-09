@@ -3,7 +3,9 @@
 
 cf. #link(<curvature-of-metric.typ>)[]
 
+在有限维应, 某个非退化 signature 的对称双线性型的空间 $S(n_+,n_-)$ 是对称双线性型的空间 $S$ 的子流形, 其切空间可以嵌入到 $S$, $Δ g$ 作为 $g$ 处的切向量的记号
 
+在流形 $M$, 某个非退化 signature metric 的空间 $S(n_+,n_-)$ 是对称双线性型场的空间 $S$ 的子流形, 其切空间可以嵌入到 $S$, $Δ g$ 作为 $g$ 处的切向量的记号
 
 #tag("Einstein-Lagrangian") := $("scal" - 2 Λ) #d Vol$. 在坐标中 $#d Vol = |g| #d x$
 
@@ -49,7 +51,7 @@ _Proof_
   $
     Δ"scal" = tr(- g^(-1) (Δ g) g^(-1) "Ric") + tr(g^(-1) Δ "Ric")
   $
-  对以下进行繁琐的计算
+  对以下进行繁琐的计算 (@ref-24, p.62--64)
 
   - $Δ "Ric" = Δ ((g #cvt-prod)^† R)$
   - $Δ R$
