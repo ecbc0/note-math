@@ -97,7 +97,7 @@
 
     #image("../image/compute-function-output.jpeg", width: 30%)
   ]
-    互斥或, ⊕, `xor`
+    互斥或, $⊕$, `xor`
 
       #table(
         columns: 3, align: center,

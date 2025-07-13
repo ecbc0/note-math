@@ -70,7 +70,7 @@ _Proof_
   
   $a < 1$ 时用 $1/a >  1$ 
 ]
-#tag("factorial-vs-exponential") 阶乘增长快于指数. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
+#tag("factorial-vs-exponential-1") 阶乘增长快于指数. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
 
 _Proof_ define $b_n = a^n/n!$. use 几何级数收敛判别 $b_(n+1)/b_n = a/n -> 0 < 1$
 
@@ -184,6 +184,8 @@ $(n+1)^(n+1)/n^n ∼ e ⋅ (n+1)$ i.e. $lim_(n -> ∞) ((n+1)^(n+1)/n^n)/(n+1) =
 
 $ e = lim_(n -> ∞) ((n+1)/n)^n = sum_(n = 0)^∞ 1/n! $
 
+尽管两个极限的形式看起来如此不同
+
 _Proof_ 
 #indent[
   二项式展开
@@ -192,7 +194,9 @@ _Proof_
   $
   固定 $k$ 时, 有
   $
-    lim_(n -> ∞) binom(n,k) 1/n^k = lim_(n -> ∞) 1/k! (n ⋅ (n-1) ⋯ (n-k+1))/n^k = 1/k!
+    lim_(n -> ∞) binom(n,k) 1/n^k &= lim_(n -> ∞) 1/k! ((n-k+1) ⋯ (n-1) ⋅ n)/n^k \
+    &= 1/k! lim_(n -> ∞) (1 - (k-1)/n) ⋯ (1 - 1/n) ⋅ 1 \
+    &= 1/k!
   $
   对每个 $k ∈ ℕ$
   $
@@ -209,10 +213,158 @@ _Proof_
 
   $sum_(n = 0)^∞ 1/n!$ 收敛. $a > 1, lim_(n -> ∞) a^n/n! = 0$ ==> 在尾部 $1/n! < 1/a^n$ 几何级数控制
 ]
-#tag("iterated-power-vs-factorial-more") 阶乘与叠幂的增长速度比较 $e^n ∼ n^n/n!$ or $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
+#tag("factorial-function-1") 
+#indent[
+  阶乘函数 $z!$ 的无限乘积定义. 不是用减法方向而是用加法方向 
+  $ 
+    lim_(n -> ∞) binom(n+k,n,k) 1/(n^k) 
+    &= 1/k! lim_(n -> ∞) (1 + 1/n) ⋯ (1 + (k-1)/n) (1 + k/n) \ 
+    &= 1/k!
+  $ 
+  ==> 
+  $ 
+    1/z! 
+    &:= lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/(n^z) \
+    &= lim_(n -> ∞) binom(n+z,n,z) 1/(n^z)
+  $ 
+  with 
+  $ 
+    1/z! ⋅ 1/(z+1) 
+    &= lim_(n -> ∞) frac((z+1+1) ⋯ (z+1+n),n!) 1/(n^(z+1)) n/(z+1+n) \
+    &= 1/(z+1)! 
+  $
+  有时用等价的 $1/z! = lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/((n+1)^z)$ 会更方便
 
-so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
+  为了证明收敛, 一种方法是用 $log$ 将无限乘积转为无限加法. 用技巧 
+  $
+    frac((z+1) ⋯ (z+n),n!) &= frac((z+1) ⋯ (z+n),1 ⋯ n) \
+    &= (z + 1) ⋯ (z/n + 1)
+  $
+  用 #link(<Taylor-expansion>)[Taylor 展开] $log (1 + z/n) = z/n + O(z/n)^2 $ 
+  $
+    lim_(n -> ∞) log( frac((z+1) ⋯ (z+n),n!) 1/(n^z) ) 
+    &= lim_(n -> ∞) log(1 + z) + ⋯ + log(1 + z/n) - z log n \ 
+    &= z lim_(n -> ∞) (1 + 1/2 + ⋯ + 1/n - log n) + sum_(n = 1 .. ∞) O(z^2/n^2)
+  $
 
+  - 用阶乘函数的性质可以证明 $sum_(n = 1 .. ∞) 1/n^2 = (π^2)/6$ cf. #link(<Euler-reflection-formula>)[]. 这里只证明收敛
+
+    $sum_(n = 1 .. ∞) 1/n^s < 1 + integral_1^∞ 1/x^s = 1+ 1/(-(s-1)) 1/(x^(s - 1)) |_1^∞ = 1 + 1/(s - 1)$ 收敛, for $s > 1$ and for $Re(s) > 1$
+
+    $zeta(s) := sum_(n = 1 .. ∞) 1/n^s$ 称为 Riemann Zeta 函数 
+
+  - $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ 是 #link(<Euler-constant>)[Euler gamma 常数] #tag("Euler-constant")
+  #indent[
+    $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ as 加法渐进. $lim_(n -> ∞) exp(1 + 1/2 + ⋯ + 1/n)/n = e^γ$ as 乘法渐进
+
+    _Proof_ 
+    #indent[
+      let $a_n = 1 + 1/2 + ⋯ + 1/n - log n$
+
+      $log n = log n/(n-1) ⋯ 2/1 ⋅ 1 = log(n/(n-1)) + ⋯ + log(2/1) + log(1)$
+
+      可以用 $log (1 + 1/n) = 1/n + O(1/n^2)$ 和 $sum_(n = 1 .. ∞) 1/n^2$ 收敛
+
+      也可以用积分估计
+      $
+      1/n < integral_(n-1)^(n) 1/x = log(n/(n-1)) < 1/(n-1)
+      $
+      $a_n$ 有界
+      $
+        dmat(delim: #none,
+        1/2 + ⋯ + 1/n , > , log(n) , > , 1 + ⋯ + 1/(n-1) ;
+
+        - (1/2 + ⋯ + 1/n) , > , - log n , > , - (1 + ⋯ + 1/(n-1)) ;
+
+        1 , > , 1 + 1/2 + ⋯ + 1/n - log n , > , 1/n
+        )
+      $
+      $a_n$ 单调减 
+      $
+        a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
+        &< 1/(n+1) - 1/(n+1) \
+        &= 0
+      $ 
+    ] 
+  ]
+]
+#tag("Euler-reflection-formula") Euler 反射公式 $1/(z! (-z)!) = (sin π z)/(π z)$ or $z/((z/π)! (-z/π)!) = sin z$
+#indent[
+  用代数基本定理的可数推广, #link("https://en.wikipedia.org/wiki/Weierstrass_factorization_theorem")[wiki:Weierstrass\_因式分解定理]
+  
+  用 
+  $
+    n + 1 = 2/1 ⋅ 3/2 ⋯ (n+1)/n = (1 + 1)(1 + 1/2) ⋯ (1 + 1/n)
+  $
+  $
+    1/z!  
+    &= lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/((n+1)^z) \
+    &= product_(n = 1..∞) frac(1 + z/n, (1 + 1/n)^z)
+  $
+  $1/z!$ 的零点是 $-1,-2, ⋯$. $1/(z! (-z)!)$ 的零点是 $ℤ ∖ 0$, 对应到 $(sin π z)/(π z)$ 的零点
+  
+  $1/(z! (-z)!) = product_(n = 1 .. ∞) (1 - z^2/n^2)$, 展开为幂级数, $z^2$ 的系数是 $- sum_(n = 1 .. ∞) 1/n^2$
+  
+  对比 $(sin π z)/(π z)$ 在 $z = 0$ 的 Taylor 展开的 $z^2$ 的系数 $-1/3! π^2 = - π^2/6$
+
+  特别地
+  $
+    1/(1/2 (-1/2)!^2) = 1/((1/2)! (-1/2)!) = frac(sin(π/2),π/2) = 1/(π/2)
+  $
+  从而 $(-1/2)! = π^(1/2)$
+
+  并且得到 #tag("Wallis-formula")
+  $
+    π/2 &= (1/2)! (-1/2)! \
+    &= product_(n = 1 .. ∞) 1/(1 - (1/2)^2/n^2) \
+    &= product_(n = 1 .. ∞) frac(n^2, n^2 - (1/2)^2) \
+    &= product_(n = 1 .. ∞) (n)/(n - 1/2) (n)/(n + 1/2) \
+    &= product_(n = 1 .. ∞) (2 n)/(2 n - 1) (2 n)/(2 n + 1)
+  $
+]
+
+#tag("factorial-function-2") 
+#indent[
+  根据 Euler 的洞察, 阶乘函数的积分定义是, 对 $z in ℕ$ 然后对 $z in ℝ,ℂ$ (且可能对其它 normed-algebra)
+  $
+    z! = integral_0^1 (- log s)^z #d s
+  $
+  两种 $z!$ 的定义是等价的, 但这不是显然的. $z!$ 从 $ℕ$ 到 $ℝ,ℂ$ 的延拓不是唯一的, 因为可以加上在 $z in ℕ$ 上取值 $0$ 的解析函数来保持对 $n!$ 的延拓, 例如加上函数 $sin(m π z), m in ℤ$
+
+  (@ref-25, vol.2, sect.Euler-integral) 函数序列 $f_n (s) = - frac(s^(1/n) - 1,1/n - 0)$ 在 $0 < x < 1$ 上单调递增收敛且一致收敛到 $- (#d)/(#d t) (t = 0) (s^t) = - (#d)/(#d t)(t = 0)(e^(t log s)) = - log s$. 交换级数和积分
+  $
+    integral_0^1 (- log s)^x #d s 
+    &= lim_(n -> ∞) n^x integral_0^1 (1 - s^(1/n))^x #d s \
+    ("use" s = t^n) &= lim_(n -> ∞) n^x integral_0^1 t^(n-1) (1 - t)^x #d t \
+    &= lim_(n -> ∞) n^x frac(n!,(x+1) ⋯ (x+n))
+  $ 
+  变量替换 $t = - log s$ 可以得到另一种积分表示
+  $
+    z! = integral_0^1 (- log s)^z #d s = integral_0^∞ t^z e^(-t) #d t
+  $
+]
+#tag("Gaussian-integral")
+变量替换 $t = (-log s)^(1/2)$ or $s = exp(- t^2)$ 则
+$
+  (- 1/2)! &= integral_0^1 (-log s)^(- 1/2) #d s \
+  &= 2 integral_(0)^(∞) e^(-t^2) #d t \
+  &= integral_(-∞)^(∞) e^(-t^2) #d t
+$
+我们已经用 Euler 反射公式得到 $(-1/2)! = π^(1/2)$. 也可以用极坐标方法
+$
+  (integral_(-∞)^(∞) e^(-t^2) #d t)^2 
+  &= (integral_(-∞)^(∞) e^(-x^2) #d x) (integral_(-∞)^(∞) e^(-y^2) #d y) \
+  &= integral_(ℝ^2) e^(-(x^2 + y^2)) #d x #d y \
+  &= integral_(-π)^(π) #d θ integral_0^∞ #d r (r e^(-r^2)) \
+  &= 2 π ⋅ (-1/2) e^(-r^2) |_0^∞ \
+  &= π 
+$
+#tag("iterated-power-vs-factorial-2")
+#indent[
+  阶乘与叠幂的增长速度比较 $e = lim_(n -> ∞) n/((n!)^(1/n)) = lim_(n -> ∞) (n^n/(n!))^(1/n)$
+
+  so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
+]
 _Proof_ of $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
 #indent[
   def $f(n) = n^n/n!$
@@ -250,32 +402,48 @@ _Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ 发散 by 它不是 #link(<Cauchy-completene
 
   $ forall n ∈ ℕ, a_(2n) - a_n = 1/(n+1) + ⋯ + 1/(2n) >= n ⋅ 1/(2n) = 1/2 $
 
-#tag("Euler-constant") $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ 收敛 as 加法渐进. $lim_(n -> ∞) exp(1 + 1/2 + ⋯ + 1/n)/n = e^γ$ as 乘法渐进
-
-_Proof_ 
+#tag("iterated-power-vs-factorial-3") #tag("Stirling-approximation") $n! ∼ (2 π n)^(1/2) n^n/(e^n)$ 
 #indent[
-  let $a_n = 1 + 1/2 + ⋯ + 1/n - log n$
-
-  $log n = log n/(n-1) ⋯ 2/1 ⋅ 1 = log(n/(n-1)) + ⋯ + log(2/1) + log(1)$
-
-  积分估计
-  $
-   1/n < integral_(n-1)^(n) 1/x = log(n/(n-1)) < 1/(n-1)
-  $
-  $a_n$ 有界
-  $
-    mat(delim: #none,
-    1/2 + ⋯ + 1/n , > , log(n) , > , 1 + ⋯ + 1/(n-1) ;
-
-    - (1/2 + ⋯ + 1/n) , > , - log n , > , - (1 + ⋯ + 1/(n-1)) ;
-
-    1 , > , 1 + 1/2 + ⋯ + 1/n - log n , > , 1/n
-    )
-  $
-  $a_n$ 单调减 
-  $
-    a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
-    &< 1/(n+1) - 1/(n+1) \
-    &= 0
+  使用技巧 
   $ 
+    n^n &= 2^2/1^1 ⋅ 3^3/2^2 ⋯ (n^n)/((n-1)^(n-1)) \
+    &= 2^1/1^1 ⋅ 3^2/2^2 ⋯ (n^(n-1))/((n-1)^(n-1)) n! \
+    &= (1 + 1)^1 (1 + 1/2)^2 ⋯ (1 + 1/(n-1))^(n-1) n!
+  $
+  $
+    log(frac((n/e)^n, n!)) = (1 log(1 + 1) + 2 log(1 + 1/2) ⋯ + (n-1)log(1 + 1/(n-1))) - n
+  $
+  Taylor 展开 $log(1 + 1/k) = sum_(m = 1 .. ∞) (-1)^(m-1) 1/(m ⋅ k^m)$
+  $
+    log(frac((n/e)^n, n!)) 
+    &= -1 + log 2 + sum_(k = 2)^(n-1) sum_(m = 2 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1)) \
+    &= -1 - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) + log 2 + sum_(k = 2)^(n-1) sum_(m = 3 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1))
+  $
+  我们知道 $γ = lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n$ 
+  
+  (@ref-26) 最后一项
+  $
+    sum_(k = 2 .. ∞) sum_(m = 3 .. ∞) 1/(m ⋅ k^(m-1)) 
+    &<= sum_(k = 2 .. ∞) sum_(m = 2 .. ∞) 1/(k^m) \
+    &= sum_(k = 2 .. ∞) (1/(1 - 1/k) - 1 - 1/k) \
+    &= sum_(k = 2 .. ∞) (1/(k - 1) - 1/k) \
+    &= 1
+  $
+  
+  所以 $frac(n!, (n/e)^n) ∼ C n^(1/2)$ or $n! ∼ C n^(1/2) (n/e)^n$
+
+  (@ref-27) 变量替换 $t = y n^(1/2) + n$
+  $
+    n! &= integral_0^∞ t^n e^(-t) #d t \
+    &= (n/e)^n n^(1/2) integral_(-n^(1/2))^(∞) (1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) #d t
+  $
+  函数 $f_n (y) = (1 + frac(y, n^(1/2)))^n e^(- n^(1/2) y)$ 在 $y <= 0, y >= - n^(1/2)$ 分别在 $n -> ∞$ 时单调收敛到 $e^(-1/2 y^2)$
+  $
+    log(1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) 
+    &= n log(1 + frac(y, n^(1/2))) - y n^(1/2) \
+    &= -1/2 y^2 + o(1/n)
+  $
+  交换级数和积分, 并使用 $integral_(-∞)^(∞) e^(1/2 y^2) #d y = (2 π)^(1/2)$ 
+
+  $π$ 的出现的讨论, 也见 #link(<why-pi-in-Gaussian-integral>)[]
 ]

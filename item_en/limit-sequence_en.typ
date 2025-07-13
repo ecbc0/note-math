@@ -70,7 +70,7 @@ _Proof_
   
   When $a < 1$, use $1/a >  1$ 
 ]
-#tag("factorial-vs-exponential") Factorial growth is faster than exponential. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
+#tag("factorial-vs-exponential-1") Factorial growth is faster than exponential. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
 
 _Proof_ define $b_n = a^n/n!$. use Geometric series convergence test $b_(n+1)/b_n = a/n -> 0 < 1$
 
@@ -184,6 +184,8 @@ $(n+1)^(n+1)/n^n ∼ e ⋅ (n+1)$ i.e. $lim_(n -> ∞) ((n+1)^(n+1)/n^n)/(n+1) =
 
 $ e = lim_(n -> ∞) ((n+1)/n)^n = sum_(n = 0)^∞ 1/n! $
 
+Although the two limits appear to be so different in form
+
 _Proof_ 
 #indent[
   Binomial expansion
@@ -192,7 +194,9 @@ _Proof_
   $
   When $k$ is fixed, we have
   $
-    lim_(n -> ∞) binom(n,k) 1/n^k = lim_(n -> ∞) 1/k! (n ⋅ (n-1) ⋯ (n-k+1))/n^k = 1/k!
+    lim_(n -> ∞) binom(n,k) 1/n^k &= lim_(n -> ∞) 1/k! ((n-k+1) ⋯ (n-1) ⋅ n)/n^k \
+    &= 1/k! lim_(n -> ∞) (1 - (k-1)/n) ⋯ (1 - 1/n) ⋅ 1 \
+    &= 1/k!
   $
   For each $k ∈ ℕ$
   $
@@ -209,10 +213,158 @@ _Proof_
 
   $sum_(n = 0)^∞ 1/n!$ converges. $a > 1, lim_(n -> ∞) a^n/n! = 0$ ==> at the tail $1/n! < 1/a^n$ geometric series control
 ]
-#tag("iterated-power-vs-factorial-more") Comparison of the growth rate of factorial and iterated power $e^n ∼ n^n/n!$ or $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
+#tag("factorial-function-1") 
+#indent[
+  Infinite product definition of the factorial function $z!$. Not in the subtraction direction but in the addition direction. 
+  $ 
+    lim_(n -> ∞) binom(n+k,n,k) 1/(n^k) 
+    &= 1/k! lim_(n -> ∞) (1 + 1/n) ⋯ (1 + (k-1)/n) (1 + k/n) \ 
+    &= 1/k!
+  $ 
+  ==> 
+  $ 
+    1/z! 
+    &:= lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/(n^z) \
+    &= lim_(n -> ∞) binom(n+z,n,z) 1/(n^z)
+  $ 
+  with 
+  $ 
+    1/z! ⋅ 1/(z+1) 
+    &= lim_(n -> ∞) frac((z+1+1) ⋯ (z+1+n),n!) 1/(n^(z+1)) n/(z+1+n) \
+    &= 1/(z+1)! 
+  $
+  Sometimes it is more convenient to use the equivalent $1/z! = lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/((n+1)^z)$.
 
-so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
+  To prove convergence, one method is to convert the infinite product into an infinite sum using $log$. Using a trick. 
+  $
+    frac((z+1) ⋯ (z+n),n!) &= frac((z+1) ⋯ (z+n),1 ⋯ n) \
+    &= (z + 1) ⋯ (z/n + 1)
+  $
+  Using #link(<Taylor-expansion>)[Taylor expansion] $log (1 + z/n) = z/n + O(z/n)^2 $. 
+  $
+    lim_(n -> ∞) log( frac((z+1) ⋯ (z+n),n!) 1/(n^z) ) 
+    &= lim_(n -> ∞) log(1 + z) + ⋯ + log(1 + z/n) - z log n \ 
+    &= z lim_(n -> ∞) (1 + 1/2 + ⋯ + 1/n - log n) + sum_(n = 1 .. ∞) O(z^2/n^2)
+  $
 
+  - Using the properties of the factorial function, it can be proven that $sum_(n = 1 .. ∞) 1/n^2 = (π^2)/6$ cf. #link(<Euler-reflection-formula>)[]. Here, only convergence is proven.
+
+    $sum_(n = 1 .. ∞) 1/n^s < 1 + integral_1^∞ 1/x^s = 1+ 1/(-(s-1)) 1/(x^(s - 1)) |_1^∞ = 1 + 1/(s - 1)$ converges, for $s > 1$ and for $Re(s) > 1$.
+
+    $zeta(s) := sum_(n = 1 .. ∞) 1/n^s$ is called the Riemann Zeta function. 
+
+  - $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ is the #link(<Euler-constant>)[Euler gamma constant] #tag("Euler-constant")
+  #indent[
+    $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ as an additive asymptote. $lim_(n -> ∞) exp(1 + 1/2 + ⋯ + 1/n)/n = e^γ$ as a multiplicative asymptote.
+
+    _Proof_ 
+    #indent[
+      let $a_n = 1 + 1/2 + ⋯ + 1/n - log n$
+
+      $log n = log n/(n-1) ⋯ 2/1 ⋅ 1 = log(n/(n-1)) + ⋯ + log(2/1) + log(1)$
+
+      Can use $log (1 + 1/n) = 1/n + O(1/n^2)$ and $sum_(n = 1 .. ∞) 1/n^2$ converges.
+
+      Can also use integral estimation.
+      $
+      1/n < integral_(n-1)^(n) 1/x = log(n/(n-1)) < 1/(n-1)
+      $
+      $a_n$ is bounded.
+      $
+        dmat(delim: #none,
+        1/2 + ⋯ + 1/n , > , log(n) , > , 1 + ⋯ + 1/(n-1) ;
+
+        - (1/2 + ⋯ + 1/n) , > , - log n , > , - (1 + ⋯ + 1/(n-1)) ;
+
+        1 , > , 1 + 1/2 + ⋯ + 1/n - log n , > , 1/n
+        )
+      $
+      $a_n$ is monotonically decreasing. 
+      $
+        a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
+        &< 1/(n+1) - 1/(n+1) \
+        &= 0
+      $ 
+    ] 
+  ]
+]
+#tag("Euler-reflection-formula") Euler reflection formula $1/(z! (-z)!) = (sin π z)/(π z)$ or $z/((z/π)! (-z/π)!) = sin z$
+#indent[
+  Using the countable generalization of the fundamental theorem of algebra, #link("https://en.wikipedia.org/wiki/Weierstrass_factorization_theorem")[wiki:Weierstrass\_factorization\_theorem]
+  
+  Using 
+  $
+    n + 1 = 2/1 ⋅ 3/2 ⋯ (n+1)/n = (1 + 1)(1 + 1/2) ⋯ (1 + 1/n)
+  $
+  $
+    1/z!  
+    &= lim_(n -> ∞) frac((z+1) ⋯ (z+n),n!) 1/((n+1)^z) \
+    &= product_(n = 1..∞) frac(1 + z/n, (1 + 1/n)^z)
+  $
+  The zeros of $1/z!$ are $-1,-2, ⋯$. The zeros of $1/(z! (-z)!)$ are $ℤ ∖ 0$, corresponding to the zeros of $(sin π z)/(π z)$
+  
+  $1/(z! (-z)!) = product_(n = 1 .. ∞) (1 - z^2/n^2)$, expanding as a power series, the coefficient of $z^2$ is $- sum_(n = 1 .. ∞) 1/n^2$
+  
+  Comparing the coefficient of $z^2$ in the Taylor expansion of $(sin π z)/(π z)$ at $z = 0$, which is $-1/3! π^2 = - π^2/6$
+
+  In particular
+  $
+    1/(1/2 (-1/2)!^2) = 1/((1/2)! (-1/2)!) = frac(sin(π/2),π/2) = 1/(π/2)
+  $
+  Thus $(-1/2)! = π^(1/2)$
+
+  And we get #tag("Wallis-formula")
+  $
+    π/2 &= (1/2)! (-1/2)! \
+    &= product_(n = 1 .. ∞) 1/(1 - (1/2)^2/n^2) \
+    &= product_(n = 1 .. ∞) frac(n^2, n^2 - (1/2)^2) \
+    &= product_(n = 1 .. ∞) (n)/(n - 1/2) (n)/(n + 1/2) \
+    &= product_(n = 1 .. ∞) (2 n)/(2 n - 1) (2 n)/(2 n + 1)
+  $
+]
+
+#tag("factorial-function-2") 
+#indent[
+  According to Euler's insight, the integral definition of the factorial function is, for $z in ℕ$ and then for $z in ℝ,ℂ$ (and possibly for other normed-algebra)
+  $
+    z! = integral_0^1 (- log s)^z #d s
+  $
+  The two definitions of $z!$ are equivalent, but this is not obvious. The extension of $z!$ from $ℕ$ to $ℝ,ℂ$ is not unique, because one can add analytic functions that take the value $0$ for $z in ℕ$ to maintain the extension of $n!$, for example by adding the function $sin(m π z), m in ℤ$
+
+  (@ref-25, vol.2, sect.Euler-integral) The function sequence $f_n (s) = - frac(s^(1/n) - 1,1/n - 0)$ converges monotonically and uniformly on $0 < x < 1$ to $- (#d)/(#d t) (t = 0) (s^t) = - (#d)/(#d t)(t = 0)(e^(t log s)) = - log s$. Exchange series and integral
+  $
+    integral_0^1 (- log s)^x #d s 
+    &= lim_(n -> ∞) n^x integral_0^1 (1 - s^(1/n))^x #d s \
+    ("use" s = t^n) &= lim_(n -> ∞) n^x integral_0^1 t^(n-1) (1 - t)^x #d t \
+    &= lim_(n -> ∞) n^x frac(n!,(x+1) ⋯ (x+n))
+  $ 
+  Variable substitution $t = - log s$ can yield another integral representation
+  $
+    z! = integral_0^1 (- log s)^z #d s = integral_0^∞ t^z e^(-t) #d t
+  $
+]
+#tag("Gaussian-integral")
+Variable substitution $t = (-log s)^(1/2)$ or $s = exp(- t^2)$ then
+$
+  (- 1/2)! &= integral_0^1 (-log s)^(- 1/2) #d s \
+  &= 2 integral_(0)^(∞) e^(-t^2) #d t \
+  &= integral_(-∞)^(∞) e^(-t^2) #d t
+$
+We have obtained $(-1/2)! = π^(1/2)$ using the Euler reflection formula. It can also be obtained using the polar coordinate method
+$
+  (integral_(-∞)^(∞) e^(-t^2) #d t)^2 
+  &= (integral_(-∞)^(∞) e^(-x^2) #d x) (integral_(-∞)^(∞) e^(-y^2) #d y) \
+  &= integral_(ℝ^2) e^(-(x^2 + y^2)) #d x #d y \
+  &= integral_(-π)^(π) #d θ integral_0^∞ #d r (r e^(-r^2)) \
+  &= 2 π ⋅ (-1/2) e^(-r^2) |_0^∞ \
+  &= π 
+$
+#tag("iterated-power-vs-factorial-2")
+#indent[
+  Comparison of growth rates of factorial and tetration $e = lim_(n -> ∞) n/((n!)^(1/n)) = lim_(n -> ∞) (n^n/(n!))^(1/n)$
+
+  so $n!^(1/n) ∼ 1/e ⋅ n$, so $lim_(n -> ∞) n!^(1/n) = ∞$
+]
 _Proof_ of $e = lim_(n -> ∞) n/((n!)^(1/n))$ 
 #indent[
   def $f(n) = n^n/n!$
@@ -250,32 +402,48 @@ _Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges because it is not #link(<Cauchy-com
 
   $ forall n ∈ ℕ, a_(2n) - a_n = 1/(n+1) + ⋯ + 1/(2n) >= n ⋅ 1/(2n) = 1/2 $
 
-#tag("Euler-constant") $lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n = γ$ converges as additive asymptotic. $lim_(n -> ∞) exp(1 + 1/2 + ⋯ + 1/n)/n = e^γ$ as multiplicative asymptotic
-
-_Proof_ 
+#tag("iterated-power-vs-factorial-3") #tag("Stirling-approximation") $n! ∼ (2 π n)^(1/2) n^n/(e^n)$ 
 #indent[
-  let $a_n = 1 + 1/2 + ⋯ + 1/n - log n$
-
-  $log n = log n/(n-1) ⋯ 2/1 ⋅ 1 = log(n/(n-1)) + ⋯ + log(2/1) + log(1)$
-
-  Integral estimation
-  $
-   1/n < integral_(n-1)^(n) 1/x = log(n/(n-1)) < 1/(n-1)
-  $
-  $a_n$ is bounded
-  $
-    mat(delim: #none,
-    1/2 + ⋯ + 1/n , > , log(n) , > , 1 + ⋯ + 1/(n-1) ;
-
-    - (1/2 + ⋯ + 1/n) , > , - log n , > , - (1 + ⋯ + 1/(n-1)) ;
-
-    1 , > , 1 + 1/2 + ⋯ + 1/n - log n , > , 1/n
-    )
-  $
-  $a_n$ is monotonically decreasing 
-  $
-    a_(n+1) - a_n &= 1/(n+1) - log((n+1)/n) \
-    &< 1/(n+1) - 1/(n+1) \
-    &= 0
+  Tips 
   $ 
+    n^n &= 2^2/1^1 ⋅ 3^3/2^2 ⋯ (n^n)/((n-1)^(n-1)) \
+    &= 2^1/1^1 ⋅ 3^2/2^2 ⋯ (n^(n-1))/((n-1)^(n-1)) n! \
+    &= (1 + 1)^1 (1 + 1/2)^2 ⋯ (1 + 1/(n-1))^(n-1) n!
+  $
+  $
+    log(frac((n/e)^n, n!)) = (1 log(1 + 1) + 2 log(1 + 1/2) ⋯ + (n-1)log(1 + 1/(n-1))) - n
+  $
+  Taylor expansion $log(1 + 1/k) = sum_(m = 1 .. ∞) (-1)^(m-1) 1/(m ⋅ k^m)$
+  $
+    log(frac((n/e)^n, n!)) 
+    &= -1 + log 2 + sum_(k = 2)^(n-1) sum_(m = 2 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1)) \
+    &= -1 - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) + log 2 + sum_(k = 2)^(n-1) sum_(m = 3 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1))
+  $
+  We know $γ = lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n$ 
+  
+  (@ref-26) The last term
+  $
+    sum_(k = 2 .. ∞) sum_(m = 3 .. ∞) 1/(m ⋅ k^(m-1)) 
+    &<= sum_(k = 2 .. ∞) sum_(m = 2 .. ∞) 1/(k^m) \
+    &= sum_(k = 2 .. ∞) (1/(1 - 1/k) - 1 - 1/k) \
+    &= sum_(k = 2 .. ∞) (1/(k - 1) - 1/k) \
+    &= 1
+  $
+  
+  So $frac(n!, (n/e)^n) ∼ C n^(1/2)$ or $n! ∼ C n^(1/2) (n/e)^n$
+
+    (@ref-27) Variable substitution $t = y n^(1/2) + n$
+  $
+    n! &= integral_0^∞ t^n e^(-t) #d t \
+    &= (n/e)^n n^(1/2) integral_(-n^(1/2))^(∞) (1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) #d t
+  $
+  The function $f_n (y) = (1 + frac(y, n^(1/2)))^n e^(- n^(1/2) y)$ monotonically converges to $e^(-1/2 y^2)$ for $y <= 0, y >= - n^(1/2)$ respectively when $n -> ∞$. 
+  $
+    log(1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) 
+    &= n log(1 + frac(y, n^(1/2))) - y n^(1/2) \
+    &= -1/2 y^2 + o(1/n)
+  $
+  Exchange series and integral, and use $integral_(-∞)^(∞) e^(1/2 y^2) #d y = (2 π)^(1/2)$
+
+  For a discussion on the appearance of $π$, also see #link(<why-pi-in-Gaussian-integral>)[]
 ]

@@ -55,6 +55,14 @@ $H_n$ is called Hermite polynomial
 
 For quantum harmonic oscillator, even for static wave function, there are $ℕ$ possible characteristic energies $E_n = (1/2 + n) ℏ ω$
 
+#tag("why-pi-in-Gaussian-integral") This may give a clue as to why the factorial #link(<Stirling-approximation>)[Stirling approximation] $n! ≈ (2 π)^(1/2) n^(1/2) (n/e)^(n)$ has $π$.
+
+The characteristic polynomial of the harmonic oscillator ODE $acc(x) = - ω^2 x$ is $ξ^2 = - ω^2$, and the prototype is $ξ^2 = -1$, so $#i$ and complex numbers are introduced, so there is a circle, and there is $π$. $e^(- 1/2 x^2)$ is related to the ground state of the quantum harmonic oscillator. To simplify the discussion, $ℏ$ is omitted. The normal momentum operator $- #i ∂_x$ actually corresponds to the phase change $e^(#i) != 1$. If $π$ is added to the momentum operator, the momentum operator will corresponds to the phase change $e^(#i 2 π) = 1$, and then the ground state may also become $e^(- a x^2)$, where $a$ contains the $π$ factor, and its $L^2$ integral is directly normalized without adding the $π$ scaling factor
+
+The appearance of $π$ in the Stirling approximation may be similar. We should ask where the factorial (or its reciprocal) after adding the $π$ scaling factor comes from, for example, from the volume calculation of the sphere and the spherical surface
+
+Another hint is that the $frac(ω T, sin ω T)$ that appears in the kernel of the Fourier transform ver. of the oscillator Feynman #link(<path-integral-quantization>)[path integral quantization] corresponds to the property of the #link(<factorial-function-1>)[factorial function] $z!(-z)! = (π z)/(sin π z)$, with an additional $π$ scaling factor, so the modified factorial function should satisfy $z!(-z)! = (z)/(sin z)$?
+
 _Warning_ Don't assume that since the lowest energy is non-zero $1/2 ℏ ω$, there is energy out of nowhere, because the energy of a static hydrogen atom can still be negative
 
 It can be proven that this $ℕ$ eigenstate series orthogonally expands $L^2$
@@ -122,7 +130,7 @@ For time only depending on the difference $t_1 - t_0$
         sin ω T
       ) )
   $
-  Used Gauss integral + infinite product $product_(n = 1)^(∞) (1 - x^2/n^2) = (sin π x)/(π x)$ 
+  Used Gauss integral + Euler infinite product $product_(n = 1)^(∞) (1 - z^2/n^2) = (sin π z)/(π z) = 1/(z! (-z)!)$ 
 ]
 #tag("eigen-decomposition") 
 #indent[
@@ -136,7 +144,7 @@ For time only depending on the difference $t_1 - t_0$
     e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \
     K &= sum_(n) e^(- #i 1/ℏ E_n t) ⟨ x ket(n) bra(n) x_0 ⟩ 
   $
-  $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
+  $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$. This shows that the path integral can directly give the energy level, without using the raising and lowering operator method?
 ]
 Regarding field quantization
 

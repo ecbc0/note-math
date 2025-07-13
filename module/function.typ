@@ -1,7 +1,7 @@
 #import "style.typ": *
 #show: style
 
-#let tag(s) = [#text("<" + s + ">", fill: rgb("#c10047"))#label(s)]
+#let tag(s) = [#text("[" + s + "]", fill: rgb("#c10047"))#label(s)]
 
 #let indent(x) = block(
   stroke: (left: rgb("#94828233") + 0.6pt), inset: (left: 1em), x

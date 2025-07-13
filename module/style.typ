@@ -6,12 +6,13 @@
 
   set text(
     font: (
-      "Source Code Pro",
-      "Noto Sans SC",
+      "Hanken Grotesk",
+      "Sarasa Gothic SC"
     ),
     fill: rgb("#0058b1"),
     size: 14pt,
     cjk-latin-spacing: auto,
+    kerning: true
   )
 
   set underline(offset: .1em, stroke: .05em, evade: false)
@@ -21,15 +22,15 @@
   show emph: set text(
     fill: rgb("#d10000"),
     /* font: (
-      "Source Code Pro",
-
+      
     ), */
   )
 
   show raw: set text(
-    fill: rgb("#2f00ff"),
-    size: 12pt,
+    fill: rgb("#6e6e6e"),
+    size: 12.5pt,
     font: "Source Code Pro",
+    weight: "medium"
   )
 
   set table(

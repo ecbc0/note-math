@@ -73,3 +73,5 @@ Hyperbolic angle is the same $ℝ <-> SO(1,1) ≃ ℍ𝕪 ≃ #U (1,ℂ_"split")
 #tag("Euler-formula") $ℂ$ #link(<exponential>)[exponential function] $exp #i t = cos t + #i sin t$
 
 Similarly, hyperbolic and split complex $ℂ_"split"$
+
+*Question* Generalize to quaternion $ℍ$, octonion $𝕆$, and their split ver.

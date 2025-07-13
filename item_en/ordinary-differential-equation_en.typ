@@ -30,8 +30,8 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, initial value undeterm
     &= x + sum_(n=0)^∞ 1/((n+1)!) (∂_(v(x)))^n v (x) 
   $
   $n+1$ polynomial like $(∂_(λ v(x)))^n λ v (x) = λ^(n+1) (∂_(v(x)))^n v (x)$
-]
-or with $t$ 
+
+  or with $t$ 
   $ 
     (exp t v) (x) 
     &= x + t v(x) + t^2/2! ∂_(v(x)) v(x) + t^3/3! ∂_(v(x)) (∂_(v(x)) v(x)) + ⋯ \
@@ -39,6 +39,15 @@ or with $t$
   $
   make it correspond to ODE $∂_t (exp t v) (x) = ∂_(v(x)) (exp t v) (x) = v((exp t v) (x))$
 
+  and $(exp v) (x)$ or $(exp t v) (x)$ is local diffeomorphism. This is the relation between ODE and symmetry, i.e. Lie theory
+
+  if we also write $∂_(v (x))$ as $v(x)$, then
+  $ 
+    (exp v) (x) 
+    = x + v(x) + 1/2! v(x) v(x) + ⋯ 
+    = sum_(n=0)^∞ 1/(n!) v(x)^n
+  $
+]
 *Example* 
 
 compare to the result from separable ODE in 1 dimension
@@ -137,8 +146,6 @@ compare to the result from separable ODE in 1 dimension
   The $f(t,x)$ in $f(0,x) = x, f(1,x) = f(x)$ should correspond to the case of a dilation vector field $t ⋅ v(x)$
 
   One-parameter homomorphism embedding $f(t,x) : ℝ ↪ "Diff"$
-
-  $-v$ and initial value $y = f(x)$ gives $f^(-1)$. $f^(-1)(t,y) = f(-t,y)$
 ]
 $f(t,x)$ is called flow. exp road emission-like coordinates
 
