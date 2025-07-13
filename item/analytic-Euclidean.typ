@@ -61,8 +61,6 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
 ]
 将多项式的 #link(<change-base-point-polynomial>)[] 推广到级数
 
-
-
 #tag("change-base-point-analytic") 
 #indent[
   $R > 0$ 
@@ -195,7 +193,7 @@ $lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n)$ 可以恢复 $n$ 阶单项式
 
 #tag("polynomial-expansion") 多项式展开 $ f(x+v) ∼ sum 1/(n!) #d^n f(x)(v^n) $ *alias* 幂级数, Taylor 展开, Taylor 级数
 
-#tag("polynomial-approximation") 多项式逼近 $ f(x+v) ∼ sum_(n=0..N) 1/(n!) #d^n f(x)(v^n) + o(v^N) $ *alias* Taylor 展开, Taylor 逼近, Taylor 多项式
+#tag("polynomial-approximation") 多项式逼近 $ f(x+v) ∼ sum_(n=0..N) 1/(n!) #d^n f(x)(v^n) + o(v^N) $ *alias* Taylor 展开, Taylor 逼近, Taylor 多项式 #tag("Taylor-expansion") #tag("Taylor-approximation") #tag("Taylor-polynomial")
 
 #tag("derivative") 微商 *alias* 导数, 方向导数 
 

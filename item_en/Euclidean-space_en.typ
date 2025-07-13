@@ -10,17 +10,17 @@ e_(i_k)$ with $⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2 = ⟨ e_(i_1) ⟩^2 ⋯ ⟨
 
 let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
 
-*Abbreviation* $⟨ v,w ⟩ := ⟨ v , w ⟩, ⟨ v ⟩^2 := ⟨ v , v ⟩, |v| := (⟨ v ⟩^2)^(1/2)$
+*Abbreviation* $⟨v⟩^2 := ⟨v,v⟩, |v| := (⟨v⟩^2)^(1/2)$
 
-#tag("quadratic-form-inequality-Euclidean") Inner product inequality (Euclidean). $0 <= ⟨ v ∧ w ⟩^2 = det mat(⟨ v ⟩^2, ⟨ v,w ⟩; ⟨ w,v ⟩, ⟨ w ⟩^2) = ⟨ v ⟩^2 ⟨ w ⟩^2 - ⟨ w,v ⟩^2$. i.e. $⟨ w,v ⟩^2 <= ⟨ v ⟩^2 ⟨ w ⟩^2$ or $⟨ v,w ⟩ <= |v| |w|$
+#tag("quadratic-form-inequality-Euclidean") Inner product inequality (Euclidean). $0 <= ⟨v ∧ w⟩^2 = det mat(⟨v⟩^2, ⟨v,w⟩; ⟨w,v⟩, ⟨w⟩^2) = ⟨v⟩^2 ⟨w⟩^2 - ⟨w,v⟩^2$. i.e. $⟨w,v⟩^2 <= ⟨v⟩^2 ⟨w⟩^2$ or $⟨v,w⟩ <= |v| |w|$
 
 #tag("triangle-inequality-Euclidean") Triangle inequality (Euclidean)
   - $|v + w| <= |v| + |w|$ 
 
     _Proof_
       $
-        ⟨ v+w ⟩^2 &= ⟨ v ⟩^2 + 2 ⟨ v,w ⟩ + ⟨ w ⟩^2 \
-        &>= ⟨ v ⟩^2 + 2 |v| |w| + ⟨ w ⟩^2 \
+        ⟨v+w⟩^2 &= ⟨v⟩^2 + 2 ⟨v,w⟩ + ⟨w⟩^2 \
+        &>= ⟨v⟩^2 + 2 |v| |w| + ⟨w⟩^2 \
         &= (|v| + |w|)^2
       $
   - $|v - w| >= stretch(|, size: #120%)|v| - |w|stretch(|, size: #120%)$

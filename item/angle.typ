@@ -72,3 +72,5 @@ $SO(2)$ 的元素 $mat(a,-b;b,a)$ with $a^2 + b^2 = 1$. 集合论上等价于 $�
 #tag("Euler-formula") $ℂ$ #link(<exponential>)[指数函数] $exp #i t = cos t + #i sin t$
 
 类似地, 双曲和 split complex $ℂ_"split"$
+
+*Question* 推广到四元数 $ℍ$ 和八元数 $𝕆$ 及其 split 版本

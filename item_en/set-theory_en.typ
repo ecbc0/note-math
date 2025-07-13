@@ -217,7 +217,8 @@ Deductive proof also requires syllogism
 
 + All living things die \
 + Humans are living things \
-+ Therefore, all humans will die
++ Therefore, all humans will die \
++ function the call itself
 
 Where "all living things die" is a specially constructed proposition
 

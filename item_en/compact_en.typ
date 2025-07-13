@@ -7,7 +7,7 @@
 
 #let open(x) = math.circle(x)
 
-compact's original inspiration: The intersection of closed interval nets of $ℝ$ is non-empty #link(<closed-interval-net-theorem>)[]
+the original inspiration of compactness: The intersection of closed interval nets of $ℝ$ is non-empty #link(<closed-interval-net-theorem>)[]
 
 $0$ is a #link(<limit-point>)[limit point] of $#T _ ℝ$ of $(0,1)$. The #link(<net>)[net] $(0,1/n)$ seems to converge to $0$
 

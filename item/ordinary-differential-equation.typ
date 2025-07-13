@@ -38,6 +38,15 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
     &= x + sum_(n=0)^∞ t^(n+1)/((n+1)!) (∂_(v(x)))^n v (x) 
   $
   使得对应到 ODE $∂_t (exp t v) (x) = ∂_(v(x)) (exp t v) (x) = v((exp t v) (x))$
+
+  且 $(exp v) (x)$ or $(exp t v) (x)$ 是局部微分同胚. 这是 ODE 和对称性的关系, i.e. Lie theory
+
+  如果将 $∂_(v (x))$ 也写为 $v(x)$, 则
+  $ 
+    (exp v) (x) 
+    = x + v(x) + 1/2! v(x) v(x) + ⋯ 
+    = sum_(n=0)^∞ 1/(n!) v(x)^n
+  $
 ]
 *Example* 
 

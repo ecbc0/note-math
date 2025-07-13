@@ -97,7 +97,7 @@ Propositional Logic
 
     #image("../image/compute-function-output.jpeg", width: 30%)
   ]
-    Exclusive or, ⊕, `xor`
+    Exclusive or, $⊕$, `xor`
 
       #table(
         columns: 3, align: center,

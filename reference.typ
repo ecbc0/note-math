@@ -118,3 +118,13 @@
 #tag("ref-24"):\
   title: Einstein Manifolds\
   author: A.L. Besse
+
+#tag("ref-25"):\
+  title: Mathematical Analysis\
+  author: V.A. Zorich
+
+#tag("ref-26"):\
+  url: https://math.stackexchange.com/a/1433807/1652008
+
+#tag("ref-27"):\
+  url: https://math.stackexchange.com/a/95473/1652008

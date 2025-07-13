@@ -1,5 +1,6 @@
 #import "@preview/shiroa:0.2.3": *
 
+// from typsite
 #let to-string(content) = {
   if type(content) == none {
     return ""
@@ -29,6 +30,7 @@
 
 #let image(path, width: auto) = html.elem("img", attrs: (src: str(path), width: to-string([#width])))
 
+// from shiroa
 #let div-frame(content, attrs: (:), tag: "div") = html.elem(tag, html.frame(content), attrs: attrs)
 #let span-frame = div-frame.with(tag: "span")
 #let p-frame = div-frame.with(tag: "p")
@@ -38,19 +40,24 @@
     // prefer external css ...
     #```CSS
     .indent {
-    border-left: 1px solid #94828233;
-    padding-left: 1em
-    }  a:link {
-    color: #008690;
-    text-decoration: underline
+      border-left: 1px solid #94828233;
+      padding-left: 1em
+    }
+    .typst-tag {
+      color: #c10047
+    }
+    a:link {
+      color: #008690;
+      text-decoration: underline
     }
     ::selection {
       color: #c83900;
       background: inheritance
     }
     code, pre {
-      color: #2f00ff;
-      font-size: 1em
+      color: #6e6e6e;
+      font-size: 0.9em;
+      font-weight: 500
     }
     strong {
       color: #2f00ff
@@ -68,6 +75,9 @@
     }
     .chapter li.part-title {
       color: #cf9f00
+    }
+    body {
+      font-family: 'Hanken Grotesk','Sarasa Gothic SC'
     }
 
     .coal {
@@ -114,7 +124,6 @@
 
     .chapter li a {
       color: #008690;
-      text-decoration: underline;
     }
     ```.text
   ]
