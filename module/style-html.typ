@@ -1,4 +1,4 @@
-#import "@preview/shiroa:0.2.3": *
+// #import "@preview/shiroa:0.2.3": *
 
 // from typsite
 #let to-string(content) = {
@@ -30,11 +30,6 @@
 
 #let image(path, width: auto) = html.elem("img", attrs: (src: str(path), width: to-string([#width])))
 
-// from shiroa
-#let div-frame(content, attrs: (:), tag: "div") = html.elem(tag, html.frame(content), attrs: attrs)
-#let span-frame = div-frame.with(tag: "span")
-#let p-frame = div-frame.with(tag: "p")
-
 #let style(body) = {
   html.elem("style")[
     // prefer external css ...
@@ -43,107 +38,34 @@
       border-left: 1px solid #94828233;
       padding-left: 1em
     }
-    .typst-tag {
-      color: #c10047
-    }
     a:link {
-      color: #008690;
       text-decoration: underline
     }
     ::selection {
-      color: #c83900;
       background: inheritance
     }
     code, pre {
-      color: #6e6e6e;
       font-size: 0.9em;
       font-weight: 500
-    }
-    strong {
-      color: #2f00ff
-    }
-    em {
-      color: #d10000
     }
     ol, ul {
       padding-left: 0.7em;
       padding-bottom: 0em;
       padding-top: 0em;
     }
-    ol ::marker, ul ::marker {
-      color: #e90000
-    }
-    .chapter li.part-title {
-      color: #cf9f00
-    }
     body {
       font-family: 'Hanken Grotesk','Sarasa Gothic SC'
     }
-
-    .coal {
-      --bg: hsl(0, 0%, 0%);
-      --fg: #0058b1;
-
-      --sidebar-bg: #000000;
-      --sidebar-fg: #0058b1;
-      --sidebar-non-existant: #505254;
-      --sidebar-active: #2b8900;
-      --sidebar-spacer: #393939;
-
-      --scrollbar: var(--sidebar-fg);
-
-      --icons: #43484d;
-      --icons-hover: #b3c0cc;
-
-      --links: #008690;
-
-      --inline-code-color: #c5c8c6;
-
-      --theme-popup-bg: #000000;
-      --theme-popup-border: #43484d;
-      --theme-hover: #1f2124;
-
-      --quote-bg: hsl(0, 0%, 0%);
-      --quote-border: hsl(234, 21%, 23%);
-
-      --table-border-color: hsl(200, 7%, 13%);
-      --table-header-bg: hsl(0, 0%, 0%);
-      --table-alternate-bg: hsl(0, 0%, 0%);
-
-      --searchbar-border-color: #aaa;
-      --searchbar-bg: #000000;
-      --searchbar-fg: #2f00ff;
-      --searchbar-shadow-color: #aaa;
-      --searchresults-header-fg: #666;
-      --searchresults-border-color: #98a3ad;
-      --searchresults-li-bg: #000000;
-      --search-mark-bg: #355c7d;
-
-      --color-scheme: dark;
-    }
-
-    .chapter li a {
-      color: #008690;
-    }
     ```.text
   ]
+
   show math.equation: set text(
     font: "noto sans math",
-    fill: rgb("#2b8900")
+    // fill: rgb("#2b8900"),
+    size: 12pt,
   )
 
   show math.equation: math.display
-
-  show math.equation.where(block: true): it => context if shiroa-sys-target() == "html" {
-    p-frame(attrs: ("class": "block-equation"), it)
-  } else {
-    it
-  }
-  show math.equation.where(block: false): it => context if shiroa-sys-target() == "html" {
-    span-frame(attrs: (class: "inline-equation"), it)
-  } else {
-    it
-  }
 
   show stack: it => {
     html.elem("div", attrs: (class: "stack"), it.children.join(none))
@@ -154,52 +76,47 @@
       "Hanken Grotesk",
       "Sarasa Gothic SC"
     ),
-    fill: rgb("#0058b1"),
+    // fill: rgb("#0058b1"),
     cjk-latin-spacing: auto,
     kerning: true
   )
 
   set underline(offset: .1em, stroke: .05em, evade: false)
 
-  show strong: set text(fill: rgb("#2f00ff"))
+  // show strong: set text(fill: rgb("#2f00ff"))
 
   show emph: set text(
-    fill: rgb("#d10000"),
+    // fill: rgb("#d10000"),
     /* font: (
 
     ), */
   )
 
   show raw: set text(
-    fill: rgb("#6e6e6e"),
+    // fill: rgb("#6e6e6e"),
     size: 12.5pt,
     font: "Source Code Pro",
     weight: "medium"
   )
 
   set table(
-    stroke: rgb("#1c1c1c"),
+    // stroke: rgb("#1c1c1c"),
     // align: center
   )
 
-  show heading: set text(fill: rgb("#b30042"))
-
-  show math.equation: set text(
-    font: "noto sans math",
-    fill: rgb("#2b8900"),
-  )
+  // show heading: set text(fill: rgb("#b30042"))
 
   set math.limits(inline: true)
 
   show math.equation.where(block: true): set align(left)
 
-  show link: set text(fill: rgb("#008690"))
+  // show link: set text(fill: rgb("#008690"))
 
   show link: underline
 
-  show ref: set text(fill: rgb("#008690"))
+  // show ref: set text(fill: rgb("#008690"))
 
-  set list(marker: [#text("‣", fill: rgb("#e90000"))])
+  // set list(marker: [#text("‣")])
 
   set enum(full: true)
 

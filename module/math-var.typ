@@ -16,7 +16,7 @@
 // mathbf
 
 #let bf(x) = $bold(upright(#x))$
-#let c-bf(x,color) = text(bf(x),fill: rgb(color)) // prefix "c" represent "color"
+#let c-bf(x,color) = text(bf(x)) // prefix "c" represent "color"
 
 #let i = c-bf("i","#0056e1") // Im(ℂ) i
 #let i-split = c-bf("i","#c10047")
@@ -31,7 +31,7 @@
 
 // differential
 
-#let c-diff(x) = text(x, fill: rgb("#d25b00"))
+#let c-diff(x) = text(x)
 
 #let d = c-diff($d$)
 #let D = c-diff($D$)
@@ -46,7 +46,7 @@
 
 // classical groups
 
-#let c-Lie-group(x) = text(x, fill: rgb("#cf9f00"))
+#let c-Lie-group(x) = text(x)
 
 #let O = c-Lie-group("O")
 #let SO = c-Lie-group("SO")
@@ -56,7 +56,7 @@
 #let SL = c-Lie-group("SL")
 #let GL = c-Lie-group("GL")
 
-#let c-Lie-algebra(x) = math.sans(text(x, fill: rgb("#d25b00")))
+#let c-Lie-algebra(x) = math.sans(text(x))
 
 #let so = c-Lie-algebra("so")
 #let su = c-Lie-algebra("su")
@@ -68,7 +68,7 @@
 
 // function
 
-#let c-fn(x) = text(x, fill: rgb("#cf9f00"))
+#let c-fn(x) = text(x)
 
 #let Re = c-fn("Re")
 #let Im = c-fn("Im")
@@ -113,7 +113,7 @@
 // other
 
 #let cvt-prod = rotate(90deg, $⧀$)
-#let lim = math.limits(text("lim", fill: rgb("#0056e1")))
+#let lim = math.limits(text("lim"))
 
 #let And = math.and.big
 #let Or = math.or.big

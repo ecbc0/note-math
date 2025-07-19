@@ -1,10 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
-#let H = text("H", fill: rgb("#d25b00"))
-#let a = text("a", fill: rgb("#d25b00"))
-#let x = text("x", fill: rgb("#006dea"))
-#let p = text("p", fill: rgb("#d25b00"))
+#let H = text("H")
+#let a = text("a")
+#let x = text("x")
+#let p = text("p")
 
 相对论纯量场作用量近似到非相对论纯量场作用量
 

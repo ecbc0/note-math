@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#let T = text("T", fill: rgb("#919191"))
+#let T = text("T")
 
 *Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]
 
