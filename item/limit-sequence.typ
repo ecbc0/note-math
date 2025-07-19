@@ -288,7 +288,7 @@ _Proof_
     ] 
   ]
 ]
-#tag("Euler-reflection-formula") Euler 反射公式 $1/(z! (-z)!) = (sin π z)/(π z)$ or $z/((z/π)! (-z/π)!) = sin z$
+#tag("Euler-reflection-formula") Euler 反射公式 $1/(z! (-z)!) = product_(n = 1 .. ∞) (1 - z^2/n^2) = (sin π z)/(π z)$ or $z/((z/π)! (-z/π)!) = z product_(n = 1 .. ∞) (1 - z^2/n^2) = sin z$
 #indent[
   用代数基本定理的可数推广, #link("https://en.wikipedia.org/wiki/Weierstrass_factorization_theorem")[wiki:Weierstrass\_因式分解定理]
   

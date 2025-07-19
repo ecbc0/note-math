@@ -128,3 +128,7 @@
 
 #tag("ref-27"):\
   url: https://math.stackexchange.com/a/95473/1652008
+
+#tag("ref-28"):\
+  title: Quantum Mecahnics and Geometry\
+  author: S. Li

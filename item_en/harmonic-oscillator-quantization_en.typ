@@ -57,14 +57,6 @@ $H_n$ is called Hermite polynomial
 
 For quantum harmonic oscillator, even for static wave function, there are $ℕ$ possible characteristic energies $E_n = (1/2 + n) ℏ ω$
 
-#tag("why-pi-in-Gaussian-integral") This may give a clue as to why the factorial #link(<Stirling-approximation>)[Stirling approximation] $n! ≈ (2 π)^(1/2) n^(1/2) (n/e)^(n)$ has $π$.
-
-The characteristic polynomial of the harmonic oscillator ODE $acc(x) = - ω^2 x$ is $ξ^2 = - ω^2$, and the prototype is $ξ^2 = -1$, so $#i$ and complex numbers are introduced, so there is a circle, and there is $π$. $e^(- 1/2 x^2)$ is related to the ground state of the quantum harmonic oscillator. To simplify the discussion, $ℏ$ is omitted. The normal momentum operator $- #i ∂_x$ actually corresponds to the phase change $e^(#i) != 1$. If $π$ is added to the momentum operator, the momentum operator will corresponds to the phase change $e^(#i 2 π) = 1$, and then the ground state may also become $e^(- a x^2)$, where $a$ contains the $π$ factor, and its $L^2$ integral is directly normalized without adding the $π$ scaling factor
-
-The appearance of $π$ in the Stirling approximation may be similar. We should ask where the factorial (or its reciprocal) after adding the $π$ scaling factor comes from, for example, from the volume calculation of the sphere and the spherical surface
-
-Another hint is that the $frac(ω T, sin ω T)$ that appears in the kernel of the Fourier transform ver. of the oscillator Feynman #link(<path-integral-quantization>)[path integral quantization] corresponds to the property of the #link(<factorial-function-1>)[factorial function] $z!(-z)! = (π z)/(sin π z)$, with an additional $π$ scaling factor, so the modified factorial function should satisfy $z!(-z)! = (z)/(sin z)$?
-
 _Warning_ Don't assume that since the lowest energy is non-zero $1/2 ℏ ω$, there is energy out of nowhere, because the energy of a static hydrogen atom can still be negative
 
 It can be proven that this $ℕ$ eigenstate series orthogonally expands $L^2$
@@ -86,6 +78,32 @@ They also satisfy $1/2 {#a _ + , #a _ -} = (ℏ/(2 m))^(-1) #H$
 
 Since it is not $[#a _ + , #a _ -] ∼ #H$, the situation for different states to $so(3)$ complexified eigenvalue technique
 
+#tag("Gaussian-integral")
+#indent[
+  $ integral_(-∞)^(∞) e^(- a x^2) #d x = (π/a)^(1/2) $
+
+  Holds for $a > 0$. $a > 0$ contains dense points, consistent with the uniqueness of analytic continuation. Analytically continued to $a in ℂ ∖ 0$. But note that $(π/a)^(1/2)$ has a double branch.
+
+  Diagonalize the quadratic form $A$ into $"diag"(a_1 ,…, a_n)$ on Euclidean type $ℝ^n$ using an orthonormal basis.
+  $
+    integral_(ℝ^n) e^(- ⟨ x mid(|) A mid(|) x ⟩) #d x 
+    &= integral_(ℝ^n) e^(-(a_1 x_1^2 + ⋯ + a_n x_n^2)) #d x \
+    &= integral_(-∞)^(∞) e^(- a_1 x_1^2) #d x_1 ⋯ integral_(-∞)^(∞) e^(- a_n x_n^2) #d x_n \
+    &= (π/a_1)^(1/2) ⋯ (π/a_n)^(1/2) \
+    &= (π^(n/2))/(a_1 ⋯ a_n)^(1/2) \
+    &= (π^(n/2))/(det A)^(1/2)
+  $
+]
+#tag("why-pi-in-Gaussian-integral") 
+#indent[
+  This might provide a clue as to why $π$ appears in the #link(<Stirling-approximation>)[Stirling approximation] of the factorial $n! ≈ (2 π)^(1/2) n^(1/2) (n/e)^(n)$.
+
+  The characteristic polynomial of the harmonic oscillator ODE $acc(x) = - ω^2 x$ is $ξ^2 = - ω^2$, the prototype is $ξ^2 = -1$, so $#i$ and complex numbers are introduced, which leads to circles, and thus $π$. $e^(- 1/2 x^2)$ is related to the ground state of the quantum harmonic oscillator. For simplicity, $ℏ$ is omitted. The general momentum operator $- #i ∂_x$ actually corresponds to a phase change $e^(#i) != 1$. If we add a $π$ scaling factor to the momentum operator, then the momentum operator can correspond to a phase change $e^(#i 2 π) = 1$. At this time, the ground state may also become $e^(- a x^2)$ where $a$ contains a $π$ factor, and its $L^2$ integral is directly normalized, without needing to add a $π$ scaling factor. Similarly, for #link(<path-integral-quantization>)[Feynman path integrals], using this method may no longer require additional normalization factors or Zeta function regularization.
+
+  The appearance of $π$ in Stirling's approximation might also be similar. One should ask where the factorial (or its reciprocal) with the scaling factor $π$ comes from, for example, from the volume calculation of spheres and spherical surfaces.
+
+  Another revelation is that the $frac(ω T, sin ω T)$ appearing in the kernel of the Feynman #link(<path-integral-quantization>)[path integral quantization] of the harmonic oscillator corresponds to the property of the #link(<factorial-function-1>)[factorial function] $z!(-z)! = (π z)/(sin π z)$, where an additional $π$ scaling factor also appears. Therefore, should the modified factorial function satisfy $z!(-z)! = (z)/(sin z)$?
+]
 If the solution of the harmonic oscillator $a(#i) e^(-#i ω t) + a(-#i) e^(#i ω t)$ uses fixed starting positions $x_0,x_1$, then 
 $ 
   a(#i) = frac(
@@ -114,25 +132,91 @@ For time only depending on the difference $t_1 - t_0$
 
 #tag("path-integral-quantization") 
 #indent[
-  Propagator $K$ represents constructing a unitary using the Feynman path integral with Lagrangian. For the harmonic oscillator, use the Fourier transform method. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
+  cf. (@ref-28, ch.path-integral-formalism)
 
-  let $T = t_1 - t_0$
-
-  For endpoints fixed but offset from the classical path, perform Fourier expansion $x - x_"cl" = sum_(n = 1)^(∞) b_n sin(n π t/T)$, action $S(b_1 ,…, b_n ,…) = S_"cl" + sum 1/2 |b_n|^2 m/2 T ((n^2 π^2)/T^2 - ω^2)$
+  Propagator $K$ represents constructing unitary using Feynman path integrals and Lagrangian.
+  
+  For free field
   $
-    K(T, x_0, x) 
-    &= lim_(n -> ∞) ("unitary-factor")(n) ⋅ integral_(ℝ^n) #d b_n ⋯ #d b_1 space 
-    e^(#i/ℏ S(b_1 ,…, b_n)) \
-    &= (frac(m ω, 2 π ℏ #i T))^(1/2) 
-    e^(#i/ℏ S_"cl") 
-    product_(n = 1)^(∞) (n π)/2^(1/2) integral_(ℝ) #d b_n exp(#i/(2ℏ) |b_n|^2 m/2 T ((n^2 π^2)/T^2 - ω^2)) \
-    &= (frac(m ω,2 π ℏ #i sin ω T))^(1/2) exp((#i m ω)/(2 ℏ) ⋅ 
+    K(t_0,x_0,t_1,x_1) = integral_(x(t_0) = x_0)^(x(t_1) = x_1) #d x(t) exp(#i/ℏ integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2))
+  $
+  Decomposed into classical path and gap $x = x_"cl" + y$, $y(t_0) = y(t_1) = 0$ 
+  $
+    integral_(t_0)^(t_1) #d t (1/2 m (vel(x)_"cl" + vel(y))^2) 
+    = integral_(t_0)^(t_1) #d t (1/2 m (vel(x)_"cl"^2 + vel(y)^2 + 2 vel(x)_"cl" vel(y)))
+  $
+  - $vel(x)_"cl" vel(y) = (#d)/(#d t) (vel(x)_"cl" y) - acc(x)_"cl" y$ 
+  - Boundary is zero $y(t_0) = y(t_1) = 0$ 
+  - $acc(x)_"cl" = 0$ 
+  ==> $integral_(t_0)^(t_1) #d t (vel(x)_"cl" vel(y)) = 0$
+
+  Now
+  $
+    K(t_0,x_0,t_1,x_1) = exp(#i/ℏ S[x_"cl" (t)]) integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)])
+  $
+  Where, due to the classical path of a free particle being a straight line $x_"cl" (t) = x_0 + (x_1 - x_0)/(t_1 - t_0) (t - t_0)$
+  $
+    S[x_"cl" (t)] 
+    &= integral_(t_0)^(t_1) #d t (1/2 m vel(x)_"cl"^2) \
+    &= 1/2 m frac((x_1 - x_0)^2,t_1 - t_0)
+  $
+
+  - $vel(y)^2 = (#d)/(#d t) (y vel(y)) - y acc(y)$ 
+  - Boundary is zero $y(t_0) = y(t_1) = 0$ 
+  ==> $integral_(t_0)^(t_1) #d t (vel(y)^2) = - integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩$
+
+  Now
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)]) 
+    = integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩)
+  $
+  As a generalization of Gaussian integral
+
+  - Quadratic form $⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩$ 
+  - $y(t_0) = y(t_1) = 0$. To simplify notation, use $t_0 = 0, t_1 = T$
+  ==> Eigenvalues $λ_n = (n π/T)^2$. $L^2$ orthogonal eigenfunctions $sin(n π/T t)$. Expansion of $L^2$ orthogonal eigenfunctions or Fourier expansion $y(t) = sum_(n = 1 .. ∞) y_n sin(n π/T t)$
+
+  Diagonalize with $L^2$ orthogonal basis. Now
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩)
+    = product_(n = 1 .. ∞) integral_(∞)^(∞) e^(- a_n y_n^2)  #d y_n
+  $
+  Using the normalization from #link(<why-pi-in-Gaussian-integral>)[], part of the infinite product becomes $product_(n = 1 .. ∞) 1 = 1$. The final result is
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩) 
+    = (frac(m,2 π #i ℏ T))^(1/2)
+  $
+  The total result is
+  $
+    K(t_0,x_0,t_1,x_1) = (frac(m,2 π #i ℏ (t_1 - t_1)))^(1/2) exp((#i m)/(2 ℏ) frac((x_1 - x_0)^2,t_1 - t_0))
+  $
+
+  For the harmonic oscillator, similar to
+
+  Using integration by parts
+  $
+    K(t_0,x_0,t_1,x_1) = exp(#i/ℏ S[x_"cl" (t)]) integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)])
+  $
+  - Quadratic form $⟨ y mid(|) (#d^2)/(#d t^2) + ω^2 mid(|) y ⟩$ 
+  - $y(t_0) = y(t_1) = 0$. For simpler notation, use $t_0 = 0, t_1 = T$
+  ==> Eigenvalues $λ_n = (n π/T)^2 - ω^2 = (n π/T)^2 (1 - ((ω T)/(π n))^2)$. $L^2$ orthogonal eigenfunctions $sin(n π/T t)$. $L^2$ orthogonal eigenfunction expansion or Fourier expansion $y(t) = sum_(n = 1 .. ∞) y_n sin(n π/T t)$
+
+  Diagonalize using an orthogonal basis and a generalization of the Gaussian integral. The difference from the free field is the emergence of a new infinite product $product_(n = 1 .. ∞) (1 - ((ω T)/(π n))^2) = (sin ω T)/(ω T)$ (cf. #link(<Euler-reflection-formula>)[])
+
+  The result is
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)]) 
+    = (frac(m ω, 2 π ℏ #i sin ω T))^(1/2) 
+  $
+  The total result is
+  $
+    K(t_0,x_0,t_1,x_1) \
+    = (frac(m ω, 2 π ℏ #i sin ω (t_1 - t_0)))^(1/2) exp((#i m ω)/(2 ℏ) ⋅ 
       frac(
-        (|x_1|^2 + |x_0|^2) cos ω T - 2 Re ⟨ x_1, x_0 ⟩, 
-        sin ω T
+        (|x_1|^2 + |x_0|^2) cos ω (t_1 - t_0) - 2 x_1 x_0, 
+        sin ω (t_1 - t_0)
       ) )
   $
-  Used Gauss integral + Euler infinite product $product_(n = 1)^(∞) (1 - z^2/n^2) = (sin π z)/(π z) = 1/(z! (-z)!)$ 
 ]
 #tag("eigen-decomposition") 
 #indent[
@@ -146,13 +230,13 @@ For time only depending on the difference $t_1 - t_0$
     e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \
     K &= sum_(n) e^(- #i 1/ℏ E_n t) ⟨ x ket(n) bra(n) x_0 ⟩ 
   $
-  $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$. This shows that the path integral can directly give the energy level, without using the raising and lowering operator method?
+  According to #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation], $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
 ]
 Regarding field quantization
 
 One perspective is path integral quantization of fields.
 
-#tag("field-path-integral-quantization") *Question* Since the harmonic oscillator can perform Foureir transform path integral, why don't KG eq (or Dirac eq) similar to the harmonic oscillator eq also perform #link(<linear-superposition-of-KG-eq>)[Foureir transform] path integral?
+#tag("field-path-integral-quantization") *Question* Since the harmonic oscillator can be path-integrated by eigenvalue diagonalization & generalized Gaussian integral, why don't KG eq (or Dirac eq) similar to the harmonic oscillator eq also perform #link(<linear-superposition-of-KG-eq>)[eigenvalue diagonalization] & generalized Gaussian integral path integral? 
 
 Another (?) perspective is field operator quantization of fields.
 
@@ -177,7 +261,7 @@ $
     + a(p,-#i) e^(- E t #i) e^(p x #i)
   )
 $
-*Question* Homomorphize the quantum harmonic oscillator of point particles to the quantum harmonic oscillator of the KG field, with $L^2 (ℍ𝕪^3,ℂ)$ coefficient constraint (Sobolev), the coefficient constraint of multiple升降 corresponds to $L^2$ symmetric tensors, the entire space is $⨁_(n in ℕ) ⨀^n L^2 (ℍ𝕪^3, L^2(ℂ,ℂ))$ (where $L^2(ℂ,ℂ)$ is the space of $ℂ$ harmonic oscillator quantization)
+*Question* Homomorphize the quantum harmonic oscillator of point particles to the quantum harmonic oscillator of the KG field, with $L^2 (ℍ𝕪^3,ℂ)$ coefficient constraint (Sobolev), the coefficient constraint of multiple raising and lowering corresponds to $L^2$ symmetric tensors, the entire space is $⨁_(n in ℕ) ⨀^n L^2 (ℍ𝕪^3, L^2(ℂ,ℂ))$ (where $L^2(ℂ,ℂ)$ is the space of $ℂ$ harmonic oscillator quantization)
 
 *Question* Is this tensor based on the $L^2 (ℍ𝕪^3,ℂ)$ module? 
 
