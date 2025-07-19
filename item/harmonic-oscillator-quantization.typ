@@ -55,14 +55,6 @@ $H_n$ 称为 Hermite 多项式
 
 对于量子谐振子, 即使是静态波函数, 也有 $ℕ$ 种可能的特征能量 $E_n = (1/2 + n) ℏ ω$
 
-#tag("why-pi-in-Gaussian-integral") 这可能给出了线索之于为什么阶乘的 #link(<Stirling-approximation>)[Stirling 近似] $n! ≈ (2 π)^(1/2) n^(1/2) (n/e)^(n)$ 会出现 $π$.
-
-谐振子 ODE $acc(x) = - ω^2 x$ 的特征多项式是 $ξ^2 = - ω^2$, 原型是 $ξ^2 = -1$, 于是 $#i$ 和复数被引入, 于是有圆, 就有 $π$. $e^(- 1/2 x^2)$ 联系于量子谐振子的基态. 为了简化讨论, 省略 $ℏ$. 一般的动量算子 $- #i ∂_x$ 其实会对应到相位改变 $e^(#i) != 1$, 如果给动量算子加上 $π$ 伸缩因子, 则动量算子可以对应到相位改变 $e^(#i 2 π) = 1$. 此时, 基态可能也会变成 $e^(- a x^2)$ 其中 $a$ 含有 $π$ 因子, 并且其 $L^2$ 积分直接归一化, 而不需要加入 $π$ 伸缩因子
-
-Stirling 近似的 $π$ 的出现可能也是类似的, 应该问, 加上 $π$ 伸缩因子之后的阶乘 (或者其倒数) 来自哪里, 例如, 来自球和球面的体积计算
-
-另一个启示是, 谐振子的 Fourier 变换式 Feynman #link(<path-integral-quantization>)[路径积分量子化] 的 kernel 中出现的 $frac(ω T, sin ω T)$ 对应到 #link(<factorial-function-1>)[阶乘函数] 的性质 $z!(-z)! = (π z)/(sin π z)$, 也出现了额外的 $π$ 伸缩因子, 因此修改后的阶乘函数应该满足 $z!(-z)! = (z)/(sin z)$?
-
 _Warning_ 不要认为最低能量是非零的 $1/2 ℏ ω$ 就认为有凭空的能量, 因为静电氢原子的能量还能是负数
 
 可以证明这个 $ℕ$ 特征态系列正交展开了 $L^2$
@@ -84,6 +76,32 @@ $L^2$ 展开系数 $sum c_n ψ_n, sum |c_n|^2 = 1$ 的二次型解释为在 $ψ_
 
 由于不是 $[#a _ + , #a _ -] ∼ #H$, 所以不同态到 $so(3)$ 复化特征值化技术的情况
 
+#tag("Gaussian-integral")
+#indent[
+  $ integral_(-∞)^(∞) e^(- a x^2) #d x = (π/a)^(1/2) $
+
+  对 $a > 0$ 成立. $a > 0$ 含有稠密点, 符合解析延拓唯一性. 解析延拓到 $a in ℂ ∖ 0$. 但是注意 $(π/a)^(1/2)$ 有二重分支
+
+  在 Euclidean 型 $ℝ^n$ 上用规范正交基对二次型 $A$ 对角化 $"diag"(a_1 ,…, a_n)$
+  $
+    integral_(ℝ^n) e^(- ⟨ x mid(|) A mid(|) x ⟩) #d x 
+    &= integral_(ℝ^n) e^(-(a_1 x_1^2 + ⋯ + a_n x_n^2)) #d x \
+    &= integral_(-∞)^(∞) e^(- a_1 x_1^2) #d x_1 ⋯ integral_(-∞)^(∞) e^(- a_n x_n^2) #d x_n \
+    &= (π/a_1)^(1/2) ⋯ (π/a_n)^(1/2) \
+    &= (π^(n/2))/(a_1 ⋯ a_n)^(1/2) \
+    &= (π^(n/2))/(det A)^(1/2)
+  $
+]
+#tag("why-pi-in-Gaussian-integral") 
+#indent[
+  这可能给出了线索之于为什么阶乘的 #link(<Stirling-approximation>)[Stirling 近似] $n! ≈ (2 π)^(1/2) n^(1/2) (n/e)^(n)$ 会出现 $π$.
+
+  谐振子 ODE $acc(x) = - ω^2 x$ 的特征多项式是 $ξ^2 = - ω^2$, 原型是 $ξ^2 = -1$, 于是 $#i$ 和复数被引入, 于是有圆, 就有 $π$. $e^(- 1/2 x^2)$ 联系于量子谐振子的基态. 为了简化讨论, 省略 $ℏ$. 一般的动量算子 $- #i ∂_x$ 其实会对应到相位改变 $e^(#i) != 1$, 如果给动量算子加上 $π$ 伸缩因子, 则动量算子可以对应到相位改变 $e^(#i 2 π) = 1$. 此时, 基态可能也会变成 $e^(- a x^2)$ 其中 $a$ 含有 $π$ 因子, 并且其 $L^2$ 积分直接归一化, 而不需要加入 $π$ 伸缩因子. 同理, 对于 #link(<path-integral-quantization>)[Feynman 路径积分], 用这种方式就可能不再需要额外的归一化因子或者 Zeta function regularization
+
+  Stirling 近似的 $π$ 的出现可能也是类似的, 应该问, 加上 $π$ 伸缩因子之后的阶乘 (或者其倒数) 来自哪里, 例如, 来自球和球面的体积计算
+
+  另一个启示是, 谐振子的 Feynman #link(<path-integral-quantization>)[路径积分量子化] 的 kernel 中出现的 $frac(ω T, sin ω T)$ 对应到 #link(<factorial-function-1>)[阶乘函数] 的性质 $z!(-z)! = (π z)/(sin π z)$, 也出现了额外的 $π$ 伸缩因子, 因此修改后的阶乘函数应该满足 $z!(-z)! = (z)/(sin z)$?
+]
 如果谐振子的解 $a(#i) e^(-#i ω t) + a(-#i) e^(#i ω t)$ 使用固定起始位置 $x_0,x_1$, 则 
 $ 
   a(#i) = frac(
@@ -112,25 +130,91 @@ $
 
 #tag("path-integral-quantization") 
 #indent[
-  propagator $K$ 表示用 Feynman 路径积分和 Lagrangian 来构造 unitary. 对于谐振子, 用 Fourier 变换方法. cf. #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation]
+  cf. (@ref-28, ch.path-integral-formalism)
 
-  let $T = t_1 - t_0$
-
-  对端点固定但是偏移了经典的路径进行 Fourier 展开 $x - x_"cl" = sum_(n = 1)^(∞) b_n sin(n π t/T)$, action $S(b_1 ,…, b_n ,…) = S_"cl" + sum 1/2 |b_n|^2 m/2 T ((n^2 π^2)/T^2 - ω^2)$
+  propagator $K$ 表示用 Feynman 路径积分和 Lagrangian 来构造 unitary
+  
+  对自由场
   $
-    K(T, x_0, x) 
-    &= lim_(n -> ∞) ("unitary-factor")(n) ⋅ integral_(ℝ^n) #d b_n ⋯ #d b_1 space 
-    e^(#i/ℏ S(b_1 ,…, b_n)) \
-    &= (frac(m ω, 2 π ℏ #i T))^(1/2) 
-    e^(#i/ℏ S_"cl") 
-    product_(n = 1)^(∞) (n π)/2^(1/2) integral_(ℝ) #d b_n exp(#i/(2ℏ) |b_n|^2 m/2 T ((n^2 π^2)/T^2 - ω^2)) \
-    &= (frac(m ω,2 π ℏ #i sin ω T))^(1/2) exp((#i m ω)/(2 ℏ) ⋅ 
+    K(t_0,x_0,t_1,x_1) = integral_(x(t_0) = x_0)^(x(t_1) = x_1) #d x(t) exp(#i/ℏ integral_(t_0)^(t_1) #d t (1/2 m vel(x)^2))
+  $
+  分解为经典路径和差距 $x = x_"cl" + y$, $y(t_0) = y(t_1) = 0$ 
+  $
+    integral_(t_0)^(t_1) #d t (1/2 m (vel(x)_"cl" + vel(y))^2) 
+    = integral_(t_0)^(t_1) #d t (1/2 m (vel(x)_"cl"^2 + vel(y)^2 + 2 vel(x)_"cl" vel(y)))
+  $
+  - $vel(x)_"cl" vel(y) = (#d)/(#d t) (vel(x)_"cl" y) - acc(x)_"cl" y$ 
+  - 边界是零 $y(t_0) = y(t_1) = 0$ 
+  - $acc(x)_"cl" = 0$ 
+  ==> $integral_(t_0)^(t_1) #d t (vel(x)_"cl" vel(y)) = 0$
+
+  现在
+  $
+    K(t_0,x_0,t_1,x_1) = exp(#i/ℏ S[x_"cl" (t)]) integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)])
+  $
+  其中, 由于自由粒子的经典路径是直线 $x_"cl" (t) = x_0 + (x_1 - x_0)/(t_1 - t_0) (t - t_0)$
+  $
+    S[x_"cl" (t)] 
+    &= integral_(t_0)^(t_1) #d t (1/2 m vel(x)_"cl"^2) \
+    &= 1/2 m frac((x_1 - x_0)^2,t_1 - t_0)
+  $
+
+  - $vel(y)^2 = (#d)/(#d t) (y vel(y)) - y acc(y)$ 
+  - 边界是零 $y(t_0) = y(t_1) = 0$ 
+  ==> $integral_(t_0)^(t_1) #d t (vel(y)^2) = - integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩$
+
+  现在
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)]) 
+    = integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩)
+  $
+  作为 Gaussian 积分的推广
+
+  - 二次型 $⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩$ 
+  - $y(t_0) = y(t_1) = 0$. 为简化记号, 用 $t_0 = 0, t_1 = T$
+  ==> 特征值 $λ_n = (n π/T)^2$. $L^2$ 正交特征函数 $sin(n π/T t)$. $L^2$ 正交特征函数的展开 or Fourier 展开 $y(t) = sum_(n = 1 .. ∞) y_n sin(n π/T t)$
+
+  用 $L^2$ 正交基进行对角化. 现在
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩)
+    = product_(n = 1 .. ∞) integral_(∞)^(∞) e^(- a_n y_n^2)  #d y_n
+  $
+  使用 #link(<why-pi-in-Gaussian-integral>)[] 中的归一化, 无穷乘积的一部分变成 $product_(n = 1 .. ∞) 1 = 1$. 最终结果是
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(- (#i m)/(2 ℏ) integral_(t_0)^(t_1) #d t ⟨ y mid(|) (#d^2)/(#d t^2) mid(|) y ⟩) 
+    = (frac(m,2 π #i ℏ T))^(1/2)
+  $
+  总的结果是
+  $
+    K(t_0,x_0,t_1,x_1) = (frac(m,2 π #i ℏ (t_1 - t_1)))^(1/2) exp((#i m)/(2 ℏ) frac((x_1 - x_0)^2,t_1 - t_0))
+  $
+
+  对于谐振子, 类似
+
+  用分部积分的方法
+  $
+    K(t_0,x_0,t_1,x_1) = exp(#i/ℏ S[x_"cl" (t)]) integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)])
+  $
+  - 二次型 $⟨ y mid(|) (#d^2)/(#d t^2) + ω^2 mid(|) y ⟩$ 
+  - $y(t_0) = y(t_1) = 0$. 为简化记号, 用 $t_0 = 0, t_1 = T$
+  ==> 特征值 $λ_n = (n π/T)^2 - ω^2 = (n π/T)^2 (1 - ((ω T)/(π n))^2)$. $L^2$ 正交特征函数 $sin(n π/T t)$. $L^2$ 正交特征函数的展开 or Fourier 展开 $y(t) = sum_(n = 1 .. ∞) y_n sin(n π/T t)$
+
+  用正交基进行对角化, 使用 Gaussian 积分的推广. 和自由场不同之处是, 出现新的无穷乘积 $product_(n = 1 .. ∞) (1 - ((ω T)/(π n))^2) = (sin ω T)/(ω T)$ (cf. #link(<Euler-reflection-formula>)[])
+
+  结果是
+  $
+    integral_(y(t_0) = 0)^(y(t_1) = 0) #d y(t) exp(#i/ℏ S[y(t)]) 
+    = (frac(m ω, 2 π ℏ #i sin ω T))^(1/2) 
+  $
+  总的结果是
+  $
+    K(t_0,x_0,t_1,x_1) \
+    = (frac(m ω, 2 π ℏ #i sin ω (t_1 - t_0)))^(1/2) exp((#i m ω)/(2 ℏ) ⋅ 
       frac(
-        (|x_1|^2 + |x_0|^2) cos ω T - 2 Re ⟨ x_1, x_0 ⟩, 
-        sin ω T
+        (|x_1|^2 + |x_0|^2) cos ω (t_1 - t_0) - 2 x_1 x_0, 
+        sin ω (t_1 - t_0)
       ) )
   $
-  使用了 Gauss 积分 + Euler 无穷乘积 $product_(n = 1)^(∞) (1 - z^2/n^2) = (sin π z)/(π z) = 1/(z! (-z)!)$ 
 ]
 #tag("eigen-decomposition") 
 #indent[
@@ -144,13 +228,13 @@ $
     e^(- #i 1/ℏ #H t) &= sum_(n) e^(- #i 1/ℏ E_n t) ket(n) bra(n) \
     K &= sum_(n) e^(- #i 1/ℏ E_n t) ⟨ x ket(n) bra(n) x_0 ⟩ 
   $
-  $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ 再让 $R$ 进行 Taylor 展开, 其中 $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ 对应能级 $E_n = (1/2 + n) ℏ ω$. 这说明路径积分也可以直接得到能级, 不必需使用升降算子方法?
+  根据 #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation], $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ 再让 $R$ 进行 Taylor 展开, 其中 $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ 对应能级 $E_n = (1/2 + n) ℏ ω$
 ]
 关于场量子化
 
 一种观点是路径积分式的场量子化
 
-#tag("field-path-integral-quantization") *Question* 既然谐振子可以 Foureir 变换路径积分, 为什么类似谐振子 eq 的 KG eq (or Dirac eq) 不也进行 #link(<linear-superposition-of-KG-eq>)[Foureir 变换] 路径积分? 
+#tag("field-path-integral-quantization") *Question* 既然谐振子可以路径积分 by 特征值对角化 & 推广 Gaussian 积分, 为什么类似谐振子 eq 的 KG eq (or Dirac eq) 不也进行 #link(<linear-superposition-of-KG-eq>)[特征值对角化] & 推广 Gaussian 积分的路径积分? 
 
 另一种 (?) 观点是场算子式的场量子化
 
