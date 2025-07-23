@@ -234,8 +234,8 @@
   周期电路的速度远远高过人类速度 (1 GHz = 每秒 10^9 次周期)
 
   高级编程语言的循环
-  ```
-  i : int = 0;
+  ```rs
+  let i : int = 0;
   while (i < 10) {
       i = i + 1;
   } // result = 10
@@ -272,7 +272,7 @@
 ]
 #tag("compile") #tag("parse")
 #indent[
-  用 parser or compiler (编译器) 验证 token 流语言正确性, 本质上是遍历所有语言规则, 或使用生成的有限状态机
+  用 parser or compiler (编译器) 验证 token 流语言正确性, 本质上是遍历所有语言规则 i.e. match + 递归, 或使用生成的有限状态机
     
   parser 的运行需要生成内存中大型复杂的数据结构 (一些形象的描述: 表格, 结点, 树)
 

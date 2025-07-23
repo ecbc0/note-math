@@ -31,11 +31,13 @@
 ]
 复杂的 set theory object (集合论对象), proposition (命题) 被储存在变量名里, 所以还是需要人类去检查所有存储在变量名里面的复杂定义, 所以可读性很重要
 
-parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to 检阅定义, 跳过大量详细证明步骤, 就能确定证明结果的正确性. 这像 API 的情况
+parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to 检阅定义 (以及检查编译器的逻辑代码), 跳过大量详细证明步骤, 就能确定证明结果的正确性. 这像 API 的情况
 
 人脑编译器能省略和补充省略, 用容易出错和遗忘来换取临时效率
 
 而且证明辅助还会有其它作用, 类似于, IDE/LSP/友好且互动的编译器错误信息/documentation 时代之前的编程是痛苦的, 数据和信息的组织和结构化和复用做得不好, 也没利用好计算机的强大记忆容量和时间
+
+证明辅助的例子: #link("https://github.com/acornprover/acorn")[acornprover], 还在开发中. 还没实现集合论 ...
 
 #tag("proposition") proposition 是特殊的 (string, bool) product struct ((字符串, 真假值) 的逻辑乘积结构) 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula (公式)
 
@@ -185,12 +187,12 @@ follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义语言
   所以我不会出门
 ]
 这个例子类似于 conditional branch (条件分支)
-```
-rain : bool;
-out : bool;
-switch (rain) {
+```rs
+let rain : bool;
+let out : bool;
+match (rain) {
   true => out = false,
-  false => out = undefined
+  false => out = undefined,
 };
 ```
 #tag("inference") 对于数学语言, 那就是
@@ -204,10 +206,10 @@ switch (rain) {
 又一种等价 $p <=> q := (p => q) and (q => p)$
 
 #tag("reverse-inference") 反向推导. 如果结果是我出门了, 那么肯定不是下雨的结果. 如果条件分支的结果是 `out = true`, 这不是 `rain = true` 的结果. 由于理想二进制计算机的 bool 值必定二选一, 所以只能是 `rain = false` 的结果. 这可以被写为条件分支
-```
-switch (out) {
+```rs
+match (out) {
   true => rain = false,
-  false => rain = undefined
+  false => rain = undefined,
 };
 ```
 数学上, 反向推导写为 formula $not q => not p$, 并定义等价到 $p => q$
@@ -414,12 +416,12 @@ type 之间的同态的使用可以对证明带来方便. 有时可以让计算�
   ]
   *Example* #tag("self-referential-paradox") 自指悖论. "这个句子是错的"
   #indent[
-    ```
+    ```rs
     this_sentence_is_false : bool = false;
     loop:
-      switch (this_sentence_is_false) {
+      match (this_sentence_is_false) {
         false => this_sentence_is_false = true,
-        true => this_sentence_is_false = false
+        true => this_sentence_is_false = false,
       } 
       goto loop
     };
