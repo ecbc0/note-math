@@ -234,8 +234,8 @@ Instruction stream
   The speed of a periodic circuit is far greater than human speed (1 GHz = 10^9 cycles per second)
 
   Loops in high-level programming languages
-  ```
-  i : int = 0;
+  ```rs
+  let i : int = 0;
   while (i < 10) {
       i = i + 1;
   } // result = 10
@@ -272,7 +272,7 @@ Instruction stream
 ]
 #tag("compile") #tag("parse")
 #indent[
-  Use a parser to verify the correctness of the token stream language, essentially it's going through all language rules, or using a generated finite state machine
+  Use a parser to verify the correctness of the token stream language, essentially it's going through all language rules, i.e. match + recurse, or using a generated finite state machine
     
   The operation of the parser requires generating large and complex data structures in memory (some figurative descriptions: tables, nodes, trees)
 

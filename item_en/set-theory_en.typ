@@ -7,6 +7,7 @@ For computers (cf. #link(<logic.typ>)[]), the ways to represent natural numbers 
 - Periodic circuit
 - Arithmetic component $+1$
 - Binary 
+- Function that call itself
 
 However, the number of elements in the set of natural numbers is infinite, while bits and computer memory are finite. Human memory is also finite
 
@@ -30,11 +31,13 @@ Motivation for sets/types
 ]
 Complex set theory objects, propositions are stored in variable names, so humans still need to check all the complex definitions stored in variable names, so readability is very important
 
-Parser or proof assistants can allow humans to reduce from reviewing all steps to reviewing definitions, skipping a large number of detailed proof steps, and then determine the correctness of the proof result. This is like the case of APIs
+Parser or proof assistants can allow humans to reduce from reviewing all steps to reviewing definitions (and check all the code logic of compiler), skipping a large number of detailed proof steps, and then determine the correctness of the proof result. This is like the case of APIs
 
 The human brain compiler can omit and supplement omissions, trading temporary efficiency for error-proneness and forgetfulness
 
 Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and-interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory of computer were not used well.
+
+Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... 
 
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 
@@ -184,12 +187,12 @@ Natural language example of derivation
   So I won't go out
 ]
 This example is similar to a conditional branch
-```
-rain : bool;
-out : bool;
-switch (rain) {
+```rs
+let rain : bool;
+let out : bool;
+match (rain) {
   true => out = false,
-  false => out = undefined
+  false => out = undefined,
 };
 ```
 #tag("inference") For mathematical language, that is
@@ -203,10 +206,10 @@ switch (rain) {
 Another kind of equivalence $p <=> q := (p => q) and (q => p)$
 
 #tag("reverse-inference") Reverse inference. If the result is that I went out, then it is definitely not the result of rain. If the result of the conditional branch is `out = true`, this is not the result of `rain = true`. Since the bool value of an ideal binary computer must be one of two, it can only be the result of `rain = false`. This can be written as a conditional branch
-```
-switch (out) {
+```rs
+match (out) {
   true => rain = false,
-  false => rain = undefined
+  false => rain = undefined,
 };
 ```
 Mathematically, reverse inference is written as formula $not q => not p$, and defined equivalent to $p => q$
@@ -218,7 +221,6 @@ Deductive proof also requires syllogism
 + All living things die \
 + Humans are living things \
 + Therefore, all humans will die \
-+ function the call itself
 
 Where "all living things die" is a specially constructed proposition
 
@@ -414,12 +416,12 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
   ]
   *Example* #tag("self-referential-paradox") "This sentence is false"
   #indent[
-    ```
+    ```rs
     this_sentence_is_false : bool = false;
     loop:
-      switch (this_sentence_is_false) {
+      match (this_sentence_is_false) {
         false => this_sentence_is_false = true,
-        true => this_sentence_is_false = false
+        true => this_sentence_is_false = false,
       }
       goto loop
     };

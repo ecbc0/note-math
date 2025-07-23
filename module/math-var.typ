@@ -19,7 +19,7 @@
 #let c-bf(x,color) = text(bf(x)) // prefix "c" represent "color"
 
 #let i = c-bf("i","#0056e1") // Im(ℂ) i
-#let i-split = c-bf("i","#c10047")
+#let i-split = $#c-bf("i","#c10047")_"split"$
 
 /*
   It's tedious
