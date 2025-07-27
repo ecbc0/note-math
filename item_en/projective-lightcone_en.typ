@@ -139,7 +139,7 @@ _Proof_
     )$
     act on $ℂ^2$, generator $1/2 #i mat(,-1;1,) ∈ #i su(2)$
 
-  It can be seen that $sl(2,ℂ) = su(2) + #i su(2)$
+  It can be prove that $sl(2,ℂ) = su(2) + #i su(2)$, It can be prove that $sl(2,ℂ) ≃ so(1,3)$
 
   Comparing $exp$ of $sl(2,ℂ)$ and $exp$ of $so(1,3)$, at least locally isomorphic $SL(2,ℂ) <-> SO(1,3)$ 
   

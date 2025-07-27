@@ -76,6 +76,8 @@
         "commandCenter.activeBackground": "#00000000",
         "commandCenter.background": "#000000",
         "commandCenter.border": "#00000000",
+        "debugToolBar.background":"#000000",
+        "debugToolBar.border":"#2f00ffd3",
         "diffEditor.insertedLineBackground": "#00000000",
         "diffEditor.insertedTextBackground": "#00000000",
         "diffEditor.removedLineBackground": "#00000000",
@@ -164,6 +166,7 @@
         "minimapSlider.background": "#6a6a6a1a",
         "minimapSlider.hoverBackground": "#6c6c6c1b",
         "peekViewEditor.background": "#000000", // "#10192c"
+        "peekViewEditor.matchHighlightBackground":"#7744aa18",
         "peekViewEditorGutter.background": "#000000", // "#10192c"
         "peekViewResult.background": "#000000", // "#00212b"
         "progressBar.background": "#000000",
@@ -179,6 +182,7 @@
         "scmGraph.historyItemHoverDefaultLabelBackground": "#00181d",
         "scmGraph.historyItemRefColor": "#001320",
         "scmGraph.historyItemRemoteRefColor": "#1c0018",
+        "scrollbarSlider.background":"#3e3e3e66",
         "selection.background": "#0b250061",
         "settings.checkboxForeground": "#c03600",
         "settings.dropdownBackground": "#000",
@@ -195,6 +199,7 @@
         "sideBarSectionHeader.foreground": "#7a2cf8",
         "sideBarStickyScroll.border": "#d10000",
         "statusBar.background": "#000",
+        "statusBar.debuggingBackground":"#000000",
         "statusBar.foreground": "#8534ff",
         "statusBar.noFolderBackground": "#000000",
         "statusBarItem.activeBackground": "#000000",
