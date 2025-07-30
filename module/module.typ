@@ -4,17 +4,17 @@
   to use my style settings, cancel comment out, i.e. delete the leading `//`. for example 
   change
 
-  `// #import "style.typ": *`
+  `// #import "math-var-color.typ": *`
 
   to 
 
-  `#import "style.typ": *`
+  `#import "math-var-color.typ": *`
 
   for consistence, used with my vscode `.vscode/.settings.json` (rename `.settings.json` to `settings.json`) based on vscode theme Solarized Dark
 */
 
-// #import "style.typ": * 
-// #import "color-symbol.typ": * 
+#import "style.typ": * 
+#import "color-symbol.typ": * 
 #import "math-var.typ": * 
 // #import "math-var-color.typ": * 
 #import "function.typ": *
