@@ -408,7 +408,7 @@ $=$ 的其它用法
 
   $Set 0$ 语言是潜无穷的, hierarchy-order-of-set 语言也是如此. 当然绝大多数编程语言都是潜无穷的
 
-  然而这种 hierarchy 真的是有意义的吗? 这种 hierarchy 之外是否可能存在很多不是线序 or 全序的东西?
+  这种 hierarchy 之外是否可能存在很多不是线序 or 全序的东西?
 ]
 似乎有两种 math object
 
@@ -431,6 +431,8 @@ type 之间的同态的使用可以对证明带来方便. 有时可以让计算�
     然后让编译器去计算命题 $A in A$ 的 bool, 由于 $A in "universal-set"$ = `true`, 编译器只计算 $not (A in A)$ 的 bool, 然后发现 `not` 函数, 所以计算 `not` 里面的 bool, 但这又回到了计算 $A in A$ 的 bool, 编译器可能选择进入电路死循环
 
     对于有限集, $x ∉ x$, 或者无法判断 $x in x$, e.g. ${1} ∉ {1}$, 因为 ${1} ≠ 1 in {1}$, 或者没有定义 $x in 1$ 这个命题是 true proposition
+
+    如果考虑集合 hierarchy, 对于 $A := {x ∈ Set 0 : not (x ∈ x)}$ 很可能 $A in Set 1 ∖ Set 0$ 从而 $A ∉ A$ 因为第一个条件 $A in Set 0$ 不满足
   ]
   *Example* #tag("self-referential-paradox") 自指悖论. "这个句子是错的"
   #indent[

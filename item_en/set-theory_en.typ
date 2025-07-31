@@ -408,7 +408,7 @@ Other uses of $=$
 
   $Set 0$ language is potentially infinite, and so is hierarchy-order-of-set language. Of course most of programming language is potentially infinite
 
-  However, does this hierarchy really make sense? Is it possible that there exists many non linear order or total order things outside this hierarchy?
+  Is it possible that there exists many non linear order or total order things outside this hierarchy?
 ]
 There seem to be two types of math objects
 
@@ -431,6 +431,8 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
     Then let the compiler calculate the boolean value of the proposition $A in A$. Since $A in "universal-set"$ = `true`, the compiler only calculates the boolean value of $not (A in A)$, and then finds the `not` function, so it calculates the boolean value inside `not`, but this goes back to calculating the boolean value of $A in A$, and the compiler may choose to enter a circuit dead loop.
 
     For finite sets, $x ∉ x$, or it is impossible to judge $x in x$, e.g. ${1} ∉ {1}$, because ${1} ≠ 1 in {1}$, or the proposition $x in 1$ is not defined as a true proposition.
+
+    If we consider the set hierarchy, for $A := {x ∈ Set 0 : not (x ∈ x)}$ it is very likely that $A in Set 1 ∖ Set 0$ and thus $A ∉ A$ because the first condition $A in Set 0$ does not satisfy
   ]
   *Example* #tag("self-referential-paradox") "This sentence is false"
   #indent[
