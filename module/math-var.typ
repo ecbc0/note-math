@@ -1,6 +1,3 @@
-#import "style.typ": *
-#show: style
-
 // see .vscode/color.code-snippets
 
 // mathbb
