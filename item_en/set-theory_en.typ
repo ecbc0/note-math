@@ -37,7 +37,7 @@ The human brain compiler can omit and supplement omissions, trading temporary ef
 
 Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and-interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory of computer were not used well.
 
-Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... 
+Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... My attitude is that even if there may not be a good underlying implementation for the time being, we can turn to looking for easy-to-use syntax and convenient additional tools.
 
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 
@@ -248,74 +248,53 @@ A proposition has many proofs with different runtime data flow, which can be con
 
 The following object construction rules, except for the intersection, generally give non-empty sets
 
+#let A = c-bf("A","#0056e1")
+
+let $#A$ be set of sets
+
 #tag("union")  
 #indent[
   #image("../image/union.jpeg", width: 30%)
 
-  define object $⋃ A$ and language expansion
+  define object $⋃ #A$ and language expansion
   $ 
-    x ∈ a ∪ a' &:= (x ∈ a) or (x ∈ a') \ 
+    x ∈ A ∪ A' &:= (x ∈ A) or (x ∈ A') \ 
     \
-    x ∈ ⋃ A &:= Or_(a ∈ A) x ∈ a \ 
-    &:= exists a ∈ A, x ∈ a
+    x ∈ ⋃ #A &:= Or_(A ∈ #A) x ∈ A \ 
+    &:= exists A ∈ #A, x ∈ A
   $
-  is non-emtpy unless $forall a ∈ A, a = ∅$
+  is non-emtpy unless $forall A ∈ #A, A = ∅$
 
   $A ∪ A = A$
 
-  We do not define the union for $A = ∅$. Same below. The reason is that let $a in A = ∅$ is always a false proposition, which makes many things unusable
-]
-#tag("sum")
-#indent[
-  #image("../image/sum.jpeg", width: 30%)
-  $
-    x ∈ a ⊔ a' &:= (x ∈ a) xor (x ∈ a') \
-    \
-    x ∈ ⨆ A &:= ⨁_(a ∈ A) x ∈ a \
-    &:= exists! a ∈ A, x ∈ a
-  $
-
-  is non-emtpy unless $forall a ∈ A, a = ∅$
-
-  in finite case, number of element $abs(⨁_1^n A_i) = sum_1^n |A_i|$ 
+  We do not define the union for $#A = ∅$. Same below. The reason is that let $A in #A = ∅$ is always a false proposition, which makes many things unusable
 ]
 enum is special case of sum/union?
-
+#pagebreak()
 #tag("intersection") 
 #indent[
   #image("../image/intersection.jpeg", width: 30%)
   $
-    x ∈ a ∩ a' &:= (x ∈ a) and (x ∈ a') \
+    x ∈ A ∩ A' &:= (x ∈ A) and (x ∈ A') \
     \
-    x ∈ ⋂ A &:= And_(a ∈ A) x ∈ a \
-    &:= forall a ∈ A, x ∈ a
+    x ∈ ⋂ #A &:= And_(A ∈ #A) x ∈ A \
+    &:= forall A ∈ #A, x ∈ A
   $
 
   $A ∩ A = A$
 ]
-#tag("product") 
-#indent[
-  #image("../image/product.jpeg", width: 30%)
-  $
-    x ∈ a × a' &:= (x(a) ∈ a) and (x(a') ∈ a') \
-    \
-    x ∈ product A &:= And_(a ∈ A) x(a) ∈ a \
-    &:= forall a ∈ A, x(a) ∈ a 
-  $
-  is non-emtpy unless $exists a ∈ A, a = ∅$ (related to #tag("axiom-of-choice"))
-
-  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A_i) = product_1^n |A_i|$
-
-  $x(a)$ means reading two symbols as a combined symbol
-]
-#tag("map") 
+#tag("map") *alias* #tag("function") #tag("constant-dependent-product")
 #indent[
   #image("../image/map.jpeg", width: 30%)
 
   let $A,B$ is math object. The rule for defining map space $A -> B$, map $f$ as math object is
   $
+    f ∈ "Map"(A,B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
+  $
+  or 
+  $
     f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
-    &:= forall a ∈ A, f(a) ∈ B
+    &:= forall a ∈ A, f(a) ∈ B    
   $
   denoted by $f : A -> B$ 
   
@@ -350,6 +329,65 @@ Similarly, although countable can already define some real numbers e.g. $sum 1/n
 
   $ x ∈ {a ∈ A : p(a)} := (x ∈ A) and p(x) $
 ]
+#tag("product") 
+#indent[
+  #image("../image/product.jpeg", width: 30%)
+
+  let $#A$ be set of sets, let $A in "Map"(I, #A)$
+  $
+    x ∈ product_(i in I) A(i) &:= And_(i in I) Or_(a in A(i)) (x, i) = a
+  $
+  or
+  $
+    x ∈ product_(i in I) A(i) &:= And_(i in I) x(i) in A(i) \
+    &:= forall i in I, x(i) in A(i) 
+  $  
+  is non-emtpy unless $exists A ∈ #A, A = ∅$ (related to #tag("axiom-of-choice"))
+
+  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A(i)) = product_1^n |A(i)|$
+]
+#tag("pair") *alias* #tag("constant-dependent-sum") 
+#indent[
+  $
+    f ∈ "Pair"(A,B) &:= Or_(a ∈ A) Or_(b in B) f = (a,b)
+  $
+
+  consant-dependent-product $B^A = product_(a in A) B(a)$. consant-dependent-sum is $A × B = sum_(a in A) B(a)$
+]
+#tag("sum")
+#indent[
+  #image("../image/sum.jpeg", width: 30%)
+
+  let $#A$ be set of sets, let $A in "Map"(I, #A)$
+  $
+    x ∈ sum_(i in I) A(i) &:= Or_(i in I) Or_(a in A(i)) x = (i, a) 
+  $
+  is non-emtpy unless $forall A ∈ #A, A = ∅$
+
+  in finite case, number of element $abs(sum_1^n A(i)) = sum_1^n |A(i)|$ 
+]
+#tag("coordinate-component") 
+- product component
+  $ 
+    dmat( delim: #none ,
+    product_(i in I) A(i), ⟶, A(i) ;
+    x, ⟿, (x,i) ,=, a
+    ) 
+  $ 
+  or 
+  $
+    dmat( delim: #none ,
+    product_(i in I) A(i), ⟶, A(i) ;
+    x, ⟿, x(i) 
+    )     
+  $
+- sum component
+  $ 
+    dmat( delim: #none ,
+    A(i), ⟶, sum_(i in I) A(i) ;
+    a, ⟿, (i, a) ,=, x
+    ) 
+  $
 define $ A = B := (x ∈ A) <==> (x ∈ B) $
 
 Other uses of $=$
@@ -451,17 +489,17 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
 ]
 #tag("dependent-distributive") 
 #indent[
-  union & interset 
+  let $#A$ be set of sets, let $A in "Map"(I, #A)$, and let $A(i)$ be set of sets, index by its elements $x(i)$
 
-  $ ⋂_(a ∈ A) ⋃_(x ∈ product A) x(a) = ⋃_(x ∈ product A) ⋂_(a ∈ A) x(a) $
+  union & intersection
 
-  $ ⋃_(a ∈ A) ⋂_(x ∈ product A) x(a) = ⋂_(x ∈ product A) ⋃_(a ∈ A) x(a) $
+  $ ⋂_(i ∈ I) ⋃_(x(i) in A(i)) x(i) = ⋃_(x ∈ product_(i in I) A(i)) ⋂_(i ∈ I) x(i) $
 
-  sum and product
+  $ ⋃_(i ∈ I) ⋂_(x(i) in A(i)) x(i) = ⋂_(x ∈ product_(i in I) A(i)) ⋃_(i ∈ I) x(i) $
 
-  $ product_(a ∈ A) ⨆_(x ∈ product A) x(a) = ⨆_(x ∈ product A) product_(a ∈ A) x(a) $
+  sum & product
 
-  $ ⨆_(a ∈ A) product_(x ∈ product A) x(a) = product_(x ∈ product A) ⨆_(a ∈ A) x(a) $
+  $ product_(i ∈ I) sum_(x(i) ∈ A(i)) x(i) = sum_(x ∈ product_(i in I) A(i)) product_(i ∈ I) x(i) $
 
   draft of proof: expand, use parallel distributive cf. #link(<distributive-forall-exists>)[]
 ]
@@ -472,19 +510,3 @@ $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
 #tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
 
 $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 
-
-#tag("coordinate-component")
-- product component 
-  $ 
-    dmat( delim: #none ,
-    product A, ⟶, a ;
-    x, ⟿, x(a)
-    ) 
-  $ 
-- sum component 
-  $ 
-    dmat( delim: #none ,
-    a, ⟶, ⨆ A ;
-    x, ⟿, x(a)
-    ) 
-  $
