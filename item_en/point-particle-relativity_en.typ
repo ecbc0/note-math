@@ -21,7 +21,7 @@ $
 $
 Then the constant value $m c^2$ will vary to zero $0$
 
-这种非相对论近似极限的方式是坐标依赖的. 在弯曲流形上, 由于可能需要多个坐标覆盖整个流形, 非相对论近似极限的的定义问题会更困难
+This non-relativistic approximation limit method is coordinate-dependent. On a curved manifold, since multiple coordinates may be needed to cover the entire manifold, the definition problem of the non-relativistic approximation limit will be more difficult.
 
 Symmetry and conserved quantities
 
@@ -109,7 +109,7 @@ point particle in Lorentz-manifold
 
 *Example*
 
-$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+Coupling of $ℝ^(1,3)$ relativistic point particles and gauge fields. Action
 
 $
   &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
@@ -117,15 +117,15 @@ $
 $
 - *Question* 
 #indent[  
-  隐藏的 $#U (1)$ 规范对称性
+  Hidden $#U (1)$ gauge symmetry
 
-  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+  The gauge transformation $e^(θ)$ used in field interaction leads to a transformation of the connection $A = A' + #d θ$. For the action of a point particle and an electromagnetic field, $#d θ$ is a divergence quantity $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, with the boundary being zero, the variation is zero.
 
-  尽管 invariant 的是方程而不是作用量
+  Although what is invariant is the equation, not the action
   
-  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+  This is different from, for example, the case of a scalar field, where the action is also invariant, and the invariance of the equation is achieved through the definition of covariant derivatives.
 
-  #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
+  #tag("current-gauge-particle") Can this hidden $#U (1)$ gauge symmetry give a conserved 4-current for a point particle? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]
 #let A = c-bf("A","#0056e1")
 #let j = c-bf("j","#0056e1")
@@ -133,7 +133,7 @@ $
 
 *Example*
 
-$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+Coupling of $ℝ^(1,3)$ relativistic point particles and gauge fields. Action
 
 $
   &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
@@ -141,13 +141,13 @@ $
 $
 - *Question* 
 #indent[  
-  隐藏的 $#U (1)$ 规范对称性
+  Hidden $#U (1)$ gauge symmetry
 
-  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+  The gauge transformation $e^(θ)$ used in field interaction leads to a transformation of the connection $A = A' + #d θ$. For the action of a point particle and an electromagnetic field, $#d θ$ is a divergence quantity $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, with the boundary being zero, the variation is zero.
 
-  尽管 invariant 的是方程而不是作用量
+  Although what is invariant is the equation, not the action
   
-  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+  This is different from, for example, the case of a scalar field, where the action is also invariant, and the invariance of the equation is achieved through the definition of covariant derivatives.
 
-  #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
+  #tag("current-gauge-particle") Can this hidden $#U (1)$ gauge symmetry give a conserved 4-current for point particles? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]

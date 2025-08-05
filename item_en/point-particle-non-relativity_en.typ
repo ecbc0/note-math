@@ -72,7 +72,7 @@ Euclidean metric-manifold
 
   Although the metric volume form is not used, due to the form of the kinetic energy part of the action, it is still related to the metric geodesic 
 ]
-Symmetry and conserved quantity 
+Symmetry and conserved quantity (Noether theorem)
 
 Handling the symmetry of non-relativistic spacetime $ℝ × ℝ^3$ *alias* the Galileo group, generated from the translation of $ℝ × ℝ^3$, rotation, non-relativistic boost
 

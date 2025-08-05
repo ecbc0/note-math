@@ -72,7 +72,7 @@ Euclidean 型 metric-manifold
 
   尽管没有使用 metric volume form, 由于作用量的动能部分的形式, 仍然联系到 metric 测地线 
 ]
-对称与守恒量 
+对称与守恒量 (Noether theorem)
 
 处理非相对论时空 $ℝ × ℝ^3$ 的对称性 *alias* Galileo 群, 生成自 $ℝ × ℝ^3$ 的平移, 旋转, 非相对论 boost
 
