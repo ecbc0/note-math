@@ -15,6 +15,8 @@
 
 但是可以使用潜在无限的时间来实现 "潜无限"
 
+假设内存的上限无穷但每个周期的内存的占用都有限, 则程序有无限可能的输入, 这也是一种潜无限
+
 然而, 甚至存在集合的元素数量 #link(<uncountable>)[不可数]. *Example* 
 - the set of all subset of $ℕ$, $Subset(ℕ)$
 - all function from $ℕ$ to itself, $ℕ -> ℕ$
@@ -37,7 +39,7 @@ parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to �
 
 而且证明辅助还会有其它作用, 类似于, IDE/LSP/友好且互动的编译器错误信息/documentation 时代之前的编程是痛苦的, 数据和信息的组织和结构化和复用做得不好, 也没利用好计算机的强大记忆容量和时间
 
-证明辅助的例子: #link("https://github.com/acornprover/acorn")[acornprover], 还在开发中. 还没实现集合论 ... 我的态度是, 即使可能暂时没有好的底层实现, 也可以转为寻求容易使用的语法和方便的附加工具
+证明辅助的例子: #link("https://github.com/acornprover/acorn")[acornprover], 还在开发中. 还没实现集合论 ... 我的态度是, 即使可能暂时没有好的底层实现, 也可以转为寻求容易使用的语法和方便的附加工具 (e.g. LSP)
 
 #tag("proposition") proposition 是特殊的 (string, bool) product struct ((字符串, 真假值) 的逻辑乘积结构) 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula (公式)
 
@@ -291,6 +293,8 @@ enum is special case of sum/union?
   $
     f ∈ "Map"(A,B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
   $
+  其中, 两个 symbol $f,a$ 组合成新的 symbol $(f,a)$
+
   or 
   $
     f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
@@ -313,7 +317,7 @@ enum is special case of sum/union?
 
   denoted by $2^A$. 根据 #link(<proposition-function>)[] 等价于 map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
 
-  define $∅ ⊂ A$ be true proposition
+  没有元素的集合是任何一个集合的子集, 将这个规则加进子集的定义中. define $∅ ⊂ A$ be true proposition. 
 ]
 map space 和 subset 引入了高级别的无限
 
@@ -442,7 +446,7 @@ $=$ 的其它用法
     $
     可以被分成多句, 使得可以方便的加入/移除 property, 来得到不同的 struct
 
-  $Set 0, Set 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Set ℕ$ 吗? 然后对 $Set ℕ$, 继续使用 object construct rule ... 
+  $Set 0, Set 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Set ℕ$ 吗? 然后对 $Set ℕ$, 继续使用 object construct rule ... 虽然确实可以抽象地定义 $Set ℕ$ 以及后续的东西, 但是, 具体自然数 $n$ 的 $Set n$ 是需要的, 且也需要无限的集合阶层, 递归下降意义下的潜无限的输入 (可能 $Set 0 ∈ Set 1$ 的定义需要作为输入的一部分), 但递归下降的语言规则是有限的
 
   $Set 0$ 语言是潜无穷的, hierarchy-order-of-set 语言也是如此. 当然绝大多数编程语言都是潜无穷的
 
@@ -458,7 +462,15 @@ type 之间的同态的使用可以对证明带来方便. 有时可以让计算�
 
 #tag("universal-type")
 #indent[
-  如果不假设可以随意使用 universal-type, 我发现自己真的无法理解很多事情. 所以, 我的选择是, 可以随意使用 universal-type, 即使进入了死循环或自指悖论, 也是正确的语言, 虽然此时是无用的结果. 类似的东西是, 一般编程语言可以手动构造死循环, 但这并不能说明这种编程语言是错的
+  universal-type 的问题, 或者 type of every type 的问题
+
+  这里的容易忽略的一点是, "type of every type" 中的 "type" 指的是什么? 所谓的 "type" 是什么意思? 某种二元变量 bool 函数 or 二元谓词逻辑命题?
+
+  从构造性的角度, 需要语言规则去定义一种 "type". 但是, 为了定义 "type of every type", 需要知道所有的构造 "type" 的语言规则. 即使我们知道逻辑门, 周期电路, 内存, 我们也真正不知道所有语言规则或程序, 除非真的写出来 ...
+
+  即使不考虑 "type of every type", 也能有自指问题. 在数学语言的递归下降构造规则中, `math_object` type 并不参与在构造规则中. 如果一个类型 `T` 自指地参与到构造规则中, 则这种语言或程序是非终结的, 例如 `T : T`, 即使每个周期使用的内存有限, 也无法在有限时间内运行完程序. 注意, 一般的编程语言可以有无限循环 (由不同的原因)
+
+  假设程序定义了一种 universal-type 的概念, 且 universal-type 又可以用来构造 "type", 则 universal-type 就自指地参与到了 "type" 的构造规则中, 导致非终结语言或程序
 
   *Example* #tag("Russell-paradox")
   #indent[

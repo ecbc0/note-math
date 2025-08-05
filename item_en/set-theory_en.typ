@@ -15,6 +15,8 @@ The problem of infinite space: Reality cannot build circuits and memory with inf
 
 But potentially infinite time can be used to achieve "potential infinity"
 
+Assuming that the upper limit of memory is infinite but the memory occupied in each cycle is limited, the program has infinite possible inputs, which is also a potential infinite
+
 However, there are even sets with an #link(<uncountable>)[uncountable] number of elements. *Example* 
 - the set of all subset of $ℕ$, $Subset(ℕ)$
 - all function from $ℕ$ to itself, $ℕ -> ℕ$
@@ -37,7 +39,7 @@ The human brain compiler can omit and supplement omissions, trading temporary ef
 
 Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and-interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory of computer were not used well.
 
-Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... My attitude is that even if there may not be a good underlying implementation for the time being, we can turn to looking for easy-to-use syntax and convenient additional tools.
+Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... My attitude is that even if there may not be a good underlying implementation for the time being, we can turn to looking for easy-to-use syntax and convenient additional tools (e.g. LSP).
 
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 
@@ -291,6 +293,8 @@ enum is special case of sum/union?
   $
     f ∈ "Map"(A,B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
   $
+  where two symbol $f,a$ combine to a new symbol $(f,a)$
+
   or 
   $
     f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
@@ -313,7 +317,7 @@ enum is special case of sum/union?
 
   denoted by $2^A$. According to #link(<proposition-function>)[] equivalent to map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
 
-  define $∅ ⊂ A$ be true proposition
+  Set without any element is subset of every set, add this rule to the definition of subset. define $∅ ⊂ A$ be true proposition. 
 ]
 map space and subset introduce high-level infinity
 
@@ -442,7 +446,7 @@ Other uses of $=$
     $
     Can be divided into multiple sentences, so that it is convenient to add/remove properties to get different structs
 
-  $Set 0, Set 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Set ℕ$ again? Then for $Set ℕ$, continue to use the object construct rule ... 
+  $Set 0, Set 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Set ℕ$ again? Then for $Set ℕ$, continue to use the object construct rule ... Although it is indeed possible to abstractly define $Set ℕ$ and subsequent things, $Set n$ of specific natural numbers $n$ is needed, and also requires an infinite set hierarchy, a potentially infinite input, in the sense of recursive descent (perhaps the definition of $Set 0 ∈ Set 1$ should be part of the input), but the language rules of recursive descent are finite
 
   $Set 0$ language is potentially infinite, and so is hierarchy-order-of-set language. Of course most of programming language is potentially infinite
 
@@ -458,7 +462,15 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
 
 #tag("universal-type")
 #indent[
-  If I don't assume that universal-type can be used at will, I find that I really can't understand many things. Therefore, my choice is that universal-type can be used at will, even if it enters an infinite loop or self-referential paradox, it is still a correct language, although the result is useless at this time. Something similar is that general programming languages ​​can manually construct infinite loops, but this does not mean that such programming languages ​​are wrong.
+  The universal-type problem, or the type of every type problem
+
+  One thing that's often overlooked here is what the "type" in "type of every type" refers to? What does "type" mean? A binary bool function or a binary predicate logic proposition?
+
+  From a constructive perspective, language rules are needed to define a "type". However, to define "type of every type", require knowing all the language rules for constructing "types". Even if we know about logic gates, periodic circuits, and memory, we don't truly know all the language rules or programs unless we actually write them ...
+
+  Even without considering the "type of every type", self-reference can still arise. In the recursive descent construction rules of mathematical languages, the `math_object` type does not participate in the construction rules. If a type `T` self-referentially participates in the construction rules, then the language or program is non-terminal. For example, `T : T` , even though the memory used in each cycle is limited, the program cannot be completed runing in finite time. Note that, general programming languages also can have infinite loops in program (by different reason)
+
+  Suppose a program defines a The concept of universal-type, and universal-type can be used to construct "type", then universal-type self-referentially participates in the construction rules of "type", resulting in a non-terminal language or program
 
   *Example* #tag("Russell-paradox")
   #indent[
