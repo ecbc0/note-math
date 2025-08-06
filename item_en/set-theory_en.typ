@@ -450,6 +450,8 @@ Other uses of $=$
 
   $Set 0$ language is potentially infinite, and so is hierarchy-order-of-set language. Of course most of programming language is potentially infinite
 
+  Normally we do not need explicit hierarchy of set. For example, we just need to construct the concrete type like $"Group"$, but not need to mention that the type $"Group"$ is a element in type $Set 1$ 
+
   Is it possible that there exists many non linear order or total order things outside this hierarchy?
 ]
 There seem to be two types of math objects
