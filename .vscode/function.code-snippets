@@ -77,11 +77,11 @@
   },
   "color symbol": {
     "prefix": "color symbol",
-    "body": "show ${1:symbol}: it => text(it, fill: rgb(\"${2:#006dea}\"))"
+    "body": "show ${1:symbol}: it => o-color(it, fill: rgb(\"${2:#006dea}\"))"
   },
   "color symbol regex": {
     "prefix": "color symbol regex",
-    "body": "show regex(\"${1:symbol}\"): it => text(it, fill: rgb(\"${2:#006dea}\"))"
+    "body": "show regex(\"${1:symbol}\"): it => o-color(it, fill: rgb(\"${2:#006dea}\"))"
   },
   "style symbol": {
     "prefix": "style symbol",
@@ -89,6 +89,6 @@
   },
   "text color": {
     "prefix": "text color",
-    "body": "text(${1:x}, fill: rgb(\"${2:#006dea}\"))"
+    "body": "o-color(${1:x}, fill: rgb(\"${2:#006dea}\"))"
   },
 }

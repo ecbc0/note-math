@@ -250,7 +250,7 @@ A proposition has many proofs with different runtime data flow, 可以认为它�
 
 以下的 object construction rules, 除了交集, 一般都给出 non-emtpy sets
 
-#let A = c-bf("A","#0056e1")
+#let A = c-bf("A",rgb("#0056e1"))
 
 let $#A$ be set of sets
 

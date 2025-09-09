@@ -1,8 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let T = c-bf("T", rgb("#919191"))
 
 #tag("topology") 拓扑 := $X$ 每个点都有一个 #link(<net>)[点网] $#B (x)$. 这样的点网系统记为 $#T _X$, 是 Euclidean 空间的类似物
 

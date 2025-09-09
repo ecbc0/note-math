@@ -160,8 +160,8 @@ $ℝ$ completeness #tag("completeness-real")
 #indent[
   Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ and infimum $a_0$ for the endpoints with $a_0 <= a_1$ to get the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 ] 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let C = c-bf("C", rgb("#919191"))
 #tag("closed-interval-net-theorem") Closed interval #link(<net>)[net] $#B$ intersection is non-empty $⋂ #B != ∅$
 
 _Proof_

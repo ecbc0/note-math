@@ -46,8 +46,8 @@ let $A ⊂ ℝ^d$
 
 $A$ open <==> $A^∁$ closed 
 
-#let I = c-bf("I","#919191")
-#let J = c-bf("J","#919191")
+#let I = c-bf("I", rgb("#919191"))
+#let J = c-bf("J", rgb("#919191"))
 
 #tag("interval") 区间指 $ℝ$ 的子集 $I$ with property 序不中断
 $ 
@@ -77,8 +77,8 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 #tag("bounded-closed-interval-is-compact") $ℝ$ 有界闭区间 ==> #link(<compact>)[]
 
 _Proof_ 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let C = c-bf("C", rgb("#919191"))
 #indent[
   let $#B$ 是 $A$ 的 #link(<net>)[]. let $B in #B$
 

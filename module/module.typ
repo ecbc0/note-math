@@ -1,33 +1,29 @@
-/* 
+/*
   default no style
-  
-  to use my style settings, cancel comment out, i.e. delete the leading `//`. for example 
-  change
 
-  `// #import "math-var-color.typ": *`
-
-  to 
-
-  `#import "math-var-color.typ": *`
+  to use my style settings, in `style.typ`, set `enable-style` to `true`
 
   for consistence, used with my vscode `.vscode/.settings.json` (rename `.settings.json` to `settings.json`) based on vscode theme Solarized Dark
 */
 
-#import "style.typ": * 
-#import "color-symbol.typ": * 
-#import "math-var.typ": * 
-// #import "math-var-color.typ": * 
+#import "style.typ": *
+#import "color-symbol.typ": *
+#import "math-var.typ": *
 #import "function.typ": *
-#import "link-setting.typ": * 
+#import "link-setting.typ": *
 
 #let module(body) = {
-  // show: style 
-  // show: color-symbol 
+  show: body => if enable-style {
+    show: style
+    show: color-symbol
+    body
+  } else {
+    body
+  }
+
   show: link-setting // until support link to label in workspace
 
   body
 }
 
 #show: module
-
-to delete all remaining color of symbol, regex replace in workspace `,[ ]*fill:[ ]*(rgb\((?:[\w|#|"]+?\)|[\w]+?))`

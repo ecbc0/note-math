@@ -250,7 +250,7 @@ A proposition has many proofs with different runtime data flow, which can be con
 
 The following object construction rules, except for the intersection, generally give non-empty sets
 
-#let A = c-bf("A","#0056e1")
+#let A = c-bf("A", rgb("#0056e1"))
 
 let $#A$ be set of sets
 

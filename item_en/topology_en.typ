@@ -1,8 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let T = c-bf("T", rgb("#919191"))
 
 #tag("topology") Topology := $X$ Every point has a #link(<net>)[point net] $#B (x)$. Such a point net system is denoted as $#T _X$, which is similar to Euclidean space
 

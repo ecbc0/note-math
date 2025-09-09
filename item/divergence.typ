@@ -96,7 +96,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
     &==> c=c'
   $
 ]
-#show "δ": it => text(it, fill: rgb("#d25b00"))
+#show "δ": it => o-color(it, rgb("#d25b00"))
 
 #tag("homology-hole") 对于集合 $ℝ^n$ 减去有限个或可数个分离的线性子空间或者多面体, homology 不是零
 

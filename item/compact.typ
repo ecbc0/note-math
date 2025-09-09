@@ -1,9 +1,9 @@
 #import "../module/module.typ": *
 #show: module
 
-#let A = c-bf("A","#919191")
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let A = c-bf("A", rgb("#919191"))
+#let B = c-bf("B", rgb("#919191"))
+#let T = c-bf("T", rgb("#919191"))
 
 #let open(x) = math.circle(x)
 

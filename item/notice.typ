@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#link("../item/notice.html")[中文] #link("../item_en/notice_en.html")[English]
+#link("../item/notice.html")[中文] | #link("../item_en/notice_en.html")[English]
 
 整理和记录的想法, 关于数学, 不保证正确性和可读性和细节完整性, 有无证明的猜测
 

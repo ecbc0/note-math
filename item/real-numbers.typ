@@ -160,8 +160,8 @@ $ℝ$ 完备性 #tag("completeness-real")
 #indent[
   无论是 $ℕ$ 区间套还是 $⊂$ 线序链区间套, 线序意味着区间端点单调性, 对端点用上确界 $a_1$ 下确界 $a_0$ with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ 可以理解为 $⊂$ 线序链区间套的最小元
 ] 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let C = c-bf("C", rgb("#919191"))
 #tag("closed-interval-net-theorem") 闭区间 #link(<net>)[网] $#B$ 交集非空 $⋂ #B != ∅$
 
 _Proof_

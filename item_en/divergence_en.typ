@@ -96,7 +96,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
     &==> c=c'
   $
 ]
-#show "δ": it => text(it, fill: rgb("#d25b00"))
+#show "δ": it => o-color(it, rgb("#d25b00"))
 
 #tag("homology-hole") For a set $ℝ^n$ minus a finite number or a countable number of separated linear subspaces or polyhedra, homology is not zero
 

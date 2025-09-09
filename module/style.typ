@@ -1,3 +1,5 @@
+#let enable-style = true
+
 #let style(body) = {
   set page(
     fill: black,
@@ -7,12 +9,12 @@
   set text(
     font: (
       "Hanken Grotesk",
-      "Sarasa Gothic SC"
+      "Sarasa Gothic SC",
     ),
     fill: rgb("#0058b1"),
     size: 14pt,
     cjk-latin-spacing: auto,
-    kerning: true
+    kerning: true,
   )
 
   set underline(offset: .1em, stroke: .05em, evade: false)
@@ -22,7 +24,7 @@
   show emph: set text(
     fill: rgb("#d10000"),
     /* font: (
-      
+
     ), */
   )
 
@@ -30,7 +32,7 @@
     fill: rgb("#6e6e6e"),
     size: 12.5pt,
     font: "Source Code Pro",
-    weight: "medium"
+    weight: "medium",
   )
 
   set table(
@@ -58,7 +60,7 @@
 
   show ref: set text(fill: rgb("#008690"))
 
-  set list(marker: [#text("‣", fill: rgb("#e90000"))])
+  set list(marker: [#text("‣", rgb("#e90000"))])
 
   set enum(full: true)
 
@@ -66,6 +68,6 @@
   //set par.line(numbering: n => text(rgb("#2e2e2e"))[#n],number-margin: right)
 
   body
-}
+} 
 
 #show: style

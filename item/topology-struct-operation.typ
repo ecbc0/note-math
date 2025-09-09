@@ -1,8 +1,8 @@
 #import "../module/module.typ": *
 #show: module
 
-#let B = c-bf("B","#919191")
-#let T = c-bf("T","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let T = c-bf("T", rgb("#919191"))
 
 #tag("topology-subspace")
 #indent[

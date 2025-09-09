@@ -5,7 +5,7 @@
 #let p = spin($p$)
 
 *Prop* Generally, for $A ∈ SL(2,ℂ)$, $A,A^*$ are not equivalent in the sense of changing coordinates: There does not exist $B ∈ GL(2,ℂ)$, $A^* = B ⋅ A ⋅ B^(-1)$
-#let j = c-bf("j", "#006dea")
+#let j = c-bf("j", rgb("#006dea"))
 
 _Proof_ 
 #indent[

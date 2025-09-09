@@ -52,7 +52,7 @@ When not exist flat connection coordinate, choose $L^2$ minimal curvature, $L^2$
   $
   Of course, this decomposition method is not $SO(1,3)$ invariant
 
-  #let A = c-bf("A","#0056e1")
+  #let A = c-bf("A", rgb("#0056e1"))
 
   *Question* How to make $sum_i ∂_i (∂_i A_j - ∂_j A_i) = 0$ obviously imply the $div, curl$ form of the electromagnetic field $E,B$ equations? #tag("Maxwell-equation")
   $

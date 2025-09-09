@@ -1,4 +1,31 @@
-// see .vscode/color.code-snippets
+#import "style.typ": *
+#show: style
+
+// sample color, see `.vscode/color.code-snippets`
+
+#text("8534ff purple", rgb("#8534ff"))\
+#text("2f00ff purple-blue", rgb("#2f00ff"))\
+#text("0056e1 blue", rgb("#0056e1"))\
+#text("006dea blue-bright", rgb("#006dea"))\
+#text("008690 aqua", rgb("#008690"))\
+#text("34a500 green", rgb("#34a500"))\
+#text("5ea100 green-yellow", rgb("#5ea100"))\
+#text("c3b900 yellow", rgb("#c3b900"))\
+#text("a59d00 yellow-dark", rgb("#a59d00")) \
+#text("cf9f00 gold", rgb("#cf9f00"))\
+#text("d25b00 orange", rgb("#d25b00"))\
+#text("e90000 red", rgb("#e90000"))\
+#text("d10000 red-dark", rgb("#d10000"))\
+#text("c10047 pink", rgb("#c10047"))\
+#text("676767 gray", rgb("#676767"))\
+#text("919191 silver", rgb("#919191"))
+
+/// prefix 'o' mean "optional"
+#let o-color(x, color) = if enable-style {
+  text(x, color)
+} else {
+  text(x)
+}
 
 // mathbb
 
@@ -13,22 +40,26 @@
 // mathbf
 
 #let bf(x) = $bold(upright(#x))$
-#let c-bf(x,color) = text(bf(x)) // prefix "c" represent "color"
+#let c-bf(x, color) = o-color(bf(x), color) // prefix "c" represent "color"
 
-#let i = c-bf("i","#0056e1") // Im(ℂ) i
-#let i-split = $#c-bf("i","#c10047")_"split"$
+#let i = c-bf("i", rgb("#0056e1")) // Im(ℂ) i
+#let i-split = if enable-style {
+  c-bf("i", rgb("#c10047"))
+} else {
+  $bf(i)_"split"$
+}
 
 /*
   It's tedious
 
-  hope there is something like: bind attribute A to a collection of math variable (x1, x2, …), then set CSS to attribute A (rendered color = …),
+  hope there is something like: bind attribute A to a collection of math variable (x1, x2, …), then set CSS to attribute A (rendered color = …), or the "custom element" that may come in the future?
 
   or use code generator i.e. input an array of string, out put a new array of string
 */
 
 // differential
 
-#let c-diff(x) = text(x)
+#let c-diff(x) = o-color(x, rgb("#d25b00"))
 
 #let d = c-diff($d$)
 #let D = c-diff($D$)
@@ -43,7 +74,7 @@
 
 // classical groups
 
-#let c-Lie-group(x) = text(x)
+#let c-Lie-group(x) = o-color(x, rgb("#cf9f00"))
 
 #let O = c-Lie-group("O")
 #let SO = c-Lie-group("SO")
@@ -53,7 +84,7 @@
 #let SL = c-Lie-group("SL")
 #let GL = c-Lie-group("GL")
 
-#let c-Lie-algebra(x) = math.sans(text(x))
+#let c-Lie-algebra(x) = math.sans(o-color(x, rgb("#d25b00")))
 
 #let so = c-Lie-algebra("so")
 #let su = c-Lie-algebra("su")
@@ -65,7 +96,7 @@
 
 // function
 
-#let c-fn(x) = text(x)
+#let c-fn(x) = o-color(x, rgb("#cf9f00"))
 
 #let Re = c-fn("Re")
 #let Im = c-fn("Im")
@@ -110,7 +141,7 @@
 // other
 
 #let cvt-prod = rotate(90deg, $⧀$)
-#let lim = math.limits(text("lim"))
+#let lim = math.limits(o-color("lim", rgb("#0056e1")))
 
 #let And = math.and.big
 #let Or = math.or.big

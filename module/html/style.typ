@@ -35,7 +35,7 @@
     // prefer external css ...
     #```CSS
     .indent {
-      border-left: 1px solid #94828233;
+      border-left: 1px solid #9482823f;
       padding-left: 1em
     }
     a:link {

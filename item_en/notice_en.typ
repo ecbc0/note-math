@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#link("../item/notice.html")[中文] #link("../item_en/notice_en.html")[English]
+#link("../item/notice.html")[中文] | #link("../item_en/notice_en.html")[English]
 
 English ver. are machine translation without check from gemini-flash and #link("https://github.com/neavo/LinguaGacha")[LinguaGacha]
 

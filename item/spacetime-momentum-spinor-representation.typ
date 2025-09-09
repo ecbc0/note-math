@@ -5,7 +5,7 @@
 #let p = spin($p$)
 
 *Prop* 一般地, for $A ∈ SL(2,ℂ)$, $A,A^*$ 在换坐标的意义下不等价: 不存在 $B ∈ GL(2,ℂ)$, $A^* = B ⋅ A ⋅ B^(-1)$
-#let j = c-bf("j", "#006dea")
+#let j = c-bf("j", rgb("#006dea"))
 
 _Proof_ 
 #indent[

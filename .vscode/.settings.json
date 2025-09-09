@@ -49,7 +49,6 @@
         "editor.fontSize": 14.5,
     },
     "markdown.preview.fontSize": 14.5,
-    "breadcrumbs.enabled": false,
     "editor.minimap.renderCharacters": false,
     "editor.renderWhitespace": "none",
     "editor.stickyScroll.enabled": true,
@@ -79,7 +78,7 @@
         "debugToolBar.background":"#000000",
         "debugToolBar.border":"#2f00ffd3",
         "diffEditor.insertedLineBackground": "#00000000",
-        "diffEditor.insertedTextBackground": "#00000000",
+        "diffEditor.insertedTextBackground": "#123c0052",
         "diffEditor.removedLineBackground": "#00000000",
         "diffEditor.removedTextBackground": "#8200003f",
         "diffEditorGutter.insertedLineBackground": "#123c0061",
@@ -106,6 +105,7 @@
         "editorBracketHighlight.foreground3": "#e03218",
         "editorBracketHighlight.foreground4": "#cf6e00",
         "editorBracketHighlight.unexpectedBracket.foreground": "#ffffff",
+        "editorBracketMatch.border": "#970000",
         "editorGhostText.background": "#000",
         "editorGroupHeader.tabsBackground": "#000000",
         "editorGutter.addedBackground": "#08a000",
@@ -200,6 +200,7 @@
         "sideBarStickyScroll.border": "#d10000",
         "statusBar.background": "#000",
         "statusBar.debuggingBackground":"#000000",
+        "statusBar.focusBorder":"#ab0000ad",
         "statusBar.foreground": "#8534ff",
         "statusBar.noFolderBackground": "#000000",
         "statusBarItem.activeBackground": "#000000",
@@ -302,7 +303,21 @@
                 "settings": {
                     "foreground": "#bd0000"
                 }
-            }
+            },
+            {
+                "scope": ["storage.type.type.ts","storage.modifier.ts"],
+                "settings": {
+                    "foreground": "#2f8600",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": ["storage.type.class.ts","storage.type.ts"],
+                "settings": {
+                    "foreground": "#2f00ff",
+                    "fontStyle": "bold"
+                }
+            },
         ]
     },
     "editor.semanticTokenColorCustomizations": {
@@ -310,7 +325,23 @@
         "rules": {
             "text.math": "#2c8a00",
             "string.math": "#a84100",
-            "operator.math": "#2f00ff"
+            "operator.math": "#2f00ff",
+
+            "keyword": "#2f8600",
+            "variable": "#005dc7",
+            "*.controlFlow": {"foreground": "#aa0006", "bold": true},
+            "controlKeyword": {"foreground": "#aa0006", "bold": true},
+            "builtinType": {"foreground": "#4b9e0c", "bold": true},
+            "extensionMethod": {"foreground": "#1d6d78", "bold": true},
+            "preprocessorText": "#118111",
+            "attribute": "#bd7810",
+            "type": "#118111",
+            "struct": "#5810ff",
+            "enum": "#2a31ff",
+            "enumMember": "#939300",
+            "parameter": "#058383",
+            "property": "#aa3e00",
+            "operator": {"foreground": "#ae315d", "bold": false},
         },
     },
     "editor.defaultColorDecorators": "auto",
@@ -333,8 +364,17 @@
     "search.useGlobalIgnoreFiles": false,
     "git-log--graph.hide-sidebar-buttons": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "github.gitAuthentication": true,
     "github.showAvatar": false,
-    "editor.stickyScroll.defaultModel": "outlineModel"
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+    "breadcrumbs.filePath": "off",
+    "diffEditor.experimental.useTrueInlineView": true,
+    "diffEditor.renderSideBySide": true,
+    "extensions.autoUpdate": false,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+
+    // the following settings is for typst math, and is better set to the oppsite for normal code
+
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.defaultModel": "outlineModel" /* "foldingProviderModel" */, 
 }

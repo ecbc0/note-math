@@ -52,7 +52,7 @@ cf. #link(<motivation-of-gauge-field>)[]
   $
   当然这种分解方式不是 $SO(1,3)$ invariant 的
 
-  #let A = c-bf("A","#0056e1")
+  #let A = c-bf("A", rgb("#0056e1"))
 
   *Question* 如何让 $sum_i ∂_i (∂_i A_j - ∂_j A_i) = 0$ 显然地蕴含电磁场 $E,B$ 的方程的 $div, curl$ 形式? #tag("Maxwell-equation")
   $

@@ -46,8 +46,8 @@ let $A ⊂ ℝ^d$
 
 $A$ open <==> $A^∁$ closed 
 
-#let I = c-bf("I","#919191")
-#let J = c-bf("J","#919191")
+#let I = c-bf("I", rgb("#919191"))
+#let J = c-bf("J", rgb("#919191"))
 
 #tag("interval") Interval refers to a subset $I$ of $ℝ$ with property that the order is uninterrupted
 $ 
@@ -77,8 +77,8 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 #tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
 
 _Proof_ 
-#let B = c-bf("B","#919191")
-#let C = c-bf("C","#919191")
+#let B = c-bf("B", rgb("#919191"))
+#let C = c-bf("C", rgb("#919191"))
 #indent[
   let $#B$ be a #link(<net>)[net] of $A$. let $B in #B$
 

@@ -103,9 +103,9 @@ point particle in Lorentz-manifold
 #indent[
   For the action $integral #d l$ and conserved quantities, metric-connection and δ-isometry are needed
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A", rgb("#0056e1"))
+#let j = c-bf("j", rgb("#0056e1"))
+#let v = c-bf("v", rgb("#0056e1"))
 
 *Example*
 
@@ -127,9 +127,9 @@ $
 
   #tag("current-gauge-particle") Can this hidden $#U (1)$ gauge symmetry give a conserved 4-current for a point particle? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A", rgb("#0056e1"))
+#let j = c-bf("j", rgb("#0056e1"))
+#let v = c-bf("v", rgb("#0056e1"))
 
 *Example*
 

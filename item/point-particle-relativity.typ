@@ -103,9 +103,9 @@ point particle in Lorentz-manifold
 #indent[
   对于作用量 $integral #d l$ 和守恒量, 需要用 metric-connection 和 δ-isometry
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A", rgb("#0056e1"))
+#let j = c-bf("j", rgb("#0056e1"))
+#let v = c-bf("v", rgb("#0056e1"))
 
 *Example*
 
@@ -127,9 +127,9 @@ $
 
   #tag("current-gauge-particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
 ]
-#let A = c-bf("A","#0056e1")
-#let j = c-bf("j","#0056e1")
-#let v = c-bf("v","#0056e1")
+#let A = c-bf("A", rgb("#0056e1"))
+#let j = c-bf("j", rgb("#0056e1"))
+#let v = c-bf("v", rgb("#0056e1"))
 
 *Example*
 

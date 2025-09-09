@@ -165,6 +165,6 @@
     Inspired by the Hodge Laplacian, an adjoint part might need to be added to the action
   ]
   - harmonic-oscillator-quantization
-    #let H = text("H")
+    #let H = o-color("H", rgb("d25b00"))
     Motivation of ladder operators: The special potential of the harmonic oscillator makes the Hamiltonian operator, position operator, and momentum operator have a Lie bracket with good properties, similar to $so(3)$. The complexified eigenvalue technique can be used to obtain the eigenvalue operator of $[#H,*]$, and the uniformly spaced $(1/2 + n) ℏ ω$ eigenvalues ​​of can be obtained.
 ]

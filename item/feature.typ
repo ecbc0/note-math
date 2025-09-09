@@ -165,6 +165,6 @@
     启发自 Hodge Laplacian, 作用量中可能要加上 adjoint 部分
   ]
   - 谐振子量子化
-    #let H = text("H")
+    #let H = o-color("H", rgb("d25b00"))
     升降算子的动机: 谐振子的特殊 potential 使得 Hamiltonian 算子, 位置算子, 动量算子有很好性质的 Lie bracket, 类似 $so(3)$, 可以复化特征值技术来得到 $[#H,*]$ 的特征算子, 可以得到均匀间隔 $(1/2 + n) ℏ ω$ 的特征值
 ]
