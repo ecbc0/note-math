@@ -90,53 +90,6 @@ from 命题 to 未知命题的, 其真值部分被修改为 (bool, unknow) sum s
   ]
   - inference (推导) $p => q$, equivalent (等价) $p <=> q$ is formula
 ]
-以下讨论 math-object-construct-rule (数学对象构造规则) *alias* set-theory (集合论)
-
-#tag("natural-number") $ℕ$ 
-#indent[
-  natrual number (自然数) $0,1,2,...$ and natrual number set (自然数集) $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
-
-  但是计算机无法处理无限. 为了让计算机能用有限的字符和内存去表示自然数集, 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol, 定义以下为 true proposition
-  - $0 ∈ ℕ$
-  - $n ∈ ℕ ==> n + 1 ∈ ℕ$
-  等价于用指令流告诉计算机如何连续地 $+1$? 也联系到归纳法
-
-  有限的字符的代价是潜在无限的时间, 总是借助了数数或者周期电路
-]
-#tag("empty") $∅$ 
-#indent[
-  empty $∅$ is object. let $a$ be a object, $a ∈ ∅$ is false proposition
-
-  The definition of $∅$ 方便用于 intersections $∩$ e.g. 交集为空, 和有限集 $A$ 的 $Subset(A)$ 的元素数量, $2^n$ 比 $2^n - 1$ 方便
-]
-定义语言展开
-  - $a != b := not (a = b)$ 
-  - $a ∉ A := not (a ∈ A)$
-
-  由于 “定义语言展开” 很长, 因此通常 abbreviated to "*definition*" "*def*"
-
-  其实 symbol $=$ 通常也被用来表示定义语言展开或者规定语言转化. 具体自然数的 $=$ 可以直接定义为用计算机电路比较内存的值 
-
-#tag("declare-element-of-set") 
-#indent[
-  If $A$ is non empty $A != ∅$ (此信息来自 $A$ 的定义), we can define symbol $a$ and construct true proposition (let) $a ∈ A$ 
-
-  可以构造有限个 declare 语句
-]
-#tag("enum") enumerate 
-#indent[
-  $a_0 ,…, a_n$ is object then ${a_0 ,…, a_n}$ is a set
-  
-  表示为内存里的数列
-  
-  整个集合可以被这样调用: 记录第一个元素地址 + 数组长度作为电路周期数量, 每个电路周期读取一个元素
-  
-  formulas $a_0 ,…, a_n ∈ {a_0 ,…, a_n}$ are true propositions
-
-  特别地, 单元素集合 $a ∈ {a}$
-]
-define $A ⊂ B := forall a ∈ A, a ∈ B$
-
 #tag("equivalent") $<==>$ 
 #indent[
   等价的一些使用. 对有限的计算机数据来说, 可以穷举证明以下计算结果相等
@@ -180,8 +133,6 @@ follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义语言
     <==> Or_(b ∈ B) And_(a ∈ A) p(a,b) 
   $
 ]
-注意, 我自己也觉得我无法完全清晰地处理下面的推导和证明的概念
-
 推导的自然语言例子
 #indent[
   如果下雨, 我不会出门 \
@@ -205,7 +156,11 @@ match (rain) {
 
 #tag("proof") 证明就是编译通过 $p => q$ is true proposition
 
-又一种等价 $p <=> q := (p => q) and (q => p)$
+虽然我对 $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition 这种类型的虚空论证感到很迷惑, 但是没什么理由放弃对某个集合 $A$ 的局部空集族定义交集, 只好以某种角度去接受, 例如, 不用构造证明就当作是对的所以自动跳过 ... 
+
+如果接受这种类型的虚空蕴含, 那么会有 $(p => q) = (not p) or q$
+
+$p <=> q := (p => q) and (q => p)$ 并发现 $p <=> q$ 就是 $p = q$
 
 #tag("reverse-inference") 反向推导. 如果结果是我出门了, 那么肯定不是下雨的结果. 如果条件分支的结果是 `out = true`, 这不是 `rain = true` 的结果. 由于理想二进制计算机的 bool 值必定二选一, 所以只能是 `rain = false` 的结果. 这可以被写为条件分支
 ```rs
@@ -246,13 +201,114 @@ target proposition 来自哪里? 可能是相关于现实世界的模型
 
 证明需要展开大量句子, 尽管计算机处理 string 是非常快的. 无论如何, 性能优化? 仅在需要时使用 (lazy load)? 两个 proposition 不相互依赖时, 并行 (parallel)? 假设已经证明过的结果 (incremental compilation)? 
 
-A proposition has many proofs with different runtime data flow, 可以认为它们属于同一个 quotient proof of this proposition
+A proposition has many proofs with different runtime data flow
 
-以下的 object construction rules, 除了交集, 一般都给出 non-emtpy sets
+以下讨论 math-object-construct-rule (数学对象构造规则) *alias* set-theory (集合论)
 
+#tag("natural-number") $ℕ$ 
+#indent[
+  natrual number (自然数) $0,1,2,...$ and natrual number set (自然数集) $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
+
+  但是计算机无法处理无限. 为了让计算机能用有限的字符和内存去表示自然数集, 把 $n,ℕ$ 和 $+1$ 函数作为内存地址里的有限 symbol, 定义以下为 true proposition
+  - $0 ∈ ℕ$
+  - $n ∈ ℕ ==> n + 1 ∈ ℕ$
+  等价于用指令流告诉计算机如何连续地 $+1$? 也联系到归纳法
+
+  有限的字符的代价是潜在无限的时间, 总是借助了数数或者周期电路
+]
+定义语言展开
+  - $a != b := not (a = b)$ 
+  - $a ∉ A := not (a ∈ A)$
+
+  由于 “定义语言展开” 很长, 因此通常 abbreviated to "*definition*" "*def*"
+
+  其实 symbol $=$ 通常也被用来表示定义语言展开或者规定语言转化. 具体自然数的 $=$ 可以直接定义为用计算机电路比较内存的值 
+
+#tag("declare-element-of-set") 
+#indent[
+  If $A$ is non empty $A != ∅$ (此信息来自 $A$ 的定义), we can define symbol $a$ and construct true proposition (let) $a ∈ A$ 
+
+  可以构造有限个 declare 语句
+]
+#tag("product") 
+#indent[
+  #image("../image/product.jpeg", width: 30%)
+
+  let $A_0 ,…, A_n$ be set, let $A_0 × ⋯ × A_n$ is set
+  $
+    x ∈ A_0 × ⋯ × A_n &:= And_(i in {0 ,…, n}) Or_(a in A_i) (x, i) = a
+  $
+  表达式 $(x, i)$ 在内存中的数据结构含义应该是清晰的
+
+  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A(i)) = product_1^n |A(i)|$
+]
+#tag("sum") 
+#indent[
+  #image("../image/sum.jpeg", width: 30%)
+
+  let $A_0 ,…, A_n$ be set then $A_0 + ⋯ + A_n$ is a set
+  $
+    x ∈ A_0 + ⋯ + A_n &:= Or_(i in {0 ,…, n}) Or_(a in A_i) x = (i, a) 
+  $
+  也称为 tagged union
+
+  in finite case, number of element $abs(sum_1^n A(i)) = sum_1^n |A(i)|$ 
+]
+#tag("function") 
+#indent[
+  #image("../image/map.jpeg", width: 30%)
+
+  let $A,B$ be set. 定义 function space $A -> B$, map $f$ as math object 的规则是
+  $
+    f ∈ (A -> B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
+  $
+  or 
+  $
+    f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
+    &:= forall a ∈ A, f(a) ∈ B    
+  $
+  denoted by $f : A -> B$ 
+  
+  denoted by $f ∈ B^A$. in finite case, number of elements $|B^A| = |B|^(|A|)$
+
+  在 prover 中, 函数的定义和行为是, 输入类型 + 输出类型 + 检查到相同输入则规定输出相同
+
+  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. 将 $A -> (B -> C)$ 改为 $(A × B) -> C$ 叫做 normalization of function
+]
+#tag("set-with-element-in-a-type") 对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. let $A,B in Set T$, 定义 $A subset B := And_(x in T) (x in A => x in B)$
+
+#tag("top-level-set") *alias* #tag("type") 将以上规则构造的集合叫做 "top-level-set" 或者 "type". 以下的规则构造的集合则是一般的 set, 并带有一个明确的 type. 对于 prover, 可以将两者的语言规则进行乘法分解, 也叫做 "用类型论实现集合论"
+
+function space 引入了高级别的无限
+
+一件初看反直觉的事情是, 我们_似乎_知道所有 $S in Set ℕ$ 或所有 $f : ℕ -> ℕ$, 却无法数出来 #link(<cardinal-increase>)[] #link(<uncountable>)[]. 但是, "知道所有 $S in Set ℕ$" 究竟是什么意思? 事实上, 试着考虑 "一般方式之找一个 $ℕ$ 的无限子集" 这一个问题, 就会发现这不是简单的
+
+类似地, 虽然可数已经可以定义一些实数 e.g. $sum 1/n! = e$, 但如果不借助 subset or map, 可数地构造无法得到全部 $ℝ$
+
+下面假设集合属于某个类型
+
+根据 type 定义展开
+
+  - $And_(x in A) P(x) := And_(x in T) (x in A => P(x))$
+  - $Or_(x in A) P(x) := Or_(x in T) (x in S) and P(x)$
+
+#tag("subset") 
+#indent[
+  #image("../image/subset.jpeg", width: 30%)
+  
+  $ Subset(A) in Set T \ S in Subset(A) := S subset A $
+
+  由于 $x in ∅_T$ false, 根据虚空蕴含, $∅_T in Subset(A)$
+
+  denoted by $2^A$. in finite case, number of elements $|2^A| = 2^(|A|)$
+
+  let $S, S' in Subset(A)$
+  
+  $S = S' <=> (S subset S') and (S' subset S)$
+]
 #let A = c-bf("A",rgb("#0056e1"))
 
-let $#A$ be set of sets
+let $#A in Set(Set(T))$
 
 #tag("union")  
 #indent[
@@ -265,14 +321,10 @@ let $#A$ be set of sets
     x ∈ ⋃ #A &:= Or_(A ∈ #A) x ∈ A \ 
     &:= exists A ∈ #A, x ∈ A
   $
-  is non-emtpy unless $forall A ∈ #A, A = ∅$
+  is non-emtpy unless $forall A ∈ #A, A = ∅_T$ or $#A = ∅(Set(T))$
 
   $A ∪ A = A$
-
-  我们不对 $#A = ∅$ 定义 union. 下同. 理由是 let $A in #A = ∅$ is always false proposition, 这使得很多东西不能用
 ]
-enum is special case of sum/union?
-#pagebreak()
 #tag("intersection") 
 #indent[
   #image("../image/intersection.jpeg", width: 30%)
@@ -282,96 +334,27 @@ enum is special case of sum/union?
     x ∈ ⋂ #A &:= And_(A ∈ #A) x ∈ A \
     &:= forall A ∈ #A, x ∈ A
   $
+  根据虚空蕴含 $#A = ∅(Set(T)) => ⋂ #A = T$
 
   $A ∩ A = A$
 ]
-#tag("map") *alias* #tag("function") #tag("constant-dependent-product")
+#tag("why-type-theory")
 #indent[
-  #image("../image/map.jpeg", width: 30%)
+  为什么将 union 和 intersection 限制在 type 上? 因为, 由于没有什么理由不去定义空集族的交集并且认为它也是集合, 然而, 如果不限制在 type 上
 
-  let $A,B$ is math object. 定义 map space $A -> B$, map $f$ as math object 的规则是
-  $
-    f ∈ "Map"(A,B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
-  $
-  其中, 两个 symbol $f,a$ 组合成新的 symbol $(f,a)$
+  - 如果不对 $#A$ 的集合里面的元素做任何限制, 那么由于虚空论证, 空集族的交集的结果是全集 $Set$, 而全集 $Set$ 不是集合, 这破坏了集合论构造规则
 
-  or 
-  $
-    f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
-    &:= forall a ∈ A, f(a) ∈ B    
-  $
-  denoted by $f : A -> B$ 
-  
-  denoted by $f ∈ B^A$. in finite case, number of elements $|B^A| = |B|^(|A|)$
+  - 如果对 $#A$ 的集合里面的元素限制为一个已有集合 $B$ 或者 $⋃ #A$, 则空集族的交集产生的局部全集是 $B$ 或者 $⋃ #A$. 然而, 在主流集合论中, $#A$ 的集合里面的元素可能属于一个更小的或者更大的集合, 这使得全集也会改变, 从而 $⋂ #A$ 是不稳定的, 没有明确的结果, 这还是破坏了集合论构造规则
 
-  $f,f(a),f(a) in B$ 的使用虽然看起来有问题, 但它们仍然在 symbol & symbol 串方面是可以定义的
-  
-  如果谈到 map $f$ 具体代表什么, 由于非具体构造性, 没有一般编程语言那样的具体的 `return`, 或者 `return` 的是新定义的 symbol, math object, 语言展开
-
-  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$
+  然而每个集合确实有唯一的 type, 从而这些问题将会得到解决
 ]
-#tag("subset") 
+根据指标映射 $A in (I -> Set T)$ 可以定义无限版本的 product, sum
+
+- #tag("product-index") 
 #indent[
-  #image("../image/subset.jpeg", width: 30%)
-  $ S ∈ Subset(A) := S ⊂ A $
+  $x in product_(i in I) A(i) := And_(i in I) Or_(a in A(i)) (x, i) = a$
 
-  denoted by $2^A$. 根据 #link(<proposition-function>)[] 等价于 map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
-
-  没有元素的集合是任何一个集合的子集, 将这个规则加进子集的定义中. define $∅ ⊂ A$ be true proposition. 
-]
-map space 和 subset 引入了高级别的无限
-
-一件初看反直觉的事情是, 我们_似乎_知道所有 $S ⊂ ℕ$ 或所有 $f : ℕ -> ℕ$, 却无法数出来 #link(<cardinal-increase>)[] #link(<uncountable>)[]. 但是, "知道所有 $S ⊂ ℕ$" 究竟是什么意思? 事实上, 试着考虑 "一般方式之找一个 $ℕ$ 的无限子集" 这一个问题, 就会发现这不是简单的
-
-类似地, 虽然可数已经可以定义一些实数 e.g. $sum 1/n! = e$, 但如果不借助 subset or map, 可数地构造无法得到全部 $ℝ$
-
-#tag("proposition-function")
-#indent[
-  let $a ∈ A$, $p(a) : A -> {0,1}$ is already constructed
-
-  ${a ∈ A : p(a)}$ is object
-
-  $ x ∈ {a ∈ A : p(a)} := (x ∈ A) and p(x) $
-]
-#tag("product") 
-#indent[
-  #image("../image/product.jpeg", width: 30%)
-
-  let $#A$ be set of sets, let $A in "Map"(I, #A)$
-  $
-    x ∈ product_(i in I) A(i) &:= And_(i in I) Or_(a in A(i)) (x, i) = a
-  $
-  or
-  $
-    x ∈ product_(i in I) A(i) &:= And_(i in I) x(i) in A(i) \
-    &:= forall i in I, x(i) in A(i) 
-  $  
-  is non-emtpy unless $exists A ∈ #A, A = ∅$ (related to #tag("axiom-of-choice"))
-
-  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A(i)) = product_1^n |A(i)|$
-]
-#tag("pair") *alias* #tag("constant-dependent-sum") 
-#indent[
-  $
-    f ∈ "Pair"(A,B) &:= Or_(a ∈ A) Or_(b in B) f = (a,b)
-  $
-
-  consant-dependent-product $B^A = product_(a in A) B(a)$. consant-dependent-sum is $A × B = sum_(a in A) B(a)$
-]
-#tag("sum")
-#indent[
-  #image("../image/sum.jpeg", width: 30%)
-
-  let $#A$ be set of sets, let $A in "Map"(I, #A)$
-  $
-    x ∈ sum_(i in I) A(i) &:= Or_(i in I) Or_(a in A(i)) x = (i, a) 
-  $
-  is non-emtpy unless $forall A ∈ #A, A = ∅$
-
-  in finite case, number of element $abs(sum_1^n A(i)) = sum_1^n |A(i)|$ 
-]
-#tag("coordinate-component") 
-- product component
+  product component
   $ 
     dmat( delim: #none ,
     product_(i in I) A(i), ⟶, A(i) ;
@@ -385,15 +368,19 @@ map space 和 subset 引入了高级别的无限
     x, ⟿, x(i) 
     )     
   $
-- sum component
+]
+- #tag("sum-index") 
+#indent[
+  $x in sum_(i in I) A(i) := Or_(i in I) Or_(a in A(i)) x = (i, a)$
+
+  sum component
   $ 
     dmat( delim: #none ,
     A(i), ⟶, sum_(i in I) A(i) ;
     a, ⟿, (i, a) ,=, x
     ) 
   $
-define $ A = B := (x ∈ A) <==> (x ∈ B) $
-
+]
 $=$ 的其它用法
   + 内存里的 identifier 的别名
   + 内存里的函数返回值. so $1 + 1 = 2$ 应该理解为 add function 的返回值是 $2$
@@ -418,39 +405,41 @@ $=$ 的其它用法
 ]
 #tag("hierarchy-order-of-set")
 #indent[
-  以上构造的 set 称为 zero (hierarchy) order set
+  以上构造的 set 称为 zero (hierarchy) order set, 或者 zero order type
 
-  $A ∈ Set$ or $A ∈ Set 0$
+  $A ∈ Type$ or $A ∈ Type 0$
 
-  then let $Set 0$ be math object, in first order set
+  then let $Type 0$ be math object, in first order Type
 
-  $Set 0 ∈ Set 1$
+  $Type 0 ∈ Type 1$
 
-  再次使用 object construction rules, 得到的东西也定义为属于 $Set 1$ 
+  再次使用 object construction rules, 得到的东西也定义为属于 $Type 1$ 
 
   无论如何我们总是可以在编译器中构造这种带有类型和 bool 和各种规则的语言
   
-  let $Set 1$ be math object, $Set 1 ∈ Set 2$. 诸如此类 ...
+  let $Type 1$ be math object, $Type 1 ∈ Type 2$. 诸如此类 ...
 
   *Example* 
-  - $Set × Set ∈ Set 1$
-  - $(Set -> Set) ∈ Set 1$
-  - $"Group" ∈ Set 1$ \
+  - $Type × Type ∈ Type 1$
+  - $(Type -> Type) ∈ Type 1$
+  - $"Group" ∈ Type 1$ \
     $ 
     & (G,m) ∈ "Group" := { \
-    & quad G ∈ Set \
-    & quad m ∈ Set \
+    & quad G ∈ Type \
+    & quad m ∈ Type \
     & quad "property-group-multiplication"(G,m) \
     & quad ("e.g. " m ∈ (G^2 -> G))  \  
     & } 
     $
     可以被分成多句, 使得可以方便的加入/移除 property, 来得到不同的 struct
 
-  $Set 0, Set 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Set ℕ$ 吗? 然后对 $Set ℕ$, 继续使用 object construct rule ... 虽然确实可以抽象地定义 $Set ℕ$ 以及后续的东西, 但是, 具体自然数 $n$ 的 $Set n$ 是需要的, 且也需要无限的集合阶层, 递归下降意义下的潜无限的输入 (可能 $Set 0 ∈ Set 1$ 的定义需要作为输入的一部分), 但递归下降的语言规则是有限的
+    (实际上 $"Group" in Type 1$ 不是显式必须的, 就像主流集合论不显式必须 $Set 0$ 那样)
 
-  通常我们不需要显式 hierarchy of set, 例如, 我们只需要构造 $"Group"$ 这样的具体类型, 但不需要提到类型 $"Group"$ 作为元素属于类型 $Set 1$
+  $Type 0, Type 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Type ℕ$ 吗? 然后对 $Type ℕ$, 继续使用 object construct rule ... 虽然确实可以抽象地定义 $Type ℕ$ 以及后续的东西, 但是, 具体自然数 $n$ 的 $Type n$ 是需要的, 且也需要无限的类型阶层, 递归下降意义下的潜无限的输入 (可能 $Type 0 ∈ Type 1$ 的定义需要作为输入的一部分), 但递归下降的语言规则是有限的
 
-  $Set 0$ 语言是潜无穷的, hierarchy-order-of-set 语言也是如此. 当然绝大多数编程语言都是潜无穷的
+  通常我们不需要显式 hierarchy of Type, 例如, 我们只需要构造 $"Group"$ 这样的具体类型, 但不需要提到类型 $"Group"$ 作为元素属于类型 $Type 1$
+
+  $Type 0$ 语言是潜无穷的, hierarchy-order-of-Type 语言也是如此. 当然绝大多数编程语言都是潜无穷的
 
   这种 hierarchy 之外是否可能存在很多不是线序 or 全序的东西?
 ]
@@ -484,19 +473,20 @@ type 之间的同态的使用可以对证明带来方便. 有时可以让计算�
 
     对于有限集, $x ∉ x$, 或者无法判断 $x in x$, e.g. ${1} ∉ {1}$, 因为 ${1} ≠ 1 in {1}$, 或者没有定义 $x in 1$ 这个命题是 true proposition
 
-    如果考虑集合 hierarchy, 对于 $A := {x ∈ Set 0 : not (x ∈ x)}$ 很可能 $A in Set 1 ∖ Set 0$ 从而 $A ∉ A$ 因为第一个条件 $A in Set 0$ 不满足
+    如果考虑 Type hierarchy, 对于 $A := {x ∈ Set 0 : not (x ∈ x)}$ 很可能 $A in Type 1 ∖ Type 0$ 从而 $A ∉ A$ 因为第一个条件 $A in Type 0$ 不满足
+
+    似乎当我们想要用 "universal-set" 或者 "universal-type" 时, 我们想要用的是当前类型规则的更高一阶的类型规则
   ]
   *Example* #tag("self-referential-paradox") 自指悖论. "这个句子是错的"
   #indent[
     ```rs
     this_sentence_is_false : bool = false;
-    loop:
+    loop {
       match (this_sentence_is_false) {
         false => this_sentence_is_false = true,
         true => this_sentence_is_false = false,
       } 
-      goto loop
-    };
+    }
     ```
     或者用分层绕过自指悖论 `(this_sentence = false) = true`. 认为它们是不同的句子和判断, 认为它并不能自指
   ]

@@ -90,53 +90,6 @@ We will assume some initial propositions that do not need to be proven. And assu
   ]
   - inference $p => q$, equivalent $p <=> q$ is formula
 ]
-The following discusses math-object-construct-rule *alias* set-theory
-
-#tag("natural-number") $ℕ$ 
-#indent[
-  natrual number $0,1,2,...$ and natrual number set $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
-
-  But computers cannot handle infinity. In order to allow computers to use limited characters and memory to represent natural numbers, let $n,ℕ$ and $+1$ functions be finite symbols in the memory address, and define the following as true proposition
-  - $0 ∈ ℕ$
-  - $n ∈ ℕ ==> n + 1 ∈ ℕ$
-  Equivalent to telling the computer how to continuously $+1$ with instruction streams? Also related to induction
-
-  The cost of finite characters is potentially infinite time, always relying on counting or periodic circuits.
-]
-#tag("empty") $∅$ 
-#indent[
-  empty $∅$ is object. let $a$ be a object, $a ∈ ∅$ is false proposition
-
-  The definition of $∅$ is convenient for intersections $∩$ e.g. the intersection is empty, and the number of elements of $Subset(A)$ of a finite set $A$, $2^n$ is more convenient than $2^n - 1$
-]
-Define language expansion
-  - $a != b := not (a = b)$ 
-  - $a ∉ A := not (a ∈ A)$
-
-  Because “define language expansion” is very long, it is usually abbreviated to "*definition*" "*def*"
-
-  In fact, the symbol $=$ is also commonly used to represent defining language expansion or specifying language transformation. Specifically, the $=$ of natural numbers can be directly defined as comparing the value of memory with computer circuits. 
-
-#tag("declare-element-of-set") 
-#indent[
-  If $A$ is non empty $A != ∅$ (this information comes from the definition of $A$), we can define symbol $a$ and construct true proposition (let) $a ∈ A$ 
-
-  A finite number of declare statements can be constructed
-]
-#tag("enum") enumerate 
-#indent[
-  $a_0 ,…, a_n$ is object then ${a_0 ,…, a_n}$ is a set
-  
-  Represented as a sequence of numbers in memory
-  
-  The entire set can be called in this way: record the address of the first element + the length of the array as the number of circuit cycles, and read one element per circuit cycle
-  
-  formulas $a_0 ,…, a_n ∈ {a_0 ,…, a_n}$ are true propositions
-
-  Specifically, a single-element set $a ∈ {a}$
-]
-define $A ⊂ B := forall a ∈ A, a ∈ B$
-
 #tag("equivalent") $<==>$ 
 #indent[
   Some equivalent uses. For finite computer data, the following calculation results can be exhaustively proven to be equal
@@ -180,8 +133,6 @@ follow #link(<bool-algebra>)[various rules of bool in the finite case], define l
     <==> Or_(b ∈ B) And_(a ∈ A) p(a,b) 
   $
 ]
-Note that I myself also feel that I cannot completely clearly handle the concepts of derivation and proof below
-
 Natural language example of derivation
 #indent[
   If it rains, I won't go out \
@@ -205,7 +156,11 @@ match (rain) {
 
 #tag("proof") The proof is that compiling passes $p => q$ is true proposition
 
-Another kind of equivalence $p <=> q := (p => q) and (q => p)$
+Although I am confused by this type of vacuous argument like $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition, there is no reason to abandon defining the intersection of local empty set families for a certain set $A$. I can only accept it from a certain perspective, for example, treating it as true without a constructive proof, thus automatically skipping it... 
+
+If this type of vacuous implication is accepted, then $(p => q) = (not p) or q$
+
+$p <=> q := (p => q) and (q => p)$ and find that $p <=> q$ is $p = q$
 
 #tag("reverse-inference") Reverse inference. If the result is that I went out, then it is definitely not the result of rain. If the result of the conditional branch is `out = true`, this is not the result of `rain = true`. Since the bool value of an ideal binary computer must be one of two, it can only be the result of `rain = false`. This can be written as a conditional branch
 ```rs
@@ -246,13 +201,114 @@ Where does the target proposition come from? It may be related to a model of the
 
 The proof requires expanding a large number of sentences, although computers are very fast at processing strings. In any case, performance optimization? Use only when needed (lazy load)? Parallel (parallel) when two propositions are not interdependent? Assume already proven results (incremental compilation)? 
 
-A proposition has many proofs with different runtime data flow, which can be considered to belong to the same quotient proof of this proposition
+A proposition has many proofs with different runtime data flow
 
-The following object construction rules, except for the intersection, generally give non-empty sets
+The following discusses math-object-construct-rule *alias* set-theory
 
-#let A = c-bf("A", rgb("#0056e1"))
+#tag("natural-number") $ℕ$ 
+#indent[
+  natural number $0,1,2,...$ and natural number set $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
 
-let $#A$ be set of sets
+  However, computers cannot handle infinity. In order for computers to represent the natural number set using a finite number of characters and memory, $n,ℕ$ and the $+1$ function are treated as finite symbols in memory addresses, and the following is defined as a true proposition:
+  - $0 ∈ ℕ$
+  - $n ∈ ℕ ==> n + 1 ∈ ℕ$
+  Is it equivalent to telling the computer how to continuously $+1$ with an instruction stream? Also related to induction.
+
+  The cost of finite characters is potentially infinite time, always relying on counting or periodic circuits.
+]
+Definition language expansion
+  - $a != b := not (a = b)$ 
+  - $a ∉ A := not (a ∈ A)$
+
+  Since "definition language expansion" is long, it is usually abbreviated to "*definition*" "*def*"
+
+  In fact, the symbol $=$ is often used to represent definition language expansion or specified language transformation. The $=$ for specific natural numbers can be directly defined as comparing memory values using computer circuits. 
+
+#tag("declare-element-of-set") 
+#indent[
+  If $A$ is non empty $A != ∅$ (this information comes from the definition of $A$), we can define symbol $a$ and construct true proposition (let) $a ∈ A$ 
+
+  Finite declare statements can be constructed.
+]
+#tag("product") 
+#indent[
+  #image("../image/product.jpeg", width: 30%)
+
+  let $A_0 ,…, A_n$ be set, let $A_0 × ⋯ × A_n$ is set
+  $
+    x ∈ A_0 × ⋯ × A_n &:= And_(i in {0 ,…, n}) Or_(a in A_i) (x, i) = a
+  $
+  The data structure meaning of the expression $(x, i)$ in memory should be clear.
+
+  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A(i)) = product_1^n |A(i)|$
+]
+#tag("sum") 
+#indent[
+  #image("../image/sum.jpeg", width: 30%)
+
+  let $A_0 ,…, A_n$ be set then $A_0 + ⋯ + A_n$ is a set
+  $
+    x ∈ A_0 + ⋯ + A_n &:= Or_(i in {0 ,…, n}) Or_(a in A_i) x = (i, a) 
+  $
+  Also known as tagged union
+
+  in finite case, number of element $abs(sum_1^n A(i)) = sum_1^n |A(i)|$ 
+]
+#tag("function") 
+#indent[
+  #image("../image/map.jpeg", width: 30%)
+
+  let $A,B$ be set. The rule for defining the function space $A -> B$ and mapping $f$ as a math object is
+  $
+    f ∈ (A -> B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
+  $
+  or 
+  $
+    f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
+    &:= forall a ∈ A, f(a) ∈ B    
+  $
+  denoted by $f : A -> B$ 
+  
+  denoted by $f ∈ B^A$. in finite case, number of elements $|B^A| = |B|^(|A|)$
+
+  In a prover, the definition and behavior of a function are: input type + output type + if the same input is checked, the output is specified to be the same.
+
+  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. Changing $A -> (B -> C)$ to $(A × B) -> C$ is called normalization of function.
+]
+#tag("set-with-element-in-a-type") For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$, define $A subset B := And_(x in T) (x in A => x in B)$
+
+#tag("top-level-set") *alias* #tag("type") Sets constructed by the above rules are called "top-level-set" or "type". Sets constructed by the following rules are general sets, with a clear type. For a prover, the language rules of both can be multiplicatively decomposed, also known as "implementing set theory with type theory"
+
+function space introduces higher-level infinity
+
+One thing that is counter-intuitive at first glance is that we _seem_ to know all $S in Set ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. But what exactly does "knowing all $S in Set ℕ$" mean? In fact, if you try to consider the problem of "finding an infinite subset of $ℕ$ in a general way", you will find that it is not simple.
+
+Similarly, although countability can already define some real numbers, e.g. $sum 1/n! = e$, without the aid of subset or map, countable construction cannot obtain all $ℝ$
+
+The following assumes that sets belong to a certain type
+
+Expand according to type definition
+
+  - $And_(x in A) P(x) := And_(x in T) (x in A => P(x))$
+  - $Or_(x in A) P(x) := Or_(x in T) (x in S) and P(x)$
+
+#tag("subset") 
+#indent[
+  #image("../image/subset.jpeg", width: 30%)
+  
+  $ Subset(A) in Set T \ S in Subset(A) := S subset A $
+
+  Since $x in ∅_T$ is false, according to vacuous implication, $∅_T in Subset(A)$
+
+  denoted by $2^A$. in finite case, number of elements $|2^A| = 2^(|A|)$
+
+  let $S, S' in Subset(A)$
+  
+  $S = S' <=> (S subset S') and (S' subset S)$
+]
+#let A = c-bf("A",rgb("#0056e1"))
+
+let $#A in Set(Set(T))$
 
 #tag("union")  
 #indent[
@@ -265,14 +321,10 @@ let $#A$ be set of sets
     x ∈ ⋃ #A &:= Or_(A ∈ #A) x ∈ A \ 
     &:= exists A ∈ #A, x ∈ A
   $
-  is non-emtpy unless $forall A ∈ #A, A = ∅$
+  is non-emtpy unless $forall A ∈ #A, A = ∅_T$ or $#A = ∅(Set(T))$
 
   $A ∪ A = A$
-
-  We do not define the union for $#A = ∅$. Same below. The reason is that let $A in #A = ∅$ is always a false proposition, which makes many things unusable
 ]
-enum is special case of sum/union?
-#pagebreak()
 #tag("intersection") 
 #indent[
   #image("../image/intersection.jpeg", width: 30%)
@@ -282,96 +334,27 @@ enum is special case of sum/union?
     x ∈ ⋂ #A &:= And_(A ∈ #A) x ∈ A \
     &:= forall A ∈ #A, x ∈ A
   $
+  According to vacuous implication $#A = ∅(Set(T)) => ⋂ #A = T$
 
   $A ∩ A = A$
 ]
-#tag("map") *alias* #tag("function") #tag("constant-dependent-product")
+#tag("why-type-theory")
 #indent[
-  #image("../image/map.jpeg", width: 30%)
+  Why limit union and intersection to types? Because, since there is no reason not to define the intersection of an empty family of sets and consider it also a set, however, if not limited to types
 
-  let $A,B$ is math object. The rule for defining map space $A -> B$, map $f$ as math object is
-  $
-    f ∈ "Map"(A,B) &:= And_(a ∈ A) Or_(b in B) (f,a) = b
-  $
-  where two symbol $f,a$ combine to a new symbol $(f,a)$
+  - If no restrictions are placed on the elements in the set $#A$, then due to the vacuous argument, the intersection of an empty family of sets results in the universal set $Set$, and the universal set $Set$ is not a set, which violates the construction rules of set theory.
 
-  or 
-  $
-    f ∈ (A -> B) &:= And_(a ∈ A) f(a) ∈ B \
-    &:= forall a ∈ A, f(a) ∈ B    
-  $
-  denoted by $f : A -> B$ 
-  
-  denoted by $f ∈ B^A$. in finite case, number of elements $|B^A| = |B|^(|A|)$
+  - If the elements in the set $#A$ are restricted to an existing set $B$ or $⋃ #A$, then the intersection of an empty family of sets produces a local universal set that is $B$ or $⋃ #A$. However, in mainstream set theory, the elements in the set $#A$ may belong to a smaller or larger set, which causes the universal set to also change, making $⋂ #A$ unstable and without a clear result. This still violates the construction rules of set theory.
 
-  Although the usage of $f,f(a),f(a) in B$ seems problematic, they can still be defined in terms of symbol & symbol strings
-  
-  If we talk about what map $f$ specifically represents, due to non-concrete constructibility, there is no specific `return` like in general programming languages, or the `return` is a newly defined symbol, math object, language expansion.
-
-  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$
+  However, every set does have a unique type, thus these problems will be solved.
 ]
-#tag("subset") 
+According to the index mapping $A in (I -> Set T)$, infinite versions of product and sum can be defined.
+
+- #tag("product-index") 
 #indent[
-  #image("../image/subset.jpeg", width: 30%)
-  $ S ∈ Subset(A) := S ⊂ A $
+  $x in product_(i in I) A(i) := And_(i in I) Or_(a in A(i)) (x, i) = a$
 
-  denoted by $2^A$. According to #link(<proposition-function>)[] equivalent to map space $A -> {0,1}$. in finite case, number of elements $|2^A| = 2^(|A|)$
-
-  Set without any element is subset of every set, add this rule to the definition of subset. define $∅ ⊂ A$ be true proposition. 
-]
-map space and subset introduce high-level infinity
-
-One seemingly counterintuitive thing at first glance is that we _seemingly_ know all $S ⊂ ℕ$ or all $f : ℕ -> ℕ$, but cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. However, what exactly does "know all $S ⊂ ℕ$" mean? In fact, trying to consider the question of "finding an subset of $ℕ$ with infinite elements in a general way" reveals that this is not simple.
-
-Similarly, although countable can already define some real numbers e.g. $sum 1/n! = e$, if not with the help of subset or map, countable construction cannot obtain all $ℝ$
-
-#tag("proposition-function")
-#indent[
-  let $a ∈ A$, $p(a) : A -> {0,1}$ is already constructed
-
-  ${a ∈ A : p(a)}$ is object
-
-  $ x ∈ {a ∈ A : p(a)} := (x ∈ A) and p(x) $
-]
-#tag("product") 
-#indent[
-  #image("../image/product.jpeg", width: 30%)
-
-  let $#A$ be set of sets, let $A in "Map"(I, #A)$
-  $
-    x ∈ product_(i in I) A(i) &:= And_(i in I) Or_(a in A(i)) (x, i) = a
-  $
-  or
-  $
-    x ∈ product_(i in I) A(i) &:= And_(i in I) x(i) in A(i) \
-    &:= forall i in I, x(i) in A(i) 
-  $  
-  is non-emtpy unless $exists A ∈ #A, A = ∅$ (related to #tag("axiom-of-choice"))
-
-  *Abbreviation* $A × A = A^2$. in finite case, number of elements $abs(product_1^n A(i)) = product_1^n |A(i)|$
-]
-#tag("pair") *alias* #tag("constant-dependent-sum") 
-#indent[
-  $
-    f ∈ "Pair"(A,B) &:= Or_(a ∈ A) Or_(b in B) f = (a,b)
-  $
-
-  consant-dependent-product $B^A = product_(a in A) B(a)$. consant-dependent-sum is $A × B = sum_(a in A) B(a)$
-]
-#tag("sum")
-#indent[
-  #image("../image/sum.jpeg", width: 30%)
-
-  let $#A$ be set of sets, let $A in "Map"(I, #A)$
-  $
-    x ∈ sum_(i in I) A(i) &:= Or_(i in I) Or_(a in A(i)) x = (i, a) 
-  $
-  is non-emtpy unless $forall A ∈ #A, A = ∅$
-
-  in finite case, number of element $abs(sum_1^n A(i)) = sum_1^n |A(i)|$ 
-]
-#tag("coordinate-component") 
-- product component
+  product component
   $ 
     dmat( delim: #none ,
     product_(i in I) A(i), ⟶, A(i) ;
@@ -385,15 +368,19 @@ Similarly, although countable can already define some real numbers e.g. $sum 1/n
     x, ⟿, x(i) 
     )     
   $
-- sum component
+]
+- #tag("sum-index") 
+#indent[
+  $x in sum_(i in I) A(i) := Or_(i in I) Or_(a in A(i)) x = (i, a)$
+
+  sum component
   $ 
     dmat( delim: #none ,
     A(i), ⟶, sum_(i in I) A(i) ;
     a, ⟿, (i, a) ,=, x
     ) 
   $
-define $ A = B := (x ∈ A) <==> (x ∈ B) $
-
+]
 Other uses of $=$
   + Alias for identifier in memory
   + Function return value in memory. So $1 + 1 = 2$ should be understood as the return value of the add function is $2$.
@@ -418,39 +405,41 @@ Other uses of $=$
 ]
 #tag("hierarchy-order-of-set")
 #indent[
-  The set constructed above is called a zero (hierarchy) order set
+  The set constructed above is called a zero (hierarchy) order set, or zero order type
 
-  $A ∈ Set$ or $A ∈ Set 0$
+  $A ∈ Type$ or $A ∈ Type 0$
 
-  then let $Set 0$ be math object, in first order set
+  then let $Type 0$ be math object, in first order Type
 
-  $Set 0 ∈ Set 1$
+  $Type 0 ∈ Type 1$
 
-  Using object construction rules again, what we get is also defined as belonging to $Set 1$ 
+  Using object construction rules again, what we get is also defined as belonging to $Type 1$ 
 
   Anyway, we can always construct such a language with types and bool and various rules in the compiler
   
-  let $Set 1$ be math object, $Set 1 ∈ Set 2$. And so on ...
+  let $Type 1$ be math object, $Type 1 ∈ Type 2$. And so on ...
 
   *Example* 
-  - $Set × Set ∈ Set 1$
-  - $(Set -> Set) ∈ Set 1$
-  - $"Group" ∈ Set 1$ \
+  - $Type × Type ∈ Type 1$
+  - $(Type -> Type) ∈ Type 1$
+  - $"Group" ∈ Type 1$ \
     $ 
     & (G,m) ∈ "Group" := { \
-    & quad G ∈ Set \
-    & quad m ∈ Set \
+    & quad G ∈ Type \
+    & quad m ∈ Type \
     & quad "property-group-multiplication"(G,m) \
     & quad ("e.g. " m ∈ (G^2 -> G))  \  
     & } 
     $
     Can be divided into multiple sentences, so that it is convenient to add/remove properties to get different structs
 
-  $Set 0, Set 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Set ℕ$ again? Then for $Set ℕ$, continue to use the object construct rule ... Although it is indeed possible to abstractly define $Set ℕ$ and subsequent things, $Set n$ of specific natural numbers $n$ is needed, and also requires an infinite set hierarchy, a potentially infinite input, in the sense of recursive descent (perhaps the definition of $Set 0 ∈ Set 1$ should be part of the input), but the language rules of recursive descent are finite
+    (Actually $"Group" in Type 1$ is not explicitly necessary, just as the mainstream set theory does not explicitly require $Set 0$)
 
-  $Set 0$ language is potentially infinite, and so is hierarchy-order-of-set language. Of course most of programming language is potentially infinite
+  $Type 0, Type 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Type ℕ$ again? Then for $Type ℕ$, continue to use the object construct rule ... Although it is indeed possible to abstractly define $Type ℕ$ and subsequent things, $Type n$ of specific natural numbers $n$ is needed, and also requires an infinite Type hierarchy, a potentially infinite input, in the sense of recursive descent (perhaps the definition of $Type 0 ∈ Type 1$ should be part of the input), but the language rules of recursive descent are finite
 
-  Normally we do not need explicit hierarchy of set. For example, we just need to construct the concrete type like $"Group"$, but not need to mention that the type $"Group"$ is a element in type $Set 1$ 
+  $Type 0$ language is potentially infinite, and so is hierarchy-order-of-Type language. Of course most of programming language is potentially infinite
+
+  Normally we do not need explicit hierarchy of Type. For example, we just need to construct the concrete type like $"Group"$, but not need to mention that the type $"Group"$ is a element in type $Type 1$ 
 
   Is it possible that there exists many non linear order or total order things outside this hierarchy?
 ]
@@ -484,19 +473,20 @@ The use of homomorphisms between types can facilitate proofs. Sometimes, it can 
 
     For finite sets, $x ∉ x$, or it is impossible to judge $x in x$, e.g. ${1} ∉ {1}$, because ${1} ≠ 1 in {1}$, or the proposition $x in 1$ is not defined as a true proposition.
 
-    If we consider the set hierarchy, for $A := {x ∈ Set 0 : not (x ∈ x)}$ it is very likely that $A in Set 1 ∖ Set 0$ and thus $A ∉ A$ because the first condition $A in Set 0$ does not satisfy
+    If we consider the Type hierarchy, for $A := {x ∈ Type 0 : not (x ∈ x)}$ it is very likely that $A in Type 1 ∖ Type 0$ and thus $A ∉ A$ because the first condition $A in Type 0$ does not satisfy
+
+    It seems that when we want to use "universal-set" or "universal-type", what we want to use is a higher-order type rule of the current type rule.
   ]
   *Example* #tag("self-referential-paradox") "This sentence is false"
   #indent[
     ```rs
     this_sentence_is_false : bool = false;
-    loop:
+    loop {
       match (this_sentence_is_false) {
         false => this_sentence_is_false = true,
         true => this_sentence_is_false = false,
-      }
-      goto loop
-    };
+      } 
+    }
     ```
     Or use layering to bypass the self-referential paradox `(this_sentence = false) = true`. It is considered that they are different sentences and judgments, and that it cannot refer to itself.
   ]

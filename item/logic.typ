@@ -272,7 +272,7 @@
 ]
 #tag("compile") #tag("parse")
 #indent[
-  用 parser or compiler (编译器) 验证 token 流语言正确性, 本质上是遍历所有语言规则 i.e. match + 递归, 用编程语言或电路语言. 或使用 (生成的) 有限状态机
+  用 parser or compiler (编译器) 验证 token 流语言正确性, 本质上是遍历所有语言规则 i.e. enum + match + 递归 + 嵌套的 enum binding 数据, 用编程语言或电路语言. 或使用 (生成的) 有限状态机
     
   parser 的运行需要生成内存中大型复杂的数据结构 (一些形象的描述: 表格, 结点, 树)
 
