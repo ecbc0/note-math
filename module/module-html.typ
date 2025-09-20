@@ -6,7 +6,7 @@
 #import "/book.typ": book-page
 
 #let module(body) = {
-  show: style 
+  show: style-html
   // show: color-symbol 
   show: link-setting // until support link to label in workspace
   show: book-page

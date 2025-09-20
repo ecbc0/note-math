@@ -141,7 +141,7 @@ Because of the existence of $< 0$, multiplication does not preserve order. But t
 ]
 $ℤ,ℚ,ℝ$'s $+,⋅$ all have associativity, commutativity, and distributivity
 
-$ℝ$ completeness #tag("completeness-real")
+#tag("completeness-real") $ℝ$ completeness
 
 #tag("exact-bound") Least-upper-bound property
 #indent[
@@ -168,7 +168,7 @@ _Proof_
 #indent[
   Supplement the net $#B$ with all finite intersections
 
-  Take a #link(<maximal-linear-order>)[maximal linearly ordered chain] $#C$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
+  Take a $#B$ #link(<maximal-linear-order>)[maximal linearly ordered chain] $#C subset #B$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
 
   By the linear order maximality of $#C$, intuitively, the closed interval $⋂ #C$ will be smaller than all closed intervals of $#B$, so $⋂ #C subset ⋂ #B$
 
@@ -178,16 +178,20 @@ _Proof_
 
   Proof by contradiction. Assume $⋂ #C _B subset.neq ⋂ #C$. Then the small/large endpoint of $⋂ #C _B$ is larger/smaller than the small/large endpoint of $⋂ #C$
 
-  The $subset$ linear ordered chain satisfies $⋂_(A supset A_0) A = A_0$
+  use: The $subset$ linear ordered chain satisfies $⋂_(A supset A_0) A = A_0$
 
-  - If the closed interval $⋂ #C _B ∉ #B$, then use the $ℝ$ exact bound principle for the endpoints
+  - If the closed interval $⋂ #C _B ∉ #B$, then according to $⋂ #C _B subset.neq ⋂ #C$, use the $ℝ$ exact bound principle for the endpoints of closed interval, $exists B ∩ C_0 in #C _B$
   #indent[
     $
-      exists B ∩ C_0 in #C _B \
-      B ∩ C_0 in #B \
-      B ∩ C_0 = ⋂_(B ∩ C supset B ∩ C_0) B ∩ C subset.neq ⋂ #C
+      ⋂ #C _B &subset B ∩ C_0 \ 
+      &= ⋂_(B ∩ C supset B ∩ C_0) B ∩ C \ 
+      &subset.neq ⋂ #C
     $
-    There exists $B ∩ C_0 in #B$ that belongs to $⋂ #C$, which contradicts that $⋂ #C$ is a $⊂$ maximal linear ordered chain
+    $
+      C_0 in #C subset #B ==>
+      B ∩ C_0 in #B \
+    $
+    There exists $B ∩ C_0 in #B$ and $B ∩ C_0 subset ⋂ #C$, which contradicts that $⋂ #C$ is a $⊂$ maximal linear ordered chain of $#B$
   ]
   - If the closed interval $⋂ #C _B in #B$, the same contradiction applies
 ]

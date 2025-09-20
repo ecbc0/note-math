@@ -122,7 +122,7 @@ _Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ 连续
 #indent[
   $𝕊^1$ 连续同构于 $ℝ/ℤ$ (#link(<quotient-topology>)[]) 连续同构于 $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ 塌缩端点 ${-1,1} = 𝕊^0$ (quotient-topology)
 
-  $closed(𝔹)^1 = [-1,1]$ 有界闭区间 compact ==> quotient $𝕊^1 = closed(𝔹)^n/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient 保持 compact]
+  $closed(𝔹)^1 = [-1,1]$ 有界闭区间 compact ==> quotient $𝕊^1 = closed(𝔹)^1/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient 保持 compact]
 ]
 #tag("closed-ball-sphere-is-compact") 
 
@@ -170,6 +170,8 @@ _Proof_
 - #tag("unbounded") 无界 := $|A| = ∞$ 
 
 $|A|$ is $SO(n) ⋊ ℝ^n$ invariant
+
+考虑到无穷远 $∞$ 的平移不变性, 使用球极投影技术
 
 $ℝ ⊔ {∞} ≃ 𝕊^n$ by 球极投影
 

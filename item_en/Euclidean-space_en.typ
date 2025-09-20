@@ -122,7 +122,7 @@ _Proof_ $e^(#i θ) : ℝ -> 𝕊^1$ is continuous
 #indent[
   $𝕊^1$ is continuously isomorphic to $ℝ/ℤ$ (#link(<quotient-topology>)[]) is continuously isomorphic to $closed(𝔹)^1/𝕊^0$ i.e. $[-1,1] = closed(𝔹)^1$ collapsing endpoints ${-1,1} = 𝕊^0$ (quotient-topology)
 
-  $closed(𝔹)^1 = [-1,1]$ bounded closed interval compact ==> quotient $𝕊^1 = closed(𝔹)^n/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient preserves compact]
+  $closed(𝔹)^1 = [-1,1]$ bounded closed interval compact ==> quotient $𝕊^1 = closed(𝔹)^1/𝕊^0$ compact. by #link(<quotient-topology-preserve-compact>)[quotient preserves compact]
 ]
 #tag("closed-ball-sphere-is-compact") 
 
@@ -170,6 +170,8 @@ Similarly $ℂℙ^n$ (and $ℍℙ,𝕆ℙ$)
 - #tag("unbounded") unbounded := $|A| = ∞$ 
 
 $|A|$ is $SO(n) ⋊ ℝ^n$ invariant
+
+Considering the translation invariance of infinity $∞$, use stereographic projection technique
 
 $ℝ ⊔ {∞} ≃ 𝕊^n$ by stereographic projection
 

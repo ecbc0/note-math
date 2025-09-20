@@ -30,7 +30,7 @@
 
 #let image(path, width: auto) = html.elem("img", attrs: (src: str(path), width: to-string([#width])))
 
-#let style(body) = {
+#let style-html(body) = {
   html.elem("style")[
     // prefer external css ...
     #```CSS
