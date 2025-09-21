@@ -49,9 +49,9 @@
         "editor.fontSize": 14.5,
     },
     "markdown.preview.fontSize": 14.5,
+    "breadcrumbs.enabled": false,
     "editor.minimap.renderCharacters": false,
     "editor.renderWhitespace": "none",
-    "editor.stickyScroll.enabled": true,
     "editor.scrollbar.vertical": "visible",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "editor.minimap.showSlider": "always",
@@ -75,8 +75,8 @@
         "commandCenter.activeBackground": "#00000000",
         "commandCenter.background": "#000000",
         "commandCenter.border": "#00000000",
-        "debugToolBar.background":"#000000",
-        "debugToolBar.border":"#2f00ffd3",
+        "debugToolBar.background": "#000000",
+        "debugToolBar.border": "#2f00ffd3",
         "diffEditor.insertedLineBackground": "#00000000",
         "diffEditor.insertedTextBackground": "#123c0052",
         "diffEditor.removedLineBackground": "#00000000",
@@ -166,7 +166,7 @@
         "minimapSlider.background": "#6a6a6a1a",
         "minimapSlider.hoverBackground": "#6c6c6c1b",
         "peekViewEditor.background": "#000000", // "#10192c"
-        "peekViewEditor.matchHighlightBackground":"#7744aa18",
+        "peekViewEditor.matchHighlightBackground": "#7744aa18",
         "peekViewEditorGutter.background": "#000000", // "#10192c"
         "peekViewResult.background": "#000000", // "#00212b"
         "progressBar.background": "#000000",
@@ -182,7 +182,7 @@
         "scmGraph.historyItemHoverDefaultLabelBackground": "#00181d",
         "scmGraph.historyItemRefColor": "#001320",
         "scmGraph.historyItemRemoteRefColor": "#1c0018",
-        "scrollbarSlider.background":"#3e3e3e66",
+        "scrollbarSlider.background": "#3e3e3e66",
         "selection.background": "#0b250061",
         "settings.checkboxForeground": "#c03600",
         "settings.dropdownBackground": "#000",
@@ -199,8 +199,8 @@
         "sideBarSectionHeader.foreground": "#7a2cf8",
         "sideBarStickyScroll.border": "#d10000",
         "statusBar.background": "#000",
-        "statusBar.debuggingBackground":"#000000",
-        "statusBar.focusBorder":"#ab0000ad",
+        "statusBar.debuggingBackground": "#000000",
+        "statusBar.focusBorder": "#ab0000ad",
         "statusBar.foreground": "#8534ff",
         "statusBar.noFolderBackground": "#000000",
         "statusBarItem.activeBackground": "#000000",
@@ -305,14 +305,20 @@
                 }
             },
             {
-                "scope": ["storage.type.type.ts","storage.modifier.ts"],
+                "scope": [
+                    "storage.type.type.ts",
+                    "storage.modifier.ts"
+                ],
                 "settings": {
                     "foreground": "#2f8600",
                     "fontStyle": "bold"
                 }
             },
             {
-                "scope": ["storage.type.class.ts","storage.type.ts"],
+                "scope": [
+                    "storage.type.class.ts",
+                    "storage.type.ts"
+                ],
                 "settings": {
                     "foreground": "#2f00ff",
                     "fontStyle": "bold"
@@ -326,13 +332,24 @@
             "text.math": "#2c8a00",
             "string.math": "#a84100",
             "operator.math": "#2f00ff",
-
             "keyword": "#2f8600",
             "variable": "#005dc7",
-            "*.controlFlow": {"foreground": "#aa0006", "bold": true},
-            "controlKeyword": {"foreground": "#aa0006", "bold": true},
-            "builtinType": {"foreground": "#4b9e0c", "bold": true},
-            "extensionMethod": {"foreground": "#1d6d78", "bold": true},
+            "*.controlFlow": {
+                "foreground": "#aa0006",
+                "bold": true
+            },
+            "controlKeyword": {
+                "foreground": "#aa0006",
+                "bold": true
+            },
+            "builtinType": {
+                "foreground": "#4b9e0c",
+                "bold": true
+            },
+            "extensionMethod": {
+                "foreground": "#1d6d78",
+                "bold": true
+            },
             "preprocessorText": "#118111",
             "attribute": "#bd7810",
             "type": "#118111",
@@ -341,7 +358,10 @@
             "enumMember": "#939300",
             "parameter": "#058383",
             "property": "#aa3e00",
-            "operator": {"foreground": "#ae315d", "bold": false},
+            "operator": {
+                "foreground": "#ae315d",
+                "bold": false
+            },
         },
     },
     "editor.defaultColorDecorators": "auto",
@@ -368,13 +388,10 @@
     "git.blame.editorDecoration.enabled": false,
     "git.blame.statusBarItem.enabled": true,
     "breadcrumbs.filePath": "off",
+    "editor.stickyScroll.defaultModel": "outlineModel",
     "diffEditor.experimental.useTrueInlineView": true,
     "diffEditor.renderSideBySide": true,
+    "svelte.enable-ts-plugin": true,
     "extensions.autoUpdate": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
-
-    // the following settings is for typst math, and is better set to the oppsite for normal code
-
-    "breadcrumbs.enabled": false,
-    "editor.stickyScroll.defaultModel": "outlineModel" /* "foldingProviderModel" */, 
 }

@@ -344,7 +344,9 @@ let $#A in Set(Set(T))$
 
   - If no restrictions are placed on the elements in the set $#A$, then due to the vacuous argument, the intersection of an empty family of sets results in the universal set $Set$, and the universal set $Set$ is not a set, which violates the construction rules of set theory.
 
-  - If the elements in the set $#A$ are restricted to an existing set $B$ or $⋃ #A$, then the intersection of an empty family of sets produces a local universal set that is $B$ or $⋃ #A$. However, in mainstream set theory, the elements in the set $#A$ may belong to a smaller or larger set, which causes the universal set to also change, making $⋂ #A$ unstable and without a clear result. This still violates the construction rules of set theory.
+  - If the elements in the set $#A$ are restricted to an existing set $B$ or (in mainstream set theory) $⋃ #A$, then the intersection of an empty family of sets produces a local universal set that is $B$ or $⋃ #A$. However, the elements in the set $#A$ may belong to a smaller or larger set, which causes the universal set to also change, making $⋂ #A$ unstable and without a clear result. This still violates the construction rules of set theory.
+
+  - In set theory, restricting the intersection of a family of sets $⋂ #A$ to be within the union of that family $⋃ #A$, has a certain logic to it: it is the minimal common container set for all elements of the sets in $#A$. However, this makes the definition of intersection dependent on the definition of union, and this dependency breaks the symmetry
 
   However, every set does have a unique type, thus these problems will be solved.
 ]
