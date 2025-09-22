@@ -437,22 +437,14 @@ Other uses of $=$
 
     (Actually $"Group" in Type 1$ is not explicitly necessary, just as the mainstream set theory does not explicitly require $Set 0$)
 
-  $Type 0, Type 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Type ℕ$ again? Then for $Type ℕ$, continue to use the object construct rule ... Although it is indeed possible to abstractly define $Type ℕ$ and subsequent things, $Type n$ of specific natural numbers $n$ is needed, and also requires an infinite Type hierarchy, a potentially infinite input, in the sense of recursive descent (perhaps the definition of $Type 0 ∈ Type 1$ should be part of the input), but the language rules of recursive descent are finite
+  $Type 0, Type 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Type ℕ$ again? Then for $Type ℕ$, continue to use the object construct rule ... (Will this result in infinite language rule?)
+
+  $Type n$ belong to $Type n+1$ and belong to $Type ℕ$, but two "belong" have different language rule 
 
   $Type 0$ language is potentially infinite, and so is hierarchy-order-of-Type language. Of course most of programming language is potentially infinite
 
   Normally we do not need explicit hierarchy of Type. For example, we just need to construct the concrete type like $"Group"$, but not need to mention that the type $"Group"$ is a element in type $Type 1$ 
-
-  Is it possible that there exists many non linear order or total order things outside this hierarchy?
 ]
-There seem to be two types of math objects
-
-+ Math objects already constructed in a finite number of steps. It represents type constructed by some rules 
-
-+ Math object types directly assumed, or abstract type, with type and its variables in memory acting as placeholders. In programming it's called generics. It represent the type relation between abstract symbols. Sometimes instantiation or monomorphization of generics is required to pass compilation.
-
-The use of homomorphisms between types can facilitate proofs. Sometimes, it can allow calculations to deduce a general case proof from a special case proof; if the special case proof does not use properties specific to the special case, then it is actually a hidden proof of the general case.
-
 #tag("universal-type")
 #indent[
   The universal-type problem, or the type of every type problem

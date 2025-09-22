@@ -437,22 +437,14 @@ $=$ 的其它用法
 
     (实际上 $"Group" in Type 1$ 不是显式必须的, 就像主流集合论不显式必须 $Set 0$ 那样)
 
-  $Type 0, Type 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Type ℕ$ 吗? 然后对 $Type ℕ$, 继续使用 object construct rule ... 虽然确实可以抽象地定义 $Type ℕ$ 以及后续的东西, 但是, 具体自然数 $n$ 的 $Type n$ 是需要的, 且也需要无限的类型阶层, 递归下降意义下的潜无限的输入 (可能 $Type 0 ∈ Type 1$ 的定义需要作为输入的一部分), 但递归下降的语言规则是有限的
+  $Type 0, Type 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Type ℕ$ 吗? 然后对 $Type ℕ$, 继续使用 object construct rule ... (会导致需要无限的语言规则吗?)
+  
+  $Type n$ 属于 $Type n+1$ 且属于 $Type ℕ$, 但这两种 "属于" 的语言规则是不同 
 
   通常我们不需要显式 hierarchy of Type, 例如, 我们只需要构造 $"Group"$ 这样的具体类型, 但不需要提到类型 $"Group"$ 作为元素属于类型 $Type 1$
 
   $Type 0$ 语言是潜无穷的, hierarchy-order-of-Type 语言也是如此. 当然绝大多数编程语言都是潜无穷的
-
-  这种 hierarchy 之外是否可能存在很多不是线序 or 全序的东西?
 ]
-似乎有两种 math object
-
-+ 已经用有限步构造出来的 math object. 它代表以一些规则所构造的类型
-
-+ 直接假设的 math object 类型或者抽象的 type, 内存中的类型及其变量作为一种 placeholder (占位符). 在编程中, 这种概念叫做 generics (泛型). 它代表抽象符号之间的类型关系. 有时需要 generics 的 instantiation (实例化) or monomorphization (单态化) 之后才能通过编译
-
-type 之间的同态的使用可以对证明带来方便. 有时可以让计算从特殊情况推出一般情况的证明, 如果特殊情况的证明没有用到特殊情况的专有性质, 则实际上是隐藏的对一般情况的证明
-
 #tag("universal-type")
 #indent[
   universal-type 的问题, 或者 type of every type 的问题
