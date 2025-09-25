@@ -148,6 +148,12 @@ match (rain) {
   false => out = undefined,
 };
 ```
+类似于通常的编程语言的 if block, 在条件不满足时自动跳过执行区
+```rs
+if (rain = true) {
+  out = false
+}
+```
 #tag("inference") 对于数学语言, 那就是
 - 编译器读取到 formula $p,q$
 - 编译器读取到 formula $p => q$ is true proposition (可能来自定义)
@@ -156,7 +162,7 @@ match (rain) {
 
 #tag("proof") 证明就是编译通过 $p => q$ is true proposition
 
-虽然我对 $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition 这种类型的虚空论证感到很迷惑, 但是没什么理由放弃对某个集合 $A$ 的局部空集族定义交集, 只好以某种角度去接受, 例如, 不用构造证明就当作是对的所以自动跳过 ... 
+虽然我对 $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition 这种类型的虚空论证感到很迷惑, 但是没什么理由放弃对某个集合 $A$ 的局部空集族定义交集, 只好以某种角度去接受, 例如, 不用构造证明就当作是对的所以自动跳过, 或者编程语言中的 if block 的跳过, 没有产生 error ... 
 
 如果接受这种类型的虚空蕴含, 那么会有 $(p => q) = (not p) or q$
 

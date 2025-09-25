@@ -148,6 +148,12 @@ match (rain) {
   false => out = undefined,
 };
 ```
+similar to if block in many programming language, automatically skips the execution area when the condition is not met
+```rs
+if (rain = true) {
+  out = false
+}
+```
 #tag("inference") For mathematical language, that is
 - The compiler reads the formula $p,q$
 - The compiler reads the formula $p => q$ is true proposition (may be custom)
@@ -156,7 +162,7 @@ match (rain) {
 
 #tag("proof") The proof is that compiling passes $p => q$ is true proposition
 
-Although I am confused by this type of vacuous argument like $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition, there is no reason to abandon defining the intersection of local empty set families for a certain set $A$. I can only accept it from a certain perspective, for example, treating it as true without a constructive proof, thus automatically skipping it... 
+Although I am confused by this type of vacuous argument like $And_(x in 2^A) (x in ∅_(2^A) => P(x))$ is always true proposition, there is no reason to abandon defining the intersection of local empty set families for a certain set $A$. I can only accept it from a certain perspective, for example, treating it as true without a constructive proof, thus automatically skipping it, or skipping over an if block in a programming language without generating an error ... 
 
 If this type of vacuous implication is accepted, then $(p => q) = (not p) or q$
 
