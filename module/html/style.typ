@@ -30,7 +30,7 @@
 
 #let image(path, width: auto) = html.elem("img", attrs: (src: str(path), width: to-string([#width])))
 
-#let style-html(body) = {
+#let style-html(body) = { // this may need to be moved to templates/page.typ (see the line of comment "Put your custom CSS here" in that file) in the newer version of shiroa. otherwise, error
   html.elem("style")[
     // prefer external css ...
     #```CSS

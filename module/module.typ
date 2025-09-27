@@ -25,5 +25,3 @@
 
   body
 }
-
-#show: module

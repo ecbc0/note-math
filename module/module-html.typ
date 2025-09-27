@@ -14,8 +14,4 @@
   body
 }
 
-#show: module
-
-to delete all remaining color of symbol, regex replace in workspace `,[ ]*fill:[ ]*(rgb\((?:(?:[\w|#|"]+?\)|[\w]+?)))`
-
 HTML ver. is built via #link("https://github.com/Myriad-Dreamin/shiroa")[shiroa] (modified from e7684c1)
