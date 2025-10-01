@@ -272,7 +272,7 @@ Instruction stream
 ]
 #tag("compile") #tag("parse")
 #indent[
-  Use a parser to verify the correctness of the token stream language, essentially it's going through all language rules, i.e. enum + match + recurse, by programming lang or circuit lang. or using a (generated) finite state machine
+  Use a parser to verify the correctness of the token stream language, essentially it's going through all language rules, i.e. enum + match (or if else) + recurse, by programming lang or circuit lang. or using a (generated) finite state machine
     
   The operation of the parser requires generating large and complex data structures in memory (some figurative descriptions: tables, nodes, trees)
 

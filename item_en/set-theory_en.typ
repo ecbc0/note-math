@@ -39,7 +39,7 @@ The human brain compiler can omit and supplement omissions, trading temporary ef
 
 Assistance also has other functions, like the case of, Programming before the era of IDE/LSP/friendly-and-interactive-compiler-error-messages/documentation was painful. The organization, structuring and reuse of data and information were not done well, and the powerful capacity and time of memory of computer were not used well.
 
-Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development. Not yet implement set theory ... My attitude is that even if there may not be a good underlying implementation for the time being, we can turn to looking for easy-to-use syntax and convenient additional tools (e.g. LSP).
+Example of proof assistant: #link("https://github.com/acornprover/acorn")[acornprover], in development.
 
 #tag("proposition") proposition is a special (string, bool) product struct computer data structure. For mathematical language, the string field uses special construction rules to restrict it, and this restricted version of the string is called a formula
 

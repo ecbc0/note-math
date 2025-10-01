@@ -39,7 +39,7 @@ parser or 证明辅助程序能让人类从需要检阅所有步骤 reduce to �
 
 而且证明辅助还会有其它作用, 类似于, IDE/LSP/友好且互动的编译器错误信息/documentation 时代之前的编程是痛苦的, 数据和信息的组织和结构化和复用做得不好, 也没利用好计算机的强大记忆容量和时间
 
-证明辅助的例子: #link("https://github.com/acornprover/acorn")[acornprover], 还在开发中. 还没实现集合论 ... 我的态度是, 即使可能暂时没有好的底层实现, 也可以转为寻求容易使用的语法和方便的附加工具 (e.g. LSP)
+证明辅助的例子: #link("https://github.com/acornprover/acorn")[acornprover]
 
 #tag("proposition") proposition 是特殊的 (string, bool) product struct ((字符串, 真假值) 的逻辑乘积结构) 计算机数据结构. 对于数学语言, string field 使用特殊的构造规则来限制, 此 string 限制版本称为 formula (公式)
 
