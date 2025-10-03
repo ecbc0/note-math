@@ -165,10 +165,10 @@
         "minimapSlider.activeBackground": "#6c6c6c1b",
         "minimapSlider.background": "#6a6a6a1a",
         "minimapSlider.hoverBackground": "#6c6c6c1b",
-        "peekViewEditor.background": "#000000", // "#10192c"
+        "peekViewEditor.background": "#000000", 
         "peekViewEditor.matchHighlightBackground": "#7744aa18",
-        "peekViewEditorGutter.background": "#000000", // "#10192c"
-        "peekViewResult.background": "#000000", // "#00212b"
+        "peekViewEditorGutter.background": "#000000", 
+        "peekViewResult.background": "#000000", 
         "progressBar.background": "#000000",
         "quickInput.foreground": "#004cff",
         "quickInputList.focusBackground": "#000000",
@@ -394,4 +394,7 @@
     "svelte.enable-ts-plugin": true,
     "extensions.autoUpdate": false,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "[git-commit]": {
+        "editor.wordWrap": "on",
+    }
 }

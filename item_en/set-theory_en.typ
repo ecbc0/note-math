@@ -211,6 +211,8 @@ A proposition has many proofs with different runtime data flow
 
 The following discusses math-object-construct-rule *alias* set-theory
 
+From a practical perspective, as long as the underlying logic is equivalent, we should choose the most convenient and easy-to-use ones, no need to strictly follow an existing framework.
+
 #tag("natural-number") $ℕ$ 
 #indent[
   natural number $0,1,2,...$ and natural number set $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
@@ -283,7 +285,18 @@ Definition language expansion
 ]
 #tag("set-with-element-in-a-type") For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$, define $A subset B := And_(x in T) (x in A => x in B)$
 
-#tag("top-level-set") *alias* #tag("type") Sets constructed by the above rules are called "top-level-set" or "type". Sets constructed by the following rules are general sets, with a clear type. For a prover, the language rules of both can be multiplicatively decomposed, also known as "implementing set theory with type theory"
+#tag("simple-set") *alias* #tag("type") 
+#indent[
+  Sets constructed by the above rules (product, sum, function) are called "simple-set" or "type". Sets constructed by the following slightly more complex rules are general sets. 
+
+  "An element has only one type" or "no subtypes" is not very meaningful, because we can always add a proposition and use logical `and` to obtain "subtypes".
+
+  In fact, "simple-set" may also use "propositional constraints". For example, the definition of function type, sum type can be the subtype of Product type
+  
+  For a prover, the language rules of both can be multiplicatively decomposed, also known as "implementing set theory with type theory"
+
+  If we choose the simplest thing "type" as the universal set, without any sub-sets or additional constraints, then it's easy to obtain the uniqueness of the universal set.
+]
 
 function space introduces higher-level infinity
 

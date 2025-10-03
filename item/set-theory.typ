@@ -211,6 +211,8 @@ A proposition has many proofs with different runtime data flow
 
 以下讨论 math-object-construct-rule (数学对象构造规则) *alias* set-theory (集合论)
 
+从实用的角度来看, 只要逻辑是等价的, 那么就选用最方便最好用的那些, 不需要严格遵循某种已有的框架
+
 #tag("natural-number") $ℕ$ 
 #indent[
   natrual number (自然数) $0,1,2,...$ and natrual number set (自然数集) $ℕ$ is object. $0,1,2,... ∈ ℕ$ is true proposition
@@ -283,7 +285,16 @@ A proposition has many proofs with different runtime data flow
 ]
 #tag("set-with-element-in-a-type") 对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. let $A,B in Set T$, 定义 $A subset B := And_(x in T) (x in A => x in B)$
 
-#tag("top-level-set") *alias* #tag("type") 将以上规则构造的集合叫做 "top-level-set" 或者 "type". 以下的规则构造的集合则是一般的 set, 并带有一个明确的 type. 对于 prover, 可以将两者的语言规则进行乘法分解, 也叫做 "用类型论实现集合论"
+#tag("simple-set") *alias* #tag("type") 
+#indent[
+  将以上简单规则 (product, sum, function) 构造的集合叫做 "simple-set" 或者 "type". 以下的更复杂一些规则构造的集合则是一般的 set, 并带有一个明确的 type.
+
+  "一个元素只有一种类型" 或者 "没有子类型" 的意义不大, 因为总是可以加上一个命题然后用 logic `and` 来得到 "子类型"
+
+  其实 "simple-set" 也可能是使用了 "命题约束". 例如 function type, sum type 的定义可以作为 Product type 的 subtype
+  
+  对于 prover, 可以将两者的语言规则进行乘法分解, 也叫做 "用类型论实现集合论". 
+]
 
 function space 引入了高级别的无限
 
@@ -350,7 +361,7 @@ let $#A in Set(Set(T))$
 
   - 如果不对 $#A$ 的集合里面的元素做任何限制, 那么由于虚空论证, 空集族的交集的结果是全集 $Set$, 而全集 $Set$ 不是集合, 这破坏了集合论构造规则
 
-  - 如果对 $#A$ 的集合里面的元素限制为一个已有集合 $B$ 或者 (主流集合论所用的) $⋃ #A$, 则空集族的交集产生的局部全集是 $B$ 或者 $⋃ #A$. 然而, $#A$ 的集合里面的元素可能属于一个更小的或者更大的集合, 这使得全集也会改变, 从而 $⋂ #A$ 是不稳定的, 没有明确的结果, 这还是破坏了集合论构造规则
+  - 如果对 $#A$ 的集合里面的元素限制为一个已有集合 $B$ 或者 (主流集合论所用的) $⋃ #A$, 则空集族的交集产生的局部全集是 $B$ 或者 $⋃ #A$. 然而, $#A$ 的集合里面的元素可能属于一个更小的或者更大的集合, 这使得全集也会改变, 从而 $⋂ #A$ 是不稳定的, 没有明确的结果, 这还是破坏了集合论构造规则. 如果选择用最简单的没有子集或命题约束的东西 "type" 作为全集, 则可以简单地得到全集唯一性
 
   - 对 $#A$ 的交集 $⋂ #A$ 的限制使用 $⋃ #A$, 其实意味着 $#A$ 里面的所有集合的最小共同的所包含在其中的集合, 这也有某种合理性. 但是这会使得交集的定义依赖于并集的定义, 这种先后顺序的存在破坏了对称性
 
