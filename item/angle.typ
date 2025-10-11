@@ -74,3 +74,5 @@ $SO(2)$ 的元素 $mat(a,-b;b,a)$ with $a^2 + b^2 = 1$. 集合论上等价于 $�
 类似地, 双曲和 split complex $ℂ_"split"$
 
 *Question* 推广到四元数 $ℍ$ 和八元数 $𝕆$ 及其 split 版本
+
+反过来, 如果我们承认角度可加 (同态) 这种概念, 那么就会提供动机之于 $ℝ^2$ 使用 Euclidean norm $x_1^2 + x_2^2$ 而不是别的 norm?

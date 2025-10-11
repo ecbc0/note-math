@@ -75,3 +75,5 @@ Hyperbolic angle is the same $ℝ <-> SO(1,1) ≃ ℍ𝕪 ≃ #U (1,ℂ_"split")
 Similarly, hyperbolic and split complex $ℂ_"split"$
 
 *Question* Generalize to quaternion $ℍ$, octonion $𝕆$, and their split ver.
+
+Conversely, if we accept the concept of angular additivity (homomorphism), then this provides motivation for using the Euclidean norm $x_1^2 + x_2^2$ for $ℝ^2$ instead of some other norm? (norm defined as $|λ x| = |λ| |x|$)

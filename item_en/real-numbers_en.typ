@@ -10,9 +10,7 @@ Natural number $ℕ$ addition
 ]
 _Proof_ The intuition in the real world is that for counting $+1$, no matter how the counting task is manually divided into several subtasks, the result will not be affected, and the total decomposition methods are limited. The associative and commutative laws of addition are just special cases. Just as we recognize natural numbers by counting, we can always recognize the commutative and associative laws by counting. Everything reduces to the case of complete additive decomposition, with only the commutative and associative laws of a large number of $1$s.
 
-It seems difficult for computers to express this intuition, but it seems that all finite results must be correct. Similar to what is done in #link(<natural-number>)[natural numbers], in order for a computer to express the property that holds for all natural numbers using finite characters, memory, and finite time (and potentially infinite time), it is necessary to define (assume, axiom) that it is a true proposition.
-
-The usual proof is to use minimal assumptions (axioms), the associativity of $1$ $(a + b) + 1 = a + (b + 1)$ or the definition of addition $(a + 1) + b = (a + b) + 1$, and then derive others.
+There are two definitions of addition, $(a + b) + 1 = a + (b + 1)$ or $(a + 1) + b = (a + b) + 1$. By swapping the inputs in one definition of addition, we can get the other definition of addition. Proving the commutativity of addition means proving that the two definitions give the same output for the same inputs. Intuitively, the result is of course the same, it's just that the amount to be counted is placed in a different "slot position", thus "commutative"
 
 To an extreme, if we always set conclusions that can be proven with a few axioms as axioms, then we will have no proofs at all. So we may use minimal axiom, but at least let us choose the more symmetric assumption $(a + b) + 1 = (a + 1) + b = a + (b + 1)$.
 
@@ -109,6 +107,8 @@ From an operational simplicity perspective, Dedekind-cut should be used. "Operat
   $x := (A,B)$. Record $(A,B)$ as $(ℚ_(< x), ℚ_(>  x))$ again
 ]
 Real number $ℝ := ℚ ⊔ (ℝ ∖ ℚ)$
+
+Logically, we can use only half, for example, any left semi-infinite interval of the rational numbers $ℚ$, and then automatically get the right semi-infinite interval by doing the complement in $ℚ$. But here we use the more symmetrical representation
 
 - #tag("order-real") $ℝ$ order $x < y <==>  (ℚ_(< x) ⊊ ℚ_(< y))$
 
