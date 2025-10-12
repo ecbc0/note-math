@@ -293,7 +293,7 @@ A proposition has many proofs with different runtime data flow
 
   其实 "simple-set" 也可能是使用了 "命题约束". 例如 function type, sum type 的定义可以作为 Product type 的 subtype
 
-  实际上我并不是很了解类型论, 不知道什么是 "type" 的确切定义. 除了 product, sum, function, 还能有 structure (可选 constraint), inductive type (自然数可以来自它), dependent type
+  实际上我并不是很了解类型论, 不知道什么是 "type" 的确切定义. 除了 product, sum, function, 还能有 structure (with optional constraint), inductive type (自然数可以来自它), dependent type
 ]
 
 function space 引入了高级别的无限

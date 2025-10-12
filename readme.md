@@ -1,6 +1,6 @@
 English ver. are machine translation without check from gemini-flash and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
-Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details, have guess without proof
+Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details, have guess without proof. Probably always in anytime need to modify wrong thing or need improve bad treatment or need delete and change lots of things
 
 To read, use [vscode](https://code.visualstudio.com/) to open folder `note-math`, install vscode extension [tinymist](https://github.com/Myriad-Dreamin/tinymist), use its preview function
 
@@ -14,7 +14,7 @@ for note, I feel that git is only suitable for viewing update records. A large-s
 
 ---
 
-整理和记录的想法, 关于数学, 不保证正确性和可读性和细节完整性, 有无证明的猜测
+整理和记录的想法, 关于数学, 不保证正确性和可读性和细节完整性, 有无证明的猜测. 可能随时需要修改错误或需要改进不好的处理或需要删改大量的东西
 
 为阅读, 使用 [vscode](https://code.visualstudio.com/) 打开 `note-math` 文件夹, 安装 vscode 的 [tinymist](https://github.com/Myriad-Dreamin/tinymist) 扩展, 使用其 preview 功能
 
