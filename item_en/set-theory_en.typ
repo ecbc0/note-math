@@ -295,7 +295,7 @@ Definition language expansion
   
   For a prover, the language rules of both can be multiplicatively decomposed, also known as "implementing set theory with type theory"
 
-  If we choose the simplest thing "type" as the universal set, without any sub-sets or additional constraints, then it's easy to obtain the uniqueness of the universal set.
+  Actually, I don't know type theory, don't know what is the exact definition of "type". In addition to product, sum, function, there can also be structure (with optional constraint), inductive type (natural numbers can come from it), dependent type
 ]
 
 function space introduces higher-level infinity

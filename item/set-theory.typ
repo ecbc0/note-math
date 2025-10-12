@@ -292,8 +292,8 @@ A proposition has many proofs with different runtime data flow
   "一个元素只有一种类型" 或者 "没有子类型" 的意义不大, 因为总是可以加上一个命题然后用 logic `and` 来得到 "子类型"
 
   其实 "simple-set" 也可能是使用了 "命题约束". 例如 function type, sum type 的定义可以作为 Product type 的 subtype
-  
-  对于 prover, 可以将两者的语言规则进行乘法分解, 也叫做 "用类型论实现集合论". 
+
+  实际上我并不是很了解类型论, 不知道什么是 "type" 的确切定义. 除了 product, sum, function, 还能有 structure (可选 constraint), inductive type (自然数可以来自它), dependent type
 ]
 
 function space 引入了高级别的无限
