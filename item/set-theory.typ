@@ -128,9 +128,13 @@ follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义语言
 ]
 #tag("distributive-forall-exists")  
 #indent[
+  (需要假设函数 $A -> B$ 的存在?)
   $ 
     And_(a ∈ A) Or_(b ∈ B) p(a,b) 
-    <==> Or_(b ∈ B) And_(a ∈ A) p(a,b) 
+    <==> Or_(b(a) ∈ B(a)) And_(a ∈ A) p(a,b(a)) \
+
+    Or_(a ∈ A) And_(b ∈ B) p(a,b) 
+    <==> And_(b(a) ∈ B(a)) Or_(a ∈ A) p(a,b(a))
   $
 ]
 推导的自然语言例子
@@ -512,11 +516,11 @@ $=$ 的其它用法
 
   $ ⋃_(i ∈ I) ⋂_(x(i) in A(i)) x(i) = ⋂_(x ∈ product_(i in I) A(i)) ⋃_(i ∈ I) x(i) $
 
+  draft of proof: 展开, 使用 #link(<distributive-forall-exists>)[]
+
   sum & product
 
   $ product_(i ∈ I) sum_(x(i) ∈ A(i)) x(i) = sum_(x ∈ product_(i in I) A(i)) product_(i ∈ I) x(i) $
-
-  draft of proof: 展开, 使用 parallel distributive cf. #link(<distributive-forall-exists>)[]
 ]
 #tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
 

@@ -128,9 +128,13 @@ follow #link(<bool-algebra>)[various rules of bool in the finite case], define l
 ]
 #tag("distributive-forall-exists")  
 #indent[
+  (need to assume existence of function $A -> B$?)
   $ 
     And_(a ∈ A) Or_(b ∈ B) p(a,b) 
-    <==> Or_(b ∈ B) And_(a ∈ A) p(a,b) 
+    <==> Or_(b(a) ∈ B(a)) And_(a ∈ A) p(a,b(a)) \
+
+    Or_(a ∈ A) And_(b ∈ B) p(a,b) 
+    <==> And_(b(a) ∈ B(a)) Or_(a ∈ A) p(a,b(a))
   $
 ]
 Natural language example of derivation
@@ -514,11 +518,11 @@ Other uses of $=$
 
   $ ⋃_(i ∈ I) ⋂_(x(i) in A(i)) x(i) = ⋂_(x ∈ product_(i in I) A(i)) ⋃_(i ∈ I) x(i) $
 
+  draft of proof: expand, use parallel distributive cf. #link(<distributive-forall-exists>)[]
+
   sum & product
 
   $ product_(i ∈ I) sum_(x(i) ∈ A(i)) x(i) = sum_(x ∈ product_(i in I) A(i)) product_(i ∈ I) x(i) $
-
-  draft of proof: expand, use parallel distributive cf. #link(<distributive-forall-exists>)[]
 ]
 #tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
 

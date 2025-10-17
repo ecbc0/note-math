@@ -152,11 +152,13 @@ A symbolic representation of multiple input or output lines in a computing unit 
       "or" (A and B) or C &= (A or C) and (B or C) 
     $
 
-    Inductively
+    Inductively ($j(i)$ mean all function ${1 ,…, n} -> {1 ,…, m}$)
 
-    $ And_(i=1..n) Or_(j=1..m) A_(i j) = Or_(i=1..n) And_(j=1..m) A_(i j) $
+    $ And_(i=1..n) Or_(j=1..m) A_(i j) = Or_(j_1 ... j_n  =1 ... m) And_(i=1..n) A_(i j(i)) $
 
-    and e.g. $And_i Or_j And_k A_(i j k) = ⋯$
+    Similarly
+
+    $ Or_(i=1..n) And_(j=1..m) A_(i j) = And_(j_1 ... j_n  =1 ... m) Or_(i=1..n) A_(i j(i)) $
   ]
   #tag("bool-commutative-law") Commutative law $A + B = B + A$. same for $⋅$
 

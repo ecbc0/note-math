@@ -89,6 +89,7 @@
 
     $n ⇝ 2^n$ 代表了 ${0,1}$ 值并行电路的 "乘法" 性质
   ]
+  #colbreak()
   - ${0,1}^1$ 输出的构造
   #indent[
     在输入中, 将想要输出到 1 的电线接到 or gate
@@ -152,11 +153,13 @@
       "or" (A and B) or C &= (A or C) and (B or C) 
     $
 
-    归纳地
+    归纳地 ($j(i)$ 指取所有 ${1 ,…, n} -> {1 ,…, m}$ 函数)
 
-    $ And_(i=1..n) Or_(j=1..m) A_(i j) = Or_(i=1..n) And_(j=1..m) A_(i j) $
+    $ And_(i=1..n) Or_(j=1..m) A_(i j) = Or_(j_1 ... j_n  =1 ... m) And_(i=1..n) A_(i j(i)) $
 
-    以及 e.g. $And_i Or_j And_k A_(i j k) = ⋯$
+    类似地
+
+    $ Or_(i=1..n) And_(j=1..m) A_(i j) = And_(j_1 ... j_n  =1 ... m) Or_(i=1..n) A_(i j(i)) $
   ]
   #tag("bool-commutative-law") 交换律 $A + B = B + A$. same for $⋅$
 
