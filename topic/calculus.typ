@@ -1,6 +1,10 @@
 #import "../module/module.typ": *
 #show: module
 
+= draft
+
+The following is a draft, which may needs to be rewritten
+
 real-numbers
 limit-sequence
 ℝ^n
@@ -22,5 +26,3 @@ topology-struct-operation
 
 exponential
 angle
-
-// consider decompose into smaller piece? but not too much, too fragmented, too messy. similar to find best-multiplication-decomposition

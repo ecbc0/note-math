@@ -52,7 +52,7 @@
 /*
   It's tedious
 
-  hope there is something like: bind attribute A to a collection of math variable (x1, x2, …), then set CSS to attribute A (rendered color = …), or the "custom element" that may come in the future?
+  hope there is something like: bind attribute A to a collection of math variable (x1, x2, …), then set CSS to attribute A (rendered color = …)
 
   or use code generator i.e. input an array of string, out put a new array of string
 */
