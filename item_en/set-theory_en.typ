@@ -285,21 +285,24 @@ Definition language expansion
 
   In a prover, the definition and behavior of a function are: input type + output type + if the same input is checked, the output is specified to be the same.
 
-  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. Changing $A -> (B -> C)$ to $(A × B) -> C$ is called normalization of function.
+  *Prop* $C^(A + B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. Changing $A -> (B -> C)$ to $(A × B) -> C$ is called normalization of function.
 ]
-#tag("set-with-element-in-a-type") For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$, define $A subset B := And_(x in T) (x in A => x in B)$
 
 #tag("simple-set") *alias* #tag("type") 
 #indent[
-  Sets constructed by the above rules (product, sum, function) are called "simple-set" or "type". Sets constructed by the following slightly more complex rules are general sets. 
+  Sets constructed by the above rules (product, sum, function) are called "simple-set" or "type".
 
-  "An element has only one type" or "no subtypes" is not very meaningful, because we can always add a proposition and use logical `and` to obtain "subtypes".
+  Parts of "simple" in the sense that, every element belong to only one (?) type
+
+  Add a proposition and use logical `and`, we can obtain "subtypes". The price is the loss of type uniqueness
+
+  Using subtypes can bring many conveniences. Although implementing subtyp requires more work than simply implementing type.
+
+  Subtypes can also be considered syntactic sugar, in any proposition equivalently converting into $x: T, p_1(x) and p_2(x) and ...$
 
   In fact, "simple-set" may also use "propositional constraints". For example, the definition of function type, sum type can be the subtype of Product type
-  
-  For a prover, the language rules of both can be multiplicatively decomposed, also known as "implementing set theory with type theory"
 
-  Actually, I don't know type theory, don't know what is the exact definition of "type". In addition to product, sum, function, there can also be structure (with optional constraint), inductive type (natural numbers can come from it), dependent type
+  #tag("set-with-element-in-a-type") For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$, define $A subset B := And_(x in T) (x in A => x in B)$
 ]
 
 function space introduces higher-level infinity
@@ -372,6 +375,8 @@ let $#A in Set(Set(T))$
   - In set theory, restricting the intersection of a family of sets $⋂ #A$ to be within the union of that family $⋃ #A$, has a certain logic to it: it is the minimal common container set for all elements of the sets in $#A$. However, this makes the definition of intersection dependent on the definition of union, and this dependency breaks the symmetry
 
   However, every set does have a unique type, thus these problems will be solved.
+
+  However, if you allow forall statement to be restricted to general sets $U$ or subtype $U$, then the intersection of the empty sets is the universal set of $U$, not the universal set of type $T$ in which the elements of $U$ are located.
 ]
 According to the index mapping $A in (I -> Set T)$, infinite versions of product and sum can be defined.
 

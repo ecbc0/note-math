@@ -5,7 +5,7 @@
 
 English ver. are machine translation without check from gemini-flash and #link("https://github.com/neavo/LinguaGacha")[LinguaGacha]
 
-Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details, have guess without proof. Currently it is just a *draft*. Probably always in anytime need to modify wrong thing or need improve bad treatment or need delete and change lots of things
+Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details, have guess without proof. Currently many of them are just *draft*. Probably always in anytime need to modify wrong thing or need improve bad treatment or need delete and change lots of things
 
 If you are familiar with mathematics, you can look at #link("https://ecbc0.github.io/item/feature.html")[feature] and see what is better in this note compared to the mainstream treatment.
 

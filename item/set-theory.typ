@@ -285,19 +285,24 @@ A proposition has many proofs with different runtime data flow
 
   在 prover 中, 函数的定义和行为是, 输入类型 + 输出类型 + 检查到相同输入则规定输出相同
 
-  *Prop* $C^(A ⊔ B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. 将 $A -> (B -> C)$ 改为 $(A × B) -> C$ 叫做 normalization of function
+  *Prop* $C^(A + B) ≃ C^A × C^B, C^(A × B) ≃ (C^B)^A$. 将 $A -> (B -> C)$ 改为 $(A × B) -> C$ 叫做 normalization of function
 ]
-#tag("set-with-element-in-a-type") 对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. let $A,B in Set T$, 定义 $A subset B := And_(x in T) (x in A => x in B)$
 
 #tag("simple-set") *alias* #tag("type") 
 #indent[
-  将以上简单规则 (product, sum, function) 构造的集合叫做 "simple-set" 或者 "type". 以下的更复杂一些规则构造的集合则是一般的 set, 并带有一个明确的 type.
+  将以上简单规则 (product, sum, function) 构造的集合叫做 "simple-set" 或者 "type". 
+  
+  一部分的 "简单" 在于 "每个元素只有一个唯一的 (?) type" 
 
-  "一个元素只有一种类型" 或者 "没有子类型" 的意义不大, 因为总是可以加上一个命题然后用 logic `and` 来得到 "子类型"
+  给 type 加上一个命题然后用 logic `and` 可以得到 "subtype". 代价是失去 "type 的唯一性"
+  
+  使用 subtype 可以带来很多方便. 虽然实现 subtype 相比只实现 type 需要更多的工作量
+
+  也可以认为 subtype 是语法糖, 在任何命题中等价地转换为 $x: T, p_1(x) and p_2(x) and ...$
 
   其实 "simple-set" 也可能是使用了 "命题约束". 例如 function type, sum type 的定义可以作为 Product type 的 subtype
 
-  实际上我并不是很了解类型论, 不知道什么是 "type" 的确切定义. 除了 product, sum, function, 还能有 structure (with optional constraint), inductive type (自然数可以来自它), dependent type
+  #tag("set-with-element-in-a-type") 对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. let $A,B in Set T$, 定义 $A subset B := And_(x in T) (x in A => x in B)$
 ]
 
 function space 引入了高级别的无限
@@ -370,6 +375,8 @@ let $#A in Set(Set(T))$
   - 对 $#A$ 的交集 $⋂ #A$ 的限制使用 $⋃ #A$, 其实意味着 $#A$ 里面的所有集合的最小共同的所包含在其中的集合, 这也有某种合理性. 但是这会使得交集的定义依赖于并集的定义, 这种先后顺序的存在破坏了对称性
 
   然而每个集合确实有唯一的 type, 从而这些问题将会得到解决
+
+  不过, 如果你允许将 forall 句子限制在一般的集合族 $U$ 或者 subtype $U$, 那么空集族的交集就是 $U$ 的全集, 而不是 $U$ 的元素所在的 type $T$ 的全集
 ]
 根据指标映射 $A in (I -> Set T)$ 可以定义无限版本的 product, sum
 
