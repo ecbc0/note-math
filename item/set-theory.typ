@@ -302,7 +302,18 @@ A proposition has many proofs with different runtime data flow
 
   其实 "simple-set" 也可能是使用了 "命题约束". 例如 function type, sum type 的定义可以作为 Product type 的 subtype
 
-  #tag("set-with-element-in-a-type") 对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. let $A,B in Set T$, 定义 $A subset B := And_(x in T) (x in A => x in B)$
+  #tag("set-with-element-in-a-type") 
+  #indent[
+    对于 type $T$, 元素类型属于 $T$ 的集合写为 $Set T$, 对应到 $in$ 函数 $T -> "Bool"$. 
+    
+    为了减少混淆, 类型的 $in$ 也用 $:$ 作为另一记号. 虽然 $:$ 的使用也被命题判断子集占用了. 
+    
+    空集 $∅_T$ 对应常值 false 函数. 全集 $"U"_T$ (通常只写为 $T$) 对应常值 true 函数. 
+    
+    let $A,B in Set T$ (或者写为 $A, B: Set[T]$), 定义 $A subset B := And_(x in T) (x in A => x in B)$
+
+    只要使用 subtype (以及 dependent type), 集合与类型的区别就变得非常小, 例如, 对于集合 $A in Set[T]$, 对应 subtype ${ x in T | x in A }$ (或者写为 ${x: T || x in A}$, 其中 $||$ 和 $|$ 的不同用于区分类型的命题约束和集合的命题约束)
+  ]
 ]
 
 function space 引入了高级别的无限

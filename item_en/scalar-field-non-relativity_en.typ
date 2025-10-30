@@ -222,7 +222,7 @@ Should this quantity be "particle number density" or "probability density" or "c
 ]
 #tag("motivation-of-eigenstate") 
 #indent[
-  For the following discussion, why is it an infinite-dimensional generalization of a finite-dimensional quadratic form? Because the source of the Lagrangian is the finite-dimensional quadratic form
+  For the following discussion, why is it an infinite-dimensional generalization of a finite-dimensional quadratic form? Because the source of the Lagrangian is the finite-dimensional quadratic form (and then integral)
 
   Mimicking the finite-dimensional case, (@ref-3, p.143--144. @ref-23, p.218--222) diagonalize one quadratic form with an orthonormal basis in a (positive definite) quadratic form space.
 

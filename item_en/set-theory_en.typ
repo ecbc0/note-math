@@ -302,7 +302,16 @@ Definition language expansion
 
   In fact, "simple-set" may also use "propositional constraints". For example, the definition of function type, sum type can be the subtype of Product type
 
-  #tag("set-with-element-in-a-type") For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$, define $A subset B := And_(x in T) (x in A => x in B)$
+  #tag("set-with-element-in-a-type")
+  #indent[
+    For type $T$, a set whose element type belongs to $T$ is written as $Set T$, corresponding to the $in$ function $T -> "Bool"$. 
+    
+    To reduce confusion, the $in$ is also represented by $:$ as another notation of type. However, the use of $:$ is also taken up by subsets of propositional judgments.
+    
+    The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$ (or written as $A,B: Set T$), define $A subset B := And_(x in T) (x in A => x in B)$
+
+    By using subtype (and dependent type), the distinction between sets and types becomes very small. For example, for the set $A in Set[T]$, the corresponding subtype is ${x in T | x in A}$ (or written as ${x: T || x in A}$, where the difference between $||$ and $|$ is used to distinguish between propositional constraints of types and propositional constraints of sets).    
+  ] 
 ]
 
 function space introduces higher-level infinity
