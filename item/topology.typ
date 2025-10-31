@@ -6,6 +6,8 @@
 
 #tag("topology") 拓扑 := $X$ 每个点都有一个 #link(<net>)[点网] $#B (x)$. 这样的点网系统记为 $#T _X$, 是 Euclidean 空间的类似物
 
+_*Todo*_ 这里有错, 需要修改. 这种拓扑空间的定义是不够的, 无法证明闭包是闭集. 还需要对极限点和闭包的额外的假设, 来模拟拓扑空间的 "任意闭集的交集是闭集"
+
 *Example* Euclidean 空间的所有球 $𝔹(x,r)$ 组成的点网系统
 
 #link(<Minkowski-space>)[] 中, 一点 $x$ 有多个不极限等价的网
@@ -32,7 +34,7 @@ $A subset closed(A)$
 
 $A$ 是闭集 <==> $A$ 包含所有 $A$ 极限点
 
-forall $A$, $closed(A)$ 是闭集. _Proof_ 其它点不满足 $forall B in #B (x), A ∩ B = ∅$
+forall $A$, $closed(A)$ 是闭集. _Proof_ 其它点不满足 $forall B in #B (x), A ∩ B != ∅$
 
 $closed(closed(A)) = closed(A)$
 

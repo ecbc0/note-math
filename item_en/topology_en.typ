@@ -6,6 +6,8 @@
 
 #tag("topology") Topology := $X$ Every point has a #link(<net>)[point net] $#B (x)$. Such a point net system is denoted as $#T _X$, which is similar to Euclidean space
 
+_*Todo*_ It's wrong here; it needs correction. This definition of topological space is insufficient to prove that the closure is a closed set. Further assumptions about limit points and closures are needed to simulate the condition that "the intersection of any closed sets in a topological space is a closed set."
+
 *Example* The point net system composed of all spheres $𝔹(x,r)$ in Euclidean space
 
 In #link(<Minkowski-space>)[], a point $x$ has multiple nets that are not limit-equivalent
@@ -32,7 +34,7 @@ $A subset closed(A)$
 
 $A$ is a closed set <==> $A$ contains all limit points of $A$
 
-forall $A$, $closed(A)$ is a closed set. _Proof_ Other points do not satisfy $forall B in #B (x), A ∩ B = ∅$
+forall $A$, $closed(A)$ is a closed set. _Proof_ Other points do not satisfy $forall B in #B (x), A ∩ B != ∅$
 
 $closed(closed(A)) = closed(A)$
 

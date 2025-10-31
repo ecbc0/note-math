@@ -20,6 +20,7 @@ integral
 divergence
 
 limit-net
+topology
 compact
 connected
 topology-struct-operation
