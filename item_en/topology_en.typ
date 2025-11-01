@@ -14,6 +14,8 @@ In #link(<Minkowski-space>)[], a point $x$ has multiple nets that are not limit-
 
 #tag("continuous") Topological continuity := $f : X -> Y$ is #link(<hom-limit>)[] at every point
 
+*_Todo_* This is also wrong and needs to be corrected. It seems that preserving the limit is not as strong as continuity. This definition of continuity cannot prove that the inverse image of a continuous function preserves the closure.
+
 let $A ⊂ X$
 
 #tag("limit-point") Limit point := $x in X : forall B in #B (x), A ∩ B ≠ ∅$

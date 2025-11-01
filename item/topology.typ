@@ -14,6 +14,8 @@ _*Todo*_ 这里有错, 需要修改. 这种拓扑空间的定义是不够的, �
 
 #tag("continuous") 拓扑连续 := $f : X -> Y$ 在每一点都是 #link(<hom-limit>)[]
 
+*_Todo_* 这也是错的, 需要修改. 看来保持极限并没有连续强. 这种连续的定义并不能证明连续函数的逆像保持闭包
+
 let $A ⊂ X$
 
 #tag("limit-point") 极限点 := $x in X : forall B in #B (x), A ∩ B ≠ ∅$
