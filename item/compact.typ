@@ -84,7 +84,7 @@ _Proof_
 
   $#T _X$ compact ==> $⋂_(A in #A) Closed(f^(-1)(A)) != 0$
 
-  连续函数逆像保持 closed $Closed(f^(-1)(A)) = f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #link(<inverse-image>)[性质]
+  连续函数逆像保持 closed $Closed(f^(-1)(A)) ⊂ f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #link(<inverse-image>)[性质]
   $
     ∅ != f(⋂_(A in #A) f^(-1)(closed(A))) subset ⋂_(A in #A) f(f^(-1)(closed(A)))
   $
