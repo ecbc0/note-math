@@ -55,7 +55,7 @@ $
 $
 #tag("best-interval-decomposition") $A ⊂ ℝ$ 的最优区间分解
 #indent[
-  def $"Interval" ⊂ Subset(ℝ)$ as 所有区间的集合, 包括 open, closed, half open half closed, single point
+  def $"Interval" ⊂ Subset(ℝ)$ as 所有区间的集合, 包括 open, closed, half open half closed, single point (这里不是定义拓扑, 也不需要推广到高维, 所以不需要限制为只有开区间)
 
   def $#J (A) := {I ⊂ A : I ∈ "Interval"}$
 

@@ -340,6 +340,8 @@ Expand according to type definition
   let $S, S' in Subset(A)$
   
   $S = S' <=> (S subset S') and (S' subset S)$
+
+  Or, if `#link(<set-with-element-in-a-type>)["Constructing set theory by type theory"]`, then the definition of equality in sets is reduced to the definition of equality in functions `$f,g: T -> "Bool"$`.
 ]
 #let A = c-bf("A",rgb("#0056e1"))
 

@@ -39,7 +39,7 @@ $#B$ a net of $A$ := $#B ⊂ Subset(A)$ (a collection of subset of $A$) with pro
 
 - 序列 $ℕ -> ℝ$ 收敛 $lim_(n -> ∞) a_n = a$
 #indent[ 
-  使用包含 $a$ 的所有区间 $#B _ ℝ = #I (a)$ 和 $#B _ ℕ = {n, n+1, ⋯}_(n = 0 .. ∞)$, 则 $ℕ -> ℝ$ 极限同态
+  使用包含 $a$ 的所有开区间 $#B _ ℝ = #I (a)$ 和 $#B _ ℕ = {n, n+1, ⋯}_(n = 0 .. ∞)$, 则 $ℕ -> ℝ$ 极限同态
   $
     forall I(a) in #I (a) \
     exists {n,n+1, ⋯} in #B _ ℕ \

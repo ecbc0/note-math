@@ -41,5 +41,7 @@ $n$ 元关系类似
 ]
 #tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists 
 #indent[
-  related to #link(<axiom-of-choice>)[]?
+  也称为 Zorn 引理
+
+  需要 #link(<axiom-of-choice>)[选择公理]: 如果能够对 (某个类型的) 一些集合证明按照存在某种性质的元素, 那么可以定义一个函数, 将这些集合映射到对应的元素
 ]

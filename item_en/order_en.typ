@@ -41,5 +41,7 @@ Partial order can be decomposed into comparable-components that are not comparab
 ]
 #tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists 
 #indent[
-  related to #link(<axiom-of-choice>)[]?
+  Also known as the Zorn Lemma
+
+  Requires #link(<axiom-of-choice>)[Axiom of Choice]: If it can be proven that some sets (of a certain type) have elements with a certain property, then a function can be defined that maps these sets to the corresponding elements.
 ]

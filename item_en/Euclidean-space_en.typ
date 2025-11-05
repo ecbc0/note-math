@@ -55,7 +55,7 @@ $
 $
 #tag("best-interval-decomposition") The optimal interval decomposition of $A ⊂ ℝ$
 #indent[
-  def $"Interval" ⊂ Subset(ℝ)$ as the set of all intervals, including open, closed, half open half closed, single point
+  def $"Interval" ⊂ Subset(ℝ)$ as the set of all intervals, including open, closed, half open half closed, single point. (Here we are not to define topology and no need to generalize to higher dimension, so not need to restrict to only open interval)
 
   def $#J (A) := {I ⊂ A : I ∈ "Interval"}$
 

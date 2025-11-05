@@ -39,7 +39,7 @@ Any net can be supplemented with all finite intersections ${B_1 ∩ ⋯ ∩ B_n 
 
 - Sequence $ℕ -> ℝ$ converges $lim_(n -> ∞) a_n = a$
 #indent[ 
-  Using all intervals containing $a$, $#B _ ℝ = #I (a)$ and $#B _ ℕ = {n, n+1, ⋯}_(n = 0 .. ∞)$, then $ℕ -> ℝ$ is a limit homomorphism
+  Using all open intervals containing $a$, $#B _ ℝ = #I (a)$ and $#B _ ℕ = {n, n+1, ⋯}_(n = 0 .. ∞)$, then $ℕ -> ℝ$ is a limit homomorphism
   $
     forall I(a) in #I (a) \
     exists {n,n+1, ⋯} in #B _ ℕ \

@@ -342,6 +342,8 @@ function space 引入了高级别的无限
   let $S, S' in Subset(A)$
   
   $S = S' <=> (S subset S') and (S' subset S)$
+
+  或者如果 #link(<set-with-element-in-a-type>)["用类型论构造集合论"], 那么集合的相等的定义 reduce to 函数 $f,g: T -> "Bool"$ 相等的定义
 ]
 #let A = c-bf("A",rgb("#0056e1"))
 

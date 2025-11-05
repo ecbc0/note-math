@@ -17,9 +17,11 @@ A net system is not sufficient as a definition of a topological space. For examp
   - $forall x in "int"(A), exists B(x) in #B (x), B(x) ⊂ "int"(A)$
   - $forall y in "ext"(A), exists B(y) in #B (y), B(y) ⊂ "ext"(A)$
 
-(I am not satisfied with the intuitiveness of this definition, I feel it requires operating on arbitrary subsets $A$, which is not natural enough? Welcome better definitions, if any)
-
 Boundary defined as $"bd"(A) := X ∖ ("int"(A) ∪ "ext"(A))$. Its points may belong to $A$ or to $A^∁$
+
+Only need to prove the case of $"int"$, then we can obtain the case of $"ext"$. This is also equivalent to prove that all interiors are open sets ($"int" ∘ "int" = "int"$), or all closures are closed sets.
+
+The proof of topology generation for open interval net of $ℝ$ is to use a distance function and an infimum, proving that a point is in interior ==> exists $δ > 0$ such that $x in B(x, δ) ⊂ "int"(A)$.
 
 In #link(<Minkowski-space>)[], a point $x$ has multiple nets that are not limit-equivalent
 
@@ -90,5 +92,13 @@ _Proof_ ==>. For an open set in $#T _Y$, for each $x in X$ and $f(x) in V$, take
 Since this is no longer the inverse image description version, the open set here cannot be changed to a closed set. Counterexample: Discontinuous function $f(x) = cases(0 "if" x < 0, 1 "if" x >= 0)$. Then the intersection of the inverse image of a closed set $C$ containing $1$ and the closed set $(-∞, 0]$ is also an inverse image, and $f(C ∩ (-∞, 0)) = {1} ⊂ C$. 
 
 #tag("continuous-imp-inv-image-closure-subset-closure-inv-image") Continuous ==> $overline(f^(-1)(A)) ⊂ f^(-1)(closed(A))$
+
+A counterexample to $=$. Using $f: ℝ → ℝ^2, f(x) = (x, 0)$. Let $A = { (x, y) in ℝ^2 : y > 0 }$, then $f(x) ∉ A$, therefore $f^(-1)(A) = ∅$, and thus $overline(f^(-1)(A)) = ∅$. However, $closed(A) = { (x,y) in ℝ^2 : y >= 0}$, therefore $f^(-1)(closed(A)) = ℝ$.
+
+$f$ is an analytic function, not just a continuous function.
+
+#tag("continuous-imp-interior-inv-image-subset-inv-image-interior") Continuous ==> $f^(-1)("int"(A)) ⊂ "int"(f^(-1)(A))$
+
+A counterexample to $=$. Let $f: ℝ -> ℝ$ be a constant function $f(x) ≡ 0$. Let $A = {0}$, then $"int"(A) = ∅$, $f^(-1)("int"(A)) = ∅$. However, $f^(-1)(A) = ℝ$, therefore $"int"(f^(-1)(A)) = ℝ$
 
 Topology from open set version to net version: supplement all finite intersections to the open sets to get a net at each point. The open sets can be recovered using the construction method of open sets for nets.

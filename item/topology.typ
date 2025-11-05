@@ -17,9 +17,11 @@
   - $forall x in "int"(A), exists B(x) in #B (x), B(x) ⊂ "int"(A)$
   - $forall y in "ext"(A), exists B(y) in #B (y), B(y) ⊂ "ext"(A)$
 
-(我对这种定义的直观度并不满意, 感觉需要任意子集 $A$ 来操作, 不够自然? 欢迎更好的定义, 如果有的话)
-
 边界定义为 $"bd"(A) := X ∖ ("int"(A) ∪ "ext"(A))$. 它的点可能属于 $A$ 也可能属于 $A^∁$
+
+只需证明 $"int"$ 的情况, 就可以得到 $"ext"$ 的情况. 也等价于证明所有内部都是开集 ($"int" ∘ "int" = "int"$) 或者所有闭包都是闭集
+
+$ℝ$ 的开区间网生成拓扑的证明方法是使用距离函数和下确界, 证明点在内部 ==> 存在 $δ > 0$ 使得 $x in B(x, δ) ⊂ "int"(A)$
 
 #link(<Minkowski-space>)[] 中, 一点 $x$ 有多个不极限等价的网
 
@@ -86,5 +88,13 @@ _Proof_ ==>. 对 $#T _Y$ 开集, 对每个 $x in X$ 且 $f(x) in V$, 取开集 $
 由于这不再是逆像描述版本, 所以不能将这里的开集改为闭集. 反例: 不连续函数 $f(x) = cases(0 "if" x < 0, 1 "if" x >= 0)$. 那么包含 $1$ 的闭集 $C$ 的逆像与闭集 $(-∞, 0]$ 的交集也是逆像, 而 $f(C ∩ (-∞, 0)) = {1} ⊂ C$. 
 
 #tag("continuous-imp-inv-image-closure-subset-closure-inv-image") 连续 ==> $overline(f^(-1)(A)) ⊂ f^(-1)(closed(A))$
+
+$=$ 的反例. 用 $f: ℝ → ℝ^2, f(x) = (x, 0)$. 取 $A = { (x, y) in ℝ^2 : y > 0 }$, 那么 $f(x) ∉ A$ 从而 $f^(-1)(A) = ∅$ 从而 $overline(f^(-1)(A)) = ∅$. 但是 $closed(A) = { (x,y) in ℝ^2 : y >= 0}$ 从而 $f^(-1)(closed(A)) = ℝ$
+
+$f$ 是解析函数而不仅仅是连续函数
+
+#tag("continuous-imp-interior-inv-image-subset-inv-image-interior") 连续 ==> $f^(-1)("int"(A)) ⊂ "int"(f^(-1)(A))$
+
+$=$ 的反例. 设 $f: ℝ -> ℝ$ 是常值函数 $f(x) ≡ 0$. 设 $A = {0}$, 则 $"int"(A) = ∅$, $f^(-1)("int"(A)) = ∅$. 但是 $f^(-1)(A) = ℝ$ 所以 $"int"(f^(-1)(A)) = ℝ$
 
 开集版本的拓扑到 net 版本的拓扑: 对开集补充所有有限交集, 得到每一点处的网. 可以用网的开集构造方法来恢复开集
