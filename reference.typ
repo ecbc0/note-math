@@ -132,3 +132,10 @@
 #tag("ref-28"):\
   title: Quantum Mecahnics and Geometry\
   author: Li Si (李思)
+
+#tag("ref-29"):\
+  title: Naive Set Theory\
+  author: Paul. R. Halmos
+
+#tag("ref-30"):\
+  url: https://github.com/ecbc0/ac-math
