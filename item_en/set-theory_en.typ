@@ -385,6 +385,8 @@ let $#A in Set(Set(T))$
 
   - In set theory, restricting the intersection of a family of sets $⋂ #A$ to be within the union of that family $⋃ #A$, has a certain logic to it: it is the minimal common container set for all elements of the sets in $#A$. However, this makes the definition of intersection dependent on the definition of union, and this dependency breaks the symmetry
 
+    The intuition that the intersection of a empty family of sets is the universal set: because the intersection decreases with respect to ⊂, hence intersection increases when the set family go towards the direction of empty family of sets.
+
   However, every set does have a unique type, thus these problems will be solved.
 
   However, if you allow forall statement to be restricted to general sets $U$ or subtype $U$, then the intersection of the empty sets is the universal set of $U$, not the universal set of type $T$ in which the elements of $U$ are located.

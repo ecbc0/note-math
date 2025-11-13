@@ -4,14 +4,18 @@
 #let B = c-bf("B", rgb("#919191"))
 #let I = c-bf("I", rgb("#919191"))
 
-#tag("net") 
+网介于偏序和线序之间. 在偏序集 $P$ 中加上 $forall a, b in P ==> exists c in P, c <= a and c <= b$
+
+通常也用等价的集合网形式
+
+#tag("set-net") 
 #indent[
 $#B$ a net of $A$ := $#B ⊂ Subset(A)$ (a collection of subset of $A$) with property 
   - $forall B ∈ #B, B != ∅$
   - $forall B_1 ,…, B_n ∈ #B, exists B ∈ #B, B ⊂ B_1 ∩ ⋯ ∩ B_n$ 
   - (含义: 收敛到极限之前非空. 如果 $#B$ 元素无限那么有限交集控制着收敛方向, 尽管可能 $∅ = ⋂ #B$. 如果 $#B = {B_1 ,…, B_n}$ 元素有限那么 $∅ != B_1 ∩ ⋯ ∩ B_n ∈ #B$)
 ]
-*Example* $X = ℕ$, 网 $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
+*Example* $X = ℕ$, 在 $X(<=) := ℕ(>=)$ 下是网. 或者用集合网 $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
 
 点网 or 包含点 $x in X$ 的网 $#B (x) := forall B in #B (x), x in B$
 

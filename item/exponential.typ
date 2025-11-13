@@ -7,7 +7,7 @@
 
   对于指数是实数, 将指数函数 $x ⇝ a^x$ 定义为满足 $a^(x+y) = a^x a^y$ and $a^1 = a$
 
-  假设 $f(x) = a^x$ 解析. 对 $f(x+y) = f(x)f(y)$ 幂级数展开 (需要 $ℝ,ℂ,ℂ_"split"$ 的交换性?)
+  假设 $f(x) = a^x$ 解析. 对 $f(x+y) = f(x)f(y)$ 幂级数展开 (需要 $ℝ,ℂ,ℂ_"split"$ 的交换性?) (先假设存在满足这种性质的函数 $f$, 推导出形式 $f(x) = sum ((f^((1)) (0))/n! x)^n$, 再反过来证明 $f$ 满足这种性质)
 
   两边展开
   $
@@ -24,6 +24,8 @@
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
   #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+
+  *Todo* 证明 $f(x) = sum ((f^((1)) (0))/n! x)^n$ 满足 $f(x + y) = f(x) f(y)$. (证明使用的技术: 绝对收敛, 重排不变, 确界, 迫敛性 (其中一边是上确界), "三角形式 (相对于 $(j, k) in ℕ^2$ 矩形)" 的求和 $sum_(i = 1..n) sum_(j + k = n)$)
 
   从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #link(<inverse-analytic>)[解析逆]
 

@@ -4,14 +4,18 @@
 #let B = c-bf("B", rgb("#919191"))
 #let I = c-bf("I", rgb("#919191"))
 
-#tag("net") 
+net lies between partial and linear order. in a partial set $P$, add $forall a, b in P ==> exists c in P, c <= a and c <= b$
+
+This is often also expressed as an equivalent set net.
+
+#tag("set-net") 
 #indent[
 $#B$ a net of $A$ := $#B ⊂ Subset(A)$ (a collection of subset of $A$) with property 
   - $forall B ∈ #B, B != ∅$
   - $forall B_1 ,…, B_n ∈ #B, exists B ∈ #B, B ⊂ B_1 ∩ ⋯ ∩ B_n$ 
   - (Meaning: Non-empty before converging to the limit. If the number of $#B$ elements is infinite, then the finite intersection controls the direction of convergence, although possibly $∅ = ⋂ #B$. If $#B = {B_1 ,…, B_n}$ has a finite number of elements, then $∅ != B_1 ∩ ⋯ ∩ B_n ∈ #B$)
 ]
-*Example* $X = ℕ$, net $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
+*Example* $X = ℕ$, under $X(<=) := ℕ(>=)$ is a net. Or use a set net $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
 
 Point net or net containing point $x in X$ $#B (x) := forall B in #B (x), x in B$
 

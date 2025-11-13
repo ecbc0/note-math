@@ -141,6 +141,8 @@ Because of the existence of $< 0$, multiplication does not preserve order. But t
 ]
 $ℤ,ℚ,ℝ$'s $+,⋅$ all have associativity, commutativity, and distributivity
 
+In fact, for multiplication and its theorems, a possible more convenient approach than using Dedekind partitioning and linear ordering might be to use the limit of a rational interval net (net lies between partial and linear order).
+
 #tag("completeness-real") $ℝ$ completeness
 
 #tag("exact-bound") Least-upper-bound property
@@ -158,43 +160,24 @@ $ℤ,ℚ,ℝ$'s $+,⋅$ all have associativity, commutativity, and distributivit
 ]
 #tag("nested-closed-interval-theorem") Nested interval theorem
 #indent[
-  Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ and infimum $a_0$ for the endpoints with $a_0 <= a_1$ to get the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
+  Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ to set of lower end point, and use infimum $a_0$ to set of upper end point, then get $a_0 <= a_1$, and get that the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
 ] 
+#tag("closed-interval-intersection-theorem")
+#indent[
+  In fact, we only need to ensure that the smaller endpoints of closed intervals are all less than or equal to the larger endpoints to obtain a non-empty intersection.
+
+  _Proof_ Similarly, applying the supremum $a_0$ to the smaller endpoints and the infimum $a_1$ to the larger endpoints, we obtain that with $a_0 <= a_1$, the intersection of the family of closed intervals is a closed interval $[a_0,a_1] ≠ ∅$.
+]
 #let B = c-bf("B", rgb("#919191"))
 #let C = c-bf("C", rgb("#919191"))
 #tag("closed-interval-net-theorem") Closed interval #link(<net>)[net] $#B$ intersection is non-empty $⋂ #B != ∅$
 
 _Proof_
 #indent[
-  Supplement the net $#B$ with all finite intersections
-
-  Take a $#B$ #link(<maximal-linear-order>)[maximal linearly ordered chain] $#C subset #B$. By the nested interval theorem, its intersection is a non-empty closed interval $⋂ #C != ∅$
-
-  By the linear order maximality of $#C$, intuitively, the closed interval $⋂ #C$ will be smaller than all closed intervals of $#B$, so $⋂ #C subset ⋂ #B$
-
-  $forall B in #B$, we prove $⋂ #C subset B$
-
-  Define the closed interval linear ordered chain $#C _B = {B ∩ C in #B : C in #C}$. $B ∩ C subset B$. We prove $⋂ #C _B = ⋂ #C$
-
-  Proof by contradiction. Assume $⋂ #C _B subset.neq ⋂ #C$. Then the small/large endpoint of $⋂ #C _B$ is larger/smaller than the small/large endpoint of $⋂ #C$
-
-  use: The $subset$ linear ordered chain satisfies $⋂_(A supset A_0) A = A_0$
-
-  - If the closed interval $⋂ #C _B ∉ #B$, then according to $⋂ #C _B subset.neq ⋂ #C$, use the $ℝ$ exact bound principle for the endpoints of closed interval, $exists B ∩ C_0 in #C _B$
-  #indent[
-    $
-      ⋂ #C _B &subset B ∩ C_0 \ 
-      &= ⋂_(B ∩ C supset B ∩ C_0) B ∩ C \ 
-      &subset.neq ⋂ #C
-    $
-    $
-      C_0 in #C subset #B ==>
-      B ∩ C_0 in #B \
-    $
-    There exists $B ∩ C_0 in #B$ and $B ∩ C_0 subset ⋂ #C$, which contradicts that $⋂ #C$ is a $⊂$ maximal linear ordered chain of $#B$
-  ]
-  - If the closed interval $⋂ #C _B in #B$, the same contradiction applies
+  Closed interval net ==> The smaller endpoints of closed intervals are all $<=$ the larger endpoints
 ]
+The reverse statement, "the smaller endpoints of closed intervals are all $<=$ the larger endpoints ==> closed interval net" does not hold. Consider a family of closed intervals consisting of only two intervals $B_1, B_2$ with a non-empty intersection $B_1 ∩ B_2 != ∅$ and $B_1 ∩ B_2 ⊊ B_1, B_2$; there is no third interval in their intersection. Although after adding finite intersection, it's true
+
 let $a_n : ℕ -> ℝ$
 
 def $ℕ -> ℝ$ sequence $k ⇝ sup_(k >= n) {a_k}$ monotone decreasing, $k ⇝ inf_(k >= n) {a_k}$ monotone increasing

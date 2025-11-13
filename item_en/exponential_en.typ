@@ -7,7 +7,7 @@
 
   For the exponent being a real number, define the exponential function $x ⇝ a^x$ as satisfying $a^(x+y) = a^x a^y$ and $a^1 = a$
 
-  Assume $f(x) = a^x$ is analytic. Power series expansion of $f(x+y) = f(x)f(y)$ (requires commutativity of $ℝ,ℂ,ℂ_"split"$?)
+  Assume $f(x) = a^x$ is analytic. Power series expansion of $f(x+y) = f(x)f(y)$ (requires commutativity of $ℝ,ℂ,ℂ_"split"$?) (First, assume that there exists a function $f$ that satisfies this property, and derive the form $f(x) = sum((f^((1))(0))/n!x)^n$, then prove that $f$ satisfies this property.)
 
   Expand both sides
   $
@@ -25,6 +25,8 @@
   $
 
   #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+
+  *Todo* Prove that $f(x) = sum((f^((1))(0))/n!x)^n$ satisfies $f(x + y) = f(x) f(y)$. (Techniques used in the proof: absolute convergence, rearrangement invariance, supremum, forced convergence (where one side is supremum), summation in "triangular form" (relative to $(j, k) in ℕ^2$ rectangle) $sum_(i = 1..n) sum_(j + k = n)$)
 
   from the series, we can see that, differential $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ exists #link(<inverse-analytic>)[]
 
