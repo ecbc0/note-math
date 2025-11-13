@@ -76,6 +76,8 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
 
+*Note* An error was found in the proof. Counterexample: Two sets $B_1 = [0, 1] ∪ [2, 3], B_2 = [2, 3]$ form a net. The best interval decomposition of $B_1$ is $[0, 1] ∪ [2, 3]$. The single-element chain ${[0, 1]}$ is a maximal interval chain, and the intersection of this chain is $[0, 1]$. However, the intersection of the net is $B_1 ∩ B_2 = [2, 3]$. Furthermore, the most best interval decomposition of a closed set may not necessarily be closed intervals; for example, the construction of the Cantor set might be a counterexample.
+
 _Proof_ 
 #let B = c-bf("B", rgb("#919191"))
 #let C = c-bf("C", rgb("#919191"))

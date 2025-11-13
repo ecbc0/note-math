@@ -76,6 +76,8 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") $ℝ$ 有界闭区间 ==> #link(<compact>)[]
 
+*Note* 发现证明的错误. 反例: 两个集合 $B_1 = [0, 1] ∪ [2, 3], B_2 = [2,3]$ 组成网. $B_1$ 的最优区间分解 $[0, 1] ∪ [2, 3]$. 单元素链 ${ [0, 1] }$ 是极大区间链, 此链的交集是 $[0, 1]$. 但是网的交集是 $B_1 ∩ B_2 = [2, 3]$. 而且, 闭集的最有区间分解可能不一定都是闭区间, 例如, 可能 Cantor 集那种构造是反例
+
 _Proof_ 
 #let B = c-bf("B", rgb("#919191"))
 #let C = c-bf("C", rgb("#919191"))
