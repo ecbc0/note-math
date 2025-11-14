@@ -12,7 +12,7 @@ _Proof_ The intuition in the real world is that for counting $+1$, no matter how
 
 There are two definitions of addition, $(a + b) + 1 = a + (b + 1)$ or $(a + 1) + b = (a + b) + 1$. By swapping the inputs (midway) in one definition of addition, we can get the other definition of addition. Proving the commutativity of addition means proving that the two definitions give the same output for the same inputs. Intuitively, the result is of course the same, it's just that the amount to be counted is placed in a different "slot position", thus "commutative"
 
-To an extreme, if we always set conclusions that can be proven with a few axioms as axioms, then we will have no proofs at all. So we may use minimal axiom, but at least let us choose the more symmetric assumption $(a + b) + 1 = (a + 1) + b = a + (b + 1)$.
+Alternatively, for a function of counting $ℕ × ℕ$ in two positions, if one position $ℕ$ is counted first and then used as the "base position," and the other position $ℕ$ is counted again and used as the "incrementing position," the result is the "total count" $ℕ$. The commutative property states that swapping the two positions still yields the same result—the "total count."
 
 Natural number $ℕ$ multiplication
 #indent[
@@ -224,7 +224,7 @@ _Proof_
   
   Thus $a_n$ converges to $a$
 
-  For nets, by the closed interval net theorem, let $a in ⋂_(B in #B) B != ∅$. Using limit-distance-vanish-net, we obtain that the net converges $lim_(B in #B) sup_(a_B in B) |a_B - a| = 0$
+  For nets, by the upper and lower bounds of closed interval net. Using limit-distance-vanish-net, we obtain that the net converges $lim_(B in #B) sup_(a_B in B) |a_B - a| = 0$
 ]
 Conversely, a convergent sequence is limit-distance-vanish. by the triangle inequality $|a_m - a_m'| <= |a_m - a| + |a_m' - a|$
 

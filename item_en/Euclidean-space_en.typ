@@ -76,23 +76,57 @@ recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
 
-*Note* An error was found in the proof. Counterexample: Two sets $B_1 = [0, 1] ∪ [2, 3], B_2 = [2, 3]$ form a net. The best interval decomposition of $B_1$ is $[0, 1] ∪ [2, 3]$. The single-element chain ${[0, 1]}$ is a maximal interval chain, and the intersection of this chain is $[0, 1]$. However, the intersection of the net is $B_1 ∩ B_2 = [2, 3]$. Furthermore, the most best interval decomposition of a closed set may not necessarily be closed intervals; for example, the construction of the Cantor set might be a counterexample.
-
 _Proof_ 
 #let B = c-bf("B", rgb("#919191"))
 #let C = c-bf("C", rgb("#919191"))
 #indent[
-  let $#B$ be a #link(<net>)[net] of $A$. let $B in #B$
+Assume $A$ is a bounded closed interval, and $#B$ is a net of $A$
 
-  Since $A ⊂ ℝ$ is bounded and closed, $closed(B) ⊂ A$
+Since $A$ is a closed set, the definition of $closed(B)$ is the same for the topologies of $ℝ$ and $A$
 
-  Take the optimal closed interval decomposition $closed(B) = ⨆ #I (closed(B))$
+Since $A$ is bounded, we can define the non-empty infimum set $L = {inf(B) in ℝ : B in #B}$ and the supremum set $U = {sup(B) in ℝ : B in #B}$
 
-  For all decomposed closed intervals of $B in #B$, consider any $⊂$ maximal linear order chain #link(<maximal-linear-order>)[] $#C$
+According to the property of nets (or using the corresponding interval net $[inf(B), sup(B)]$), it can be proven that all numbers in $L$ are $<=$ all numbers in $U$
 
-  According to #link(<nested-closed-interval-theorem>)[], the intersection of a nested set of closed intervals in the $⊂$ linear order is a non-empty closed interval $⋂ #C != ∅$
+$L$ has an upper bound, $U$ has a lower bound, so we can take the infimum/supremum, and it satisfies $sup(L) <= inf(U)$
 
-  Similar to the proof of #link(<closed-interval-net-theorem>)[], prove that $⋂ #C$ is the smallest closed interval, thus $subset$ every $B in #B$
+We prove that $l = sup(L) in ⋂_(B in #B) closed(B)$
+
+Take $B_0 in #B$, prove that $l in closed(B)_0$
+
+_Proof_
+#indent[
+    Define $S = { inf(B) : B in #B and B ⊂ B_0 }$
+
+    $S != ∅$ because $B_0 in S$
+
+    $inf(B) in closed(B) ⊂ closed(B)_0$
+
+    $closed(B)_0$ is a closed set, so $l_0 = sup(S) in closed(B)_0$
+
+    $S = { inf(B) : B in #B and B ⊂ B_0 } ⊂ { inf(B) : B in #B } = L$
+
+    Therefore $l_0 = sup(S) <= sup(L) = l$
+
+    That is $l_0 <= l$
+
+    Next, prove $l <= l_0$
+
+    For each $B_1 in #B$, _since $#B$ is a net_, there exists $B in #B$ such that $B ⊂ B_0 ∩ B_1$
+
+    Thus $B ⊂ B_0$, so $inf(B) in S$ and $inf(B) <= sup(S)$
+
+    And $B ⊂ B_1$, so $inf(B_1) <= inf(B)$
+
+    By the arbitrariness of selecting $B_1 in #B$, we have $sup(S)$ being the upper bound of $L = { inf(B_1) : B_1 in #B }$, thus $sup(L) <= sup(S)$, which means $l <= l_0$
+
+    Therefore $l = l_0$
+
+    Since $l_0 in closed(B)_0$, then $l in closed(B)_0$
+]
+Due to the arbitrary choice of $B_0 in #B$, we have $l in ⋂_(B in #B) closed(B)$
+
+Therefore $⋂_(B in #B) closed(B) != ∅$
 ]
 #tag("compact-imply-subsequence-converge") $A$ compact ==> sequence ${x_n} ⊂ A$ has a convergent subsequence. The same applies to nets
 

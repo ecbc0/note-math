@@ -76,23 +76,57 @@ recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)
 
 #tag("bounded-closed-interval-is-compact") $ℝ$ 有界闭区间 ==> #link(<compact>)[]
 
-*Note* 发现证明的错误. 反例: 两个集合 $B_1 = [0, 1] ∪ [2, 3], B_2 = [2,3]$ 组成网. $B_1$ 的最优区间分解 $[0, 1] ∪ [2, 3]$. 单元素链 ${ [0, 1] }$ 是极大区间链, 此链的交集是 $[0, 1]$. 但是网的交集是 $B_1 ∩ B_2 = [2, 3]$. 而且, 闭集的最有区间分解可能不一定都是闭区间, 例如, 可能 Cantor 集那种构造是反例
-
 _Proof_ 
 #let B = c-bf("B", rgb("#919191"))
 #let C = c-bf("C", rgb("#919191"))
 #indent[
-  let $#B$ 是 $A$ 的 #link(<net>)[]. let $B in #B$
+  假设 $A$ 是有界闭区间, $#B$ 是 $A$ 的网
 
-  由 $A ⊂ ℝ$ 有界闭, $closed(B) ⊂ A$
+  由于 $A$ 是闭集, 故 $closed(B)$ 的定义对 $ℝ, A$ 的拓扑都相同
+  
+  由于 $A$ 有界, 可以定义非空下确界集 $L = {inf(B) in ℝ : B in #B}$ 和上确界集 $U = {sup(B) in ℝ : B in #B}$
+  
+  根据网的性质 (或者使用相应的区间网 $[inf(B), sup(B)]$), 可以证明 $L$ 的数都 $<=$ $U$ 的数 
+  
+  $L$ 有上界, $U$ 有下界, 于是可以取确界, 且满足 $sup(L) <= inf(U)$ 
+  
+  我们证明 $l = sup(L) in ⋂_(B in #B) closed(B)$
 
-  取最优闭区间分解 $closed(B) = ⨆ #I (closed(B))$
+  取 $B_0 in #B$, 证明 $l in closed(B)_0$
 
-  对所有 $B in #B$ 的分解闭区间, 考虑任何 $⊂$ 极大线序链 #link(<maximal-linear-order>)[] $#C$
+  _Proof_
+  #indent[
+    定义 $S = { inf(B) : B in #B and B ⊂ B_0 }$
 
-  根据 #link(<nested-closed-interval-theorem>)[], $⊂$ 线序的闭区间套的交集是非空闭区间 $⋂ #C != ∅$
+    $S != ∅$ 因为 $inf(B_0) in S$
 
-  类似 #link(<closed-interval-net-theorem>)[] 的证明, 证明 $⋂ #C$ 是极小的闭区间, 从而 $subset$ 每个 $B in #B$
+    $inf(B) in closed(B) ⊂ closed(B)_0$
+
+    $closed(B)_0$ 是闭集, 所以 $l_0 = sup(S) in closed(B)_0$
+
+    $S = { inf(B) : B in #B and B ⊂ B_0 } ⊂ { inf(B) : B in #B } = L$
+    
+    所以 $l_0 = sup(S) <= sup(L) = l$
+
+    即 $l_0 <= l$
+
+    再证明 $l <= l_0$
+
+    对每个 $B_1 in #B$, _由于 $#B$ 是网_, 所以存在 $B in #B$ 使得 $B ⊂ B_0 ∩ B_1$
+
+    从而 $B ⊂ B_0$, 所以 $inf(B) in S$ 且 $inf(B) <= sup(S)$ 
+    
+    并且 $B ⊂ B_1$, 所以 $inf(B_1) <= inf(B)$
+
+    由 $B_1 in #B$ 选取的任意性, 我们有 $sup(S)$ 是 $L = { inf(B_1) : B_1 in #B }$ 的上界, 于是 $sup(L) <= sup(S)$, 也即 $l <= l_0$
+
+    从而 $l = l_0$
+
+    由于 $l_0 in closed(B)_0$, 所以 $l in closed(B)_0$
+  ]
+  由 $B_0 in #B$ 选取的任意性, 有 $l in ⋂_(B in #B) closed(B)$
+
+  于是 $⋂_(B in #B) closed(B) != ∅$
 ]
 #tag("compact-imply-subsequence-converge") $A$ compact ==> 序列 ${x_n} ⊂ A$ 存在子序列收敛. 对 net 同理
 
