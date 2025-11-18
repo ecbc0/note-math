@@ -21,9 +21,13 @@ $ℝ$ 没有 $∞$ 对应到可能的极限 $0$
 
 let $#T _X$ #link(<topology>)[拓扑空间]. let $A subset X$
 
-#tag("compact") $A$ compact := forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
+#tag("compact") $A$ compact := forall $#B$ net of $A$, exists $x in A$, forall $U in #T _X (x)$, forall $B in #B$, $U ∩ B != ∅$
 
-含义: 任何 #link(<net>)[网] $#B$ 的元素在拓扑 $#T _X$ 下有共同的极限点集. 或者, 经过 $#T _X$ 闭包后网 $#B$ 收敛到非空集 or 交集非空, 而不是收敛到空集 (例如 Euclidean $ℝ^d$ 收敛到空集或者收敛到无穷远, 但还有很多其它复杂的情况)
+含义: 任何 #link(<net>)[网] $#B$ 的元素在拓扑 $#T _X$ 下存在共同的极限点. 或者, 经过 $#T _X$ 闭包后网 $#B$ 收敛到非空集 or 交集非空, 而不是收敛到空集 (例如 Euclidean $ℝ^d$ 收敛到空集或者收敛到无穷远, 但还有很多其它复杂的情况)
+
+通过等价 limit <==> image net finer, 也可以用任意 source_net_space -> target_topology_space 函数, 代替任意 $A$ 的 net $#B$, 来表示 compact. 虽然这会引入 "额外" 的定义域 source_net_space
+
+根据极限点和闭集的定义, $A$ compact 等价于: forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
 
 任何网都可以补充所有的有限交集并保持 #link(<net-same-limit>)[相同的极限], 所以对于 compact, 等价的描述是 
 

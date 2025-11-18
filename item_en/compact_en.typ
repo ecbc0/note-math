@@ -21,9 +21,13 @@ Compare $⋂ [0,1/n) = {0}$
 
 let $#T _X$ #link(<topology>)[topological space]. let $A subset X$
 
-#tag("compact") $A$ compact := forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
+#tag("compact") $A$ compact := forall $#B$ net of $A$, exists $x in A$, forall $U in #T _X (x)$, forall $B in #B$, $U ∩ B != ∅$
 
-Meaning: The elements of any #link(<net>)[net] $#B$ have a common limit point set under the topology $#T _X$. Or, after $#T _X$ closure, the net $#B$ converges to a non-empty set or the intersection is non-empty, instead of converging to the empty set (e.g., Euclidean $ℝ^d$ converges to the empty set or converges to infinity, but there are many other complex situations)
+Meaning: The elements of any #link(<net>)[net] $#B$ have a common limit point under the topology $#T _X$. Or, after $#T _X$ closure, the net $#B$ converges to a non-empty set or the intersection is non-empty, instead of converging to the empty set (e.g., Euclidean $ℝ^d$ converges to the empty set or converges to infinity, but there are many other complex situations)
+
+By using the equivalent limit <==> image net finer, compact can also be represented by replacing any net $#B$ of $A$ with any source_net_space -> target_topology_space function. Although this introduces an "extra" domain source_net_space
+
+According to the definitions of limit points and closed sets, $A$ compact is equivalent to: forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
 
 Any net can replenish all finite intersections and maintain #link(<net-same-limit>)[the same limit], so for compact, the equivalent description is 
 

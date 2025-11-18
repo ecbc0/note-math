@@ -4,6 +4,8 @@
 #let B = c-bf("B", rgb("#919191"))
 #let I = c-bf("I", rgb("#919191"))
 
+Topology doesn't seem to provide a sufficient motivation for using the concept of a net, but the definitions of measure and integral should.
+
 net lies between partial and linear order. in a partial set $P$, add $forall a, b in P ==> exists c in P, c <= a and c <= b$
 
 This is often also expressed as an equivalent set net.
