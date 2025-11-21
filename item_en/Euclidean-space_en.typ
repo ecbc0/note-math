@@ -30,6 +30,11 @@ let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
         |v| &<= |v-w| + |w| \
         |w| &<= |v-w| + |v|
       $
+  - A more general inequality when $dim >= 2$ should be $|v + w| <= K (|v| + |w|)$. For simplicity, we temporarily do not use this more general assumption.
+
+    For the $p$ norm $|v|_p = (|v_1|^p + ⋯ + |v_n|^p)^(1/p)$, the infimum of $K$ such that $|v + w|_p <= K(|v|_p + |w|_p)$, or the supremum of $(|v + w|_p)/(|v|_p + |w|_p)$ over $v, w$, is $2^(1/p - 1)$.
+
+    (_Proof_ First, calculate an upper bound for $(|v + w|_p)/(|v|_p + |w|_p)$, then prove that it is the supremum. Use differential techniques to prove that for $a, b >= 0$, $(a + b)^p <= a^p + b^p$. Apply it to the components of the $p$ norm. Let $x = |v|_p, y = |w|_p$, and convert to trying to calculate the maximum value of $f(x,y) = (x^p + y^p)^(1/p) / (x + y)$. Due to homogeneity, scaling $f(a x, a y) = f(x, y)$ does not affect the result. Assume $y = 1$. Use differential methods to calculate the maximum value of $g(x) = (x^p + 1)^(1/p) / (x + 1)$, obtaining the upper bound $2^(1/p - 1)$. Then, use the embedding $v = (1, 0), w = (0, 1)$ in $ℝ^2$ to show that this value can be achieved, so $2^(1/p - 1)$ is the supremum. When $0 < p < 1$, $2^(1/p - 1) > 1$, which makes the normal triangle inequality invalid.)
 #tag("Euclidean-space-topology") Euclidean $ℝ^d$ topology. $f : ℝ^d -> ℝ^d'$ is continuous at $a ∈ ℝ^d$ :=
   $
     forall ε > 0, exists δ > 0, forall x : |x - a| < δ, |f(x) - f(a)| < ε
@@ -270,7 +275,7 @@ A net can be composed of tails $B_n = {x_n,x_(n+1),...}$
 #indent[
   in $ℝ^n$, limit-distance-vanish net converges to a point
   
-  According to the closed set net theorem ==> let $x in ⋂_(B ∈ #B) closed(B) != ∅$
+  $ℝ^n$ bounded closed = compact ==> let $x in ⋂_(B ∈ #B) closed(B) != ∅$
 
   limit-distance-vanish $lim_(B ∈ #B)|B| = 0$ ==> $⋂_(B ∈ #B) closed(B) = {x}$
 ]

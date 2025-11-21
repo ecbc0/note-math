@@ -30,6 +30,11 @@ let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
         |v| &<= |v-w| + |w| \
         |w| &<= |v-w| + |v|
       $
+  - $dim >= 2$ 时更一般的不等式应该是 $|v + w| <= K (|v| + |w|)$. 为简便起见, 暂时不使用这种更一般的假设
+  
+    对于 $p$ norm $|v|_p = (|v_1|^p + ⋯ + |v_n|^p)^(1/p)$, $|v + w|_p <= K(|v|_p + |w|_p)$ 的 $K$ 的下确界, 或者 $(|v + w|_p)/(|v|_p + |w|_p)$ 对 $v, w$ 的上确界, 是 $2^(1/p - 1)$ 
+  
+    (_Proof_ 先计算出 $(|v + w|_p)/(|v|_p + |w|_p)$ 的一个上界, 然后证明它是确界. 用微分技术证明对 $a, b >= 0$ 有 $(a + b)^p <= a^p + b^p$. 作用于 $p$ norm 的分量. 令 $x = |v|_p, y = |w|_p$, 转为尝试计算 $f(x,y) = (x^p + y^p)^(1/p) / (x + y)$ 的最大值. 由于齐次性, 伸缩 $f(a x, a y) = f(x, y)$ 不影响结果. 假设 $y = 1$. 用微分方法计算 $g(x) = (x^p + 1)^(1/p) / (x + 1)$ 的最大值, 得到上界 $2^(1/p - 1)$. 再用 $ℝ^2$ 嵌入的 $v = (1, 0), w = (0, 1)$ 说明可以取到, 于是 $2^(1/p - 1)$ 是上确界. 当 $0 < p < 1$ 时, $2^(1/p - 1) > 1$, 这使得正常的三角不等式不成立)
 #tag("Euclidean-space-topology") Euclidean $ℝ^d$ 拓扑. $f : ℝ^d -> ℝ^d'$ 在 $a ∈ ℝ^d$ 连续 :=
   $
     forall ε > 0, exists δ > 0, forall x : |x - a| < δ, |f(x) - f(a)| < ε
@@ -270,7 +275,7 @@ or $forall ε > 0, exists B ∈ #B, |B| < ε$. 网的尾部有界
 #indent[
   in $ℝ^n$, limit-distance-vanish 网收敛于一点
   
-  根据闭集网定理 ==> let $x in ⋂_(B ∈ #B) closed(B) != ∅$
+  $ℝ^n$ 有界闭集 = compact ==> let $x in ⋂_(B ∈ #B) closed(B) != ∅$
 
   limit-distance-vanish $lim_(B ∈ #B)|B| = 0$ ==> $⋂_(B ∈ #B) closed(B) = {x}$
 ]

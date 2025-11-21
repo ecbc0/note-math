@@ -102,19 +102,35 @@ _Proof_
 
   <==> $product_(i = 1 .. n) a_i <= 1/n sum_(i = 1 .. n) (a_i)^n$
 
-  Use differential method to calculate the extreme value. Consider the function
+  Use differential method to calculate the extreme value. Consider to prove
 
-  $ (a_1) + ⋯ + (a_n)^n - n a_1 ⋯ a_n $
+  $ f = (a_1)^n + ⋯ + (a_n)^n - n a_1 ⋯ a_n >= 0$
 
-  First derivative
+  Since the problem is homogeneous, we only need to consider the case where $a_1 ⋯ a_n = 1$. Let $g(a_1 ,…, a_n) = n a_1 ⋯ a_n$
 
-  $ ∂_i = n ( a_i^(n-1) - a_1 ⋯ a_n without a_i) $
+  If some $a_i >= root(n, n)$, then $f >= 0$. So we only need to consider $0 <= a_1 ,…, a_n <= root(n, n)$
 
-  The first derivative equals zero, solving the equation yields
+  The boundary of the intersection of $0 <= a_1 ,…, a_n <= root(n, n)$ and $a_1 ⋯ a_n = 1$ is when some $a_i = root(n, n)$, in which case $f >= 0$. We only need to consider points where the differential is zero.
+
+  Using the Lagrangian multiplier method. For the differential of $f$ to be zero on the tangent space of the surface $a_1 ⋯ a_n = 1$, it is equivalent to the gradients $∇ f$ and $∇ g$ being collinear.
+
+  First-order differential
+
   $
-    ∂_1 = ⋯ = ∂_n = 0 ==> a_1 = ⋯ = a_n 
+    ∂_i f = n ( a_i^(n-1) - a_1 ⋯ a_n without a_i)
+    = n/a_i (a_i^n - a_1 ⋯ a_n) = n/a_i (a_i^n - 1)
   $
-  Second derivative
+  $
+    ∂_i g = n a_1 ⋯ a_n without a_i = n/a_i
+  $
+  Collinearity $∂_i f = λ ∂_i g$ implies
+  $
+    a_i^n - 1 = λ \
+    a_1 = ⋯ = a_n = root(n, 1 + λ)
+  $
+  At this point $f = 0$
+
+  Second derivative of $f$
   $
     ∂_i ∂_i &= n (n-1) a_i^(n-2) \
     ∂_i ∂_j &= - n a_1 ⋯ a_n without a_i a_j
@@ -147,7 +163,7 @@ _Proof_
     &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
     &= sum_(i < j) (b_i - b_j)^2 
   $
-  So at $a_1 = ⋯ = a_n$ the first derivative is zero and the second derivative is (semi) positive definite, the function will not become smaller nearby, so that's the minimum, and it's $0$
+  So at $a_1 = ⋯ = a_n$ the first derivative is zero and the second derivative is (semi) positive definite, the function will not become smaller nearby, so that's the local minimum, and it's $0$
 ]
 #tag("best-multiplication-decomposition") Optimal multiplication decomposition 
 #indent[

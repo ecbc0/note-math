@@ -11,7 +11,7 @@
 #indent[
   - real-number
   #indent[
-    - Using a closed interval $subset$ linear order chain more general than a nested sequence of closed intervals $ℕ$ to prove the nested interval theorem, which will later be used to prove the compactness of bounded closed intervals in $ℝ$
+    - Prove bounded closed net theorem, which will later be used to prove the compactness of bounded closed intervals in $ℝ$
   ]
   - limit-sequence
   #indent[
@@ -21,7 +21,7 @@
   ]
   - Euclidean-space
   #indent[
-    - Optimal interval decomposition of sets in $ℝ$. Used to prove the compactness of bounded closed intervals in $ℝ$, and to prove that a set in $ℝ$ is connected <==> an interval
+    - Maximal interval decomposition of sets in $ℝ$. Used to prove that a set in $ℝ$ is connected <==> an interval
 
     - Defining compact using nets. Using Riemann sphere or stereographic projection method to inductively prove that a set in Euclidean $ℝ^n$ is compact <==> bounded and closed
 

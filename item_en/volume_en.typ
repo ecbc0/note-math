@@ -9,7 +9,6 @@
     t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 1
   $
   
-
   is a well-defined affine point, or rather the coordinate definition does not depend on the choice of origin. Let the coordinates of $x_i$ be $v_i$. Change the origin $v_i' = v_i + Δ$
   $
     sum t_i (v_i + Δ) = (sum t_i v_i) + (sum t_i) Δ = (sum t_i v_i) + Δ
@@ -85,7 +84,7 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 #tag("volume-of-parallelogram") Volume assumption for $ℝ^n$
 - Translation invariant
 - Reflection invariant (unsigned volume)
-- Finite $⨆$ -> finite volume $sum$ 
+- Finite $⨆$ (disjoint in the sense of zero measure) -> finite volume $sum$ 
 - If $v_1 ,…, v_n$ are not linearly independent, then in the lower-dimensional subspace, so the $n$-order volume is defined as zero
  
 #tag("volume-of-simplex") is $1/n!$ of volume-of-parallelogram

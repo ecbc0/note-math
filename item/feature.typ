@@ -11,7 +11,7 @@
 #indent[
   - real-number
   #indent[
-    - 用更一般于闭区间套 $ℕ$ 序列的闭区间 $subset$ 线序链, 用来证明闭区间网定理, 用来在后面证明 $ℝ$ 的有界闭区间 compact
+    - 证明有界闭集网定理, 用来在后面证明 $ℝ$ 的有界闭区间 compact
   ]
   - limit-sequence
   #indent[
@@ -21,7 +21,7 @@
   ]
   - Euclidean-space
   #indent[
-    - $ℝ$ 的集合的最优区间分解. 用于证明 $ℝ$ 的有界闭区间 compact, 以及证明 $ℝ$ 的集合的连通 <==> 区间
+    - $ℝ$ 的集合的最优区间分解. 用于证明 $ℝ$ 的集合的连通 <==> 区间
 
     - 用网来定义 compact. 用 Riemann 球面 or 球极投影的方法来归纳地证明 Euclidean $ℝ^n$ 的集合 compact <==> 有界闭集
 

@@ -214,7 +214,9 @@ For a general net, define $"distance"(B) = sup_(a,a' in B) |a - a'|$
   
 _Proof_
 #indent[
-  Unbounded ==> $forall ε > 0, forall N ∈ ℕ, exists n > N, abs({a_(n),a_(n+1),...}) >= ε$ 
+  limit-distance-vanish ==> $forall ε > 0, exists n ∈ ℕ, abs({a_(n),a_(n+1),...}) < ε$
+
+  let $r = |a_1 ,…, a_(n)| + ε$, then $|{a_1, a_2, ...}| < r$ 
   
   ==> The limit-distance-vanish sequence is bounded
   

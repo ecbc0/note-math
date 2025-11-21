@@ -214,7 +214,9 @@ $ limsup_(n -> ∞) {a_n} := lim_(n -> ∞) sup_(k >= n) {a_k} = inf_(n in ℕ) 
   
 _Proof_
 #indent[
-  无界 ==> $forall ε > 0, forall N ∈ ℕ, exists n > N, abs({a_(n),a_(n+1),...}) >= ε$ 
+  limit-distance-vanish ==> $forall ε > 0, exists n ∈ ℕ, abs({a_(n),a_(n+1),...}) < ε$
+
+  let $r = |a_1 ,…, a_(n)| + ε$, then $|{a_1, a_2, ...}| < r$ 
   
   ==> limit-distance-vanish 序列有界
   

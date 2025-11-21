@@ -9,7 +9,6 @@
     t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 1
   $
   
-
   是良定义的仿射点, 或者说坐标定义不依赖于原点的选择. 设 $x_i$ 的坐标是 $v_i$. 换原点 $v_i' = v_i + Δ$
   $
     sum t_i (v_i + Δ) = (sum t_i v_i) + (sum t_i) Δ = (sum t_i v_i) + Δ
@@ -85,7 +84,7 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 #tag("volume-of-parallelogram") 对于 $ℝ^n$ 的体积假设
 - 平移不变
 - 反射不变 (无向体积)
-- 有限 $⨆$ -> 体积有限 $sum$ 
+- 有限 $⨆$ (零测度意义下的不相交) -> 体积有限 $sum$ 
 - 如果 $v_1 ,…, v_n$ 不是线性无关, 则在低维的子空间, 从而 $n$ 阶体积定义为零
  
 #tag("volume-of-simplex") is $1/n!$ of volume-of-parallelogram

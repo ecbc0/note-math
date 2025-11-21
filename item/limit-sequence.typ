@@ -102,19 +102,35 @@ _Proof_
 
   <==> $product_(i = 1 .. n) a_i <= 1/n sum_(i = 1 .. n) (a_i)^n$
 
-  用微分方法计算最值. 考虑函数
+  用微分方法计算最值. 考虑证明
 
-  $ (a_1)^n + ⋯ + (a_n)^n - n a_1 ⋯ a_n $
+  $ f = (a_1)^n + ⋯ + (a_n)^n - n a_1 ⋯ a_n >= 0$
 
+  由于问题是齐次的, 只需要考虑 $a_1 ⋯ a_n = 1$ 的情况. 设 $g(a_1 ,…, a_n) = n a_1 ⋯ a_n$
+
+  如果某个 $a_i >= root(n, n)$ 则 $f >= 0$. 所以只需考虑 $0 <= a_1 ,…, a_n <= root(n, n)$
+
+  $0 <= a_1 ,…, a_n <= root(n, n)$ 和 $a_1 ⋯ a_n = 1$ 的交集的边界就是某个 $a_i = root(n, n)$, 此时也是 $f >= 0$. 只需考虑微分零处的点
+  
+  用 Lagrangian 乘数法. 让 $f$ 的微分在曲面 $a_1 ⋯ a_n = 1$ 的切空间上是零, 等价于梯度 $∇ f$ 和 $∇ g$ 共向
+  
   一阶微分
 
-  $ ∂_i = n ( a_i^(n-1) - a_1 ⋯ a_n without a_i) $
+  $ 
+    ∂_i f = n ( a_i^(n-1) - a_1 ⋯ a_n without a_i) 
+    = n/a_i (a_i^n - a_1 ⋯ a_n) = n/a_i (a_i^n - 1) 
+  $
+  $
+    ∂_i g = n a_1 ⋯ a_n without a_i = n/a_i
+  $
+  共向 $∂_i f = λ ∂_i g$ 蕴含 
+  $
+    a_i^n - 1 = λ \
+    a_1 = ⋯ = a_n = root(n, 1 + λ)
+  $
+  此时 $f = 0$
 
-  一阶微分等于零, 解方程得到
-  $
-    ∂_1 = ⋯ = ∂_n = 0 ==> a_1 = ⋯ = a_n 
-  $
-  二阶微分
+  $f$ 的二阶微分
   $
     ∂_i ∂_i &= n (n-1) a_i^(n-2) \
     ∂_i ∂_j &= - n a_1 ⋯ a_n without a_i a_j
@@ -147,7 +163,7 @@ _Proof_
     &= sum_(i < j) (b_i^2 + b_j^2) - 2 sum_(i < j) b_i b_j \
     &= sum_(i < j) (b_i - b_j)^2 
   $
-  所以 $a_1 = ⋯ = a_n$ 处一阶微分零 and 二阶微分 (半) 正定, 函数在附近不会变小, 所以那里是最小值, 且是 $0$
+  所以 $a_1 = ⋯ = a_n$ 处一阶微分零 and 二阶微分 (半) 正定, 函数在附近不会变小, 所以那里是局部最小值, 且是 $0$
 ]
 #tag("best-multiplication-decomposition") 最优乘法分解 
 #indent[
