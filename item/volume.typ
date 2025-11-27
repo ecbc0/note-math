@@ -251,10 +251,10 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
 可数推广 -> 可数多面体
 
-#tag("polyhedra-measurable") 
+#tag("Lebesgue-measurable") 
 #indent[
   #image("../image/measure-approximation.jpeg", width: 30%)
-  多面体可测集 $A$. 用可数多面体 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
+  Lebesgue 可测集 $A$. simplex 的有限并 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
 
   集合 $A,B$ 定义距离 (@ref-12)
 
@@ -269,10 +269,8 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   如果 $A ⊂ A'$ 则 $d(A) <= d(A')$
 
   $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
-
-  注意, 这种可测集有好的连通性. 在一维中只有区间, 排除了 Smith–Volterra–Cantor 集等. 多面体可测集的并集等操作也受到限制
 ]
-#tag("Lebesgue-measurable") 如果不使用传递连通, 则得到一般可测集的定义. alias: Lebesgue 可测集. 存在不可测集
+存在不可测集
 
 #tag("Lebesgue-measure")
 #indent[
@@ -333,19 +331,17 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 #indent[
   测度论边界. 维数 --- 某种上确界 $d < n$ --- 可能不是自然数而是实数
 
-  对多面体可测集, 直觉上, 边界 = 可测集的零测集 quotient 中的最大减最小 $⋃ [A] ∖ ⋂ [A]$
-
   对一般可测集, 直觉上, 边界 = 
 
-  $ {x in ℝ^n : not lim_("simp" -> x) frac(Vol(A ∩ "simp"),Vol("simp")) = 0,1} $
+  $ {x in ℝ^n : not lim_("ball" -> x) frac(Vol(A ∩ "ball"),Vol("ball")) = 0,1} $
 
-  where $"simp" -> 0$ 指相对于任何一个 $x$ 为中心的 simplex 的整体伸缩到零
+  where $"ball" -> 0$ 指相对于任何一个 $x$ 为中心的 ball 的整体伸缩到零
 
   or 边界 = 不是内部或外部. 内部 = 极限 $1$, 外部 = 极限 $0$
 ]
 Lebesgue differentiation theorem 说, 边界的测度是零
 
-- 矩形的边的区间分割给出矩形 product 式分割
+- 矩形/平行体的边的区间分割给出矩形 product 式分割
 - simplex 中心连接到 $n$ 个点有 $binom(n+1,n) = n$ 种方式, 将一个 simplex 分割到 $n$ 个 sub simplex
 - 或者用边界所有低维 simplex 的中点
 

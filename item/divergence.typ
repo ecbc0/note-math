@@ -110,7 +110,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   则有 Stokes-theorem 
   
-  for #link(<orientable>)[可定向] 的几乎处处解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #link(<orientable>)[可定向] 的解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   坐标中利用 box 计算 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 全部坐标趋于 $0$, 将会是对每个坐标轴方向计算对某些东西的偏微分 $∂_i$, 结果是 $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, 进一步简化暂略
 
@@ -135,6 +135,8 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 像 Gauss--Bonnet 定理 of Euclidean metric manifold 这样的东西应该也可以用这种方法来证明. 虽然还需要继续考虑, 为什么结果是不受 metric 影响的 homology invariant Euler characteristic (差一个 $n$ 维 Euclidean 的体积因子, 以 $π$ 的幂表示)
 
 我并没有对没有边界的流形处理 Stokes 定理, 并没有定义 $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. 没有的边界流形 *Example* $ℝ^n$
+
+*Todo* 流形上的带奇点区域的 Stokes 定理. 可能需要一些几何测度论的想法. 鉴于 Cantor 集构造的反例, 几乎处处解析是不够的
 
 边界算子与外微分的对应性质
 

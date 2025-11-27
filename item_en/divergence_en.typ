@@ -110,7 +110,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   Then there is Stokes-theorem 
   
-  for #link(<orientable>)[orientable] almost everywhere analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #link(<orientable>)[orientable] analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   Calculate $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ using a box in coordinates. When all coordinates approach $0$, it will be a partial derivative $∂_i$ of something calculated for each coordinate axis direction. The result is $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, further simplification is omitted for now.
 
@@ -135,6 +135,8 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
   Probably need some kind of Sobolev control?
 ]
 Things like the Gauss--Bonnet theorem of Euclidean metric manifold should also be provable using this method. Although it still needs to be considered why the result is a homology invariant Euler characteristic (off by an $n$-dimensional Euclidean volume factor, expressed as a power of $π$) that is independent of the metric.
+
+*Todo* Stokes' theorem for regions with singularities on manifolds. May require some ideas from geometric measure theory. Given counterexamples like the Cantor set construction, almost everywhere analytic are not enough
 
 I have not deal with the Stokes theorem for manifold without boundary, have not define $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. *Example* of manifold without $ℝ^n$
 

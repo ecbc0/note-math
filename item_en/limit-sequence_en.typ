@@ -128,7 +128,7 @@ _Proof_
     a_i^n - 1 = λ \
     a_1 = ⋯ = a_n = root(n, 1 + λ)
   $
-  At this point $f = 0$
+  At this point $f = 0$. Also $λ = 0$, $a_1 = ⋯ = a_n = 1$
 
   Second derivative of $f$
   $

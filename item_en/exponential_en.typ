@@ -3,9 +3,9 @@
 
 #tag("real-exponential")
 #indent[
-  If the exponent is a natural number, then $a^(n+m) = a^(n) a^m$. It can be simply generalized to rational numbers
+  If the exponent is a natural number, then $a^(n+m) = a^(n) a^(m)$. When $a in ℚ$, $a ⇝ a^n$ is continuous and monotonically increasing, so the inverse function is also continuous and monotonically increasing, denoted as $a^(1/n)$. $a^(n+m) = a^(n) a^(m)$ can be generalized to rational powers. Due to continuity, $a ⇝ a^n$ can be extended to the $ℝ$ power function
 
-  For the exponent being a real number, define the exponential function $x ⇝ a^x$ as satisfying $a^(x+y) = a^x a^y$ and $a^1 = a$
+  Another way is to solve this function if $ℝ$ exponential function $x ⇝ a^x$ satisfies the property $a^(x+y) = a^x a^y$ and $a^0 = 1, a^1 = a$
 
   Assume $f(x) = a^x$ is analytic. Power series expansion of $f(x+y) = f(x)f(y)$ (requires commutativity of $ℝ,ℂ,ℂ_"split"$?) (First, assume that there exists a function $f$ that satisfies this property, and derive the form $f(x) = sum((f^((1))(0))/n!x)^n$, then prove that $f$ satisfies this property.)
 

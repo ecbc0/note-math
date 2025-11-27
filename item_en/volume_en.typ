@@ -251,10 +251,10 @@ The reduced set of a simplex may not be a convex hull. But it can still be decom
 
 Countable generalization -> Countable polyhedron
 
-#tag("polyhedra-measurable") 
+#tag("Lebesgue-measurable") 
 #indent[
   #image("../image/measure-approximation.jpeg", width: 30%)
-  Polyhedron measurable set $A$. Approximate with a countable polyhedron $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
+  Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
   Sets $A,B$ define distance (@ref-12)
 
@@ -269,11 +269,8 @@ Countable generalization -> Countable polyhedron
   If $A ⊂ A'$ then $d(A) <= d(A')$
 
   $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
-
-
-  Note that such measurable sets have good connectivity. In one dimension, there are only intervals, excluding the Smith–Volterra–Cantor set, etc. Operations such as the union of polyhedral measurable sets are also restricted.
 ]
-#tag("Lebesgue-measurable") If transitive connectivity is not used, then the definition of a general measurable set is obtained. alias: Lebesgue measurable set. Non-measurable sets exist.
+Non-measurable sets exist.
 
 #tag("Lebesgue-measure")
 #indent[
@@ -334,19 +331,17 @@ Countable generalization -> Countable polyhedron
 #indent[
   Measure theory boundary. Dimension --- some supremum $d < n$ --- may not be a natural number but a real number
 
-  For measurable sets of polyhedra, intuitively, boundary = the maximum minus the minimum in the zero-measure set quotient of the measurable set $⋃ [A] ∖ ⋂ [A]$
-
   For general measurable sets, intuitively, boundary = 
 
-  $ {x in ℝ^n : not lim_("simp" -> x) frac(Vol(A ∩ "simp"),Vol("simp")) = 0,1} $
+  $ {x in ℝ^n : not lim_("ball" -> x) frac(Vol(A ∩ "ball"),Vol("ball")) = 0,1} $
 
-  where $"simp" -> 0$ means that the overall scaling of a simplex centered on any $x$ goes to zero
+  where $"ball" -> 0$ means that the overall scaling of a ball centered on any $x$ goes to zero
 
   or boundary = neither inside nor outside. Inside = limit $1$, outside = limit $0$
 ]
 Lebesgue differentiation theorem says that the measure of the boundary is zero
 
-- The interval division of the sides of a rectangle gives a rectangular product-style division
+- The interval division of the sides of a rectangle/parallelogram gives a rectangular product-style division
 - Connecting the center of a simplex to $n$ points has $binom(n+1,n) = n$ ways to divide a simplex into $n$ sub simplices
 - Or use the midpoint of all lower-dimensional simplices on the boundary
 

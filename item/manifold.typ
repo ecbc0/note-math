@@ -21,7 +21,7 @@
 
 带边流形如果内部可定向, 则边界也可定向. 直觉上, 边界的局部有相同的内部 + 内部可定向 ==> 边界的局部有相同方向 ==> 边界方向被决定了
 
-#tag("manifold-with-boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数. 通常使用几乎处处解析来处理一些奇点
+#tag("manifold-with-boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数
 
 #tag("metric-manifold") 流形上的 metric 是在每个切空间定义 metric, 等价于在流形切丛上选择 orthonormal frame bundle. 对 $SO(p,q)$ oritentable, 可以选择 $SO(p,q)$ 可定向的标架丛
 
