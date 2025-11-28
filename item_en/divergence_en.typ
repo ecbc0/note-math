@@ -110,7 +110,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   Then there is Stokes-theorem 
   
-  for #link(<orientable>)[orientable] analytic manifold with boundary, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #link(<orientable>)[orientable] analytic manifold with boundary and form with cohomology zero, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   Calculate $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ using a box in coordinates. When all coordinates approach $0$, it will be a partial derivative $∂_i$ of something calculated for each coordinate axis direction. The result is $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, further simplification is omitted for now.
 
@@ -124,9 +124,11 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 #indent[
   use the approximation method used in defining #link(<integral-on-manfold>)[]
 
-  Use countable + linear approximation + partition limit that used in the definition of form integral on manifold #link(<integral-on-manfold>)[] 
+  Approximately decompose into simplexes or boxes, then use Stokes' theorem for simplexes + if the internal boundaries cancel each other out when integral, only the true manifold boundaries remain. #link(<integral-on-manfold>)[] 
 
-  Approximately decompose into simplex or box, then use Stokes theorem of simplex + internal boundary cancellation, only the real boundary of manifold is left
+  Because the topology of a manifold may have nontrivial cohomology, for some cohomologically nonzero forms $ω$, its exterior differential form $#d ω$ cannot cancel out all internal boundaries when integral, and hence it will have some extra thing similar to "residue" in complex analysis. For example, (#tag("cohomology-hole"). *Example* In $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, satisfying $#d^2 1/r = 0$, so have integral zero on $𝔹 ∖ 0$, but the integral of $#d 1/r$ over $𝕊^1$ as the boundary of $𝔹 ∖ 0$ is nonzero. *Example* $𝕊^1$ is homology isomorphism to $ℝ^2 ∖ 0$.
+
+  Another example of boundaries that cannot cancel each other out: A vector field or form that originally satisfy Stokes' theorem on a closed sphere $𝔹$ no longer satisfy Stokes' theorem after removing a region like a closed disk from the boundary of $𝔹$.
 
   Need to use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
 
@@ -136,7 +138,7 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 ]
 Things like the Gauss--Bonnet theorem of Euclidean metric manifold should also be provable using this method. Although it still needs to be considered why the result is a homology invariant Euler characteristic (off by an $n$-dimensional Euclidean volume factor, expressed as a power of $π$) that is independent of the metric.
 
-*Todo* Stokes' theorem for regions with singularities on manifolds. May require some ideas from geometric measure theory. Given counterexamples like the Cantor set construction, almost everywhere analytic are not enough
+*Todo* Given counterexamples like the Cantor set construction, almost everywhere analytic is not the correct approach to handle singularity. Instead, try to use deletion of singularity to get manifold with boundary.
 
 I have not deal with the Stokes theorem for manifold without boundary, have not define $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. *Example* of manifold without $ℝ^n$
 
@@ -159,8 +161,6 @@ cohomology
 #tag("de-Rham-cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
 
 in $ℝ^n$, cohomology trivial $forall k = 1 ,…, n, H^k = 0$
-
-#tag("cohomology-hole") form with "hole". *Example* in $ℝ^2$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$ has a singularity at $x = 0$. In non-$ℝ^n$ manifolds, the form and Stokes' theorem can reveal the holes in the manifold even if the function has no singularities. *Example* $𝕊^1$ or $𝕊^1 × 𝕊^1$
 
 The case of metric manifolds
 
