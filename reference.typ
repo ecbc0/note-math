@@ -142,3 +142,7 @@
 
 #tag("ref-31"):\
   author: LLM
+
+#tag("ref-32"):\
+  title: 流形的拓扑学\
+  author: 苏竞存

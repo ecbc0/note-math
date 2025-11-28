@@ -110,7 +110,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   则有 Stokes-theorem 
   
-  for #link(<orientable>)[可定向] 的解析的带边流形, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
+  for #link(<orientable>)[可定向] 的解析的带边流形和同上调零的 form, $integral_(∂ M) ω = integral_(M) #d ω$ or $⟨ ∂ M , ω ⟩ = ⟨ M , #d ω ⟩$
   
   坐标中利用 box 计算 $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 全部坐标趋于 $0$, 将会是对每个坐标轴方向计算对某些东西的偏微分 $∂_i$, 结果是 $#d ω = #d (ω_(i_1 ⋯ i_k) #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)) = ∂_(i) ω_(i_1 ⋯ i_k) #d x^i ∧ #d x^(i_1) ∧ ⋯ ∧ #d x^(i_k)$, 进一步简化暂略
 
@@ -124,19 +124,25 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 #indent[
   使用流形上的对 form 积分的定义所使用的近似方法 #link(<integral-on-manfold>)[]
 
-  近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 内部边界抵消, 就只剩下真正的流形的边界
+  近似地分解为 simplex or box, 然后用 simplex 的 stokes 定理 + 如果积分时内部边界抵消, 就只剩下真正的流形的边界
+
+  由于流形的拓扑可能同调非平凡, 有些上同调非零的 form $ω$ 的外微分 $#d ω$ 在积分时无法内部边界全部抵消, 因此会有类似于复分析中的额外的 "留数". 例如, #tag("cohomology-hole") *Example* in $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, 满足 $#d ^2 1/r = 0$, 所以在 $𝔹 ∖ 0$ 上积分是零, 但是 $#d 1/r$ 在 $𝔹 ∖ 0$ 的边界 $𝕊^1$ 上的积分非零. *Example* 同调同构于 $ℝ^2 ∖ 0$ 的 $𝕊^1$
+
+  在积分时边界无法抵消的另一种例子: 原本在闭球 $𝔹$ 上成立 Stokes 定理的向量场或者 form 在删去 $𝔹$ 的边界的一个类似闭圆盘的区域后, Stokes 定理不再成立
 
   需要使用 $n-1$ form $ω$ 对子流形的积分 #link(<integral-on-submanfold>)[]
 
   边界上的逼近可能需要特别注意. 例如, 应该让边界上的逼近使用中心在边界上的 simplex (box) 以及微分 at 边界上的点
 
-  大概需要 $n-1$ form 的某种 Sobolev 控制?
+  可能要考虑某种 compact 约束, 因为 non-compact 带有某种无穷远使得边界抵消失败, 可能会出现留数项
+
+  关于奇点. 如果固定带有奇点的 form, 就能找到带有奇点的区域使得 Stokes 定理失效, 反之亦然, 如果你固定带有奇点的区域, 就能找到带有奇点的 form 使得 Stokes 定理失效
 ]
 像 Gauss--Bonnet 定理 of Euclidean metric manifold 这样的东西应该也可以用这种方法来证明. 虽然还需要继续考虑, 为什么结果是不受 metric 影响的 homology invariant Euler characteristic (差一个 $n$ 维 Euclidean 的体积因子, 以 $π$ 的幂表示)
 
 我并没有对没有边界的流形处理 Stokes 定理, 并没有定义 $∂ M := ∅ and integral_(∂ M) ω := integral_(∅) ω = 0$. 没有的边界流形 *Example* $ℝ^n$
 
-*Todo* 流形上的带奇点区域的 Stokes 定理. 可能需要一些几何测度论的想法. 鉴于 Cantor 集构造的反例, 几乎处处解析是不够的
+鉴于 Cantor 集构造的反例, 几乎处处解析不是处理奇点的正确方法. 尝试用删除奇点后来得到带边流形
 
 边界算子与外微分的对应性质
 
@@ -157,8 +163,6 @@ cohomology
 #tag("de-Rham-cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
 
 in $ℝ^n$, cohomology trivial $forall k = 1 ,…, n, H^k = 0$
-
-#tag("cohomology-hole") 带 "洞" 的 form. *Example* in $ℝ^2$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$ 在 $x = 0$ 是奇点. 在非 $ℝ^n$ 的流形, 可能即使函数没有奇点, form 和 Stokes 定理也能将流形的洞表现出来. *Example* $𝕊^1$ or $𝕊^1 × 𝕊^1$
 
 metric 流形的情况
 
