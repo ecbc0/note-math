@@ -8,7 +8,6 @@
   summary: [
     #prefix-chapter("item_en/notice_en.typ")[notice]
     = English
-    #chapter("item_en/feature_en.typ")[feature]
     = logic-topic
       - #chapter("item_en/logic_en.typ")[logic]
       - #chapter("item_en/set-theory_en.typ")[set-theory]
@@ -69,7 +68,6 @@
     - #chapter("reference.typ")[reference]
     = 中文
     #chapter("item/notice.typ")[notice]
-    #chapter("item/feature.typ")[feature]
     = 逻辑
       - #chapter("item/logic.typ")[逻辑]
       - #chapter("item/set-theory.typ")[集合论]

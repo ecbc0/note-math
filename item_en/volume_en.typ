@@ -342,7 +342,6 @@ Non-measurable sets exist.
 Lebesgue differentiation theorem says that the measure of the boundary is zero
 
 - The interval division of the sides of a rectangle/parallelogram gives a rectangular product-style division
-- Connecting the center of a simplex to $n$ points has $binom(n+1,n) = n$ ways to divide a simplex into $n$ sub simplices
-- Or use the midpoint of all lower-dimensional simplices on the boundary
+- Barycentric subdivision (note that also subdivide the boundary)
 
-#image("../image/measure-subdivision.jpeg", width: 100%)
+#image("../image/measure-subdivision.png", width: 100%)

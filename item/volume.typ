@@ -342,8 +342,6 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 Lebesgue differentiation theorem 说, 边界的测度是零
 
 - 矩形/平行体的边的区间分割给出矩形 product 式分割
-- simplex 中心连接到 $n$ 个点有 $binom(n+1,n) = n$ 种方式, 将一个 simplex 分割到 $n$ 个 sub simplex
-- 或者用边界所有低维 simplex 的中点
+- 重心分割 (注意对边界也分割了)
 
-#image("../image/measure-subdivision.jpeg", width: 100%)
-
+#image("../image/measure-subdivision.png", width: 80%)
