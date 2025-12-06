@@ -120,7 +120,9 @@ For $ℝ^n$'s $k$-th order parallelepiped and simplex
 
 Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(∧ k)$'s decomposable element $v_1 ∧ ⋯ ∧ v_k$
 
-#tag("try-to-define-volume-of-low-dim") How to define low-dimensional volume? Consider two methods. Similar to linear form vs quadratic form. The first is like defining $vec(v_1,v_2)$ as $v_1 + v_2$ or $|v_1 + v_2|$, the second is similar to defining $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$
+#tag("try-to-define-volume-of-low-dim") *Todo* Actually, we don't need "volume invariance", we only need the volume to transform in a desirable way, that is, transform in terms of form. Anyway, the following discussion may still be useful, so it is kept.
+
+How to define low-dimensional volume? Consider two methods. Similar to linear form vs quadratic form. The first is like defining $vec(v_1,v_2)$ as $v_1 + v_2$ or $|v_1 + v_2|$, the second is similar to defining $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$
 
 #let base-alt = $e_(i_1) ∧ ⋯ ∧ e_(i_k)$
 #let index-alt = $i_1 < ⋯ < i_k$

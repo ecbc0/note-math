@@ -79,19 +79,9 @@ The linear change of coordinates $A in GL$ gives the integral change of variable
 
   One way is, similar to the proof of #link(<integral-change-of-variable-formula>)[], in coordinate, linear approximation + compact uniformly control + partition limit, then use countable cover to approximate entire manifold
 
-  In order to define the integral, some kind of countability assumption is needed. The simplest assumption is that the manifold can be covered by countable coordinate cards. Let's use this assumption
+  In order to define the integral, some kind of countability assumption is needed, e.g. the manifold can be covered by countable coordinate cards
 
-  Now the problem is that the integral at the intersection of the coordinate cards is repeated and needs to be removed
-
-  I will not use measurable sets being closed under intersection and set-minus, nor use curved simplex (box) type region partition *alias* triangulation, which is even more difficult to proof
-
-  Instead, I will use the linear approximation version of triangulation. Under linear approximation, simplex is closed under intersection and set-minus (polyhedra decompose to to simplex) 
-
-  e.g. the differential $#d f$ of the transition map at each simplex (box) center as an #link(<affine-map-point-ver>)[] (linear-map) to transform the simplex (box) to the simplex of the coordinate region $A$. Then the intersection and reduction of the simplex (box) can be decomposed into the simplex (box) again.
-
-  Taking the limit of this approximation, require $L^1,L^2$ style absolute convergence, gives the integral on the manifold
-
-  Prove that the result does not depend on the choice of coordinate system and linear approximation method
+  The integral at the intersection of the coordinate cards is repeated and needs to be removed
 ]
 The measures and integrals defined by rectangles and simplexes (without fixed coordinate axes) are equivalent, because rectangles and simplexes can be countably approximated to each other
 

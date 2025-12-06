@@ -122,21 +122,21 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  use the approximation method used in defining #link(<integral-on-manfold>)[]
+  I changed my mind. According to the intuitive treatment of integrals on manifolds and Stokes' theorem, one should use direct subdivision of the manifold, rather than approximate subdivision.
 
-  Approximately decompose into simplexes or boxes, then use Stokes' theorem for simplexes + if the internal boundaries cancel each other out when integral, only the true manifold boundaries remain. #link(<integral-on-manfold>)[] 
+  The subdivision in integration can be directly done using zero-order measurable sets (closed under diffeomorphisms). The regions used for subdivision in Stokes' theorem should be similar to finite perimeter sets in geometric measure theory or Whitney's geometric integration theory, hoping that they are closed under finite unions, intersections, and set differences, and closed under diffeomorphisms.
+
+  The intuition is based on that in all measurable sets, some of them have finite integrable boundaries. Intuitively, the constraints should be similar to, in the polyhedral net approximating the measurable set, there exists a subnet that uniformly controls integrals of all projective or normalized compact support form (or other more general thing) on the boundary of the approximating polyhedron.
+
+  Prove that a manifold with boundary is locally such a region, and the integral on the boundary of such a theory should coincide with the integral on the boundary in manifold theory.
+
+  The proof of Stokes' theorem is: for a finite cover of compact support forms, subtract the overlaps, subdivide, then use Stokes' theorem for the subdivided regions, where integrals on internal boundaries cancel out, leaving only the boundary of the true manifold.
 
   Because the topology of a manifold may have nontrivial cohomology, for some cohomologically nonzero forms $ω$, its exterior differential form $#d ω$ cannot cancel out all internal boundaries when integral, and hence it will have some extra thing similar to "residue" in complex analysis. For example, (#tag("cohomology-hole"). *Example* In $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, satisfying $#d^2 1/r = 0$, so have integral zero on $𝔹 ∖ 0$, but the integral of $#d 1/r$ over $𝕊^1$ as the boundary of $𝔹 ∖ 0$ is nonzero. *Example* $𝕊^1$ is homology isomorphism to $ℝ^2 ∖ 0$.
 
-  Another example of boundaries that cannot cancel each other out: A vector field or form that originally satisfy Stokes' theorem on a closed sphere $𝔹$ no longer satisfy Stokes' theorem after removing a region like a closed disk from the boundary of $𝔹$.
-
-  Need to use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
-
-  Approximation on the boundary may require special attention. For example, approximations on boundaries shoud use simplex (box) centered on the boundary and differential at points on the boundary.
+  Another example where the boundary integral cannot cancel out: if a vector field or form for which Stokes' theorem holds on a closed ball $𝔹$ has a closed disk-like region on its boundary removed, Stokes' theorem no longer holds. Intuitively, after removing a closed disk, the flux leaks out, indicating that the new boundary does not enclose the interior of the manifold. If an open disk were removed instead of a closed disk, the result would not be a manifold with boundary, it would have a boundary of codimension > 1, and the boundary of the boundary would not be zero.
 
   May need some kind of compact constraint, since non-compact will have some kind of infinity that makes boundary cancellation fail, and may have residue term
-
-  Regarding singular points. If you fix the form with singularity, you can find the region with singularity that makes Stokes' theorem invalid. Vice versa, if you fix the region with singularity, you can find a form with singularity that makes Stokes' theorem invalid.
 ]
 Things like the Gauss--Bonnet theorem of Euclidean metric manifold should also be provable using this method. Although it still needs to be considered why the result is a homology invariant Euler characteristic (off by an $n$-dimensional Euclidean volume factor, expressed as a power of $π$) that is independent of the metric.
 
