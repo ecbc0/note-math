@@ -122,21 +122,35 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 
 #tag("Stokes-theorem-proof") *Question*
 #indent[
-  use the approximation method used in defining #link(<integral-on-manfold>)[]
+  I changed my mind. According to the intuitive treatment of integrals on manifolds and Stokes' theorem, one should use direct subdivision of the manifold, rather than approximate subdivision.
 
-  Approximately decompose into simplexes or boxes, then use Stokes' theorem for simplexes + if the internal boundaries cancel each other out when integral, only the true manifold boundaries remain. #link(<integral-on-manfold>)[] 
+  Partitioning in integration can be directly done using zero-order measurable sets (closed under diffeomorphisms). The regions used for partitioning in Stokes' theorem should be similar to sets of finite perimeter (Cacciopoli sets) in geometric measure theory (#link(<ref-33>)[]). I hope they are closed under finite unions, intersections, and subtractions, and closed under diffeomorphisms.
+
+  Prove that a manifold with boundary is locally such a region (finding polyhedral approximations based on manifold properties), and that integrals on the boundary in this theory should coincide with integrals on the boundary in manifold theory (similar to theory of reduced boundary in geometric measure theory). Prove that well-behaved manifolds with singularities also belong to such regions, i.e., polyhedra, cones, well-behaved codimensions $> 1$ singularity.
+
+  The proof of Stokes' theorem is to take a finite cover of compact support forms with this type of regions, subtract overlaps, partition, then use Stokes' theorem on the partitioned regions, where integrals cancel out on interior boundaries, leaving only the actual boundary of the manifold.
+
+  Although I want to avoid compact support differentiable forms, there are some cautions. the proper inclusion chain (on $[0, 1]$) $"continuous differential" ⊊^(|x|) "Lipschitz" ⊊^(sqrt(x)) "absolutely continuous" ≃ "Sobolev" W^(1,1)$ shows that, due to the lack of a differential mean value theorem, it seems that the (locally) Sobolev or absolute continuity of the $n-1$ form and its exterior differential is not suitable for geometrically defining the exterior differential as the limit of the boundary integral divided by the volume and then using the mean value theorem and barycentric partitioning and geometrically proving that the simplex satisfies Stokes' theorem ... Although Sobolev or absolute continuity still satisfies Stokes' theorem for every local sufficient small simplex, hence if the differential is bound, we can use integral mean value to control. But mean value is the definition of Lipschitz (for simplex volume), and pure (locally) Lipschitz will also implies differential exists almost everywhere and is (locally) $L^1$
+
+  As long as $k$-dimensional affine subspaces are viewed as manifolds (for example, by choosing a $k$-basis on them to establish a coordinate system), they have their own volume. After choosing a basis for the $k$-subspace, the $k$-form defined pointwise on $ℝ^n$ can become real-valued on it. The integrability on the boundary of a simplex requires at least that the form becomes an integrable function in every $k$-direction. Due to the linearity of form space and integrals, it only needs to become an integrable function on a basis of the $k$-direction space (corresponding to the $k$-alternating tensor space of $ℝ^n$), which is also known as "the components of the form are locally $L^1$". At least such (locally) $L^1$ forms are preserved under diffeomorphisms, just as Lebesgue measurable sets are preserved under diffeomorphisms. In principle, it can be said that the function of the $k$-subspace derived from the form in the $k$-direction can be approximated by piecewise constant functions supported on the simplex, similar to usual integration. If we don't assume differentiable forms, then we haven't even defined the exterior derivative, nor have we proven Stokes' theorem on a simplex.
+
+  Try to define differentiation starting from integration, as a way to combine measure and differentiation. First, define what a form that satisfies the local infinitesimal Stokes' theorem is --- an integrable, exterior differentiable form --- and then use forms that satisfy the local infinitesimal Stokes' theorem (instead of compact support differentiable forms) to define what a region that globally satisfies Stokes' theorem is, by a polyhedral approximation.
+
+  Then try to define the exterior derivative of an $n-1$ form using its average derivative (using an $n$-dimensional simplex/box/polytope/ball and its boundary shrinking to a point? The largest distance from $x$ to $σ$ $-> 0$) $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ to define exterior differential.
+
+  Next, we need to prove Stokes' theorem for simplexes. Using barycentric subdivision techniques, then use estimates provided by the mean value theorem.
+
+  Then we can try to define "regions where Stokes' theorem can be applied" similar to sets of finite perimeter, or simply called sets of finite perimeter. The required restriction is that, intuitively, among all measurable sets, there is a subset of measurable sets for which the overall Stokes' theorem can be applied to their boundaries. Intuitively, the restrictions for such regions should be similar to, in the polyhedral net approximating the measurable set, there exists a sub-net that uniformly controls all normalized or projectivized integrable exterior differential forms (or something more general) on the boundary of the approximating polyhedron.
+
+  The relationship between functions of bounded variation and sets of finite perimeter in geometric measure theory is like the relationship between integrable functions and measurable sets in zero-order measure theory.
+
+  Since exterior differentiation only has first-order derivatives and there are no infinite-order exterior derivatives, on metric manifold, the $L^2$ norm of a form $|ω|_(L^2) + |#d ω|_(L^2)$ is suitable for Banach/Hilbert space theory (infinite-order derivatives are not suitable for Banach space theory).
 
   Because the topology of a manifold may have nontrivial cohomology, for some cohomologically nonzero forms $ω$, its exterior differential form $#d ω$ cannot cancel out all internal boundaries when integral, and hence it will have some extra thing similar to "residue" in complex analysis. For example, (#tag("cohomology-hole"). *Example* In $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, satisfying $#d^2 1/r = 0$, so have integral zero on $𝔹 ∖ 0$, but the integral of $#d 1/r$ over $𝕊^1$ as the boundary of $𝔹 ∖ 0$ is nonzero. *Example* $𝕊^1$ is homology isomorphism to $ℝ^2 ∖ 0$.
 
-  Another example of boundaries that cannot cancel each other out: A vector field or form that originally satisfy Stokes' theorem on a closed sphere $𝔹$ no longer satisfy Stokes' theorem after removing a region like a closed disk from the boundary of $𝔹$.
-
-  Need to use $n-1$ form $ω$ and #link(<integral-on-submanfold>)[]
-
-  Approximation on the boundary may require special attention. For example, approximations on boundaries shoud use simplex (box) centered on the boundary and differential at points on the boundary.
+  Another example where the boundary integral cannot cancel out: if a vector field or form for which Stokes' theorem holds on a closed ball $𝔹$ has a closed disk-like region on its boundary removed, Stokes' theorem no longer holds. Intuitively, after removing a closed disk, the flux leaks out, indicating that the new boundary does not enclose the interior of the manifold. If an open disk were removed instead of a closed disk, the result would not be a manifold with boundary, it would have a boundary of codimension > 1, and the boundary of the boundary would not be zero.
 
   May need some kind of compact constraint, since non-compact will have some kind of infinity that makes boundary cancellation fail, and may have residue term
-
-  Regarding singular points. If you fix the form with singularity, you can find the region with singularity that makes Stokes' theorem invalid. Vice versa, if you fix the region with singularity, you can find a form with singularity that makes Stokes' theorem invalid.
 ]
 Things like the Gauss--Bonnet theorem of Euclidean metric manifold should also be provable using this method. Although it still needs to be considered why the result is a homology invariant Euler characteristic (off by an $n$-dimensional Euclidean volume factor, expressed as a power of $π$) that is independent of the metric.
 
