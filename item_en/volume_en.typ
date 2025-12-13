@@ -258,21 +258,16 @@ Countable generalization -> Countable polyhedron
   #image("../image/measure-approximation.jpeg", width: 30%)
   Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
-  Sets $A,B$ define distance (@ref-12)
+  Specifically, for a set $A$, the outer measure is defined as $m^*(A) = inf_(ℕ-"polyhedra" C ⊃ A) Vol(C)$ if $m^*(A)$ is finite. The outer measure of a polyhedron is finite, and under Euclidean distance, due to the compactness property, it can be proven to satisfy subadditivity, so the outer measure of a polyhedron is its own volume (in geometries of spaces with signatures other than Euclidean, not all polyhedra should be used to define volume).
 
-  $ d(A,B) := inf_("polyhedra" C \ A Δ B ⊂ C) Vol(C) $
+  Among sets with finite outer measure, using the outer measure of the symmetric difference as the distance $d(A, B) = m^*(A Δ B)$, a metric space is formed (@ref-12). (It is not necessary for zero distance to imply equality.) Polyhedra form a metric subspace. The volume of a polyhedron is a real-valued function on it, which can be proven to be continuous, using $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, the essence of the proof is using $|Vol(A \ B) - Vol(B \ A)| <= Vol(A \ B) + Vol(B \ A)$
 
-  Measurable set $A$ := $inf_("polyhedra" P) d(A,P) = 0$
+  Thus, a measurable set is defined as the closure of the family of polyhedra in the outer measure metric space. The measure of a measurable set is defined as the extension of the polyhedron volume function as a continuous function on its closure.
 
-  Distance from set $A$ to "origin" $∅$ is $A Δ ∅ = A$ and $d(A) : = d(A,∅) = inf_("polyhedra" C \ A ⊂ C) Vol(C)$ 
+  The definition of integration will use similar method.
 
-  $d(A Δ B) = d(A,B)$
-
-  If $A ⊂ A'$ then $d(A) <= d(A')$
-
-  $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
+  Non-measurable sets are sets that have a finite outer measure but are not in the closure of polyhedra. Non-measurable sets exist (Vitali sets defined using the axiom of choice).
 ]
-Non-measurable sets exist.
 
 #tag("Lebesgue-measure")
 #indent[
@@ -305,15 +300,6 @@ Non-measurable sets exist.
     &<= d((A Δ B) ∪ (A Δ B')) \
     &<= d(A,B) + d(A,B')
   $
-  For polyhedra $P,P'$ with finite volume and $d(A,P),d(A,P') < ε$
-
-  Unique limit
-  $
-    |Vol(P) - Vol(P')| = Vol(P Δ P') = d(P,P') <= d(A,P) + d(A,P') < 2 ε
-  $
-  If we use the #link(<net>)[net] of a polyhedron approximating $A$, then there is a #link(<hom-limit>)[limit homomorphism] $Vol(A) := lim_(d(A,P) -> 0) Vol(P)$ 
-  
-  Obtain the definition of finite measure. The definition of infinite measure comes from the countable approximation of finite measure, or $sum_(n=1..∞) ε_n < ε$ technique
 ]
 #tag("try-to-define-low-dim-measure") Try to define $ℝ^n$'s $k < n$ dimensional measurable set. Since the codimension of the $k$ region $≠ 0$, it is obvious that we cannot use set difference and simplex covering as measure estimation errors to approximate a general "$k$ dimensional set" 
 

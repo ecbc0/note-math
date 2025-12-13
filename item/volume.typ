@@ -258,21 +258,16 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   #image("../image/measure-approximation.jpeg", width: 30%)
   Lebesgue 可测集 $A$. simplex 的有限并 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
 
-  集合 $A,B$ 定义距离 (@ref-12)
+  具体来说, 对集合 $A$ 定义外测度为 $m^*(A) = inf_(ℕ-"polyhedra" C ⊃ A) Vol(C)$ 如果 $m^*(A)$ 有限. 多面体的外测度有限, 且在 Euclidean 距离下, 根据 compact 性质, 可以证明满足次可加性 (subaddtive), 于是多面体的外测度就是自身的体积 (Euclidean 之外的 signature 的空间中的几何中, 应该不是所有的多面体都被用来定义体积)
 
-  $ d(A,B) := inf_("polyhedra" C \ A Δ B ⊂ C) Vol(C) $
+  在外测度有限的集合中, 用对称差的外测度作为距离 $d(A, B) = m^*(A Δ B)$, 形成距离空间 (@ref-12). (不需要距离零蕴含相等.) 多面体形成距离子空间. 多面体的体积是其上的实值函数, 可以证明是连续的, 通过 $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, 证明的本质是利用 $|Vol(A \ B) - Vol(B \ A)| <= Vol(A \ B) + Vol(B \ A)$
 
-  可测集 $A$ := $inf_("polyhedra" P) d(A,P) = 0$
+  于是, 可测集定义为外测度距离空间中, 多面体集族的闭包. 可测集的测度定义为多面体体积函数作为连续函数在其闭包上的延拓
 
-  集合 $A$ 到 "原点" $∅$ 的距离 $A Δ ∅ = A$ and $d(A) : = d(A,∅) = inf_("polyhedra" C \ A ⊂ C) Vol(C)$ 
+  积分的定义也将会用类似的方法
 
-  $d(A Δ B) = d(A,B)$
-
-  如果 $A ⊂ A'$ 则 $d(A) <= d(A')$
-
-  $d(A ∪ A') <= d(A) + d(A')$ _Proof_ by $(A ⊂ P) and (A' subset P') ==> (A ∪ A') subset (P ∪ P')$
+  不可测集就是, 外测度有限, 但是不在多面体闭包中的集合. 存在不可测集 (用选择公理定义的 Vitali 集)
 ]
-存在不可测集
 
 #tag("Lebesgue-measure")
 #indent[
@@ -305,15 +300,6 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
     &<= d((A Δ B) ∪ (A Δ B')) \
     &<= d(A,B) + d(A,B')
   $
-  对多面体 $P,P'$ with 有限体积 and $d(A,P),d(A,P') < ε$
-
-  唯一极限
-  $
-    |Vol(P) - Vol(P')| = Vol(P Δ P') = d(P,P') <= d(A,P) + d(A,P') < 2 ε
-  $
-  如果使用逼近 $A$ 的多面体的 #link(<net>)[网], 则有 #link(<hom-limit>)[极限同态] $Vol(A) := lim_(d(A,P) -> 0) Vol(P)$ 
-  
-  得到有限测度的定义. 无限测度的定义来自有限测度的可数逼近, 或 $sum_(n=1..∞) ε_n < ε$ 技术
 ]
 #tag("try-to-define-low-dim-measure") 尝试定义 $ℝ^n$ 的 $k < n$ 维可测集. 由于 $k$ 区域的 codimension $≠ 0$, 所以显然不能用集合差和 simplex 覆盖作为测度估计误差来逼近一般的 "$k$ 维集合" 
 
