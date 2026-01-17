@@ -363,17 +363,21 @@
 		"prefix": "not-in",
 		"body": "∉"
 	},
-	"⊂": {
+	"⊆": {
 		"prefix": "subset",
-		"body": "⊂"
+		"body": "⊆"
 	},
-	"⊃": {
+	"⊇": {
 		"prefix": "supset",
-		"body": "⊃"
+		"body": "⊇"
 	},
-	"⊄": {
+	"⊈": {
 		"prefix": "not-subset",
-		"body": "⊄"
+		"body": "⊈"
+	},
+	"⊉":{
+	  "prefix": "not-supset",
+	  "body": "⊉"
 	},
 	"⊊": {
 		"prefix": "subset-not-equal",

@@ -60,7 +60,7 @@
 
   show ref: set text(fill: rgb("#008690"))
 
-  set list(marker: [#text("‣", rgb("#e90000"))])
+  set list(marker: ([#text("▪︎", rgb("#e90000"))], [#text("‣", rgb("#e96100"))]))
 
   set enum(full: true)
 

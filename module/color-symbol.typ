@@ -46,7 +46,7 @@
       warning: ⇐ have no shothand. <= is ⩽
   */
 
-  show regex("=|≠|≡|∈|∉|⊂|⊃|⊄|⊊|⊋"): it => text(it, rgb("#8534ff"))
+  show regex("=|≠|≡|∈|∉|⊆|⊇|⊈|⊊|⊋"): it => text(it, rgb("#8534ff"))
 
   show "∖": it => text(it, rgb("#0056e1"))
 

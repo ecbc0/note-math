@@ -12,7 +12,7 @@ simple-symmetric-space
 principal-bundle
 // analysis-on-simple-symmetric-space
 
-group-action
+group
 
 stereographic-projection
 Hopf-bundle

@@ -216,6 +216,8 @@ For time only depending on the difference $t_1 - t_0$
       ) )
   $
 ]
+Is this method not generalizable to the hydrogen atom problem? It is said that there is a method to transform the hydrogen atom problem into the path integral of the harmonic oscillator under the $SO(4)$ symmetry.
+
 #tag("eigen-decomposition") 
 #indent[
   Characteristic equation given by $e^(-E/h t #i) ψ(x)$

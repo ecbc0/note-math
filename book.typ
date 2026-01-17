@@ -45,7 +45,7 @@
       - #chapter("item_en/constant-sectional-curvature_en.typ")[constant-sectional-curvature]
       - #chapter("item_en/simple-symmetric-space_en.typ")[simple-symmetric-space]
       - #chapter("item_en/principal-bundle_en.typ")[principal-bundle]
-      - #chapter("item_en/group-action_en.typ")[group-action]
+      - #chapter("item_en/group_en.typ")[group]
       - #chapter("item_en/stereographic-projection_en.typ")[stereographic-projection]
       - #chapter("item_en/Hopf-bundle_en.typ")[Hopf-bundle]
     = field-theory
@@ -105,7 +105,7 @@
       - #chapter("item/constant-sectional-curvature.typ")[常截面曲率]
       - #chapter("item/simple-symmetric-space.typ")[simple-symmetric-space]
       - #chapter("item/principal-bundle.typ")[主丛]
-      - #chapter("item/group-action.typ")[群作用]
+      - #chapter("item/group.typ")[群]
       - #chapter("item/stereographic-projection.typ")[球极投影]
       - #chapter("item/Hopf-bundle.typ")[Hopf 丛]
     = 场论
