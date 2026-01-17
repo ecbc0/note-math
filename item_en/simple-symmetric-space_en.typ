@@ -132,8 +132,8 @@ $exp$ gives the coordinates of $G,H,G/H$
 
 The Killing-form of $#g$ derives the Killing-form of $#h$ and the Einstein metric of $#g/#h$
 
-- $[#h,#h] ⊂ #h$
+- $[#h,#h] ⊆ #h$
 
-- $[#h,#g/#h] ⊂ #g/#h$
+- $[#h,#g/#h] ⊆ #g/#h$
 
-- $[#g/#h,#g/#h] ⊂ #h$
+- $[#g/#h,#g/#h] ⊆ #h$

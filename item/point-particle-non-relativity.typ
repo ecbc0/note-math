@@ -226,7 +226,7 @@ let $t ⇝ x(t)$ 是作用量方程的解
 
   $a ⋅ (b × c)$ = #link(<volume-of-parallelogram>)[平行体有向体积] span by $a,b,c$ in Euclidean $ℝ^3$
 
-  旋转动量 $x × m vel(x)$ 是对时间的常值, 所以 $span(x × vel(x))^⟂$ 是常值 2d 平面. 由于 $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊂ span(x × vel(x))^⟂$, $x(t)$ 在常值二维平面 $span(x × vel(x))^⟂$
+  旋转动量 $x × m vel(x)$ 是对时间的常值, 所以 $span(x × vel(x))^⟂$ 是常值 2d 平面. 由于 $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊆ span(x × vel(x))^⟂$, $x(t)$ 在常值二维平面 $span(x × vel(x))^⟂$
 
   对于点粒子系统的 Lagrangian
 

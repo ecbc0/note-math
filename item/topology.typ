@@ -11,25 +11,25 @@
 点网系统不足以作为拓扑空间的定义. 例如, 无法证明闭包是闭集 i.e. 闭包的封闭 $closed(closed(A)) = closed(A)$. 例子: 设 $X = {1, 2, 3}$. 设 $2$ 的点网只有一个元素 ${1, 2, 3}$. 设 $3$ 的点网只有一个元素 ${2, 3}$. 则 ${1}$ 的闭包是 ${1, 2}$, 再次闭包是 ${1, 2, 3}$ 
 
 #tag("topology") 定义为点网系统 + 任何集合 $A$ 的内部和外部的极限分离
-- 内部 $x in "int"(A):= exists B in #B (x), B ⊂ A$
-- 外部 $x in "ext"(A) := exists B in #B (x), B ⊂ A^∁$ 
+- 内部 $x in "int"(A):= exists B in #B (x), B ⊆ A$
+- 外部 $x in "ext"(A) := exists B in #B (x), B ⊆ A^∁$ 
 - 极限分离 
-  - $forall x in "int"(A), exists B(x) in #B (x), B(x) ⊂ "int"(A)$
-  - $forall y in "ext"(A), exists B(y) in #B (y), B(y) ⊂ "ext"(A)$
+  - $forall x in "int"(A), exists B(x) in #B (x), B(x) ⊆ "int"(A)$
+  - $forall y in "ext"(A), exists B(y) in #B (y), B(y) ⊆ "ext"(A)$
 
 边界定义为 $"bd"(A) := X ∖ ("int"(A) ∪ "ext"(A))$. 它的点可能属于 $A$ 也可能属于 $A^∁$
 
 只需证明 $"int"$ 的情况, 就可以得到 $"ext"$ 的情况. 也等价于证明所有内部都是开集 ($"int" ∘ "int" = "int"$) 或者所有闭包都是闭集
 
-$ℝ$ 的开区间网生成拓扑的证明方法是使用距离函数和下确界, 证明点在内部 ==> 存在 $δ > 0$ 使得 $x in B(x, δ) ⊂ "int"(A)$
+$ℝ$ 的开区间网生成拓扑的证明方法是使用距离函数和下确界, 证明点在内部 ==> 存在 $δ > 0$ 使得 $x in B(x, δ) ⊆ "int"(A)$
 
 #link(<Minkowski-space>)[] 中, 一点 $x$ 有多个不极限等价的网
 
-#tag("continuous") 拓扑连续 := $f : X -> Y$ 对每个开集 $V$ with $f(x) in V$, 存在开集 $U$ with $x in U$ 使得 $f(U) ⊂ V$ 
+#tag("continuous") 拓扑连续 := $f : X -> Y$ 对每个开集 $V$ with $f(x) in V$, 存在开集 $U$ with $x in U$ 使得 $f(U) ⊆ V$ 
 
-*Note*: 仅仅每点 $x$ 是极限 #link(<hom-limit>)[] 是不够的, 保持极限似乎并没有连续强. 仅仅保持极限并不能证明连续函数的逆像保持闭包 (subset 意义上的保持 $overline(f^(-1)(A)) ⊂ f^(-1)(closed(A))$)
+*Note*: 仅仅每点 $x$ 是极限 #link(<hom-limit>)[] 是不够的, 保持极限似乎并没有连续强. 仅仅保持极限并不能证明连续函数的逆像保持闭包 (subset 意义上的保持 $overline(f^(-1)(A)) ⊆ f^(-1)(closed(A))$)
 
-let $A ⊂ X$
+let $A ⊆ X$
 
 #tag("limit-point") 极限点 := $x in X : forall B in #B (x), A ∩ B ≠ ∅$
 
@@ -71,29 +71,29 @@ $closed(A)$ 是包围 $A$ 的最小闭集. _Proof_ $A subset B ==> closed(A) sub
 
 #tag("open") 开集 := 内部是自身 $"int"(A) = A$
 
-$"int"(A)$ 是 $A$ 里面的最大开集 _Proof_ $A ⊂ B ==> "int"(A) ⊂ "int"(B)$
+$"int"(A)$ 是 $A$ 里面的最大开集 _Proof_ $A ⊆ B ==> "int"(A) ⊆ "int"(B)$
 
 #tag("union-preserve-open") 设 $C$ 是一族开集, 则 $C$ 也是开集 
 
-_Proof_ 对 $x in ⋃ C$, 取 $S in C$ 使得 $x in S$. $S$ 是开集, 取 $B(x) in #B (x)$, $B (x) ⊂ S$. 于是由于并集 $S ⊂ ⋃ C$ 所以 $B(x) ⊂ ⋃ C$, 从而 $x in "int"(⋃ C)$, 从而 $⋃ C ⊂ "int"(⋃ C)$ 从而 $⋃ C = "int"(⋃ C)$ 是开集
+_Proof_ 对 $x in ⋃ C$, 取 $S in C$ 使得 $x in S$. $S$ 是开集, 取 $B(x) in #B (x)$, $B (x) ⊆ S$. 于是由于并集 $S ⊆ ⋃ C$ 所以 $B(x) ⊆ ⋃ C$, 从而 $x in "int"(⋃ C)$, 从而 $⋃ C ⊆ "int"(⋃ C)$ 从而 $⋃ C = "int"(⋃ C)$ 是开集
 
 #tag("finite-intersection-preserve-open") $A, B$ 是开集 ==> $A ∩ B$ 是开集
 
-_Proof_ 设 $x in U ∩ V$. 取 $S_U, S_V in #B (x), S_U ⊂ U, S_V ⊂ V$. 由网的定义, $exists S in #B (x), S ⊂ S_U ∩ S_V$. 而且 $S ⊂ U ∩ V$. 因此 $x in "int"(U ∩ V)$. 
+_Proof_ 设 $x in U ∩ V$. 取 $S_U, S_V in #B (x), S_U ⊆ U, S_V ⊆ V$. 由网的定义, $exists S in #B (x), S ⊆ S_U ∩ S_V$. 而且 $S ⊆ U ∩ V$. 因此 $x in "int"(U ∩ V)$. 
 
 #tag("continuous-open") 连续 <==> 每个 $#T _Y$ 拓扑开集的逆像都是 $#T _X$ 拓扑开集
 
-_Proof_ ==>. 对 $#T _Y$ 开集, 对每个 $x in X$ 且 $f(x) in V$, 取开集 $U(x) ⊂ f^(-1)(V)$ 使得 $x in U(x)$. 然后开集的并集是开集 $⋃_(x in f^(-1)(V)) = f^(-1)(V)$
+_Proof_ ==>. 对 $#T _Y$ 开集, 对每个 $x in X$ 且 $f(x) in V$, 取开集 $U(x) ⊆ f^(-1)(V)$ 使得 $x in U(x)$. 然后开集的并集是开集 $⋃_(x in f^(-1)(V)) = f^(-1)(V)$
 
-由于这不再是逆像描述版本, 所以不能将这里的开集改为闭集. 反例: 不连续函数 $f(x) = cases(0 "if" x < 0, 1 "if" x >= 0)$. 那么包含 $1$ 的闭集 $C$ 的逆像与闭集 $(-∞, 0]$ 的交集也是逆像, 而 $f(C ∩ (-∞, 0)) = {1} ⊂ C$. 
+由于这不再是逆像描述版本, 所以不能将这里的开集改为闭集. 反例: 不连续函数 $f(x) = cases(0 "if" x < 0, 1 "if" x >= 0)$. 那么包含 $1$ 的闭集 $C$ 的逆像与闭集 $(-∞, 0]$ 的交集也是逆像, 而 $f(C ∩ (-∞, 0)) = {1} ⊆ C$. 
 
-#tag("continuous-imp-inv-image-closure-subset-closure-inv-image") 连续 ==> $overline(f^(-1)(A)) ⊂ f^(-1)(closed(A))$
+#tag("continuous-imp-inv-image-closure-subset-closure-inv-image") 连续 ==> $overline(f^(-1)(A)) ⊆ f^(-1)(closed(A))$
 
 $=$ 的反例. 用 $f: ℝ → ℝ^2, f(x) = (x, 0)$. 取 $A = { (x, y) in ℝ^2 : y > 0 }$, 那么 $f(x) ∉ A$ 从而 $f^(-1)(A) = ∅$ 从而 $overline(f^(-1)(A)) = ∅$. 但是 $closed(A) = { (x,y) in ℝ^2 : y >= 0}$ 从而 $f^(-1)(closed(A)) = ℝ$
 
 $f$ 是解析函数而不仅仅是连续函数
 
-#tag("continuous-imp-interior-inv-image-subset-inv-image-interior") 连续 ==> $f^(-1)("int"(A)) ⊂ "int"(f^(-1)(A))$
+#tag("continuous-imp-interior-inv-image-subset-inv-image-interior") 连续 ==> $f^(-1)("int"(A)) ⊆ "int"(f^(-1)(A))$
 
 $=$ 的反例. 设 $f: ℝ -> ℝ$ 是常值函数 $f(x) ≡ 0$. 设 $A = {0}$, 则 $"int"(A) = ∅$, $f^(-1)("int"(A)) = ∅$. 但是 $f^(-1)(A) = ℝ$ 所以 $"int"(f^(-1)(A)) = ℝ$
 

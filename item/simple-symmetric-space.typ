@@ -134,8 +134,8 @@ $exp$ 给出 $G,H,G/H$ 的坐标
 
 $#g$ 的 Killing-form 导出 $#h$ 的 Killing-form 和 $#g/#h$ 的 Einstein metric
 
-- $[#h,#h] ⊂ #h$
+- $[#h,#h] ⊆ #h$
 
-- $[#h,#g/#h] ⊂ #g/#h$
+- $[#h,#g/#h] ⊆ #g/#h$
 
-- $[#g/#h,#g/#h] ⊂ #h$
+- $[#g/#h,#g/#h] ⊆ #h$

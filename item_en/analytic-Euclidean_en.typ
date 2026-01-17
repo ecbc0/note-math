@@ -178,7 +178,7 @@ $lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n)$ can recover the $n$-th order monomial
   $
     #d^n f(x) (v_1 ⋯ v_n) &:= n! A_n (v_1 ⋯ v_n) \
     
-    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
+    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊆ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
   $
 ]
 *Example* 
@@ -206,8 +206,8 @@ Successive difference and difference quotient $#d^2 f(x)(v_1 v_2) =$
 $
   #d^2 f(x)(v_1 v_2) 
   &=lim_(t_2) 1/(t_2) 
-  sum_(B_2 ⊂ {2}) lim_(t_1) 1/(t_1) 
-  sum_(B_1 ⊂ {1}) (-1)^(|B_1|+|B_2|-2) 
+  sum_(B_2 ⊆ {2}) lim_(t_1) 1/(t_1) 
+  sum_(B_1 ⊆ {1}) (-1)^(|B_1|+|B_2|-2) 
   f(x + ...) \
 
   &= lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
@@ -616,7 +616,7 @@ Comparison of power series distance control at different base points
   #indent[
     - let $ε > 0$
 
-    - let $D ⊂ D_f$ and $D$ compact and transitively connected, i.e. for $a,b in D$, there exists a construction $limits(⋃)_(i=1)^N overline(𝔹)(x_i , r_i)$ connecting $x_1 = a, x_N = b$ 
+    - let $D ⊆ D_f$ and $D$ compact and transitively connected, i.e. for $a,b in D$, there exists a construction $limits(⋃)_(i=1)^N overline(𝔹)(x_i , r_i)$ connecting $x_1 = a, x_N = b$ 
     
     - forall analytic $g$ with property \
       $g$ domain of convergence contains $D$, $sup_(x in D) "dist"( 1/(n!) #d^n f , 1/(n!) #d^n g )(x) < ε$
@@ -624,7 +624,7 @@ Comparison of power series distance control at different base points
 
   Net's approximation method: $D -> D_f$ and $ε -> 0$
 
-  when verifying the property of the net "$forall B',B'' in "Net", exists B in "Net", B ⊂ B' ∩ B''$"
+  when verifying the property of the net "$forall B',B'' in "Net", exists B in "Net", B ⊆ B' ∩ B''$"
   
   if $D',D''$ are separated, it is necessary to construct a transitively connected $D$ containing $D',D''$
 

@@ -201,7 +201,7 @@ $g #cvt-prod$ 是单射, $(g #cvt-prod)^†$ 是满射. _Proof_ 使用复合映�
 
 $dim(im(g #cvt-prod)^†) = dim(im(g #cvt-prod)) = dim ⨀^2 V^⊺$
 
-metric-adjoint $(g #cvt-prod)^†$ ==> $ker(g #cvt-prod)^† ⟂ im(g #cvt-prod) ⊂ "curvature"$
+metric-adjoint $(g #cvt-prod)^†$ ==> $ker(g #cvt-prod)^† ⟂ im(g #cvt-prod) ⊆ "curvature"$
 
 线性映射 $(g #cvt-prod)^†$ ==> $dim ker(g #cvt-prod)^† + dim im(g #cvt-prod)^† = "curvature"$
 

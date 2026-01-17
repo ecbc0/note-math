@@ -17,7 +17,7 @@ _Proof_ According to the associativity of $∩$ + $S' subset S <==> S' ∩ S = S
 
 #tag("closed-in-subspace") #link(<closed>)[] Characterization of in subspace
 #indent[
-  $S' ⊂ S ==> "closed"(S',#T _S) = S ∩ "closed"(S',#T _X)$
+  $S' ⊆ S ==> "closed"(S',#T _S) = S ∩ "closed"(S',#T _X)$
 
   *Example* $"closed"((0,1],#T _((0,1])) = (0,1] ≠ [0,1] = "closed"((0,1],#T _ ℝ)$
 

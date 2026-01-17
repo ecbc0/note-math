@@ -39,7 +39,7 @@ let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
   $
     forall ε > 0, exists δ > 0, forall x : |x - a| < δ, |f(x) - f(a)| < ε
   $
-let $A ⊂ ℝ^d$
+let $A ⊆ ℝ^d$
 
 #tag("closure") Closure := $closed(A) = {x ∈ ℝ^d : inf_(x ∈ A) |x-a| = 0}$
 
@@ -47,7 +47,7 @@ let $A ⊂ ℝ^d$
 
 (open) closed(𝔹) $𝔹(a,r) := {x ∈ ℝ^d : |x - a| < r}$
 
-#tag("open-set") Open set $U ⊂ ℝ^d$ := $forall x ∈ U, exists r > 0, 𝔹(x,r) ⊂ U$
+#tag("open-set") Open set $U ⊆ ℝ^d$ := $forall x ∈ U, exists r > 0, 𝔹(x,r) ⊆ U$
 
 $A$ open <==> $A^∁$ closed 
 
@@ -58,15 +58,15 @@ $A$ open <==> $A^∁$ closed
 $ 
   And_(a,b ∈ I \ a <= b) And_(x ∈ ℝ \ a <= x <= b) x ∈ I 
 $
-#tag("best-interval-decomposition") The optimal interval decomposition of $A ⊂ ℝ$
+#tag("best-interval-decomposition") The optimal interval decomposition of $A ⊆ ℝ$
 #indent[
-  def $"Interval" ⊂ Subset(ℝ)$ as the set of all intervals, including open, closed, half open half closed, single point. (Here we are not to define topology and no need to generalize to higher dimension, so not need to restrict to only open interval)
+  def $"Interval" ⊆ Subset(ℝ)$ as the set of all intervals, including open, closed, half open half closed, single point. (Here we are not to define topology and no need to generalize to higher dimension, so not need to restrict to only open interval)
 
-  def $#J (A) := {I ⊂ A : I ∈ "Interval"}$
+  def $#J (A) := {I ⊆ A : I ∈ "Interval"}$
 
   Due to the existence of single-point intervals, $#J != ∅$ and $⋃ #J = A$
 
-  $#J (A)$ has a $⊂$ #link(<linear-order>)[linear order chain]. Taking $⋃$ for each maximal linear order chain will continue to yield intervals. The set of these intervals is denoted as $#I (A)$
+  $#J (A)$ has a $⊆$ #link(<linear-order>)[linear order chain]. Taking $⋃$ for each maximal linear order chain will continue to yield intervals. The set of these intervals is denoted as $#I (A)$
 
   $#I (A) != ∅$ and $⨆ #I (A) = A$  
 
@@ -77,7 +77,7 @@ $
 
   If $A$ is a closed set, then the intervals in $#I (A)$ are all closed intervals
 ]
-recall the $⊂$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)[intersection of nested closed intervals is non-empty]
+recall the $⊆$ #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)[intersection of nested closed intervals is non-empty]
 
 #tag("bounded-closed-interval-is-compact") Bounded closed interval of $ℝ$ ==> #link(<compact>)[]
 
@@ -101,15 +101,15 @@ Take $B_0 in #B$, prove that $l in closed(B)_0$
 
 _Proof_
 #indent[
-    Define $S = { inf(B) : B in #B and B ⊂ B_0 }$
+    Define $S = { inf(B) : B in #B and B ⊆ B_0 }$
 
     $S != ∅$ because $B_0 in S$
 
-    $inf(B) in closed(B) ⊂ closed(B)_0$
+    $inf(B) in closed(B) ⊆ closed(B)_0$
 
     $closed(B)_0$ is a closed set, so $l_0 = sup(S) in closed(B)_0$
 
-    $S = { inf(B) : B in #B and B ⊂ B_0 } ⊂ { inf(B) : B in #B } = L$
+    $S = { inf(B) : B in #B and B ⊆ B_0 } ⊆ { inf(B) : B in #B } = L$
 
     Therefore $l_0 = sup(S) <= sup(L) = l$
 
@@ -117,11 +117,11 @@ _Proof_
 
     Next, prove $l <= l_0$
 
-    For each $B_1 in #B$, _since $#B$ is a net_, there exists $B in #B$ such that $B ⊂ B_0 ∩ B_1$
+    For each $B_1 in #B$, _since $#B$ is a net_, there exists $B in #B$ such that $B ⊆ B_0 ∩ B_1$
 
-    Thus $B ⊂ B_0$, so $inf(B) in S$ and $inf(B) <= sup(S)$
+    Thus $B ⊆ B_0$, so $inf(B) in S$ and $inf(B) <= sup(S)$
 
-    And $B ⊂ B_1$, so $inf(B_1) <= inf(B)$
+    And $B ⊆ B_1$, so $inf(B_1) <= inf(B)$
 
     By the arbitrariness of selecting $B_1 in #B$, we have $sup(S)$ being the upper bound of $L = { inf(B_1) : B_1 in #B }$, thus $sup(L) <= sup(S)$, which means $l <= l_0$
 
@@ -133,7 +133,7 @@ Due to the arbitrary choice of $B_0 in #B$, we have $l in ⋂_(B in #B) closed(B
 
 Therefore $⋂_(B in #B) closed(B) != ∅$
 ]
-#tag("compact-imply-subsequence-converge") $A$ compact ==> sequence ${x_n} ⊂ A$ has a convergent subsequence. The same applies to nets
+#tag("compact-imply-subsequence-converge") $A$ compact ==> sequence ${x_n} ⊆ A$ has a convergent subsequence. The same applies to nets
 
 _Proof_ 
 #indent[
@@ -222,7 +222,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 - Bounded <==> away from $∞$ <==> $∞ ∉ closed(A)$
 - Unbounded <==> $∞ ∈ closed(A)$
 
-#tag("Euclidean-space-compact-iff-bounded-closed") $A ⊂ ℝ^n$ compact <==> $A$ is a bounded closed set 
+#tag("Euclidean-space-compact-iff-bounded-closed") $A ⊆ ℝ^n$ compact <==> $A$ is a bounded closed set 
 
 _Proof_
 #indent[
@@ -244,7 +244,7 @@ _Proof_
 
       $𝔹(x,r) ∩ A$ forms a net of $A$. Note that it is possible that $x ∉ 𝔹(x,r) ∩ A$
 
-      - compact ==> $∅ != ⋂_(r > 0) closed(𝔹)(x,r) ∩ A ⊂ A$
+      - compact ==> $∅ != ⋂_(r > 0) closed(𝔹)(x,r) ∩ A ⊆ A$
 
       - $⋂_(r > 0) closed(𝔹)(x,r) = x$
 
@@ -252,13 +252,13 @@ _Proof_
     ]
     - Bounded
     #indent[
-      The open ball of $ℝ^d$ does not contain $∞$. The open ball family ${𝔹(x,r) ⊂ ℝ^n : (x ∈ A) and (r > 0)}$ covers $A$. Take #link(<compact-finite-open-cover>)[finite cover], still does not contain $∞$
+      The open ball of $ℝ^d$ does not contain $∞$. The open ball family ${𝔹(x,r) ⊆ ℝ^n : (x ∈ A) and (r > 0)}$ covers $A$. Take #link(<compact-finite-open-cover>)[finite cover], still does not contain $∞$
     ]
   ]
 ]
 let $#B$ be net of $ℝ^n$
 
-#tag("nested-closed-set-theorem") The intersection of nested bounded closed sets of $ℝ^n$ is non-empty. The intersection result is also a closed set. It can be understood as the minimal element of $⊂$ linear order chain nested closed sets
+#tag("nested-closed-set-theorem") The intersection of nested bounded closed sets of $ℝ^n$ is non-empty. The intersection result is also a closed set. It can be understood as the minimal element of $⊆$ linear order chain nested closed sets
 
 #tag("closed-net-theorem") The intersection of a net of bounded closed sets of $ℝ^n$ is non-empty
 _Proof_
@@ -316,7 +316,7 @@ _Proof_
 
   $N' := max {f^(-1)(1) ,…, f^(-1)(N)}$
 
-  ==> ${1 ,…, N} ⊂ {f(1) ,…, f(N')}$
+  ==> ${1 ,…, N} ⊆ {f(1) ,…, f(N')}$
 
   ==> $forall M > N', sum a_n - epsilon <= sum_(n=0..N) a_n <= sum_(n=0..M) a_(f(n)) <= sum a_n$ (by $a_n >= 0$)
 
@@ -445,7 +445,7 @@ _Proof_
 
     $N' := max {f^(-1)(1) ,…, f^(-1)(N)}$
 
-    ${1 ,…, N} ⊂ {f(1) ,…, f(N')}$
+    ${1 ,…, N} ⊆ {f(1) ,…, f(N')}$
 
     $forall M > N', 
     abs(sum_(.. M) a_(f(n)) - A) 

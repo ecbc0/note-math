@@ -106,7 +106,7 @@ In the second order $(v_1 + v_2)^2 - v_1^2 - v_2^2 = 2 v_1 v_2$
 
 #tag("difference-symmetric-tensor") Symmetric tensor $n$-th order difference
 $
-  sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m = cases(
+  sum_(I ⊆ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m = cases(
     0 &"if" m < n ,
     n! ⋅ v_1 ⋯ v_n &"if" m = n ,
     != 0 &"else"
@@ -116,18 +116,18 @@ $
 
 #tag("successive-difference") The $n$-th order difference can be written as $n$ times the first-order difference
 $
-  sum_(I_n ⊂ {n}) ⋯ sum_(I_1 ⊂ {1}) (-1)^(|I_n| - 1) ⋯ (-1)^(|I_1| - 1) 
+  sum_(I_n ⊆ {n}) ⋯ sum_(I_1 ⊆ {1}) (-1)^(|I_n| - 1) ⋯ (-1)^(|I_1| - 1) 
   (sum_(i_1 ∈ I_1) v_(i_1) + ⋯ + sum_(i_n ∈ I_n) v_(i_n))^n
 $
-where $I_k ⊂ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_k) = 0$, $I := ⋃_(1 .. n) I_k subset {1 ,…, n}$
+where $I_k ⊆ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_k) = 0$, $I := ⋃_(1 .. n) I_k subset {1 ,…, n}$
 
 Due to the commutativity of summation, the order of successive differences does not affect the final result
 
 _Proof_ of #link(<difference-symmetric-tensor>)[]
 #indent[
   $
-    sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
-    &= sum_(I ⊂ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
+    sum_(I ⊆ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m
+    &= sum_(I ⊆ {1 ,…, n}) (-1)^(|I| - n) sum_(μ : {1 ,…, m} -> A) v_(μ(1)) ⋯ v_(μ(m))
   $
   Forcibly write it as a summation over all $μ : {1 ,…, m} -> {1 ,…, n}$, with a weight to calculate the number of repetitions
   $
@@ -135,22 +135,22 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $
   where the weight for each $μ$ is defined as
   $
-    "weight"(μ) = (-1)^n sum_(I in Subset{1 ,…, n} : \ μ{1 ,…, m} ⊂ I) (-1)^(|I|)
+    "weight"(μ) = (-1)^n sum_(I in Subset{1 ,…, n} : \ μ{1 ,…, m} ⊆ I) (-1)^(|I|)
   $
-  For any non-empty finite set $X$, $sum_(A ⊂ X) (-1)^(|A|) = 0$
+  For any non-empty finite set $X$, $sum_(A ⊆ X) (-1)^(|A|) = 0$
 
   _Proof_
   #indent[
-    #link(<combination>)[] $A ⊂ X$ <==> for each $|A| = 0 ,…, |X|$ there are $binom(|X|,|A|)$ choices
+    #link(<combination>)[] $A ⊆ X$ <==> for each $|A| = 0 ,…, |X|$ there are $binom(|X|,|A|)$ choices
 
     $
-      sum_(A ⊂ X) (-1)^(|A|) 
+      sum_(A ⊆ X) (-1)^(|A|) 
       &= sum_(|A| = 0 .. |X|) binom(|X|,|A|) (-1)^(|A|) \
       &= (1 - 1)^(|X|) \
       &= 0   
     $
   ]
-  for ${I ∈ Subset{1 ,…, n} : μ{1 ,…, m} ⊂ I}$
+  for ${I ∈ Subset{1 ,…, n} : μ{1 ,…, m} ⊆ I}$
 
   define $A(I) := I ∖ μ{1 ,…, m}$
 
@@ -164,7 +164,7 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
   $
   Weight
   $
-    "weight"(μ) = (-1)^n ⋅ (-1)^(|μ{1 ,…, m}|) ⋅ sum_(A ⊂ X) (-1)^(|A|)
+    "weight"(μ) = (-1)^n ⋅ (-1)^(|μ{1 ,…, m}|) ⋅ sum_(A ⊆ X) (-1)^(|A|)
   $
   $
     "weight"(μ) = 0

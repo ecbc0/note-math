@@ -88,7 +88,7 @@ _Proof_
 
   $#T _X$ compact ==> $⋂_(A in #A) Closed(f^(-1)(A)) != 0$
 
-  The inverse image of a continuous function preserves closed $Closed(f^(-1)(A)) ⊂ f^(-1)(closed(A))$. Use the #link(<inverse-image>)[property] of inverse images on $∩$
+  The inverse image of a continuous function preserves closed $Closed(f^(-1)(A)) ⊆ f^(-1)(closed(A))$. Use the #link(<inverse-image>)[property] of inverse images on $∩$
   $
     ∅ != f(⋂_(A in #A) f^(-1)(closed(A))) subset ⋂_(A in #A) f(f^(-1)(closed(A)))
   $

@@ -86,9 +86,9 @@ _Proof_ 用上一个定理
 
 _Proof_ 以其中一个为初始的基来生成 $span(v,w)$ 正交基, 但 signature 不能是 $1,0$, 所以只能是 $1,1$
 
-$v$ 的射影 ${k v in ℝ^(1,3) : k in ℝ} ⊂ "cone"$
+$v$ 的射影 ${k v in ℝ^(1,3) : k in ℝ} ⊆ "cone"$
 
-*Prop* let $⟨ v ⟩^2 = 0$, let $w$ time-like or light-like with $v,w$ 不共线. 则 $span(v,w) ⊄ "cone"$
+*Prop* let $⟨ v ⟩^2 = 0$, let $w$ time-like or light-like with $v,w$ 不共线. 则 $span(v,w) ⊈ "cone"$
 
 _Proof_
 #indent[
@@ -329,7 +329,7 @@ $ℍ𝕪$ 的测地线坐标就是 $exph(#i-split ϕ) , ϕ in ℝ$
 
 测地线坐标是 Riemman 同构 or Euclidean 同构
 
-$A ⊂ ℍ𝕪$ compact <==> $1/#i-split logh A ⊂ ℝ$ compact 
+$A ⊆ ℍ𝕪$ compact <==> $1/#i-split logh A ⊆ ℝ$ compact 
 
 双曲极坐标 $ℝ^(1,1)(time,future) ≃ ℝ(>=0) × ℍ𝕪$ 
 $

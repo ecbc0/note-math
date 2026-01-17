@@ -73,13 +73,13 @@ _Proof_
 These propositions together prove the equivalence of $<, <=$ partial orders
 
 *Example*
-  - Subset "inclusion" $⊂$ or "inclusion and not equal to" $⊊$ is an order #image("../image/tree-diagram.svg", width: 70%)
+  - Subset "inclusion" $⊆$ or "inclusion and not equal to" $⊊$ is an order #image("../image/tree-diagram.svg", width: 70%)
     image modified from wiki media about partial order
   - $<,<=$ of $ℕ,ℤ,ℚ,ℝ$
   - Tree diagram
 #tag("order-comparable") $a,a' ∈ A$ comparable := $(a <= a') or (a' <= a)$
 
-#tag("comparable-component") $A_i ⊂ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
+#tag("comparable-component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
 
 Partial order can be decomposed into comparable-components that are not comparable to each other. Imagine two tree diagrams that have no relation
 
@@ -91,9 +91,9 @@ Partial order can be decomposed into comparable-components that are not comparab
 ]
 #tag("maximal-linear-order") Maximal linear order chain
 #indent[
-  let $B ⊂ A$ with $<$ linear order. $B$ is maximal-linear-order := the following definitions are equivalent
+  let $B ⊆ A$ with $<$ linear order. $B$ is maximal-linear-order := the following definitions are equivalent
   - $forall a in A, (forall b in B, "comparable"(a,b) ==> a in B)$
-  - $forall "linear-order" C ⊂ A, (B ⊂ C ==> B = C)$
+  - $forall "linear-order" C ⊆ A, (B ⊆ C ==> B = C)$
 
   It cannot be used to decompose partial orders. Two maximal linear order chains can have intersecting parts
 
@@ -110,33 +110,33 @@ Partial order can be decomposed into comparable-components that are not comparab
 ]
 _Proof_ (#link(<ref-29>)[]) (ported from formal proof in `zorn_lemma.ac` in my github repo `ac-math` #link(<ref-30>)[])
 #indent[
-  We can use the partial order $⊂$ of all intervals in $ℝ$ as an intuitive example. An interval chain $B$ means that for every interval $b_1, b_2 in B$, either $b_1 ⊂ b_2$ or $b_2 ⊂ b_1$
+  We can use the partial order $⊆$ of all intervals in $ℝ$ as an intuitive example. An interval chain $B$ means that for every interval $b_1, b_2 in B$, either $b_1 ⊆ b_2$ or $b_2 ⊆ b_1$
 
   Assume there are no maximal chains, then every chain is extendable
 
-  According to the axiom of choice, an extension function $f$ can be constructed with domain ${B ⊂ A: B " is chain"}$ and range $A$, where $f(B) = b$ is the extension element
+  According to the axiom of choice, an extension function $f$ can be constructed with domain ${B ⊆ A: B " is chain"}$ and range $A$, where $f(B) = b$ is the extension element
 
   *Def* The "$+1$" or "successor" of a chain $B$ is $"suc"(B) = B ∪ {f(B)}$
 
-  *Def* Comparability between chains $B_1, B_2$ is defined as $B_1 ⊂ B_2$ or $B_2 ⊂ B_1$
+  *Def* Comparability between chains $B_1, B_2$ is defined as $B_1 ⊆ B_2$ or $B_2 ⊆ B_1$
 
-  *Def* A set of comparable chains, or a linear set of chains $"Linear_Chains"(A) := {C ⊂ "Chains"(A): forall B_1, B_2 in C, "comparable"(B_1, B_2)}$.
+  *Def* A set of comparable chains, or a linear set of chains $"Linear_Chains"(A) := {C ⊆ "Chains"(A): forall B_1, B_2 in C, "comparable"(B_1, B_2)}$.
 
-  *Prop* The union $⋃ C$ of elements of a linear chain set $C ⊂ "Linear_Chains"(A)$ is a chain in $A$, i.e., $⋃ C in "Chains"(A)$
+  *Prop* The union $⋃ C$ of elements of a linear chain set $C ⊆ "Linear_Chains"(A)$ is a chain in $A$, i.e., $⋃ C in "Chains"(A)$
 
   _Proof_
   #indent[
     For each $b_1, b_2 in ⋃ C$, there exist $B_1, B_2$ such that $b_1 in B_1, b_2 in B_2$.
 
-    If $B_1 ⊂ B_2$, then $b_1, b_2 in B_2$ are $<$ comparable
+    If $B_1 ⊆ B_2$, then $b_1, b_2 in B_2$ are $<$ comparable
 
-    If $B_2 ⊂ B_1$, then $b_1, b_2 in B_1$ are $<$ comparable
+    If $B_2 ⊆ B_1$, then $b_1, b_2 in B_1$ are $<$ comparable
   ]
 
-  *Def* An inductive chain set $C in "Inductive_Chains"(A) := C ⊂ "Chain"(A)$ and satisfies,
+  *Def* An inductive chain set $C in "Inductive_Chains"(A) := C ⊆ "Chain"(A)$ and satisfies,
   - Contains the zero element or inductive initial element. $Set[A](∅) in C$
   - Contains "+1". For each $B in C$, its successor also $"suc"(B) in C$
-  - The union of a linear chain set is also an inductive chain. If $D ⊂ C$ is a linear chain set $D in "Linear_Chains"(A)$, then $⋃ D in C$
+  - The union of a linear chain set is also an inductive chain. If $D ⊆ C$ is a linear chain set $D in "Linear_Chains"(A)$, then $⋃ D in C$
 
     Seems similar to "strong induction" for $ℕ$: (for $k < n$, $f(k)$ is true ==> $f(n)$ is true) ==> for all $n$, $f(n)$ is true
 
@@ -163,40 +163,40 @@ _Proof_ (#link(<ref-29>)[]) (ported from formal proof in `zorn_lemma.ac` in my g
     ]
     - Strong Induction
     #indent[
-      Let $D ⊂ ⋂ "Inductive_Chains"(A)$ be a linear chain $D in "Linear_Chains"(A)$
+      Let $D ⊆ ⋂ "Inductive_Chains"(A)$ be a linear chain $D in "Linear_Chains"(A)$
 
       For each $C in "Inductive_Chains"(A)$
-      - $D ⊂ C$
-      - $⋃ D ⊂ C$
-      Thus $⋃ D ⊂ ⋂ "Inductive_Chains"(A)$
+      - $D ⊆ C$
+      - $⋃ D ⊆ C$
+      Thus $⋃ D ⊆ ⋂ "Inductive_Chains"(A)$
     ]
   ]
 
   *Def* Comparable chains in the set of minimal inductive chains $"Comparable_Chains"(A) := B in ⋂ "Inductive_Chains"(A)$ and satisfies
   - For each $B' in ⋂ "Inductive_Chains"(A)$, they are chain-comparable $"comparable"(B, B')$
 
-  $"Comparable_Chains"(A) ⊂ ⋂ "Inductive_Chains"(A)$
+  $"Comparable_Chains"(A) ⊆ ⋂ "Inductive_Chains"(A)$
 
   *Prop* $"Comparable_Chains"(A)$ is a set of inductive chains
-  - Thus $⋂ "Inductive_Chains"(A) ⊂ "Comparable_Chains"(A)$
+  - Thus $⋂ "Inductive_Chains"(A) ⊆ "Comparable_Chains"(A)$
   - Thus $"Comparable_Chains"(A) = ⋂ "Inductive_Chains"(A)$
 
   _Proof_
   #indent[
     - Zero element
     #indent[
-      The empty chain $Set[A](∅)$ is a comparable chain because $⊂$ other chains, so $Set[A](∅) in "Comparable_Chains"(A)$
+      The empty chain $Set[A](∅)$ is a comparable chain because $⊆$ other chains, so $Set[A](∅) in "Comparable_Chains"(A)$
     ]
     - $+1$. If $B$ is a comparable chain, then $"suc"(B)$ is also a comparable chain
     #indent[
-      *Prop* For $B' in ⋂ "Inductive_Chains"(A)$, if $B' ⊊ B$, then $"suc"(B') ⊂ B$
+      *Prop* For $B' in ⋂ "Inductive_Chains"(A)$, if $B' ⊊ B$, then $"suc"(B') ⊆ B$
 
       _Proof_ $B$ is a comparable chain, so $B, "suc"(B')$ are comparable. $"suc"(B') = B ∪ {f(B)}$. By contradiction, assume $B ⊊ B ∪ {f(B)}$ leads to a contradiction
 
-      Since $"suc"(B) ⊂ B'$ is what we need to prove, we need to bypass it
+      Since $"suc"(B) ⊆ B'$ is what we need to prove, we need to bypass it
 
       *Def* Let $B$ be a comparable chain, $"Suc_Comparable_Chains"(B)$ is defined as $:= B' in ⋂ "Inductive_Chains"(A)$ and satisfies
-        - $B' ⊂ B$ or $"suc"(B) ⊂ B'$
+        - $B' ⊆ B$ or $"suc"(B) ⊆ B'$
 
       *Prop* $"Suc_Comparable_Chains"(B)$ is an inductive set
 
@@ -206,28 +206,28 @@ _Proof_ (#link(<ref-29>)[]) (ported from formal proof in `zorn_lemma.ac` in my g
         - "+1"
         #indent[
           Let $B' in "Suc_Comparable_Chains"(B)$
-          - If $B' ⊊ B$, as stated before $"suc"(B') ⊂ B$
-          - If $B' = B$, then $"suc"(B') = "suc"(B)$ and thus $"suc"(B) ⊂ "suc"(B')$
-          - If $"suc"(B) ⊂ B'$, then $"suc"(B) ⊂ "suc"(B')$
-          Thus $"suc"(B') ⊂ B$ or $"suc"(B) ⊂ "suc"(B')$
+          - If $B' ⊊ B$, as stated before $"suc"(B') ⊆ B$
+          - If $B' = B$, then $"suc"(B') = "suc"(B)$ and thus $"suc"(B) ⊆ "suc"(B')$
+          - If $"suc"(B) ⊆ B'$, then $"suc"(B) ⊆ "suc"(B')$
+          Thus $"suc"(B') ⊆ B$ or $"suc"(B) ⊆ "suc"(B')$
 
           Thus $"suc"(B') in "Suc_Comparable_Chains"(B)$
         ]
         - Strong induction
         #indent[
-          Let $D ⊂ "Suc_Comparable_Chains"(B)$
+          Let $D ⊆ "Suc_Comparable_Chains"(B)$
 
           $⋃ D in ⋂ "Inductive_Chains"(A)$
 
-          For $b' in ⋃ D$, take $B' in "Suc_Comparable_Chains"(B)$ such that $b' in B' ⊂ "suc"(B') ⊂ B$
+          For $b' in ⋃ D$, take $B' in "Suc_Comparable_Chains"(B)$ such that $b' in B' ⊆ "suc"(B') ⊆ B$
 
-          $"suc"(B') ⊂ B$ or $"suc"(B) ⊂ "suc"(B')$
+          $"suc"(B') ⊆ B$ or $"suc"(B) ⊆ "suc"(B')$
 
-          $"suc"(B) ⊂ "suc"(B')$ ==> $"suc"(B) ⊂ ⋃ D$
+          $"suc"(B) ⊆ "suc"(B')$ ==> $"suc"(B) ⊆ ⋃ D$
 
-          $forall b' in ⋃ D, (b' in B) or ("suc"(B) ⊂ ⋃ D)$
+          $forall b' in ⋃ D, (b' in B) or ("suc"(B) ⊆ ⋃ D)$
 
-          $(⋃ D ⊂ B) or ("suc"(B) ⊂ ⋃ D)$
+          $(⋃ D ⊆ B) or ("suc"(B) ⊆ ⋃ D)$
 
           $⋃ D in "Suc_Comparable_Chains"(B)$
         ]
@@ -238,19 +238,19 @@ _Proof_ (#link(<ref-29>)[]) (ported from formal proof in `zorn_lemma.ac` in my g
       Back to proving the $+1$ property of $"Comparable_Chains"(A)$, proving $B in "Comparable_Chains"(A) ==> "suc"(B) in "Comparable_Chains"(A)$
 
       For $B' in ⋂ "Inductive_Chains"(A)$
-      - If $not("suc"(B) ⊂ B')$
-        Then according to the definition of $B' in "Suc_Comparable_Chains"(B)$, $B' ⊂ B ⊂ "suc"(B)$
-      Thus $B' ⊂ "suc"(B)$ or $"suc"(B) ⊂ B'$
+      - If $not("suc"(B) ⊆ B')$
+        Then according to the definition of $B' in "Suc_Comparable_Chains"(B)$, $B' ⊆ B ⊆ "suc"(B)$
+      Thus $B' ⊆ "suc"(B)$ or $"suc"(B) ⊆ B'$
 
       Thus $"suc"(B) in "Comparable_Chains"(A)$
     ]
     - Strong induction
     #indent[
-      Let $D ⊂ "Comparable_Chains"(A)$ and $D in "Linear_Chains"(A)$
+      Let $D ⊆ "Comparable_Chains"(A)$ and $D in "Linear_Chains"(A)$
 
       For $B' in ⋂ "Inductive_Chains"(A)$
-      - If for every $B in D$, $B ⊂ B'$, then $⋃ D ⊂ B'$
-      - If there exists a $B in D$ such that $B' ⊂ B$, then $B' ⊂ ⋃ D$
+      - If for every $B in D$, $B ⊆ B'$, then $⋃ D ⊆ B'$
+      - If there exists a $B in D$ such that $B' ⊆ B$, then $B' ⊆ ⋃ D$
       Thus $⋃ D, B'$ are comparable, hence $⋃ D in "Comparable_Chains"(A)$
     ]
   ]
@@ -279,7 +279,7 @@ _Proof_ (#link(<ref-29>)[]) (ported from formal proof in `zorn_lemma.ac` in my g
 
     By the properties of inductive chain sets, $"suc"(M) in ⋂ "Inductive_Chains"(A)$
 
-    $f(M) in "suc"(M) ⊂ ⋂ "Inductive_Chains"(A)$, so $f(M) in ⋃ ⋂ "Inductive_Chains"(A) = M$
+    $f(M) in "suc"(M) ⊆ ⋂ "Inductive_Chains"(A)$, so $f(M) in ⋃ ⋂ "Inductive_Chains"(A) = M$
 
     That is, $f(M) in M$
 

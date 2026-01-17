@@ -61,7 +61,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   $∂^2 = 0$ or $∂_k ∂_(k+1) = 0$
 
-  $im ∂ ⊂ ker ∂$ or $im ∂_(k+1) ⊂ ker ∂_k$
+  $im ∂ ⊆ ker ∂$ or $im ∂_(k+1) ⊆ ker ∂_k$
 ]
 #tag("simplex-homology") 
 #indent[
@@ -172,7 +172,7 @@ cohomology
 
   $#d^2 = 0$ or $#d _k #d _(k-1) = 0$
 
-  $im #d ⊂ ker #d$ or $im #d _(k-1) ⊂ ker #d _k$
+  $im #d ⊆ ker #d$ or $im #d _(k-1) ⊆ ker #d _k$
 ]
 #tag("de-Rham-cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
 

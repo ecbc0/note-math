@@ -52,11 +52,11 @@ Operations that preserve countability. let $forall i ∈ ℕ$, $A_i$ is countabl
 
 #tag("codomain") $"co-domain"(f) = B$. *alias* range 值域
 
-let $S ⊂ A$
+let $S ⊆ A$
 
 #tag("image") Image like $f(S) := {b ∈ B: exists a ∈ S, b = f(a)}$
 
-let $S ⊂ B$
+let $S ⊆ B$
 
 #tag("inverse-image") Inverse image $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
 
@@ -75,8 +75,8 @@ Inverse image $f^(-1)$ maintains $∪,∩,∖$, e.g. \
 $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
 
 Image $f$ only maintains $∪$, for others
-- $f(S ∩ S') ⊂ f(S) ∩ f(S')$
-- $f(S ∖ S') ⊂ f(S) ∖ f(S')$ 
+- $f(S ∩ S') ⊆ f(S) ∩ f(S')$
+- $f(S ∖ S') ⊆ f(S) ∖ f(S')$ 
 
 #tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
 #indent[

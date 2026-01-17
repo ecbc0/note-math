@@ -39,7 +39,7 @@ let $v,w ∈ ℝ^n$. $v,w$ span $ℝ^2$ <==> $v ∧ w != 0$
   $
     forall ε > 0, exists δ > 0, forall x : |x - a| < δ, |f(x) - f(a)| < ε
   $
-let $A ⊂ ℝ^d$
+let $A ⊆ ℝ^d$
 
 #tag("closure") 闭包 := $closed(A) = {x ∈ ℝ^d : inf_(x ∈ A) |x-a| = 0}$
 
@@ -47,7 +47,7 @@ let $A ⊂ ℝ^d$
 
 (open) closed(𝔹) $𝔹(a,r) := {x ∈ ℝ^d : |x - a| < r}$
 
-#tag("open-set") 开集 $U ⊂ ℝ^d$ := $forall x ∈ U, exists r > 0, 𝔹(x,r) ⊂ U$
+#tag("open-set") 开集 $U ⊆ ℝ^d$ := $forall x ∈ U, exists r > 0, 𝔹(x,r) ⊆ U$
 
 $A$ open <==> $A^∁$ closed 
 
@@ -58,15 +58,15 @@ $A$ open <==> $A^∁$ closed
 $ 
   And_(a,b ∈ I \ a <= b) And_(x ∈ ℝ \ a <= x <= b) x ∈ I 
 $
-#tag("best-interval-decomposition") $A ⊂ ℝ$ 的最优区间分解
+#tag("best-interval-decomposition") $A ⊆ ℝ$ 的最优区间分解
 #indent[
-  def $"Interval" ⊂ Subset(ℝ)$ as 所有区间的集合, 包括 open, closed, half open half closed, single point (这里不是定义拓扑, 也不需要推广到高维, 所以不需要限制为只有开区间)
+  def $"Interval" ⊆ Subset(ℝ)$ as 所有区间的集合, 包括 open, closed, half open half closed, single point (这里不是定义拓扑, 也不需要推广到高维, 所以不需要限制为只有开区间)
 
-  def $#J (A) := {I ⊂ A : I ∈ "Interval"}$
+  def $#J (A) := {I ⊆ A : I ∈ "Interval"}$
 
   由单点区间的存在, $#J != ∅$ and $⋃ #J = A$
 
-  $#J (A)$ 有 $⊂$ #link(<linear-order>)[线序链]. 对每个极大线序链取 $⋃$ 都会继续得到区间. 这些区间的集合记为 $#I (A)$
+  $#J (A)$ 有 $⊆$ #link(<linear-order>)[线序链]. 对每个极大线序链取 $⋃$ 都会继续得到区间. 这些区间的集合记为 $#I (A)$
 
   $#I (A) != ∅$ and $⨆ #I (A) = A$  
 
@@ -77,7 +77,7 @@ $
 
   如果 $A$ 是闭集, 则 $#I (A)$ 的区间都是闭区间
 ]
-recall $⊂$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)[闭区间套的交集非空]
+recall $⊆$ 的 #link(<linear-order>)[] #link(<nested-closed-interval-theorem>)[闭区间套的交集非空]
 
 #tag("bounded-closed-interval-is-compact") $ℝ$ 有界闭区间 ==> #link(<compact>)[]
 
@@ -101,15 +101,15 @@ _Proof_
 
   _Proof_
   #indent[
-    定义 $S = { inf(B) : B in #B and B ⊂ B_0 }$
+    定义 $S = { inf(B) : B in #B and B ⊆ B_0 }$
 
     $S != ∅$ 因为 $inf(B_0) in S$
 
-    $inf(B) in closed(B) ⊂ closed(B)_0$
+    $inf(B) in closed(B) ⊆ closed(B)_0$
 
     $closed(B)_0$ 是闭集, 所以 $l_0 = sup(S) in closed(B)_0$
 
-    $S = { inf(B) : B in #B and B ⊂ B_0 } ⊂ { inf(B) : B in #B } = L$
+    $S = { inf(B) : B in #B and B ⊆ B_0 } ⊆ { inf(B) : B in #B } = L$
     
     所以 $l_0 = sup(S) <= sup(L) = l$
 
@@ -117,11 +117,11 @@ _Proof_
 
     再证明 $l <= l_0$
 
-    对每个 $B_1 in #B$, _由于 $#B$ 是网_, 所以存在 $B in #B$ 使得 $B ⊂ B_0 ∩ B_1$
+    对每个 $B_1 in #B$, _由于 $#B$ 是网_, 所以存在 $B in #B$ 使得 $B ⊆ B_0 ∩ B_1$
 
-    从而 $B ⊂ B_0$, 所以 $inf(B) in S$ 且 $inf(B) <= sup(S)$ 
+    从而 $B ⊆ B_0$, 所以 $inf(B) in S$ 且 $inf(B) <= sup(S)$ 
     
-    并且 $B ⊂ B_1$, 所以 $inf(B_1) <= inf(B)$
+    并且 $B ⊆ B_1$, 所以 $inf(B_1) <= inf(B)$
 
     由 $B_1 in #B$ 选取的任意性, 我们有 $sup(S)$ 是 $L = { inf(B_1) : B_1 in #B }$ 的上界, 于是 $sup(L) <= sup(S)$, 也即 $l <= l_0$
 
@@ -133,7 +133,7 @@ _Proof_
 
   于是 $⋂_(B in #B) closed(B) != ∅$
 ]
-#tag("compact-imply-subsequence-converge") $A$ compact ==> 序列 ${x_n} ⊂ A$ 存在子序列收敛. 对 net 同理
+#tag("compact-imply-subsequence-converge") $A$ compact ==> 序列 ${x_n} ⊆ A$ 存在子序列收敛. 对 net 同理
 
 _Proof_ 
 #indent[
@@ -222,7 +222,7 @@ in Euclidean topology of $ℝ^n ⊔ {∞} ≃ 𝕊^n$
 - 有界 <==> 远离 $∞$ <==> $∞ ∉ closed(A)$
 - 无界 <==> $∞ ∈ closed(A)$
 
-#tag("Euclidean-space-compact-iff-bounded-closed") $A ⊂ ℝ^n$ compact <==> $A$ 有界闭集 
+#tag("Euclidean-space-compact-iff-bounded-closed") $A ⊆ ℝ^n$ compact <==> $A$ 有界闭集 
 
 _Proof_
 #indent[
@@ -244,7 +244,7 @@ _Proof_
 
       $𝔹(x,r) ∩ A$ 组成 $A$ 的网. 注意可能 $x ∉ 𝔹(x,r) ∩ A$
 
-      - compact ==> $∅ != ⋂_(r > 0) closed(𝔹)(x,r) ∩ A ⊂ A$
+      - compact ==> $∅ != ⋂_(r > 0) closed(𝔹)(x,r) ∩ A ⊆ A$
 
       - $⋂_(r > 0) closed(𝔹)(x,r) = x$
 
@@ -252,13 +252,13 @@ _Proof_
     ]
     - 有界
     #indent[
-      $ℝ^d$ 开球不包含 $∞$. 开球族 ${𝔹(x,r) ⊂ ℝ^n : (x ∈ A) and (r > 0)}$ 覆盖 $A$. 取 #link(<compact-finite-open-cover>)[有限覆盖], 仍然不包含 $∞$
+      $ℝ^d$ 开球不包含 $∞$. 开球族 ${𝔹(x,r) ⊆ ℝ^n : (x ∈ A) and (r > 0)}$ 覆盖 $A$. 取 #link(<compact-finite-open-cover>)[有限覆盖], 仍然不包含 $∞$
     ]
   ]
 ]
 let $#B$ be net of $ℝ^n$
 
-#tag("nested-closed-set-theorem") $ℝ^n$ 的有界闭集套的交集非空. 其交集也是闭集, 可以理解为 $⊂$ 线序链闭集套的最小元
+#tag("nested-closed-set-theorem") $ℝ^n$ 的有界闭集套的交集非空. 其交集也是闭集, 可以理解为 $⊆$ 线序链闭集套的最小元
 
 #tag("closed-net-theorem") $ℝ^n$ 的有界闭集网的交集非空
 _Proof_
@@ -316,7 +316,7 @@ _Proof_
 
   $N' := max {f^(-1)(1) ,…, f^(-1)(N)}$
 
-  ==> ${1 ,…, N} ⊂ {f(1) ,…, f(N')}$
+  ==> ${1 ,…, N} ⊆ {f(1) ,…, f(N')}$
 
   ==> $forall M > N', sum a_n - epsilon <= sum_(n=0..N) a_n <= sum_(n=0..M) a_(f(n)) <= sum a_n$ (by $a_n >= 0$)
 
@@ -445,7 +445,7 @@ _Proof_
 
     $N' := max {f^(-1)(1) ,…, f^(-1)(N)}$
 
-    ${1 ,…, N} ⊂ {f(1) ,…, f(N')}$
+    ${1 ,…, N} ⊆ {f(1) ,…, f(N')}$
 
     $forall M > N', 
     abs(sum_(.. M) a_(f(n)) - A) 

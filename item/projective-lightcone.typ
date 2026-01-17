@@ -16,7 +16,7 @@ $
 
 $SO(p,q)$ 导出 $#projective-cone (p,q)$ 的双射
 
-_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ 导出一维子空间集的双射
+_Proof_ $#projective-cone ⊆ ℝℙ, SO ⊆ GL$, $GL$ 导出一维子空间集的双射
 
 identity $𝟙 ∈ GL$ induce $𝟙 ∈ ℝℙ$
 
@@ -170,7 +170,7 @@ _Proof_
     $
   ]
 ]
-$ℂ^2,ℂℙ^1$ 使用 Euclidean type topology, 因为 $𝕊^2$ metric 继承自 space-like ${x_0 = 1} ≃ ℝ^3 ⊂ ℝ^(1,3)$ 继承自 $ℝ^(1,3)$ metric
+$ℂ^2,ℂℙ^1$ 使用 Euclidean type topology, 因为 $𝕊^2$ metric 继承自 space-like ${x_0 = 1} ≃ ℝ^3 ⊆ ℝ^(1,3)$ 继承自 $ℝ^(1,3)$ metric
 
 $SO(1,3)$ 是 $ℂℙ^1 ≃ 𝕊^2$ conformal 变换群, 在球极投影坐标中表示为 linear-fractional
 

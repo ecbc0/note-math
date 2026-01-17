@@ -258,9 +258,9 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   #image("../image/measure-approximation.jpeg", width: 30%)
   Lebesgue 可测集 $A$. simplex 的有限并 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
 
-  具体来说, 对集合 $A$ 定义外测度为 $m^*(A) = inf_(ℕ-"polyhedra" C ⊃ A) Vol(C)$ 如果 $m^*(A)$ 有限. 多面体的外测度有限, 且在 Euclidean 距离下, 根据 compact 性质, 可以证明满足次可加性 (subaddtive), 于是多面体的外测度就是自身的体积 (Euclidean 之外的 signature 的空间中的几何中, 应该不是所有的多面体都被用来定义体积)
+  具体来说, 对集合 $A$ 定义外测度为 $m^*(A) = inf_(ℕ-"polyhedra" C ⊇ A) Vol(C)$ 如果 $m^*(A)$ 有限. 多面体的外测度有限, 且在 Euclidean 距离下, 根据 compact 性质, 可以证明满足次可加性 (subaddtive), 于是多面体的外测度就是自身的体积 (Euclidean 之外的 signature 的空间中的几何中, 应该不是所有的多面体都被用来定义体积)
 
-  在外测度有限的集合中, 用对称差的外测度作为距离 $d(A, B) = m^*(A Δ B)$, 形成距离空间 (@ref-12). (不需要距离零蕴含相等.) 多面体形成距离子空间. 多面体的体积是其上的实值函数, 可以证明是连续的, 通过 $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, 证明的本质是利用 $|Vol(A \ B) - Vol(B \ A)| <= Vol(A \ B) + Vol(B \ A)$
+  在外测度有限的集合中, 用对称差的外测度作为距离 $d(A, B) = m^*(A Δ B)$, 形成距离空间 (@ref-12). (不需要距离零蕴含相等.) 多面体形成距离子空间. 多面体的体积是其上的实值函数, 可以证明是连续的, 通过 $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, 证明的本质是利用 $|Vol(A ∖ B) - Vol(B ∖ A)| <= Vol(A ∖ B) + Vol(B ∖ A)$
 
   于是, 可测集定义为外测度距离空间中, 多面体集族的闭包. 可测集的测度定义为多面体体积函数作为连续函数在其闭包上的延拓
 
@@ -277,7 +277,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   对应三角不等式 $d(B,B') <= d(A,B) + d(A,B')$
 
-  _Proof_ $B ∖ B' ⊂ (B ∖ A) ∪ (A ∖ B')$ 
+  _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
   #stack( dir: ltr,
     image("../image/measure-triangle-inequality-1.jpeg", width: 40%),

@@ -86,9 +86,9 @@ _Proof_ Use the previous theorem
 
 _Proof_ Generate an orthogonal basis of $span(v,w)$ with one of them as the initial basis, but the signature cannot be $1,0$, so it can only be $1,1$
 
-The projection of $v$ is ${k v in ℝ^(1,3) : k in ℝ} ⊂ "cone"$
+The projection of $v$ is ${k v in ℝ^(1,3) : k in ℝ} ⊆ "cone"$
 
-*Prop* let $⟨ v ⟩^2 = 0$, let $w$ time-like or light-like with $v,w$ non-collinear. Then $span(v,w) ⊄ "cone"$
+*Prop* let $⟨ v ⟩^2 = 0$, let $w$ time-like or light-like with $v,w$ non-collinear. Then $span(v,w) ⊈ "cone"$
 
 _Proof_
 #indent[
@@ -329,7 +329,7 @@ Notation conflict. Geodesic coordinates are also usually denoted as $exp$, but n
 
 Geodesic coordinates are Riemman isomorphic or Euclidean isomorphic
 
-$A ⊂ ℍ𝕪$ compact <==> $1/#i-split logh A ⊂ ℝ$ compact 
+$A ⊆ ℍ𝕪$ compact <==> $1/#i-split logh A ⊆ ℝ$ compact 
 
 Hyperbolic polar coordinates $ℝ^(1,1)(time,future) ≃ ℝ(>=0) × ℍ𝕪$ 
 $

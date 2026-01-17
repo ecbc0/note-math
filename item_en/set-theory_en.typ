@@ -385,7 +385,7 @@ let $#A in Set(Set(T))$
 
   - In set theory, restricting the intersection of a family of sets $⋂ #A$ to be within the union of that family $⋃ #A$, has a certain logic to it: it is the minimal common container set for all elements of the sets in $#A$. However, this makes the definition of intersection dependent on the definition of union, and this dependency breaks the symmetry
 
-    The intuition that the intersection of a empty family of sets is the universal set: because the intersection decreases with respect to ⊂, hence intersection increases when the set family go towards the direction of empty family of sets.
+    The intuition that the intersection of a empty family of sets is the universal set: because the intersection decreases with respect to ⊆, hence intersection increases when the set family go towards the direction of empty family of sets.
 
   However, every set does have a unique type, thus these problems will be solved.
 
@@ -544,7 +544,7 @@ Other uses of $=$
 ]
 #tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
 
-$A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊂ A$ then define $B^∁ := A ∖ B$
+$A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊆ A$ then define $B^∁ := A ∖ B$
 
 #tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
 

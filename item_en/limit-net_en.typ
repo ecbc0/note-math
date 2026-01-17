@@ -12,17 +12,17 @@ This is often also expressed as an equivalent set net.
 
 #tag("set-net") 
 #indent[
-$#B$ a net of $A$ := $#B ⊂ Subset(A)$ (a collection of subset of $A$) with property 
+$#B$ a net of $A$ := $#B ⊆ Subset(A)$ (a collection of subset of $A$) with property 
   - $forall B ∈ #B, B != ∅$
-  - $forall B_1 ,…, B_n ∈ #B, exists B ∈ #B, B ⊂ B_1 ∩ ⋯ ∩ B_n$ 
+  - $forall B_1 ,…, B_n ∈ #B, exists B ∈ #B, B ⊆ B_1 ∩ ⋯ ∩ B_n$ 
   - (Meaning: Non-empty before converging to the limit. If the number of $#B$ elements is infinite, then the finite intersection controls the direction of convergence, although possibly $∅ = ⋂ #B$. If $#B = {B_1 ,…, B_n}$ has a finite number of elements, then $∅ != B_1 ∩ ⋯ ∩ B_n ∈ #B$)
 ]
 *Example* $X = ℕ$, under $X(<=) := ℕ(>=)$ is a net. Or use a set net $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
 
 Point net or net containing point $x in X$ $#B (x) := forall B in #B (x), x in B$
 
-Net $#B$ is finer than $#B'$ := $forall B' in #B', exists B in #B, B ⊂ B'$ \
-And this implies $⋂ #B ⊂ ⋂ #B'$
+Net $#B$ is finer than $#B'$ := $forall B' in #B', exists B in #B, B ⊆ B'$ \
+And this implies $⋂ #B ⊆ ⋂ #B'$
 
 #tag("net-same-limit") $#B,#B'$ have the same limit := are mutually finer than each other
 
@@ -36,9 +36,9 @@ Any net can be supplemented with all finite intersections ${B_1 ∩ ⋯ ∩ B_n 
   $
     forall B_Y in #B _Y \ 
     exists B_X in #B _X \
-    f(B_X) ⊂ B_Y "or" B_X subset f^(-1) (B_Y)
+    f(B_X) ⊆ B_Y "or" B_X subset f^(-1) (B_Y)
   $
-  $⊂$ Describing it with points is $forall a in B_X, f(a) in B_Y$
+  $⊆$ Describing it with points is $forall a in B_X, f(a) in B_Y$
 ]
 
 *Example* 
@@ -49,7 +49,7 @@ Any net can be supplemented with all finite intersections ${B_1 ∩ ⋯ ∩ B_n 
   $
     forall I(a) in #I (a) \
     exists {n,n+1, ⋯} in #B _ ℕ \
-    {a_n, a_(n+1), ⋯} ⊂ I(a)
+    {a_n, a_(n+1), ⋯} ⊆ I(a)
   $
 ]
 - $ℝ -> ℝ$ Function limit
@@ -58,6 +58,6 @@ Any net can be supplemented with all finite intersections ${B_1 ∩ ⋯ ∩ B_n 
   $
     forall I_y in #I (y) \ 
     exists I_x in #I (x) \
-    f(I_x) ⊂ I_y
+    f(I_x) ⊆ I_y
   $
 ] 

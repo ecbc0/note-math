@@ -84,13 +84,13 @@ However, decimal cannot natively handle $e = sum_(n = 0)^∞ 1/n!$
 
 Many different nested intervals of $ℕ$ have the same limit, e.g. $[0,1/n]$ vs $[-1/n,0]$, which requires a limit-distance-vanish quotient.
 #indent[
-  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, define the limit-distance-vanish equivalence relation (*alias* Cauchy convergence) for $A,B$ :=
+  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊇ A_1 ⋯ , B_0 ⊇ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, define the limit-distance-vanish equivalence relation (*alias* Cauchy convergence) for $A,B$ :=
   $
     forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
   $
-  The nested rational intervals of $ℕ$ can be changed to general rational intervals whose length #link(<hom-limit>)[limit] approaches zero $⊂$ #link(<maximal-linear-order>)[linear order chain] or more general rational intervals (maximal) whose length approaches zero #link(<net>)[net].
+  The nested rational intervals of $ℕ$ can be changed to general rational intervals whose length #link(<hom-limit>)[limit] approaches zero $⊆$ #link(<maximal-linear-order>)[linear order chain] or more general rational intervals (maximal) whose length approaches zero #link(<net>)[net].
 
-  A rational interval is a subset $A ⊂ ℚ$ with the property that the order is uninterrupted.
+  A rational interval is a subset $A ⊆ ℚ$ with the property that the order is uninterrupted.
 
   $ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
 ]
@@ -147,7 +147,7 @@ In fact, for multiplication and its theorems, a possible more convenient approac
 
 #tag("exact-bound") Least-upper-bound property
 #indent[
-  let $A ⊂ ℝ$ have an upper bound
+  let $A ⊆ ℝ$ have an upper bound
   
   $exists x ∈ ℝ, ⋃_(a ∈ A) ℚ_(< a) = ℚ_(< x)$
   
@@ -160,7 +160,7 @@ In fact, for multiplication and its theorems, a possible more convenient approac
 ]
 #tag("nested-closed-interval-theorem") Nested interval theorem
 #indent[
-  Whether it is $ℕ$ nested intervals or $⊂$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ to set of lower end point, and use infimum $a_0$ to set of upper end point, then get $a_0 <= a_1$, and get that the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊂$ linear order chain nested closed sets
+  Whether it is $ℕ$ nested intervals or $⊆$ linearly ordered chain nested intervals, linear order means the monotonicity of interval endpoints, use supremum $a_1$ to set of lower end point, and use infimum $a_0$ to set of upper end point, then get $a_0 <= a_1$, and get that the intersection of nested closed intervals is a closed interval $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ can be understood as the minimal element of $⊆$ linear order chain nested closed sets
 ] 
 #tag("closed-interval-intersection-theorem")
 #indent[

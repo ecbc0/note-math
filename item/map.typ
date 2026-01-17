@@ -52,11 +52,11 @@ $A$ 是有限集 ==> ($f : A -> A$ 是单射 or 满射 <==> $f$ 是双射)
 
 #tag("codomain") $"co-domain"(f) = B$. *alias* range 值域
 
-let $S ⊂ A$
+let $S ⊆ A$
 
 #tag("image") 像 $f(S) := {b ∈ B: exists a ∈ S, b = f(a)}$
 
-let $S ⊂ B$
+let $S ⊆ B$
 
 #tag("inverse-image") 逆像 $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
 
@@ -75,8 +75,8 @@ $f(S_A) subset S_B
 $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
 
 像 $f$ 只保持 $∪$, 对于其它
-- $f(S ∩ S') ⊂ f(S) ∩ f(S')$
-- $f(S ∖ S') ⊂ f(S) ∖ f(S')$ 
+- $f(S ∩ S') ⊆ f(S) ∩ f(S')$
+- $f(S ∖ S') ⊆ f(S) ∖ f(S')$ 
 
 #tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
 #indent[

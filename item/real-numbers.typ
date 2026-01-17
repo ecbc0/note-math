@@ -84,13 +84,13 @@ _Proof_ 在现实世界的直观是, 对于数数 $+1$, 无论怎样把数数任
 
 很多不同 $ℕ$ 区间套有相同极限, e.g. $[0,1/n]$ vs $[-1/n,0]$, 需要 limit-distance-vanish 系 quotient
 #indent[
-  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊃ A_1 ⋯ , B_0 ⊃ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, 定义 $A,B$ 的 limit-distance-vanish 等价关系 (*alias* Cauchy 收敛) :=
+  let $"distance" (A) = sup_(x,x' in A) |x - x'|$. let $A_0 ⊇ A_1 ⋯ , B_0 ⊇ B_1 ⋯$ and $lim_(n -> ∞) "distance"(A_n),"distance"(B_n) = 0$, 定义 $A,B$ 的 limit-distance-vanish 等价关系 (*alias* Cauchy 收敛) :=
   $
     forall (ε ∈ ℚ) and (ε > 0), exists N ∈ ℕ, forall n,m > N, "distance"(A_n union B_m) < ε
   $
-  可以把 $ℕ$ 有理数区间套改为一般的长度 #link(<hom-limit>)[极限] 趋于零的有理数区间 $⊂$ #link(<maximal-linear-order>)[线序链] 或者更一般的长度趋于零的有理数区间 (极大的) #link(<net>)[网]
+  可以把 $ℕ$ 有理数区间套改为一般的长度 #link(<hom-limit>)[极限] 趋于零的有理数区间 $⊆$ #link(<maximal-linear-order>)[线序链] 或者更一般的长度趋于零的有理数区间 (极大的) #link(<net>)[网]
 
-  有理数区间是子集 $A ⊂ ℚ$ with property 序不中断 
+  有理数区间是子集 $A ⊆ ℚ$ with property 序不中断 
 
   $ And_(a,b in A \ a < b) And_(c in ℚ \ a < c < b) c in A $
 ]
@@ -147,7 +147,7 @@ $ℤ,ℚ,ℝ$ 的 $+,⋅$ 都有结合律, 交换律, 分配律
 
 #tag("exact-bound") 确界原理
 #indent[
-  let $A ⊂ ℝ$ 有上界
+  let $A ⊆ ℝ$ 有上界
   
   $exists x ∈ ℝ, ⋃_(a ∈ A) ℚ_(< a) = ℚ_(< x)$
   
@@ -160,7 +160,7 @@ $ℤ,ℚ,ℝ$ 的 $+,⋅$ 都有结合律, 交换律, 分配律
 ]
 #tag("nested-closed-interval-theorem") 闭区间套定理
 #indent[
-  无论是 $ℕ$ 区间套还是 $⊂$ 线序链区间套, 线序意味着区间端点单调性, 对小端点集用上确界 $a_0$, 对大端点集用下确界 $a_1$, 得到 with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ 可以理解为 $⊂$ 线序链区间套的最小元
+  无论是 $ℕ$ 区间套还是 $⊆$ 线序链区间套, 线序意味着区间端点单调性, 对小端点集用上确界 $a_0$, 对大端点集用下确界 $a_1$, 得到 with $a_0 <= a_1$ 得到闭区间套交集是闭区间 $[a_0,a_1] ≠ ∅$. $[a_0,a_1]$ 可以理解为 $⊆$ 线序链区间套的最小元
 ] 
 #tag("closed-interval-intersection-theorem")
 #indent[

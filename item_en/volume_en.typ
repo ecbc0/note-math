@@ -258,9 +258,9 @@ Countable generalization -> Countable polyhedron
   #image("../image/measure-approximation.jpeg", width: 30%)
   Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
-  Specifically, for a set $A$, the outer measure is defined as $m^*(A) = inf_(ℕ-"polyhedra" C ⊃ A) Vol(C)$ if $m^*(A)$ is finite. The outer measure of a polyhedron is finite, and under Euclidean distance, due to the compactness property, it can be proven to satisfy subadditivity, so the outer measure of a polyhedron is its own volume (in geometries of spaces with signatures other than Euclidean, not all polyhedra should be used to define volume).
+  Specifically, for a set $A$, the outer measure is defined as $m^*(A) = inf_(ℕ-"polyhedra" C ⊇ A) Vol(C)$ if $m^*(A)$ is finite. The outer measure of a polyhedron is finite, and under Euclidean distance, due to the compactness property, it can be proven to satisfy subadditivity, so the outer measure of a polyhedron is its own volume (in geometries of spaces with signatures other than Euclidean, not all polyhedra should be used to define volume).
 
-  Among sets with finite outer measure, using the outer measure of the symmetric difference as the distance $d(A, B) = m^*(A Δ B)$, a metric space is formed (@ref-12). (It is not necessary for zero distance to imply equality.) Polyhedra form a metric subspace. The volume of a polyhedron is a real-valued function on it, which can be proven to be continuous, using $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, the essence of the proof is using $|Vol(A \ B) - Vol(B \ A)| <= Vol(A \ B) + Vol(B \ A)$
+  Among sets with finite outer measure, using the outer measure of the symmetric difference as the distance $d(A, B) = m^*(A Δ B)$, a metric space is formed (@ref-12). (It is not necessary for zero distance to imply equality.) Polyhedra form a metric subspace. The volume of a polyhedron is a real-valued function on it, which can be proven to be continuous, using $|Vol(A) - Vol(B)| <= Vol(A Δ B)$, the essence of the proof is using $|Vol(A ∖ B) - Vol(B ∖ A)| <= Vol(A ∖ B) + Vol(B ∖ A)$
 
   Thus, a measurable set is defined as the closure of the family of polyhedra in the outer measure metric space. The measure of a measurable set is defined as the extension of the polyhedron volume function as a continuous function on its closure.
 
@@ -277,7 +277,7 @@ Countable generalization -> Countable polyhedron
 
   Corresponding triangle inequality $d(B,B') <= d(A,B) + d(A,B')$
 
-  _Proof_ $B ∖ B' ⊂ (B ∖ A) ∪ (A ∖ B')$ 
+  _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
   #stack( dir: ltr,
     image("../image/measure-triangle-inequality-1.jpeg", width: 40%),

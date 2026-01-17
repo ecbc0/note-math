@@ -226,7 +226,7 @@ Note that the variation of $x(t)$ along the symmetry may make it no longer a sol
 
   $a ⋅ (b × c)$ = #link(<volume-of-parallelogram>)[parallelepiped directed volume] span by $a,b,c$ in Euclidean $ℝ^3$
 
-  The rotational momentum $x × m vel(x)$ is constant with respect to time, so $span(x × vel(x))^⟂$ is a constant 2d plane. Since $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊂ span(x × vel(x))^⟂$, $x(t)$ is in the constant two-dimensional plane $span(x × vel(x))^⟂$
+  The rotational momentum $x × m vel(x)$ is constant with respect to time, so $span(x × vel(x))^⟂$ is a constant 2d plane. Since $(x × vel(x)) perp x,vel(x)$, $span(x,vel(x)) ⊆ span(x × vel(x))^⟂$, $x(t)$ is in the constant two-dimensional plane $span(x × vel(x))^⟂$
 
   For the Lagrangian of a system of point particles
 

@@ -63,7 +63,7 @@ _Proof_ $A$ 的点必定在 $X$ 从而在某个连通分支里
 ]
 _Proof_ 包含 $x$ 的连通集都在同一个连通分支里面. 说明 $⋃_(i in I) S_i = X$ 只有一个连通分支, 从而连通
 
-连通分支是连通集族的 $⊂$ #link(<maximal-linear-order>)[极大线序] 的极大元
+连通分支是连通集族的 $⊆$ #link(<maximal-linear-order>)[极大线序] 的极大元
 
 连续函数的 image 传递连通
 

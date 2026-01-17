@@ -16,7 +16,7 @@ Since the metric is zero on the light cone, many analysis cannot be done. Also, 
 
 $SO(p,q)$ induce bijective of $#projective-cone (p,q)$
 
-_Proof_ $#projective-cone ⊂ ℝℙ, SO ⊂ GL$, $GL$ induce bijective of set of 1d linear subspace
+_Proof_ $#projective-cone ⊆ ℝℙ, SO ⊆ GL$, $GL$ induce bijective of set of 1d linear subspace
 
 identity $𝟙 ∈ GL$ induce $𝟙 ∈ ℝℙ$
 
@@ -170,7 +170,7 @@ _Proof_
     $
   ]
 ]
-$ℂ^2,ℂℙ^1$ use Euclidean type topology, because $𝕊^2$ metric is inherited from space-like ${x_0 = 1} ≃ ℝ^3 ⊂ ℝ^(1,3)$ inherited from $ℝ^(1,3)$ metric
+$ℂ^2,ℂℙ^1$ use Euclidean type topology, because $𝕊^2$ metric is inherited from space-like ${x_0 = 1} ≃ ℝ^3 ⊆ ℝ^(1,3)$ inherited from $ℝ^(1,3)$ metric
 
 $SO(1,3)$ is the conformal transformation group of $ℂℙ^1 ≃ 𝕊^2$, represented as linear-fractional in stereographic projection coordinates
 

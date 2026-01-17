@@ -201,7 +201,7 @@ $g #cvt-prod$ is injective, and $(g #cvt-prod)^†$ is surjective. _Proof_ uses 
 
 $dim(im(g #cvt-prod)^†) = dim(im(g #cvt-prod)) = dim ⨀^2 V^⊺$
 
-metric-adjoint $(g #cvt-prod)^†$ ==> $ker(g #cvt-prod)^† ⟂ im(g #cvt-prod) ⊂ "curvature"$
+metric-adjoint $(g #cvt-prod)^†$ ==> $ker(g #cvt-prod)^† ⟂ im(g #cvt-prod) ⊆ "curvature"$
 
 Linear mapping $(g #cvt-prod)^†$ ==> $dim ker(g #cvt-prod)^† + dim im(g #cvt-prod)^† = "curvature"$
 

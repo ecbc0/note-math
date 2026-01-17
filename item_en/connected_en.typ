@@ -63,7 +63,7 @@ The union of connected sets $S_i$ with a common point $x$, $⋃_(i in I) S_i$, i
 ]
 _Proof_ The connected sets containing $x$ are all in the same connected component. This shows that $⋃_(i in I) S_i = X$ has only one connected component, and is therefore connected.
 
-A connected component is a maximal element of the $⊂$ #link(<maximal-linear-order>)[maximal linear order] of a connected set family.
+A connected component is a maximal element of the $⊆$ #link(<maximal-linear-order>)[maximal linear order] of a connected set family.
 
 The image of a continuous function transmits connectedness.
 

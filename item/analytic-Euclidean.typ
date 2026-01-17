@@ -175,7 +175,7 @@ $lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n)$ 可以恢复 $n$ 阶单项式
   $
     #d^n f(x) (v_1 ⋯ v_n) &:= n! A_n (v_1 ⋯ v_n) \
     
-    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊂ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
+    &= lim_(t_1 ,…, t_k -> 0) 1/(t_1 ⋯ t_n) sum_(B ⊆ {1,...,n}) (-1)^(|B| - n) f(x + sum_(b in B) t_b v_b)
   $
 ]
 *Example* 
@@ -203,8 +203,8 @@ $ (∂ f)/(∂ v) (x) := #d f(x)(v) = lim 1/t (f(x + t v) - f(x)) $
 $
   #d^2 f(x)(v_1 v_2) 
   &=lim_(t_2) 1/(t_2) 
-  sum_(B_2 ⊂ {2}) lim_(t_1) 1/(t_1) 
-  sum_(B_1 ⊂ {1}) (-1)^(|B_1|+|B_2|-2) 
+  sum_(B_2 ⊆ {2}) lim_(t_1) 1/(t_1) 
+  sum_(B_1 ⊆ {1}) (-1)^(|B_1|+|B_2|-2) 
   f(x + ...) \
 
   &= lim_(t_2) 1/(t_2) ((∂ f)/(∂ v_1) (x + t_2 v_2) - (∂ f)/(∂ v_1) (x)) \
@@ -613,7 +613,7 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
   #indent[
     - let $ε > 0$
 
-    - let $D ⊂ D_f$ and $D$ compact and 传递连通, i.e. for $a,b in D$, 存在构造 $limits(⋃)_(i=1)^N overline(𝔹)(x_i , r_i)$ 连接 $x_1 = a, x_N = b$ 
+    - let $D ⊆ D_f$ and $D$ compact and 传递连通, i.e. for $a,b in D$, 存在构造 $limits(⋃)_(i=1)^N overline(𝔹)(x_i , r_i)$ 连接 $x_1 = a, x_N = b$ 
     
     - forall 解析 $g$ with property \
       $g$ 收敛域包含 $D$, $sup_(x in D) "dist"( 1/(n!) #d^n f , 1/(n!) #d^n g )(x) < ε$
@@ -621,7 +621,7 @@ $"dist"$ 不是 norm, eg. $|λ A_n|^(1/n) = |λ|^(1/n) |A_n|^(1/n)$
 
   网的逼近方式: $D -> D_f$ and $ε -> 0$
 
-  when 验证网的性质 "$forall B',B'' in "Net", exists B in "Net", B ⊂ B' ∩ B''$"
+  when 验证网的性质 "$forall B',B'' in "Net", exists B in "Net", B ⊆ B' ∩ B''$"
   
   if $D',D''$ 分离, 需要构造传递连通的 $D$ 包含 $D',D''$
 
