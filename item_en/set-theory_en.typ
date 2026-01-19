@@ -244,7 +244,7 @@ Definition language expansion
 ]
 #tag("product") 
 #indent[
-  #image("../image/product.jpeg", width: 30%)
+  #image("../image/product.png", width: 30%)
 
   let $A_0 ,…, A_n$ be set, let $A_0 × ⋯ × A_n$ is set
   $
@@ -256,7 +256,7 @@ Definition language expansion
 ]
 #tag("sum") 
 #indent[
-  #image("../image/sum.jpeg", width: 30%)
+  #image("../image/sum.png", width: 30%)
 
   let $A_0 ,…, A_n$ be set then $A_0 + ⋯ + A_n$ is a set
   $
@@ -268,7 +268,7 @@ Definition language expansion
 ]
 #tag("function") 
 #indent[
-  #image("../image/map.jpeg", width: 30%)
+  #image("../image/map.png", width: 30%)
 
   let $A,B$ be set. The rule for defining the function space $A -> B$ and mapping $f$ as a math object is
   $
@@ -329,7 +329,7 @@ Expand according to type definition
 
 #tag("subset") 
 #indent[
-  #image("../image/subset.jpeg", width: 30%)
+  #image("../image/subset.png", width: 30%)
   
   $ Subset(A) in Set T \ S in Subset(A) := S subset A $
 
@@ -546,6 +546,6 @@ Other uses of $=$
 
 $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊆ A$ then define $B^∁ := A ∖ B$
 
-#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.jpeg", width: 30%)
+#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.png", width: 30%)
 
 $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 

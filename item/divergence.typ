@@ -25,7 +25,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   *Example* 四面体, 右手定则, 拇指指向四面体内部得到边界方向 (图片的顶点的指标从 $1$ 而不是 $0$ 开始)
 
-  #image("../image/orientation-of-simplex.jpg", width: 100%)
+  #image("../image/orientation-of-simplex.png", width: 100%)
 ]
 #tag("orientable-low-dim-polyhera") 多面体 #link(<orientation-of-boundary-of-simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
 
@@ -47,15 +47,15 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   *Example* 
 
-  - boundary-op-not-injective
+  - boundary-op-not-injective (p. 405 of @ref-11, vol.1)
 
-    #image("../image/boundary-op-not-injective-1.jpg", width: 70%)
+    #image("../image/boundary-op-not-injective-1.png", width: 70%)
 
-    #image("../image/boundary-op-not-injective-2.jpeg", width: 80%)
+    #image("../image/boundary-op-not-injective-2.png", width: 80%)
 
   - #tag("tri-intersect-boundary")
 
-    #image("../image/tri-intersect-boundary.jpg", width: 40%)
+    #image("../image/tri-intersect-boundary.png", width: 40%)
 
   cycle $∂ c = 0$
 
@@ -100,7 +100,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 #tag("homology-hole") 对于集合 $ℝ^n$ 减去有限个或可数个分离的线性子空间或者多面体, homology 不是零
 
-#image("../image/homology-hole.jpeg", width: 100%)
+#image("../image/homology-hole.png", width: 100%)
 
 #tag("Stokes-theorem") 
 #indent[

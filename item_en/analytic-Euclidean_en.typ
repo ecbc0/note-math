@@ -73,7 +73,7 @@ Extending the #link(<change-base-point-polynomial>)[] of polynomials to series
   $
   There is also a non-zero radius of convergence $R' > 0$ at $x+Δ$. (Figure) According to the triangle inequality, $R' >= R - |Δ|$
 
-  #image("../image/change-base-point-analytic.jpeg", width: 30%)
+  #image("../image/change-base-point-analytic.png", width: 30%)
 
 ]
 *Example* 

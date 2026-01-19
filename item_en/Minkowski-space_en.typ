@@ -292,7 +292,7 @@ let $ℍ𝕪 := ℍ𝕪^1 (time,future) = {(t,x) in ℝ^(1,1) : t^2 - x^2 = 1 , 
     
     #tag("polor-coordinate-hyperbolic") 
     
-    #image("../image/polor-coordinate-hyperbolic.jpeg", width: 50%) 
+    #image("../image/hyperbolic-to-space-bijective.png", width: 50%) 
     
     Hyperbolic polar coordinates $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ geodesic length parameter. Also known as hyperbolic angle #tag("hyperbolic-angle")
 
@@ -378,12 +378,12 @@ The tangent space of the quadratic manifold $ℚ^(p,q)(± 1)$ can be defined as 
 
 The definition of geodesics of the quadric surface $ℚ^(p,q)(± 1)$ does not require manifold techniques, only use geodesic as secant line of the cross-section span by (radial + tangent) + embedded $ℍ𝕪$ and its geodesic length. *Question* Is there a better and more intuitive definition?
 
-$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type (p. 19 of @ref-9) #image("../image/quadratic-manifold-geodesic.png", width: 30%)
 
 $ℍ𝕪^n (space) = ℚ^(1,n)(-1)$ type #stack( dir: ltr,
-  image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
-  image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
-  image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)
+  image("../image/quadratic-manifold-geodesic-1.png", width: 30%),
+  image("../image/quadratic-manifold-geodesic-2.png", width: 30%),
+  image("../image/quadratic-manifold-geodesic-3.png", width: 30%)
 )
 
 #tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ geodesic
@@ -413,8 +413,8 @@ $ℍ𝕪^n (time)$ geodesic sphere
 (time,future)-like net struct of $ℝ^(1,n)$
 
 #stack( dir: ltr,
-  image("../image/polor-coordinate-hyperbolic.jpeg", width: 40%),
-  image("../image/Minkowski-net.jpeg", width: 30%)
+  image("../image/hyperbolic-to-space-bijective.png", width: 40%),
+  image("../image/Minkowski-net.png", width: 30%)
 )
 
 Hyperbolic polar coordinates as the product net struct of distance space $ℝ_(>= 0)$ and direction space $ℍ𝕪^n (time)$
@@ -572,7 +572,7 @@ space-like hyperboloid, use space-like base points to define hyperbolic projecti
 
 Should the transformation function be a Minkowski continuous homeomorphism?
 
-#image("../image/stereographic-projective-hyperbolic-space-like.jpg", width: 50%)
+#image("../image/stereographic-projective-hyperbolic-space-like.png", width: 50%)
 
 Perform 3d plotting for the case of $ℝ^(1,2)$, and draw the light cone of the base point (note that the light cone is "vertical") 
 

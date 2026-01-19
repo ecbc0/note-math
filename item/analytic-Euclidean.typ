@@ -71,7 +71,7 @@ $|a_n v^n| = (|a_n|^(1/n) |v|)^n$
   $
   在 $x+Δ$ 也有非零收敛半径 $R' > 0$. 根据三角不等式, $R' >= R - |Δ|$
   
-  #image("../image/change-base-point-analytic.jpeg", width: 30%)
+  #image("../image/change-base-point-analytic.png", width: 30%)
 ]
 *Example* 
 

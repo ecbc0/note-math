@@ -17,7 +17,7 @@
 
   可以逐次迭代 or 分解 e.g. 三角形 $t_1 x_1 + t_2 x_2 + t_3 x_3 <--> s_1 (t_1 x_1 + t_2 x_2) + s_2 x_3$. 且分解操作可交换. 且可以分解为多个 $>= 1$ 阶的
 
-  #image("../image/affine-combination-2.jpeg", width: 30%)
+  #image("../image/affine-combination-2.png", width: 30%)
 ]
 #tag("affine-coordinate") $t_i$ 可以认为是基于点 $x_i$ 的一种坐标. 仿射坐标. *alias* 重心坐标 #tag("barycentric-coordinate")
 
@@ -46,19 +46,19 @@ $
 
 #tag("simplex") := 由仿射无关的点构成的 convex hull
 
-#image("../image/simplex.jpeg", width: 70%)
+#image("../image/simplex.png", width: 70%)
 
 #tag("parallelogram") 平行体由于对称性, 可以从 $2n$ 点 convex hull 描述简化为 $n$ 点描述, 在选取原点后 
 
 $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
-#image("../image/parallelogram.jpeg", width: 25%)
+#image("../image/parallelogram.png", width: 25%)
 
 #tag("parallelogram-simplex-correspond")
 #indent[
-  平行体可以 $⨆$ 分解为 $n!$ 个平移反射等价的 simplex
+  平行体可以 $⨆$ 分解为 $n!$ 个平移反射等价的 simplex (p. 587 of @ref-3)
 
-  #image("../image/shear-transformation.jpg", width: 30%)
+  #image("../image/shear-transformation.png", width: 30%)
 
   $v_1 ,…, v_n$ 点的 $n$ 排列
   $
@@ -91,7 +91,7 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
 #tag("shear-transformation") 平行体分解成 simplex 之后, 切割与平移, 形成新的同体积平行体. 称为剪切变换. e.g. $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$
 
-#image("../image/shear-transformation.jpg", width: 30%)
+#image("../image/shear-transformation.png", width: 30%)
 
 (image from p.587 of @ref-3)
 
@@ -220,27 +220,27 @@ $v_1 ,…, v_n$ 线性相关 ==> 在低维子空间 ==> 零体积. 此时可以�
 
 $ℝ^2$ 的 $4$ 个点
 
-#image("../image/convex-hull-decomposition-1.jpg", width: 40%)
+#image("../image/convex-hull-decomposition-1.png", width: 40%)
 
 $ℝ^2$ 的 $5$ 个点. 先选取 $2$ simplex, 即选取 $3$ 个顶点
 
-#image("../image/convex-hull-decomposition-2.jpg", width: 80%)
+#image("../image/convex-hull-decomposition-2.png", width: 80%)
 
 找出哪些 simplex 组合是 convex hull 的分解
 
-#image("../image/convex-hull-decomposition-3.jpg", width: 50%)
+#image("../image/convex-hull-decomposition-3.png", width: 50%)
 
 convex hull 的交集是 convex hull
 
-*Example* #image("../image/simplex-intersection.jpg", width: 60%)
+*Example* #image("../image/simplex-intersection.png", width: 60%)
 
 simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex 
 
-*Example* #image("../image/simplex-substraction.jpg", width: 20%)
+*Example* #image("../image/simplex-substraction.png", width: 20%)
 
 #tag("polyhedra") 多面体 :=
 #indent[
-  #image("../image/polyhedra.jpeg", width: 40%)
+  #image("../image/polyhedra.png", width: 40%)
   n simplex 有限并 with
 
   - 内部不相交
@@ -249,13 +249,13 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   传递边界的维数是为了让多面体有最好的连通性
 ]
-#tag("low-dim-polyhedra") 低维子多面体. 作为一种类似子流形的设置? i.e. $ℝ^k$ 维里 $k-1$ 边界的相邻的 simplex 只有两个 -> 分段嵌入到 $ℝ^n$. 若不然, 考虑例子三接边界 #image("../image/tri-intersect-boundary.jpg", width: 40%)
+#tag("low-dim-polyhedra") 低维子多面体. 作为一种类似子流形的设置? i.e. $ℝ^k$ 维里 $k-1$ 边界的相邻的 simplex 只有两个 -> 分段嵌入到 $ℝ^n$. 若不然, 考虑例子三接边界 #image("../image/tri-intersect-boundary.png", width: 40%)
 
 可数推广 -> 可数多面体
 
 #tag("Lebesgue-measurable") 
 #indent[
-  #image("../image/measure-approximation.jpeg", width: 30%)
+  #image("../image/measure-approximation.png", width: 30%)
   Lebesgue 可测集 $A$. simplex 的有限并 $P$ 逼近, #link(<symmetric-set-minus>)[对称差] $A Δ P$ 用可数 simplex 覆盖作为测度估计误差
 
   具体来说, 对集合 $A$ 定义外测度为 $m^*(A) = inf_(ℕ-"polyhedra" C ⊇ A) Vol(C)$ 如果 $m^*(A)$ 有限. 多面体的外测度有限, 且在 Euclidean 距离下, 根据 compact 性质, 可以证明满足次可加性 (subaddtive), 于是多面体的外测度就是自身的体积 (Euclidean 之外的 signature 的空间中的几何中, 应该不是所有的多面体都被用来定义体积)
@@ -280,7 +280,7 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
   _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
   #stack( dir: ltr,
-    image("../image/measure-triangle-inequality-1.jpeg", width: 40%),
+    image("../image/measure-triangle-inequality-1.png", width: 40%),
     image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
   )
   by

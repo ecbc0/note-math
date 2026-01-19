@@ -48,7 +48,7 @@ _Proof_
 
   双曲线的测地线长度 $r$ 是双射. 双曲线映射到到空间轴是单射. 复合后是 $sinh r$ 保持单调的双射 
 
-  #image("../image/hyperbolic-to-space-bijective.jpeg", width: 60%)
+  #image("../image/hyperbolic-to-space-bijective.png", width: 60%)
   $ 
     argh ((v+w)/(|v+w|)) 
     &-> im (v+w)/(|v+w|) &(im "of" ℂ_"split") \

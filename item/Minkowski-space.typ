@@ -292,7 +292,7 @@ let $ℍ𝕪 := ℍ𝕪^1 (time,future) = {(t,x) in ℝ^(1,1) : t^2 - x^2 = 1 , 
     
     #tag("polor-coordinate-hyperbolic") 
     
-    #image("../image/polor-coordinate-hyperbolic.jpeg", width: 50%)
+    #image("../image/hyperbolic-to-space-bijective.png", width: 50%)
     
     双曲极坐标 $v = |v| exph(ϕ #i-split)$, $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$, $ϕ in ℝ$. $ϕ$ can come from $ℍ𝕪$ 测地线长度参数. 也称为双曲角度 #tag("hyperbolic-angle")
 
@@ -377,12 +377,12 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) 连续 at $f(0) = 0$ 
 
 二次流形 $ℚ^(p,q)(± 1)$ 的测地线的定义不需要流形技术, 只需要用测地线 as 截线 of 截面 span by (径向 + 切向) + 嵌入的双曲线 $ℍ𝕪$ 及其测地线长度. *Question* 是否有好的解释?
 
-$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type #image("../image/quadratic-manifold-geodesic.jpeg", width: 30%)
+$ℍ𝕪^n (time) = ℚ^(1,n)(1)$ type (p. 19 of @ref-9) #image("../image/quadratic-manifold-geodesic.png", width: 30%)
 
 $ℍ𝕪^n (space) = ℚ^(1,n)(-1)$ type #stack( dir: ltr,
-  image("../image/quadratic-manifold-geodesic-1.jpeg", width: 30%),
-  image("../image/quadratic-manifold-geodesic-2.jpeg", width: 30%),
-  image("../image/quadratic-manifold-geodesic-3.jpeg", width: 30%)
+  image("../image/quadratic-manifold-geodesic-1.png", width: 30%),
+  image("../image/quadratic-manifold-geodesic-2.png", width: 30%),
+  image("../image/quadratic-manifold-geodesic-3.png", width: 30%)
 )
 
 #tag("geodesic-of-quadratic-manifold") $ℍ𝕪^n (time)$ 测地线
@@ -412,8 +412,8 @@ $ℍ𝕪^n (time)$ 测地线球
 $ℝ^(1,n)$ 的 (time,future)-like net struct
 
 #stack( dir: ltr,
-  image("../image/polor-coordinate-hyperbolic.jpeg", width: 40%),
-  image("../image/Minkowski-net.jpeg", width: 30%)
+  image("../image/hyperbolic-to-space-bijective.png", width: 40%),
+  image("../image/Minkowski-net.png", width: 30%)
 )
 
 双曲极坐标 as 距离空间 $ℝ_(>= 0)$ 和方向空间 $ℍ𝕪^n (time)$ 的 product net struct
@@ -571,7 +571,7 @@ space-like 双曲面, 用 space-like 基点来定义双曲投影, 而且投影�
 
 转换函数应该是 Minkowski 连续同胚?
 
-#image("../image/stereographic-projective-hyperbolic-space-like.jpg", width: 50%)
+#image("../image/stereographic-projective-hyperbolic-space-like.png", width: 50%)
 
 对 $ℝ^(1,2)$ 的情况进行 3d 作图, 画出基点的光锥 (注意是光锥是 "纵向" 的) 
 

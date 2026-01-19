@@ -17,7 +17,7 @@
 
   Can be iteratively or decomposed e.g. triangle $t_1 x_1 + t_2 x_2 + t_3 x_3 <--> s_1 (t_1 x_1 + t_2 x_2) + s_2 x_3$. And the decomposition operation is commutative. And it can be decomposed into multiple $>= 1$ order
 
-  #image("../image/affine-combination-2.jpeg", width: 30%)
+  #image("../image/affine-combination-2.png", width: 30%)
 ]
 #tag("affine-coordinate") $t_i$ can be considered as a coordinate based on the point $x_i$. Affine coordinates. *alias* Barycentric coordinates #tag("barycentric-coordinate")
 
@@ -46,19 +46,19 @@ $
 
 #tag("simplex") := convex hull formed by affinely independent points
 
-#image("../image/simplex.jpeg", width: 70%)
+#image("../image/simplex.png", width: 70%)
 
 #tag("parallelogram") Due to symmetry, the description of parallelepiped can be simplified from the convex hull of $2n$ points to the description of $n$ points, after selecting the origin 
 
 $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
-#image("../image/parallelogram.jpeg", width: 25%)
+#image("../image/parallelogram.png", width: 25%)
 
 #tag("parallelogram-simplex-correspond")
 #indent[
-  A parallelepiped can be $⨆$ decomposed into $n!$ simplexes that are equivalent under translation and reflection
+  A parallelepiped can be $⨆$ decomposed into $n!$ simplexes that are equivalent under translation and reflection (p. 587 of @ref-3)
 
-  #image("../image/shear-transformation.jpg", width: 30%)
+  #image("../image/shear-transformation.png", width: 30%)
 
   The $n$ permutations of points $v_1 ,…, v_n$
   $
@@ -91,7 +91,7 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
 #tag("shear-transformation") After decomposing the parallelepiped into simplexes, cut and translate to form a new parallelepiped with the same volume. Called shear transformation. e.g. $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$
 
-#image("../image/shear-transformation.jpg", width: 30%)
+#image("../image/shear-transformation.png", width: 30%)
 
 (image from p.587 of @ref-3)
 
@@ -220,27 +220,27 @@ The two volume definitions coincide for $k = n$
 
 $ℝ^2$ 's $4$ points
 
-#image("../image/convex-hull-decomposition-1.jpg", width: 40%)
+#image("../image/convex-hull-decomposition-1.png", width: 40%)
 
 $ℝ^2$ 's $5$ points. First select $2$ simplex, that is, select $3$ vertices
 
-#image("../image/convex-hull-decomposition-2.jpg", width: 80%)
+#image("../image/convex-hull-decomposition-2.png", width: 80%)
 
 Find out which simplex combinations are decompositions of the convex hull
 
-#image("../image/convex-hull-decomposition-3.jpg", width: 50%)
+#image("../image/convex-hull-decomposition-3.png", width: 50%)
 
 The intersection of convex hulls is a convex hull
 
-*Example* #image("../image/simplex-intersection.jpg", width: 60%)
+*Example* #image("../image/simplex-intersection.png", width: 60%)
 
 The reduced set of a simplex may not be a convex hull. But it can still be decomposed into simplex 
 
-*Example* #image("../image/simplex-substraction.jpg", width: 20%)
+*Example* #image("../image/simplex-substraction.png", width: 20%)
 
 #tag("polyhedra") Polyhedron :=
 #indent[
-  #image("../image/polyhedra.jpeg", width: 40%)
+  #image("../image/polyhedra.png", width: 40%)
   n simplex finite union with
 
   - internally disjoint
@@ -249,13 +249,13 @@ The reduced set of a simplex may not be a convex hull. But it can still be decom
 
   The dimension of the transitive boundary is to give the polyhedron the best connectivity
 ]
-#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("../image/tri-intersect-boundary.jpg", width: 40%)
+#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("../image/tri-intersect-boundary.png", width: 40%)
 
 Countable generalization -> Countable polyhedron
 
 #tag("Lebesgue-measurable") 
 #indent[
-  #image("../image/measure-approximation.jpeg", width: 30%)
+  #image("../image/measure-approximation.png", width: 30%)
   Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
   Specifically, for a set $A$, the outer measure is defined as $m^*(A) = inf_(ℕ-"polyhedra" C ⊇ A) Vol(C)$ if $m^*(A)$ is finite. The outer measure of a polyhedron is finite, and under Euclidean distance, due to the compactness property, it can be proven to satisfy subadditivity, so the outer measure of a polyhedron is its own volume (in geometries of spaces with signatures other than Euclidean, not all polyhedra should be used to define volume).
@@ -280,7 +280,7 @@ Countable generalization -> Countable polyhedron
   _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
   #stack( dir: ltr,
-    image("../image/measure-triangle-inequality-1.jpeg", width: 40%),
+    image("../image/measure-triangle-inequality-1.png", width: 40%),
     image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
   )
   by
