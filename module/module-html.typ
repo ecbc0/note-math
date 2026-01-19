@@ -10,6 +10,7 @@
   // show: color-symbol 
   show: link-setting // until support link to label in workspace
   show: book-page
+  show: html-export-template
 
   body
 }
