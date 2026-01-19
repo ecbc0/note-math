@@ -365,6 +365,8 @@ $f : ℝ^(1,1) -> ℝ^(1,1)$ ((time,future),(time,future)) continuous at $f(0) =
     (|f| < ε) and (|argh (f)| < Epsilon)
   $
 ]
+Clues for the rationality of topological of $p, q$ quadratic forms: $ℝ^(p, q)$ as a space of linear maps through $(1, 1)$ tensors, the inherited tensor quadratic form will be proportional to the Killing form quadratic form of $so(p, q)$
+
 Generalization to higher dimensions, rough intuition: 
 #indent[
   Minkowski $ℝ^(1,n)$ can be decomposed into a $1$ dim distance space $ℝ_(>= 0)$ and an $n$ dim direction space ${⟨ x ⟩^2 = ±1}$. Let's use their product topology.

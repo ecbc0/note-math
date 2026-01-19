@@ -311,6 +311,8 @@ $F(x,y) = 0$ and $(∂ F)/(∂ y)(x,y) in GL$
 
 The calculation of differentials and differential functions does not require series in advance
 
+Analytic functions are not closed under non-finite summation. Using trigonometric or exponential functions, series can provide things that are discontinuous, continuous but non-differentiable, or differentiable but non-analytic
+
 - $C^∞$ function with zero radius of convergence at finite points
 
   $ exp 1/(1-x^2)$ connected to $0$ 

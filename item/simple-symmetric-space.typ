@@ -3,7 +3,7 @@
 
 cf. #link("https://en.wikipedia.org/wiki/Symmetric_space")[wiki:Symmetric_space] #link("https://en.wikipedia.org/wiki/Simple_Lie_group")[wiki:Simple_Lie_group]
 
-#tag("symmetric-space-locally") := $∇ R = 0$ 
+#tag("symmetric-space-locally") := 在测地线坐标下, 反射 $-𝟙$ 是 isometry. 等价于 $∇ R = 0$ 
 
 *Example* quadratic manifold, simple-Lie-group and related symmetric-space
 

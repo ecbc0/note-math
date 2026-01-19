@@ -27,6 +27,8 @@
   - Zero $0 in ℝ$ is the identity element of the addition operation $+$ $a + 0 = 0 + a = a$
   - Additive inverse $-a in ℝ$ is the inverse element of the addition operation $+$ $a + (-a) = (-a) + a = 0$
 ]
+Similar to curry "$A_1 -> (A_2 -> A_3)$ equivalent to $(A_1 × A_2) -> A_3$", transformation and operation group can mutually isomorphically turned into each other 
+
 Taking composition $∘$ as a binary operation on $Aut X$, a transformation group can be isomorphically turned into an operation group
 
 An operation group can be isomorphically turned into a transformation group, for example
@@ -88,6 +90,7 @@ _Proof_
   - Subset $H ⊆ G$
   - Closed under binary operation $a, b in H ==> a ⋅ b in H$
   - Closed under inverse operation $a in H ==> a^(-1) in H$
+  equivalently, the identity embedding $H ↪ G$ is group homomorphism
 ]
 *Example* The multiplicative group on $ℝ ∖ 0$ has a subgroup $ℝ_(> 0)$ 
 

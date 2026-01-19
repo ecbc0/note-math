@@ -310,8 +310,9 @@ Definition language expansion
     
     The empty set $∅_T$ corresponds to the constant false function. The universal set $"U"_T$ (usually written simply as $T$) corresponds to the constant true function. Let $A,B in Set T$ (or written as $A,B: Set T$), define $A subset B := And_(x in T) (x in A => x in B)$
 
-    By using subtype (and dependent type), the distinction between sets and types becomes very small. For example, for the set $A in Set[T]$, the corresponding subtype is ${x in T | x in A}$ (or written as ${x: T || x in A}$, where the difference between $||$ and $|$ is used to distinguish between propositional constraints of types and propositional constraints of sets).    
-  ] 
+    By using subtype (and dependent type), the distinction between sets and types becomes very small. For example, for the set $A in Set[T]$, the corresponding subtype is $T(a) := {x in T | x in A}$ (or written as ${x: T || x in A}$, where the difference between $||$ and $|$ is used to distinguish between propositional constraints of types and propositional constraints of sets). 
+
+    If a theorem about type $T$ is proved, sometimes it's easy to see that it holds for a certain subsets. However, because representing a subset as a subtype of a type adds a propositional constraint $x in A$, sometimes the theorem for $T$ cannot hold for certain subsets. In short, for a computer, the theorem might have to be rewritten once more. One way to reduce this tediousness is to use typeclasses to represent structural types and their properties, making the theorem based on typeclasses, which increases reuse and reduces repetition.  ] 
 ]
 
 function space introduces higher-level infinity
@@ -375,22 +376,10 @@ let $#A in Set(Set(T))$
 
   $A ∩ A = A$
 ]
-#tag("why-type-theory")
-#indent[
-  Why limit union and intersection to types? Because, since there is no reason not to define the intersection of an empty family of sets and consider it also a set, however, if not limited to types
+Why limit union and intersection to types/sets? Because, since there is no reason not to define the intersection of an empty family of sets and consider it also a set, however, if not limited to types, if no restrictions are placed on the elements in the set $#A$, then due to the vacuous argument, the intersection of an empty family of sets results in the universal set $Set$, and the universal set $Set$ is not a set, which violates the construction rules of set theory.
 
-  - If no restrictions are placed on the elements in the set $#A$, then due to the vacuous argument, the intersection of an empty family of sets results in the universal set $Set$, and the universal set $Set$ is not a set, which violates the construction rules of set theory.
+The intuition that the intersection of a empty family of sets is the universal set: because the intersection decreases with respect to ⊆, hence intersection increases when the set family go towards the direction of empty family of sets.
 
-  - If the elements in the set $#A$ are restricted to an existing set $B$ or (in mainstream set theory) $⋃ #A$, then the intersection of an empty family of sets produces a local universal set that is $B$ or $⋃ #A$. However, the elements in the set $#A$ may belong to a smaller or larger set, which causes the universal set to also change, making $⋂ #A$ unstable and without a clear result. This still violates the construction rules of set theory.
-
-  - In set theory, restricting the intersection of a family of sets $⋂ #A$ to be within the union of that family $⋃ #A$, has a certain logic to it: it is the minimal common container set for all elements of the sets in $#A$. However, this makes the definition of intersection dependent on the definition of union, and this dependency breaks the symmetry
-
-    The intuition that the intersection of a empty family of sets is the universal set: because the intersection decreases with respect to ⊆, hence intersection increases when the set family go towards the direction of empty family of sets.
-
-  However, every set does have a unique type, thus these problems will be solved.
-
-  However, if you allow forall statement to be restricted to general sets $U$ or subtype $U$, then the intersection of the empty sets is the universal set of $U$, not the universal set of type $T$ in which the elements of $U$ are located.
-]
 According to the index mapping $A in (I -> Set T)$, infinite versions of product and sum can be defined.
 
 - #tag("product-index") 
@@ -430,8 +419,6 @@ Other uses of $=$
 
 #tag("compare-math-lang-with-programming-lang") 
 #indent[
-  What's the difference between `∈` in mathematical language and `:` in programming language?
-
   Mathematical language and programming languages are very similar, both require a compiler to check a series of language rules.
 
   Some differences:

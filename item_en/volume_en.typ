@@ -95,6 +95,8 @@ $ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
 
 (image from p.587 of @ref-3)
 
+Even though what we defined is the volume of a parallelepiped, the shear transformation shows that the concept of the volume of a simplex is still used simultaneously, verifying once again the close connection between simplexes and parallelepipeds
+
 Shear transformation volume invariance is algebraically e.g. $(v_1 + v_2) ∧ v_2 ∧ ⋯ ∧ v_n = v_1 ∧ v_2 ∧ ⋯ ∧ v_n$ or $det mat(
   1, 1;
   , 1;
@@ -119,6 +121,22 @@ $v_1 ,…, v_n$ linearly dependent ==> in a lower-dimensional subspace ==> zero 
 For $ℝ^n$'s $k$-th order parallelepiped and simplex
 
 Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(∧ k)$'s decomposable element $v_1 ∧ ⋯ ∧ v_k$
+
+The $n$-multilinearity of tensors comes from the linearity of volume $n$ and side length scaling
+
+Why is it that the concept of volume is clearly positive, yet the $n$-alternating tensor $det$ can be negative?
+
+Side length scaling can be extended to the $-1$ direction as a form of total linearity
+
+Any linear transformation can be decomposed into scaling and shearing. Shearing doesn't change volume, so the $-1$ effect must be brought by scaling, including transformations like "swapping the order of bases," though it's not intuitively simple
+
+*Example* A 2D example, but easily generalized to any two vectors in $n$ dimensions
+- Shearing $mat(1, 1;, 1) vec(x, y) = vec(x + y, y)$ does not change volume
+- Shearing $mat(-1; -1, 1) vec(x + y, y) = vec(x + y, -y)$
+- Shearing $mat(1, 1;, 1) vec(x + y, -y) = (y, -x)$
+- $-1$ scaling $(y, -x) ⇝ (y, x)$ makes the volume $-1$
+
+Actually, you could totally say it's positive multilinear alternating, positive determinant, just like the treatment of integrating densities on manifolds
 
 #tag("try-to-define-volume-of-low-dim") Actually, we don't need "volume invariance", we only need the volume to transform in a desirable way, that is, transform in terms of form. We don't need to define the volume of the k-th subspace of $ℝ^n$ using the $n$ form of $ℝ^n$, because as long as we consider the k-th subspaces as manifolds (for example, by choosing a k-th basis to establish a coordinate system), they have their own volumes. Metric volume form is a good method to define the volume using a special family of coordinate systems in all $k$ subspaces at one time, where the metric length of $e_1 ∧ ⋯ ∧ e_k$ is also $1$, thus coinciding with the volume of $e_1 ∧ ⋯ ∧ e_k$ being $1$. For non-positive definite metric volume forms, there are some k-th subspaces where the metric length of $e_1 ∧ ⋯ ∧ e_k$ is zero, not coinciding with the volume of $e_1 ∧ ⋯ ∧ e_k$ being $1$. Anyway, the following discussion may still be useful, so it is kept.
 

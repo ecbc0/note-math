@@ -43,6 +43,10 @@ There are two ways to extend to $ℝ^n$
   $
   one of motivation of complex-number or $z^2 = -1$ is the characteristic polynomial equation of #link(<harmonic-oscillator>)[] $ξ^2 + ω^2 = 0$
 
+  Another motivation for complex numbers comes from the factorization of polynomials. A *real* polynomial factorization can be completely in the form of products of $(x - a)$ or $(x^2 + p x + q)^2$, and the latter can be factored in $ℂ$ into the form $(x - a) (x - a^*)$, specifically, $x^2 + 1 = (x - #i) (x + #i)$. So for convenience, one can choose to use complex numbers, and you can still choose to think of this as just an algebraic convenience, without needing the geometry of complex numbers
+
+  But in the following split complex, $x^2 + 1$ still cannot be factored into first-order polynomials. Even $x^2 - 1$ has four roots, with two extra $1/2 (1 ± #i-split)$
+
   *Eaxmple* #tag("split-complex-number") Split-complex number. $x + y #i-split, x' + y' #i-split ∈ ℂ_"split"$
 
   also cf. #link(<complex-numbler-geometric-meaning>)[]
@@ -190,4 +194,9 @@ New imaginary unit construction method
   Change the origin, translate
 
   hom additionally keeps $f(x-y) = f(x) f(-) f(y)$ abbreviated as $f(x) - f(y)$
+]
+
+#tag("problem-of-quaternionic-linear") 
+#indent[
+  Trying to define linear algebra for $ℍ^n$. We immediately run into a problem: since $ℍ$ is non-commutative, scalar multiplication cannot be swapped with matrix multiplication on the same side at will. How should the scalar multiplication of the linear structure be defined? Should scalar multiplication on both sides belong to a single linear structure? One definition of a linear map is as a homomorphism between linear spaces. If we want to include scalar multiplication from both sides into the linear structure, then linear maps need to preserve multiplication on both sides. In the case of $ℍ^1$, it's already clear that this would make the range of linear maps too narrow. Therefore, the "linear structure" of $ℍ^n$ is defined as, for example, left-side matrix multiplication acting as the linear map, while right-side scalar multiplication ensures the linear map is a homomorphism of the linear structure.
 ]

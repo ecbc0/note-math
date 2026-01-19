@@ -161,4 +161,4 @@ $
 
   可以对 tensor field 也定义 Lie derivative ...
 ]
-#tag("first-order-PDE-integrable-condition") *alias* #tag("Frobenius-theorem") 将一阶 ODE 积分曲线推广到一阶 PDE 系统积分曲面, 此时需要向量场们 $v_1 ,…, v_n$ 展开的线性空间形成 Lie subalgebra, 或者用更一般的对合子丛的概念. PDE 的解可以来自沿坐标方向的接连的 ODE 积分曲线, 且结果不依赖于道路的选取. 在一阶线性 PDE 系统的情况下, 可积条件变成坐标下二阶偏导数的对称性 
+#tag("first-order-PDE-integrable-condition") *alias* #tag("Frobenius-theorem") 将一阶 ODE 积分曲线推广到一阶 PDE 系统积分曲面, 此时需要向量场们 $v_1 ,…, v_n$ 展开的线性空间形成 Lie subalgebra, 或者用更一般的对合/可积子丛的概念. PDE 的解可以来自沿坐标方向的接连的 ODE 积分曲线, 且结果不依赖于道路的选取. 在一阶线性 PDE 系统的情况下, 可积条件变成坐标下二阶偏导数的对称性 

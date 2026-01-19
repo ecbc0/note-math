@@ -218,6 +218,8 @@ For time only depending on the difference $t_1 - t_0$
 ]
 Is this method not generalizable to the hydrogen atom problem? It is said that there is a method to transform the hydrogen atom problem into the path integral of the harmonic oscillator under the $SO(4)$ symmetry.
 
+*Question* Inspired by the classification of regularity in the discussion of the proof of Stokes' theorem, it seems like the concepts of propagator and Sobolev systems are quite compatible
+
 #tag("eigen-decomposition") 
 #indent[
   Characteristic equation given by $e^(-E/h t #i) ψ(x)$
@@ -232,6 +234,10 @@ Is this method not generalizable to the hydrogen atom problem? It is said that t
   $
   According to #link("https://en.wikipedia.org/wiki/Path_integral_formulation#Simple_harmonic_oscillator")[wiki:Path_integral_formulation], $K = ((m ω)/(π ℏ))^(1/2) e^(- #i 1/2 ω T) R(e^(- #i ω T))$ then let $R$ perform Taylor expansion, where $e^(- #i 1/2 ω T) e^(- #i n ω T) = e^(- #i (1/2 + n) ω T)$ corresponds to energy level $E_n = (1/2 + n) ℏ ω$
 ]
+There should be a kind of "spectral theory", "spectral measure", that can define $tr, det$ through normalization techniques
+
+In addition to finite-dimensional $⨁_1^N V(E_n)$ and discrete countably infinite-dimensional $L^2$ spaces $⨁_(n in ℕ) V(E_n)$, one can also consider integral infinite-dimensional $L^2$ spaces $(integral #d E) V(E)$. In this case, the "basis" is not required to be in $L^2$, for example $exp(-#i E t)$. However, the decomposition coefficients of the function with respect to the basis $f(t) = integral_(ℝ) #d E hat(f)(E) exp(-#i E t)$ should be in $L^2$, $integral_(ℝ) #d E |hat(f)(E)|^2 < ∞$
+
 Regarding field quantization
 
 One perspective is path integral quantization of fields.
@@ -269,7 +275,7 @@ Vacuum $0$ is something lower than zero order
 
 The energy operator of the KG field quantum harmonic oscillator can also be expressed in the form of KG field operator + energy of the KG field, even if this is not calculating the energy of the KG field (field operator after differential plane wave expansion) 
 $
-  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) + #a (p,#i) #a (p,#i)^†) 
+  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) + #a (p,#i) #a (p,#i)^†) \
 
   = integral_(ℝ^3) #d x 1/2 (∂_t ϕ^† ∂_t ϕ + ∂_x ϕ^† ∂_x ϕ + m^2 ϕ^† ϕ)
 $

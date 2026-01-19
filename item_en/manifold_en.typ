@@ -9,7 +9,7 @@
 
 *Example* Parametric curves and surfaces of $ℝ^3$. analytic function $f : ℝ^2 -> ℝ^3$, $#d f != 0$ ==> for local parameter, it's local analytic isomorphism
 
-#tag("manifold") minimal structure to define manifold, family of coordinate cards covering $M$ with the same dimension, transition functions using Euclidean or Minkowski or quadratic analysis
+#tag("manifold") Many things are invariant under local analytically isomorphism, so manifold can be defined to be the generalization of local analytically isomorphism (or local diffeomorphism), family of coordinate cards covering $M$ with the same dimension, transition functions using Euclidean or Minkowski or quadratic analysis
 
 #tag("orientable") Orientable := can analytically define #link(<orientation>)[] in the tangent bundle 
 
@@ -24,6 +24,10 @@ If the interior of a manifold with boundary is orientable, then the boundary is 
 #tag("manifold-with-boundary") Manifold with boundaries. The coordinates can be the region enclosed by the $n-1$-dimensional hyperplane, and the transformation function need to be able to derives the transformation function in the $n-1$-dimensional subspace.
 
 #tag("metric-manifold") metric on manifold (*Abbreviation* metric) is to define metric in each tangent space, which is equivalent to choosing an orthonormal frame bundle on the manifold tangent bundle. For $SO(p,q)$ oritentable, we can choose $SO(p,q)$ orientable frame bundle
+
+#tag("submanifold") identity embedding $S ↪ M$ is manifold homomorphism. equivalently, local diffeomorphism of $M$ locally flatten submanifold $S$
+
+#tag("quotient-manifold") ...
 
 metric can be inherited from submanifold or quotient manifold of $ℝ^(p,q)$
 

@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("symmetric-space-locally") := $∇ R = 0$ 
+#tag("symmetric-space-locally") := under geodesic coordinate, inversion $-𝟙$ is isometry. equivalently, $∇ R = 0$ 
 
 *Example* quadratic manifold, simple-Lie-group and related symmetric-space
 

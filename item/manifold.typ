@@ -9,7 +9,7 @@
 
 *Example* $ℝ^3$ 的参数曲线曲面. 解析函数 $f : ℝ^2 -> ℝ^3$, $#d f != 0$ ==> 局部参数是局部解析同胚
 
-#tag("manifold") := minimal structure to define manifold, 一族同维数坐标卡覆盖 $M$, 用 Euclidean or Minkowski or 二次型解析的转换函数
+#tag("manifold") 很多东西在局部解析同胚下不变, 于是可以定义流形局部解析同胚的一般化 (或者局部微分同胚), 一族同维数坐标卡覆盖 $M$, 用 Euclidean or Minkowski or 二次型解析的转换函数. 
 
 #tag("orientable") 可定向 := 在切丛中可以解析地定义 #link(<orientation>)[]
 
@@ -24,6 +24,10 @@
 #tag("manifold-with-boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数
 
 #tag("metric-manifold") 流形上的 metric 是在每个切空间定义 metric, 等价于在流形切丛上选择 orthonormal frame bundle. 对 $SO(p,q)$ oritentable, 可以选择 $SO(p,q)$ 可定向的标架丛
+
+#tag("submanifold") 恒等嵌入 $S ↪ M$ 是流形同态. 等价地, $M$ 的局部微分同胚局部地抻直子流形 $S$
+
+#tag("quotient-manifold") ...
 
 metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
 
