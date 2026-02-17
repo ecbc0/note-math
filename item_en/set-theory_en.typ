@@ -312,7 +312,8 @@ Definition language expansion
 
     By using subtype (and dependent type), the distinction between sets and types becomes very small. For example, for the set $A in Set[T]$, the corresponding subtype is $T(a) := {x in T | x in A}$ (or written as ${x: T || x in A}$, where the difference between $||$ and $|$ is used to distinguish between propositional constraints of types and propositional constraints of sets). 
 
-    If a theorem about type $T$ is proved, sometimes it's easy to see that it holds for a certain subsets. However, because representing a subset as a subtype of a type adds a propositional constraint $x in A$, sometimes the theorem for $T$ cannot hold for certain subsets. In short, for a computer, the theorem might have to be rewritten once more. One way to reduce this tediousness is to use typeclasses to represent structural types and their properties, making the theorem based on typeclasses, which increases reuse and reduces repetition.  ] 
+    If a theorem about type $T$ is proved, sometimes it's easy to see that it holds for a certain subsets. However, because representing a subset as a subtype of a type adds a propositional constraint $x in A$, sometimes the theorem for $T$ cannot hold for certain subsets. In short, for a computer, the theorem might have to be rewritten once more. One way to reduce this tediousness is to use typeclasses to represent structural types and their properties, making the theorem based on typeclasses, which increases reuse and reduces repetition.  
+  ] 
 ]
 
 function space introduces higher-level infinity
@@ -388,7 +389,7 @@ According to the index mapping $A in (I -> Set T)$, infinite versions of product
 
   product component
   $ 
-    map(product_(i in I) A(i), A(i), x, (x,i) ,=, a) 
+    map(product_(i in I) A(i), A(i), x, (x,i) = a) 
   $ 
   or 
   $
@@ -401,7 +402,7 @@ According to the index mapping $A in (I -> Set T)$, infinite versions of product
 
   sum component
   $ 
-    map(A(i), sum_(i in I) A(i), a, (i, a) ,=, x) 
+    map(A(i), sum_(i in I) A(i), a, (i, a) = x) 
   $
 ]
 Other uses of $=$

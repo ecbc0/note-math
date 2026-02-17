@@ -83,6 +83,7 @@
 #let Sp = c-Lie-group("Sp")
 #let SL = c-Lie-group("SL")
 #let GL = c-Lie-group("GL")
+#let Spin = c-Lie-group("Spin")
 
 #let c-Lie-algebra(x) = math.sans(o-color(x, rgb("#d25b00")))
 

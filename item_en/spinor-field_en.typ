@@ -284,10 +284,17 @@ Since $mat(#p ;,#p^◊)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^◊
 
   The isotropy in $G_2$ isomorphic to $SU(3)$ will change the $#u (1,𝕆)$ phase or the $#u (1,𝕆)$ gauge field of the $#U (1,𝕆)$ gauge transformation, leading to the $SU(3)$ action on the $ℂ^3$ part. Should it be said that there is a $su (3)$ gauge field of the $SU(3) ↪ G_2$ gauge transformation for the $#u (1,𝕆)$ or $ℂ^3$ gauge field of a $#U (1,𝕆)$ gauge transformation, and then introduce the Yang--Mills eq of minimal curvature again like the electromagnetic field?
 
-  *Question* What about the case of quaternions $ℍ$?
+  *Question* What about the case of quaternions $ℍ$? In the case of $ℂ$, the symmetry group of imaginary unit is $ℤ_2$. When fixing one imaginary unit, it become $𝟙$
 
-  In octonionic spinor theory, $𝕆^2$ still serves as the space where spinor fields reside, the $ℝ^(1, 9)$ projective lightcone is $𝕊^8 ≃ 𝕆ℙ^1$, and $SL(2, 𝕆)$ gives the double cover of $SO(1, 9)$, $1 + 9$ spacetime corresponds to second-order Hermitian octonionic matrices $h_2(𝕆) = mat(t - a, α; α^*, t + a)$, where $det$ corresponds to the spacetime metric. Moreover, one can embed spacetime, the spinor $vec(ϕ, ψ)$, and a real number into third-order Hermitian octonionic matrices $h_3(𝕆) ≃ h_2(𝕆) + 𝕆^2 + ℝ = mat(r, 𝕆^*; 𝕆, h_2(𝕆))$ (If we try to embed $𝕆ℙ^1$, then the result might be related to the projective space $𝕆ℙ^2$ of $h_3(𝕆)$?), and the group preserving the $det$ of $h_3(𝕆)$ is $E_6$, which can nicely embed $SL(2, 𝕆) ↠ SO(1, 9)$ as well as spinor gauge theory and $(SU(3) × SU(2) × #U (1)) / ℤ_6$ cf. (@ref-20, th.6) 
+  In octonion spinor theory, there is still $𝕆^2$ as the space where the spinor field resides, the $ℝ^(1, 9)$ projective light cone is $𝕊^8 ≃ 𝕆ℙ^1$, $SL(2, 𝕆)$ gives a double cover of $SO(1, 9)$, and $1 + 9$ spacetime corresponds to a second-order Hermitian octonion matrix $h_2(𝕆) = mat(t - a, α; α^*, t + a)$, where $det$ corresponds to the spacetime metric. Moreover, spacetime, spinor $vec(ϕ, ψ)$, and a real number can be embedded into a third-order Hermitian octonion matrix $h_3(𝕆) ≃ h_2(𝕆) + 𝕆^2 + ℝ = mat(r, 𝕆^*; 𝕆, h_2(𝕆))$ (and the projectivization $𝕆ℙ^2$ of $h_3(𝕆)$ is a generalization of the $ℝ^(1,9)$ projective light cone $𝕆ℙ^1$), the group that preserves the $det$ of $h_3(𝕆)$ is $E_6$, which can be well embedded into $SL(2, 𝕆) ↠ SO(1, 9)$ and spinor gauge theory and $(SU(3) × SU(2) × #U (1)) / ℤ_6$ cf. (@ref-20, th.6)
 
+  #let GSM = $#c-Lie-group("S") (#U (2) #U (3))$
+
+  The quark lepton fermion model of the Standard Model can be written as $GSM$ acting on $⋀ (ℂ^5)$, so some people embed $GSM$ into $Spin(4) × Spin(6)$ (probably through $#U (2) ↪ Spin(4) ≃ SU(2) × SU(2)$, $U(3) ↪ Spin(6)$), and then embed it into $Spin(10)$, and then correspond $⋀(ℂ^5)$ with $"Cliff"(10)$. These embeddings are called "GUT". $Spin(10)$ breaks to $Spin(4) × Spin(6)$
+
+  Mathematically, I think we can consider whether $Spin(1,3) × Spin(6)$ has something similar to the GUT quark lepton model, note that it is similar not identical
+
+  The motivation for considering this model is that $Spin(1,9) = SL(2,O) ⊆ SL(3,O) = E_(6(-26))$, and the spinor $𝕆^2$ and $⋀(ℂ^5)$, $"Cliff"(10)$ are very close, so that no additional assumption of $⋀(ℂ^5)$ is needed, and the breaking may be completed by fixing a unit imaginary element, or equivalently fixing $ℂ ⊆ 𝕆$.
 ]
 #tag("spin-connection")
 #indent[
