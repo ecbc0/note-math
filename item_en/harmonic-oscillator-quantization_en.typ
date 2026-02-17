@@ -242,44 +242,18 @@ Regarding field quantization
 
 One perspective is path integral quantization of fields.
 
-#tag("field-path-integral-quantization") *Question* Since the harmonic oscillator can be path-integrated by eigenvalue diagonalization & generalized Gaussian integral, why don't KG eq (or Dirac eq) similar to the harmonic oscillator eq also perform #link(<linear-superposition-of-KG-eq>)[eigenvalue diagonalization] & generalized Gaussian integral path integral? 
+#tag("field-path-integral-quantization") *Question* Since the harmonic oscillator can perform path integration by eigenvalue diagonalization & generalized Gaussian integration, why don't KG eq (or Dirac eq) which are similar to harmonic oscillator eq also perform #link(<linear-superposition-of-KG-eq>)[eigenvalue diagonalization] & generalized Gaussian integration for path integration? Moreover, the Lagrangian of the harmonic oscillator is very similar to the Lagrangian of KG eq. Then time $t in ℝ$ corresponds to spacetime $x in ℝ^(1,3)$, and position $x in ℝ$ corresponds to field value $ϕ$. But I don't support using a rectangle in $ℝ^(1,3)$ for path integration; a setting more compatible with $SO(1,3)$ should be used. For example, perhaps the time interval $t_1 - t_0$ should correspond to the spacetime quadratic interval $(x_1 - x_0)^2$? Not using $x_1^2 - x_0^2$ because it is not translation invariant?
 
-Another (?) perspective is field operator quantization of fields.
+Another (?) viewpoint is field quantization using field operators
 
-recall #link(<Klein--Gordon-equation>)[] Consider the plane wave solution
+recall #link(<Klein--Gordon-equation>)[] Consider plane wave solutions
 $
   (∂_t^2 - ∂_x^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0 \
   (∂_t^2 + p^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0
 $
-If we ignore plane waves, even if we might lose accuracy, we get an ODE
-$
-  (∂_t^2 + p^2 + m^2) ϕ = 0
-$
-This is the $ℂ$-valued point particle harmonic oscillator equation, with frequency $ω = E = p_0 = (p^2 + m^2)^(1/2)$
+But this depends on the decomposition of time and space, which is not conducive to generalization to general spacetime manifolds
 
-Then the point particle harmonic oscillator can be quantized
-
-recall #link(<linear-superposition-of-KG-eq>)[] $L^2$ superposition of KG plane waves on the hyperboloid $ℍ𝕪^3 = {p^2 = m^2}$
-$ 
-  ϕ(t, x) = integral_(ℍ𝕪^3) #d p  
-  (
-    a(p,#i) e^(E t #i) e^(- p x #i) 
-    + a(p,-#i) e^(- E t #i) e^(p x #i)
-  )
-$
-*Question* Homomorphize the quantum harmonic oscillator of point particles to the quantum harmonic oscillator of the KG field, with $L^2 (ℍ𝕪^3,ℂ)$ coefficient constraint (Sobolev), the coefficient constraint of multiple raising and lowering corresponds to $L^2$ symmetric tensors, the entire space is $⨁_(n in ℕ) ⨀^n L^2 (ℍ𝕪^3, L^2(ℂ,ℂ))$ (where $L^2(ℂ,ℂ)$ is the space of $ℂ$ harmonic oscillator quantization)
-
-*Question* Is this tensor based on the $L^2 (ℍ𝕪^3,ℂ)$ module? 
-
-Vacuum $0$ is something lower than zero order
-
-The energy operator of the KG field quantum harmonic oscillator can also be expressed in the form of KG field operator + energy of the KG field, even if this is not calculating the energy of the KG field (field operator after differential plane wave expansion) 
-$
-  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) + #a (p,#i) #a (p,#i)^†) \
-
-  = integral_(ℝ^3) #d x 1/2 (∂_t ϕ^† ∂_t ϕ + ∂_x ϕ^† ∂_x ϕ + m^2 ϕ^† ϕ)
-$
-For the Dirac field, it seems that there is no need to do what the KG field does, because "once" quantization already exists, but it is finite-dimensional, a representation comes from the two eigenvalues of $su(2), ℂ^2$ #link(<Pauli-matrix>)[] (@ref-18, p.305--308)
+For the Dirac field, other structures need to be used. Use two eigenvalues of $su(2), ℂ^2$ #link(<Pauli-matrix>)[] (@ref-18, p.305--308)
 
 - $#H = 1/2 σ_1 = 1/2 mat(1 ;, -1) \ 
   #i #H in su(2)$
@@ -305,28 +279,3 @@ For the Dirac field, it seems that there is no need to do what the KG field does
 - $[#H, #a _(±)] = ± #a _(±)$
 
 After adding parity, it is $ℂ^2 ⊕ ℂ^(2 ◊)$
-
-#let p = spin($p$)
-
-recall #link(<linear-superposition-of-Dirac-eq>)[] $L^2$ superposition of Dirac plane waves on $ℍ𝕪^3$
-$
-  limits(integral)_(ℍ𝕪^3) #d p
-    (vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ)(p) e^(- p x #i) + vec(#p^(◊ 1/2) η, - #p^(1/2) η)(p) e^(p x #i))
-$
-*Question* Homomorphically map it to the quantum field of the Dirac field, plus $L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$ coefficient restriction (Sobolev), the coefficient restriction of multiple raising and lowering corresponds to $L^2$ alternating tensor, the entire space is $⨁_(n in ℕ) ⋀^n L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$
-
-*Question* Is this tensor based on the $L^2 (ℍ𝕪^3,ℂ)$ module? 
-
-Vacuum $0$ is something lower than zero order
-
-The energy operator of the Dirac field quantum field can also be expressed in the form of Dirac field operator + energy of the Dirac field, even if this is not calculating the energy of the Dirac field
-$
-  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) - #a (p,#i) #a (p,#i)^†) 
-
-  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† #i ∂_0 vec(ϕ,ψ) \
-
-  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† mat(
-      #i #spin-d _x , m 𝟙 ;
-      m 𝟙 , - #i #spin-d _x
-    ) vec(ϕ,ψ)
-$

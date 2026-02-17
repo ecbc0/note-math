@@ -242,7 +242,7 @@ $
 
 一种观点是路径积分式的场量子化
 
-#tag("field-path-integral-quantization") *Question* 既然谐振子可以路径积分 by 特征值对角化 & 推广 Gaussian 积分, 为什么类似谐振子 eq 的 KG eq (or Dirac eq) 不也进行 #link(<linear-superposition-of-KG-eq>)[特征值对角化] & 推广 Gaussian 积分的路径积分? 
+#tag("field-path-integral-quantization") *Question* 既然谐振子可以路径积分 by 特征值对角化 & 推广 Gaussian 积分, 为什么类似谐振子 eq 的 KG eq (or Dirac eq) 不也进行 #link(<linear-superposition-of-KG-eq>)[特征值对角化] & 推广 Gaussian 积分的路径积分? 而且谐振子的 Lagrangian 很像 KG eq 的 Lagrangian. 然后时间 $t in ℝ$ 对应到时空 $x in ℝ^(1,3)$, 位置 $x in ℝ$ 对应到场值 $ϕ$. 但是我不支持用 $ℝ^(1,3)$ 的矩形来做路径积分, 应该用更加兼容 $SO(1,3)$ 的设置. 例如可能要将时间间隔 $t_1 - t_0$ 对应到时空二次型的间隔 $(x_1 - x_0)^2$? 不用 $x_1^2 - x_0^2$ 是因为它并不是平移不变的? 
 
 另一种 (?) 观点是场算子式的场量子化
 
@@ -251,35 +251,9 @@ $
   (∂_t^2 - ∂_x^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0 \
   (∂_t^2 + p^2 + m^2) e^((p_0(p) t - p x) (± #i)) &= 0
 $
-如果我们不管平面波的话, 即使可能损失精度, 我们得到 ODE
-$
-  (∂_t^2 + p^2 + m^2) ϕ = 0
-$
-这是 $ℂ$ 值点粒子谐振子方程, 频率 $ω = E = p_0 = (p^2 + m^2)^(1/2)$
+但这样依赖于时间空间的分解, 不利于推广到一般时空流形
 
-然后点粒子谐振子可以量子化
-
-recall #link(<linear-superposition-of-KG-eq>)[] KG 平面波在双曲面 $ℍ𝕪^3 = {p^2 = m^2}$ 上的 $L^2$ 叠加
-$ 
-  ϕ(t, x) = integral_(ℍ𝕪^3) #d p  
-  (
-    a(p,#i) e^(E t #i) e^(- p x #i) 
-    + a(p,-#i) e^(- E t #i) e^(p x #i)
-  )
-$
-*Question* 将点粒子的量子谐振子同态到 KG 场的量子谐振子, 加上 $L^2 (ℍ𝕪^3,ℂ)$ 系数限制 (Sobolev), 多重升降的系数限制对应着 $L^2$ 对称张量, 整个空间是 $⨁_(n in ℕ) ⨀^n L^2 (ℍ𝕪^3, L^2(ℂ,ℂ))$ (其中 $L^2(ℂ,ℂ)$ 是 $ℂ$ 谐振子量子化的空间)
-
-*Question* 这种张量基于 $L^2 (ℍ𝕪^3,ℂ)$ 模? 
-
-真空 $0$ 是比零阶更低的东西
-
-KG 场量子谐振子的能量算子还能表示为 KG 场算子 + KG 场的能量的形式, 即使这不是在计算 KG 场的能量 (微分的平面波展开后的场算子) 
-$
-  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) + #a (p,#i) #a (p,#i)^†) \
-
-  = integral_(ℝ^3) #d x 1/2 (∂_t ϕ^† ∂_t ϕ + ∂_x ϕ^† ∂_x ϕ + m^2 ϕ^† ϕ)
-$
-对于 Dirac 场的情况, 似乎不需要像 KG 场那样做, 因为已经存在 "一次" 量子化了, 只不过是有限维的, 一种表示来自 $su(2), ℂ^2$ 的两个特征值 #link(<Pauli-matrix>)[] (@ref-18, p.305--308)
+对于 Dirac 场的情况, 要用到别的结构. 用 $su(2), ℂ^2$ 的两个特征值 #link(<Pauli-matrix>)[] (@ref-18, p.305--308)
 
 - $#H = 1/2 σ_1 = 1/2 mat(1 ;, -1) \ 
   #i #H in su(2)$
@@ -307,26 +281,3 @@ $
 加上 parity 后, 是 $ℂ^2 ⊕ ℂ^(2 ◊)$
 
 #let p = spin($p$)
-
-recall #link(<linear-superposition-of-Dirac-eq>)[] 对 Dirac 平面波在 $ℍ𝕪^3$ 上进行 $L^2$ 叠加
-$
-  limits(integral)_(ℍ𝕪^3) #d p
-    (vec(#p^(◊ 1/2) ξ, #p^(1/2) ξ)(p) e^(- p x #i) + vec(#p^(◊ 1/2) η, - #p^(1/2) η)(p) e^(p x #i))
-$
-*Question* 将其同态到 Dirac 场的量子场, 加上 $L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$ 系数限制 (Sobolev), 多重升降的系数限制对应着 $L^2$ 交错张量, 整个空间是 $⨁_(n in ℕ) ⋀^n L^2 (ℍ𝕪^3,ℂ^2 ⊕ ℂ^(2 ◊))$
-
-*Question* 这种张量基于 $L^2 (ℍ𝕪^3,ℂ)$ 模? 
-
-真空 $0$ 是比零阶更低的东西
-
-Dirac 场量子场的能量算子还能表示为 Dirac 场算子 + Dirac 场的能量的形式, 即使这不是在计算 Dirac 场的能量
-$
-  integral_(ℍ𝕪^3 \ 𝕊(Im(ℂ))) #d p #d #i 1/2 (#a (p,#i)^† #a (p,#i) - #a (p,#i) #a (p,#i)^†) 
-
-  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† #i ∂_0 vec(ϕ,ψ) \
-
-  &= integral_(ℝ^3) #d x vec(ϕ,ψ)^† mat(
-      #i #spin-d _x , m 𝟙 ;
-      m 𝟙 , - #i #spin-d _x
-    ) vec(ϕ,ψ)
-$
