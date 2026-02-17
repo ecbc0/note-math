@@ -93,4 +93,4 @@ Image $f$ only maintains $∪$, for others
 ]
 Partition $X$. Directly $X = ⨆ X_i$ or according to the inverse image of the image set of the mapping $f : X -> Y$, $⨆_(y in Y) f^(-1)(y)$
 
-#tag("quotient") quotient $x ∼ x'$ := $x,x' in X_i$ or $x,x' in f^(-1)(y)$
+#tag("quotient") quotient $x ∼ x'$ := ($x,x' in X_i$ or $x,x' in f^(-1)(y)$)

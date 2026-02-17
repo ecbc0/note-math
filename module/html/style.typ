@@ -1,6 +1,6 @@
 // #import "@preview/shiroa:0.2.3": *
 
-// from typsite
+// from typsite, from typst community
 #let to-string(content) = {
   if type(content) == none {
     return ""

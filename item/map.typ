@@ -93,4 +93,4 @@ $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
 ]
 划分 $X$. 直接 $X = ⨆ X_i$ 或按照映射 $f : X -> Y$ 的像集的逆像 $⨆_(y in Y) f^(-1)(y)$
 
-#tag("quotient") quotient $x ∼ x'$ := $x,x' in X_i$ or $x,x' in f^(-1)(y)$
+#tag("quotient") quotient $x ∼ x'$ := ($x,x' in X_i$ or $x,x' in f^(-1)(y)$)

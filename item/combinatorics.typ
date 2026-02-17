@@ -4,7 +4,7 @@
 let 映射 $1,…,n ⇝ a_1,…,a_n$
 
 #tag("permutation") 以下等价
-- $1,…,n$ 双射
+- $1,…,n$ 到自身的双射 $a$, 叫做置换
 - $1,…,n$ 排列 
 - $n$ 阶置换. 数量 $n (n-1) ⋯ 1 = n!$. 通常记为 $S_n$
 
@@ -16,18 +16,19 @@ let 映射 $1,…,n ⇝ a_1,…,a_n$
   $|A| = i, |B| = j$ \
   $|A| + |B| = i + j = n$
 ]
-- 选取置换 $a$ with $A = {a(1),…,a(i)}, B = {a(i+1),…,a(i+j)}$ 并且另一个置换 $a'$ 给出相同的划分 if
-#indent[ 
-  $ 
-    {a'(1),…,a'(i)} &= {a(1),…,a(i)} \ 
-    {a'(i+1),…,a'(i+j)} &= {a(i+1),…,a(i+j)}
-  $
-]
-定义这种相同的划分的置换的 #tag("quotient") $a ∼ a'$ as $S_n$ 的子集满足上述条件, i.e. 划分可能性 $A ⊔ B$ 的逆像
+- 选取置换 $a$ with $A = {a(1),…,a(i)}, B = {a(i+1),…,a(i+j)}$ \
+  另一个置换 $a'$ 给出相同的划分 if
+  #indent[ 
+    $ 
+      {a'(1),…,a'(i)} &= {a(1),…,a(i)} \ 
+      {a'(i+1),…,a'(i+j)} &= {a(i+1),…,a(i+j)}
+    $
+  ]
+  定义这种相同的划分的置换的 #tag("quotient") $a ∼ a'$, 划分 $A ⊔ B$ 的逆像
 
-<==> $(exists b_i in S_i) and (exists b_j in S_j), (b_i,b_j) a = a'$
+- $(exists b_i in S_i) and (exists b_j in S_j), (b_i,b_j) a = a'$
 
-基数计算
+商集 $S_n / ∼$ 的基数计算
 $
   frac(|S_n|,|S_i × S_j|) = frac(n!,i!j!) = frac(n!,i! (n-i)!)
 $
@@ -43,7 +44,7 @@ $
 $
 是从 $2$ 个中可重复选 $n$ 次的数量
 
-from 用归纳法计算或者直接观察, 可得 
+用归纳法计算或者直接观察, 可得 
 $ 
   frac(n!,i! j!) 
   = frac((n-1)! (i + j),i! j!) 
@@ -65,17 +66,12 @@ vs Newton 二项式 $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
   $
 总数量 $sum_(k_1 ,…, k_d in ℕ \ k_1 + ⋯ + k_d = n) binom(n,k_1 ,…, k_d) = d^n$, 即从 $d$ 个中可重复选 $n$ 次的数量 $d^n$
 
-_Proof_
-#indent[
-  重复 $n$ 次选取 $1 ,…, d$, 数量 $d^n$ <==> 映射 $1 ,…, n -> 1 ,…, d$ 的数量 $|{1 ,…, d}|^(|{1 ,…, n}|)$
+可以这样理解. 重复 $n$ 次选取 $1 ,…, d$, 数量 $d^n$ <==> 映射 $1 ,…, n -> 1 ,…, d$ 的数量 $|{1 ,…, d}|^(|{1 ,…, n}|)$
 
-  任何选取都可以置换到 $underbrace(1 \,…\, 1, k_1) , underbrace(2 \,…\, 2, k_2) ,…, underbrace(d \,…\, d, k_d)$ with $k_1 + ⋯ + k_d = n$ 
+$1 ,…, n -> 1 ,…, d$ 的映射被划分为输出 $k_1 ,…, k_d$ 个 $1 ,…, d$, 满足 $k_1 + k_2 + ⋯ + k_d = n$
 
-  恢复所有顺序就是 $1 ,…, n$ 选取 $k_1 ,…, k_d$ 个位置, 即多重组合 $binom(n,k_1 ,…, k_d)$. 这给出
-  $
-  sum_(k_1 ,…, k_d in ℕ \ k_1 + ⋯ + k_d = n) binom(n,k_1 ,…, k_d) = d^n
-  $
-]
+$1 ,…, n$ 划分 $k_1 + ⋯ + k_d = n$, 分别输出 $k_1 ,…, k_d$ 个 $1 ,…, d$, 其数量就对应多重组合
+
 what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$? 
 #indent[
   *Example* 数量 10, 分组数量 4. $n = 10, d = 4, k(1 ,…, 4) = 3,2,0,5$
@@ -94,7 +90,9 @@ what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$?
 
 重复数量 $binom(n,k_1 ,…, k_d)$ 会有用于例如计算 $L^2$ 归一化
 
-#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> cycle := 置换 $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
+#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> 相同划分的 cycle 
+
+cycle := 置换 $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
 
 置换的 $sign$ 分解
 
