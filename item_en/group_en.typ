@@ -108,19 +108,13 @@ Suppose $H_1 ⊆ G_1$ is a subgroup, then $f(H_1) ⊆ G_2$ is a subgroup
 
 #tag("group-action") *Def* Group action := a homomorphism from a group $G$ to the bijective automorphism group $Aut X$ of $X$, also called a representation 
 $
-  ρ: dmat( delim: #none ,
-    G &⟶ Aut X ;
-    g &⟿ ρ(g)
-  )
+  ρ: map(G, Aut X, g, ρ(g))
 $
 Or a homomorphism to the image group $G ↠ ρ(G) ⊆ Aut X$
 
 Group action can also be written in the following form
 $
-  dmat( delim: #none ,
-    G × X ,⟶, X ;
-    (g,x) ,⟿, ρ(g) ⋅ x
-  )
+  map(G × X, X, (g,x), ρ(g) ⋅ x)
 $
 And satisfies $ρ(g) ⋅ (ρ(h) ⋅ x) = ρ(g h) ⋅ x$
 
@@ -128,19 +122,13 @@ Usually $ρ$ is omitted and written as $ρ(g) ⋅ x := g ⋅ x$
 
 #tag("orbit") := 
 $
-  G ⋅ x = {g x in X : g in G} ={dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )} (G)
+  G ⋅ x = {g x in X : g in G} ={map(G, X, g, g x)} (G)
 $
 *Example* $SO(3)$ acts on $ℝ^3$, orbit $SO(3) ⋅ x = 𝕊^2(|x|)$
 
 #tag("isotropy") := 
 $
-  G_x = {g in G : g x = x} = {dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )}^(-1) (x)
+  G_x = {g in G : g x = x} = {map(G, X, g, g x)}^(-1) (x)
 $
 *Example* $SO(3)$ acts on $ℝ^3$, isotropy $G_x$ = rotation about the axis where $x in 𝕊^2$ lies, which is an embedded $SO(2)$
 
@@ -151,23 +139,14 @@ Orbit after changing the orbit base point. forall $y = h x$ ==> $G x = G y$
 _Proof_
 #indent[ 
   $
-    dmat( delim: #none ,
-      G ,⟶, G ;
-      g ,⟿, g h
-    )
+    map(G, G, g, g h)
   $ 
   Is a bijection. (Invertible.) So
   - $ 
-      { dmat( delim: #none ,
-          G , ⟶ , G  ;
-          g , ⟿ , g h
-        ) } (G) = G 
+      { map(G, G, g, g h) } (G) = G 
     $
   - $
-      G x &= { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) } (G) \
+      G x &= { map(G, X, g, g x) } (G) \
       &= { dmat( delim: #none ,
         G , ⟶ , G , ⟶ , X ;
         g , ⟿ , g h , ⟿ , g h x
@@ -204,10 +183,7 @@ $
   &<==> h^(-1) g h x = x \
   &<==> h^(-1) g h in G_x
 $
-Mapping $dmat( delim: #none ,
-  G ,⟶, G ;
-  g ,⟿, h^(-1) g h
-)$ 
+Mapping $map(G, G, g, h^(-1) g h)$ 
 - Homomorphism $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - Bijection $h^(-1) g h = g' <==> g = h g' h^(-1)$
 
@@ -218,10 +194,7 @@ $G_(h x)$ can also be written as $h G_x h^(-1) = {h g h^(-1) : g in G_x}$
 Using the inverse image of $G$ acting on $G x$, $G$ can be decomposed
 
 $
-  G = ⨆_(y in G x) { dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-    ) }^(-1) (y)
+  G = ⨆_(y in G x) { map(G, X, g, g x) }^(-1) (y)
 $ 
 
 Calculate the inverse image of $y = h x in G x$ 
@@ -232,10 +205,7 @@ $
 $ 
 
 - $
-    { dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-    ) }^(-1) (y) = h G_x
+    { map(G, X, g, g x) }^(-1) (y) = h G_x
   $  
   $G_x$ is generally not a group. For example, when $h ∉ G_x$, $h^(-1) ∉ G_x$, thus $𝟙 ∉ h G_x$, because $h h' = 𝟙 ==> h' = h^(-1)$
 
@@ -243,10 +213,7 @@ $
 
 - $
     abs(
-      { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) }^(-1) (y)
+      { map(G, X, g, g x) }^(-1) (y)
     ) = |h G_x| = |G_x|
   $
 #tag("orbit-istropy-product-decomposition") The orbit $G x$ and isotropy $G_x$ form a product decomposition of the group $G$ on the set: 
@@ -256,10 +223,7 @@ For every $y in G x$, select an $h(y) =: h in G$ such that $h x = y$ (Axiom of C
 Thus there exists a bijection 
 $ 
   dmat( delim: #none ,
-    G x × G_x ,<-->, G ,=, ⨆_(y in G x) { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) }^(-1) (y) ;
+    G x × G_x ,<-->, G ,=, ⨆_(y in G x) { map(G, X, g, g x) }^(-1) (y) ;
     (y, a) ,⟿, h a
   ) 
 $ 
@@ -269,10 +233,7 @@ It also implies $|G x|, |G_x| <= |G|$
 
 #tag("conjugate-action") Conjugate action, similar to change of coordinates
 $
-  c_h : dmat( delim: #none ,
-    G ,⟶, G ;
-    g ,⟿, h g h^(-1)
-  )
+  c_h : map(G, G, g, h g h^(-1))
 $
 *Example*
 - Representation of linear mappings under different bases
@@ -302,10 +263,7 @@ where $(g,h) ⇝ h^(-1) ⋅ g ⋅ h ⋅ g^(-1)$ is called the commutator of the 
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
-- $dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )$ is the surjective map $G ↠ X$
+- $map(G, X, g, g x)$ is the surjective map $G ↠ X$
 
 *Example* $SO(3)$ acting on $ℝ^3 ∖ 0$ is not transitive. $GL(3,ℝ) $ acting on $ℝ^3 ∖ 0$ is transitive
 
@@ -314,10 +272,7 @@ where $(g,h) ⇝ h^(-1) ⋅ g ⋅ h ⋅ g^(-1)$ is called the commutator of the 
 - $forall x (g x = h x ==> g = h)$
 - $forall x (g x = x ==> g = 𝟙)$
 - $forall x (G_x = 𝟙)$
-- $forall x (dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-  ) "is injective" G ↪ X)$
+- $forall x (map(G, X, g, g x) "is injective" G ↪ X)$
 
 #tag("action-faithful") := The following definitions are equivalent
 - $(forall x (g x = x)) ==> g = 𝟙$
@@ -403,7 +358,8 @@ _Proof_
   We know there is a set product decomposition $G ≃ H × G/H$, where $H$ is a subgroup. If we want it to become a product-group decomposition under the coset multiplication defined above, we need the coset multiplication to form a group
 
   There are the following equivalent propositions
-  + $G/H$ is a group and $(g H) ⋅ (g' H) = (g g') ⋅ H$, in which case $G/H$ is called a quotient group #tag("quotient-group"), $π: G -> G/H$ is a group homomorphism, and $H = ker(π)$ 
+  + $(g H) ⋅ (g' H) = (g g') ⋅ H$, the meaning is, for two elements $g, g'$ in coset/orbit, their multiplication is in the coset that $g g'$ lies in. \ 
+    Now $G/H$ become group, called the #tag("quotient-group"), $π: G -> G/H$ is group homomorphism, $H = ker(π)$
   + For every $g in G$, the left and right cosets are the same $g ⋅ H = H ⋅ g$
   + $H$ is a normal subgroup #tag("normal-subgroup") or called an invariant subgroup #tag("invariant-subgroup"), the conjugation group action $g ⇝ c_g$ preserves $H$, and thus can be restricted to $H$ to form a group action. $forall (g in G) (c_g (H) ⊆ H)$, in fact $c_g (H) = H$
 
@@ -436,10 +392,7 @@ _Proof_
 
 _Proof_ We construct a bijection. let $A in G/G_x$, pick $g(A) =: g$ such that $A = g ⋅ G_x$. Consider the mapping
 $
-  dmat( delim: #none ,
-    G/G_x &⟶ G x ;
-    g ⋅ G_x &⟿ g x
-  )
+  map(G/G_x, G x, g ⋅ G_x, g x)
 $
 - Injective: $g x = g' x ==> g^(-1) g' in G_x$ ==> $(g^(-1) g') G_x = G_x$ ==> $g ⋅ G_x = g ((g^(-1) g') ⋅ G_x) = g' ⋅ G_x$
 - Surjective: Suppose $y in G x$, take $g in G$ such that $y = g x$, then just take $A = g ⋅ G_x in G/G_x$

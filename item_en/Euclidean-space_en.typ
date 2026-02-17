@@ -174,10 +174,7 @@ _Proof_
   - $closed(𝔹)^(n+1)$ compact
   #indent[
     $
-      f : dmat( delim: #none ,
-        𝕊^n × [0,1], ⟶, closed(𝔹)^(n+1);
-        (x,r), ⟿, r ⋅ x
-      )
+      f : map(𝕊^n × [0,1], closed(𝔹)^(n+1), (x,r), r ⋅ x)
     $
     (Draw a picture) continuous. Isomorphism is obtained after quotienting the origin $0 ∈ ℝ^(n+1)$
 

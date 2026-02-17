@@ -23,10 +23,7 @@
   - metric 非退化
   - #tag("quadratic-form-dual") 是双射 *alias* #tag("musical-isomorphism") 
     $
-      dmat( delim: #none ,
-        V, ⟶, Lin(V -> ℝ) "or" V^⊺;
-        v, ⟿, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" v^flat
-      )
+      map(V, Lin(V -> ℝ) "or" V^⊺, v, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" v^flat)
     $
     相对于 metric dual 映射记为 $v^♭$, metric dual 的逆映射记为 $α^♯$
   - 二次型矩阵可逆
@@ -98,10 +95,7 @@ $
 ]
 #tag("tensor") 多重线性 (兼容集合积的 `and` 逻辑) + 最小独立无关 (生成基)
 $
-  dmat( delim: #none ,
-    V_1 × ⋯ × V_k ,⟶, V_1 ⊗ ⋯ ⊗ V_k ;
-    (v_1 ,…, v_k) ,⟿, v_1 ⊗ ⋯ ⊗ v_k
-  )
+  map(V_1 × ⋯ × V_k, V_1 ⊗ ⋯ ⊗ V_k, (v_1 ,…, v_k), v_1 ⊗ ⋯ ⊗ v_k)
 $
 导出基 $e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)$ 与导出基的系数 $T^(i_1 ⋯ i_k)$
 

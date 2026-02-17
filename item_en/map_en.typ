@@ -35,10 +35,7 @@ finite <==> $|A| < ℕ$
 
 $A$ is a finite set ==> ($f : A -> A$ is injective or surjective <==> $f$ is bijective)
 
-*Example* $ℕ$ is an infinite set, $dmat( delim: #none ,
-  ℕ, ,⟶,, ℕ ;
-  n, ,⟿,, 2n
-)$ is injective and not surjective, so not bijective
+*Example* $ℕ$ is an infinite set, $map(ℕ, ℕ, n, 2n)$ is injective and not surjective, so not bijective
 
 - countably infinite := $|A| = |ℕ|$
 - #tag("uncountable") uncountable := $|A| > |ℕ|$ 
@@ -83,10 +80,7 @@ Image $f$ only maintains $∪$, for others
   $f : A -> Subset(A)$ is not surjective <==> $Subset(A) ∖ "range"(f) != ∅$
 
   $ 
-    Ω : dmat( delim: #none ,
-      (A -> Subset(A)) ,⟶, Subset(A);
-      f ,⟿, {x ∈ A : p(x,f)}
-    )
+    Ω : map((A -> Subset(A)), Subset(A), f, {x ∈ A : p(x,f)})
   $
 
   find $p(x,f)$ so that $Ω(f) ∉ "Range"(f)$

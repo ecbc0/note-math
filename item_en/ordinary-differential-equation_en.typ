@@ -22,10 +22,7 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, initial value undecide
 
   If you know matrix Lie groups, then you should know that Lie algebras can be mapped to Lie groups via $exp$
   $
-    exp: dmat( delim: #none ,
-      g &⟶ G ;
-      X &⟿ sum_(n =  0)^∞ X^n/n!
-    )
+    exp: map(g, G, X, sum_(n =  0)^∞ X^n/n!)
   $
   This also holds for analytic functions; in the sense of analytic topological convergence, $exp v$ should generate a local analytic diffeomorphism. The value of $exp v$ at $x$ should be
   $

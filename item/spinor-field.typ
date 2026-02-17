@@ -8,10 +8,7 @@
 #indent[
   $ϕ$ 导出 co-vector of #link(<Hermitian-tensor>)[]
   $
-    dmat( delim: #none ,
-      ⨀^(* 2) ℂ^2 , ⟶ , ℝ ;
-      #p , ⟿ , ϕ^† #p ϕ
-    )
+    map(⨀^(* 2) ℂ^2, ℝ, #p, ϕ^† #p ϕ)
   $
   由于 $#p ∈ ⨀^(* 2) ℂ^2$ 是 Hermitian 矩阵, 所以 $(ϕ^† #p ϕ)^† = ϕ^† #p ϕ$, 所以 $ϕ^† #p ϕ in ℝ$
   
@@ -38,17 +35,11 @@
   $
   类似地, 对于 anti-Hermitian 也可以定义 co-vector
   $
-    dmat( delim: #none ,
-      ⋀^(* 2) ℂ^2 , ⟶ , Im(ℂ) ;
-      P , ⟿ , ϕ^† P ϕ
-    )
+    map(⋀^(* 2) ℂ^2, Im(ℂ), P, ϕ^† P ϕ)
   $
   对于复共轭二重张量
   $
-    dmat( delim: #none ,
-      ⨂^(* 2) ℂ^2 , ⟶ , ℂ ;
-      P , ⟿ , ϕ^† P ϕ
-    )
+    map(⨂^(* 2) ℂ^2, ℂ, P, ϕ^† P ϕ)
   $
 ]
 #tag("spinor-field-motivation") 

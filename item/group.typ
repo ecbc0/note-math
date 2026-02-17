@@ -108,19 +108,13 @@ $f$ 是单射 <==> $ker f = 𝟙_(G_1)$
 
 #tag("group-action") *Def* 群作用 := 一个群 $G$ 同态到 $X$ 的双射同构群 $Aut X$, 也叫做表示 (representation) 
 $
-  ρ: dmat( delim: #none ,
-    G &⟶ Aut X ;
-    g &⟿ ρ(g)
-  )
+  ρ: map(G, Aut X, g, ρ(g))
 $
 或者同态到 image 群 $G ↠ ρ(G) ⊆ Aut X$
 
 群作用也可以写为以下的形式
 $
-  dmat( delim: #none ,
-    G × X ,⟶, X ;
-    (g,x) ,⟿, ρ(g) ⋅ x
-  )
+  map(G × X, X, (g,x), ρ(g) ⋅ x)
 $
 并满足 $ρ(g) ⋅ (ρ(h) ⋅ x) = ρ(g h) ⋅ x$
 
@@ -128,19 +122,13 @@ $
 
 #tag("orbit") := 
 $
-  G ⋅ x = {g x in X : g in G} ={dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )} (G)
+  G ⋅ x = {g x in X : g in G} ={map(G, X, g, g x)} (G)
 $
 *Example* $SO(3)$ 作用在 $ℝ^3$, orbit $SO(3) ⋅ x = 𝕊^2(|x|)$
 
 #tag("isotropy") := 
 $
-  G_x = {g in G : g x = x} = {dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )}^(-1) (x)
+  G_x = {g in G : g x = x} = {map(G, X, g, g x)}^(-1) (x)
 $
 *Example* $SO(3)$ 作用在 $ℝ^3$, isotropy $G_x$ = 绕 $x in 𝕊^2$ 所在轴的旋转, 是嵌入的 $SO(2)$
 
@@ -151,23 +139,14 @@ $G_x$ 是 $G$ 的子群
 _Proof_
 #indent[ 
   $
-    dmat( delim: #none ,
-      G ,⟶, G ;
-      g ,⟿, g h
-    )
+    map(G, G, g, g h)
   $ 
   是双射. (可逆.) 所以
   - $ 
-      { dmat( delim: #none ,
-          G , ⟶ , G  ;
-          g , ⟿ , g h
-        ) } (G) = G 
+      { map(G, G, g, g h) } (G) = G 
     $
   - $
-      G x &= { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) } (G) \
+      G x &= { map(G, X, g, g x) } (G) \
       &= { dmat( delim: #none ,
         G , ⟶ , G , ⟶ , X ;
         g , ⟿ , g h , ⟿ , g h x
@@ -204,10 +183,7 @@ $
   &<==> h^(-1) g h x = x \
   &<==> h^(-1) g h in G_x
 $
-映射 $dmat( delim: #none ,
-  G ,⟶, G ;
-  g ,⟿, h^(-1) g h
-)$ 
+映射 $map(G, G, g, h^(-1) g h)$ 
 - 同态 $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - 双射 $h^(-1) g h = g' <==> g = h g' h^(-1)$
 
@@ -218,10 +194,7 @@ $G_(h x)$ 也可以写为 $h G_x h^(-1) = {h g h^(-1) : g in G_x}$
 使用 $G$ 作用在 $G x$ 上的逆像, 可以将 $G$ 分解
 
 $
-  G = ⨆_(y in G x) { dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-    ) }^(-1) (y)
+  G = ⨆_(y in G x) { map(G, X, g, g x) }^(-1) (y)
 $ 
 
 计算 $y = h x in G x$ 的逆像 
@@ -232,10 +205,7 @@ $
 $ 
 
 - $
-    { dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-    ) }^(-1) (y) = h G_x
+    { map(G, X, g, g x) }^(-1) (y) = h G_x
   $  
   $G_x$ 一般不是群. 例如, 当 $h ∉ G_x$ 时, $h^(-1) ∉ G_x$, 从而 $𝟙 ∉ h G_x$, 因为 $h h' = 𝟙 ==> h' = h^(-1)$
 
@@ -243,10 +213,7 @@ $
 
 - $
     abs(
-      { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) }^(-1) (y)
+      { map(G, X, g, g x) }^(-1) (y)
     ) = |h G_x| = |G_x|
   $
 #tag("orbit-istropy-product-decomposition") orbit $G x$ 和 isotropy $G_x$ 形成群 $G$ 在集合上的积分解: 
@@ -256,10 +223,7 @@ $
 于是存在双射 
 $ 
   dmat( delim: #none ,
-    G x × G_x ,<-->, G ,=, ⨆_(y in G x) { dmat( delim: #none ,
-        G ,⟶, X ;
-        g ,⟿, g x
-      ) }^(-1) (y) ;
+    G x × G_x ,<-->, G ,=, ⨆_(y in G x) { map(G, X, g, g x) }^(-1) (y) ;
     (y, a) ,⟿, h a
   ) 
 $ 
@@ -269,10 +233,7 @@ $
 
 #tag("conjugate-action") 共轭作用, 类似于换坐标
 $
-  c_h : dmat( delim: #none ,
-    G ,⟶, G ;
-    g ,⟿, h g h^(-1)
-  )
+  c_h : map(G, G, g, h g h^(-1))
 $
 *Example*
 - 线性映射在不同基下的表示
@@ -302,10 +263,7 @@ $
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
-- $dmat( delim: #none ,
-    G ,⟶, X ;
-    g ,⟿, g x
-  )$ 是满射 $G ↠ X$
+- $map(G, X, g, g x)$ 是满射 $G ↠ X$
 
 *Example* $SO(3)$ 作用在 $ℝ^3 ∖ 0$ 不 transitive. $GL(3,ℝ) $ 作用在 $ℝ^3 ∖ 0$ 是 transitive
 
@@ -314,10 +272,7 @@ $
 - $forall x (g x = h x ==> g = h)$
 - $forall x (g x = x ==> g = 𝟙)$
 - $forall x (G_x = 𝟙)$
-- $forall x (dmat( delim: #none ,
-      G ,⟶, X ;
-      g ,⟿, g x
-  ) "is injective" G ↪ X)$
+- $forall x (map(G, X, g, g x) "is injective" G ↪ X)$
 
 #tag("action-faithful") := 以下定义等价
 - $(forall x (g x = x)) ==> g = 𝟙$
@@ -403,7 +358,8 @@ _Proof_
   我们知道有集合的 product 分解 $G ≃ H × G/H$, 而 $H$ 是子群. 如果我们想要让它在以上 coset 的乘法运算下成为 product-group 分解, 则需要以上的 coset 的乘法运算构成群
 
   有以下的等价命题
-  + $G/H$ 是群且 $(g H) ⋅ (g' H) = (g g') ⋅ H$, 此时称 $G/H$ 是商群 #tag("quotient-group"), $π: G -> G/H$ 是群同态, $H = ker(π)$ 
+  + $(g H) ⋅ (g' H) = (g g') ⋅ H$, 意义是, 两个 coset/orbit 的元素 $g, g'$ 的乘法在 $g g'$ 所在的 coset. \ 
+    此时 $G/H$ 是群, 并称 $G/H$ 是商群 #tag("quotient-group"), $π: G -> G/H$ 是群同态, $H = ker(π)$ 
   + 对每个 $g in G$, 左右陪集相同 $g ⋅ H = H ⋅ g$
   + $H$ 是正规子群 #tag("normal-subgroup") 或者称为不变子群 #tag("invariant-subgroup"), 共轭群作用 $g ⇝ c_g$ 保持 $H$, 从而可以限制在 $H$ 形成群作用. $forall (g in G) (c_g (H) ⊆ H)$, 实际上 $c_g (H) = H$
 
@@ -425,7 +381,7 @@ _Proof_
   ]
   分解应该理解为 $H ↪ G$ 是群同态嵌入且 $G ↠ G/H$ 是群同态覆盖
 
-  这种分解的自然性也取决于你是否认为 coset 上的那种继承的乘法运算是好的构造
+  这种分解的自然性也取决于你是否认为 coset 上的那种乘法运算是好的构造
 
   #tag("simple-group") 不存在 $𝟙$ 或 $G$ 之外的正规子群的群 $G$ 叫做 simple 群
 ]
@@ -436,10 +392,7 @@ _Proof_
 
 _Proof_ 我们构造双射. let $A in G/G_x$, 选取 $g(A) =: g$ 使得 $A = g ⋅ G_x$. 考虑映射
 $
-  dmat( delim: #none ,
-    G/G_x &⟶ G x ;
-    g ⋅ G_x &⟿ g x
-  )
+  map(G/G_x, G x, g ⋅ G_x, g x)
 $
 - 单射: $g x = g' x ==> g^(-1) g' in G_x$ ==> $(g^(-1) g') G_x = G_x$ ==> $g ⋅ G_x = g ((g^(-1) g') ⋅ G_x) = g' ⋅ G_x$
 - 满射: 设 $y in G x$, 取 $g in G$ 使得 $y = g x$, 则取 $A = g ⋅ G_x in G/G_x$ 即可

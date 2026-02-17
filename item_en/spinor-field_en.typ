@@ -8,10 +8,7 @@
 #indent[
   $ϕ$ induces the co-vector of #link(<Hermitian-tensor>)[]
   $
-    dmat( delim: #none ,
-      ⨀^(* 2) ℂ^2 , ⟶ , ℝ ;
-      #p , ⟿ , ϕ^† #p ϕ
-    )
+    map(⨀^(* 2) ℂ^2, ℝ, #p, ϕ^† #p ϕ)
   $
   Since $#p ∈ ⨀^(* 2) ℂ^2$ is a Hermitian matrix, then $(ϕ^† #p ϕ)^† = ϕ^† #p ϕ$, so $ϕ^† #p ϕ in ℝ$
   
@@ -38,17 +35,11 @@
   $
   Similarly, co-vectors can also be defined for anti-Hermitian tensors
   $
-    dmat( delim: #none ,
-      ⋀^(* 2) ℂ^2 , ⟶ , Im(ℂ) ;
-      P , ⟿ , ϕ^† P ϕ
-    )
+    map(⋀^(* 2) ℂ^2, Im(ℂ), P, ϕ^† P ϕ)
   $
   For complex conjugate two-tensors
   $
-    dmat( delim: #none ,
-      ⨂^(* 2) ℂ^2 , ⟶ , ℂ ;
-      P , ⟿ , ϕ^† P ϕ
-    )
+    map(⨂^(* 2) ℂ^2, ℂ, P, ϕ^† P ϕ)
   $
 ]
 #tag("spinor-field-motivation") 

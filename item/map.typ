@@ -35,10 +35,7 @@ finite <==> $|A| < ℕ$
 
 $A$ 是有限集 ==> ($f : A -> A$ 是单射 or 满射 <==> $f$ 是双射)
 
-*Example* $ℕ$ 是无限集, $dmat( delim: #none ,
-  ℕ, ,⟶,, ℕ ;
-  n, ,⟿,, 2n
-)$ 是单射 and 不是满射, so 不是双射
+*Example* $ℕ$ 是无限集, $map(ℕ, ℕ, n, 2n)$ 是单射 and 不是满射, so 不是双射
 
 - 可数无限 := $|A| = |ℕ|$
 - #tag("uncountable") 不可数 := $|A| > |ℕ|$ 
@@ -83,10 +80,7 @@ $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
   $f : A -> Subset(A)$ 不是满射 <==> $Subset(A) ∖ "range"(f) != ∅$
 
   $ 
-    Ω : dmat( delim: #none ,
-      (A -> Subset(A)) ,⟶, Subset(A);
-      f ,⟿, {x ∈ A : p(x,f)}
-    )
+    Ω : map((A -> Subset(A)), Subset(A), f, {x ∈ A : p(x,f)})
   $
 
   find $p(x,f)$ so that $Ω(f) ∉ "Range"(f)$

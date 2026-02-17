@@ -391,17 +391,11 @@ let $#A in Set(Set(T))$
 
   product component
   $ 
-    dmat( delim: #none ,
-    product_(i in I) A(i), ⟶, A(i) ;
-    x, ⟿, (x,i) ,=, a
-    ) 
+    map(product_(i in I) A(i), A(i), x, (x,i) = a) 
   $ 
   or 
   $
-    dmat( delim: #none ,
-    product_(i in I) A(i), ⟶, A(i) ;
-    x, ⟿, x(i) 
-    )     
+    map(product_(i in I) A(i), A(i), x, x(i))     
   $
 ]
 - #tag("sum-index") 
@@ -410,10 +404,7 @@ let $#A in Set(Set(T))$
 
   sum component
   $ 
-    dmat( delim: #none ,
-    A(i), ⟶, sum_(i in I) A(i) ;
-    a, ⟿, (i, a) ,=, x
-    ) 
+    map(A(i), sum_(i in I) A(i), a, (i, a) = x) 
   $
 ]
 $=$ 的其它用法

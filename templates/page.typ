@@ -136,7 +136,7 @@
 
   // link setting
   show link: set text(fill: dash-color)
-
+/*
   // math setting
   show math.equation: set text(weight: 400)
   show math.equation.where(block: true): it => context if shiroa-sys-target() == "html" {
@@ -149,7 +149,7 @@
   } else {
     it
   }
-
+*/
   /// HTML code block supported by zebraw.
   show: if is-dark-theme {
     zebraw-init.with(

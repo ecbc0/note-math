@@ -23,10 +23,7 @@
   - metric is non-degenerate
   - #tag("quadratic-form-dual") is a bijection *alias* #tag("musical-isomorphism") 
     $
-      dmat( delim: #none ,
-        V, ⟶, Lin(V -> ℝ) "or" V^⊺;
-        v, ⟿, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" v^flat
-      )
+      map(V, Lin(V -> ℝ) "or" V^⊺, v, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" v^flat)
     $
     The dual map relative to the metric is denoted as $v^♭$, and the inverse map of the metric dual is denoted as $α^♯$
   - The quadratic form matrix is invertible
@@ -98,10 +95,7 @@ $
 ]
 #tag("tensor") Multilinearity (compatible with `and` logic of Cartesian product) + minimally independent (generating basis)
 $
-  dmat( delim: #none ,
-    V_1 × ⋯ × V_k ,⟶, V_1 ⊗ ⋯ ⊗ V_k ;
-    (v_1 ,…, v_k) ,⟿, v_1 ⊗ ⋯ ⊗ v_k
-  )
+  map(V_1 × ⋯ × V_k, V_1 ⊗ ⋯ ⊗ V_k, (v_1 ,…, v_k), v_1 ⊗ ⋯ ⊗ v_k)
 $
 Derived basis $e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)$ and coefficients of derived basis $T^(i_1 ⋯ i_k)$
 

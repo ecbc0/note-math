@@ -388,17 +388,11 @@ According to the index mapping $A in (I -> Set T)$, infinite versions of product
 
   product component
   $ 
-    dmat( delim: #none ,
-    product_(i in I) A(i), ⟶, A(i) ;
-    x, ⟿, (x,i) ,=, a
-    ) 
+    map(product_(i in I) A(i), A(i), x, (x,i) ,=, a) 
   $ 
   or 
   $
-    dmat( delim: #none ,
-    product_(i in I) A(i), ⟶, A(i) ;
-    x, ⟿, x(i) 
-    )     
+    map(product_(i in I) A(i), A(i), x, x(i))     
   $
 ]
 - #tag("sum-index") 
@@ -407,10 +401,7 @@ According to the index mapping $A in (I -> Set T)$, infinite versions of product
 
   sum component
   $ 
-    dmat( delim: #none ,
-    A(i), ⟶, sum_(i in I) A(i) ;
-    a, ⟿, (i, a) ,=, x
-    ) 
+    map(A(i), sum_(i in I) A(i), a, (i, a) ,=, x) 
   $
 ]
 Other uses of $=$

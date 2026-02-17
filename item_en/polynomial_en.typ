@@ -5,10 +5,7 @@ In flat space, linear and affine are often mixed. Similarly, in flat space, so a
 
 First deal with the case of one-dimensional real numbers
 
-$ℕ$ exponential power function $k ∈ ℕ, dmat( delim: #none ,
-  ℝ , ⟶ , ℝ ;
-  v , ⟿ , v^k
-)$ 
+$ℕ$ exponential power function $k ∈ ℕ, map(ℝ, ℝ, v, v^k)$ 
 
 #tag("polynomial-function-1d") A polynomial function is a finite linear combination of power functions. (Affine) base point $x$, (vector) offset $v$
 $

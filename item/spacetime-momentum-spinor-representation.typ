@@ -29,10 +29,7 @@ _Proof_
 ]
 二重张量, 其中一个进行复共轭
 $
-  dmat( delim: #none ,
-    (ℂ^2, ℂ^2) , ⟶, ⨂^(* 2) ℂ^2 ;
-    (v,w) ,	⟿ , ⨂^(* 2) (v,w) , = , v ⊗ w^*
-  )
+  map((ℂ^2, ℂ^2), ⨂^(* 2) ℂ^2, (v,w), ⨂^(* 2) (v,w) = v ⊗ w^*)
 $
 can be decompose to
 
@@ -115,10 +112,7 @@ $𝕆$ 的 "矩阵" 表示需要另作处理, $Lin(2,𝕆)$ 复合不能表示�
   
   双射 
   $
-    dmat( delim: #none ,
-      ⨀^(* 2) ℂ^2	,⟶,	ℝ^(1,3) ;
-      #spacetime-momentum-spinor	,⟿,	#spacetime-momentum
-    )
+    map(⨀^(* 2) ℂ^2, ℝ^(1,3), #spacetime-momentum-spinor, #spacetime-momentum)
   $
   metric
   $ 

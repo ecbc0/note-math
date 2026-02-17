@@ -287,10 +287,7 @@
       
     Although the exact radius of convergence cannot be given here, the method of proving the inverse function by the compression fixed point principle cannot give the exact maximal local reversible region for the pure differential method.
 
-    *Question* Both methods seem very ad hoc? Is there a method more inspired by the intuition of the inverse function itself? For example, can it be related to the "analyticity" of the mapping $dmat( delim: #none ,
-      GL &⟶ GL ;
-      A &⟿ A^(-1)
-    )$?
+    *Question* Both methods seem very ad hoc? Is there a method more inspired by the intuition of the inverse function itself? For example, can it be related to the "analyticity" of the mapping $map(GL, GL, A, A^(-1))$?
   ]
 ]
 #tag("differential-of-inverse") 

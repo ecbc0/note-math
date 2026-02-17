@@ -22,10 +22,7 @@ where $G = integral 1/g(x) #d x, F = integral f(t) #d t$, 初值未定
 
   如果你知道矩阵李群, 那么你应该知道李代数可以通过 $exp$ 映射到李群 
   $
-    exp: dmat( delim: #none ,
-      g &⟶ G ;
-      X &⟿ sum_(n =  0)^∞ X^n/n!
-    )
+    exp: map(g, G, X, sum_(n =  0)^∞ X^n/n!)
   $
   这对于对于解析函数也成立, 在解析拓扑收敛意义上, $exp v$ 应该生成局部解析同胚. $exp v$ 在 $x$ 处的值应该是
   $ 

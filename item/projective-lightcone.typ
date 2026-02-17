@@ -46,10 +46,7 @@ _Proof_
   - $𝕊^2 ≃ ℂℙ^1$
   #indent[
     #link(<stereographic-projection>)[球极投影] transition-function 是二次型反演
-    $ dmat( delim: #none , 
-      ℝ^(n-1) ,⟶, ℝ^(n-1) ;
-      ξ ,⟿, (1 ± x_1)/(1 ∓ x_1) ξ = ξ/(|ξ|^2)
-    ) $ 
+    $ map(ℝ^(n-1), ℝ^(n-1), ξ, (1 ± x_1)/(1 ∓ x_1) ξ = ξ/(|ξ|^2)) $ 
     $ℂℙ^1 = {λ vec(z,w) : vec(z,w) ∈ ℂ^2}$ and its coordinate
     
     coordinate 1 #c_1, coordinate map $vec(z,w) ⇝ z/w ∈ ℂ$ 

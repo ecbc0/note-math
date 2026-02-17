@@ -29,10 +29,7 @@ _Proof_
 ]
 Second-order tensor, with one undergoing complex conjugation
 $
-  dmat( delim: #none ,
-    (ℂ^2, ℂ^2) , ⟶, ⨂^(* 2) ℂ^2 ;
-    (v,w) ,	⟿ , ⨂^(* 2) (v,w) , = , v ⊗ w^*
-  )
+  map((ℂ^2, ℂ^2), ⨂^(* 2) ℂ^2, (v,w), ⨂^(* 2) (v,w) = v ⊗ w^*)
 $
 can be decompose to
 
@@ -115,10 +112,7 @@ The "matrix" representation of $𝕆$ needs to be handled separately, the compos
   
   Bijection 
   $
-    dmat( delim: #none ,
-      ⨀^(* 2) ℂ^2	,⟶,	ℝ^(1,3) ;
-      #spacetime-momentum-spinor ,⟿, #spacetime-momentum
-    )
+    map(⨀^(* 2) ℂ^2, ℝ^(1,3), #spacetime-momentum-spinor, #spacetime-momentum)
   $
   metric
   $ 

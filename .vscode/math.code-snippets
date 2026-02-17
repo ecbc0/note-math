@@ -76,7 +76,7 @@
     "prefix": "epsilon-delta",
     "body": "forall ε > 0, exists δ > 0, forall "
   },
-  "map": {
+  "snippet-map": {
     "prefix": "map",
     "body": [
       "dmat( delim: #none ,",
@@ -85,7 +85,7 @@
       ")"
     ]
   },
-  "map-middle": {
+  "snippet-map-middle": {
     "prefix": "map-middle",
     "body": [
       "dmat( delim: #none ,",

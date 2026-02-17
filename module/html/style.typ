@@ -124,12 +124,15 @@
 }
 
 // from https://forum.typst.app/t/vertial-alignment-of-inline-math-in-html-export/7647
-// but need a long time to compile
 
+#let math-bot-label = label("_math_bot_")
+#let math-ref-bot-label = label("_math_ref_bot_")
+
+#let y-shifts = state("y-shifts", ())
 #let inline-math-count = counter("inline-math-count")
+
 #let shift-inline-math(body) = context {
-  // Allocate a new state for each call to this function
-  let y-shift = state("y-shift" + str(inline-math-count.get().first()), 0pt)
+  let formula-cnt = inline-math-count.get().first()
   inline-math-count.step()
   let begin-loc = here()
   // The wrapper ensures that the viewbox of rendered SVG math matches its bounding box.
@@ -140,34 +143,19 @@
     "span",
     html.frame(wrapper(
       // Add invisible elements below the math body to measure its bottom position.
-      math.attach(math.limits(body.body), b: pad([#none<_math_bot>], -1em))
+      math.attach(math.limits(body.body), b: pad([#none#math-bot-label], -1em))
         + sym.wj
-        + math.attach(math.limits([#none]), b: pad([#none<_math_ref_bot>], -1em)),
+        + math.attach(math.limits([#none]), b: pad([#none#math-ref-bot-label], -1em)),
     )),
     attrs: (
       // Rendered SVG defines its width & height in "em" units,
       // so we also convert y-shift relative to text size in "em" units.
-      style: "vertical-align: -" + str(calc.round(y-shift.final() / text.size, digits: 2)) + "em;",
+      style: "vertical-align: -"
+        + str(calc.round(y-shifts.final().at(formula-cnt, default: 0pt) / text.size, digits: 2))
+        + "em;",
       class: "typst-inline-math",
     ),
   )
-  context {
-    let end-loc = here()
-    let math-bot = query(
-      selector(<_math_bot>).after(begin-loc).before(end-loc),
-    )
-    let math-ref-bot = query(
-      selector(<_math_ref_bot>).after(begin-loc).before(end-loc),
-    )
-    if math-ref-bot.len() >= 1 {
-      let y1 = math-bot.at(0).location().position().y
-      let y2 = math-ref-bot.at(0).location().position().y
-      let new-y-shift = y1 - y2
-      if new-y-shift > y-shift.get() + 0.1pt {
-        y-shift.update(old => new-y-shift)
-      }
-    }
-  }
 }
 
 #let html-export-template(doc) = context {
@@ -202,4 +190,22 @@
     )
   }
   doc
+  // After the whole document, calculate the y-shift for every inline math.
+  // This reduces the number of `query` calls, improving performance.
+  context {
+    let math-bots = query(math-bot-label)
+    let math-ref-bots = query(math-ref-bot-label)
+    if math-bots.len() == inline-math-count.get().first() {
+      assert(math-bots.len() == math-ref-bots.len())
+      let new-y-shifts = math-bots
+        .zip(math-ref-bots, exact: true)
+        .map(pair => {
+          let (math-bot, math-ref-bot) = pair
+          let y1 = math-bot.location().position().y
+          let y2 = math-ref-bot.location().position().y
+          y1 - y2
+        })
+      y-shifts.update(old => new-y-shifts)
+    }
+  }
 }
