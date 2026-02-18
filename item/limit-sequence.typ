@@ -59,7 +59,7 @@ _Proof_ define $b_n = n^p/a_n$
 _Proof_ 
 #indent[
   $forall a > 1, lim_(n -> ∞) n/a^n = 0 \
-  exists N ∈ ℕ, forall n > N, n < a^n \
+  exists N ∈ ℕ, forall n > N, n < a^n quad ("by" lim_(n -> ∞) n^p/a^n = 0) \
   1 <= n^(1/n) < a$
 ]
 ==> $a > 0 ==> lim_(n -> ∞) a^(1/n) = 1$
@@ -68,7 +68,7 @@ _Proof_
 #indent[
   $a > 1$ 时 by $lim_(n -> ∞) a^(1/n) < lim_(n ->  ∞) n^(1/n)$
   
-  $a < 1$ 时用 $1/a >  1$ 
+  $a < 1$ 时用 $1/a > 1$ 和 $1/(a^(1/n)) = (1/a)^(1/n)$ 
 ]
 #tag("factorial-vs-exponential-1") 阶乘增长快于指数. $a ∈ ℝ ==> lim_(n -> ∞) a^n/n! = 0$
 
@@ -82,11 +82,11 @@ _Proof_ define $b_n = ⋯$. use 几何级数收敛判别 $b_(n+1)/b_n = (n/(n + 
 
 增长速度比较, 实数版本
 
-- $a > 1, p ∈ ℝ_(> 0) ==> lim_(x -> +∞) x^p/a^x = 0$
+- 幂 vs 指数: $a > 1, p ∈ ℝ_(> 0) ==> lim_(x -> +∞) x^p/a^x = 0$
 
-- $a ∈ ℝ ==> lim_(x -> +∞) a^x/x! = 0$ with $x! = Γ(x + 1)$
+- 指数 vs 阶乘 $a ∈ ℝ ==> lim_(x -> +∞) a^x/x! = 0$ with $x! = Γ(x)$
 
-- $lim_(x -> +∞) x!/x^x = 0$
+- 阶乘 vs 叠幂 $lim_(x -> +∞) x!/x^x = 0$
 
 #tag("mean-inequality") 均值不等式 *alias* #tag("AM-GM-inequality") 
 #indent[
@@ -106,11 +106,15 @@ _Proof_
 
   $ f = (a_1)^n + ⋯ + (a_n)^n - n a_1 ⋯ a_n >= 0$
 
-  由于问题是齐次的, 只需要考虑 $a_1 ⋯ a_n = 1$ 的情况. 设 $g(a_1 ,…, a_n) = n a_1 ⋯ a_n$
+  由于问题是齐次的, 只需要考虑 $a_1 ⋯ a_n = 1$ 的情况下, 证明
+  
+  $ f = (a_1)^n + ⋯ + (a_n)^n - n >= 0$
+  
+  设 $g(a_1 ,…, a_n) = n a_1 ⋯ a_n$
 
   如果某个 $a_i >= root(n, n)$ 则 $f >= 0$. 所以只需考虑 $0 <= a_1 ,…, a_n <= root(n, n)$
 
-  $0 <= a_1 ,…, a_n <= root(n, n)$ 和 $a_1 ⋯ a_n = 1$ 的交集的边界就是某个 $a_i = root(n, n)$, 此时也是 $f >= 0$. 只需考虑微分零处的点
+  $0 <= a_1 ,…, a_n <= root(n, n)$ 和 $a_1 ⋯ a_n = 1$ 的交集的边界就是某个 $a_i = root(n, n)$, 此时也是 $f >= 0$. 只需考虑无边界内部微分零处的点
   
   用 Lagrangian 乘数法. 让 $f$ 的微分在曲面 $a_1 ⋯ a_n = 1$ 的切空间上是零, 等价于梯度 $∇ f$ 和 $∇ g$ 共向
   
@@ -128,7 +132,7 @@ _Proof_
     a_i^n - 1 = λ \
     a_1 = ⋯ = a_n = root(n, 1 + λ)
   $
-  此时 $f = 0$. 也有 $λ = 0$, $a_1 = ⋯ = a_n = 1$
+  根据 $a_1 ⋯ a_n = 1 + λ = 1$ 得到 $λ = 0$, 得到 $a_1 = ⋯ = a_n = 1$. 此时 $f = 0$.
 
   $f$ 的二阶微分
   $
@@ -189,10 +193,10 @@ _Proof_
 
   _Proof_ of $f$ 单调性质
   #indent[
-    $(f(n+1))/(f(n)) = a ⋅ (n+1)^(n+1)/n^n \
+    $(f(n+1))/(f(n)) = a ⋅ n^n/(n+1)^(n+1) \
     f(n+1) >= f(n) <==> (f(n+1))/(f(n)) >= 1 <==> a >= (n+1)^(n+1)/n^n$
   ]
-  *Example* $g(n) >= g(1) = 4$. 所以 $a <= 4$ 时, $1$ 等分是最佳
+  *Example* $g(n) >= g(1) = 4$. 所以 $a <= 4$ 时, $f(n)$ 递减, $1$ 等分是最佳
 ]
 $(n+1)^(n+1)/n^n ∼ e ⋅ (n+1)$ i.e. $lim_(n -> ∞) ((n+1)^(n+1)/n^n)/(n+1) = lim_(n -> ∞) ((n+1)/n)^n = e$
   
@@ -288,7 +292,7 @@ _Proof_
       $a_n$ 有界
       $
         dmat(delim: #none,
-        1/2 + ⋯ + 1/n , > , log(n) , > , 1 + ⋯ + 1/(n-1) ;
+        1/2 + ⋯ + 1/n , < , log(n) , < , 1 + ⋯ + 1/(n-1) ;
 
         - (1/2 + ⋯ + 1/n) , > , - log n , > , - (1 + ⋯ + 1/(n-1)) ;
 
@@ -305,9 +309,13 @@ _Proof_
   ]
 ]
 #tag("Euler-reflection-formula") Euler 反射公式 $1/(z! (-z)!) = product_(n = 1 .. ∞) (1 - z^2/n^2) = (sin π z)/(π z)$ or $z/((z/π)! (-z/π)!) = z product_(n = 1 .. ∞) (1 - z^2/n^2) = sin z$
-#indent[
-  用代数基本定理的可数推广, #link("https://en.wikipedia.org/wiki/Weierstrass_factorization_theorem")[wiki:Weierstrass\_因式分解定理]
+#indent[  
+  $product (1 + a_n)$ 绝对收敛 := $product (1 + |a_n|)$ 收敛, 等价地 $sum log(1 + |a_n|)$ 收敛, 由于 $a_n -> 0$, $log(1 + |a_n|) ∼ |a_n|$, 等价地 $sum |a_n|$ 收敛. 
   
+  $product (1 + a_n)$ 绝对收敛蕴含 $product (1 + a_n)$ 收敛
+
+  所以 $product_(n = 1 .. ∞) (1 - z^2/n^2)$ 收敛
+
   用 
   $
     n + 1 = 2/1 ⋅ 3/2 ⋯ (n+1)/n = (1 + 1)(1 + 1/2) ⋯ (1 + 1/n)
@@ -318,7 +326,42 @@ _Proof_
     &= product_(n = 1..∞) frac(1 + z/n, (1 + 1/n)^z)
   $
   $1/z!$ 的零点是 $-1,-2, ⋯$. $1/(z! (-z)!)$ 的零点是 $ℤ ∖ 0$, 对应到 $(sin π z)/(π z)$ 的零点
-  
+
+  $product_(n = 1 .. ∞) (1 - z^2/n^2)$ (渐进地) 被 $sum_(n = 1 .. ∞) z^2/n^2$ 控制. 有限求积在展开乘法后是一个多项式 $P_N (z)$. 在 $|z| <= R$ 用 $sum_(n = 1 .. ∞) R^2/n^2$ 控制, 给出 compact 一致收敛, 可以证明序列 $P_N (z)$ 的 $k$ 阶导数收敛到 $P(z)$ 的 $k$ 阶导数, 从而可以证明序列 $P_N (z)$ 的幂函数 $z^k$ 的系数收敛到 $P(z)$ 的幂函数 $z^k$ 的系数
+  - 用 Cauchy 积分公式 $f^(k)(0) = k!/(2π i) integral.cont f(z)/z^(k+1) #d z$
+    $
+      |a_(k,N) - a_k| = 1/k! |f_N^(k)(0) - f^(k)(0)| 
+      <= M_N / r^k
+    $
+  - 或者纯实数的情况下证明 $(#d^k)/(#d x^k) log (1 - x^2/n^2) = O(1/n^2)$ 被控制, 然后 $(#d^k)/(#d x^k) P_N (x) = P_N (x) B_k ( (#d)/(#d x) log P_N (x) ,…, (#d^k)/(#d x^k) log P_N (x) )$
+
+  $product_(n = 1 .. ∞) (1 - z^2/n^2) = (sin π z)/(π z)$
+  - 复分析中的无穷乘积理论
+  - 或者, 从 $cos α x$ 使用 Fourier 变换积分 (@ref-25, vol.2)
+    $
+      1/π integral_(-π)^(π) cos(α x) cos(n x) #d x &= (-1)^n sin(π α)/π ⋅ (2 α)/(α^2 - n^2) \
+
+      1/π integral_(-π)^(π) cos(α x) sin(n x) #d x &= 0 
+    $
+    for $x in [-π, π]$
+    $
+      cos(α x) = (2 α sin(π α))/(π) (1/(2 α^2) + sum_(n = 1 .. ∞) ((-1)^n)/(α^2 - n^2) cos(n x))
+    $
+    let $x = π$
+    $
+      cos(π α)/sin(π α) - 1/(π α) = (2 α)/(π) sum_(n = 1 .. ∞) 1/(α^2 - n^2) 
+    $
+    级数被控制收敛. 积分, 交换积分和级数
+    $
+      integral_0^x (cos(π α)/sin(π α) - 1/(π α)) #d α &= 1/π integral_0^x sum_(n = 1 .. ∞) (2 α)/(α^2 - n^2) #d α \
+
+      log((sin π α)/(π α)) |_0^x &= sum_(n = 1 .. ∞) log |α^2 - n^2| |_0^x \
+
+      log((sin π x)/(π x)) &= sum_(n = 1 .. ∞) log (1 - x^2/n^2) \
+
+      (sin π x)/(π x) &= product_(n = 1 .. ∞) (1 - x^2/n^2)
+    $
+
   $1/(z! (-z)!) = product_(n = 1 .. ∞) (1 - z^2/n^2)$, 展开为幂级数, $z^2$ 的系数是 $- sum_(n = 1 .. ∞) 1/n^2$
   
   对比 $(sin π z)/(π z)$ 在 $z = 0$ 的 Taylor 展开的 $z^2$ 的系数 $-1/3! π^2 = - π^2/6$
@@ -341,7 +384,7 @@ _Proof_
 
 #tag("factorial-function-2") 
 #indent[
-  根据 Euler 的洞察, 阶乘函数的积分定义是, 对 $z in ℕ$ 然后对 $z in ℝ,ℂ$ (且可能对其它 normed-algebra)
+  根据 Euler 的洞察, 阶乘函数的积分定义是, 对 $z in ℕ$ 然后对 $z in ℝ,ℂ$ (且可能对其它 normed-division-algebra)
   $
     z! = integral_0^1 (- log s)^z #d s
   $
@@ -352,7 +395,7 @@ _Proof_
     integral_0^1 (- log s)^x #d s 
     &= lim_(n -> ∞) n^x integral_0^1 (1 - s^(1/n))^x #d s \
     ("use" s = t^n) &= lim_(n -> ∞) n^x integral_0^1 t^(n-1) (1 - t)^x #d t \
-    &= lim_(n -> ∞) n^x frac(n!,(x+1) ⋯ (x+n))
+    &= lim_(n -> ∞) n^x frac(n!,(x+1) ⋯ (x+n)) quad "integral by parts"
   $ 
   变量替换 $t = - log s$ 可以得到另一种积分表示
   $
@@ -429,14 +472,16 @@ _Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ 发散 by 它不是 #link(<Cauchy-completene
   $
     log(frac((n/e)^n, n!)) = (1 log(1 + 1) + 2 log(1 + 1/2) ⋯ + (n-1)log(1 + 1/(n-1))) - n
   $
-  Taylor 展开 $log(1 + 1/k) = sum_(m = 1 .. ∞) (-1)^(m-1) 1/(m ⋅ k^m)$
+  Taylor 展开 $log(1 + 1/k) = sum_(m = 1 .. ∞) (-1)^(m-1) 1/(m ⋅ k^m)$ 从而 $k log(1 + 1/k) = sum_(m = 1 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m - 1))$
   $
     log(frac((n/e)^n, n!)) 
-    &= -1 + log 2 + sum_(k = 2)^(n-1) sum_(m = 2 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1)) \
-    &= -1 - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) + log 2 + sum_(k = 2)^(n-1) sum_(m = 3 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1))
+    &= -n + (n - 1) + sum_(k = 1)^(n-1) sum_(m = 2 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1)) \
+    &= -1 - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) + sum_(k = 2)^(n-1) sum_(m = 3 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1))
   $
-  我们知道 $γ = lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n$ 
-  
+  我们知道 $γ = lim_(n -> ∞) 1 + 1/2 + ⋯ + 1/n - log n$. 于是
+  $
+    - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) = - 1/2 (1 + 1/2 + ⋯ + 1/(n-1) - log n) - 1/2 log n 
+  $
   (@ref-26) 最后一项
   $
     sum_(k = 2 .. ∞) sum_(m = 3 .. ∞) 1/(m ⋅ k^(m-1)) 

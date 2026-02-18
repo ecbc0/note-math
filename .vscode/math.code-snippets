@@ -3,6 +3,10 @@
     "prefix": "integral",
     "body": "integral"
   },
+  "integral-contour": {
+    "prefix": "integral-contour",
+    "body": "integral.cont"
+  },
   "∫": {
     "prefix": "integral",
     "body": "∫"

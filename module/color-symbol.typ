@@ -73,7 +73,7 @@
 
   show regex("∂|∇|∆"): it => text(it, rgb("#d25b00")) // ∇ : nabla, connection. ∆ : Laplacian
 
-  show "∫": it => text(it, rgb("#0056e1"))
+  show regex("∫|∮"): it => text(it, rgb("#0056e1"))
 
   show regex("∑|∏"): it => text(it, rgb("#0056e1"))
 

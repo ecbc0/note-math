@@ -3,7 +3,7 @@
 
 real-numbers
 limit-sequence
-ℝ^n
+division-algebra
 Euclidean-space
 Minkowski-spaces
 polynomial

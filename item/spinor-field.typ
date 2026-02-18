@@ -290,7 +290,7 @@ couple term $-m mat(,𝟙;𝟙), m ∈ ℝ$ 换成 $-mat(,n 𝟙;m 𝟙),m,n ∈
 
   #let GSM = $#c-Lie-group("S") (#U (2) #U (3))$
 
-  标准模型的 quark lepton fermion 模型可以写为 $GSM$ 作用在 $⋀ (ℂ^5)$, 于是有人将 $GSM$ 嵌入 $Spin(4) × Spin(6)$ (大概可以通过 $#U (2) ↪ Spin(4) ≃ SU(2) × SU(2)$, $U(3) ↪ Spin(6)$), 然后再嵌入到 $Spin(10)$, 再把 $⋀(ℂ^5)$ 和 $"Cliff"(10)$ 对应起来. 这些嵌入被称为 "GUT". $Spin(10)$ 破缺到 $Spin(4) × Spin(6)$
+  标准模型的 quark lepton fermion 模型可以写为 $GSM$ 作用在 $⋀ (ℂ^5)$, 于是有人将 $GSM$ 嵌入 $Spin(4) × Spin(6)$ (大概可以通过 $#U (2) ↪ Spin(4) ≃ SU(2) × SU(2)$, $U(3) ↪ Spin(6) ≃ SU(4)$), 然后再嵌入到 $Spin(10)$, 再把 $⋀(ℂ^5)$ 和 $"Cliff"(10)$ 对应起来. 这些嵌入被称为 "GUT". $Spin(10)$ 破缺到 $Spin(4) × Spin(6)$
 
   数学上, 我觉得可以考虑一下 $Spin(1,3) × Spin(6)$ 有没有类似 GUT quark lepton 模型那样的东西, 注意是是类似而不是相同
 

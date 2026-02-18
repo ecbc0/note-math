@@ -1,4 +1,4 @@
-English ver. are machine translation without check from gemini-flash and [LinguaGacha](https://github.com/neavo/LinguaGacha)
+English ver. are machine translation without check from LLM and [LinguaGacha](https://github.com/neavo/LinguaGacha)
 
 Organized and recorded ideas about mathematics, not guarantee correctness, readability, completeness of details, have guess without proof. Currently many of them are just *draft*. Probably always in anytime need to modify wrong thing or need improve bad treatment or need delete and change lots of things
 

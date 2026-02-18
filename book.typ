@@ -10,14 +10,14 @@
     = English
     = logic-topic
       - #chapter("item_en/logic_en.typ")[logic]
-      - #chapter("item_en/set-theory_en.typ")[set-theory]
+      - #chapter("item_en/basic_en.typ")[basic]
       - #chapter("item_en/map_en.typ")[map]
       - #chapter("item_en/order_en.typ")[order]
       - #chapter("item_en/combinatorics_en.typ")[combinatorics]
     = calculus
       - #chapter("item_en/real-numbers_en.typ")[real-numbers]
       - #chapter("item_en/limit-sequence_en.typ")[limit-sequence]
-      - #chapter("item_en/ℝ^n_en.typ")[ℝ^n]
+      - #chapter("item_en/division-algebra_en.typ")[division-algebra]
       - #chapter("item_en/Euclidean-space_en.typ")[Euclidean-space]
       - #chapter("item_en/Minkowski-space_en.typ")[Minkowski-space]
       - #chapter("item_en/polynomial_en.typ")[polynomial]
@@ -70,14 +70,14 @@
     #chapter("item/notice.typ")[notice]
     = 逻辑
       - #chapter("item/logic.typ")[逻辑]
-      - #chapter("item/set-theory.typ")[集合论]
+      - #chapter("item/basic.typ")[基础]
       - #chapter("item/map.typ")[映射]
       - #chapter("item/order.typ")[序]
       - #chapter("item/combinatorics.typ")[组合]
     = 微积分
       - #chapter("item/real-numbers.typ")[实数]
       - #chapter("item/limit-sequence.typ")[数列极限]
-      - #chapter("item/ℝ^n.typ")[ℝ^n]
+      - #chapter("item/division-algebra.typ")[可除代数]
       - #chapter("item/Euclidean-space.typ")[Euclidean 空间]
       - #chapter("item/Minkowski-space.typ")[Minkowski 空间]
       - #chapter("item/polynomial.typ")[多项式]

@@ -55,11 +55,11 @@ $
   (x+y)^n &= sum_(i+j=n) binom(n,i,j) x^i y^j \
   (x_1 + ⋯ + x_d)^n &= sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
 $
-vs Newton 二项式 $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
+vs Newton binomial $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
 
 #tag("multi-combination") similarly, the following are equivalent
 - $d$-fold combination. picking $k_1 ,…, k_d$ from $1 ,…, n$ with $k_1 + ⋯ + k_d = n$
-- 划分 ${1 ,…, n} = A_1 ⊔ ⋯ ⊔  A_d$ with $|A_i| = k_i$ and $k_1 + ⋯ + k_d = n$
+- partition ${1 ,…, n} = A_1 ⊔ ⋯ ⊔  A_d$ with $|A_i| = k_i$ and $k_1 + ⋯ + k_d = n$
 - picking a permutation, and quotient
   $
     binom(n,k_1,…,k_d) = frac(|S_n|,|S_(k_1) × ⋯ × S_(k_d)|) = frac(n!,k_1 ! \,…\, k_d !)

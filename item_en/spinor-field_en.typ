@@ -290,7 +290,7 @@ Since $mat(#p ;,#p^◊)^2 != (det #p) 𝟙$, the transformation $mat(#p ;,#p^◊
 
   #let GSM = $#c-Lie-group("S") (#U (2) #U (3))$
 
-  The quark lepton fermion model of the Standard Model can be written as $GSM$ acting on $⋀ (ℂ^5)$, so some people embed $GSM$ into $Spin(4) × Spin(6)$ (probably through $#U (2) ↪ Spin(4) ≃ SU(2) × SU(2)$, $U(3) ↪ Spin(6)$), and then embed it into $Spin(10)$, and then correspond $⋀(ℂ^5)$ with $"Cliff"(10)$. These embeddings are called "GUT". $Spin(10)$ breaks to $Spin(4) × Spin(6)$
+  The quark lepton fermion model of the Standard Model can be written as $GSM$ acting on $⋀ (ℂ^5)$, so some people embed $GSM$ into $Spin(4) × Spin(6)$ (probably through $#U (2) ↪ Spin(4) ≃ SU(2) × SU(2)$, $U(3) ↪ Spin(6) ≃ SU(4)$), and then embed it into $Spin(10)$, and then correspond $⋀(ℂ^5)$ with $"Cliff"(10)$. These embeddings are called "GUT". $Spin(10)$ breaks to $Spin(4) × Spin(6)$
 
   Mathematically, I think we can consider whether $Spin(1,3) × Spin(6)$ has something similar to the GUT quark lepton model, note that it is similar not identical
 

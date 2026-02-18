@@ -1,79 +1,108 @@
 #import "../module/module.typ": *
 #show: module
 
-Euclidean $ℝ^2$'s direction space is $𝕊 = 𝕊^1$
+The direction space of Euclidean $ℝ^2$ is ${(x, y) in ℝ^2 : x^2 + y^2 = 1} = 𝕊^1$
 
-Rotation is the part of $ℝ^2$'s (direction-preserving) #link(<isometry>)[] that preserves the direction space $𝕊$
+On the direction space $𝕊^1$ of $ℝ^2$, one can also define the "distance" between any two points $p, q in 𝕊^1$: by restricting the "metric" of $ℝ^2$ to $𝕊^1$, we obtain the metric of $𝕊^1$, and then using the metric of $𝕊^1$, we can define the distance on $𝕊^1$ as the length of the shortest geodesic connecting the two points
 
-The isometry of $ℝ^2$ is $SO(2) ⋊ ℝ^2$ (it can be proven that $ℝ^2$ isometry implies #link(<affine>)[affine])
+Maps that preserve the metric of $ℝ^2$ are called isometries of $ℝ^2$. It can be proven that isometries of $ℝ^2$ are affine maps. The (orientation-preserving) isometries of $ℝ^2$ are $SO(2) ⋊ ℝ^2$. The part of the isometries that fixes the origin is $SO(2)$, which also preserves the direction space $𝕊^1$ of $ℝ^2$ and preserves the metric on $𝕊^1$, thereby preserving the distance on $𝕊^1$
 
-Rotation is $SO(2)$
+$SO(2)$ is called rotation
 
-The element of $SO(2)$ $mat(a,-b;b,a)$ with $a^2 + b^2 = 1$. Set-theoretically equivalent to $𝕊$
+Elements of $SO(2)$ are ${mat(a,-b;b,a) : a^2 + b^2 = 1}$. Set-theoretically equivalent to ${(a, b) : a^2 + b^2 = 1} = 𝕊^1$
+$
+  mat(a,-b;b,a) <--> (a, b)
+$
 
-Also compatible in multiplication $mat(a,-b;b,a) vec(1,0) = vec(a,b) ≃ mat(a,-b;b,a) = mat(a,-b;b,a) mat(1;,1)$
+The action of $SO(2)$ on $SO(2)$ and on $𝕊^1$ is compatible
+$
+  mat(a,-b;b,a) vec(1,0) &= vec(a,b) && " for" vec(1, 0) in 𝕊^1 \
 
-*Question* #tag("angle") 
+  mat(a,-b;b,a) mat(1;,1) &= mat(a,-b;b,a) && " for" mat(1;,1) in SO(2)
+$
+Thus, we can define multiplication on $z, z' in 𝕊^1$ as the corresponding multiplication of $SO(2)$
+$
+  z ⋅ z' = (a, b) ⋅ (a', b') &≃ mat(a,-b;b,a) mat(a',-b';b',a') \
+  &= ⋯ \
+  &≃ (a a' - b b', a' b + a b')
+$
+At the same time, because $SO(2)$ are linear maps, the distributive law holds
+$
+  z ⋅ (z' + z'') = z ⋅ z' + z ⋅ z''
+$
+#tag("complex-numbler-geometric-meaning") This is equivalent to the multiplication of unit complex numbers. Since rotations $SO(2)$ and scalar multiplication $ℝ$ commute, the multiplication on unit complex numbers can be easily extended to multiplication on complex numbers $ℂ$
+
+#tag("angle") Angle
 #indent[
-  Probably not the perfect motivation
+  It may not be a perfect motivation
 
-  Restricting the $ℝ^2$ metric to $𝕊$ yields #link(<metric-manifold>)[]
-  
   Intuitively, in Euclidean $ℝ^2$, we can "rotate", and the composition of rotations corresponds to the addition of "angles"
-  
-  The latter should be the $exp : ℝ -> "Isom" 𝕊$ of $𝕊$'s #link(<Killing-field>)[] as a one-parameter homomorphism to $𝕊$'s isometry
 
-  Calculate $exp$ with #link(<geodesic>)[geodesic]. Calculate geodesic with, for example, #link(<stereographic-projection>)[stereographic projection coordinates]. For the geodesic starting at $vec(1,0)$, the result is denoted as #tag("trigonometric-function") trigonometric function $vec(cos(t),sin(t))$. The power series expansion of $vec(cos(t),sin(t))$ at $t = 0$ can be calculated using #link(<inverse-analytic>)[inverse function theorem]
+  Angle should be the distance on $𝕊^1$, the distance along the shortest geodesic connecting two points.
+
+  The rotation we defined is the group preserving the $𝕊^1$ distance, which hasn't directly explained the intuitive sense of rotation.
+
+  Intuitively, we know that on $𝕊^1$, we can continuously define a "positive direction of the tangent space" for each point
+
+  For $(a, b) in 𝕊^1$, the positive direction of the tangent space is $(-b, a) in ⊤ 𝕊^1$
+
+  One can guess that the intuitive rotation is moving each point on $𝕊^1$ along the positive direction by a distance/radian/angle of $θ$
+
+  The question is, how to understand that $SO(2)$, which preserves the $𝕊^1$ distance (and orientation), is equivalent to this intuitive rotation?
+
+  At least from the result, I know
+  - The positive direction tangent field $X = (-b, a)$ is an infinitesimal isometry (called a Killing field), which is the Lie algebra of the isometry group. And moving each point along the positive direction by a distance $θ$ (along the geodesic) is the way to generate an isometry from an infinitesimal isometry, i.e., the $exp$ of the Lie algebra.
+  - Since geodesics are a kind of integral curve along a vector field, the addition of distances is homomorphic to the multiplication of group actions
+    $
+      exp((θ_1 + θ_2) X) = exp(θ_1 X) ⋅ exp(θ_2 X)
+    $
+    This also gives commutativity
+    $
+      exp(θ_1 X) ⋅ exp(θ_2 X) = exp(θ_2 X) ⋅ exp(θ_1 X)
+    $
+
+  For the geodesic coordinates starting from $vec(1,0) in 𝕊^1$, the result is denoted as #tag("trigonometric-function") trigonometric functions $vec(cos(θ),sin(θ))$.
+
+  According to the correspondence between $SO(2)$ multiplication and $𝕊^1$ multiplication, we know that $mat(cos(θ), -sin(θ); sin(θ), cos(θ)) vec(1, 0) = vec(cos(θ), sin(θ))$
+
+  Therefore $mat(cos(θ), -sin(θ); sin(θ), cos(θ))$ is also the action of rotating other points on $𝕊^1$ by $θ$
+
+  According to the homomorphism
   $
-    cos(t) &= sum frac((-1)^n,(2n)!) t^(2n) \
-    sin(t) &= sum frac((-1)^n,(2n+1)!) t^(2n+1)
-  $
-  Homomorphism is reflected in, according to power series
-  $
-    mat(cos(s+t),-sin(s+t);sin(s+t),cos(s+t)) 
+    mat(cos(s+t),-sin(s+t);sin(s+t),cos(s+t))
     = mat(cos(s),-sin(s);sin(s),cos(s)) mat(cos(t),-sin(t);sin(t),cos(t))
   $
+
+  According to the power series representation of $exp$, and that the unit tangent vector in the positive direction at $vec(1, 0)$ is $vec(0, 1)$ corresponding to $mat(,-1;1)$
+
+  $
+    mat(cos(θ), -sin(θ); sin(θ), cos(θ)) = sum_(n = 0..∞) 1/n! mat(,-1;1)^n θ^n
+  $
+
+  we can obtain
+  $
+    cos(θ) &= sum frac((-1)^n,(2n)!) θ^(2n) \
+    sin(θ) &= sum frac((-1)^n,(2n+1)!) θ^(2n+1)
+  $
 ]
-Thus $ℝ ↠ SO(2) ≃ 𝕊 ≃ #U (1,ℂ)$
+Expressed using complex numbers, $mat(,-1;1) ≃ #i$
+$
+  mat(cos(θ), -sin(θ); sin(θ), cos(θ)) ≃ sum_(n = 0..∞) 1/n! (#i θ)^n = e^(#i θ) = cos t + #i sin t
+$
+and we have $SO(2) ≃ #U (1, ℂ)$
 
-Hyperbolic angle is the same $ℝ <-> SO(1,1) ≃ ℍ𝕪 ≃ #U (1,ℂ_"split")$
+$± #i := vec(0,± 1) = vec(cos(± π/2) , sin(± π/2)) ≃ mat(, -(± 1); ± 1)$
 
+$#i^(-1) = - #i$ or $- #i^2 = 1$ or $#i^2 = -1$
 
-#tag("complex-numbler-geometric-meaning")
-#indent[
-  Now, there is multiplication on $𝕊$, expressed as the addition of angles
+Complex conjugation preserves distance but reverses direction $(|z| e^(#i t))^* = |z| e^(- #i t)$ or $(x + #i y)^* = x - #i y$
 
-  $ℝ^2$ can be decomposed into distance $ℝ_(>= 0)$ and direction $𝕊$, $z = |z| e^(#i t)$
+Similarly, hyperbolic $ℝ^(1,1)$ and split complex $ℂ_"split"$
 
-  Multiplication in $ℝ^2$ is defined as the multiplication of distances in $ℝ_(>= 0)$ and the multiplication of directions in $𝕊$ or the addition of angles $z w = |z| |w| e^(#i t) e^(#i s) = |z| |w| e^(#i (t + s))$
+- $exp(Im(ℂ))$ give $#U (1,ℂ) ≃ 𝕊^1 ≃ SO(2)$
 
-  The multiplicative inverse of $𝕊$ is represented as the additive inverse of the angle $(e^(#i t))^(-1) = e^(- #i t)$
+- $exp(Im(ℂ_"split"))$ give $#U (1,ℂ_"split") ≃ ℍ𝕪^1 ≃ SO(1,1)$
 
-  The multiplicative inverse of $ℝ^2$ is the inverse of the distance in $ℝ_(> 0)$ and the inverse of the direction in $𝕊$ $(|z| e^(#i t))^(-1) = |z|^(-1) (e^(#i t))^(-1) = |z|^(-1) e^(- #i t)$
+*Question* Generalize to quaternions $ℍ$ and octonions $𝕆$ and their split versions
 
-  Distributive law $z (z' + z'') = z z' + z z''$ 
-  - The distributive law for distance multiplication in $ℝ_(>= 0)$ is that of $ℝ^2$, meaning that scaling after vector addition is equal to vector addition after scaling
-  - The meaning of the distributive law for direction multiplication in $𝕊$ is that rotation is a linear map, and rotating after vector addition is equal to vector addition after rotation
-  Unlike $GL(n,ℝ)$ and $ℝ^n$, because $SO(2) ≃ 𝕊$ and $ℝ^2 ∖ 0 ≃ ℝ_(> 0) × 𝕊$, it can be said that $ℝ^2$ itself is capable of multiplication
-
-  Algebra $(ℝ^2,+,⋅)$ or $(ℂ,+,⋅)$, called complex numbers
-
-  $SO(2)$ is the multiplication of elements of length $1$ in $ℂ$, and also the multiplication that preserves the length of $ℂ$
-
-  $SO(2) ≃ #U (1,ℂ)$
-
-  $± #i := vec(0,± 1) = vec(cos(± π/2) , sin(± π/2)) ≃ mat(, -(± 1); ± 1)$
-
-  $#i^(-1) = - #i$ or $- #i^2 = 1$ or $#i^2 = -1$
-
-  $vec(cos(t) , sin(t))^(-1) = vec(cos(-t) , sin(-t)) = vec(cos(t) , - sin(t))$
-
-  Complex conjugation means that the distance remains unchanged but the direction is reversed $(|z| e^(#i t))^* = |z| e^(- #i t)$ or $(x + #i y)^* = x - #i y$
-]
-#tag("Euler-formula") $ℂ$ #link(<exponential>)[exponential function] $exp #i t = cos t + #i sin t$
-
-Similarly, hyperbolic and split complex $ℂ_"split"$
-
-*Question* Generalize to quaternion $ℍ$, octonion $𝕆$, and their split ver.
-
-Conversely, if we accept the concept of angular additivity (homomorphism), then this provides motivation for using the Euclidean norm $x_1^2 + x_2^2$ for $ℝ^2$ instead of some other norm? (norm defined as $|λ x| = |λ| |x|$)
+Conversely, if we accept the concept that angles are additive (homomorphism), then it provides motivation for: the Euclidean norm of $ℝ^2$ being $sqrt(x_1^2 + x_2^2)$ and not some other norm. (Norm is defined as $|λ x| = |λ| |x|$.)
