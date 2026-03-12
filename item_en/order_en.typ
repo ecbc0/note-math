@@ -21,11 +21,11 @@ $n$-ary relation is similar
   - If we first have the $<$ version of partial order, then define $a <= b := (a < b) or (a = b)$, we get the $<=$ version of partial order, and it can be converted back to $a < b <==> (a <= b) and (a != b)$ (converting back is not obvious and requires the properties of $<$ partial order to prove, same below)
   - If we first have the $<=$ version of partial order, then define $a < b := (a < b) and (a != b)$, we get the $<$ version of partial order, and it can be converted back to $a <= b <==> (a < b) or (a = b)$
 ]
-*Prop* $<$ partial order ==> irreflexive $forall(x in A) { not (x < x) }$ _Proof_ If $x < x$, then acyclicity is broken
+*Prop* $<$ partial order ==> irreflexive $forall(x in A) { not (x < x) }$, i.e. a quantity can't be smaller than itself _Proof_ If $x < x$, then acyclicity is broken
 
 Note: "nonreflexive" is not not reflexive
 
-*Prop* $<$ partial order ==> ($x < y ==> x != y$) _Proof_ If $x = y$ then $x < x$
+*Prop* $<$ partial order ==> ($x < y ==> x != y$) _Proof_ If $x = y$ then $x < x$, this contradicts to nonreflexive of partial order
 
 *Def*
 - $"lte_from"(<)(a, b) := (a < b) or (a = b)$
@@ -36,27 +36,30 @@ Note: "nonreflexive" is not not reflexive
 _Proof_
 #indent[
   $
-    "lt_from"("lte_from"(<))(a, b) &= ((x < y) or (x = y)) and x != y \
+    "lt_from"("lte_from"(<))(x, y) &= ((x < y) or (x = y)) and x != y \
     &= ((x < y) and (x != y)) or ((x = y) and (x != y)) \
     &= (x < y) and (x != y)
   $
-  But partial order $<$ ==> $(x < y) ==> (x != y)$, so
+  But partial order $<$ satisfy $(x < y) ==> (x != y)$, so
   $
     (x < y) and (x != y) = (x < y)
   $
+  so $"lt_from"("lte_from"(<))(x, y) = (x < y)$
 ]
 
 *Prop* Assume $<=$ is a partial order, then $"lte_from"("lt_from"(<=)) = (<=)$
 _Proof_
 #indent[
   $
-    "lte_from"("lt_from"(<=))(a, b) &= ((x <= y) and (x != y)) or x = y \
+    "lte_from"("lt_from"(<=))(x, y) &= ((x <= y) and (x != y)) or x = y \
     &= ((x <= y) or (x = y)) and ((x = y) or (x != y)) \
     &= (x <= y) or (x = y)
   $
-  But partial order $<=$ ==> $(x <= y) or (x = y) <==> (x <= y)$
+  But partial order $<=$ satisfy $(x <= y) or (x = y) <==> (x <= y)$
 
   _Proof_ <== is obvious. For ==>, assume $(x <= y) or (x = y)$. If $x = y$ then because $x <= x$, we have $x <= y$. If $x != y$ then $x <= y$
+
+  so $"lte_from"("lt_from"(<=))(x, y) = (x <= y)$
 ]
 *Prop* (Proof does not require partial order properties of $<, <=$)
 - $"lte_from"(<)$ is reflexive
@@ -77,7 +80,7 @@ These propositions together prove the equivalence of $<, <=$ partial orders
     image modified from wiki media about partial order
   - $<,<=$ of $ℕ,ℤ,ℚ,ℝ$
   - Tree diagram
-#tag("order-comparable") $a,a' ∈ A$ comparable := $(a <= a') or (a' <= a)$
+#tag("order-comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
 
 #tag("comparable-component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
 

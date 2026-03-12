@@ -52,7 +52,7 @@ prover 能让人类从需要检阅所有步骤 reduce to 检阅定义 (以及检
 
 除了检验证明的正确性, prover 还会有其它作用, 例如, 类似于编程语言里的工具, 可以有友好且互动的编译器错误信息, 有 LSP (language server protocol) 工具
 
-prover 的例子: #link("https://github.com/acornprover/acorn")[acornprover], #link("https://github.com/leanprover/lean4")[lean]
+prover 的例子: #link("https://github.com/acornprover/acorn")[acornprover] (功能未完善)
 
 这里暂时不如进入细节, 只大概说一下
 
@@ -162,7 +162,7 @@ $
   not (And_(a ∈ A) p(a)) &<==> Or_(a ∈ A) not p(a) \
   not (forall a in A, p(a)) &<==> exists a in A, not p(a)
 $
-类似 $and,or,not$ 的冗余, set/type construction rules 也有可能有冗余, 或者说有很多等价的定义方式
+类似 $and,or,not$ 的冗余, set/type construction rules 也有可能有冗余, 或者说有很多等价的定义方式. prover 程序里面的 "normalization" 本质上也是处理逻辑等价
 
 follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义
 
@@ -405,6 +405,8 @@ let $#A in Set(Set(T))$
 
   再次使用 type construction rules, 得到的东西也定义为属于 $Type 1$ 
 
+  在数学以及 prover 代码中一般只需要显式的 $Type 0$ 和隐式的 $Type 1$
+
   还可以继续
   
   $Type 1 ∈ Type 2$. 诸如此类 ...
@@ -420,6 +422,7 @@ let $#A in Set(Set(T))$
       // property of group
     }
     ```
+    可见, 在一阶类型中 group (以及其它任何 typeclass) 的定义是明确的
 
   $Type 0, Type 1, ...$ 看起来像自然数集 $ℕ$, 所以应该再假设新的 hierarchy $Type ℕ$ 吗? 然后对 $Type ℕ$, 继续使用 type construct rule ... (会导致需要无限的语言规则吗?)
   

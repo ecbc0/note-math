@@ -114,7 +114,7 @@ _Proof_
 
   If some $a_i >= root(n, n)$, then $f >= 0$. So we only need to consider $0 <= a_1 ,…, a_n <= root(n, n)$
 
-  The boundary of the intersection of $0 <= a_1 ,…, a_n <= root(n, n)$ and $a_1 ⋯ a_n = 1$ is when some $a_i = root(n, n)$, and at this point $f >= 0$. We only need to consider points where the unbounded interior differential is zero.
+  The boundary of the intersection of $0 <= a_1 ,…, a_n <= root(n, n)$ and $a_1 ⋯ a_n = 1$ is when some $a_i = root(n, n)$, and at this point $f >= 0$. We only need to consider points having differential zero in interior without boundary.
 
   Using the Lagrangian multiplier method. Let the differential of $f$ be zero on the tangent space of the surface $a_1 ⋯ a_n = 1$, which is equivalent to the gradients $∇ f$ and $∇ g$ being collinear.
 
@@ -327,7 +327,7 @@ _Proof_
   $
   The zeros of $1/z!$ are $-1,-2, ⋯$. The zeros of $1/(z! (-z)!)$ are $ℤ ∖ 0$, corresponding to the zeros of $(sin π z)/(π z)$
 
-  $product_(n = 1 .. ∞) (1 - z^2/n^2)$ (asymptotically) is controlled by $sum_(n = 1 .. ∞) z^2/n^2$. Finite product, after expanding the multiplication, is a polynomial $P_N (z)$. On $|z| <= R$ it is controlled by $sum_(n = 1 .. ∞) R^2/n^2$, giving compact uniform convergence, it can be proven that the $k$-th derivative of the sequence $P_N (z)$ converges to the $k$-th derivative of $P(z)$, thus it can be proven that the coefficients of the power function $z^k$ of the sequence $P_N (z)$ converge to the coefficients of the power function $z^k$ of $P(z)$
+  $product_(n = 1 .. ∞) (1 - z^2/n^2)$ (asymptotically) is controlled by $sum_(n = 1 .. ∞) z^2/n^2$. Finite product, after expanding the multiplication, is a polynomial $P_N (z)$. On $|z| <= R$ it is controlled by $sum_(n = 1 .. ∞) R^2/n^2$, giving compact uniform convergence, it can be proven that the $k$-th derivative of the sequence $P_N (z)$ converges to the $k$-th derivative of $P(z)$, thus it can be proven that the coefficients $a_(k, N)$ of the power function $z^k$ of the sequence $P_N (z)$ converge to the coefficients $a_k$ of the power function $z^k$ of $P(z)$
   - Using Cauchy's integral formula $f^(k)(0) = k!/(2π i) integral.cont f(z)/z^(k+1) #d z$
     $
       |a_(k,N) - a_k| = 1/k! |f_N^(k)(0) - f^(k)(0)|
@@ -353,7 +353,7 @@ _Proof_
     $
     The series is controlled and convergent. Integral, exchange integral and series
     $
-      integral_0^x (cos(π α)/sin(π α) - 1/(π α)) #d α &= 1/π integral_0^x sum_(n = 1 .. ∞) (2 α)/(α^2 - n^2) #d α \
+      integral_0^x (cos(π α)/sin(π α) - 1/(π α)) #d α &= sum_(n = 1 .. ∞) 1/π integral_0^x (2 α)/(α^2 - n^2) #d α \
 
       log((sin π α)/(π α)) |_0^x &= sum_(n = 1 .. ∞) log |α^2 - n^2| |_0^x \
 
@@ -482,7 +482,7 @@ _Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges by it is not #link(<Cauchy-complete
   $
     - 1/2 (1 + 1/2 + ⋯ + 1/(n-1)) = - 1/2 (1 + 1/2 + ⋯ + 1/(n-1) - log n) - 1/2 log n
   $
-  (@ref-26) The last term
+  (@ref-26) The last term is absolutely convergent
   $
     sum_(k = 2 .. ∞) sum_(m = 3 .. ∞) 1/(m ⋅ k^(m-1))
     &<= sum_(k = 2 .. ∞) sum_(m = 2 .. ∞) 1/(k^m) \
@@ -490,21 +490,42 @@ _Proof_ $a_n = 1 + 1/2 + ⋯ + 1/n$ diverges by it is not #link(<Cauchy-complete
     &= sum_(k = 2 .. ∞) (1/(k - 1) - 1/k) \
     &= 1
   $
+  So $log(frac((n/e)^n, n!))$ can be decomposed into a term converge to constant
+  $
+    -1 - 1/2 (1 + 1/2 + ⋯ + 1/(n-1) - log n) + sum_(k = 2)^(n-1) sum_(m = 3 .. ∞) (-1)^(m-1) 1/(m ⋅ k^(m-1))
+  $
+  plus another term
+  $
+    - 1/2 log n = log n^(-1/2)
+  $
+  so $frac((n/e)^n, n!) ∼ C^(-1) n^(-1/2)$ or 
+  
+  $frac(n!, (n/e)^n) ∼ C n^(1/2)$ or 
+  
+  $n! ∼ C n^(1/2) (n/e)^n$
 
-  So $frac(n!, (n/e)^n) ∼ C n^(1/2)$ or $n! ∼ C n^(1/2) (n/e)^n$
+  We also need to compute the remaining constant $C = lim_(n -> ∞) frac(n!, (n/e)^n n^(1/2))$
 
   (@ref-27) Variable substitution $t = y n^(1/2) + n$
   $
     n! &= integral_0^∞ t^n e^(-t) #d t \
     &= (n/e)^n n^(1/2) integral_(-n^(1/2))^(∞) (1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) #d t
   $
-  Functions $f_n (y) = (1 + frac(y, n^(1/2)))^n e^(- n^(1/2) y)$ converge monotonically to $e^(-1/2 y^2)$ as $n -> ∞$ for $y <= 0, y >= - n^(1/2)$ respectively
+  so
+  $
+    C = lim_(n -> ∞) integral_(-n^(1/2))^(∞) (1 + frac(y, n^(1/2)))^n e^(- y n^(1/2)) #d t
+  $
+  Functions $f_n (y) = (1 + frac(y, n^(1/2)))^n e^(- n^(1/2) y)$ converge monotonically to $e^(-1/2 y^2)$ as $n -> ∞$ for $y <= 0, y >= - n^(1/2)$ respectively, because:
   $
     log(1 + frac(y, n^(1/2)))^n e^(- y n^(1/2))
     &= n log(1 + frac(y, n^(1/2))) - y n^(1/2) \
     &= -1/2 y^2 + o(1/n)
   $
   Interchange series and integral, and use $integral_(-∞)^(∞) e^(1/2 y^2) #d y = (2 π)^(1/2)$
+
+  So $C = (2 π)^(1/2)$
+
+  So $n! ∼ (2 π)^(1/2) n^(1/2) (n/e)^n$
 
   Discussions on the appearance of $π$ can also be seen in #link(<why-pi-in-Gaussian-integral>)[]
 ]

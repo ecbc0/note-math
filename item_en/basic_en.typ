@@ -52,7 +52,7 @@ The human brain compiler can omit and supplement omissions, trading temporary ef
 
 In addition to verifying the correctness of proofs, provers can also have other uses, for example, similar to tools in programming languages, they can have friendly and interactive compiler error messages, and LSP (language server protocol) tools
 
-prover 的例子: #link("https://github.com/acornprover/acorn")[acornprover], #link("https://github.com/leanprover/lean4")[lean]
+prover 的例子: #link("https://github.com/acornprover/acorn")[acornprover] (Functionality not yet complete)
 
 Let's not go into details here for now, just a brief overview
 
@@ -162,7 +162,7 @@ $
   not (And_(a ∈ A) p(a)) &<==> Or_(a ∈ A) not p(a) \
   not (forall a in A, p(a)) &<==> exists a in A, not p(a)
 $
-Similar to the redundancy of $and,or,not$, set/type construction rules may also have redundancy, or many equivalent definitions
+Similar to the redundancy of $and,or,not$, set/type construction rules may also have redundancy, or many equivalent definitions. The "normalization" in prover program essentially deals with logical equivalence.
 
 follow #link(<bool-algebra>)[various rules for bool in finite cases], define
 
@@ -405,6 +405,8 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
 
   Again using type construction rules, what is obtained is also defined as belonging to $Type 1$
 
+  In mathematics and the code of prover, generally only the explicit $Type 0$ and the implicit $Type 1$ are needed.
+
   Can also continue
 
   $Type 1 ∈ Type 2$. And so on ...
@@ -420,6 +422,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
       // property of group
     }
     ```
+    We can see that, in first order type, the definition of group (and other any typeclass) is clear
 
   $Type 0, Type 1, ...$ looks like the set of natural numbers $ℕ$, so should we assume a new hierarchy $Type ℕ$? Then for $Type ℕ$, continue to use the type construct rule ... (will it lead to needing infinite language rules?)
 

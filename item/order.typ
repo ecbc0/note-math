@@ -21,11 +21,11 @@ $n$ 元关系类似
   - 如果先有 $<$ 版本的偏序, 那么定义 $a <= b := (a < b) or (a = b)$ 之后就有 $<=$ 版本的偏序, 且能变回来 $a < b <==> (a <= b) and (a != b)$ (变回来不是显然的, 需要 $<$ 偏序的性质来证明, 下同)
   - 如果先有 $<=$ 版本的偏序, 那么定义 $a < b := (a < b) and (a != b)$ 之后就有 $<$ 版本的偏序, 且能变回来 $a <= b <==> (a < b) or (a = b)$
 ]
-*Prop* $<$ 偏序 ==> 非自反 $forall(x in A) { not (x < x) }$ _Proof_ 如果 $x < x$, 那么无环被破坏
+*Prop* $<$ 偏序 ==> 非自反 $forall(x in A) { not (x < x) }$, 即一个量不会 "小于" 它自身. _Proof_ 如果 $x < x$, 那么无环被破坏
 
 注意: "非自反" (nonreflexive) 不是 not 自反 (not reflexive)
 
-*Prop* $<$ 偏序 ==> ($x < y ==> x != y$) _Proof_ 如果 $x = y$ 那么就有 $x < x$
+*Prop* $<$ 偏序 ==> ($x < y ==> x != y$) _Proof_ 如果 $x = y$ 那么就有 $x < x$, 矛盾于偏序的非自反
 
 *Def* 
 - $"lte_from"(<)(a, b) := (a < b) or (a = b)$
@@ -36,27 +36,30 @@ $n$ 元关系类似
 _Proof_
 #indent[
   $
-    "lt_from"("lte_from"(<))(a, b) &= ((x < y) or (x = y)) and x != y \
+    "lt_from"("lte_from"(<))(x, y) &= ((x < y) or (x = y)) and x != y \
     &= ((x < y) and (x != y)) or ((x = y) and (x != y)) \
     &= (x < y) and (x != y)
   $
-  但是偏序 $<$ ==> $(x < y) ==> (x != y)$, 所以
+  但是偏序 $<$ 满足 $(x < y) ==> (x != y)$, 所以
   $
     (x < y) and (x != y) = (x < y)
   $
+  所以 $"lt_from"("lte_from"(<))(x, y) = (x < y)$
 ]
 
 *Prop* 假设 $<=$ 偏序, 则 $"lte_from"("lt_from"(<=)) = (<=)$
 _Proof_
 #indent[
   $
-    "lte_from"("lt_from"(<=))(a, b) &= ((x <= y) and (x != y)) or x = y \
+    "lte_from"("lt_from"(<=))(x, y) &= ((x <= y) and (x != y)) or x = y \
     &= ((x <= y) or (x = y)) and ((x = y) or (x != y)) \
     &= (x <= y) or (x = y)
   $
-  但是偏序 $<=$ ==> $(x <= y) or (x = y) <==> (x <= y)$ 
+  但是偏序 $<=$ 满足 $(x <= y) or (x = y) <==> (x <= y)$ 
 
   _Proof_ <== 显然. 对于 ==>, 假设 $(x <= y) or (x = y)$. 如果 $x = y$ 则由于 $x <= x$, 有 $x <= y$. 如果 $x != y$ 那么 $x <= y$
+
+  于是 $"lte_from"("lt_from"(<=))(x, y) = (x <= y)$
 ]
 *Prop* (证明不需要 $<, <=$ 的偏序性质)
 - $"lte_from"(<)$ 是自反的 
@@ -77,7 +80,7 @@ _Proof_
     image modified from wiki media about partial order
   - $ℕ,ℤ,ℚ,ℝ$ 的 $<,<=$
   - 树图
-#tag("order-comparable") $a,a' ∈ A$ comparable := $(a <= a') or (a' <= a)$
+#tag("order-comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
 
 #tag("comparable-component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
 
