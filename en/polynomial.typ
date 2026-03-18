@@ -17,8 +17,6 @@ $
 $
 Polynomial function representation is not affine invariant, i.e. switching the base point $x ⇝ x + Δ = y$ will result in a polynomial function representation of the same order but with different coefficients. Scaling $v ⇝ λ v$ is also the case
 
-
-
 #tag("change-base-point-polynomial") Switch base point $x ⇝ x + Δ = y$
 $
   f(x + v) &= a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \

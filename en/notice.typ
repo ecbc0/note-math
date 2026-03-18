@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#link("../item/notice.html")[中文] | #link("../item_en/notice_en.html")[English]
+#link("../zh/notice.html")[中文] | #link("../en/notice_en.html")[English]
 
 English ver. are machine translation from LLM without check
 

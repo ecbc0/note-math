@@ -268,15 +268,12 @@ But note that at this time
 
 #image("../image/hyperbolic-to-space-bijective.png", width: 50%)
 
-"Fortunately", the "continuity of coordinate distance" in $ℝ^(p,q)$, i.e., the product distance of $ℝ_+^p × ℝ_-^q$, implies the "continuity of quadratic form distance" in $ℝ^(p,q)$, because $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$, and further implies differentiability/analyticity.
+$ℝ^(p,q)$'s "continuity of coordinate distance", i.e., $ℝ_+^p × ℝ_-^q$ product distance, is finer than $ℝ^(p,q)$'s "continuity of quadratic form distance", because $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$
 
-Conversely, in the case of non-Euclidean geometry, continuity of the quadratic form distance does not imply continuity of the coordinate distance.
-
-When dealing with objects in Minkowski space $ℝ^(1,n)$, many useful functions are also "continuous or analytic with respect to spacetime coordinate distance", i.e., continuous or analytic under the product distance $ℝ_+ × ℝ_-^3$ in one coordinate.
-
-When dealing with differentiability/analyticity, since dividing by $0$ may be encountered in the direction of the light cone in the domain or codomain, those points are generally considered to be differentiable/analytic.
-
-However, there may exist useful functions that are continuous/analytic under the quadratic form distance but not continuous/not analytic under the spacetime coordinate distance.
+Denote the coordinate distance continuity structure as $C$, and the quadratic form distance continuity structure as $Q$
+- When the domain continuity structure $A$ is the same, continuity of functions with codomain $C$ implies continuity of functions with codomain $Q$, $"continuous"(A -> C) ==> "continuous"(A -> Q)$
+- When the codomain continuity structure $A$ is the same, continuity of functions with domain $Q$ implies continuity of functions with domain $C$, $"continuous"(Q -> A) ==> "continuous"(C -> A)$
+- There is no comparison relation between $"continuous"(C -> C)$ and $"continuous"(Q -> Q)$
 
 Possible clue for the rationality of the $p, q$ quadratic form distance: $ℝ^(p, q)$, via the $(1, 1)$ tensor $ℝ^(p,q)^⊺ ⊗ ℝ^(p,q)$ as a linear map space, inherits a tensor quadratic form. When restricted to $so(p,q)$, it becomes proportional to the Killing form quadratic form of $so(p, q)$ #link(<Killing-form-of-orthogonal-group>)[]. Signature $(p q, binom(p,2) + binom(q, 2))$, where $p q$ is the number of boosts, $binom(p,2)$ are time-like rotations, and $binom(q,2)$ are space-like rotations. Under the Killing form, boosts have positive distance, while time/space rotations both have negative distance.
 
@@ -402,9 +399,9 @@ In the projection coordinates of the future base point, the coordinates of the p
 
 $ℝ^(1,1)$ is special, so the future coordinates in the figure above are disconnected. However, when the spatial dimension is $> 1$, the future coordinates should be connected
 
-For the space-like hyperboloid, use space-like base points to define the hyperbolic projection. The projection coordinate chart is a Minkowski space of one lower dimension
+It should be possible to generalizable to $p,q$ quadratic forms. The case of $-1$ distance is the case of $+1$ distance for $q,p$.
 
-Perform a 3D plot for the case of $ℝ^(1,2)$, drawing the light cone of the base point (note that the light cone is "vertical")
+$ℝ^(1,2)$ space-like hyperboloid, the projective coordinate chart is a Minkowski space of one lower dimension. Perform 3D plotting, draw the light cone of the base point (note that the light cone is "vertical").
 
 #image("../image/stereographic-projective-hyperbolic-space-like.png", width: 50%)
 

@@ -268,15 +268,12 @@ Euclidean 空间的极限或连续是直接用开球 $𝔹(r) = { ⟨ x ⟩^2 < 
 
 #image("../image/hyperbolic-to-space-bijective.png", width: 50%)
 
-"幸运" 的是, $ℝ^(p,q)$ 的 "坐标距离的连续", 即 $ℝ_+^p × ℝ_-^q$ product 距离, 蕴含了 $ℝ^(p,q)$ 的 "二次型距离的连续", 因为 $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$, 进而也有可微/解析的蕴含 
+$ℝ^(p,q)$ 的 "坐标距离的连续", 即 $ℝ_+^p × ℝ_-^q$ product 距离, 更细于, $ℝ^(p,q)$ 的 "二次型距离的连续", 因为 $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$
 
-反过来, 在 non Euclidean 的情况下, 二次型距离的连续无法蕴含坐标距离的连续
-
-在处理 Minkowski 空间 $ℝ^(1,n)$ 的东西时, 很多有用的函数也是 "时空坐标距离的连续或解析", 即在一个坐标下的 $ℝ_+ × ℝ_-^3$ product 距离下的连续或解析
-
-在处理可微/解析时, 由于在定义域或值域光锥方向上会遇到除以 $0$ 的问题, 大概在那些地方都当作是可微/解析的
-
-但是有可能存在有用的函数, 在二次型距离下连续/解析, 但在时空坐标距离下不连续/不解析
+记坐标距离连续结构为 $C$, 二次型距离连续结构为 $Q$
+- 在定义域连续结构 $A$ 相同的情况下, 值域 $C$ 的函数连续蕴含值域 $Q$ 的函数连续, $"continuous"(A -> C) ==> "continuous"(A -> Q)$
+- 在值域连续结构 $A$ 相同的情况下, 定义域 $Q$ 的函数连续蕴含定义域 $C$ 的函数连续,  $"continuous"(Q -> A) ==> "continuous"(C -> A)$
+- $"continuous"(C -> C), "continuous"(Q -> Q)$ 之间没有比较关系 
 
 $p, q$ 二次型距离合理性的可能线索: $ℝ^(p, q)$ 通过 $(1, 1)$ 张量 $ℝ^(p,q)^⊺ ⊗ ℝ^(p,q)$ 作为线性映射空间, 继承的张量二次型, 再限制在 $so(p,q)$ 时, 将会成比例于 $so(p, q)$ 的 Killing form 二次型 #link(<Killing-form-of-orthogonal-group>)[]. signature $(p q, binom(p,2) + binom(q, 2))$, 其中 $p q$ 是 boost 的数量, $binom(p,2)$ 是 time-like 旋转, $binom(q,2)$ 是 space-like 旋转. 在 Killing form 下, boost 是正距离的, time/space 旋转都是负距离的 
 
@@ -402,9 +399,9 @@ $ℍ𝕪^n (space)$ *alias* de Sitter space
 
 $ℝ^(1,1)$ 是特殊的, 因此上图的 future 坐标是不连通的. 但是空间维数 $> 1$ 时 future 坐标应该连通
 
-space-like 双曲面, 用 space-like 基点来定义双曲投影, 投影坐标卡是低一维的 Minkowski 空间
+应该可以推广到 $p,q$ 二次型. $-1$ 距离的情况就是 $q,p$ 的 $+1$ 距离的情况
 
-对 $ℝ^(1,2)$ 的情况进行 3d 作图, 画出基点的光锥 (注意是光锥是 "纵向" 的) 
+$ℝ^(1,2)$ space-like 双曲面, 投影坐标卡是低一维的 Minkowski 空间. 进行 3d 作图, 画出基点的光锥 (注意是光锥是 "纵向" 的) 
 
 #image("../image/stereographic-projective-hyperbolic-space-like.png", width: 50%)
 
