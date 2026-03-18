@@ -97,12 +97,36 @@ $#i^(-1) = - #i$ or $- #i^2 = 1$ or $#i^2 = -1$
 
 Complex conjugation preserves distance but reverses direction $(|z| e^(#i t))^* = |z| e^(- #i t)$ or $(x + #i y)^* = x - #i y$
 
-Similarly, hyperbolic $ℝ^(1,1)$ and split complex $ℂ_"split"$
+Similarly, hyperbolic $ℝ^(1,1)$ and split complex $ℂ_"split", #i-split ^2 = 1$
 
 - $exp(Im(ℂ))$ give $#U (1,ℂ) ≃ 𝕊^1 ≃ SO(2)$
 
-- $exp(Im(ℂ_"split"))$ give $#U (1,ℂ_"split") ≃ ℍ𝕪^1 ≃ SO(1,1)$
+- $exph(Im(ℂ_"split"))$ give $#U (1,ℂ_"split") ≃ ℍ𝕪^1 ≃ SO(1,1)$
 
+The definitions of $cosh, sinh, ϕ$ are analogous to those of trigonometric functions and angles in $ℝ^2$. Restricting $ℝ^(1,1)$ to $ℍ𝕪$ yields a Euclidean-type metric manifold (Riemannian manifold). Starting from $(1,0)$, moving along a geodesic by $ϕ$ yields $(cosh(ϕ), sinh(ϕ))$, and projecting onto the $t, x$ axes gives the hyperbolic cosine and hyperbolic sine $cosh(ϕ), sinh(ϕ)$.
+
+Connected to split-complex $ℂ_"split"$ via $SO(1,1), #U (1, ℂ_"split"), ℍ𝕪$.
+$
+  mat(cosh(ϕ), -sinh(ϕ); sinh(ϕ), cosh(ϕ)) &= sum_(n = 0..∞) 1/n! mat(,1;1)^n ϕ^n \
+  &≃ sum_(n = 0..∞) 1/n! (#i-split ϕ)^n = exph(#i-split ϕ) \
+  &= cosh ϕ + #i-split sinh ϕ
+$
+$v = |v| exph(ϕ #i-split)$. Distance can also be expressed in $ℂ_"split"$. $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$.
+
+#tag("hyperbolic-exp-inverse")
+#indent[
+  $exph ((ϕ + ψ)#i-split) = exph(ϕ #i-split) exph(ψ #i-split)$
+
+  $ϕ ⇝ sinh ϕ = 1/2 (e^ϕ - e^(-ϕ))$ is monotonically increasing.
+
+  Solving the quadratic equation $x = 1/2 (e^ϕ - 1/e^ϕ) <==> (e^ϕ)^2 - 2 x e^ϕ - 1$ yields the inverse mapping.
+
+  $ϕ = sinh^(-1)(x) = log (x^2 + (x^2 + 1)^(1/2))$
+
+  inverse $argh : ℍ𝕪 -> ℝ$
+
+  $argh(t + x #i-split) = log (x^2 + (x^2 + 1)^(1/2))$
+]
 *Question* Generalize to quaternions $ℍ$ and octonions $𝕆$ and their split versions
 
 Conversely, if we accept the concept that angles are additive (homomorphism), then it provides motivation for: the Euclidean norm of $ℝ^2$ being $sqrt(x_1^2 + x_2^2)$ and not some other norm. (Norm is defined as $|λ x| = |λ| |x|$.)

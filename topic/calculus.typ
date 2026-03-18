@@ -8,7 +8,6 @@ Euclidean-space
 Minkowski-spaces
 polynomial
 analytic-Euclidean
-analytic-Minkowski
 analytic-struct-operation
 ordinary-differential-equation
 volume

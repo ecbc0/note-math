@@ -97,12 +97,36 @@ $#i^(-1) = - #i$ or $- #i^2 = 1$ or $#i^2 = -1$
 
 复共轭就是距离不变但方向逆 $(|z| e^(#i t))^* = |z| e^(- #i t)$ or $(x + #i y)^* = x - #i y$
 
-类似地, $ℝ^(1,1)$ 双曲和 split complex $ℂ_"split"$
+类似地, $ℝ^(1,1)$ 双曲和 split complex $ℂ_"split", #i-split ^2 = 1$
 
 - $exp(Im(ℂ))$ give $#U (1,ℂ) ≃ 𝕊^1 ≃ SO(2)$
 
-- $exp(Im(ℂ_"split"))$ give $#U (1,ℂ_"split") ≃ ℍ𝕪^1 ≃ SO(1,1)$
+- $exph(Im(ℂ_"split"))$ give $#U (1,ℂ_"split") ≃ ℍ𝕪^1 ≃ SO(1,1)$
 
+$cosh, sinh, ϕ$ 的定义类似于 $ℝ^2$ 三角函数和角度的定义. 将 $ℝ^(1,1)$ 限制在 $ℍ𝕪$ 得到 Euclidean 型 metric 流形 (Riemannian manifold). 从 $(1,0)$ 出发的测地线行走 $ϕ$ 得到 $(cosh(ϕ), sinh(ϕ))$, 投影到 $t, x$ 轴得到双曲余弦和双曲正弦 $cosh(ϕ), sinh(ϕ)$
+
+通过 $SO(1,1), #U (1, ℂ_"split"), ℍ𝕪$ 联系到 split-complex $ℂ_"split"$
+$
+  mat(cosh(ϕ), -sinh(ϕ); sinh(ϕ), cosh(ϕ)) &= sum_(n = 0..∞) 1/n! mat(,1;1)^n ϕ^n \
+  &≃ sum_(n = 0..∞) 1/n! (#i-split ϕ)^n = exph(#i-split ϕ) \
+  &= cosh ϕ + #i-split sinh ϕ
+$
+$v = |v| exph(ϕ #i-split)$. 距离也可以 $ℂ_"split"$ 表示. $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$
+
+#tag("hyperbolic-exp-inverse")
+#indent[
+  $exph ((ϕ + ψ)#i-split) = exph(ϕ #i-split) exph(ψ #i-split)$
+
+  $ϕ ⇝ sinh ϕ = 1/2 (e^ϕ - e^(-ϕ))$ 单调递增
+  
+  解二次方程 $x = 1/2 (e^ϕ - 1/e^ϕ) <==> (e^ϕ)^2 - 2 x e^ϕ - 1$ 得到逆映射
+
+  $ϕ = sinh^(-1)(x) = log (x^2 + (x^2 + 1)^(1/2))$ 
+
+  inverse $argh : ℍ𝕪 -> ℝ$
+  
+  $argh(t + x #i-split) = log (x^2 + (x^2 + 1)^(1/2))$
+]
 *Question* 推广到四元数 $ℍ$ 和八元数 $𝕆$ 及其 split 版本
 
 反过来, 如果我们承认角度可加 (同态) 这种概念, 那么就会提供动机之于: $ℝ^2$ 的 Euclidean norm 是 $sqrt(x_1^2 + x_2^2)$ 而不是别的 norm. (norm 定义为 $|λ x| = |λ| |x|$.)
