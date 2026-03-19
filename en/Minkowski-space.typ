@@ -270,6 +270,8 @@ But note that at this time
 
 $ℝ^(p,q)$'s "continuity of coordinate distance", i.e., $ℝ_+^p × ℝ_-^q$ product distance, is finer than $ℝ^(p,q)$'s "continuity of quadratic form distance", because $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$
 
+But this does not implies continuity structure of function
+
 Denote the coordinate distance continuity structure as $C$, and the quadratic form distance continuity structure as $Q$
 - When the domain continuity structure $A$ is the same, continuity of functions with codomain $C$ implies continuity of functions with codomain $Q$, $"continuous"(A -> C) ==> "continuous"(A -> Q)$
 - When the codomain continuity structure $A$ is the same, continuity of functions with domain $Q$ implies continuity of functions with domain $C$, $"continuous"(Q -> A) ==> "continuous"(C -> A)$
