@@ -113,7 +113,7 @@ $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
 通常记 $x(t) = (exp t v)(x_0), x(0) = x_0$
 
-证明技术见 #link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 其中, 幂级数的收敛半径估计使用了特殊上界控制方法, 类似 #link(<inverse-analytic>)[] 中所作的
+证明技术见 #link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], 其中, 幂级数的收敛半径估计使用了特殊上界控制方法, 类似 #link(<inverse-analytic>)[] 中所作的. 或者, 在解析函数空间的拓扑中, 用复合和反演算子的连续性, 用逆函数定理
 
 $F(x_0, x) = (c x_0)/(x_0 - x)$, $(#d x)/(#d t) = F(x_0, x)$ ==> $x(t, x_0) = x_0 - (x_0^2 - 2 c t x_0)^(1/2)$
 

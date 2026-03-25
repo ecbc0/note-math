@@ -277,6 +277,8 @@ $ℝ^(p,q)$ 的 "坐标距离的连续", 即 $ℝ_+^p × ℝ_-^q$ product 距离
 - 在值域连续结构 $A$ 相同的情况下, 定义域 $Q$ 的函数连续蕴含定义域 $C$ 的函数连续,  $"continuous"(Q -> A) ==> "continuous"(C -> A)$
 - $"continuous"(C -> C), "continuous"(Q -> Q)$ 之间没有比较关系 
 
+$"continuous"(Q -> Q)$ 大概会将光锥映射到光锥. 据说 Zeeman 证明了, 空间维数大于 $1$ 的 Minkowski 时空中保持光锥且保持任意光锥两点之间的时间先后顺序的双射同构群 二次型旋转 + 平移 + 伸缩 生成
+
 $p, q$ 二次型距离合理性的可能线索: $ℝ^(p, q)$ 通过 $(1, 1)$ 张量 $ℝ^(p,q)^⊺ ⊗ ℝ^(p,q)$ 作为线性映射空间, 继承的张量二次型, 再限制在 $so(p,q)$ 时, 将会成比例于 $so(p, q)$ 的 Killing form 二次型 #link(<Killing-form-of-orthogonal-group>)[]. signature $(p q, binom(p,2) + binom(q, 2))$, 其中 $p q$ 是 boost 的数量, $binom(p,2)$ 是 time-like 旋转, $binom(q,2)$ 是 space-like 旋转. 在 Killing form 下, boost 是正距离的, time/space 旋转都是负距离的 
 
 $ℝ^(1,1)$ 的类时区域 $"time-like"(1,1) = { (t,x) in ℝ^(1,1) : t^2 - x^2 > 0 }$. 它可以分解为距离空间部分 $ℝ(>= 0)$ 和方向空间部分 $ℍ𝕪 = { (t,x) in ℝ^(1,1) : t^2 - x^2 = 1 }$

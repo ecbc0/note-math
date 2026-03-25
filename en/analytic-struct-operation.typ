@@ -25,7 +25,7 @@
 
     $c_1 = a_1 b_0 + a_0 b_1$
 
-    Restore $1/n!$ in differentiation, $sum a_n v^n ∼ sum 1/(n!) #d^n f (x) (v^n)$
+    Restore $1/n!$ factor in differentiation, $sum a_n v^n ∼ sum 1/(n!) #d^n f (x) (v^n)$
 
     ==> #tag("Leibniz-law-1d")
     
@@ -76,17 +76,32 @@
 
     in particular, $(1/x)' = - 1/(x^2)$
   ]
-  radius of convergence
+  radius of convergence (of $B_m$)
   #indent[
+    choose $R$ so that $1/(|A_0|) sum_(n=1)^∞ |A_n| (1/R)^n <= 1$
+
+    try inductive proof $m >= 1 ==> |B_m| <= R^m |B_0|$, correspond to radius of convergence $>= R$
+
+    first calculate $A_1$
+
+    $1/(|A_0|) |A_1| 1/R &<= 1/(|A_0|) sum_(n=1)^∞ |A_n| (1/R)^n \
+    &<= 1$
+
+    then calculate $B_1$
+
+    $|B_1| &<= 1/(|A_0|) |A_1| |B_0| \
+    &<= |B_0| R $
+
+    this give the start of induction
+
     try inductive proof $|B_m| <= R^m$
 
     $|A_0| |B_m| 
     &<= sum_(n=1)^m |A_n| |B_(m-n)| \ 
-    &<= sum_(n=1)^m |A_n| R^(m-n) quad ("by induction" B_1 ,…, B_(m-1)) \
-    &= R^m sum_(n=1)^m |A_n| (1/R)^n \
-    &<= R^m sum_(n=1)^∞ |A_n| (1/R)^n$
-
-    To complete induction, use $R$ with $1/(|A_0|) sum_(n=1)^∞ |A_n| (1/R)^n <= 1$
+    &<= sum_(n=1)^m |A_n| R^(m-n) |B_0| quad ("by induction" B_1 ,…, B_(m-1)) \
+    &= R^m |B_0| sum_(n=1)^m |A_n| (1/R)^n \
+    &<= R^m |B_0| sum_(n=1)^∞ |A_n| (1/R)^n \
+    &= R^m |B_0|$
   ]
 ]
 #tag("compose-op-analytic")
@@ -97,7 +112,7 @@
     
     with $a_0 = f(y) = f(g(x)) = f(b_0)$
 
-    $f(g(x+v)) ∘ 
+    $f(g(x+v)) 
     &= f(b_0 + sum_(m=1)^∞ b_m v^m) \
     &= a_0 + sum_(n=1)^∞ a_n (sum_(m=1)^∞ b_m v^m)^n \
     &= c_0 + sum_(l=1)^∞ c_l v^l$
@@ -111,7 +126,7 @@
     $(b_1 v + ⋯ + b_l v^l)^k 
     = sum_(i_1 + ⋯ + i_l = k) binom(k,i_1,...,i_l) b_1^(i_1) ⋯ b_l^(i_l)$ (cf. #link(<multi-combination>)[])
 
-    ==> 
+    ==> (Faà di Bruno formula)
     $ 
       c_l v^l = 
       sum_(k = 1 ,…, l) 
@@ -155,12 +170,22 @@
       
       Get $(l!)/((1!)^(i_1) ⋅ i_1 ! ⋯ (l!)^(i_l) ⋅ i_l !)$ 
       (this is _not_ $(l!)/((1 ⋅ i_1)! ⋯ (l ⋅ i_l)!) = binom(l , 1 ⋅ i_1 ,…, l ⋅ i_l)$)
+
+      Faà di Bruno formula
       $
         #d^l (f ∘ g) = 
         sum_(k = 1 ,…, l) 
         sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
         (l!)/((1!)^(i_1) ⋅ i_1 ! ⋯ (l!)^(i_l) ⋅ i_l !) 
         #d^k f (#d^1 g) ^(i_1) ⋯ (#d^l g)^(i_l)
+      $
+      or
+      $
+        #d^l (f ∘ g) = 
+        sum_(k = 1 ,…, l) 
+        sum_(i_1 ,…, i_l in ℕ \ i_1 + ⋯ + i_l = k \ 1 ⋅ i_1 + ⋯ + l ⋅ i_l = l)
+        (l!)/(i_1 ! ⋯ i_l !) 
+        #d^k f (1/1! #d^1 g) ^(i_1) ⋯ (1/l! #d^l g)^(i_l)
       $
     ]
   ]

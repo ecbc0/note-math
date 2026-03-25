@@ -387,6 +387,10 @@
 		"prefix": "supset-not-equal",
 		"body": "⊋"
 	},
+	"⋐":{
+	  "prefix": "subset-compact",
+	  "body": "⋐"
+	},
 	"∖": {
 		"prefix": "without",
 		"body": "∖"

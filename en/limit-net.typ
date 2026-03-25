@@ -17,6 +17,10 @@ $#B$ a net of $A$ := $#B ⊆ Subset(A)$ (a collection of subset of $A$) with pro
   - $forall B_1 ,…, B_n ∈ #B, exists B ∈ #B, B ⊆ B_1 ∩ ⋯ ∩ B_n$ 
   - (Meaning: Non-empty before converging to the limit. If the number of $#B$ elements is infinite, then the finite intersection controls the direction of convergence, although possibly $∅ = ⋂ #B$. If $#B = {B_1 ,…, B_n}$ has a finite number of elements, then $∅ != B_1 ∩ ⋯ ∩ B_n ∈ #B$)
 ]
+If a collection of sets have property that all finite intersection is non empty (net bases), then we can get a net by supplementing with all finite intersections
+
+For a collection of sets, we can define all maximal sub collection of sets that having the property that that all finite intersection is non empty
+
 *Example* $X = ℕ$, under $X(<=) := ℕ(>=)$ is a net. Or use a set net $#B = {n,n+1, ⋯}_(n = 0 .. ∞)$
 
 Point net or net containing point $x in X$ $#B (x) := forall B in #B (x), x in B$

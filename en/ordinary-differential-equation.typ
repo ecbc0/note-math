@@ -113,7 +113,7 @@ $ (#d)/(#d t) (exp t v) (x) = v((exp t v) (x)) $
 
 Usually denoted as $x(t) = (exp t v)(x_0), x(0) = x_0$
 
-For proof techniques, see #link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], where the convergence radius of the power series is estimated using a special upper bound control method, similar to what was done in #link(<inverse-analytic>)[]
+For proof techniques, see #link("https://en.wikipedia.org/wiki/Cauchy-Kovalevskaya_theorem")[wiki:Cauchy-Kovalevskaya_theorem], where the convergence radius of the power series is estimated using a special upper bound control method, similar to what was done in #link(<inverse-analytic>)[]. Or, in the topology of analytic function space, use the continuity of operator $f ∘ g$ and $f^(-1)$, use inverse function theorem
 
 $F(x_0, x) = (c x_0)/(x_0 - x)$, $(#d x)/(#d t) = F(x_0, x)$ ==> $x(t, x_0) = x_0 - (x_0^2 - 2 c t x_0)^(1/2)$
 
