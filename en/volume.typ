@@ -1,146 +1,108 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("affine-combination") 
-#indent[
-  Affine combination
-  $
-    sum_(0 .. N) t_i ⋅ x_i \
-    t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 1
-  $
-  
-  is a well-defined affine point, or rather the coordinate definition does not depend on the choice of origin. Let the coordinates of $x_i$ be $v_i$. Change the origin $v_i' = v_i + Δ$
-  $
-    sum t_i (v_i + Δ) = (sum t_i v_i) + (sum t_i) Δ = (sum t_i v_i) + Δ
-  $
-  Regarding intuition, the simplest example is the proportional point of a straight line between two points #image("../image/affine-combination-1.jpeg", width: 30%)
+#tag("parallelogram") Due to symmetry, a parallelepiped can be described by the convex hull of $2n$ points, simplified to an $n$-point description. After selecting an origin,
 
-  Can be iteratively or decomposed e.g. triangle $t_1 x_1 + t_2 x_2 + t_3 x_3 <--> s_1 (t_1 x_1 + t_2 x_2) + s_2 x_3$. And the decomposition operation is commutative. And it can be decomposed into multiple $>= 1$ order
-
-  #image("../image/affine-combination-2.png", width: 30%)
-]
-#tag("affine-coordinate") $t_i$ can be considered as a coordinate based on the point $x_i$. Affine coordinates. *alias* Barycentric coordinates #tag("barycentric-coordinate")
-
-#tag("affine-independent") 
-#indent[
-  Affine independence := $x_k$ cannot be expressed as $sum_(i = 0 .. N without k) t_i x_i$
-
-  Affine independence corresponds to the linear independence of $x_i - x_0$ after selecting one point e.g. $x_0$ as the origin
-
-  If it is affine independent, then the vertices correspond to $t_k = 1 and t_(1 ,…, N without k) = 0$
-
-  An $n$-dimensional affine space has at most $n+1$ affine independent points
-
-  For the coordinates of $n+1$ affine independent points of an $n$-dimensional affine space $V$, $t_0 ,…, t_n$ have a one-to-one correspondence with the affine points of $V$
-
-  If $t_0 ,…, t_N in ℝ, sum_(0 .. N) t_i = 0$, although the coordinate $sum t_i v_i$ will not change due to changing the origin, it is not an affine point
-]
-#tag("affine-map-point-ver") *alias* #tag("simplicial-map")
- Let $y_1 ,…, y_n$ be points in another affine space. The affine mapping is determined by $f(x_i) = y_i$, and the situation of other points can be obtained by generating them through affine homomorphism
-$
-  sum t_i x_i ⇝ sum t_i y_i
-$
-#tag("center-of-affine-point-set") The center point of $sum_(0 .. N) t_i = 1$ is $t_1 = ⋯ = t_n = 1/N$ 
-
-#tag("convex-hull") := extra $0 <= t_i <= 1$
-
-#tag("simplex") := convex hull formed by affinely independent points
-
-#image("../image/simplex.png", width: 70%)
-
-#tag("parallelogram") Due to symmetry, the description of parallelepiped can be simplified from the convex hull of $2n$ points to the description of $n$ points, after selecting the origin 
-
-$ t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1 $
+$t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, without requiring $t_1 + ⋯ + t_n = 1$
 
 #image("../image/parallelogram.png", width: 25%)
 
 #tag("parallelogram-simplex-correspond")
 #indent[
-  A parallelepiped can be $⨆$ decomposed into $n!$ simplexes that are equivalent under translation and reflection (p. 587 of @ref-3)
+  A parallelepiped can be decomposed into $n!$ translation- and reflection-equivalent simplices (p. 587 of @ref-3)
 
   #image("../image/shear-transformation.png", width: 30%)
 
-  The $n$ permutations of points $v_1 ,…, v_n$
+  A decomposed simplex corresponds to choosing a permutation $i(1) ,…, i(n)$ of $1 ,…, n$:
   $
     t_(i(1)) v_(i(1)) + ⋯ + t_(i(n)) v_(i(n)) \ 
     0 <= t_(i(n)) <= ⋯ <= t_(i(1)) <= 1
   $
-  Corresponding simplex 
+  The vertices of the corresponding simplex are:
   $
-    s_0 0 + s_1 v_(i(1)) + (s_2 v_(i(1)) + v_(i(2))) + ⋯ + s_n (v_(i(1)) + ⋯ + v_(i(n))) \ 
+    0 \
+    v_(i(1)) \
+    v_(i(1)) + v_(i(2)) \
+    ... \
+    v_(i(1)) + ⋯ + v_(i(n))
+  $
+  The affine combination representation is:
+  $
+    s_0 0 + s_1 v_(i(1)) + s_2(v_(i(1)) + v_(i(2))) + ⋯ + s_n (v_(i(1)) + ⋯ + v_(i(n))) \ 
     sum_(i=0..n) s_i = 1, 0 <= s_i <= 1
   $
-  with
+  Comparing the coefficients of $v_i$, the relationship between parallelepiped coordinates and affine coordinates is:
   $
-    v_(i(n)) &= s_n \
-    v_(i(n-1)) &= s_n + s_(n-1)\
-    &⋮ \
-    v_(i(1)) &= s_n + s_(n-1) + ⋯ + s_1
+    t_(i(n)) &= s_n \
+    t_(i(n-1)) &= s_n + s_(n-1) \
+    &... \
+    t_(i(1)) &= s_n + s_(n-1) + ⋯ + s_1 \
+    1 &= s_n + s_(n-1) + ⋯ + s_1 + s_0
   $
-  Conversely, a simplex also gives many parallelepipeds with it as one of the $n!$ simplex blocks
+  Conversely, a simplex also gives many parallelepipeds for which it serves as one of the $n!$ simplex pieces. For example, the relationship between a triangle and a quadrilateral. In general, selecting one vertex of a simplex allows establishing a coordinate system and constructing a parallelepiped.
   
-  The structural strength given by these two things is about the same
+  Therefore, the structural strength provided by a simplex and a parallelepiped is roughly equivalent.
 ]
-#tag("volume-of-parallelogram") Volume assumption for $ℝ^n$
-- Translation invariant
-- Reflection invariant (unsigned volume)
-- Finite $⨆$ (disjoint in the sense of zero measure) -> finite volume $sum$ 
-- If $v_1 ,…, v_n$ are not linearly independent, then in the lower-dimensional subspace, so the $n$-order volume is defined as zero
+#tag("volume-of-parallelogram") For volume in $ℝ^n$, assume:
+- Translation invariance
+- Reflection invariance (unsigned volume)
+- Finite decomposition of sets $⨆$ (disjoint in the sense of zero measure) -> finite summation of volumes $sum$
+- If $v_1 ,…, v_n$ are not linearly independent, then they and their affine/linear combinations lie in a lower-dimensional subspace, hence the $n$-dimensional volume is defined as zero.
  
 #tag("volume-of-simplex") is $1/n!$ of volume-of-parallelogram
 
-#tag("shear-transformation") After decomposing the parallelepiped into simplexes, cut and translate to form a new parallelepiped with the same volume. Called shear transformation. e.g. $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$
+#tag("shear-transformation") After decomposing a parallelepiped into $n!$ simplices, select one simplex, cut, translate, and form a new parallelepiped with the same volume. This is called a shear transformation. E.g., $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$. As shown below:
 
 #image("../image/shear-transformation.png", width: 30%)
 
 (image from p.587 of @ref-3)
 
-Even though what we defined is the volume of a parallelepiped, the shear transformation shows that the concept of the volume of a simplex is still used simultaneously, verifying once again the close connection between simplexes and parallelepipeds
+If we want to consider the change in volume of a parallelepiped under a linear transformation, we usually consider decomposing the linear transformation into multiple "elementary linear transformations", and elementary transformations include shear transformations.
 
-Shear transformation volume invariance is algebraically e.g. $(v_1 + v_2) ∧ v_2 ∧ ⋯ ∧ v_n = v_1 ∧ v_2 ∧ ⋯ ∧ v_n$ or $det mat(
+Even if we define the volume of a parallelepiped, the shear transformation indicates that this still utilizes the concept of simplex volume, again verifying the close relationship between simplex and parallelepiped.
+
+Algebraically, the volume invariance under shear transformation is, e.g., $(v_1 + v_2) ∧ v_2 ∧ ⋯ ∧ v_n = v_1 ∧ v_2 ∧ ⋯ ∧ v_n$ or $det mat(
   1, 1;
   , 1;
   ,, ⋱;
   ,,,, 1
 ) = 1$
 
-Scaling of edges $ℕ,ℤ,ℚ,ℝ$. e.g. $forall a in ℝ, Vol(a v_1, v_2 ,…, v_n) = a Vol(v_1, v_2 ,…, v_n)$
+Scaling of edges by $ℕ,ℤ,ℚ,ℝ$. E.g., $forall a in ℝ, Vol(a v_1, v_2 ,…, v_n) = a Vol(v_1, v_2 ,…, v_n)$
 
-The stretching and shearing of parallelepipeds corresponds to the decomposition of $GL(n,ℝ)$ into elementary linear transformations, which is also used in Gaussian elimination (although they can be used for $m × n$ matrices)
+Scaling and shearing of a parallelepiped correspond to the decomposition of $GL(n,ℝ)$ into elementary linear transformations, which are also used in Gaussian elimination, although they can also be applied to $m × n$ matrices.
 
-#tag("volume-determinant") The volume change of parallelepiped $v_1 ,…, v_n$ is $A ∈ GL(n,ℝ), Vol(A v_1 ,…, A_n v_n) = det A Vol(v_1 ,…, v_n)$
+#tag("volume-determinant") For volume change under $A ∈ GL(n,ℝ)$: $Vol(A v_1 ,…, A_n v_n) = det A Vol(v_1 ,…, v_n)$
 
-Choose a basis $e_1 ,…, e_n$ of $ℝ^n$, the volume of the parallelepiped generated by it is $1$, and the volume of other parallelepipeds $A e_1 ,…, A e_n$ is $det A$
+Choose a basis $e_1 ,…, e_n$ of $ℝ^n$, define the volume of the parallelepiped they generate as $1$, then the volume of another parallelepiped $A e_1 ,…, A e_n$ is $det A$.
 
-This is the oriented volume. $v_1 ∧ v_2 ∧ ⋯ ∧ v_n = - v_2 ∧ v_1 ∧ ⋯ ∧ v_n$ The set of parallelepipeds remains the same, so the absolute volume remains the same, but the directions of $v_1,v_2 ,…, v_n$ and $v_2,v_1 ,…, v_n$ are opposite
+This is oriented volume. $v_1 ∧ v_2 ∧ ⋯ ∧ v_n = - v_2 ∧ v_1 ∧ ⋯ ∧ v_n$; the set of the parallelepiped does not change, so the absolute volume does not change, but $v_1,v_2 ,…, v_n$ and $v_2,v_1 ,…, v_n$ have opposite orientations.
 
-Oriented volume = Unoriented volume + Direction factor
+Oriented volume = unsigned volume + orientation factor.
 
-$v_1 ,…, v_n$ linearly dependent ==> in a lower-dimensional subspace ==> zero volume. At this time, $A in GL$ can be extended to $A in Lin$, and zero volume algebraically corresponds to $A ∉ GL <==> det(A) = 0$
+$v_1 ,…, v_n$ linearly dependent ==> lie in a lower-dimensional subspace ==> zero volume. Here we can extend $A in GL$ to $A in Lin$, and zero volume corresponds algebraically to $A in Lin ∖ GL <==> det(A) = 0$.
 
-For $ℝ^n$'s $k$-th order parallelepiped and simplex
+Map the parallelepiped $v_1 ,…, v_n$ to the decomposable element $v_1 ∧ ⋯ ∧ v_n = det(v_1 ,…, v_n)$ of the $n$-th alternating tensor $(ℝ^n)^(∧ n)$ of $ℝ^n$.
 
-Map the parallelepiped to $ℝ^n$'s $k$-th order alternating tensor $(ℝ^n)^(∧ k)$'s decomposable element $v_1 ∧ ⋯ ∧ v_k$
+$v_1 ∧ ⋯ ∧ v_n$ is an $n$-fold tensor, its $n$-fold linearity comes from the linearity of scaling the lengths of the $n$ edges of the parallelepiped.
 
-The $n$-multilinearity of tensors comes from the linearity of volume $n$ and side length scaling
+Why can volume, a positive number, correspond to the $n$-alternating tensor $det$ which can be negative?
 
-Why is it that the concept of volume is clearly positive, yet the $n$-alternating tensor $det$ can be negative?
+The negativity arises from extending edge scaling from $ℝ_(> 0)$ (only +1 direction) to $ℝ$ (including the $-1$ direction), as a fully linear operation.
 
-Side length scaling can be extended to the $-1$ direction as a form of total linearity
+Any linear transformation can be decomposed into scaling and shearing. Shearing does not change volume, so the $-1$ effect must come from scaling, including transformations like "swapping the order of basis vectors", e.g., $v_1 ∧ v_2 ∧ ⋯ ∧ v_n = - v_2 ∧ v_1 ∧ ⋯ ∧ v_n$. However, this is not intuitively obvious.
 
-Any linear transformation can be decomposed into scaling and shearing. Shearing doesn't change volume, so the $-1$ effect must be brought by scaling, including transformations like "swapping the order of bases," though it's not intuitively simple
+*Example* The two-dimensional case, easily generalizable to any two vectors in $n$ dimensions:
+- Shear $mat(1, 1;, 1) vec(x, y) = vec(x + y, y)$ does not change volume.
+- Shear $mat(1; -1, 1) vec(x + y, y) = vec(x + y, -x)$.
+- Shear $mat(1, 1;, 1) vec(x + y, -x) = (y, -x)$.
+- $-1$ scaling $(y, -x) ⇝ (y, x)$ makes the volume $-1$.
 
-*Example* A 2D example, but easily generalized to any two vectors in $n$ dimensions
-- Shearing $mat(1, 1;, 1) vec(x, y) = vec(x + y, y)$ does not change volume
-- Shearing $mat(-1; -1, 1) vec(x + y, y) = vec(x + y, -y)$
-- Shearing $mat(1, 1;, 1) vec(x + y, -y) = (y, -x)$
-- $-1$ scaling $(y, -x) ⇝ (y, x)$ makes the volume $-1$
+In fact, if you completely discard the concept of negative volume, you can say volume is positive multilinear alternating, a positive determinant, similar to the treatment of integration of densities on manifolds.
 
-Actually, you could totally say it's positive multilinear alternating, positive determinant, just like the treatment of integrating densities on manifolds
+#tag("try-to-define-volume-of-low-dim") Consider a $k$-subspace as a manifold; for example, choose a $k$-basis to establish a coordinate system on it, then it has its own volume. However, $ℝ^n$ has many $k$-subspaces. If we only need to consider one $k$-subspace or $k$-submanifold, the problem ends here. But we want to define volume for all $k$-subspaces simultaneously, and for each $k$-subspace, choose a $k$-basis to establish a coordinate system to define the $k$-volume of that $k$-subspace. What is a good choice?
 
-#tag("try-to-define-volume-of-low-dim") Actually, we don't need "volume invariance", we only need the volume to transform in a desirable way, that is, transform in terms of form. We don't need to define the volume of the k-th subspace of $ℝ^n$ using the $n$ form of $ℝ^n$, because as long as we consider the k-th subspaces as manifolds (for example, by choosing a k-th basis to establish a coordinate system), they have their own volumes. Metric volume form is a good method to define the volume using a special family of coordinate systems in all $k$ subspaces at one time, where the metric length of $e_1 ∧ ⋯ ∧ e_k$ is also $1$, thus coinciding with the volume of $e_1 ∧ ⋯ ∧ e_k$ being $1$. For non-positive definite metric volume forms, there are some k-th subspaces where the metric length of $e_1 ∧ ⋯ ∧ e_k$ is zero, not coinciding with the volume of $e_1 ∧ ⋯ ∧ e_k$ being $1$. Anyway, the following discussion may still be useful, so it is kept.
-
-How to define low-dimensional volume? Consider two methods. Similar to linear form vs quadratic form. The first is like defining $vec(v_1,v_2)$ as $v_1 + v_2$ or $|v_1 + v_2|$, the second is similar to defining $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$
+Consider two methods. Similar to linear form vs quadratic form. The first is like defining $v_1 + v_2$ or $|v_1 + v_2|$ for $vec(v_1,v_2)$; the second is like defining $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$. The two definitions of volume coincide for $k = n$.
 
 #let base-alt = $e_(i_1) ∧ ⋯ ∧ e_(i_k)$
 #let index-alt = $i_1 < ⋯ < i_k$
@@ -150,68 +112,78 @@ How to define low-dimensional volume? Consider two methods. Similar to linear fo
   v _1^(i_k) , ⋯ , v _k^(i_k)
 )$
 
-1. A basis of $ℝ^n$ gives a basis of the alternating tensor space $#base-alt, #index-alt$ 
+1. A basis $e_1 ,…, e_n$ of $ℝ^n$ gives a basis of the alternating tensor space: $#base-alt, 1 <= #index-alt <= n$ 
 #indent[
-  Use it to define volume: For each $k$, a special alternating $k$ multilinear function or $k$ form of $ℝ^n$ $Vol_(n,k)$, defined as $Vol_(n,k) (#base-alt) = 1$, forall $#index-alt$
+  Use this to define volume: for each $1 <= k <= n$, the volume $Vol_(n,k)$ is a $k$-form on $ℝ^n$ satisfying $Vol_(n,k) (#base-alt) = 1$, forall $#index-alt$.
 
-  So for a general parallelepiped $v_1 ∧ ⋯ ∧ v_k = (v_1^(i_1) e_(i_1)) ∧ ⋯ ∧ (v_k^(i_k) e_(i_k)) = sum_(#index-alt) #coefficent-alt #base-alt$ the volume is 
+  For a general parallelepiped $v_1 ∧ ⋯ ∧ v_k = (v_1^(i_1) e_(i_1)) ∧ ⋯ ∧ (v_k^(i_k) e_(i_k)) = sum_(#index-alt) #coefficent-alt #base-alt$, the volume is:
   $
     Vol(v_1 ∧ ⋯ ∧ v_k) &:= sum_(#index-alt) #coefficent-alt \
     "or " &:= abs(sum_(#index-alt) #coefficent-alt)
   $
-  The volume of a nonzero decomposable alternating tensor can be zero, $A = mat(1,0;-1,1) in GL(2,ℝ)$ such that $Vol(2,1)(A e_1) = 1 - 1 = 0$. The shear transformation of order $n$ does not hold for order $k$
-
-  *Question* A special basis is selected, so what other bases have the same result? or what is the linear subgroup that keeps the volume unchanged? 
+  Under this volume definition, the volume of a non-zero decomposable alternating tensor may be zero. Consider the $ℝ^2$ case: $A = mat(1,0;-1,1) in GL(2,ℝ)$ gives $A e_1 = mat(1,0;-1,1) vec(1,0) = vec(1,-1)$. $A e_1$ is a $1$-st order decomposable alternating tensor of $ℝ^2$. $Vol_(2,1)(A e_1) = Vol_(2,1)(e_1 - e_2) = 1 - 1 = 0$.
   
-  $SL(n,ℝ)$ does not preserve $k < n$ dimensional volume. e.g. $mat(1/2;,2)$ or $mat(-1;,-1)$ does not preserve $1$ dimensional volume
+  Under this volume definition, as shown by $A in GL(2,ℝ)$ above, the property of shear transformation preserving volume for $n$-dimensional volume in $ℝ^n$ does not hold for $k < n$ dimensional volumes in $ℝ^n$.
 
-  matrix $A$ that preserves all order volumes $A = mat( 
+  *Question* A specific basis $e_1 ,…, e_n$ is chosen. Which other bases yield the same result? Or, what is the linear subgroup that preserves all first-order volumes?
+  
+  $SL(n,ℝ)$ does not preserve $k < n$ dimensional volumes. E.g., $mat(1/2;,2)$ or $mat(-1;,-1)$ does not preserve the $1$-dimensional volume of the $e_1$ subspace.
+
+  $A = mat(
     a^1_1, ⋯, a^1_n;
     ⋮,,⋮;
     a^n_1, ⋯, a^n_n
-  ) in GL(n,ℝ)$ satisfies, for $k = 1 ,…, n$ for $#index-alt$, $Vol_(n,k)(A e_(i_1) ∧ ⋯ ∧ A e_(i_k)) = 1$, or $sum_(j_1 < ⋯ < j_k) det mat(
+  ) in GL(n,ℝ)$ that preserves volumes of all orders satisfies, for $k = 1 ,…, n$ for $#index-alt$, $Vol_(n,k)(A e_(i_1) ∧ ⋯ ∧ A e_(i_k)) = 1$, or $sum_(j_1 < ⋯ < j_k) det mat(
     a^(j_1)_(i_1), ⋯, a^(j_i)_(i_k);
     ⋮,,⋮;
     a^(j_k)_(i_1), ⋯, a^(j_k)_(i_k)
-  ) = 1$
+  ) = 1$.
 
-  *Example* $Vol_(n,1)(A e_i) = a^1_i + ⋯ + a^n_i$ (sum of elements in the $i$ th column). The $n-1$ and $1$ cases are similar, i.e. $a^i_j$ corresponds to the remaining sub式 
+  *Example* $Vol_(n,1)(A e_i) = a^1_i + ⋯ + a^n_i$ (sum of entries of the $i$-th column of the $A in GL(n,ℝ)$ matrix). The cases for $n-1$ and $1$ are similar, i.e., the $a^i_j$ in $Vol_(n,1)$ correspond to the cofactors of $a^i_j$ in $Vol_(n,n-1)$.
   
-  (The cofactor is used in the $1,n-1$ alternating tensor decomposition representation of $det$, which can be generalized to the $k,n-k$ alternating tensor decomposition representation or Laplace expansion of $det$)
+  The cofactor is the determinant of the matrix obtained from $A$ by deleting the $i$-th row and $j$-th column, or is used in the decomposition representation of $det$ as an $n$-alternating tensor into $1, n-1$ alternating tensors. Cofactors can be generalized to the $k, n-k$ alternating tensor decomposition representation of $det$ or the Laplace expansion of the determinant.
 
-  *Example* $Vol_(2,1)(A e_i) = a^1_i + a^2_i$
+  *Example* $Vol_(2,1)(A e_i) = a^1_i + a^2_i$.
   
-  matrix $A$ preserves all $ℝ^2$ volumes $A = mat(
+  For $ℝ^2$, the $A = mat(
     a^1_1, a^1_2;
     a^2_1, a^2_2
-  )$ satisfies
+  )$ preserving all volumes satisfies:
   $
-    a^1_1 a^2_2 - a^2_1 a^1_2 &= 1 \
-    a^1_1 + a^2_1 &= 1 \
+    a^1_1 a^2_2 - a^2_1 a^1_2 &= 1 space && (2^"nd" "order volume") \
+    a^1_1 + a^2_1 &= 1 && (1^"st" "order volume") \
     a^1_2 + a^2_2 &= 1
   $
-  a coordinate representation of the solution
+  A coordinate representation of the solution set of this system is:
   $
     x &in ℝ \
     a^1_1 &= 1 - x \
     a^2_1 &= x \
     a^1_2 &= -x \
     a^2_2 &= 1 + x \
-    A &= mat(1-x,-x;x,1+x)
+    A &= mat(1-x,-x;x,1+x) = mat(1;,1) + mat(-x,-x;x,x)
   $
-  is an affine line of $gl(2,ℝ)$ passing through $𝟙 = mat(1;,1)$. $SO(2)$ or $SO(1,1)$ is not its subset
+  which is an affine line in $gl(2,ℝ)$ passing through $𝟙 = mat(1;,1)$. $SO(2)$ or $SO(1,1)$ is not a subset thereof.
 ]
-2. Select a non-degenerate quadratic form
+2. Choose a non-degenerate quadratic form.
 #indent[
-  #link(<tensor-induced-quadratic-form>)[Derive] the quadratic form of the alternating space $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$. Undirected volume $|det ⟨ v_i , v_j ⟩|^(1/2)$ or $abs(det mat(
+  #link(<tensor-induced-quadratic-form>)[Induces] a quadratic form on the alternating space: $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$.
+  
+  The unsigned volume is defined as the square root of the absolute value: $|det ⟨ v_i , v_j ⟩|^(1/2)$ or $abs(det mat(
     ⟨ v_1 , v_1 ⟩, ⋯, ⟨ v_1 , v_n ⟩;
     ⋮,,⋮;
     ⟨ v_n , v_1 ⟩, ⋯, ⟨ v_n , v_n ⟩
-    ))^(1/2)$. According to the orthonormal basis and its coefficients $v_1 ∧ ⋯ ∧ v_k = sum_(#index-alt) det mat(
+    ))^(1/2)$.
+    
+  Choose an orthonormal basis $e_1 ,…, e_n$.
+  
+  $v_1 ∧ ⋯ ∧ v_k = sum_(#index-alt) det mat(
     v_1^(i_1) , ⋯ , v_k^(i_1) ;
     ⋮,,⋮;
     v_1^(i_k) , ⋯ , v_k^(i_k)
-  ) e_(i_1) ∧ ⋯ ∧ e_(i_k)$, write it as a standard quadratic form
+  ) e_(i_1) ∧ ⋯ ∧ e_(i_k)$.
+  
+  The quadratic form:
   $
     ⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2 &= sum_(#index-alt) (det mat(
       v_1^(i_1) , ⋯ , v_k^(i_1) ;
@@ -224,52 +196,60 @@ How to define low-dimensional volume? Consider two methods. Similar to linear fo
       v_1^(i_k) , ⋯ , v_k^(i_k)
     ))^2 ⟨ e_(i_1) ∧ ⋯ ∧ e_(i_k) ⟩^2)^(1/2)
   $
-  $⟨ v_1 ∧ ⋯ ∧ v_n ⟩^2 = 0$ <==> volume is zero
+  $⟨ v_1 ∧ ⋯ ∧ v_n ⟩^2 = 0$ <==> zero volume.
   
-  In the non-Euclidean case, light-like will have an impact
+  In the non-Euclidean case, light-likeness has an effect.
 
-  Different signature volume definitions will be different for the same set of order $k < n$
+  Different signatures yield different volume definitions for the same set of order $k < n$.
 ]
-The two volume definitions coincide for $k = n$
+#tag("convex-hull-decomposition") A convex hull can be decomposed into simplices in this way:
+- The vertices of the simplices belong to the vertices of the convex hull.
+- The interiors of the simplices are disjoint.
+- The union of the simplices is the convex hull.
 
-#tag("convex-hull-decomposition") convex hull optimal decomposition to simplex, the method is not unique. Troublesome combinatorial problem
+The decomposition is not unique.
 
 *Example* 
 
-$ℝ^2$ 's $4$ points
+Four points in $ℝ^2$:
 
 #image("../image/convex-hull-decomposition-1.png", width: 40%)
 
-$ℝ^2$ 's $5$ points. First select $2$ simplex, that is, select $3$ vertices
-
-#image("../image/convex-hull-decomposition-2.png", width: 80%)
-
-Find out which simplex combinations are decompositions of the convex hull
+Five points in $ℝ^2$:
 
 #image("../image/convex-hull-decomposition-3.png", width: 50%)
 
-The intersection of convex hulls is a convex hull
+*Prop* A convex hull can be decomposed into simplices.
+
+_Proof_
+#indent[
+  Based on the figures above, a proof can be sketched as follows:
+
+  Induct on dimension. Take a vertex $x_i$.
+  
+  Classify the boundary facets into:
+  - those containing $x_i$
+  - those not containing $x_i$
+
+  $H$ can be decomposed into cones formed by $x_i$ and the boundary facets $F_i$ not containing $x_i$.
+
+  Each $F_i$ is a convex hull of one lower dimension and can be decomposed into $n - 1$-dimensional simplices.
+
+  These simplices together with $x_i$ form $n$-dimensional simplices.
+
+  The convex hull is decomposed into these simplices.
+]
+The intersection of convex hulls is a convex hull.
 
 *Example* #image("../image/simplex-intersection.png", width: 60%)
 
-The reduced set of a simplex may not be a convex hull. But it can still be decomposed into simplex 
+The set difference of simplices may not be a convex hull. But it can still be decomposed into simplices.
 
 *Example* #image("../image/simplex-substraction.png", width: 20%)
 
-#tag("polyhedra") Polyhedron :=
-#indent[
-  #image("../image/polyhedra.png", width: 40%)
-  n simplex finite union with
+#tag("polyhedra") Polyhedron := finite union of n-simplices. Countable generalization -> countable polyhedron.
 
-  - internally disjoint
-  - transitively connected between two n simplex
-  - the transitive boundary is n-1 simplex
-
-  The dimension of the transitive boundary is to give the polyhedron the best connectivity
-]
-#tag("low-dim-polyhedra") Low-dimensional sub-polyhedra. As a submanifold-like setting? i.e. Adjacent simplexes with $k-1$ boundaries in $ℝ^k$ dimension have only two -> piecewise embedded in $ℝ^n$. Otherwise, consider the example of a three-connected boundary #image("../image/tri-intersect-boundary.png", width: 40%)
-
-Countable generalization -> Countable polyhedron
+#image("../image/polyhedra.png", width: 30%)
 
 #tag("Lebesgue-measurable") 
 #indent[

@@ -62,7 +62,7 @@ _Proof_
 ]
 #tag("linear-fractional")  
 #indent[
-  $GL(2,ℂ)$ 作用在 $ℂ^2$, $vec(z,w) ⇝ mat(a,b;c,d) vec(z,w) = vec(a z + b w , c z + d w)$, 使用 $ℂ$ 乘法逆将其限制于 $ℂℙ^1$, in coordinate 1 $#c_1$
+  $GL(2,ℂ)$ 作用在 $ℂ^2$, $vec(z,w) ⇝ mat(a,b;c,d) vec(z,w) = vec(a z + b w , c z + d w)$, 随着 $ℂ^2$ 的射影化导出到 $ℂℙ^1$ (使用 $ℂ$ 乘法逆), in coordinate 1 $#c_1$
   $ 
     ℂℙ^1 ,⟶, ℂℙ^1 \
     z/w ,⟿, (a z + b w)/(c z + d w) = (a z/w + b)/(c z/w + d) 

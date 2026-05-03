@@ -268,7 +268,7 @@ But note that at this time
 
 #image("../image/hyperbolic-to-space-bijective.png", width: 50%)
 
-$ℝ^(p,q)$'s "continuity of coordinate distance", i.e., $ℝ_+^p × ℝ_-^q$ product distance, is finer than $ℝ^(p,q)$'s "continuity of quadratic form distance", because $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$
+$ℝ^(p,q)$'s "continuity of coordinate distance", i.e., $ℝ_+^p × ℝ_-^q$ product distance, is finer than $ℝ^(p,q)$'s "continuity of quadratic form distance", because $|x_+^2 - x_-^2| <= x_+^2 + x_-^2$. Continuity of non Euclidean quadratic form distance does not implies continuity of coordinate distance
 
 But this does not implies continuity structure of function
 

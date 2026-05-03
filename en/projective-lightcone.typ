@@ -62,7 +62,7 @@ _Proof_
 ]
 #tag("linear-fractional")  
 #indent[
-  $GL(2,ℂ)$ acts on $ℂ^2$, $vec(z,w) ⇝ mat(a,b;c,d) vec(z,w) = vec(a z + b w , c z + d w)$, use the multiplicative inverse of $ℂ$ to restrict it to $ℂℙ^1$, in coordinate 1 $#c_1$
+  The action of $GL(2,ℂ)$ on $ℂ^2$, $vec(z,w) ⇝ mat(a,b;c,d) vec(z,w) = vec(a z + b w , c z + d w)$, can be induced to $ℂℙ^1$ following the projectivization of $ℂ^2$, in coordinate 1 $#c_1$
   $ 
     ℂℙ^1 ,⟶, ℂℙ^1 \
     z/w ,⟿, (a z + b w)/(c z + d w) = (a z/w + b)/(c z/w + d) 

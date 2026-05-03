@@ -152,3 +152,14 @@
   author: 
     - Lawrence C. Evans
     - Ronald F. Gariepy
+
+#tag("ref-34"):\
+  title: Convex Sets\
+  author: Frederick A. Valentine
+
+#tag("ref-35"):\
+  title: Aspects of Convex Geometry, Polyhedra, Linear Programming, Shellings, Voronoi Diagrams, Delaunay Triangulations\
+  author: 
+    - Jean Gallier 
+    - Jocelyn Quaintance
+  url: http://www.cis.upenn.edu/~jean/gbooks/convexpoly.html
