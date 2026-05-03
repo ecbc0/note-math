@@ -10,6 +10,7 @@ polynomial
 analytic-Euclidean
 analytic-struct-operation
 ordinary-differential-equation
+convex-hull
 volume
 integral
 divergence

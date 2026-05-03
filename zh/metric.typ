@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("quadratic-form") $ℝ^n$ 二次型 *alias* #tag("metric") 度规 *alias* 内积 #tag("inner-product")
+#tag("quadratic_form") $ℝ^n$ 二次型 *alias* #tag("metric") 度规 *alias* 内积 #tag("inner_product")
 #indent[
   *Example* $ℝ^2,ℝ^3$ 距离 $vec(x,y,z) ⇝ x^2 + y^2 + z^2$
 
@@ -13,17 +13,17 @@
 
   坐标下 metric $g$ 可以表示为矩阵 $G$ 和矩阵乘法 $(X,Y) ⇝ X^⊺ G Y$
 
-  #tag("signature-inertia") signature $(p,q)$ 在 $GL(n,ℝ)$ 下不变. 对称矩阵 $G$ 的特征值和对角化 $mat(1; , 0; ,, -1)$ 其中 $n_+$ 个 $1$, $n_0$ 个 $0$, $n_-$ 个 $-1$. 
+  #tag("signature_inertia") signature $(p,q)$ 在 $GL(n,ℝ)$ 下不变. 对称矩阵 $G$ 的特征值和对角化 $mat(1; , 0; ,, -1)$ 其中 $n_+$ 个 $1$, $n_0$ 个 $0$, $n_-$ 个 $-1$. 
   
   不同 signature 可以理解为 $GL(n)$ 群作用在二次型空间的 orbit 的分类
 
-  #tag("quadratic-form-non-degenerated") 非退化 := signature 中 $N_0 = 0$
+  #tag("quadratic_form_non_degenerated") 非退化 := signature 中 $N_0 = 0$
 
   退化的二次型可以限制在 $n_+ + n_-$ 子空间中得到非退化
 
   以下等价
   - metric 非退化
-  - #tag("quadratic-form-dual") 是双射 *alias* #tag("musical-isomorphism") 
+  - #tag("quadratic_form_dual") 是双射 *alias* #tag("musical_isomorphism") 
     $
       map(V, Lin(V -> ℝ) "or" V^⊺, v, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" ♭(v))
     $
@@ -46,7 +46,7 @@ $
   &= α_j
 $
 
-#tag("rasing-and-lowring-index") 升降指标
+#tag("rasing_and_lowring_index") 升降指标
 #indent[
   quadratic-form-dual 在坐标中的矩阵表示
   $
@@ -107,7 +107,7 @@ $
   &= (v_1^(i_1) ⋯ v_k^(i_k)) e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)
 $
 
-#tag("tensor-induced-quadratic-form") 
+#tag("tensor_induced_quadratic_form") 
 #indent[
   将向量空间的二次型 $g$ 导出到张量空间 $V^(⊗ I) ⊗ V^(⊺ ⊗ J)$ 的二次型  
   $
@@ -120,7 +120,7 @@ $
   $
   得到 signature
 ]
-#tag("rasing-and-lowring-index-tensor") 张量也可以 metric dual 升降指标
+#tag("rasing_and_lowring_index_tensor") 张量也可以 metric dual 升降指标
 
 *Example* 降指标 $T^i_j ⇝ g_(i i') T^i'_j = T_(i j)$
 
@@ -268,7 +268,7 @@ $
 
 _Proof_ $so(p,q) = { A^⊺ η + η A = 0 }$ and $η^(-1) = η$
 
-*Prop* #tag("Killing-form-of-orthogonal-group") $A, B in so(p,q) ==> ⟨ A,B ⟩_(V ⊗ V^⊺) = - tr(A B)$ (Killing form of $so(p,q)$ up to a constant)
+*Prop* #tag("Killing_form_of_orthogonal_group") $A, B in so(p,q) ==> ⟨ A,B ⟩_(V ⊗ V^⊺) = - tr(A B)$ (Killing form of $so(p,q)$ up to a constant)
 
 _Proof_ 根据 $η^2 = 1$
 $

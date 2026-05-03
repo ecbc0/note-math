@@ -1,0 +1,153 @@
+#import "../module/module.typ": *
+#show: module
+
+#tag("action_point_particle_relativity") 作用量 $ integral #d l (m c) = integral #d τ (m c|vel(x)|)  $ 结果是测地线
+
+使用时空 $ℝ^(1,3)$ 的 metric volume form $#d Vol = |det g|^(1/2) #d x$ 限制在一维路径, 得到长度 $#d l$, 使用的是二次型的平方根, 而不是单纯的二次型 
+
+对于路径, 在 "时间坐标" $x^0(t) = c t$, let $v = (#d)/(#d t) x."space"$. 作用量
+
+$ #d l = m c^2 (1 - (v/c)^2)^(1/2) #d t $
+
+#tag("equation_point_particle_relativity") let $L(x,v) = m c^2 (1 - (v/c)^2)^(1/2)$. 类似 #link(<point_particle_Lagrange_equation>)[非相对论的情况], 作用量的方程 
+$ 
+  (∂ L)/(∂ x) - (#d)/(#d t) (∂ L)/(∂ v) 
+  
+  <==> (#d)/(#d t) (m c^2 v)/((1 - (v/c)^2)^(1/2)) = 0 
+$
+#tag("point_particle_relativity_approximate_to_non_relativity") 相对论作用量 "近似" 到非相对论作用量 
+$
+  m c^2 (1 - (v/c)^2)^(1/2) = m c^2 - 1/2 m v^2 + O(v/c)^2
+$
+然后常值 $m c^2$ 将会变分到零 $0$
+
+这种非相对论近似极限的方式是坐标依赖的. 在弯曲流形上, 由于可能需要多个坐标覆盖整个流形, 非相对论近似极限的的定义问题会更困难
+
+对称与守恒量
+
+$ℝ^(1,3)$ 时空的对称群是 isometry $SO(1,3) ⋊ ℝ^(1,3)$ *alias* Poincare 群
+
+- 平移
+#indent[
+  使用时间坐标. 类似于非相对论的情况, #link(<energy_point_particle_non_relativity>)[能量] 和 #link(<momentum_point_particle_non_relativity>)[动量] 的相对论版本是 #tag("energy_momentum_point_particle_relativity")
+  $
+    E &= (∂ f)/(∂ v) ⋅ v - f 
+    &quad quad p &= (∂ f)/(∂ v) \
+
+    E  &= (m c^2)/((1 - (v/c)^2)^(1/2)) 
+    &quad quad p &= (m v)/((1 - (v/c)^2)^(1/2)) 
+  $
+  记为 4-动量 
+  $
+    m c vel(x) = (m (c,v))/((1 - (v/c)^2)^(1/2)) = vec(E/c,p) 
+  $
+]
+相对论 Lagrangian $|vel(x)|$ 在 $SO(1,3)$ 下 invariant, 但 boost 仍然改变路径的时间和空间的端点 i.e. 改变作用量 $integral #d τ (m c|vel(x)|)$
+
+- 旋转
+#indent[
+  类似于非相对论的情况, #link(<rotation_momentum_point_particle_non_relativity>)[momentum-point-particle-non-relativity] 的相对论版本是 #tag("rotation_momentum_point_particle_relativity")
+  $
+    x × p = (x × m v)/((1 - (v/c)^2)^(1/2))
+  $
+]
+- boost
+#indent[
+  boost by #link(<hyperbolic_angle>)[双曲角度]
+  $
+    exph θ #i-split = mat(
+      cosh θ, sinh θ; 
+      sinh θ, cosh θ
+    )
+  $
+  所以 δ boost by 双曲角度, 是
+  $
+    θ #i-split = mat(
+      ,θ;
+      θ
+    )
+  $
+  在 $ℝ^(1,3)$ 的一个坐标中, let 空间向量 $n ∈ ℝ^3$, $|n| = θ$, 对应 δ boost, 定义双曲 cross product $n × vec(c t,x) = vec(c t + n ⋅ x, x + c t n)$
+
+  类似于能量的情况, boost 也改变作用量
+  
+  boost 动量的计算结果中会出现 4-动量从而出现能量 $E$
+  
+  #tag("boost_momentum_point_particle_relativity")
+  $
+    vec(E/c,p) ⋅ (n × vec(c t,x)) 
+    
+    &= n ⋅ vec(E t - p ⋅ x, c t p - 1/c E x) \
+
+    "spatial-part" &= n ⋅ vec(c t p - 1/c E x) 
+  $
+  注意 $(1,3)$ 时空 metric 有负定的空间 metric
+
+  空间 $ℝ^3$ 向量
+  $
+    c t p - 1/c E x = (m c (t v - x))/((1 - (v/c)^2)^(1/2))
+  $
+  也是称为 boost 动量
+
+  由于使用了 $ℝ^(1,3)$ 坐标对时间和空间的分离, 尽管旋转动量和 boost 动量是 $SO(1,3)$ invariant 的, 但表示方式 $x × p$ 和 boost 动量 $E x - t p$ 不是 invariant 的
+
+  结合起来, 可以写为角动量 $L_(μ ν) = [x_μ, p_ν]$
+]
+粒子系统
+
+potential $U(|x|),sum_(i < i') U(x_i - x_i'),sum_(i < i') U(|x_i - x_i'|)$
+
+potential $A(x) (vel(x)) = A_0 (x) vel(x)^0 + ⋯ + A_3 (x) vel(x)^3$
+
+point particle in Lorentz-manifold 
+#indent[
+  对于作用量 $integral #d l$ 和守恒量, 需要用 metric-connection 和 δ-isometry
+]
+#let A = bf("A")
+#let j = bf("j")
+#let v = bf("v")
+
+*Example*
+
+$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+
+$
+  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+$
+- *Question* 
+#indent[  
+  隐藏的 $#U (1)$ 规范对称性
+
+  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+
+  尽管 invariant 的是方程而不是作用量
+  
+  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+
+  #tag("current_gauge_particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
+]
+#let A = bf("A")
+#let j = bf("j")
+#let v = bf("v")
+
+*Example*
+
+$ℝ^(1,3)$ 相对论点粒子和规范场的耦合. 作用量
+
+$
+  &quad integral #d τ (m c|vel(x)| + e/c ⋅ A(x) ⋅ vel(x) ) \
+  &= integral #d t (m c^2 (1 - (v/c)^2)^(1/2) + e (ϕ - #A ⋅ v))
+$
+- *Question* 
+#indent[  
+  隐藏的 $#U (1)$ 规范对称性
+
+  场相互作用中使用的规范变换 $e^(θ)$ 会导致联络的变换 $A = A' + #d θ$. 对于点粒子和电磁场的作用量, $#d θ$ 是散度量 $#d θ(x) ⋅ vel(x) = (#d)/(#d tau) θ(x(τ))$, 用边界是零, 得到变分是零
+
+  尽管 invariant 的是方程而不是作用量
+  
+  这不同于例如纯量场的情况是, 作用量也 invariant, 而方程的 invariant 通过协变导数的定义
+
+  #tag("current_gauge_particle") 这种隐藏的 $#U (1)$ 规范对称性是否能给出点粒子的守恒 4-电流? $(ρ,#j) = j = ρ (1,#v) = ρ v$ 
+]

@@ -21,7 +21,7 @@ Propositional Logic
 
   The hardware implementation of digital circuits is not handled here. I don't know the details either
 ]
-#tag("logic-operator") logical and, or, not
+#tag("logic_operator") logical and, or, not
 #indent[
   - And, $and$, `and`, logical conjunction
   - Or, $or$, `or`, logical disjunction
@@ -79,7 +79,7 @@ Propositional Logic
 
   (image from p.85 of @ref-1)
   #stack( dir: ltr,
-    image("../image/compute-function-input.png", width: 30%),
+    image("../image/compute_function_input.png", width: 30%),
     image("../image/decoder.png", width: 30%),
   )
   Consider the input ${0,1}^n$ and output ${0,1}^m$ of the ${0,1}^n -> {0,1}^m$ function separately
@@ -98,7 +98,7 @@ Propositional Logic
 
     *Example* `not xor` function. Connect the inputs $00, 11$ to the output `or` gate
 
-    #image("../image/compute-function-output.png", width: 40%)
+    #image("../image/compute_function_output.png", width: 40%)
 
     `xor` is called exclusive or, $⊕$. The truth table for this function
 
@@ -116,9 +116,9 @@ Propositional Logic
 
   If a full ${0,1}^n -> {0,1}^m$ function isn't needed, the circuit computing elements don't necessarily have to be built in this fixed way. They can be further simplified based on the situation to reduce the number of gates used. But we won't get into details here
 ]
-A symbolic representation for multiple input or output lines in a computing unit (p. 54 of @ref-1) (3 inputs 2 outputs) #image("../image/multi-lines-symbol.png", width: 30%)
+A symbolic representation for multiple input or output lines in a computing unit (p. 54 of @ref-1) (3 inputs 2 outputs) #image("../image/multi_lines_symbol.png", width: 30%)
 
-#tag("control-circuit") Control circuit, selector or multiplexer
+#tag("control_circuit") Control circuit, selector or multiplexer
 
   $S$ is the control circuit. Its function is
   - When $S = 0$, $D_0$ outputs to $Y$, $D_1$ doesn't output to $Y$
@@ -127,12 +127,12 @@ A symbolic representation for multiple input or output lines in a computing unit
   (p. 81--82 of @ref-1)
 
   #stack( dir: ltr,
-    image("../image/multiplexer-function.png", width: 25%),
-    image("../image/multiplexer-impl.png", width: 25%)
+    image("../image/multiplexer_function.png", width: 25%),
+    image("../image/multiplexer_impl.png", width: 25%)
   )
   $2^n$ inputs $D_0 ,…, D_(2^n - 1)$ need $n$ control circuits $S_0 ,…, S_(n - 1)$
 
-#tag("De-Morgan-law") negative dual 律 or De Morgan 律
+#tag("De_Morgan_law") negative dual law or De Morgan law
 
   $
     not (not A) &= A \
@@ -142,11 +142,11 @@ A symbolic representation for multiple input or output lines in a computing unit
 
   Prove by exhaustion, just like how humans counting is actually exhaustion. Same below
 
-#tag("boolean-algebra")
+#tag("boolean_algebra")
 #indent[
   bool algebra is denoted as ${0,1},+,*$ or ${0,1},or,and$
 
-  #tag("bool-distributive-law") Distributive Law
+  #tag("bool_distributive_law") Distributive Law
   #indent[
     $
       (A + B) * C &= A * C + B * C \
@@ -168,33 +168,33 @@ A symbolic representation for multiple input or output lines in a computing unit
 
     $ Or_(i=1..n) And_(j=1..m) A_(i j) = And_(j_1 ... j_n  =1 ... m) Or_(i=1..n) A_(i j(i)) $
   ]
-  #tag("bool-commutative-law") 交换律 $A + B = B + A$. same for $*$
+  #tag("bool_commutative_law") $A + B = B + A$. same for $*$
 
-  #tag("bool-associative-law") 结合律 $(A + B) + C = A + (B + C)$. same for $*$
+  #tag("bool_associative_law") $(A + B) + C = A + (B + C)$. same for $*$
 ]
-#tag("periodic-circuit") Periodic Circuit
+#tag("periodic_circuit") Periodic Circuit
 
-  #image("../image/periodic-circuit.jpeg", width: 60%)
+  #image("../image/periodic_circuit.jpeg", width: 60%)
 
   Implemented by crystal oscillators
 
-#tag("memory-circuit") Circuit Memory
+#tag("memory_circuit") Circuit Memory
 #indent[
-  Black box model #image("../image/memory-1.png", width: 60%)
+  Black box model #image("../image/memory_1.png", width: 60%)
 
-  Possible implementation #image("../image/memory-2.png", width: 70%)
+  Possible implementation #image("../image/memory_2.png", width: 70%)
 
   - The middle of the diagram uses a loop circuit to reuse the Bool value from the previous cycle. If write control is turned off, the values of $"read", overline("read")$ remain unchanged
   - Inverters (`not` gates) ensure current direction and prevent attenuation (via external energy)
   - Suppose the value of the yellow part in the loop circuit is $a$, and the blue part is $overline(a)$. To write $0$ into an existing $a = 1$, a higher write voltage than the one in the loop circuit is needed to override the loop, i.e. using higher voltage $overline("write") = 1$ thus $overline(a) = 1$ to override the existing $a = 1$
 
-  #tag("finite-machine") Finite State Machine
+  #tag("finite_machine") Finite State Machine
 
   #tag("i/o") The input of a circuit might come from the outside world (e.g. sensors, keyboards), and the output of a circuit might also go to the outside world (e.g. signal lights, screens)
 
   The rhythm of external inputs is usually inconsistent with the rhythm of the computer's internal periodic circuits, so the external inputs need to pass through synchronization components first
 ]
-#tag("memory-array") Memory array
+#tag("memory_array") Memory array
 #indent[
   *Example* $2^3$ is the number of steps taken when counting from 000, 001, 010 to 111, although this assumes we can recognize three bits. $2^n = underbrace(2 ⋯ 2 , n"-fold")$, $101 = 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 4 + 1 = 5$
 
@@ -208,9 +208,9 @@ A symbolic representation for multiple input or output lines in a computing unit
 
   (p. 265 of @ref-1)
 
-  #image("../image/memory-array.png", width: 30%)
+  #image("../image/memory_array.png", width: 30%)
 ]
-#tag("instruction") 指令
+#tag("instruction") 
 #indent[
   Control the computer to complete some circuit tasks through instructions. Instructions are also represented by binary (multi-bit data). The instruction stream is generated by the compiler based on the source code and stored in memory, then read and executed by the CPU
 
@@ -223,9 +223,9 @@ A symbolic representation for multiple input or output lines in a computing unit
 
   *Example* `add` instruction. `add x_1 x_2`. The bit data fields of the instruction are divided into three areas, representing different types of information
 
-  #image("../image/add-instruction.png", width: 70%)
+  #image("../image/add_instruction.png", width: 70%)
 
-  #image("../image/add-instruction-computer.png", width: 80%)
+  #image("../image/add_instruction_computer.png", width: 80%)
 
   + Reading the `add` instruction
     - The `add` instruction at `adress_0` (`add x_1 x_2` as well as `adress_1, adress 2` come from source code and compiler generation)
@@ -251,7 +251,7 @@ Instruction stream
       i = i + 1;
   } // result = 10
   ```
-  #image("../image/while-computer.png", width: 90%)
+  #image("../image/while_computer.png", width: 90%)
 
   + Fetch instruction
 

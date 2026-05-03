@@ -1,9 +1,9 @@
 #import "../module/module.typ": *
 #show: module
 
-#let T = o-color("T", rgb("#919191"))
+#let T = "T"
 
-*Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]
+*Example* #link(<interval>)[] #link(<best_interval_decomposition>)[]
 
 #tag("connected") 连通 or 极限连通 := 极限点集分解不再可能 or 闭集分解不再可能
 
@@ -25,9 +25,9 @@ _Proof_ 对分解取极限得到 $Or_(i in I) X = A_i$
 
 *Example* $ℝ$ 连通. $ℝ$ 存在连通和不连通集. 连通集可能不是 $#T _ ℝ$ 闭集
 
-#tag("real-connected-is-interval") $ℝ$ 的连通集就是区间 _Proof_ by 区间连通 + 最优区间分解 + 最优区间分解中区间数 $> 1$ 不连通
+#tag("real_connected_is_interval") $ℝ$ 的连通集就是区间 _Proof_ by 区间连通 + 最优区间分解 + 最优区间分解中区间数 $> 1$ 不连通
 
-#tag("connected-imply-closure-connected") $S$ 是连通集 ==> $closed(S)$ 是连通集
+#tag("connected_imply_closure_connected") $S$ 是连通集 ==> $closed(S)$ 是连通集
 
 _Proof_ 
 #indent[
@@ -41,7 +41,7 @@ _Proof_
 ]
 $closed(S)$ 不是连通集 ==> $S$ 不是连通集
 
-#tag("connected-componet") 连通分支分解 := 极限点集的分解的极限 $X = lim ⨆_(i in I) A_(i)$, 使得每个极限点集 $A_i$ 不可再分解 i.e. 连通
+#tag("connected_componet") 连通分支分解 := 极限点集的分解的极限 $X = lim ⨆_(i in I) A_(i)$, 使得每个极限点集 $A_i$ 不可再分解 i.e. 连通
 
 确实是 #link(<net>)[网] 意义上的唯一极限. 网来自 $X$ 的两个闭集分解可以取共同加细分解 + 闭集对有限交集封闭
 
@@ -57,13 +57,13 @@ _Proof_ $A$ 的点必定在 $X$ 从而在某个连通分支里
 
 有共同点 $x$ 的连通集 $S_i$ 的并集 $⋃_(i in I) S_i$ 连通
 #indent[
-  recall #link(<topology-subspace>)[子拓扑的继承性]. 所以连通也继承
+  recall #link(<topology_subspace>)[子拓扑的继承性]. 所以连通也继承
 
   所以只需要处理 $⋃_(i in I) S_i = X$ 的情况
 ]
 _Proof_ 包含 $x$ 的连通集都在同一个连通分支里面. 说明 $⋃_(i in I) S_i = X$ 只有一个连通分支, 从而连通
 
-连通分支是连通集族的 $⊆$ #link(<maximal-linear-order>)[极大线序] 的极大元
+连通分支是连通集族的 $⊆$ #link(<maximal_linear_order>)[极大线序] 的极大元
 
 连续函数的 image 传递连通
 
@@ -73,7 +73,7 @@ _Proof_ 包含 $x$ 的连通集都在同一个连通分支里面. 说明 $⋃_(i
 
 _Proof_ 闭集分解 $Y = A ⊔ A'$ ==> 闭集分解 $X = f^(-1)(A) ⊔ f^(-1)(A')$
 
-==> #tag("mean-value-theorem-continuous") 连续函数介值. 连续函数 $f : X -> ℝ$ 的像 $f(X)$ 连通 #link(<real-connected-is-interval>)[从而] 是区间
+==> #tag("mean_value_theorem_continuous") 连续函数介值. 连续函数 $f : X -> ℝ$ 的像 $f(X)$ 连通 #link(<real_connected_is_interval>)[从而] 是区间
 
 如果 $Y$ 任何两点都在某个连通子集 $S$ 中, 则 $Y$ 连通. _Proof_ let $Y = A ⊔ A'$ with $A,A'$ closed, 证明 $A or A' = ∅$. 或者 $Y = ⋃_(y in Y) S(y_0,y)$ and 有共同点 $y_0$ 的连通集 $S(y_0,y)$ 的并集是连通的
 
@@ -81,7 +81,7 @@ _Proof_ 闭集分解 $Y = A ⊔ A'$ ==> 闭集分解 $X = f^(-1)(A) ⊔ f^(-1)(A
 
 ==> 道路连通
 
-#tag("product-topology-preserve-connected") #link(<product-topology>)[积拓扑] 保持连通
+#tag("product_topology_preserve_connected") #link(<product_topology>)[积拓扑] 保持连通
 
 _Proof_
 #indent[
@@ -94,7 +94,7 @@ _Proof_
   $ 
   再次使用共同点方法, 十字形子集的并集 $C = ⋃_(j_1 ,…, j_n) C_(j_1 ,…, j_n)$ 组成了连通子集
   
-  $closed(C) = prod$ and #link(<connected-imply-closure-connected>)[] ==> $prod$ 连通
+  $closed(C) = prod$ and #link(<connected_imply_closure_connected>)[] ==> $prod$ 连通
 
   _Proof_ of $closed(C) = X$
   #indent[
@@ -113,14 +113,14 @@ $prod$ 的所有连通分支是
 
 $ product_(i in I) A_(i, j(i)) : j in product_(i in I) J(i) $
 
-_Proof_ 使用 #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and 连通的 product 连通, 所以 $product_(i in I) A_(i, j(i))$ 连通, 从而已经不能再分解
+_Proof_ 使用 #link(<dependent_distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and 连通的 product 连通, 所以 $product_(i in I) A_(i, j(i))$ 连通, 从而已经不能再分解
 
-定义 (how?) $f in C(X -> Y)$ 的拓扑或极限点之后 (should be something compact open topology? 参考 #link(<analytic-space>)[解析空间的 net 的定义])
+定义 (how?) $f in C(X -> Y)$ 的拓扑或极限点之后 (should be something compact open topology? 参考 #link(<analytic_space>)[解析空间的 net 的定义])
 
 #tag("homotopy") 同伦 or 极限点同伦 := $C(X -> Y)$ 是极限连通的
 
 *Example* $ℝ^(n+1) ∖ 0$ 同伦到 $𝕊^(n)$
 
-#tag("homotopy-class") := $C(X -> Y)$ 的连通分支
+#tag("homotopy_class") := $C(X -> Y)$ 的连通分支
 
 由于复合保持连续, 复合导出 $C(X -> Y)$ 上的运算. 证明是否良定义. 有时可逆, 使得是群运算

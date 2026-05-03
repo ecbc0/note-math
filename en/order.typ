@@ -76,23 +76,23 @@ _Proof_
 These propositions together prove the equivalence of $<, <=$ partial orders
 
 *Example*
-  - Subset "inclusion" $⊆$ or "inclusion and not equal to" $⊊$ is an order #image("../image/tree-diagram.svg", width: 70%)
+  - Subset "inclusion" $⊆$ or "inclusion and not equal to" $⊊$ is an order #image("../image/tree_diagram.svg", width: 70%)
     image modified from wiki media about partial order
   - $<,<=$ of $ℕ,ℤ,ℚ,ℝ$
   - Tree diagram
-#tag("order-comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
+#tag("order_comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
 
-#tag("comparable-component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
+#tag("comparable_component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
 
 Partial order can be decomposed into comparable-components that are not comparable to each other. Imagine two tree diagrams that have no relation
 
-#tag("linear-order") $A$ linear order
+#tag("linear_order") $A$ linear order
 #indent[
   $forall a,a' ∈ A, "comparable"(a,a')$
 
   Intuitively, a linear order has no branches, also called a "chain"
 ]
-#tag("maximal-linear-order") Maximal linear order chain
+#tag("maximal_linear_order") Maximal linear order chain
 #indent[
   let $B ⊆ A$ with $<$ linear order. $B$ is maximal-linear-order := the following definitions are equivalent
   - $forall a in A, (forall b in B, "comparable"(a,b) ==> a in B)$
@@ -105,10 +105,10 @@ Partial order can be decomposed into comparable-components that are not comparab
 
   The extension of chain $B$ means there exists $a in A$ and $a ∉ B$, such that for every $b in B$, $"comparable"(a, b)$. After extension, $B ∪ {a}$ is also a chain
 ]
-#tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists
+#tag("maximal_linear_order_exists") maximal-linear-order chain alaways exists
 #indent[
   Also known as the Zorn Lemma
 
-  Requires #link(<axiom-of-choice>)[Axiom of Choice]: If it can be proven that some sets (of a certain type) have elements with a certain property, then a function can be defined that maps these sets to the corresponding elements.
+  Requires #link(<axiom_of_choice>)[Axiom of Choice]: If it can be proven that some sets (of a certain type) have elements with a certain property, then a function can be defined that maps these sets to the corresponding elements.
 ]
-_Proof_ `zorn_lemma.ac` in my github repo `ac-math` #link(<ref-30>)[]
+_Proof_ `zorn_lemma.ac` in my github repo `ac-math` #link(<ref_30>)[]

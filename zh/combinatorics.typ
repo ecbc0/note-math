@@ -50,14 +50,14 @@ $
   = frac((n-1)! (i + j),i! j!) 
   = binom(n-1,i-1,j) + binom(n-1,i,j-1) 
 $
-#tag("binom-expansion") 
+#tag("binom_expansion") 
 $
   (x+y)^n &= sum_(i+j=n) binom(n,i,j) x^i y^j \
   (x_1 + ⋯ + x_d)^n &= sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
 $
 vs Newton 二项式 $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
 
-#tag("multi-combination") 类似地, 以下等价
+#tag("multi_combination") 类似地, 以下等价
 - $d$ 重组合. $1 ,…, n$ 选取 $k_1 ,…, k_d$ with $k_1 + ⋯ + k_d = n$
 - 划分 ${1 ,…, n} = A_1 ⊔ ⋯ ⊔  A_d$ with $|A_i| = k_i$ and $k_1 + ⋯ + k_d = n$
 - 选取置换, 且 quotient
@@ -86,11 +86,11 @@ what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$?
     binom(n+d-1,d-1) = binom(n+d-1,n,d-1)
   $
 ]
-#tag("dimension-of-symmetric-tensor") 也得到对称张量空间 $(𝕂^n)^(⊙ k)$ 的维数是 $binom(k+n-1,k,n-1)$, 基 $e_1^(⊙ k_1) ⊙ ⋯ ⊙ e_n^(⊙ k_n)$
+#tag("dimension_of_symmetric_tensor") 也得到对称张量空间 $(𝕂^n)^(⊙ k)$ 的维数是 $binom(k+n-1,k,n-1)$, 基 $e_1^(⊙ k_1) ⊙ ⋯ ⊙ e_n^(⊙ k_n)$
 
 重复数量 $binom(n,k_1 ,…, k_d)$ 会有用于例如计算 $L^2$ 归一化
 
-#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> 相同划分的 cycle 
+#tag("conjugate_class_of_permutation_is_cycle") #link(<conjugate_class>)[] of $S_n$ <==> 相同划分的 cycle 
 
 cycle := 置换 $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
 

@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("transformation-group")
+#tag("transformation_group")
 #indent[
   复合可以认为是一种运算 $(f_2, f_1) ⇝ f_2 ∘ f_1$. 如果固定其中一个位置, 可以
   - 前置复合 $f ⇝ g ∘ f$, 也称为右乘 
@@ -18,7 +18,7 @@
 
   类似于幂集 $Subset(X)$ 被记为 $2^X$, $Aut X$ 可记为 $X!$, 因为是 ${1 ,…, n}$ 到自身的双射组成置换群 $Aut {1 ,…, n} = S_n$, 集合的元素数量是 $n!$
 ]
-#tag("binary-operation-group")
+#tag("binary_operation_group")
 #indent[
   也有二元运算群的概念: *Example* 实数加法, 向量空间的加法
 
@@ -47,7 +47,7 @@
 
 所以这种非结合运算群不同构于 $L_a, R_a$ 形成的 $𝕆 ∖ 0$ 的结合变换群: $L_a ∘ L_b != L_(a ⋅ b)$
 
-#tag("group-homomorfsm")
+#tag("group_homomorfsm")
 #indent[
   *Def* 群同态 $f : G_1 -> G_2$
   
@@ -63,7 +63,7 @@
 ]
 *Example* $(ℝ, +)$ 到 $(ℝ_(> 0), ⋅)$ 的同态 $exp(x + y) = exp(x) ⋅ exp(y)$
 
-#tag("group-isomorfsm") *Def* 群同构: $f: G_1 -> G_2$ 是双射且 $f, f^(-1)$ 是群同态
+#tag("group_isomorfsm") *Def* 群同构: $f: G_1 -> G_2$ 是双射且 $f, f^(-1)$ 是群同态
 
 *Example* $(ℝ, +)$ 到 $(ℝ(> 0), ⋅)$ 的同构 $exp$, 逆映射 $log$ 是同态 $log(x ⋅ y) = log(x) + log(y)$
 
@@ -100,13 +100,13 @@ _Proof_
 
 $𝟙_(G_2) ⊆ G_2$ 是子群, 从而 $f^(-1) (𝟙_(G_2)) ⊆ G_1$ 是子群
 
-#tag("group-kernel") *Def* 群同态的核 $ker f := f^(-1) (𝟙_(G_2)) = {a in G_1 : f(a) = 𝟙_(G_2)}$
+#tag("group_kernel") *Def* 群同态的核 $ker f := f^(-1) (𝟙_(G_2)) = {a in G_1 : f(a) = 𝟙_(G_2)}$
 
 $f$ 是单射 <==> $ker f = 𝟙_(G_1)$
 
 设 $H_1 ⊆ G_1$ 是子群, 则 $f(H_1) ⊆ G_2$ 是子群
 
-#tag("group-action") *Def* 群作用 := 一个群 $G$ 同态到 $X$ 的双射同构群 $Aut X$, 也叫做表示 (representation) 
+#tag("group_action") *Def* 群作用 := 一个群 $G$ 同态到 $X$ 的双射同构群 $Aut X$, 也叫做表示 (representation) 
 $
   ρ: map(G, Aut X, g, ρ(g))
 $
@@ -155,7 +155,7 @@ _Proof_
     $
 ]
 
-#tag("decomposition-into-orbit") $G x != G x' <==> G x ∩ G x' = ∅$
+#tag("decomposition_into_orbit") $G x != G x' <==> G x ∩ G x' = ∅$
 
 _Proof_
 #indent[
@@ -187,7 +187,7 @@ $
 - 同态 $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - 双射 $h^(-1) g h = g' <==> g = h g' h^(-1)$
 
-#tag("isotropy-in-same-orbit-is-isom") 从而是 $G$ 到自身的群同构, 限制在 $G_(h x) <-> G_x$ 上得到子群之间的同构. 或者说, 如果 $x, y in G$ 在相同的 orbit 上 $G ⋅ x = G ⋅ y$, 则 isotropy 群同构 $G_x ≃ G_y$ 
+#tag("isotropy_in_same_orbit_is_isom") 从而是 $G$ 到自身的群同构, 限制在 $G_(h x) <-> G_x$ 上得到子群之间的同构. 或者说, 如果 $x, y in G$ 在相同的 orbit 上 $G ⋅ x = G ⋅ y$, 则 isotropy 群同构 $G_x ≃ G_y$ 
 
 $G_(h x)$ 也可以写为 $h G_x h^(-1) = {h g h^(-1) : g in G_x}$
 
@@ -216,7 +216,7 @@ $
       { map(G, X, g, g x) }^(-1) (y)
     ) = |h G_x| = |G_x|
   $
-#tag("orbit-istropy-product-decomposition") orbit $G x$ 和 isotropy $G_x$ 形成群 $G$ 在集合上的积分解: 
+#tag("orbit_istropy_product_decomposition") orbit $G x$ 和 isotropy $G_x$ 形成群 $G$ 在集合上的积分解: 
 
 对于每个 $y in G x$, 选取一个 $h(y) =: h in G$ 使得 $h x = y$ (选择公理)
 
@@ -231,7 +231,7 @@ $
 
 也蕴含 $|G x|, |G_x| <= |G|$
 
-#tag("conjugate-action") 共轭作用, 类似于换坐标
+#tag("conjugate_action") 共轭作用, 类似于换坐标
 $
   c_h : map(G, G, g, h g h^(-1))
 $
@@ -246,7 +246,7 @@ $c_(h h') = c_h c_(h')$
 _Proof_ $(h h')^(-1) g (h h') = h'^(-1) (h^(-1) g h) h'$
 
 共轭作用的 
-- orbit $G ⋅ g = {h g h^(-1) : h in G}$ 称为 #tag("conjugate-class")
+- orbit $G ⋅ g = {h g h^(-1) : h in G}$ 称为 #tag("conjugate_class")
 - isotropy $G_g = { h in G : h g h^(-1) = g }$ 称为 $g$ 的 centralizer
 
 *Example* 置换的 conjugate-class 是循环
@@ -259,7 +259,7 @@ $
 $
 其中 $(g,h) ⇝ h^(-1) ⋅ g ⋅ h ⋅ g^(-1)$ 被称为群 $G$ 的交换子 #tag("commutator")
 
-#tag("action-surjective") *alias* #tag("action-transitive") := 以下定义等价
+#tag("action_surjective") *alias* #tag("action_transitive") := 以下定义等价
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
@@ -267,14 +267,14 @@ $
 
 *Example* $SO(3)$ 作用在 $ℝ^3 ∖ 0$ 不 transitive. $GL(3,ℝ) $ 作用在 $ℝ^3 ∖ 0$ 是 transitive
 
-#tag("action-injective") *alias* #tag("action-free") := 以下定义等价
+#tag("action_injective") *alias* #tag("action_free") := 以下定义等价
 - 每个 orbit 都是 $G$ 的 copy
 - $forall x (g x = h x ==> g = h)$
 - $forall x (g x = x ==> g = 𝟙)$
 - $forall x (G_x = 𝟙)$
 - $forall x (map(G, X, g, g x) "is injective" G ↪ X)$
 
-#tag("action-faithful") := 以下定义等价
+#tag("action_faithful") := 以下定义等价
 - $(forall x (g x = x)) ==> g = 𝟙$
 - $(forall x (g in G_x) ==> g = 𝟙$
 - 群作用的群同态 $G -> Aut X$ 是单射
@@ -321,7 +321,7 @@ _Proof_
 
   $𝟙 ⋅ H = H$
 ]
-#tag("action-on-coset")
+#tag("action_on_coset")
 #indent[
   群 $G$ 可以作用在 $G/H$ 上
   $
@@ -339,9 +339,9 @@ _Proof_
     G ≃ H × G/H
   $
 ]
-#tag("product-group") 设 $G, G'$ 是群, 则 $G × G'$ 也是群, 乘法定义为 $(a, a') ⋅ (b, b') = (a b, a' b')$
+#tag("product_group") 设 $G, G'$ 是群, 则 $G × G'$ 也是群, 乘法定义为 $(a, a') ⋅ (b, b') = (a b, a' b')$
 
-#tag("subgroup-coset-sub-quotient-decomposition") 
+#tag("subgroup_coset_sub_quotient_decomposition") 
 #indent[
   *Def* 子集乘法运算: forall $S, S' ⊆ G$
   
@@ -359,13 +359,13 @@ _Proof_
 
   有以下的等价命题
   + $(g H) ⋅ (g' H) = (g g') ⋅ H$, 意义是, 两个 coset/orbit 的元素 $g, g'$ 的乘法在 $g g'$ 所在的 coset. \ 
-    此时 $G/H$ 是群, 并称 $G/H$ 是商群 #tag("quotient-group"), $π: G -> G/H$ 是群同态, $H = ker(π)$ 
+    此时 $G/H$ 是群, 并称 $G/H$ 是商群 #tag("quotient_group"), $π: G -> G/H$ 是群同态, $H = ker(π)$ 
   + 对每个 $g in G$, 左右陪集相同 $g ⋅ H = H ⋅ g$
-  + $H$ 是正规子群 #tag("normal-subgroup") 或者称为不变子群 #tag("invariant-subgroup"), 共轭群作用 $g ⇝ c_g$ 保持 $H$, 从而可以限制在 $H$ 形成群作用. $forall (g in G) (c_g (H) ⊆ H)$, 实际上 $c_g (H) = H$
+  + $H$ 是正规子群 #tag("normal_subgroup") 或者称为不变子群 #tag("invariant_subgroup"), 共轭群作用 $g ⇝ c_g$ 保持 $H$, 从而可以限制在 $H$ 形成群作用. $forall (g in G) (c_g (H) ⊆ H)$, 实际上 $c_g (H) = H$
 
   然而这种分解一般不是 product-group 分解
 
-  如果 $G$ 是交换群 #tag("commutative-group") *alias* #tag("abelian-group"), 则其所有子群也是交换群且是正规子群
+  如果 $G$ 是交换群 #tag("commutative_group") *alias* #tag("abelian_group"), 则其所有子群也是交换群且是正规子群
 
   对于 $a in G$, 如果存在 $n in ℕ$ 使得 $a^n = 𝟙$, 则定义 $a$ 的阶为 $min { m in ℕ : a^m = 𝟙 }$ 
   
@@ -383,7 +383,7 @@ _Proof_
 
   这种分解的自然性也取决于你是否认为 coset 上的那种乘法运算是好的构造
 
-  #tag("simple-group") 不存在 $𝟙$ 或 $G$ 之外的正规子群的群 $G$ 叫做 simple 群
+  #tag("simple_group") 不存在 $𝟙$ 或 $G$ 之外的正规子群的群 $G$ 叫做 simple 群
 ]
 
 *Example* let $G$ 有限群, let $a in G$. 则 $H = {a^1, a^2, ...}$ 是有限集且是子群. 存在最小的 $k in ℕ$ 使得 $a^k = 𝟙$, 从而 $a^(-1) = a^(k-1)$. 让群 $G$ 作用于 coset 空间 ${g H : g in G}$, isotropy $G_H = H$, 于是 $frac(|G|,|H|) = frac(|G|,k) in ℕ$ or $|G|$ 被 $k$ 整除
@@ -397,7 +397,7 @@ $
 - 单射: $g x = g' x ==> g^(-1) g' in G_x$ ==> $(g^(-1) g') G_x = G_x$ ==> $g ⋅ G_x = g ((g^(-1) g') ⋅ G_x) = g' ⋅ G_x$
 - 满射: 设 $y in G x$, 取 $g in G$ 使得 $y = g x$, 则取 $A = g ⋅ G_x in G/G_x$ 即可
 
-#tag("Burnside-lemma") 定义 $X^g := {x in X : g x = x}$ 为 $g in G$ 的 fix point set, 则存在双射
+#tag("Burnside_lemma") 定义 $X^g := {x in X : g x = x}$ 为 $g in G$ 的 fix point set, 则存在双射
 $
   G × X/G <--> ⨆_(g in G) X^g = X
 $

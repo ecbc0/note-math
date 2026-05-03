@@ -7,11 +7,11 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, without requiring $t_1 + ⋯ + t_n = 1
 
 #image("../image/parallelogram.png", width: 25%)
 
-#tag("parallelogram-simplex-correspond")
+#tag("parallelogram_simplex_correspond")
 #indent[
   A parallelepiped can be decomposed into $n!$ translation- and reflection-equivalent simplices (p. 587 of @ref-3)
 
-  #image("../image/shear-transformation.png", width: 30%)
+  #image("../image/shear_transformation.png", width: 30%)
 
   A decomposed simplex corresponds to choosing a permutation $i(1) ,…, i(n)$ of $1 ,…, n$:
   $
@@ -43,17 +43,17 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, without requiring $t_1 + ⋯ + t_n = 1
   
   Therefore, the structural strength provided by a simplex and a parallelepiped is roughly equivalent.
 ]
-#tag("volume-of-parallelogram") For volume in $ℝ^n$, assume:
+#tag("volume_of_parallelogram") For volume in $ℝ^n$, assume:
 - Translation invariance
 - Reflection invariance (unsigned volume)
 - Finite decomposition of sets $⨆$ (disjoint in the sense of zero measure) -> finite summation of volumes $sum$
 - If $v_1 ,…, v_n$ are not linearly independent, then they and their affine/linear combinations lie in a lower-dimensional subspace, hence the $n$-dimensional volume is defined as zero.
  
-#tag("volume-of-simplex") is $1/n!$ of volume-of-parallelogram
+#tag("volume_of_simplex") is $1/n!$ of volume-of-parallelogram
 
-#tag("shear-transformation") After decomposing a parallelepiped into $n!$ simplices, select one simplex, cut, translate, and form a new parallelepiped with the same volume. This is called a shear transformation. E.g., $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$. As shown below:
+#tag("shear_transformation") After decomposing a parallelepiped into $n!$ simplices, select one simplex, cut, translate, and form a new parallelepiped with the same volume. This is called a shear transformation. E.g., $t_1 (v_1 + v_2) + t_2 v_2 + ⋯ +  t_n v_n$. As shown below:
 
-#image("../image/shear-transformation.png", width: 30%)
+#image("../image/shear_transformation.png", width: 30%)
 
 (image from p.587 of @ref-3)
 
@@ -72,7 +72,7 @@ Scaling of edges by $ℕ,ℤ,ℚ,ℝ$. E.g., $forall a in ℝ, Vol(a v_1, v_2 ,�
 
 Scaling and shearing of a parallelepiped correspond to the decomposition of $GL(n,ℝ)$ into elementary linear transformations, which are also used in Gaussian elimination, although they can also be applied to $m × n$ matrices.
 
-#tag("volume-determinant") For volume change under $A ∈ GL(n,ℝ)$: $Vol(A v_1 ,…, A_n v_n) = det A Vol(v_1 ,…, v_n)$
+#tag("volume_determinant") For volume change under $A ∈ GL(n,ℝ)$: $Vol(A v_1 ,…, A_n v_n) = det A Vol(v_1 ,…, v_n)$
 
 Choose a basis $e_1 ,…, e_n$ of $ℝ^n$, define the volume of the parallelepiped they generate as $1$, then the volume of another parallelepiped $A e_1 ,…, A e_n$ is $det A$.
 
@@ -100,7 +100,7 @@ Any linear transformation can be decomposed into scaling and shearing. Shearing 
 
 In fact, if you completely discard the concept of negative volume, you can say volume is positive multilinear alternating, a positive determinant, similar to the treatment of integration of densities on manifolds.
 
-#tag("try-to-define-volume-of-low-dim") Consider a $k$-subspace as a manifold; for example, choose a $k$-basis to establish a coordinate system on it, then it has its own volume. However, $ℝ^n$ has many $k$-subspaces. If we only need to consider one $k$-subspace or $k$-submanifold, the problem ends here. But we want to define volume for all $k$-subspaces simultaneously, and for each $k$-subspace, choose a $k$-basis to establish a coordinate system to define the $k$-volume of that $k$-subspace. What is a good choice?
+#tag("try_to_define_volume_of_low_dim") Consider a $k$-subspace as a manifold; for example, choose a $k$-basis to establish a coordinate system on it, then it has its own volume. However, $ℝ^n$ has many $k$-subspaces. If we only need to consider one $k$-subspace or $k$-submanifold, the problem ends here. But we want to define volume for all $k$-subspaces simultaneously, and for each $k$-subspace, choose a $k$-basis to establish a coordinate system to define the $k$-volume of that $k$-subspace. What is a good choice?
 
 Consider two methods. Similar to linear form vs quadratic form. The first is like defining $v_1 + v_2$ or $|v_1 + v_2|$ for $vec(v_1,v_2)$; the second is like defining $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$. The two definitions of volume coincide for $k = n$.
 
@@ -167,7 +167,7 @@ Consider two methods. Similar to linear form vs quadratic form. The first is lik
 ]
 2. Choose a non-degenerate quadratic form.
 #indent[
-  #link(<tensor-induced-quadratic-form>)[Induces] a quadratic form on the alternating space: $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$.
+  #link(<tensor_induced_quadratic_form>)[Induces] a quadratic form on the alternating space: $⟨ v_1 ∧ ⋯ ∧ v_k ⟩^2  = det ⟨ v_i , v_j ⟩$.
   
   The unsigned volume is defined as the square root of the absolute value: $|det ⟨ v_i , v_j ⟩|^(1/2)$ or $abs(det mat(
     ⟨ v_1 , v_1 ⟩, ⋯, ⟨ v_1 , v_n ⟩;
@@ -202,7 +202,7 @@ Consider two methods. Similar to linear form vs quadratic form. The first is lik
 
   Different signatures yield different volume definitions for the same set of order $k < n$.
 ]
-#tag("convex-hull-decomposition") A convex hull can be decomposed into simplices in this way:
+#tag("convex_hull_decomposition") A convex hull can be decomposed into simplices in this way:
 - The vertices of the simplices belong to the vertices of the convex hull.
 - The interiors of the simplices are disjoint.
 - The union of the simplices is the convex hull.
@@ -213,11 +213,11 @@ The decomposition is not unique.
 
 Four points in $ℝ^2$:
 
-#image("../image/convex-hull-decomposition-1.png", width: 40%)
+#image("../image/convex_hull_decomposition_1.png", width: 40%)
 
 Five points in $ℝ^2$:
 
-#image("../image/convex-hull-decomposition-3.png", width: 50%)
+#image("../image/convex_hull_decomposition_3.png", width: 50%)
 
 *Prop* A convex hull can be decomposed into simplices.
 
@@ -241,20 +241,20 @@ _Proof_
 ]
 The intersection of convex hulls is a convex hull.
 
-*Example* #image("../image/simplex-intersection.png", width: 60%)
+*Example* #image("../image/simplex_intersection.png", width: 60%)
 
 The set difference of simplices may not be a convex hull. But it can still be decomposed into simplices.
 
-*Example* #image("../image/simplex-substraction.png", width: 20%)
+*Example* #image("../image/simplex_substraction.png", width: 20%)
 
 #tag("polyhedra") Polyhedron := finite union of n-simplices. Countable generalization -> countable polyhedron.
 
 #image("../image/polyhedra.png", width: 30%)
 
-#tag("Lebesgue-measurable") 
+#tag("Lebesgue_measurable") 
 #indent[
-  #image("../image/measure-approximation.png", width: 30%)
-  Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric-set-minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
+  #image("../image/measure_approximation.png", width: 30%)
+  Lebesgue measurable set $A$. Approximate with a finite union of simplex $P$, #link(<symmetric_set_minus>)[symmetric difference] $A Δ P$ cover with countable simplexes as a measure estimate error
 
   Specifically, for a set $A$, the outer measure is defined as $m^*(A) = inf_(ℕ-"polyhedra" C ⊇ A) Vol(C)$ if $m^*(A)$ is finite. The outer measure of a polyhedron is finite, and under Euclidean distance, due to the compactness property, it can be proven to satisfy subadditivity, so the outer measure of a polyhedron is its own volume (in geometries of spaces with signatures other than Euclidean, not all polyhedra should be used to define volume).
 
@@ -267,7 +267,7 @@ The set difference of simplices may not be a convex hull. But it can still be de
   Non-measurable sets are sets that have a finite outer measure but are not in the closure of polyhedra. Non-measurable sets exist (Vitali sets defined using the axiom of choice).
 ]
 
-#tag("Lebesgue-measure")
+#tag("Lebesgue_measure")
 #indent[
   The symmetric difference of sets satisfies
   
@@ -278,8 +278,8 @@ The set difference of simplices may not be a convex hull. But it can still be de
   _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
   #stack( dir: ltr,
-    image("../image/measure-triangle-inequality-1.png", width: 40%),
-    image("../image/measure-triangle-inequality-2.jpeg", width: 50%)
+    image("../image/measure_triangle_inequality_1.png", width: 40%),
+    image("../image/measure_triangle_inequality_2.jpeg", width: 50%)
   )
   by
   $
@@ -299,9 +299,9 @@ The set difference of simplices may not be a convex hull. But it can still be de
     &<= d(A,B) + d(A,B')
   $
 ]
-#tag("try-to-define-low-dim-measure") Try to define $ℝ^n$'s $k < n$ dimensional measurable set. Since the codimension of the $k$ region $≠ 0$, it is obvious that we cannot use set difference and simplex covering as measure estimation errors to approximate a general "$k$ dimensional set" 
+#tag("try_to_define_low_dim_measure") Try to define $ℝ^n$'s $k < n$ dimensional measurable set. Since the codimension of the $k$ region $≠ 0$, it is obvious that we cannot use set difference and simplex covering as measure estimation errors to approximate a general "$k$ dimensional set" 
 
-#tag("pathologic-example-measure-of-boundary") 
+#tag("pathologic_example_measure_of_boundary") 
 #indent[
   Using the Euclidean metric structure, some low-dimensional measurable sets can be defined, but there are still pathological examples (temporarily ignore the details, wiki it yourself) 
 
@@ -313,7 +313,7 @@ The set difference of simplices may not be a convex hull. But it can still be de
   - Schwarz Lantern
   - Infinite staircase approaching the hypotenuse of a triangle $sqrt(2) = 2$ or circle ($π = 4$) or as long as there is large normal oscillation, $sqrt(2) = π = ∞$
 ]
-#tag("measure-theoretic-boundary")
+#tag("measure_theoretic_boundary")
 #indent[
   Measure theory boundary. Dimension --- some supremum $d < n$ --- may not be a natural number but a real number
 
@@ -330,4 +330,4 @@ Lebesgue differentiation theorem says that the measure of the boundary is zero
 - The interval division of the sides of a rectangle/parallelogram gives a rectangular product-style division
 - Barycentric subdivision (note that also subdivide the boundary)
 
-#image("../image/measure-subdivision.png", width: 100%)
+#image("../image/measure_subdivision.png", width: 100%)

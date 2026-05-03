@@ -35,7 +35,7 @@
     // prefer external css ...
     #```CSS
     .indent {
-      border-left: 1px solid #9482823f;
+      border-left: 1px solid;
       padding-left: 1em
     }
     a:link {
@@ -53,17 +53,8 @@
       padding-bottom: 0em;
       padding-top: 0em;
     }
-    body {
-      font-family: 'Hanken Grotesk','Sarasa Gothic SC'
-    }
     ```.text
   ]
-
-  show math.equation: set text(
-    font: "noto sans math",
-    // fill: rgb("#2b8900"),
-    size: 12pt,
-  )
 
   show math.equation: math.display
 
@@ -71,52 +62,13 @@
     html.elem("div", attrs: (class: "stack"), it.children.join(none))
   }
 
-  set text(
-    font: (
-      "Hanken Grotesk",
-      "Sarasa Gothic SC"
-    ),
-    // fill: rgb("#0058b1"),
-    cjk-latin-spacing: auto,
-    kerning: true
-  )
-
   set underline(offset: .1em, stroke: .05em, evade: false)
-
-  // show strong: set text(fill: rgb("#2f00ff"))
-
-  show emph: set text(
-    // fill: rgb("#d10000"),
-    /* font: (
-
-    ), */
-  )
-
-  show raw: set text(
-    // fill: rgb("#6e6e6e"),
-    size: 12.5pt,
-    font: "Source Code Pro",
-    weight: "medium"
-  )
-
-  set table(
-    // stroke: rgb("#1c1c1c"),
-    // align: center
-  )
-
-  // show heading: set text(fill: rgb("#b30042"))
 
   set math.limits(inline: true)
 
   show math.equation.where(block: true): set align(left)
 
-  // show link: set text(fill: rgb("#008690"))
-
   show link: underline
-
-  // show ref: set text(fill: rgb("#008690"))
-
-  // set list(marker: [#text("‣")])
 
   set enum(full: true)
 

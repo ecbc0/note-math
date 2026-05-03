@@ -7,7 +7,7 @@ First, handle the one-dimensional real case.
 
 $ℕ$ exponential power function $k ∈ ℕ, map(ℝ, ℝ, v, v^k)$
 
-#tag("polynomial-function-1d") Polynomial functions are finite linear combinations of power functions. (Affine) base point $x$, (vector) offset $v$
+#tag("polynomial_function_1d") Polynomial functions are finite linear combinations of power functions. (Affine) base point $x$, (vector) offset $v$
 $
   f(x+v)
   &= a_0 + a_1 v + ⋯ + a_n v^n \
@@ -17,7 +17,7 @@ $
 $
 The representation of a polynomial function is not affine invariant, i.e., switching the base point $x ⇝ x + Δ = y$ yields a representation of the same degree but with different coefficients. Scaling $v ⇝ λ v$ is also like this.
 
-#tag("change-base-point-polynomial") Switching base point $x ⇝ x + Δ = y$
+#tag("change_base_point_polynomial") Switching base point $x ⇝ x + Δ = y$
 $
   f(x + v) &= a_0 (x) + a_1 (x) v + ⋯ + a_n (x) v^n \
   f(y + w) &= a_0 (y) + a_1 (y) w + ⋯ + a_n (y) w^n
@@ -69,7 +69,7 @@ $
 $
 If not necessary, there is no need to take the linear direct sum $⨁_(n = 0 .. ∞)$ for tensors of all orders (known as the tensor algebra) for now.
 
-#tag("polynomial-function") Using codomain $ℝ^d'$ and multilinear functions $a_k ∈ Lin((ℝ^d)^(⊗ k) → ℝ^d')$. Base point $x$, offset $v$, define polynomial function
+#tag("polynomial_function") Using codomain $ℝ^d'$ and multilinear functions $a_k ∈ Lin((ℝ^d)^(⊗ k) → ℝ^d')$. Base point $x$, offset $v$, define polynomial function
 $
   f(x+v)
   &= a_0 + a_1 v + ⋯ + a_n v^(⊗ n) \
@@ -86,7 +86,7 @@ Generalization to $ℂ$ is straightforward. For the cases of $ℍ,𝕆$, due to 
 There may be different tensors $a_k, a'_k$ that give the same polynomial, but a polynomial corresponds to a unique symmetric tensor $b_k$.
 
 Change notation.
-- $v^(⊙ k) ⇝ v^k$ #tag("power-tensor")
+- $v^(⊙ k) ⇝ v^k$ #tag("power_tensor")
 - $v ⊙ w ⇝ v w$
 
 Using difference techniques, one can recover the $n$-th order symmetric tensor $v_1 ⋯ v_n$ from the $n$-th order monomial or power tensor $v^n$.
@@ -97,7 +97,7 @@ The entire problem is symmetric in $v_1 ,…, v_n$, so a symmetric construction 
 
 In second order $(v_1 + v_2)^2 - v_1^2 - v_2^2 = 2 v_1 v_2$
 
-#tag("difference-symmetric-tensor") Symmetric tensor $n$th order difference
+#tag("difference_symmetric_tensor") Symmetric tensor $n$th order difference
 $
   sum_(I ⊆ {1 ,…, n}) (-1)^(|I| - n) (sum_(i ∈ I) v_i)^m = cases(
     0 &"if" m < n ,
@@ -107,7 +107,7 @@ $
 $
 *Question* Is there an intuitive understanding of $n$th order difference?
 
-#tag("successive-difference") $n$th order difference can be written as $n$ successive first-order differences
+#tag("successive_difference") $n$th order difference can be written as $n$ successive first-order differences
 $
   sum_(I_n ⊆ {n}) ⋯ sum_(I_1 ⊆ {1}) (-1)^(|I_n| - 1) ⋯ (-1)^(|I_1| - 1)
   (sum_(i_1 ∈ I_1) v_(i_1) + ⋯ + sum_(i_n ∈ I_n) v_(i_n))^n
@@ -116,7 +116,7 @@ where $I_k ⊆ {k} <==> I_k ∈ Subset{k} = {∅,{k}}$, $sum_(i_k ∈ ∅) v_(i_
 
 Due to the commutativity of summation, the order of successive differences does not affect the final result
 
-_Proof_ of #link(<difference-symmetric-tensor>)[]
+_Proof_ of #link(<difference_symmetric_tensor>)[]
 #indent[
   Fully expand
   $
@@ -187,9 +187,9 @@ _Proof_ of #link(<difference-symmetric-tensor>)[]
 
   So the result is $n! ⋅ v_1 ⋯ v_n$
 ]
-The *symmetry* of a *symmetric* multilinear function $a_m$ allows the property of #link(<difference-symmetric-tensor>)[difference] to be inherited
+The *symmetry* of a *symmetric* multilinear function $a_m$ allows the property of #link(<difference_symmetric_tensor>)[difference] to be inherited
 
-#tag("difference-polynomial") The $n$-th order difference of $f(x + v) = a_n v^n$ is $n! ⋅ a_n (v_1 ⋯ v_n)$
+#tag("difference_polynomial") The $n$-th order difference of $f(x + v) = a_n v^n$ is $n! ⋅ a_n (v_1 ⋯ v_n)$
 
 The $n$-th order difference of $f(x + v) = a_n v^m, m < n$ is $0$
 

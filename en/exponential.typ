@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("real-exponential")
+#tag("real_exponential")
 #indent[
   If the exponent is a natural number, then $a^(n+m) = a^(n) a^(m)$. When $a in ℚ$, $a ⇝ a^n$ is continuous and monotonically increasing, so the inverse function is also continuous and monotonically increasing, denoted as $a^(1/n)$. $a^(n+m) = a^(n) a^(m)$ can be generalized to rational powers. Due to continuity, $a ⇝ a^n$ can be extended to the $ℝ$ power function
 
@@ -24,13 +24,13 @@
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
 
-  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+  #tag("natural_exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural_constant>)[]
 
   *Todo* Prove that $f(x) = sum((f^((1))(0))/n!x)^n$ satisfies $f(x + y) = f(x) f(y)$. (Techniques used in the proof: absolute convergence, rearrangement invariance, supremum, forced convergence (where one side is supremum), summation in "triangular form" (relative to $(j, k) in ℕ^2$ rectangle) $sum_(i = 1..n) sum_(j + k = n)$)
 
-  from the series, we can see that, differential $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ exists #link(<inverse-analytic>)[]
+  from the series, we can see that, differential $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ exists #link(<inverse_analytic>)[]
 
-  #tag("natural-logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
+  #tag("natural_logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
 
   for $a > 0$, def $f^1 (0) := log a in ℝ$
 
@@ -46,11 +46,11 @@
     &= exp (x log a)
   $
 ]
-#tag("power-function") Defining the exponential function means that for each $a in ℝ$, each real exponent $x$ is defined, and thus the power function $a ⇝ a^x$ is also defined, or rewritten as $x ⇝ x^a$
+#tag("power_function") Defining the exponential function means that for each $a in ℝ$, each real exponent $x$ is defined, and thus the power function $a ⇝ a^x$ is also defined, or rewritten as $x ⇝ x^a$
 
 It can also be expressed as $x^a = exp(a log x)$
 
-#tag("Euler-formula")
+#tag("Euler_formula")
 
   - $ℂ$
   $

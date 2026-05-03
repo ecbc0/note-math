@@ -21,7 +21,7 @@
 
   这里不处理数字电路的硬件实现. 我也不知道细节
 ]
-#tag("logic-operator") logical and, or, not
+#tag("logic_operator") logical and, or, not
 #indent[
   - 且, $and$, `and`, 逻辑合取 (conjunction)
   - 或, $or$, `or`, 逻辑析取 (disjunction)
@@ -79,7 +79,7 @@
 
   (image from p.85 of @ref-1)
   #stack( dir: ltr,
-    image("../image/compute-function-input.png", width: 30%),
+    image("../image/compute_function_input.png", width: 30%),
     image("../image/decoder.png", width: 30%), 
   )
   分别考虑 ${0,1}^n -> {0,1}^m$ 函数的输入 ${0,1}^n$ 和输出 ${0,1}^m$
@@ -98,7 +98,7 @@
 
     *Example* `not xor` 函数. 将输入 $00, 11$ 接入输出的 `or` gate
 
-    #image("../image/compute-function-output.png", width: 40%)
+    #image("../image/compute_function_output.png", width: 40%)
 
     `xor` 叫做互斥或, $⊕$. 这个函数的真值表
 
@@ -116,9 +116,9 @@
 
   如果不需要完整的 ${0,1}^n -> {0,1}^m$ 函数, 电路计算元件不一定要按这种固定方式来构建. 可以根据情况, 进一步简化, 减少 gate 数量的使用. 但这里不进入细节
 ]
-计算单元中多条输入线或输出线的一种符号表示 (p. 54 of @ref-1) (3 输入 2 输出) #image("../image/multi-lines-symbol.png", width: 30%) 
+计算单元中多条输入线或输出线的一种符号表示 (p. 54 of @ref-1) (3 输入 2 输出) #image("../image/multi_lines_symbol.png", width: 30%) 
 
-#tag("control-circuit") 控制电路, 选择器 or 复用器 (multiplexer)
+#tag("control_circuit") 控制电路, 选择器 or 复用器 (multiplexer)
 
   $S$ 是控制电路. 其功能是 
   - $S = 0$ 时, $D_0$ 输出到 $Y$, $D_1$ 不输出到 $Y$
@@ -127,12 +127,12 @@
   (p. 81--82 of @ref-1)
 
   #stack( dir: ltr,
-    image("../image/multiplexer-function.png", width: 25%),
-    image("../image/multiplexer-impl.png", width: 25%)
+    image("../image/multiplexer_function.png", width: 25%),
+    image("../image/multiplexer_impl.png", width: 25%)
   )
   $2^n$ 个输入 $D_0 ,…, D_(2^n - 1)$ 需要 $n$ 条控制电路 $S_0 ,…, S_(n - 1)$
 
-#tag("De-Morgan-law") negative dual 律 or De Morgan 律 
+#tag("De_Morgan_law") negative dual 律 or De Morgan 律 
 
   $
     not (not A) &= A \
@@ -142,11 +142,11 @@
 
   用穷举证明, 就像人类数数其实也是穷举. 下同
 
-#tag("boolean-algebra") 
+#tag("boolean_algebra") 
 #indent[
   bool 代数记为 ${0,1},+,*$ 或者 ${0,1},or,and$
     
-  #tag("bool-distributive-law") 分配律
+  #tag("bool_distributive_law") 分配律
   #indent[
     $
       (A + B) * C &= A * C + B * C \
@@ -168,33 +168,33 @@
 
     $ Or_(i=1..n) And_(j=1..m) A_(i j) = And_(j_1 ... j_n  =1 ... m) Or_(i=1..n) A_(i j(i)) $
   ]
-  #tag("bool-commutative-law") 交换律 $A + B = B + A$. same for $*$
+  #tag("bool_commutative_law") 交换律 $A + B = B + A$. same for $*$
 
-  #tag("bool-associative-law") 结合律 $(A + B) + C = A + (B + C)$. same for $*$ 
+  #tag("bool_associative_law") 结合律 $(A + B) + C = A + (B + C)$. same for $*$ 
 ]
-#tag("periodic-circuit") 周期电路
+#tag("periodic_circuit") 周期电路
 
-  #image("../image/periodic-circuit.jpeg", width: 60%)
+  #image("../image/periodic_circuit.jpeg", width: 60%)
 
   由晶体振荡器实现
 
-#tag("memory-circuit") 电路记忆
+#tag("memory_circuit") 电路记忆
 #indent[
-  黑箱模型 #image("../image/memory-1.png", width: 60%)
+  黑箱模型 #image("../image/memory_1.png", width: 60%)
   
-  可能的实现 #image("../image/memory-2.png", width: 70%)
+  可能的实现 #image("../image/memory_2.png", width: 70%)
 
   - 图中间使用环电路重用上一个周期的 Bool 值. 如果关闭 write control, 则 $"read", overline("read")$ 的值不变
   - 反相器 (`not` gate) 确保电流方向并防止衰减 (通过外部能量) 
   - 假设环电路中黄色部分的值是 $a$, 蓝色部分的值是 $overline(a)$. 为了将 $0$ 写入已有的 $a = 1$, 需要比环电路里的电压更高的写入电压来覆盖循环电路, i.e. 用更高电压 $overline("write") = 1$ 从而 $overline(a) = 1$ 来覆盖已有的 $a = 1$
 
-  #tag("finite-machine") 有限状态机
+  #tag("finite_machine") 有限状态机
   
   #tag("i/o") 电路的输入可能来自外界 (e.g. 传感器, 键盘), 电路的输出也可能到达外界 (e.g. 信号灯, 屏幕)
 
   外界输入的节奏通常不一致于计算机内部周期电路的节奏, 因此需要让外界输入先经过同步元件
 ]
-#tag("memory-array") 内存阵列
+#tag("memory_array") 内存阵列
 #indent[
   *Example* $2^3$ 就是从 000, 001, 010 数到 111 时经过的步数, 虽然这假设了我们能识别三位 bit. $2^n = underbrace(2 ⋯ 2 , n"-fold")$, $101 = 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 4 + 1 = 5$
 
@@ -208,7 +208,7 @@
 
   (p. 265 of @ref-1)
 
-  #image("../image/memory-array.png", width: 30%)
+  #image("../image/memory_array.png", width: 30%)
 ]
 #tag("instruction") 指令
 #indent[
@@ -223,9 +223,9 @@
 
   *Example* `add` 指令. `add x_1 x_2`. 指令的 bit 数据位分为三个区域, 表示不同类型的信息
 
-  #image("../image/add-instruction.png", width: 70%)
+  #image("../image/add_instruction.png", width: 70%)
 
-  #image("../image/add-instruction-computer.png", width: 80%)
+  #image("../image/add_instruction_computer.png", width: 80%)
   
   + 读取 `add` 指令 
     - `add` 指令在 `adress_0` (`add x_1 x_2` 以及 `adress_1, adress 2` 来自源代码和编译器的生成)
@@ -251,7 +251,7 @@
       i = i + 1;
   } // result = 10
   ```
-  #image("../image/while-computer.png", width: 90%)
+  #image("../image/while_computer.png", width: 90%)
 
   + 读取指令
 

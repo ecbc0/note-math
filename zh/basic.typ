@@ -164,9 +164,9 @@ $
 $
 类似 $and,or,not$ 的冗余, set/type construction rules 也有可能有冗余, 或者说有很多等价的定义方式. prover 程序里面的 "normalization" 本质上也是处理逻辑等价
 
-follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义
+follow #link(<bool_algebra>)[有限情况的 bool 的各种规则], 定义
 
-#tag("commutative-forall-exists") 
+#tag("commutative_forall_exists") 
 #indent[
   $ 
     And_(a ∈ A) And_(b ∈ B) p(a,b) 
@@ -174,7 +174,7 @@ follow #link(<bool-algebra>)[有限情况的 bool 的各种规则], 定义
   $ 
   same for $Or$
 ]
-#tag("distributive-forall-exists")  
+#tag("distributive_forall_exists")  
 #indent[
   (需要假设函数 $A -> B$ 的存在?)
   $ 
@@ -216,7 +216,7 @@ if (rain = true) {
 
 $p <=> q := (p => q) and (q => p)$ 并发现 $p <=> q$ 就是 $p = q$
 
-#tag("reverse-inference") 反向推导. 如果结果是我出门了, 那么肯定不是下雨的结果. 如果条件分支的结果是 `out = true`, 这不是 `rain = true` 的结果. 由于理想二进制计算机的 bool 值必定二选一, 所以只能是 `rain = false` 的结果. 这可以被写为条件分支
+#tag("reverse_inference") 反向推导. 如果结果是我出门了, 那么肯定不是下雨的结果. 如果条件分支的结果是 `out = true`, 这不是 `rain = true` 的结果. 由于理想二进制计算机的 bool 值必定二选一, 所以只能是 `rain = false` 的结果. 这可以被写为条件分支
 ```rs
 match (out) {
   true => rain = false,
@@ -225,7 +225,7 @@ match (out) {
 ```
 数学上, 反向推导写为 formula $not q => not p$, 并定义等价到 $p => q$
 
-#tag("natural-number") 
+#tag("natural_number") 
 #indent[
   natrual number (自然数) $0,1,2,...$
   
@@ -316,7 +316,7 @@ match (out) {
 
 function space 引入了高级别的无限
 
-一件初看反直觉的事情是, 我们_似乎_知道所有 $S in Set ℕ$ 或所有 $f : ℕ -> ℕ$, 却无法数出来 #link(<cardinal-increase>)[] #link(<uncountable>)[]. 但是, "知道所有 $S in Set ℕ$" 究竟是什么意思? 事实上, 试着考虑 "以一般地方式找一个 $ℕ$ 的无限子集" 这一个问题, 就会发现这不是简单的
+一件初看反直觉的事情是, 我们_似乎_知道所有 $S in Set ℕ$ 或所有 $f : ℕ -> ℕ$, 却无法数出来 #link(<cardinal_increase>)[] #link(<uncountable>)[]. 但是, "知道所有 $S in Set ℕ$" 究竟是什么意思? 事实上, 试着考虑 "以一般地方式找一个 $ℕ$ 的无限子集" 这一个问题, 就会发现这不是简单的
 
 类似地, 虽然可数已经可以定义一些实数 e.g. $sum 1/n! = e$, 但如果不借助 $Set ℕ$ or $ℕ -> ℕ$, 只有可数的构造无法得到全部 $ℝ$
 
@@ -334,9 +334,9 @@ function space 引入了高级别的无限
   
   $S = S' <=> (S subset S') and (S' subset S)$
 
-  或者如果 #link(<set-with-element-in-a-type>)["用类型论构造集合论"], 那么集合的相等的定义 reduce to 函数 $f,g: T -> "Bool"$ 相等的定义
+  或者如果 #link(<set_with_element_in_a_type>)["用类型论构造集合论"], 那么集合的相等的定义 reduce to 函数 $f,g: T -> "Bool"$ 相等的定义
 ]
-#let A = c-bf("A",rgb("#0056e1"))
+#let A = bf("A")
 
 let $#A in Set(Set(T))$
 
@@ -371,7 +371,7 @@ let $#A in Set(Set(T))$
 
 根据指标映射 $A in (I -> Set T)$ 可以定义无限版本的 product, sum
 
-- #tag("product-index") 
+- #tag("product_index") 
 #indent[
   $x in product_(i in I) A(i) := And_(i in I) Or_(a in A(i)) (x, i) = a$
 
@@ -384,7 +384,7 @@ let $#A in Set(Set(T))$
     map(product_(i in I) A(i), A(i), x, x(i))     
   $
 ]
-- #tag("sum-index") 
+- #tag("sum_index") 
 #indent[
   $x in sum_(i in I) A(i) := Or_(i in I) Or_(a in A(i)) x = (i, a)$
 
@@ -393,7 +393,7 @@ let $#A in Set(Set(T))$
     map(A(i), sum_(i in I) A(i), a, (i, a) = x) 
   $
 ]
-#tag("hierarchy-order-of-set")
+#tag("hierarchy_order_of_set")
 #indent[
   以上构造的 type/set 称为 zero (hierarchy) order type/set
 
@@ -428,7 +428,7 @@ let $#A in Set(Set(T))$
   
   $Type n$ 属于 $Type n+1$ 且属于 $Type ℕ$, 但这两种 "属于" 的语言规则是不同 
 ]
-#tag("universal-type")
+#tag("universal_type")
 #indent[
   universal-type 的问题, 或者 type of every type 的问题
 
@@ -436,7 +436,7 @@ let $#A in Set(Set(T))$
 
   假设程序定义了一种 universal-type 的概念, 且 universal-type 又可以用来构造 "type", 则 universal-type 就自指地参与到了 "type" 的构造规则中, 导致非终结语言或程序
 
-  *Example* #tag("Russell-paradox")
+  *Example* #tag("Russell_paradox")
   #indent[
     使用 set theory rules 定义
 
@@ -444,7 +444,7 @@ let $#A in Set(Set(T))$
 
     然后去计算另外一个命题 $A in A$ 的 bool, 由于 $A in "universal-set"$ = `true`, prover 只需计算 $not (A in A)$ 的 bool, 然后发现 `not`, 所以尝试计算 `not` 里面的 bool, 但这又回到了计算 $A in A$ 的 bool, 进入电路死循环
   ]
-  *Example* #tag("self-referential-paradox") 自指悖论. "这个句子是错的"
+  *Example* #tag("self_referential_paradox") 自指悖论. "这个句子是错的"
   #indent[
     ```rs
     this_sentence_is_false : bool = false;
@@ -457,7 +457,7 @@ let $#A in Set(Set(T))$
     ```
   ]
 ]
-#tag("dependent-distributive") 
+#tag("dependent_distributive") 
 #indent[
   let $#A$ be set of sets, let $A in "Map"(I, #A)$, and let $A(i)$ be set of sets, index by its elements $x(i)$
 
@@ -467,16 +467,16 @@ let $#A in Set(Set(T))$
 
   $ ⋃_(i ∈ I) ⋂_(x(i) in A(i)) x(i) = ⋂_(x ∈ product_(i in I) A(i)) ⋃_(i ∈ I) x(i) $
 
-  draft of proof: 展开, 使用 #link(<distributive-forall-exists>)[]
+  draft of proof: 展开, 使用 #link(<distributive_forall_exists>)[]
 
   sum & product
 
   $ product_(i ∈ I) sum_(x(i) ∈ A(i)) x(i) = sum_(x ∈ product_(i in I) A(i)) product_(i ∈ I) x(i) $
 ]
-#tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
+#tag("set_minus") #image("../image/set_minus.jpeg", width: 30%)
 
 $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊆ A$ then define $B^∁ := A ∖ B$
 
-#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.png", width: 30%)
+#tag("symmetric_set_minus") #image("../image/set_symmetric_minus.png", width: 30%)
 
 $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$ 

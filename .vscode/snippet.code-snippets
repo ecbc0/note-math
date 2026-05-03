@@ -1,0 +1,764 @@
+{
+	// mathbb
+	"ℝ": {
+		"prefix": [
+			"R",
+			"RR"
+		],
+		"body": "ℝ",
+		"description": "real"
+	},
+	"ℂ": {
+		"prefix": [
+			"C",
+			"CC"
+		],
+		"body": "ℂ",
+		"description": "complex"
+	},
+	"ℂ_\"split\"": {
+		"prefix": [
+			"C-split"
+		],
+		"body": "ℂ_\"split\"",
+		"description": "complex (split)"
+	},
+	"ℍ": {
+		"prefix": [
+			"H",
+			"HH"
+		],
+		"body": "ℍ",
+		"description": "quaternion"
+	},
+	"𝕆": {
+		"prefix": [
+			"O",
+			"OO"
+		],
+		"body": "𝕆",
+		"description": "octonion"
+	},
+	"𝕂": {
+		"prefix": [
+			"K",
+			"KK"
+		],
+		"body": "𝕂",
+		"description": "division algebra"
+	},
+	"ℕ": {
+		"prefix": [
+			"N",
+			"NN"
+		],
+		"body": "ℕ",
+		"description": "natural"
+	},
+	"ℤ": {
+		"prefix": [
+			"Z",
+			"ZZ"
+		],
+		"body": "ℤ",
+		"description": "interger"
+	},
+	"ℚ": {
+		"prefix": [
+			"Q",
+			"QQ"
+		],
+		"body": "ℚ",
+		"description": "rational"
+	},
+	"𝕊": {
+		"prefix": [
+			"S",
+			"SS"
+		],
+		"body": "𝕊",
+		"description": "sphere"
+	},
+	"𝔹": {
+		"prefix": [
+			"B",
+			"BB"
+		],
+		"body": "𝔹",
+		"description": "open ball"
+	},
+	"ℝℙ": {
+		"prefix": "RP",
+		"body": "ℝℙ",
+		"description": "real projective"
+	},
+	"ℂℙ": {
+		"prefix": "CP",
+		"body": "ℂℙ",
+	},
+	"ℍℙ": {
+		"prefix": "HP",
+		"body": "ℍℙ",
+	},
+	"𝕆ℙ": {
+		"prefix": "OP",
+		"body": "𝕆ℙ",
+	},
+	"𝕂ℙ": {
+		"prefix": "KP",
+		"body": "𝕂ℙ",
+	},
+	"ℍ𝕪": {
+		"prefix": "Hy",
+		"body": "ℍ𝕪",
+		"description": "hyperbolic"
+	},
+	"𝟙": {
+		"prefix": "bb-1",
+		"body": "𝟙"
+	},
+	"∂ diff operator": {
+		"prefix": "e",
+		"body": "∂",
+		"description": "partial diff"
+	},
+	"∇": {
+		"prefix": "nabla",
+		"body": "∇"
+	},
+	"∆": {
+		"prefix": [
+			"harmonician",
+			"Laplacian"
+		],
+		"body": "∆"
+	},
+	// arrow
+	"→": {
+		"prefix": [
+			"to"
+		],
+		"body": "→"
+	},
+	"⟶": {
+		"prefix": [
+			"to-long"
+		],
+		"body": "⟶"
+	},
+	"⇝": {
+		"prefix": [
+			"mto",
+			"maps-to"
+		],
+		"body": "⇝",
+		"description": "maps to"
+	},
+	"⟿": {
+		"prefix": [
+			"mto-long",
+			"maps-to-long"
+		],
+		"body": "⟿",
+		"description": "maps to long"
+	},
+	"↪": {
+		"prefix": "ito",
+		"body": "↪",
+		"description": "injective"
+	},
+	"↠": {
+		"prefix": [
+			"sto"
+		],
+		"body": "↠",
+		"description": "surjective"
+	},
+	"∼": {
+		"prefix": "sim",
+		"body": "∼",
+		"description": "similar"
+	},
+	"≃": {
+		"prefix": "isom",
+		"body": "≃"
+	},
+	// dot
+	"⋅": {
+		"prefix": "dot",
+		"body": "⋅"
+	},
+	"…": {
+		"prefix": "dots",
+		"body": "…"
+	},
+	",…,": {
+		"prefix": "so-on",
+		"body": ",…,"
+	},
+	"⋯": {
+		"prefix": [
+			"cdots",
+		],
+		"body": "⋯",
+		"description": "center dots"
+	},
+	"⋱": {
+		"prefix": [
+			"ddots",
+		],
+		"body": "⋱",
+		"description": "diagonal dots"
+	},
+	"⋮": {
+		"prefix": [
+			"vdots"
+		],
+		"body": "⋮",
+		"description": "vertical dots"
+	},
+	// operator
+	"⊗": {
+		"prefix": "tensor",
+		"body": "⊗",
+	},
+	"⊙": {
+		"prefix": "symmetric-tensor",
+		"body": "⊙",
+	},
+	"∧": {
+		"prefix": "alternating-tensor",
+		"body": "∧",
+	},
+	"⨂": {
+		"prefix": "Tensor",
+		"body": "⨂"
+	},
+	"⨀": {
+		"prefix": "Symmetric-Tensor",
+		"body": "⨀"
+	},
+	"⋀": {
+		"prefix": [
+			"Alternating-Tensor"
+		],
+		"body": "⋀"
+	},
+	"⨉": {
+		"prefix": "Times",
+		"body": "⨉"
+	},
+	"×": {
+		"prefix": "times",
+		"body": "×"
+	},
+	"⋊": {
+		"prefix": [
+			"rtimes",
+			"right-times"
+		],
+		"body": "⋊",
+		"description": "right times"
+	},
+	"±": {
+		"prefix": [
+			"pm",
+			"plus-minus"
+		],
+		"body": "±",
+		"description": "plus minus"
+	},
+	"∓": {
+		"prefix": [
+			"mp",
+			"minus-plus"
+		],
+		"body": "∓"
+	},
+	"⊕": {
+		"prefix": "plus",
+		"body": "⊕"
+	},
+	"⨁": {
+		"prefix": "Plus",
+		"body": "⨁"
+	},
+	"∘": {
+		"prefix": "compose",
+		"body": "∘"
+	},
+	// function
+	"⊺": {
+		"prefix": "transpose",
+		"body": "⊺"
+	},
+	"⊤": {
+		"prefix": "tangent",
+		"body": "⊤"
+	},
+	"†": {
+		"prefix": [
+			"dagger",
+			"adjoint"
+		],
+		"body": "†"
+	},
+	"‡": {
+		"prefix": [
+			"ddagger"
+		],
+		"body": "‡"
+	},
+	"∁": {
+		"prefix": "complement",
+		"body": "∁"
+	},
+	"⬨": {
+		"prefix": [
+			"lozenge",
+			"parity"
+		],
+		"body": "◊" //  // "⬨" lozenge.stroked.medium
+	},
+	"⟂": {
+		"prefix": [
+			"perpendicular",
+			"normal"
+		],
+		"body": "⟂",
+		"description": "perpendicular"
+	},
+	"⋆": {
+		"prefix": "star",
+		"body": "⋆"
+	},
+	// logic
+	"∀": {
+		"prefix": "forall",
+		"body": "forall"
+	},
+	"∃": {
+		"prefix": "exists",
+		"body": "exists"
+	},
+	"≠": {
+		"prefix": [
+			"neq",
+			"not-equal"
+		],
+		"body": "≠"
+	},
+	"≡": {
+		"prefix": [
+			"eq-all",
+			"equal-all"
+		],
+		"body": "≡"
+	},
+	/*"∈": {
+		"prefix": "in",
+		"body": "∈"
+	},*/
+	"∉": {
+		"prefix": "not-in",
+		"body": "∉"
+	},
+	"⊆": {
+		"prefix": "subset",
+		"body": "⊆"
+	},
+	"⊇": {
+		"prefix": "supset",
+		"body": "⊇"
+	},
+	"⊈": {
+		"prefix": "not-subset",
+		"body": "⊈"
+	},
+	"⊉":{
+	  "prefix": "not-supset",
+	  "body": "⊉"
+	},
+	"⊊": {
+		"prefix": "subset-not-equal",
+		"body": "⊊"
+	},
+	"⊋": {
+		"prefix": "supset-not-equal",
+		"body": "⊋"
+	},
+	"⋐":{
+	  "prefix": "subset-compact",
+	  "body": "⋐"
+	},
+	"∖": {
+		"prefix": "without",
+		"body": "∖"
+	},
+	"∅": {
+		"prefix": "empty",
+		"body": "∅"
+	},
+	"∪": {
+		"prefix": "union",
+		"body": "∪"
+	},
+	"∩": {
+		"prefix": [
+			"intersect"
+		],
+		"body": "∩"
+	},
+	"⋃": {
+		"prefix": "Union",
+		"body": "⋃"
+	},
+	"⋂": {
+		"prefix": [
+			"Intersect"
+		],
+		"body": "⋂"
+	},
+	"⊔": {
+		"prefix": "sum-union",
+		"body": "⊔"
+	},
+	"⨆": {
+		"prefix": "Sum-Union",
+		"body": "⨆"
+	},
+	"≈": {
+		"prefix": "approximation",
+		"body": "≈"
+	},
+	// other
+	"∞": {
+		"prefix": [
+			"oo",
+			"infinity"
+		],
+		"body": "∞",
+	},
+	"‖ ‖": {
+		"prefix": "norm",
+		"body": "‖$1‖"
+	},
+	"⟨ ⟩": {
+		"prefix": "quadratic-form",
+		"body": "⟨ $1 ⟩"
+	},
+	"⟨ ⟩^2": {
+		"prefix": [
+			"quadratic-form-square"
+		],
+		"body": "⟨ $1 ⟩^2",
+	},
+	"ℏ": {
+		"prefix": "hbar",
+		"body": "ℏ"
+	},
+	"♭":{
+		"prefix": "flat",
+		"body": "♭"
+	},
+	"♯":{
+		"prefix": "sharp",
+		"body": "♯"
+	},
+
+
+	"integral": {
+		"prefix": "integral",
+		"body": "integral"
+	},
+	"integral-contour": {
+		"prefix": "integral-contour",
+		"body": "integral.cont"
+	},
+	"∫": {
+		"prefix": "integral",
+		"body": "∫"
+	},
+	"integral spacetime": {
+		"prefix": "integral-spacetime",
+		"body": "integral_(ℝ^(1,3)) #d x ( ${1:/* integrand */} )"
+	},
+	"SO(1,3) ⋊ ℝ^(1,3)": {
+		"prefix": [
+		"spacetime-group",
+		"Poincare-group"
+		],
+		"body": "SO(1,3) ⋊ ℝ^(1,3)"
+	},
+	"SO(1,3)": {
+		"prefix": [
+		"SO13",
+		"Lorentz-group"
+		],
+		"body": "SO(1,3)"
+	},
+	"SO(1,n)": {
+		"prefix": [
+		"SO1n",
+		"Lorentz-group"
+		],
+		"body": "SO(1,n)"
+	},
+	"ℝ^(1,3)": {
+		"prefix": [
+		"R13"
+		],
+		"body": "ℝ^(1,3)"
+	},
+	"ℝ^(1,n)": {
+		"prefix": [
+		"R1n"
+		],
+		"body": "ℝ^(1,n)"
+	},
+	"lim index": {
+		"prefix": "lim",
+		"body": "lim_(${1:n -> ∞})"
+	},
+	"sum index": {
+		"prefix": "sum-index",
+		"body": "sum_(${1:n ∈ ℕ})"
+	},
+	"product index": {
+		"prefix": "product-index",
+		"body": "product_(${1:n ∈ ℕ})"
+	},
+	"a ∈ A": {
+		"prefix": "a-in-A",
+		"body": "a in A"
+	},
+	"n ∈ ℕ": {
+		"prefix": "n-in-N",
+		"body": "n in ℕ"
+	},
+	"N ∈ ℕ": {
+		"prefix": "N-in-N",
+		"body": "N in ℕ"
+	},
+	"ε-N": {
+		"prefix": "epsilon-N",
+		"body": "forall ε > 0, exists N in ℕ, forall n > N, "
+	},
+	"ε-δ": {
+		"prefix": "epsilon-delta",
+		"body": "forall ε > 0, exists δ > 0, forall "
+	},
+	"snippet-map": {
+		"prefix": "map",
+		"body": [
+		"dmat( delim: #none ,",
+		"  ${1:/* domain */} &⟶ ${2:/* co-domain */} ;",
+		"  ${3:/* source */} &⟿ ${4:/* target */}",
+		")"
+		]
+	},
+	"snippet-map-middle": {
+		"prefix": "map-middle",
+		"body": [
+		"dmat( delim: #none ,",
+		"  ${1:/* domain */} , ⟶ , ${2:/* co-domain */} ;",
+		"  ${3:/* source */} , ⟿ , ${4:/* target */}",
+		")"
+		]
+	},
+	"d diff operator": {
+		"prefix": "d",
+		"body": "#d"
+	},
+	"d diff": {
+		"prefix": "diff",
+		"body": "(#d$3 ${2:f})/(#d ${1:x})"
+	},
+	"∂ diff": {
+		"prefix": "diff (partial)",
+		"body": "(∂$3 ${2:f})/(∂ ${1:x})",
+		"description": "partial diff"
+	},
+	"d/dx": {
+		"prefix": "dd",
+		"body": "(#d)/(#d ${1:x})"
+	},
+	"∂/∂x": {
+		"prefix": "ee",
+		"body": "(∂)/(∂ ${1:x})"
+	},
+	"Im(ℂ) i": {
+		"prefix": "i",
+		"body": "#i"
+	},
+	"|ket⟩ ⟨bra|": {
+		"prefix": "ket-bra",
+		"body": "ket($1) bra($1)"
+	},
+	"⟨bra|ket⟩": {
+		"prefix": "bra-ket",
+		"body": "⟨ $1 mid(|) $2 ⟩"
+	},
+	"⟨bra|op|ket⟩": {
+		"prefix": "bra-op-ket",
+		"body": "⟨ $1 mid(|) $2 mid(|) $3 ⟩"
+	},
+	"op ⋯ op": {
+		"prefix": "n-fold",
+		"body": "$1 ⋯ $1"
+	},
+	"square-matrix":{
+		"prefix": "square-matrix",
+		"body": [
+		"mat(",
+		"  ${1:a}_(1 1), ⋯ , ${1:a}_(1 ${2:n}) ;",
+		"  ⋮ , ⋱ , ⋮ ;",
+		"  ${1:a}_(${2:n} 1), ⋯ , ${1:a}_(${2:n} ${2:n})",
+		")"
+		]
+	},
+
+
+  "snippet": {
+    "prefix": "snippet",
+    "body": [
+      "\"$1\":{",
+      "  \"prefix\": \"$2\",",
+      "  \"body\": \"$3\"",
+      "},"
+    ]
+  },
+  "def":{
+    "prefix": "def",
+    "body": "*Def*"
+  },
+  "prop": {
+    "prefix": "prop",
+    "body": "*Prop*"
+  },
+  "proof": {
+    "prefix": "proof",
+    "body": "_Proof_"
+  },
+  "example": {
+    "prefix": "example",
+    "body": "*Example*"
+  },
+  "question": {
+    "prefix": "question",
+    "body": "*Question*"
+  },
+  "abbreviation": {
+    "prefix": "abbreviation",
+    "body": "*Abbreviation*"
+  },
+  "alias": {
+    "prefix": "alias",
+    "body": "*alias*"
+  },
+  "textmate rule": {
+    "prefix": "textmate rule",
+    "body": [
+      "{",
+      "    \"scope\": [$1],",
+      "    \"settings\": {",
+      "        \"foreground\": \"$2\"",
+      "    }",
+      "}"
+    ]
+  },
+
+
+  "import": {
+    "prefix": "import",
+    "body": [
+      "#import \"../module/module.typ\": *",
+      "#show: module"
+    ]
+  },
+  "table": {
+    "prefix": "table",
+    "body": [
+      "#table(",
+      "columns: ${1:2},",
+      "[$2],[$3],",
+      "[$4],[$5]",
+      ")"
+    ]
+  },
+  "#tag(\"⋯\")": {
+    "prefix": [
+      "tag"
+    ],
+    "body": "#tag(\"$1\")"
+  },
+  "#link(<⋯>)[]": {
+    "prefix": [
+      "link"
+    ],
+    "body": "#link(<$1>)[]"
+  },
+  "indent": {
+    "prefix": "indent",
+    "body": [
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
+  "tag-indent": {
+    "prefix": "tag-indent",
+    "body": [
+      "#tag(\"$1\") $2",
+      "#indent[",
+      "  $3",
+      "]"
+    ]
+  },
+  "prop-indent": {
+    "prefix": "Prop-indent",
+    "body": [
+      "*Prop*",
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
+  "proof-indent": {
+    "prefix": "proof-indent",
+    "body": [
+      "_Proof_",
+      "#indent[",
+      "  $1",
+      "]"
+    ]
+  },
+  "image(\"path\", width: size)": {
+    "prefix": "image-size",
+    "body": "#image(\"$1\", width: ${2:3}0%)"
+  },
+  "stack-ltr":{
+    "prefix": "stack-ltr",
+    "body": [
+      "#stack( dir: ltr,",
+      "  $1",
+      ")"
+    ]
+  },
+  "color symbol": {
+    "prefix": "color symbol",
+    "body": "show ${1:symbol}: it => o-color(it, fill: rgb(\"${2:#006dea}\"))"
+  },
+  "color symbol regex": {
+    "prefix": "color symbol regex",
+    "body": "show regex(\"${1:symbol}\"): it => o-color(it, fill: rgb(\"${2:#006dea}\"))"
+  },
+  "style symbol": {
+    "prefix": "style symbol",
+    "body": "show \"${1:symbol}\": it => ${2:style}(it)"
+  },
+  "text color": {
+    "prefix": "text color",
+    "body": "o-color(${1:x}, fill: rgb(\"${2:#006dea}\"))"
+  },
+}

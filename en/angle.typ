@@ -30,7 +30,7 @@ At the same time, because $SO(2)$ are linear maps, the distributive law holds
 $
   z ⋅ (z' + z'') = z ⋅ z' + z ⋅ z''
 $
-#tag("complex-numbler-geometric-meaning") This is equivalent to the multiplication of unit complex numbers. Since rotations $SO(2)$ and scalar multiplication $ℝ$ commute, the multiplication on unit complex numbers can be easily extended to multiplication on complex numbers $ℂ$
+#tag("complex_numbler_geometric_meaning") This is equivalent to the multiplication of unit complex numbers. Since rotations $SO(2)$ and scalar multiplication $ℝ$ commute, the multiplication on unit complex numbers can be easily extended to multiplication on complex numbers $ℂ$
 
 #tag("angle") Angle
 #indent[
@@ -61,7 +61,7 @@ $
       exp(θ_1 X) ⋅ exp(θ_2 X) = exp(θ_2 X) ⋅ exp(θ_1 X)
     $
 
-  For the geodesic coordinates starting from $vec(1,0) in 𝕊^1$, the result is denoted as #tag("trigonometric-function") trigonometric functions $vec(cos(θ),sin(θ))$.
+  For the geodesic coordinates starting from $vec(1,0) in 𝕊^1$, the result is denoted as #tag("trigonometric_function") trigonometric functions $vec(cos(θ),sin(θ))$.
 
   According to the correspondence between $SO(2)$ multiplication and $𝕊^1$ multiplication, we know that $mat(cos(θ), -sin(θ); sin(θ), cos(θ)) vec(1, 0) = vec(cos(θ), sin(θ))$
 
@@ -113,7 +113,7 @@ $
 $
 $v = |v| exph(ϕ #i-split)$. Distance can also be expressed in $ℂ_"split"$. $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$.
 
-#tag("hyperbolic-exp-inverse")
+#tag("hyperbolic_exp_inverse")
 #indent[
   $exph ((ϕ + ψ)#i-split) = exph(ϕ #i-split) exph(ψ #i-split)$
 

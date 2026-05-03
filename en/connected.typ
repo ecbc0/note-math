@@ -1,9 +1,9 @@
 #import "../module/module.typ": *
 #show: module
 
-#let T = o-color("T", rgb("#919191"))
+#let T = "T"
 
-*Example* #link(<interval>)[] #link(<best-interval-decomposition>)[]
+*Example* #link(<interval>)[] #link(<best_interval_decomposition>)[]
 
 #tag("connected") Connected or limit connected := limit point set decomposition is no longer possible or closed set decomposition is no longer possible
 
@@ -25,9 +25,9 @@ Connected subset := topological subspace connected
 
 *Example* $ℝ$ is connected. $ℝ$ has connected and disconnected sets. Connected sets may not be $#T _ ℝ$ closed sets
 
-#tag("real-connected-is-interval") Connected sets of $ℝ$ are intervals _Proof_ by interval connected + optimal interval decomposition + number of intervals in optimal interval decomposition $> 1$ is disconnected
+#tag("real_connected_is_interval") Connected sets of $ℝ$ are intervals _Proof_ by interval connected + optimal interval decomposition + number of intervals in optimal interval decomposition $> 1$ is disconnected
 
-#tag("connected-imply-closure-connected") $S$ is a connected set ==> $closed(S)$ is a connected set
+#tag("connected_imply_closure_connected") $S$ is a connected set ==> $closed(S)$ is a connected set
 
 _Proof_ 
 #indent[
@@ -41,7 +41,7 @@ _Proof_
 ]
 $closed(S)$ is not a connected set ==> $S$ is not a connected set
 
-#tag("connected-componet") Connected component decomposition := Limit point set decomposition's limit $X = lim ⨆_(i in I) A_(i)$, such that each limit point set $A_i$ cannot be further decomposed i.e. connected
+#tag("connected_componet") Connected component decomposition := Limit point set decomposition's limit $X = lim ⨆_(i in I) A_(i)$, such that each limit point set $A_i$ cannot be further decomposed i.e. connected
 
 It is indeed the unique limit in the sense of #link(<net>)[net]. The net comes from the decomposition of $X$ into two closed sets, which can be taken as a common refinement decomposition + closed sets are closed under finite intersection.
 
@@ -57,13 +57,13 @@ _Proof_ The points of $A$ must be in $X$ and therefore in some connected compone
 
 The union of connected sets $S_i$ with a common point $x$, $⋃_(i in I) S_i$, is connected
 #indent[
-  recall #link(<topology-subspace>)[inheritance of subspace topology]. So connectedness is also inherited.
+  recall #link(<topology_subspace>)[inheritance of subspace topology]. So connectedness is also inherited.
 
   So we only need to deal with the case of $⋃_(i in I) S_i = X$
 ]
 _Proof_ The connected sets containing $x$ are all in the same connected component. This shows that $⋃_(i in I) S_i = X$ has only one connected component, and is therefore connected.
 
-A connected component is a maximal element of the $⊆$ #link(<maximal-linear-order>)[maximal linear order] of a connected set family.
+A connected component is a maximal element of the $⊆$ #link(<maximal_linear_order>)[maximal linear order] of a connected set family.
 
 The image of a continuous function transmits connectedness.
 
@@ -73,7 +73,7 @@ The inverse-image of a continuous function transmits disconnectedness as contrap
 
 _Proof_ Closed set decomposition $Y = A ⊔ A'$ ==> Closed set decomposition $X = f^(-1)(A) ⊔ f^(-1)(A')$
 
-==> #tag("mean-value-theorem-continuous") Intermediate Value Theorem for Continuous Functions. The image $f(X)$ of a continuous function $f : X -> ℝ$ is connected #link(<real-connected-is-interval>)[therefore] is an interval
+==> #tag("mean_value_theorem_continuous") Intermediate Value Theorem for Continuous Functions. The image $f(X)$ of a continuous function $f : X -> ℝ$ is connected #link(<real_connected_is_interval>)[therefore] is an interval
 
 If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected. _Proof_ let $Y = A ⊔ A'$ with $A,A'$ closed, prove that $A or A' = ∅$. Or $Y = ⋃_(y in Y) S(y_0,y)$ and the union of connected sets $S(y_0,y)$ that have a common point $y_0$ is connected
 
@@ -81,7 +81,7 @@ If any two points in $Y$ are in some connected subset $S$, then $Y$ is connected
 
 ==> Path connected
 
-#tag("product-topology-preserve-connected") #link(<product-topology>)[Product topology] preserves connectedness
+#tag("product_topology_preserve_connected") #link(<product_topology>)[Product topology] preserves connectedness
 
 _Proof_
 #indent[
@@ -94,7 +94,7 @@ _Proof_
   $ 
   Using the common point method again, the union of cross-shaped subsets $C = ⋃_(j_1 ,…, j_n) C_(j_1 ,…, j_n)$ forms a connected subset
   
-  $closed(C) = prod$ and #link(<connected-imply-closure-connected>)[] ==> $prod$ connected
+  $closed(C) = prod$ and #link(<connected_imply_closure_connected>)[] ==> $prod$ connected
 
   _Proof_ of $closed(C) = X$
   #indent[
@@ -113,14 +113,14 @@ All connected components of $prod$ are
 
 $ product_(i in I) A_(i, j(i)) : j in product_(i in I) J(i) $
 
-_Proof_ Using #link(<dependent-distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and the product being connected implies product connectedness, so $product_(i in I) A_(i, j(i))$ is connected, thus it can no longer be decomposed
+_Proof_ Using #link(<dependent_distributive>)[] $product_(i in I) ⨆_(j in J) A_(i,j(i)) = ⨆_(j in J) product_(i in I) A_(i,j(i))$ and the product being connected implies product connectedness, so $product_(i in I) A_(i, j(i))$ is connected, thus it can no longer be decomposed
 
-Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology? cf. #link(<analytic-space>)[definition of net of analytic-space])
+Define (how?) the topology or limit point of $f in C(X -> Y)$ (should be something compact open topology? cf. #link(<analytic_space>)[definition of net of analytic-space])
 
 #tag("homotopy") homotopy or limit point homotopy := $C(X -> Y)$ is limit connected
 
 *Example* $ℝ^(n+1) ∖ 0$ is homotopic to $𝕊^(n)$
 
-#tag("homotopy-class") := the connected component of $C(X -> Y)$
+#tag("homotopy_class") := the connected component of $C(X -> Y)$
 
 Since composition preserves continuity, composition induces an operation on $C(X -> Y)$. Prove whether it is well-defined. Sometimes it's invertible, making it a group operation

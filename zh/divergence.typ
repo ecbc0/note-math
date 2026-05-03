@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("orientation-of-real-linear-space") $ℝ^n$ 方向
+#tag("orientation_of_real_linear_space") $ℝ^n$ 方向
 
 $A in GL(n,ℝ), det A != 0$
 
@@ -11,7 +11,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 有两个方向. 对于 $ℝ^n$ 向量基, 交换一次顺序 $e_i <-> e_j$ 会使得方向改变, 引入 $-1$ 因子. 这和交错张量有相似之处. 方向定义为基的同向 quotient, 等价于 $GL(n,ℝ)$ 的 $det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$ 分解
 
-#tag("orientation-of-boundary-of-simplex") 
+#tag("orientation_of_boundary_of_simplex") 
 #indent[
   simplx 有向边界. simplex ${x_0 ,…, x_n}$ 边界 ${x_0 ,…, x_n without x_i}$ 的方向是, 给边界所在的 $n-1$ 仿射子空间定义方向, 使得内部 $A$ 在 $n$ 维正方向, 外部 $A^∁$ 在 $n$ 维负方向 
 
@@ -25,11 +25,11 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   *Example* 四面体, 右手定则, 拇指指向四面体内部得到边界方向 (图片的顶点的指标从 $1$ 而不是 $0$ 开始)
 
-  #image("../image/orientation-of-simplex.png", width: 100%)
+  #image("../image/orientation_of_simplex.png", width: 100%)
 ]
-#tag("orientable-low-dim-polyhera") 多面体 #link(<orientation-of-boundary-of-simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
+#tag("orientable_low_dim_polyhera") 多面体 #link(<orientation_of_boundary_of_simplex>)[可定向] 定义为, 用 simplex 构造多面体时, 能够对所有 $k$ simplex 定义兼容的方向, 使得相邻两个 $k$ simplex $A,B$ 的 $k-1$ 相接边界 simplex 的方向兼容 i.e. 方向 $O$ 对应 simplex $A$ 的内部和 simplex $B$ 的外部. 方向 $-O$ 对应 simplex $B$ 的内部和 simplex $A$ 的外部. i.e. simplex 分割有良定义内部和外部
 
-*Eaxmple* #tag("Mobius-strip") 不可定向的 Mobius 型多面体 (image modified from wiki)
+*Eaxmple* #tag("Mobius_strip") 不可定向的 Mobius 型多面体 (image modified from wiki)
 
 #image("../image/Moebius.svg", width: 50%)
 
@@ -37,9 +37,9 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 从初始 $k$ simplex 开始, 不断传递地对相邻 $k$ simplex 定义兼容的方向, 绕一圈会导致相接边界 simplex 的方向不兼容. 方向 $O$ 都对应 $A,B$ 内部, 方向 $-O$ 都对应 $A,B$ 外部
 
-#tag("simplex-chain") simplex chain
+#tag("simplex_chain") simplex chain
 
-#tag("boundary-operator") 
+#tag("boundary_operator") 
 #indent[
   边界算子 $∂$
 
@@ -49,13 +49,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   - boundary-op-not-injective (p. 405 of @ref-11, vol.1)
 
-    #image("../image/boundary-op-not-injective-1.png", width: 70%)
+    #image("../image/boundary_op_not_injective_1.png", width: 70%)
 
-    #image("../image/boundary-op-not-injective-2.png", width: 80%)
+    #image("../image/boundary_op_not_injective_2.png", width: 80%)
 
-  - #tag("tri-intersect-boundary")
+  - #tag("tri_intersect_boundary")
 
-    #image("../image/tri-intersect-boundary.png", width: 40%)
+    #image("../image/tri_intersect_boundary.png", width: 40%)
 
   cycle $∂ c = 0$
 
@@ -63,7 +63,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   $im ∂ ⊆ ker ∂$ or $im ∂_(k+1) ⊆ ker ∂_k$
 ]
-#tag("simplex-homology") 
+#tag("simplex_homology") 
 #indent[
   k-th homology $H_k (ℝ^n) = (ker ∂_k)/(im ∂_(k+1))$
 
@@ -71,13 +71,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   由于几何意义, 只需要 $ℤ$ 系数
 ]
-#tag("real-linear-space-trivial-homology") 
+#tag("real_linear_space_trivial_homology") 
 #indent[
   $ℝ^n$ is trivial homology $forall k = 1 ,…, n, H_k (ℝ^n) = 0$ or $ker ∂_k = im ∂_(k+1)$ or in $ℝ^n$, $c$ 的边界是零 <==> $c$ 是边界
 
   Try to prove it by purely affine orientation & combinatorics technique, avoid Euclidean topology
 ]
-#tag("existence-and-uniqueness-of-n-simplex-chain-with-boundary") 
+#tag("existence_and_uniqueness_of_n_simplex_chain_with_boundary") 
 #indent[
   in $ℝ^n$, uniqueness $n$ chain of $n-1$ boundary
 
@@ -96,17 +96,16 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
     &==> c=c'
   $
 ]
-#show "δ": it => o-color(it, rgb("#d25b00"))
 
-#tag("homology-hole") 对于集合 $ℝ^n$ 减去有限个或可数个分离的线性子空间或者多面体, homology 不是零
+#tag("homology_hole") 对于集合 $ℝ^n$ 减去有限个或可数个分离的线性子空间或者多面体, homology 不是零
 
-#image("../image/homology-hole.png", width: 100%)
+#image("../image/homology_hole.png", width: 100%)
 
-#tag("Stokes-theorem") 
+#tag("Stokes_theorem") 
 #indent[
-  类似于一维 #link(<fundamental-theorem-of-calculus>)[微积分基本定理]. 直观上, 散度和散度定理 = 高维微积分基本定理
+  类似于一维 #link(<fundamental_theorem_of_calculus>)[微积分基本定理]. 直观上, 散度和散度定理 = 高维微积分基本定理
 
-  在坐标里定义 #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 其中 $Vol$ 是坐标的体积, $σ$ 是一大类型区域, 计算结果不依赖于坐标选取 
+  在坐标里定义 #tag("exterior_differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$, 其中 $Vol$ 是坐标的体积, $σ$ 是一大类型区域, 计算结果不依赖于坐标选取 
 
   则有 Stokes-theorem 
   
@@ -118,13 +117,13 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 ]
 但是在一维微积分基本定理的证明中, 一维区间的分割, 一维区间的边界, 一维区间的边界的积分, 都太简单了, 高维区域没那么简单
 
-#tag("Stokes-theorem-simple") 对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 + compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理
+#tag("Stokes_theorem_simple") 对于高维, 如果是弯曲的, 则很困难. 先处理直的东西 i.e. simplex or 平行体. 分割也是同类型区域, 边界抵消也很简单. 再类似于一维, 用微分中值定理近似 + compact 控制即可. 这样就证明了 $ℝ^n$ simplex or 平行体的 Stokes 定理
 
-#tag("Stokes-theorem-proof") *Question*
+#tag("Stokes_theorem_proof") *Question*
 #indent[
   我改变主意了. 按照直观的对流形的积分和 Stokes 定理的处理, 就应该使用将流形直接分割的方法, 而不是近似分割
   
-  积分中的分割直接可以用零阶可测集 (对微分同胚封闭). Stokes 定理中用于分割的区域应该是类似几何测度论 (#link(<ref-33>)[]) 的有限周长集 (sets of finite perimeter, Cacciopoli sets), 希望它们对有限的并集交集减集封闭, 对微分同胚封闭
+  积分中的分割直接可以用零阶可测集 (对微分同胚封闭). Stokes 定理中用于分割的区域应该是类似几何测度论 (#link(<ref_33>)[]) 的有限周长集 (sets of finite perimeter, Cacciopoli sets), 希望它们对有限的并集交集减集封闭, 对微分同胚封闭
 
   证明带边流形局部是这种区域 (根据流形性质寻找多面体近似), 且这种理论的边界上的积分应该重合于流形理论中的边界上的积分 (类似几何测度论的约化边界 (reduced boundary) 理论). 证明良好的带奇点流形也属于这种区域 i.e. 多面体, 锥, 余维数 $> 1$ 的性质良好的奇点
   
@@ -146,7 +145,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
   由于外微分只有一阶微分而不存在无穷阶外微分, 因为在 metric 流形上的 form 的 $L^2$ norm $|ω|_(L^2) + |#d ω|_(L^2)$ 就适合 Banach/Hilbert 空间理论 (无穷阶微分就不适合 Banach 空间理论)
 
-  由于流形的拓扑可能同调非平凡, 有些上同调非零的 form $ω$ 的外微分 $#d ω$ 在积分时无法内部边界全部抵消, 因此会有类似于复分析中的额外的 "留数". 例如, #tag("cohomology-hole") *Example* in $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, 满足 $#d ^2 1/r = 0$, 所以在 $𝔹 ∖ 0$ 上积分是零, 但是 $#d 1/r$ 在 $𝔹 ∖ 0$ 的边界 $𝕊^1$ 上的积分非零. *Example* 同调同构于 $ℝ^2 ∖ 0$ 的 $𝕊^1$
+  由于流形的拓扑可能同调非平凡, 有些上同调非零的 form $ω$ 的外微分 $#d ω$ 在积分时无法内部边界全部抵消, 因此会有类似于复分析中的额外的 "留数". 例如, #tag("cohomology_hole") *Example* in $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, 满足 $#d ^2 1/r = 0$, 所以在 $𝔹 ∖ 0$ 上积分是零, 但是 $#d 1/r$ 在 $𝔹 ∖ 0$ 的边界 $𝕊^1$ 上的积分非零. *Example* 同调同构于 $ℝ^2 ∖ 0$ 的 $𝕊^1$
 
   在积分时边界无法抵消的另一种例子: 原本在闭球 $𝔹$ 上成立 Stokes 定理的向量场或者 form 在删去 $𝔹$ 的边界的一个类似闭圆盘的区域后, Stokes 定理不再成立. 直观来说, 删去一个闭圆盘后, 通量就漏出来了, 说明新的边界没有封闭住流形内部. 如果不是删去闭圆盘而是删去开圆盘, 那么得到的不是带边流形, 有余维数 > 1 的边界, 且不满足边界的边界是零
 
@@ -164,7 +163,7 @@ homology
 
 cohomology
 
-#tag("coboundary-operator") 
+#tag("coboundary_operator") 
 #indent[
   coboundary $ω_k = #d _(k-1) ω_(k-1)$
 
@@ -174,7 +173,7 @@ cohomology
 
   $im #d ⊆ ker #d$ or $im #d _(k-1) ⊆ ker #d _k$
 ]
-#tag("de-Rham-cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
+#tag("de_Rham_cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
 
 in $ℝ^n$, cohomology trivial $forall k = 1 ,…, n, H^k = 0$
 
@@ -182,7 +181,7 @@ metric 流形的情况
 
 对 $k$ form $ω$ 的积分相当于对 $⟨ ω , Vol_k ⟩ Vol_k$ 的积分
 
-#tag("Hodge-star") 
+#tag("Hodge_star") 
 #indent[
   Hodge star 算子 as form 的正交补对偶
 
@@ -198,7 +197,7 @@ metric 流形的情况
 #indent[
   对 $k$ form $ω$ 积分 -> 对 $⟨ ω , Vol_k ⟩ Vol_k$ 积分 -> 对 $⟨ ⋆ ω, ⋆ Vol_(n-k) ⟩ Vol_k$ 积分, 解释为通过 $Vol_k$ 的正交补 $⋆ Vol_k = Vol_(n-k)$ 的量 $⟨ ⋆ ω , Vol_(n-k) ⟩$ 对 $Vol_k$ 积分, i.e. 通量
 
-  用 #link(<metric-dual>)[] $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $(⋆ ω)^♯$ 在通量方向 $(Vol_(n-1))^♯$ 上的正交投影
+  用 #link(<metric_dual>)[] $(⋆ ω)^♯, (Vol_(n-1))^♯ in ⋀^(n-k) ℝ^n$ 代表通量 $n-k$ 交错张量, 内积代表量 $(⋆ ω)^♯$ 在通量方向 $(Vol_(n-1))^♯$ 上的正交投影
 ]
 *Example* in Euclidean $ℝ^3$, $⋀^1 ℝ^3 ≃ ⋀^2 ℝ^3 ≃ ℝ^3$ (图)
 

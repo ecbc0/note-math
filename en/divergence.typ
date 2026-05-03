@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("orientation-of-real-linear-space") $ℝ^n$ direction
+#tag("orientation_of_real_linear_space") $ℝ^n$ direction
 
 $A in GL(n,ℝ), det A != 0$
 
@@ -11,7 +11,7 @@ $GL(n,ℝ) = det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
 There are two directions. for vector base of $ℝ^n$, change order once $e_i <-> e_j$ change orientable, introduce a $-1$ factor. This is somewhat similar to alternating-tensor. orientation defined as quotient of vector base with same orientation. equivalent to decompose of $GL(n,ℝ)$ $det^(-1)(ℝ_(< 0)) ⊔ det^(-1)(ℝ_(> 0))$
 
-#tag("orientation-of-boundary-of-simplex") 
+#tag("orientation_of_boundary_of_simplex") 
 #indent[
   simplx oriented boundary. The direction of the boundary ${x_0 ,…, x_n}$ of simplex ${x_0 ,…, x_n without x_i}$ is to define the direction for the $n-1$ affine subspace where the boundary is located, such that the interior $A$ is in the $n$-dimensional positive direction and the exterior $A^∁$ is in the $n$-dimensional negative direction 
 
@@ -25,11 +25,11 @@ There are two directions. for vector base of $ℝ^n$, change order once $e_i <->
 
   *Example* Tetrahedron, right-hand rule, with the thumb pointing towards the inside of the tetrahedron to get the boundary direction (the index of the vertices in the picture starts from $1$ instead of $0$)
 
-  #image("../image/orientation-of-simplex.png", width: 100%)
+  #image("../image/orientation_of_simplex.png", width: 100%)
 ]
-#tag("orientable-low-dim-polyhera") Polyhedron #link(<orientation-of-boundary-of-simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
+#tag("orientable_low_dim_polyhera") Polyhedron #link(<orientation_of_boundary_of_simplex>)[Orientable] is defined as: when constructing a polyhedron with simplexes, it is possible to define compatible orientations for all $k$ simplexes, such that the adjacent two $k$ simplexes $A, B$ have compatible orientations on their $k-1$ intersecting boundary simplexes, i.e., the orientation $O$ corresponds to the interior of simplex $A$ and the exterior of simplex $B$. The orientation $-O$ corresponds to the interior of simplex $B$ and the exterior of simplex $A$. i.e., simplex partition has well-defined interior and exterior.
 
-*Eaxmple* #tag("Mobius-strip") Non-orientable Mobius-type polyhedron (image modified from wiki)
+*Eaxmple* #tag("Mobius_strip") Non-orientable Mobius-type polyhedron (image modified from wiki)
 
 #image("../image/Moebius.svg", width: 50%)
 
@@ -37,9 +37,9 @@ No matter how the direction of each $k$ simplex is defined, there exists a pair 
 
 Starting from the initial $k$ simplex, continuously and transitively defining compatible directions for adjacent $k$ simplexes, going around in a circle will lead to incompatible directions of the connected boundary simplex. Direction $O$ corresponds to the inside of $A,B$, direction $-O$ corresponds to the outside of $A,B$
 
-#tag("simplex-chain") simplex chain
+#tag("simplex_chain") simplex chain
 
-#tag("boundary-operator") 
+#tag("boundary_operator") 
 #indent[
   Boundary operator $∂$
 
@@ -49,13 +49,13 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   - boundary-op-not-injective (p. 405 of @ref-11, vol.1)
 
-    #image("../image/boundary-op-not-injective-1.png", width: 70%)
+    #image("../image/boundary_op_not_injective_1.png", width: 70%)
 
-    #image("../image/boundary-op-not-injective-2.png", width: 80%)
+    #image("../image/boundary_op_not_injective_2.png", width: 80%)
 
-  - #tag("tri-intersect-boundary")
+  - #tag("tri_intersect_boundary")
 
-    #image("../image/tri-intersect-boundary.png", width: 40%)
+    #image("../image/tri_intersect_boundary.png", width: 40%)
 
   cycle $∂ c = 0$
 
@@ -63,7 +63,7 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   $im ∂ ⊆ ker ∂$ or $im ∂_(k+1) ⊆ ker ∂_k$
 ]
-#tag("simplex-homology") 
+#tag("simplex_homology") 
 #indent[
   k-th homology $H_k (ℝ^n) = (ker ∂_k)/(im ∂_(k+1))$
 
@@ -71,13 +71,13 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 
   Due to geometric meaning, only $ℤ$ coefficients are needed
 ]
-#tag("real-linear-space-trivial-homology") 
+#tag("real_linear_space_trivial_homology") 
 #indent[
   $ℝ^n$ is trivial homology $forall k = 1 ,…, n, H_k (ℝ^n) = 0$ or $ker ∂_k = im ∂_(k+1)$ or in $ℝ^n$, the boundary of $c$ is zero <==> $c$ is a boundary
 
   Try to prove it by purely affine orientation & combinatorics technique, avoid Euclidean topology
 ]
-#tag("existence-and-uniqueness-of-n-simplex-chain-with-boundary") 
+#tag("existence_and_uniqueness_of_n_simplex_chain_with_boundary") 
 #indent[
   in $ℝ^n$, uniqueness $n$ chain of $n-1$ boundary
 
@@ -96,17 +96,16 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
     &==> c=c'
   $
 ]
-#show "δ": it => o-color(it, rgb("#d25b00"))
 
-#tag("homology-hole") For a set $ℝ^n$ minus a finite number or a countable number of separated linear subspaces or polyhedra, homology is not zero
+#tag("homology_hole") For a set $ℝ^n$ minus a finite number or a countable number of separated linear subspaces or polyhedra, homology is not zero
 
-#image("../image/homology-hole.png", width: 100%)
+#image("../image/homology_hole.png", width: 100%)
 
-#tag("Stokes-theorem") 
+#tag("Stokes_theorem") 
 #indent[
-  Similar to the one-dimensional #link(<fundamental-theorem-of-calculus>)[Fundamental Theorem of Calculus]. Intuitively, divergence and the divergence theorem = high-dimensional Fundamental Theorem of Calculus
+  Similar to the one-dimensional #link(<fundamental_theorem_of_calculus>)[Fundamental Theorem of Calculus]. Intuitively, divergence and the divergence theorem = high-dimensional Fundamental Theorem of Calculus
 
-  Define #tag("exterior-differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ in coordinates, where $Vol$ is the volume of the coordinates, $σ$ is a large class of regions, and the calculation result does not depend on the choice of coordinates. 
+  Define #tag("exterior_differential") $#d ω (x) = lim_(σ -> x) frac(integral_(∂ σ) ω,Vol(σ)) Vol$ in coordinates, where $Vol$ is the volume of the coordinates, $σ$ is a large class of regions, and the calculation result does not depend on the choice of coordinates. 
 
   Then there is Stokes-theorem 
   
@@ -118,13 +117,13 @@ Starting from the initial $k$ simplex, continuously and transitively defining co
 ]
 However, in the proof of the one-dimensional Fundamental Theorem of Calculus, the division of a one-dimensional interval, the boundary of a one-dimensional interval, and the integral of the boundary of a one-dimensional interval are all too simple. High-dimensional regions are not that simple.
 
-#tag("Stokes-theorem-simple") For higher dimensions, it is difficult if it is curved. First, deal with straight things i.e. simplex or parallelepiped. The division is also the same type of region, and the boundary cancellation is also simple. Then, similar to one dimension, approximate with the Mean Value Theorem of Differential + compact control. This proves Stokes' theorem for $ℝ^n$ simplex or parallelepiped.
+#tag("Stokes_theorem_simple") For higher dimensions, it is difficult if it is curved. First, deal with straight things i.e. simplex or parallelepiped. The division is also the same type of region, and the boundary cancellation is also simple. Then, similar to one dimension, approximate with the Mean Value Theorem of Differential + compact control. This proves Stokes' theorem for $ℝ^n$ simplex or parallelepiped.
 
-#tag("Stokes-theorem-proof") *Question*
+#tag("Stokes_theorem_proof") *Question*
 #indent[
   I changed my mind. According to the intuitive treatment of integrals on manifolds and Stokes' theorem, one should use direct subdivision of the manifold, rather than approximate subdivision.
 
-  Partitioning in integration can be directly done using zero-order measurable sets (closed under diffeomorphisms). The regions used for partitioning in Stokes' theorem should be similar to sets of finite perimeter (Cacciopoli sets) in geometric measure theory (#link(<ref-33>)[]). I hope they are closed under finite unions, intersections, and subtractions, and closed under diffeomorphisms.
+  Partitioning in integration can be directly done using zero-order measurable sets (closed under diffeomorphisms). The regions used for partitioning in Stokes' theorem should be similar to sets of finite perimeter (Cacciopoli sets) in geometric measure theory (#link(<ref_33>)[]). I hope they are closed under finite unions, intersections, and subtractions, and closed under diffeomorphisms.
 
   Prove that a manifold with boundary is locally such a region (finding polyhedral approximations based on manifold properties), and that integrals on the boundary in this theory should coincide with integrals on the boundary in manifold theory (similar to theory of reduced boundary in geometric measure theory). Prove that well-behaved manifolds with singularities also belong to such regions, i.e., polyhedra, cones, well-behaved codimensions $> 1$ singularity.
 
@@ -146,7 +145,7 @@ However, in the proof of the one-dimensional Fundamental Theorem of Calculus, th
 
   Since exterior differentiation only has first-order derivatives and there are no infinite-order exterior derivatives, on metric manifold, the $L^2$ norm of a form $|ω|_(L^2) + |#d ω|_(L^2)$ is suitable for Banach/Hilbert space theory (infinite-order derivatives are not suitable for Banach space theory).
 
-  Because the topology of a manifold may have nontrivial cohomology, for some cohomologically nonzero forms $ω$, its exterior differential form $#d ω$ cannot cancel out all internal boundaries when integral, and hence it will have some extra thing similar to "residue" in complex analysis. For example, (#tag("cohomology-hole"). *Example* In $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, satisfying $#d^2 1/r = 0$, so have integral zero on $𝔹 ∖ 0$, but the integral of $#d 1/r$ over $𝕊^1$ as the boundary of $𝔹 ∖ 0$ is nonzero. *Example* $𝕊^1$ is homology isomorphism to $ℝ^2 ∖ 0$.
+  Because the topology of a manifold may have nontrivial cohomology, for some cohomologically nonzero forms $ω$, its exterior differential form $#d ω$ cannot cancel out all internal boundaries when integral, and hence it will have some extra thing similar to "residue" in complex analysis. For example, (#tag("cohomology_hole"). *Example* In $ℝ^2 ∖ 0$, $#d 1/r$ or $(-x_2)/(|x|^2) #d x_1 + (x_1)/(|x|^2) #d x^2$, satisfying $#d^2 1/r = 0$, so have integral zero on $𝔹 ∖ 0$, but the integral of $#d 1/r$ over $𝕊^1$ as the boundary of $𝔹 ∖ 0$ is nonzero. *Example* $𝕊^1$ is homology isomorphism to $ℝ^2 ∖ 0$.
 
   Another example where the boundary integral cannot cancel out: if a vector field or form for which Stokes' theorem holds on a closed ball $𝔹$ has a closed disk-like region on its boundary removed, Stokes' theorem no longer holds. Intuitively, after removing a closed disk, the flux leaks out, indicating that the new boundary does not enclose the interior of the manifold. If an open disk were removed instead of a closed disk, the result would not be a manifold with boundary, it would have a boundary of codimension > 1, and the boundary of the boundary would not be zero.
 
@@ -164,7 +163,7 @@ homology
 
 cohomology
 
-#tag("coboundary-operator") 
+#tag("coboundary_operator") 
 #indent[
   coboundary $ω_k = #d _(k-1) ω_(k-1)$
 
@@ -174,7 +173,7 @@ cohomology
 
   $im #d ⊆ ker #d$ or $im #d _(k-1) ⊆ ker #d _k$
 ]
-#tag("de-Rham-cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
+#tag("de_Rham_cohomolgy") k-th de Rham cohomology $H^k (M) = (ker #d _k)/(im #d _(k-1))$
 
 in $ℝ^n$, cohomology trivial $forall k = 1 ,…, n, H^k = 0$
 
@@ -182,7 +181,7 @@ The case of metric manifolds
 
 The integral of the $k$ form $ω$ is equivalent to the integral of $⟨ ω , Vol_k ⟩ Vol_k$
 
-#tag("Hodge-star") 
+#tag("Hodge_star") 
 #indent[
   Hodge star operator as the orthogonal complement dual of the form
 

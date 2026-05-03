@@ -1,15 +1,15 @@
 #import "../module/module.typ": *
 #show: module
 
-#let A = c-bf("A", rgb("#919191"))
-#let B = c-bf("B", rgb("#919191"))
-#let T = c-bf("T", rgb("#919191"))
+#let A = bf("A")
+#let B = bf("B")
+#let T = bf("T")
 
 #let open(x) = math.circle(x)
 
-the original inspiration of compactness: The intersection of closed interval nets of $ℝ$ is non-empty #link(<closed-interval-net-theorem>)[]
+the original inspiration of compactness: The intersection of closed interval nets of $ℝ$ is non-empty #link(<closed_interval_net_theorem>)[]
 
-$0$ is a #link(<limit-point>)[limit point] of $#T _ ℝ$ of $(0,1)$. The #link(<net>)[net] $(0,1/n)$ seems to converge to $0$
+$0$ is a #link(<limit_point>)[limit point] of $#T _ ℝ$ of $(0,1)$. The #link(<net>)[net] $(0,1/n)$ seems to converge to $0$
 
 But $⋂ (0,1/n) = ∅$
 
@@ -29,7 +29,7 @@ By using the equivalent limit <==> image net finer, compact can also be represen
 
 According to the definitions of limit points and closed sets, $A$ compact is equivalent to: forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
 
-Any net can replenish all finite intersections and maintain #link(<net-same-limit>)[the same limit], so for compact, the equivalent description is 
+Any net can replenish all finite intersections and maintain #link(<net_same_limit>)[the same limit], so for compact, the equivalent description is 
 
 $#T _X$ compact <==> 
 $
@@ -39,14 +39,14 @@ logically equivalent to
 $
   ⋂_(A in #A) closed(A) = ∅ ==> exists A_1 ,…, A_n in #A, closed(A)_1 ∩ ⋯ ∩ closed(A)_n = ∅
 $
-logically equivalent to #tag("compact-finite-open-cover")
+logically equivalent to #tag("compact_finite_open_cover")
 $
   ⋃_(A in #A) open(A) = X ==> exists A_1 ,…, A_n in #A, open(A)_1 ∩ ⋯ ∩ open(A)_n = X
 $
 
-#tag("compact-subset") $S subset X$ := #link(<topology-subspace>)[] $#T _S$ compact
+#tag("compact_subset") $S subset X$ := #link(<topology_subspace>)[] $#T _S$ compact
 
-recall #link(<closed-in-subspace>)[], $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, denoted as $S ∩ closed(A)$
+recall #link(<closed_in_subspace>)[], $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, denoted as $S ∩ closed(A)$
 
 compact-subset logically equivalent to
 $
@@ -57,17 +57,17 @@ $
   S ∩ ⋂_(A in #A) closed(A) = ∅ ==> exists A_1 ,…, A_n in #A, S ∩ closed(A)_1 ∩ ⋯ ∩ closed(A)_n = ∅
 $
 logically equivalent to
-#tag("compact-subset-finite-open-cover")
+#tag("compact_subset_finite_open_cover")
 $
   S subset ⋃_(A in #A) open(A) ==> exists A_1 ,…, A_n in #A, S subset open(A)_1 ∩ ⋯ ∩ open(A)_n
 $
 compact-subset is closed under finite unions. this is easy to proof
 
-#tag("closed-set-in-compact-space-is-compact") $#T _X$ compact and $S$ closed ==> $S$ compact
+#tag("closed_set_in_compact_space_is_compact") $#T _X$ compact and $S$ closed ==> $S$ compact
 
 _Proof_
 #indent[
-  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed-in-subspace>)[]
+  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed_in_subspace>)[]
 
   Reusing $#T _X$ compact to get $⋂_(A in #A) closed(A) != ∅$ and thus get $S$ compact
 ]
@@ -75,7 +75,7 @@ Hausdorff space := $forall x,x' in X, x != x' ==> exists B_x, B_x' in #T _X, B_x
 
 Hausdorff + compact ==> closed. At this time, compact is closed for any intersection
 
-#tag("continous-preserve-compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
+#tag("continous_preserve_compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
 
 _Proof_
 #indent[
@@ -88,7 +88,7 @@ _Proof_
 
   $#T _X$ compact ==> $⋂_(A in #A) Closed(f^(-1)(A)) != 0$
 
-  The inverse image of a continuous function preserves closed $Closed(f^(-1)(A)) ⊆ f^(-1)(closed(A))$. Use the #link(<inverse-image>)[property] of inverse images on $∩$
+  The inverse image of a continuous function preserves closed $Closed(f^(-1)(A)) ⊆ f^(-1)(closed(A))$. Use the #link(<inverse_image>)[property] of inverse images on $∩$
   $
     ∅ != f(⋂_(A in #A) f^(-1)(closed(A))) subset ⋂_(A in #A) f(f^(-1)(closed(A)))
   $
@@ -98,11 +98,11 @@ _Proof_
 ]
 Contrapositive: Under a continuous function, the inverse image of non-compact is non-compact
 
-#tag("quotient-topology-preserve-compact") For #link(<quotient-topology>)[] $π : X ⇝ X/∼$, source space $X$ compact ==> quotient space $X/∼$ compact. because the quotient map $π$ is continuous, it preserves compact
+#tag("quotient_topology_preserve_compact") For #link(<quotient_topology>)[] $π : X ⇝ X/∼$, source space $X$ compact ==> quotient space $X/∼$ compact. because the quotient map $π$ is continuous, it preserves compact
 
 #let prod = $limits(product)_(i in I) X_i$ 
 
-#tag("product-topology-preserve-compact") #link(<product-topology>)[] preserves compact
+#tag("product_topology_preserve_compact") #link(<product_topology>)[] preserves compact
 
 _Proof_
 #indent[

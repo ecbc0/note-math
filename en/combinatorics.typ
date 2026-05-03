@@ -50,14 +50,14 @@ $
   = frac((n-1)! (i + j),i! j!)
   = binom(n-1,i-1,j) + binom(n-1,i,j-1)
 $
-#tag("binom-expansion")
+#tag("binom_expansion")
 $
   (x+y)^n &= sum_(i+j=n) binom(n,i,j) x^i y^j \
   (x_1 + ⋯ + x_d)^n &= sum_(k_1 + ⋯ + k_d = n) binom(n,k_1,…,k_d) x_1^(k_1) ⋯ x_d^(k_d)
 $
 vs Newton binomial $(1+x)^p = sum_(i=0..∞) binom(p,i) x^i, p in ℝ$
 
-#tag("multi-combination") similarly, the following are equivalent
+#tag("multi_combination") similarly, the following are equivalent
 - $d$-fold combination. picking $k_1 ,…, k_d$ from $1 ,…, n$ with $k_1 + ⋯ + k_d = n$
 - partition ${1 ,…, n} = A_1 ⊔ ⋯ ⊔  A_d$ with $|A_i| = k_i$ and $k_1 + ⋯ + k_d = n$
 - picking a permutation, and quotient
@@ -86,11 +86,11 @@ what is $|{k_1 ,…, k_d in ℕ : k_1 + ⋯ + k_d = n}|$?
     binom(n+d-1,d-1) = binom(n+d-1,n,d-1)
   $
 ]
-#tag("dimension-of-symmetric-tensor") Also gives the dimension of the symmetric tensor space $(𝕂^n)^(⊙ k)$ as $binom(k+n-1,k,n-1)$, with basis $e_1^(⊙ k_1) ⊙ ⋯ ⊙ e_n^(⊙ k_n)$
+#tag("dimension_of_symmetric_tensor") Also gives the dimension of the symmetric tensor space $(𝕂^n)^(⊙ k)$ as $binom(k+n-1,k,n-1)$, with basis $e_1^(⊙ k_1) ⊙ ⋯ ⊙ e_n^(⊙ k_n)$
 
 The repetition count $binom(n,k_1 ,…, k_d)$ is used for things like calculating $L^2$ normalization
 
-#tag("conjugate-class-of-permutation-is-cycle") #link(<conjugate-class>)[] of $S_n$ <==> cycle with same partition
+#tag("conjugate_class_of_permutation_is_cycle") #link(<conjugate_class>)[] of $S_n$ <==> cycle with same partition
 
 cycle := permutation $a$ with $i_1 ⇝^a i_2 ⇝^a ⋯ ⇝^a i_k ⇝^a i_1$
 

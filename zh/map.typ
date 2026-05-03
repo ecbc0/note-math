@@ -25,7 +25,7 @@ composition (函数复合)
 
   or 存在满射 $f : A ↠ B$ <==> 存在单射 $g : B ↪ A$
 
-#tag("cardinal-always-comparable") 元素数量序 $<$ 的三分 or 序总是 #link(<order-comparable>)[可比较]
+#tag("cardinal_always_comparable") 元素数量序 $<$ 的三分 or 序总是 #link(<order_comparable>)[可比较]
 
 $ forall A,B ∈ Set, (|A| = |B|) ⊕ (|A| < |B|) ⊕ (|B| < |A|) $
 
@@ -55,7 +55,7 @@ let $S ⊆ A$
 
 let $S ⊆ B$
 
-#tag("inverse-image") 逆像 $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
+#tag("inverse_image") 逆像 $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
 
 $f(a) in S &<==> exists b in S, b = f(a) \
 &<==> a in f^(-1) (S)$
@@ -75,7 +75,7 @@ $ f^(-1)(S ∪ S') = f^(-1)(S) ∪ f^(-1)(S') $
 - $f(S ∩ S') ⊆ f(S) ∩ f(S')$
 - $f(S ∖ S') ⊆ f(S) ∖ f(S')$ 
 
-#tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
+#tag("cardinal_increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
 #indent[
   $f : A -> Subset(A)$ 不是满射 <==> $Subset(A) ∖ "range"(f) != ∅$
 

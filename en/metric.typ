@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("quadratic-form") $ℝ^n$ quadratic form *alias* #tag("metric") metric *alias* inner product #tag("inner-product")
+#tag("quadratic_form") $ℝ^n$ quadratic form *alias* #tag("metric") metric *alias* inner product #tag("inner_product")
 #indent[
   *Example* $ℝ^2,ℝ^3$ distance $vec(x,y,z) ⇝ x^2 + y^2 + z^2$
 
@@ -13,17 +13,17 @@
 
   In coordinates metric $g$ can be expressed as matrix $G$ and matrix multiplication $(X,Y) ⇝ X^⊺ G Y$
 
-  #tag("signature-inertia") signature $(p,q)$ invariant under $GL(n,ℝ)$. Eigenvalues and diagonalization of symmetric matrix $G$ $mat(1; , 0; ,, -1)$ with $n_+$ $1$'s, $n_0$ $0$'s, $n_-$ $-1$'s.
+  #tag("signature_inertia") signature $(p,q)$ invariant under $GL(n,ℝ)$. Eigenvalues and diagonalization of symmetric matrix $G$ $mat(1; , 0; ,, -1)$ with $n_+$ $1$'s, $n_0$ $0$'s, $n_-$ $-1$'s.
 
   Different signatures can be understood as classification of orbits of the $GL(n)$ group action on the space of quadratic forms
 
-  #tag("quadratic-form-non-degenerated") non-degenerate := $N_0 = 0$ in signature
+  #tag("quadratic_form_non_degenerated") non-degenerate := $N_0 = 0$ in signature
 
   Degenerate quadratic form can be restricted to $n_+ + n_-$ subspace to become non-degenerate
 
   The following are equivalent
   - metric is non-degenerate
-  - #tag("quadratic-form-dual") is a bijection *alias* #tag("musical-isomorphism")
+  - #tag("quadratic_form_dual") is a bijection *alias* #tag("musical_isomorphism")
     $
       map(V, Lin(V -> ℝ) "or" V^⊺, v, ⟨v, ⟩ "or" bra(v) "or" g(v,) "or" ♭(v))
     $
@@ -46,7 +46,7 @@ $
   &= α_j
 $
 
-#tag("rasing-and-lowring-index") Raising and lowering indices
+#tag("rasing_and_lowring_index") Raising and lowering indices
 #indent[
   quadratic-form-dual Matrix representation in coordinates
   $
@@ -107,7 +107,7 @@ $
   &= (v_1^(i_1) ⋯ v_k^(i_k)) e_(1,i_1) ⊗ ⋯ ⊗ e_(k,i_k)
 $
 
-#tag("tensor-induced-quadratic-form")
+#tag("tensor_induced_quadratic_form")
 #indent[
   Extend the quadratic form $g$ of the vector space to the quadratic form of the tensor space $V^(⊗ I) ⊗ V^(⊺ ⊗ J)$
   $
@@ -120,7 +120,7 @@ $
   $
   Obtain the signature
 ]
-#tag("rasing-and-lowring-index-tensor") Tensors can also raise and lower indices via metric dual
+#tag("rasing_and_lowring_index_tensor") Tensors can also raise and lower indices via metric dual
 
 *Example* Lowering an index $T^i_j ⇝ g_(i i') T^i'_j = T_(i j)$
 
@@ -268,7 +268,7 @@ $
 
 _Proof_ $so(p,q) = { A^⊺ η + η A = 0 }$ and $η^(-1) = η$
 
-*Prop* #tag("Killing-form-of-orthogonal-group") $A, B in so(p,q) ==> ⟨ A,B ⟩_(V ⊗ V^⊺) = - tr(A B)$ (Killing form of $so(p,q)$ up to a constant)
+*Prop* #tag("Killing_form_of_orthogonal_group") $A, B in so(p,q) ==> ⟨ A,B ⟩_(V ⊗ V^⊺) = - tr(A B)$ (Killing form of $so(p,q)$ up to a constant)
 
 _Proof_ According to $η^2 = 1$
 $

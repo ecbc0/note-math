@@ -1,15 +1,15 @@
 #import "../module/module.typ": *
 #show: module
 
-#let A = c-bf("A", rgb("#919191"))
-#let B = c-bf("B", rgb("#919191"))
-#let T = c-bf("T", rgb("#919191"))
+#let A = bf("A")
+#let B = bf("B")
+#let T = bf("T")
 
 #let open(x) = math.circle(x)
 
-compact 的原初的启发: $ℝ$ 的闭区间网的交集非空 #link(<closed-interval-net-theorem>)[]
+compact 的原初的启发: $ℝ$ 的闭区间网的交集非空 #link(<closed_interval_net_theorem>)[]
 
-$0$ 是 $(0,1)$ 的 $#T _ ℝ$ 的 #link(<limit-point>)[极限点]. #link(<net>)[网] $(0,1/n)$ 看似收敛到 $0$
+$0$ 是 $(0,1)$ 的 $#T _ ℝ$ 的 #link(<limit_point>)[极限点]. #link(<net>)[网] $(0,1/n)$ 看似收敛到 $0$
 
 但是 $⋂ (0,1/n) = ∅$
 
@@ -29,7 +29,7 @@ let $#T _X$ #link(<topology>)[拓扑空间]. let $A subset X$
 
 根据极限点和闭集的定义, $A$ compact 等价于: forall $#B$ net of $A$, $⋂_(B ∈ #B) closed(B) != ∅$
 
-任何网都可以补充所有的有限交集并保持 #link(<net-same-limit>)[相同的极限], 所以对于 compact, 等价的描述是 
+任何网都可以补充所有的有限交集并保持 #link(<net_same_limit>)[相同的极限], 所以对于 compact, 等价的描述是 
 
 $#T _X$ compact <==> 
 $
@@ -39,14 +39,14 @@ $
 $
   ⋂_(A in #A) closed(A) = ∅ ==> exists A_1 ,…, A_n in #A, closed(A)_1 ∩ ⋯ ∩ closed(A)_n = ∅
 $
-逻辑等价于 #tag("compact-finite-open-cover")
+逻辑等价于 #tag("compact_finite_open_cover")
 $
   ⋃_(A in #A) open(A) = X ==> exists A_1 ,…, A_n in #A, open(A)_1 ∩ ⋯ ∩ open(A)_n = X
 $
 
-#tag("compact-subset") $S subset X$ := #link(<topology-subspace>)[] $#T _S$ compact
+#tag("compact_subset") $S subset X$ := #link(<topology_subspace>)[] $#T _S$ compact
 
-recall #link(<closed-in-subspace>)[], $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, 记为 $S ∩ closed(A)$
+recall #link(<closed_in_subspace>)[], $"closed"(A,#T _S) = S ∩ "closed"(A,#T _X)$, 记为 $S ∩ closed(A)$
 
 compact-subset 逻辑等价于
 $
@@ -57,17 +57,17 @@ $
   S ∩ ⋂_(A in #A) closed(A) = ∅ ==> exists A_1 ,…, A_n in #A, S ∩ closed(A)_1 ∩ ⋯ ∩ closed(A)_n = ∅
 $
 逻辑等价于
-#tag("compact-subset-finite-open-cover")
+#tag("compact_subset_finite_open_cover")
 $
   S subset ⋃_(A in #A) open(A) ==> exists A_1 ,…, A_n in #A, S subset open(A)_1 ∩ ⋯ ∩ open(A)_n
 $
 compact-subset 对有限并集封闭. this is easy to proof
 
-#tag("closed-set-in-compact-space-is-compact") $#T _X$ compact and $S$ closed ==> $S$ compact
+#tag("closed_set_in_compact_space_is_compact") $#T _X$ compact and $S$ closed ==> $S$ compact
 
 _Proof_
 #indent[
-  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed-in-subspace>)[]
+  $S$ closed in $#T _X$ ==> $forall A subset S, "closed"(A,#T _S) = "closed"(A,#T _X)$. by #link(<closed_in_subspace>)[]
 
   再利用 $#T _X$ compact 得到 $⋂_(A in #A) closed(A) != ∅$ 从而得到 $S$ compact
 ]
@@ -75,7 +75,7 @@ Hausdorff 空间 := $forall x,x' in X, x != x' ==> exists B_x, B_x' in #T _X, B_
 
 Hausdorff + compact ==> closed. 此时 compact 对任意交集封闭
 
-#tag("continous-preserve-compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
+#tag("continous_preserve_compact") let $f : X -> Y$. $f(X)$ is compact-subset of $#T _Y$
 
 _Proof_
 #indent[
@@ -88,7 +88,7 @@ _Proof_
 
   $#T _X$ compact ==> $⋂_(A in #A) Closed(f^(-1)(A)) != 0$
 
-  连续函数逆像保持 closed $Closed(f^(-1)(A)) ⊆ f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #link(<inverse-image>)[性质]
+  连续函数逆像保持 closed $Closed(f^(-1)(A)) ⊆ f^(-1)(closed(A))$. 使用逆像对 $∩$ 的 #link(<inverse_image>)[性质]
   $
     ∅ != f(⋂_(A in #A) f^(-1)(closed(A))) subset ⋂_(A in #A) f(f^(-1)(closed(A)))
   $
@@ -98,11 +98,11 @@ _Proof_
 ]
 逆否命题: 连续函数下, non-compact 逆像是 non-compact 的
 
-#tag("quotient-topology-preserve-compact") 对于 #link(<quotient-topology>)[] $π : X ⇝ X/∼$, 源空间 $X$ compact ==> 商空间 $X/∼$ compact. by 商映射 $π$ 连续所以保持 compact
+#tag("quotient_topology_preserve_compact") 对于 #link(<quotient_topology>)[] $π : X ⇝ X/∼$, 源空间 $X$ compact ==> 商空间 $X/∼$ compact. by 商映射 $π$ 连续所以保持 compact
 
 #let prod = $limits(product)_(i in I) X_i$ 
 
-#tag("product-topology-preserve-compact") #link(<product-topology>)[] 保持 compact
+#tag("product_topology_preserve_compact") #link(<product_topology>)[] 保持 compact
 
 _Proof_
 #indent[

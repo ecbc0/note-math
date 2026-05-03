@@ -1,4 +1,4 @@
-#let tag(s) = [#str(" ")#strong("[")#html.elem("span", attrs:(class: "typst-tag"))[#s]#strong("]")#label(s)#str(" ")] 
+#let tag(s) = [#str(" ")#str("[")#html.elem("span", attrs:(class: "typst-tag"))[#s]#str("]")#label(s)#str(" ")]
 
 #let indent(x) = html.elem("div", attrs: (
   class: "indent",

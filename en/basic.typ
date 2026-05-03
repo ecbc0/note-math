@@ -52,7 +52,7 @@ The human brain compiler can omit and supplement omissions, trading temporary ef
 
 In addition to verifying the correctness of proofs, provers can also have other uses, for example, similar to tools in programming languages, they can have friendly and interactive compiler error messages, and LSP (language server protocol) tools
 
-prover 的例子: #link("https://github.com/acornprover/acorn")[acornprover] (Functionality not yet complete)
+example of prover: #link("https://github.com/acornprover/acorn")[acornprover] (Functionality not yet complete)
 
 Let's not go into details here for now, just a brief overview
 
@@ -164,9 +164,9 @@ $
 $
 Similar to the redundancy of $and,or,not$, set/type construction rules may also have redundancy, or many equivalent definitions. The "normalization" in prover program essentially deals with logical equivalence.
 
-follow #link(<bool-algebra>)[various rules for bool in finite cases], define
+follow #link(<bool_algebra>)[various rules for bool in finite cases], define
 
-#tag("commutative-forall-exists")
+#tag("commutative_forall_exists")
 #indent[
   $
     And_(a ∈ A) And_(b ∈ B) p(a,b)
@@ -174,7 +174,7 @@ follow #link(<bool-algebra>)[various rules for bool in finite cases], define
   $
   same for $Or$
 ]
-#tag("distributive-forall-exists")
+#tag("distributive_forall_exists")
 #indent[
   (Need to assume the existence of function $A -> B$?)
   $
@@ -216,7 +216,7 @@ If "void implication" similar to skipping an if block is accepted, then there wi
 
 $p <=> q := (p => q) and (q => p)$ and find that $p <=> q$ is $p = q$
 
-#tag("reverse-inference") Reverse inference. If the result is that I went out, then it must not be the result of rain. If the result of the conditional branch is `out = true`, this is not the result of `rain = true`. Since the boolean value of an ideal binary computer must be one or the other, it can only be the result of `rain = false`. This can be written as a conditional branch
+#tag("reverse_inference") Reverse inference. If the result is that I went out, then it must not be the result of rain. If the result of the conditional branch is `out = true`, this is not the result of `rain = true`. Since the boolean value of an ideal binary computer must be one or the other, it can only be the result of `rain = false`. This can be written as a conditional branch
 ```rs
 match (out) {
   true => rain = false,
@@ -225,7 +225,7 @@ match (out) {
 ```
 Mathematically, reverse inference is written as the formula $not q => not p$, and defined as equivalent to $p => q$
 
-#tag("natural-number")
+#tag("natural_number")
 #indent[
   natural number $0,1,2,...$
 
@@ -316,7 +316,7 @@ definition
 
 function space introduces higher-level infinity
 
-Something counter-intuitive at first glance is that we _seem_ to know all $S in Set ℕ$ or all $f : ℕ -> ℕ$, yet we cannot count them #link(<cardinal-increase>)[] #link(<uncountable>)[]. But, what exactly does "knowing all $S in Set ℕ$" mean? In fact, trying to consider the problem of "finding an infinite subset of $ℕ$ in a general way" will reveal that it's not simple.
+Something counter-intuitive at first glance is that we _seem_ to know all $S in Set ℕ$ or all $f : ℕ -> ℕ$, yet we cannot count them #link(<cardinal_increase>)[] #link(<uncountable>)[]. But, what exactly does "knowing all $S in Set ℕ$" mean? In fact, trying to consider the problem of "finding an infinite subset of $ℕ$ in a general way" will reveal that it's not simple.
 
 Similarly, although countable can already define some real numbers e.g. $sum 1/n! = e$, if not using $Set ℕ$ or $ℕ -> ℕ$, only countable constructions cannot obtain all $ℝ$
 
@@ -334,9 +334,9 @@ Similarly, although countable can already define some real numbers e.g. $sum 1/n
 
   $S = S' <=> (S subset S') and (S' subset S)$
 
-  Or if #link(<set-with-element-in-a-type>)["construct set theory with type theory"], then the definition of equality of sets reduce to the definition of equality of functions $f,g: T -> "Bool"$
+  Or if #link(<set_with_element_in_a_type>)["construct set theory with type theory"], then the definition of equality of sets reduce to the definition of equality of functions $f,g: T -> "Bool"$
 ]
-#let A = c-bf("A",rgb("#0056e1"))
+#let A = bf("A")
 
 let $#A in Set(Set(T))$
 
@@ -371,7 +371,7 @@ The intuition that the intersection of an empty family of sets is the universal 
 
 Based on the index mapping $A in (I -> Set T)$, infinite versions of product, sum can be defined
 
-- #tag("product-index")
+- #tag("product_index")
 #indent[
   $x in product_(i in I) A(i) := And_(i in I) Or_(a in A(i)) (x, i) = a$
 
@@ -384,7 +384,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
     map(product_(i in I) A(i), A(i), x, x(i))
   $
 ]
-- #tag("sum-index")
+- #tag("sum_index")
 #indent[
   $x in sum_(i in I) A(i) := Or_(i in I) Or_(a in A(i)) x = (i, a)$
 
@@ -393,7 +393,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
     map(A(i), sum_(i in I) A(i), a, (i, a) = x)
   $
 ]
-#tag("hierarchy-order-of-set")
+#tag("hierarchy_order_of_set")
 #indent[
   The type/set constructed above is called zero (hierarchy) order type/set
 
@@ -428,7 +428,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
 
   $Type n$ belongs to $Type n+1$ and belongs to $Type ℕ$, but these two "belongs to" language rules are different
 ]
-#tag("universal-type")
+#tag("universal_type")
 #indent[
   The problem of universal-type, or the problem of type of every type
 
@@ -436,7 +436,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
 
   Assuming the program defines a concept of universal-type, and universal-type can in turn be used to construct "type", then universal-type refers to itself in the construction rules of "type", leading to non-terminating languages or programs.
 
-  *Example* #tag("Russell-paradox")
+  *Example* #tag("Russell_paradox")
   #indent[
     defined using set theory rules
 
@@ -444,7 +444,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
 
     Then try to calculate the boolean of another proposition $A in A$. Since $A in "universal-set"$ = `true`, the prover only needs to calculate the boolean of $not (A in A)$, then finds `not`, so it tries to calculate the boolean inside `not`, but this goes back to calculating the boolean of $A in A$, entering a circuit deadlock.
   ]
-  *Example* #tag("self-referential-paradox") Self-referential paradox. "This sentence is false"
+  *Example* #tag("self_referential_paradox") Self-referential paradox. "This sentence is false"
   #indent[
     ```rs
     this_sentence_is_false : bool = false;
@@ -457,7 +457,7 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
     ```
   ]
 ]
-#tag("dependent-distributive")
+#tag("dependent_distributive")
 #indent[
   let $#A$ be set of sets, let $A in "Map"(I, #A)$, and let $A(i)$ be set of sets, index by its elements $x(i)$
 
@@ -467,16 +467,16 @@ Based on the index mapping $A in (I -> Set T)$, infinite versions of product, su
 
   $ ⋃_(i ∈ I) ⋂_(x(i) in A(i)) x(i) = ⋂_(x ∈ product_(i in I) A(i)) ⋃_(i ∈ I) x(i) $
 
-  draft of proof: 展开, 使用 #link(<distributive-forall-exists>)[]
+  draft of proof: expand, use #link(<distributive_forall_exists>)[]
 
   sum & product
 
   $ product_(i ∈ I) sum_(x(i) ∈ A(i)) x(i) = sum_(x ∈ product_(i in I) A(i)) product_(i ∈ I) x(i) $
 ]
-#tag("set-minus") #image("../image/set-minus.jpeg", width: 30%)
+#tag("set_minus") #image("../image/set_minus.jpeg", width: 30%)
 
 $A ∖ B := {x ∈ A : x ∉ B}$. if $B ⊆ A$ then define $B^∁ := A ∖ B$
 
-#tag("symmetric-set-minus") #image("../image/set-symmetric-minus.png", width: 30%)
+#tag("symmetric_set_minus") #image("../image/set_symmetric_minus.png", width: 30%)
 
 $A Δ B := (A ∖ B) ⊔ (B ∖ A) = (A ∪ B) ∖ (A ∩ B)$

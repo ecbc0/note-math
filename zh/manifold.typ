@@ -3,7 +3,7 @@
 
 *Example* Euclidean 解析流形, 球面 $𝕊^n$ 的多种坐标
 - 函数图坐标, 函数方程 $|x|^2 = 1$ and 隐函数定理. e.g. $y = sqrt(1-x^2)$ for $𝕊^1 subset ℝ^2$
-- #link(<stereographic-projection>)[球极投影] 
+- #link(<stereographic_projection>)[球极投影] 
 - 极坐标. 从 $𝕊^1$ 的三角函数开始, 归纳地构造新的纬度
 - 测地线坐标
 
@@ -17,23 +17,23 @@
 
 等价于存在坐标覆盖, 每个 transition function 微分 $#d f in SO$
 
-*Example* #link(<Mobius-strip>)[] 不可定向
+*Example* #link(<Mobius_strip>)[] 不可定向
 
 带边流形如果内部可定向, 则边界也可定向. 直觉上, 边界的局部有相同的内部 + 内部可定向 ==> 边界的局部有相同方向 ==> 边界方向被决定了
 
-#tag("manifold-with-boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数
+#tag("manifold_with_boundary") 带边流形. 坐标可以是 $n-1$ 维超平面包围的区域, 转换函数需要能够导出 $n-1$ 维子空间里的转换函数
 
-#tag("metric-manifold") 流形上的 metric 是在每个切空间定义 metric, 等价于在流形切丛上选择 orthonormal frame bundle. 对 $SO(p,q)$ oritentable, 可以选择 $SO(p,q)$ 可定向的标架丛
+#tag("metric_manifold") 流形上的 metric 是在每个切空间定义 metric, 等价于在流形切丛上选择 orthonormal frame bundle. 对 $SO(p,q)$ oritentable, 可以选择 $SO(p,q)$ 可定向的标架丛
 
 #tag("submanifold") 恒等嵌入 $S ↪ M$ 是流形同态. 等价地, $M$ 的局部微分同胚局部地抻直子流形 $S$
 
-#tag("quotient-manifold") ...
+#tag("quotient_manifold") ...
 
 metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
 
 *Example* ...
 
-即使用二次型拓扑和微分定义了流形, 也仍然有很多不同的 metric. 一种性质良好的 metric 是 #link(<Einstein-metric.typ>)[]
+即使用二次型拓扑和微分定义了流形, 也仍然有很多不同的 metric. 一种性质良好的 metric 是 #link(<Einstein_metric.typ>)[]
 
 #tag("isometry") := diffeomorphism 保持 metric $g$. 通常也假设保持可定向流形的方向
 
@@ -41,7 +41,7 @@ metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
 
 不同曲率的 metric 不能在相同的 orbit. 特别地, 零曲率和非零曲率的 metric 不能在相同的 oribt
 
-#tag("δ-isometry") *alias* #tag("Killing-field")
+#tag("δ_isometry") *alias* #tag("Killing_field")
 
   将会用于流形上的作用量守恒流
 
@@ -53,9 +53,9 @@ metric 可以继承自 submanifold 或 quotient manifold of $ℝ^(p,q)$
 
 (cf. @ref-10 @ref-11). group $SO(p,q),#U,SU,Sp,SL,G_2$. exp coordinate
 
-#tag("Grassmannian-manifold") $SO(n)$ act on $k$ subspace $(SO(n))/(SO(k) × SO(n-k))$ (orientable)
+#tag("Grassmannian_manifold") $SO(n)$ act on $k$ subspace $(SO(n))/(SO(k) × SO(n-k))$ (orientable)
 
-#tag("Stiefel-manifold") tautological frame bundle $(SO(n))/(SO(n-k))$
+#tag("Stiefel_manifold") tautological frame bundle $(SO(n))/(SO(n-k))$
 
 tautological bundle
 
@@ -63,4 +63,4 @@ tautological bundle
 
 lens space
 
-连续同胚但不微分同胚. *Example* 四元数 $ℍ$ 版本的 #link(<Hopf-bundle>)[] 的多种修改给出了例子之 called exotic 7-shpere
+连续同胚但不微分同胚. *Example* 四元数 $ℍ$ 版本的 #link(<Hopf_bundle>)[] 的多种修改给出了例子之 called exotic 7-shpere

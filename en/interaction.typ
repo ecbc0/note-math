@@ -22,4 +22,4 @@ $
 $
 We can set some fields to zero or fix certain fields to obtain partial coupling (for gravity, $Γ = 0$ ==> flat-metric)
 
-In the equation, the 4-current of the field becomes the source of the gauge potential (#link(<current-gauge-spinor>)[spinor field 4-current] #link(<current-gauge-KG>)[scalar field 4-current] #link(<current-gauge-particle>)[point particle 4-current])
+In the equation, the 4-current of the field becomes the source of the gauge potential (#link(<current_gauge_spinor>)[spinor field 4-current] #link(<current_gauge_KG>)[scalar field 4-current] #link(<current_gauge_particle>)[point particle 4-current])

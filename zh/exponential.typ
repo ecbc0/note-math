@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("real-exponential")
+#tag("real_exponential")
 #indent[
   如果指数是自然数, 则 $a^(n+m) = a^(n) a^(m)$. 在 $a in ℚ$ 时, $a ⇝ a^n$ 是连续且单调递增的, 所以逆函数也是连续且单调递增的, 记为 $a^(1/n)$. 可以将 $a^(n+m) = a^(n) a^(m)$ 推广到有理数幂. 由于连续, 可以将 $a ⇝ a^n$ 延拓到 $ℝ$ 幂函数
 
@@ -23,13 +23,13 @@
   $
     f(x) = sum ((f^((1)) (0))/n! x)^n
   $
-  #tag("natural-exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural-constant>)[]
+  #tag("natural_exponential") def $e^x = exp x = sum 1/n! x^n : ℝ -> (0,∞)$ with $e^1 = exp(1) = sum 1/n! = e$ #link(<natural_constant>)[]
 
   *Todo* 证明 $f(x) = sum ((f^((1)) (0))/n! x)^n$ 满足 $f(x + y) = f(x) f(y)$. (证明使用的技术: 绝对收敛, 重排不变, 确界, 迫敛性 (其中一边是上确界), "三角形式 (相对于 $(j, k) in ℕ^2$ 矩形)" 的求和 $sum_(i = 1..n) sum_(j + k = n)$)
 
-  从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #link(<inverse-analytic>)[解析逆]
+  从级数可以看出, 微分满足 $(#d)/(#d x) (e^x) = e^x > 0$ ==> $e^x$ 存在 #link(<inverse_analytic>)[解析逆]
 
-  #tag("natural-logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
+  #tag("natural_logarithm") def $log = exp^(-1) : (0,∞) -> ℝ$. $(#d)/(#d x) log x = 1/x$
 
   for $a > 0$, def $f^1 (0) := log a in ℝ$
   $
@@ -43,11 +43,11 @@
     &= exp (x log a)
   $
 ]
-#tag("power-function") 定义了指数函数意味着对每个 $a in ℝ$ 定义了每个实数指数 $x$, 因此也定义了幂函数 $a ⇝ a^x$ 或者改写为 $x ⇝ x^a$
+#tag("power_function") 定义了指数函数意味着对每个 $a in ℝ$ 定义了每个实数指数 $x$, 因此也定义了幂函数 $a ⇝ a^x$ 或者改写为 $x ⇝ x^a$
 
 也可以用 $x^a = exp(a log x)$
 
-#tag("Euler-formula")
+#tag("Euler_formula")
 
   - $ℂ$
   $

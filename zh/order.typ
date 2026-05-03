@@ -76,23 +76,23 @@ _Proof_
 这些命题加起来就证明了 $<, <=$ 偏序的等价性
 
 *Example* 
-  - 子集的 "包含" $⊆$, 或者 "包含且不等于" $⊊$, 是序 #image("../image/tree-diagram.svg", width: 70%) 
+  - 子集的 "包含" $⊆$, 或者 "包含且不等于" $⊊$, 是序 #image("../image/tree_diagram.svg", width: 70%) 
     image modified from wiki media about partial order
   - $ℕ,ℤ,ℚ,ℝ$ 的 $<,<=$
   - 树图
-#tag("order-comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
+#tag("order_comparable") $a,a' ∈ A$ comparable := (lt form) $(a < a') xor (a = a') xor (a' < a)$ or (lte form) := $(a <= a') or (a' <= a)$
 
-#tag("comparable-component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
+#tag("comparable_component") $A_i ⊆ A$ is comparable-component := $forall a ∈ A, (exists a_i ∈ A_i, "comparable"(a,a_i) ==> a ∈ A_i)$
 
 偏序可以分解为相互不 comparable 的 comparable-component. 想象两个毫无关系的树图
 
-#tag("linear-order") $A$ 线序 
+#tag("linear_order") $A$ 线序 
 #indent[
   $forall a,a' ∈ A, "comparable"(a,a')$
 
   直观上, 线序没有分支, 也称为 "链"
 ]
-#tag("maximal-linear-order") 极大线序链 
+#tag("maximal_linear_order") 极大线序链 
 #indent[
   let $B ⊆ A$ with $<$ 线序. $B$ is maximal-linear-order := 以下定义等价
   - $forall a in A, (forall b in B, "comparable"(a,b) ==> a in B)$
@@ -105,10 +105,10 @@ _Proof_
   
   $B$ 链的延拓是指, 存在 $a in A$ 且 $a ∉ B$, 使得, 对每个 $b in B$, $"comparable"(a, b)$. 延拓后, $B ∪ {a}$ 也是链
 ]
-#tag("maximal-linear-order-exists") maximal-linear-order chain alaways exists 
+#tag("maximal_linear_order_exists") maximal-linear-order chain alaways exists 
 #indent[
   也称为 Zorn 引理
 
-  需要 #link(<axiom-of-choice>)[选择公理]: 如果能够对 (某个类型的) 一些集合证明按照存在某种性质的元素, 那么可以定义一个函数, 将这些集合映射到对应的元素
+  需要 #link(<axiom_of_choice>)[选择公理]: 如果能够对 (某个类型的) 一些集合证明按照存在某种性质的元素, 那么可以定义一个函数, 将这些集合映射到对应的元素
 ]
-_Proof_ (#link(<ref-29>)[]) `zorn_lemma.ac` in my github repo `ac-math` #link(<ref-30>)[]
+_Proof_ (#link(<ref_29>)[]) `zorn_lemma.ac` in my github repo `ac-math` #link(<ref_30>)[]

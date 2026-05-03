@@ -1,7 +1,7 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("transformation-group")
+#tag("transformation_group")
 #indent[
   Composition can be thought of as an operation $(f_2, f_1) ⇝ f_2 ∘ f_1$. If we fix one of the positions, we have
   - Pre-composition $f ⇝ g ∘ f$, also called right multiplication 
@@ -18,7 +18,7 @@
 
   Similar to how the power set $Subset(X)$ is denoted as $2^X$, $Aut X$ can be denoted as $X!$, because the bijections from ${1 ,…, n}$ to itself form the permutation group $Aut {1 ,…, n} = S_n$, and the number of elements in the set is $n!$
 ]
-#tag("binary-operation-group")
+#tag("binary_operation_group")
 #indent[
   There is also the concept of binary operation groups: *Example* Addition of real numbers, addition in vector spaces
 
@@ -47,7 +47,7 @@ Multiplication of non-zero octonions $𝕆 ∖ 0$ is not associative: generally 
 
 So this kind of non-associative operation group is not isomorphic to the associative transformation group of $𝕆 ∖ 0$ formed by $L_a, R_a$: $L_a ∘ L_b != L_(a ⋅ b)$
 
-#tag("group-homomorfsm")
+#tag("group_homomorfsm")
 #indent[
   *Def* Group homomorphism $f : G_1 -> G_2$
   
@@ -63,7 +63,7 @@ So this kind of non-associative operation group is not isomorphic to the associa
 ]
 *Example* Homomorphism from $(ℝ, +)$ to $(ℝ_(> 0), ⋅)$: $exp(x + y) = exp(x) ⋅ exp(y)$
 
-#tag("group-isomorfsm") *Def* Group Isomorphism: $f: G_1 -> G_2$ is a bijection and $f, f^(-1)$ are group homomorphisms
+#tag("group_isomorfsm") *Def* Group Isomorphism: $f: G_1 -> G_2$ is a bijection and $f, f^(-1)$ are group homomorphisms
 
 *Example* Isomorphism $exp$ from $(ℝ, +)$ to $(ℝ(> 0), ⋅)$, the inverse map $log$ is a homomorphism $log(x ⋅ y) = log(x) + log(y)$
 
@@ -100,13 +100,13 @@ Let $f: G_1 -> G_2$ be a group homomorphism, $H_2 ⊆ G_2$ be a subgroup, then $
 
 $𝟙_(G_2) ⊆ G_2$ is a subgroup, thus $f^(-1) (𝟙_(G_2)) ⊆ G_1$ is a subgroup
 
-#tag("group-kernel") *Def* Kernel of a group homomorphism $ker f := f^(-1) (𝟙_(G_2)) = {a in G_1 : f(a) = 𝟙_(G_2)}$
+#tag("group_kernel") *Def* Kernel of a group homomorphism $ker f := f^(-1) (𝟙_(G_2)) = {a in G_1 : f(a) = 𝟙_(G_2)}$
 
 $f$ is injective <==> $ker f = 𝟙_(G_1)$
 
 Suppose $H_1 ⊆ G_1$ is a subgroup, then $f(H_1) ⊆ G_2$ is a subgroup
 
-#tag("group-action") *Def* Group action := a homomorphism from a group $G$ to the bijective automorphism group $Aut X$ of $X$, also called a representation 
+#tag("group_action") *Def* Group action := a homomorphism from a group $G$ to the bijective automorphism group $Aut X$ of $X$, also called a representation 
 $
   ρ: map(G, Aut X, g, ρ(g))
 $
@@ -155,7 +155,7 @@ _Proof_
     $
 ]
 
-#tag("decomposition-into-orbit") $G x != G x' <==> G x ∩ G x' = ∅$
+#tag("decomposition_into_orbit") $G x != G x' <==> G x ∩ G x' = ∅$
 
 _Proof_
 #indent[
@@ -187,7 +187,7 @@ Mapping $map(G, G, g, h^(-1) g h)$
 - Homomorphism $h^(-1) (g ⋅ g') h = (h^(-1) g h) ⋅ (h^(-1) g' h)$
 - Bijection $h^(-1) g h = g' <==> g = h g' h^(-1)$
 
-#tag("isotropy-in-same-orbit-is-isom") Thus it is a group isomorphism from $G$ to itself, and restricting it to $G_(h x) <-> G_x$ gives an isomorphism between subgroups. In other words, if $x, y in G$ are in the same orbit $G ⋅ x = G ⋅ y$, then the isotropy groups are isomorphic $G_x ≃ G_y$ 
+#tag("isotropy_in_same_orbit_is_isom") Thus it is a group isomorphism from $G$ to itself, and restricting it to $G_(h x) <-> G_x$ gives an isomorphism between subgroups. In other words, if $x, y in G$ are in the same orbit $G ⋅ x = G ⋅ y$, then the isotropy groups are isomorphic $G_x ≃ G_y$ 
 
 $G_(h x)$ can also be written as $h G_x h^(-1) = {h g h^(-1) : g in G_x}$
 
@@ -216,7 +216,7 @@ $
       { map(G, X, g, g x) }^(-1) (y)
     ) = |h G_x| = |G_x|
   $
-#tag("orbit-istropy-product-decomposition") The orbit $G x$ and isotropy $G_x$ form a product decomposition of the group $G$ on the set: 
+#tag("orbit_istropy_product_decomposition") The orbit $G x$ and isotropy $G_x$ form a product decomposition of the group $G$ on the set: 
 
 For every $y in G x$, select an $h(y) =: h in G$ such that $h x = y$ (Axiom of Choice)
 
@@ -231,7 +231,7 @@ This implies $|G| = |G x| ⋅ |G_x|$
 
 It also implies $|G x|, |G_x| <= |G|$
 
-#tag("conjugate-action") Conjugate action, similar to change of coordinates
+#tag("conjugate_action") Conjugate action, similar to change of coordinates
 $
   c_h : map(G, G, g, h g h^(-1))
 $
@@ -246,7 +246,7 @@ $c_(h h') = c_h c_(h')$
 _Proof_ $(h h')^(-1) g (h h') = h'^(-1) (h^(-1) g h) h'$
 
 Of conjugate action 
-- orbit $G ⋅ g = {h g h^(-1) : h in G}$ called #tag("conjugate-class")
+- orbit $G ⋅ g = {h g h^(-1) : h in G}$ called #tag("conjugate_class")
 - isotropy $G_g = { h in G : h g h^(-1) = g }$ called centralizer of $g$
 
 *Example* The conjugate-class of a permutation is the cycle
@@ -259,7 +259,7 @@ $
 $
 where $(g,h) ⇝ h^(-1) ⋅ g ⋅ h ⋅ g^(-1)$ is called the commutator of the group $G$ #tag("commutator")
 
-#tag("action-surjective") *alias* #tag("action-transitive") := The following definitions are equivalent
+#tag("action_surjective") *alias* #tag("action_transitive") := The following definitions are equivalent
 - $abs(X/G) = 1$
 - $exists x in X, G x = X$
 - $forall x in X, G x = X$
@@ -267,14 +267,14 @@ where $(g,h) ⇝ h^(-1) ⋅ g ⋅ h ⋅ g^(-1)$ is called the commutator of the 
 
 *Example* $SO(3)$ acting on $ℝ^3 ∖ 0$ is not transitive. $GL(3,ℝ) $ acting on $ℝ^3 ∖ 0$ is transitive
 
-#tag("action-injective") *alias* #tag("action-free") := The following definitions are equivalent
+#tag("action_injective") *alias* #tag("action_free") := The following definitions are equivalent
 - Every orbit is a copy of $G$
 - $forall x (g x = h x ==> g = h)$
 - $forall x (g x = x ==> g = 𝟙)$
 - $forall x (G_x = 𝟙)$
 - $forall x (map(G, X, g, g x) "is injective" G ↪ X)$
 
-#tag("action-faithful") := The following definitions are equivalent
+#tag("action_faithful") := The following definitions are equivalent
 - $(forall x (g x = x)) ==> g = 𝟙$
 - $(forall x (g in G_x) ==> g = 𝟙$
 - The group homomorphism of the group action $G -> Aut X$ is injective
@@ -321,7 +321,7 @@ _Proof_
 
   $𝟙 ⋅ H = H$
 ]
-#tag("action-on-coset")
+#tag("action_on_coset")
 #indent[
   The group $G$ can act on $G/H$
   $
@@ -339,9 +339,9 @@ _Proof_
     G ≃ H × G/H
   $
 ]
-#tag("product-group") Let $G, G'$ be groups, then $G × G'$ is also a group, with multiplication defined as $(a, a') ⋅ (b, b') = (a b, a' b')$
+#tag("product_group") Let $G, G'$ be groups, then $G × G'$ is also a group, with multiplication defined as $(a, a') ⋅ (b, b') = (a b, a' b')$
 
-#tag("subgroup-coset-sub-quotient-decomposition") 
+#tag("subgroup_coset_sub_quotient_decomposition") 
 #indent[
   *Def* Subset multiplication operation: forall $S, S' ⊆ G$
   
@@ -359,13 +359,13 @@ _Proof_
 
   There are the following equivalent propositions
   + $(g H) ⋅ (g' H) = (g g') ⋅ H$, the meaning is, for two elements $g, g'$ in coset/orbit, their multiplication is in the coset that $g g'$ lies in. \ 
-    Now $G/H$ become group, called the #tag("quotient-group"), $π: G -> G/H$ is group homomorphism, $H = ker(π)$
+    Now $G/H$ become group, called the #tag("quotient_group"), $π: G -> G/H$ is group homomorphism, $H = ker(π)$
   + For every $g in G$, the left and right cosets are the same $g ⋅ H = H ⋅ g$
-  + $H$ is a normal subgroup #tag("normal-subgroup") or called an invariant subgroup #tag("invariant-subgroup"), the conjugation group action $g ⇝ c_g$ preserves $H$, and thus can be restricted to $H$ to form a group action. $forall (g in G) (c_g (H) ⊆ H)$, in fact $c_g (H) = H$
+  + $H$ is a normal subgroup #tag("normal_subgroup") or called an invariant subgroup #tag("invariant_subgroup"), the conjugation group action $g ⇝ c_g$ preserves $H$, and thus can be restricted to $H$ to form a group action. $forall (g in G) (c_g (H) ⊆ H)$, in fact $c_g (H) = H$
 
   However, this decomposition is generally not a product-group decomposition
 
-  If $G$ is a commutative group #tag("commutative-group") *alias* #tag("abelian-group"), then all its subgroups are also commutative groups and are normal subgroups
+  If $G$ is a commutative group #tag("commutative_group") *alias* #tag("abelian_group"), then all its subgroups are also commutative groups and are normal subgroups
 
   For $a in G$, if there exists $n in ℕ$ such that $a^n = 𝟙$, then the order of $a$ is defined as $min { m in ℕ : a^m = 𝟙 }$ 
   
@@ -383,7 +383,7 @@ _Proof_
 
   The naturalness of this decomposition also depends on whether you think that inherited multiplication on the cosets is a good construction
 
-  #tag("simple-group") Group that have no normal subgroup other than $𝟙$ and $G$ is called simple group
+  #tag("simple_group") Group that have no normal subgroup other than $𝟙$ and $G$ is called simple group
 ]
 
 *Example* let $G$ be a finite group, let $a in G$. Then $H = {a^1, a^2, ...}$ is a finite set and is a subgroup. There exists a minimum $k in ℕ$ such that $a^k = 𝟙$, thus $a^(-1) = a^(k-1)$. Let group $G$ act on the coset space ${g H : g in G}$, isotropy $G_H = H$, so $frac(|G|,|H|) = frac(|G|,k) in ℕ$ or $|G|$ is divisible by $k$
@@ -397,7 +397,7 @@ $
 - Injective: $g x = g' x ==> g^(-1) g' in G_x$ ==> $(g^(-1) g') G_x = G_x$ ==> $g ⋅ G_x = g ((g^(-1) g') ⋅ G_x) = g' ⋅ G_x$
 - Surjective: Suppose $y in G x$, take $g in G$ such that $y = g x$, then just take $A = g ⋅ G_x in G/G_x$
 
-#tag("Burnside-lemma") Define $X^g := {x in X : g x = x}$ as the fixed point set of $g in G$, then there exists a bijection
+#tag("Burnside_lemma") Define $X^g := {x in X : g x = x}$ as the fixed point set of $g in G$, then there exists a bijection
 $
   G × X/G <--> ⨆_(g in G) X^g = X
 $

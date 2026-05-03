@@ -2,8 +2,6 @@
   until typst support link to label in workspace
 
   or use vscode search/replace in workspace `crtl + shift + f/h` to search label
-
-  or wait for tinymist to support search label
 */
 
 #import "@preview/shiroa:0.2.3": *
@@ -34,7 +32,6 @@
         }
       } else { return it } 
     }
-    // how to make a javascript to make it click the underlined text to automatically copy tag name, open mdbook search bar, and input tag name ...
   }
 
   show ref: it => {

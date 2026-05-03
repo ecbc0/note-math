@@ -30,7 +30,7 @@ $
 $
   z ⋅ (z' + z'') = z ⋅ z' + z ⋅ z''
 $
-#tag("complex-numbler-geometric-meaning") 这等同于单位复数的乘法. 由于旋转 $SO(2)$ 和纯量乘法 $ℝ$ 是交换的, 单位复数上的乘法可以轻松延拓到复数 $ℂ$ 上的乘法
+#tag("complex_numbler_geometric_meaning") 这等同于单位复数的乘法. 由于旋转 $SO(2)$ 和纯量乘法 $ℝ$ 是交换的, 单位复数上的乘法可以轻松延拓到复数 $ℂ$ 上的乘法
 
 #tag("angle") 角度
 #indent[
@@ -61,7 +61,7 @@ $
       exp(θ_1 X) ⋅ exp(θ_2 X) = exp(θ_2 X) ⋅ exp(θ_1 X)
     $
    
-  对于 $vec(1,0) in 𝕊^1$ 为起点的测地线坐标, 结果记为 #tag("trigonometric-function") 三角函数 $vec(cos(θ),sin(θ))$. 
+  对于 $vec(1,0) in 𝕊^1$ 为起点的测地线坐标, 结果记为 #tag("trigonometric_function") 三角函数 $vec(cos(θ),sin(θ))$. 
   
   根据 $SO(2)$ 乘法和 $𝕊^1$ 乘法的对应, 我们知道 $mat(cos(θ), -sin(θ); sin(θ), cos(θ)) vec(1, 0) = vec(cos(θ), sin(θ))$
 
@@ -113,7 +113,7 @@ $
 $
 $v = |v| exph(ϕ #i-split)$. 距离也可以 $ℂ_"split"$ 表示. $|v| = (v v^*)^(1/2) = ⟨ v ⟩^2^(1/2)$
 
-#tag("hyperbolic-exp-inverse")
+#tag("hyperbolic_exp_inverse")
 #indent[
   $exph ((ϕ + ψ)#i-split) = exph(ϕ #i-split) exph(ψ #i-split)$
 

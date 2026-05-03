@@ -25,7 +25,7 @@ Define proposition, parameter $f : A -> B$
 
   or there exists a surjection $f : A ↠ B$ <==> there exists an injection $g : B ↪ A$
 
-#tag("cardinal-always-comparable") Trichotomy of element number order $<$ or order is always #link(<order-comparable>)[comparable]
+#tag("cardinal_always_comparable") Trichotomy of element number order $<$ or order is always #link(<order_comparable>)[comparable]
 
 $ forall A,B ∈ Set, (|A| = |B|) ⊕ (|A| < |B|) ⊕ (|B| < |A|) $
 
@@ -55,7 +55,7 @@ let $S ⊆ A$
 
 let $S ⊆ B$
 
-#tag("inverse-image") Inverse image $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
+#tag("inverse_image") Inverse image $f^(-1)(S) := {a ∈ A : exists b ∈ S, b = f(a)}$
 
 $f(a) in S &<==> exists b in S, b = f(a) \
 &<==> a in f^(-1) (S)$
@@ -75,7 +75,7 @@ Image $f$ only maintains $∪$, for others
 - $f(S ∩ S') ⊆ f(S) ∩ f(S')$
 - $f(S ∖ S') ⊆ f(S) ∖ f(S')$ 
 
-#tag("cardinal-increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
+#tag("cardinal_increase") $|A| < |Subset(A)|$ (cf. #link(<cardinal>)[])
 #indent[
   $f : A -> Subset(A)$ is not surjective <==> $Subset(A) ∖ "range"(f) != ∅$
 
