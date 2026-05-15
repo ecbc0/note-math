@@ -1,14 +1,11 @@
 #import "../module/module.typ": *
 #show: module
 
-#tag("integral_piecewise_constant_function") 
+#tag("integral_of_piecewise_constant_function") 
 #indent[
-  constant function $f_i$ support on simplex $σ_i$ + $f = sum f_i σ_i$ 可数无限组合 + $integral_(σ) f = sum f_i (σ_i) Vol(σ_i)$ 绝对收敛
+  (constant function $f_i$ support on simplex $σ_i$) + ($f = sum f_i σ_i$ 可数无限组合) + ($integral_(σ) f = sum f_i (σ_i) Vol(σ_i)$ 绝对收敛)
 ]
-#tag("integral_simplicial_function") 
-#indent[
-  或者用连续分段仿射线性 or simplicial function e.g. for simplex with 顶点 $x_0 ,…, x_n$, $f(sum t_i x_i) = t_i f(x_i)$. 积分定义为根据顶点的值的平均 i.e. 仿射中心映射的结果 $f((x_0 + ⋯ + x_n)/(n+1)) Vol("simp"(x_1 ,…, x_n))$
-]
+
 根据 simplex 交集和减集的分解, 分段常值函数的有限加减仍然是分段常值函数
 
 定义积分距离 $‖f - g‖_1 = integral |f - g|$. 或者用 $2$ norm $‖f - g‖_2 = (integral |f - g|^2)^(1/2)$ 
@@ -29,9 +26,9 @@ $ϕ ∈ L^1(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^1(ℝ^d,ℝ)$
 
 $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,ℝ)$
 ]
-*Example* 但是需要注意, 虽然积分距离 Cauchy 网总是积分收敛, 存在积分距离 Cauchy 网不逐点收敛到极限函数
+*Example* 但是需要注意, 存在网积分距离收敛但不逐点收敛到极限函数
 #indent[
-  二等分行走序列是积分距离 Cauchy 的, 测度趋于 $0$
+  二等分行走序列是积分距离收敛的, 测度趋于 $0$
   $ 
     f_1 &= 𝟙_([0,1/2]) \
     f_2 &= 𝟙_([1/2,1]) \
@@ -47,11 +44,11 @@ $ϕ ∈ L^2(ℝ^d,ℝ^d') <==> |ϕ| ∈ L^2(ℝ^d,ℝ) <==> |ϕ|^2 in L^1(ℝ^d,
 ]
 #tag("integrable_exist_subnet_almost_everywhere_pointwise_convergence") (@ref-5, p.129--130)
 #indent[
-  但是所有 $L^1,L^2$ 积分距离 Cauchy 网中存在子网几乎处处逐点收敛到目标可积函数. 这来自, 在存在测度任意小的集合 $A$ 使得在 $A^∁$ 上绝对一致收敛
+  但是所有 $L^1,L^2$ 积分距离收敛网中存在子网几乎处处逐点收敛到目标可积函数. 关键点是证明, 在存在测度任意小的集合 $A$ 使得在 $A^∁$ 上绝对一致收敛
 ]
 $𝟙_A in L^1, L^2$ 定义出来的可测集是 Lebesgue 可测集, 可能不连通
 
-我们定义的是绝对可积. 其它的积分操作, 例如 $integral_(-∞)^(∞)  e^(- #i x^2) $, 是基于绝对可积的特殊的极限操作, 和问题的环境有关
+我们定义的是绝对可积. 其它的积分操作, 例如 $integral_(-∞)^(∞)  e^(- #i x^2) $, 是基于绝对可积的特殊的极限操作, 和问题的上下文语境有关
 
 线性换坐标 $A in GL$ 给出积分变量替换公式 $det A$
 
@@ -79,7 +76,7 @@ $𝟙_A in L^1, L^2$ 定义出来的可测集是 Lebesgue 可测集, 可能不�
 
   坐标卡交集的地方的积分是重复的, 需要去除重复
 ]
-用 (不固定坐标轴的) 矩形和 simplex 定义的测度和积分都是等价的, 因为矩形和 simplex 可以相互可数逼近
+用矩形和 simplex 定义的测度和积分都是等价的, 因为矩形和 simplex 可以相互可数逼近
 
 #tag("Fubini_theorem") 
 
@@ -97,27 +94,9 @@ area coarea 公式 ...
 
 #tag("low_dim_integral") 
 #indent[
-  form 对 $k$ simplex 的积分也是 invariant 的, 并不需要对低维 simplex 定义体积
+  $n$ 维空间的 $k$ form 对 $k$ simplex 的积分是 invariant 的, 并不需要对低维 simplex 定义体积
 
-  constant 型 form
-
-  simplicial map 型 $k$ form := 设 $x_0 ,…, x_k$ simplex 是顶点, 则 $ω(sum t_i x_i) = sum t_i ω(x_i)$
-
-  类似 $n$ 阶的情况, $k$ chain 上的 simplicial map form 定义积分 $integral_(σ) ω = sum ω("center of" σ_i) Vol(σ_i)$
-
-  两个 $k$ simplex 即使相邻, 方向也可能不连续. 这不同于 $n$ 阶的情况, 余维数零所以 $n$ simplex 都是相同的方向
+  两个 $k < n$ 阶 simplex 即使相邻, 它们在 $n$ 维空间的 $k$ 子空间也可能不同, 从而 $k$ 方向不连续, $k$ form 可能有不同的值. 这不同于 $n$ 阶的情况, 余维数零所以 $n$ simplex 都是相同的方向
   
-  两个相邻的 $k$ simplex 的在共同顶点上, form 作用在这一点可能有不同的值. simplicial 型的积分的也等价于在顶点上取方向的平均
-
-  良好的逼近应该需要让 $k$ 方向有良好的正则性, 但是没有额外结构的话似乎很难定义这种概念 (即使是 Grassmann 流形?)
-
-  微分子流形结构可以简单消去这种 $k$ 方向不连续
-]
-#tag("integral_on_submanfold") 
-#indent[
-  让 $n$ 维流形的 $k$ form 限制于 $k$ #link(<orientable>)[可定向] 子流形的切空间 (cf. #link(<integral_on_manfold>)[])
-
-  $M$ 的 $n$ form 等价于纯量函数, 但是 $M$ 的 $n-1$ form $ω$ 应怎么积分控制? 尝试 $sup(S : "orientable" n-1 "submanifold")(integral_(S) |ω - ω'|)$?
-
-  如无必要, 暂时不引入额外的 metric 来定义 $integral_M (⟨ ω ⟩^2)^(1/2)$ or $(integral_M ⟨ ω ⟩^2)^(1/2)$ 
+  良好的 $k$ 维区域应该需要让 $k$ 方向有良好的正则性, 例如 $k$ 维微分子流形, 利用子流形的切空间
 ]

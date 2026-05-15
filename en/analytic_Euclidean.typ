@@ -360,6 +360,38 @@ $ f(b) - f(a) = integral_a^b f'(x) #d x $
 
 Technique used in proof: Mean Value Theorem compact uniform linear growth control ver. + compact partition uniform approximation
 
+For example, suppose $f$ is continuously differentiable on $[a,b]$, then
+
+$M = sup_([a,b]) |f'| < ∞$ (compact ==> maximum)
+
+For each $ε$, take $δ = δ(ε)$ such that $forall(x,y in [a,b]), (|x - y| < δ) ==> |f'(x) - f'(y)| < ε/(b - a)$ (compact ==> uniformly continuous)
+
+Partition $a = x_0 <= ⋯ <= x_n = b$, and let $|x_(i+1) - x_i| < δ$ 
+
+$f(x_(i+1)) - f(x_i) = f'(ξ_i) (x_(i+1) - x_i)$ (mean value theorem)
+
+$
+  integral_a^b sum |f'(ξ_i)| 𝟙_([x_i, x_(i+1)]) 
+  &= sum |f'(ξ_i)| (x_(i+1) - x_i) \
+  &<= M sum (x_(i+1) - x_i) \
+  &= M (b - a) \
+  &< ∞
+$
+Thus $sum |f'(ξ_i)| 𝟙_([x_i, x_(i+1)]) in L^1$ and therefore $sum f'(ξ_i) 𝟙_([x_i, x_(i+1)]) in L^1$
+
+Hence $abs(f' - sum f'(ξ_i) 𝟙_([x_i, x_(i+1)])) < ε/(b - a)$, and
+
+$ε/(b - a) in L^1$ and $integral_a^b ε/(b - a) = ε$  
+$
+  integral_a^b sum f'(ξ_i) 𝟙_([x_i, x_(i+1)]) 
+  &= sum f'(ξ_i) (x_(i+1) - x_i) \
+  &= sum (f(x_(i+1)) - f(x_i)) \
+  &= f(x_n) - f(x_0) \
+  &= f(b) - f(a)
+$
+
+Therefore $f'$ satisfies the definition of #link(<Lebesgue_integrable>)[] , $f' in L^1$, and $integral_a^b f' = f(b) - f(a)$
+
 #tag("mean_value_theorem_analytic") Higher dimensions generally lack intermediate value ver. Mean Value Theorem for $ℝ^d -> ℝ^d'$. Use embedded line $t -> x + t v$ reduce to $ℝ$ case
 #indent[
   - First order

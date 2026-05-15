@@ -360,6 +360,38 @@ $ f(b) - f(a) = integral_a^b f'(x) #d x $
 
 证明使用的技术: 微分中值定理 compact 一致线性增长控制 ver. + compact 分割一致逼近
 
+例如, 假设 $f$ 在 $[a,b]$ 上连续可微, 则
+
+$M = sup_([a,b]) |f'| < ∞$ (compact ==> 最大值)
+
+对每个 $ε$, 取 $δ = δ(ε)$ 使得 $forall(x,y in [a,b]), (|x - y| < δ) ==> |f'(x) - f'(y)| < ε/(b - a)$ (compact ==> 一致连续)
+
+分割 $a = x_0 <= ⋯ <= x_n = b$, 并让 $|x_(i+1) - x_i| < δ$ 
+
+$f(x_(i+1)) - f(x_i) = f'(ξ_i) (x_(i+1) - x_i)$ (微分中值定理)
+
+$
+  integral_a^b sum |f'(ξ_i)| 𝟙_([x_i, x_(i+1)]) 
+  &= sum |f'(ξ_i)| (x_(i+1) - x_i) \
+  &<= M sum (x_(i+1) - x_i) \
+  &= M (b - a) \
+  &< ∞
+$
+于是 $sum |f'(ξ_i)| 𝟙_([x_i, x_(i+1)]) in L^1$ 从而 $sum f'(ξ_i) 𝟙_([x_i, x_(i+1)]) in L^1$
+
+于是 $abs(f' - sum f'(ξ_i) 𝟙_([x_i, x_(i+1)])) < ε/(b - a)$, 且
+
+$ε/(b - a) in L^1$ and $integral_a^b ε/(b - a) = ε$  
+$
+  integral_a^b sum f'(ξ_i) 𝟙_([x_i, x_(i+1)]) 
+  &= sum f'(ξ_i) (x_(i+1) - x_i) \
+  &= sum (f(x_(i+1)) - f(x_i)) \
+  &= f(x_n) - f(x_0) \
+  &= f(b) - f(a)
+$
+
+从而 $f'$ 满足 #link(<Lebesgue_integrable>)[] 的定义, $f' in L^1$, 且 $integral_a^b f' = f(b) - f(a)$
+
 #tag("mean_value_theorem_analytic") 高维一般没有介值 ver. 微分中值定理 for $ℝ^d -> ℝ^d'$. 用嵌入的直线 $t -> x + t v$ reduce to $ℝ$ 的情况
 #indent[
   - 一阶 

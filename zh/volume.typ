@@ -11,9 +11,9 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, 不需要 $t_1 + ⋯ + t_n = 1$
 #indent[
   平行体可以分解为 $n!$ 个平移反射等价的 simplex (p. 587 of @ref-3)
 
-  #image("../image/shear_transformation.png", width: 30%)
+  #image("../image/parallelogram_simplex_correspond.png", width: 30%)
 
-  一个分解的 simplex, 对应于, 选一个 $1 ,…, n$ 点的排列 $i(1) ,…, i(n)$
+  分解的 $n!$ 个 simplex 中选取一个, 对应于, 选一个 $1 ,…, n$ 点的排列 $i(1) ,…, i(n)$, 并对平行体坐标做出限制
   $
     t_(i(1)) v_(i(1)) + ⋯ + t_(i(n)) v_(i(n)) \ 
     0 <= t_(i(n)) <= ⋯ <= t_(i(1)) <= 1
@@ -26,12 +26,12 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, 不需要 $t_1 + ⋯ + t_n = 1$
     ... \
     v_(i(1)) + ⋯ + v_(i(n))
   $
-  仿射组合是表示是 
+  仿射组合的表示是 
   $
     s_0 0 + s_1 v_(i(1)) + s_2(v_(i(1)) + v_(i(2))) + ⋯ + s_n (v_(i(1)) + ⋯ + v_(i(n))) \ 
     sum_(i=0..n) s_i = 1, 0 <= s_i <= 1
   $
-  对比 $v_i$ 的系数, 平行体坐标和仿射坐标的关系
+  仿射组合中展开因式然后对比 $v_i$ 的系数可以得到平行体坐标和仿射坐标的关系
   $
     t_(i(n)) &= s_n \
     t_(i(n-1)) &= s_n + s_(n-1) \
@@ -46,7 +46,7 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, 不需要 $t_1 + ⋯ + t_n = 1$
 #tag("volume_of_parallelogram") 对于 $ℝ^n$ 的体积假设
 - 平移不变
 - 反射不变 (无向体积)
-- 集合有限分解 $⨆$ (零测度意义下的不相交) -> 体积有限求和 $sum$ 
+- 集合有限分解 $⨆$ (零测度意义下的不相交) ==> 体积有限求和 $sum$ 
 - 如果 $v_1 ,…, v_n$ 不是线性无关, 则它们及其仿射/线性组合在低维的子空间, 从而 $n$ 阶体积定义为零
  
 #tag("volume_of_simplex") is $1/n!$ of volume-of-parallelogram
@@ -59,7 +59,7 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, 不需要 $t_1 + ⋯ + t_n = 1$
 
 如果要考虑平行体的体积在线性变换下的变化, 通常要考虑将线性变换分解为多个 "初等线性变换", 而初等变换中包含剪切变换
 
-即使我们定义的是平行体的体积, 剪切变换说明, 这还是同时用到了 simplex 的体积的概念, 再次验证了 simplex 和平行体的紧密联系
+剪切变换需要用 simplex, 说明, 即使我们定义的是平行体的体积, 这还是同时用到了 simplex 的体积的概念, 再次验证了 simplex 和平行体的紧密联系
 
 剪切变换体积不变在代数上是 e.g. $(v_1 + v_2) ∧ v_2 ∧ ⋯ ∧ v_n = v_1 ∧ v_2 ∧ ⋯ ∧ v_n$ or $det mat(
   1, 1;
@@ -68,7 +68,7 @@ $t_1 v_1 + ⋯ + t_n v_n, 0 <= t_i <= 1$, 不需要 $t_1 + ⋯ + t_n = 1$
   ,,,, 1
 ) = 1$
 
-边的 $ℕ,ℤ,ℚ,ℝ$ 伸缩. e.g. $forall a in ℝ, Vol(a v_1, v_2 ,…, v_n) = a Vol(v_1, v_2 ,…, v_n)$
+边的 $ℕ,ℤ,ℚ,ℝ$ 伸缩给出体积的 $n$ 重线性. e.g. $forall a in ℝ, Vol(a v_1, v_2 ,…, v_n) = a Vol(v_1, v_2 ,…, v_n)$
 
 平行体的伸缩剪切对应到 $GL(n,ℝ)$ 分解到初等线性变换, 也是 Gauss 消元法所用的, 尽管它们可以也用于 $m × n$ 矩阵
 
@@ -88,7 +88,7 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
 
 为什么体积的概念明明是正数, 但 $n$ 交错张量 $det$ 却可以是负数? 
 
-负数来源于边长伸缩可以从只有 $+1$ 方向的 $ℝ_(> 0)$ 延拓到 $ℝ$ $-1$ 方向, 作为一种完全线性
+负数来源于边长伸缩可以从只有 $+1$ 方向的 $ℝ_(> 0)$ 延拓到 $ℝ$ 的 $-1$ 方向, 作为一种完全线性
 
 任何线性变换都可以分解为伸缩和剪切. 剪切不会改变体积, 所以 $-1$ 效应一定都是伸缩带来的, 包括 "交换基的顺序" 这种变换 e.g. $v_1 ∧ v_2 ∧ ⋯ ∧ v_n = - v_2 ∧ v_1 ∧ ⋯ ∧ v_n$, 然而直观上这并不是显然
 
@@ -98,11 +98,11 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
 - 剪切 $mat(1, 1;, 1) vec(x + y, -x) = (y, -x)$
 - $-1$ 伸缩 $(y, -x) ⇝ (y, x)$ 使得体积 $-1$
 
-其实你完全丢弃负体积的概念, 可以说体积是正的多重交错线性, 正的行列式, 就像流形上的对密度的积分的处理那样
+你也可以选择完全丢弃负体积的概念, 可以说体积是正的多重交错线性, 正的行列式, 就像流形上的对密度的积分的处理那样
 
-#tag("try_to_define_volume_of_low_dim") 把 $k$ 子空间看作流形, 例如在上面选取一个 $k$ 基建立坐标系, 它们就有自己的体积. 但是 $ℝ^n$ 有很多 $k$ 子空间. 如果我们只需要考虑一个 $k$ 子空间或者 $k$ 子流形, 那么问题就到此为止. 但是我们想要同时对所有 $k$ 子空间定义体积, 同时在每个 $k$ 子空间选择一个 $k$ 基建立坐标系来定义这个 $k$ 子空间的 $k$ 体积, 怎么样的选取才是好的?
+#tag("try_to_define_volume_of_low_dim") 把 $k$ 子空间看作流形, 例如在上面选取一个 $k$ 基建立坐标系, 它们就有自己的体积. 但是 $ℝ^n$ 有很多 $k$ 子空间. 如果我们只需要考虑一个 $k$ 子空间或者 $k$ 子流形, 那么问题就到此为止. 但是我们想要同时对所有 $k$ 子空间定义体积, 同时在每个 $k$ 子空间选择一个 $k$ 基建立坐标系来定义这个 $k$ 子空间的 $k$ 体积, 且同时对每个 $0 <= k <= n$, 怎么样的选取才是好的?
 
-考虑两种方法. 类似于一次型 vs 二次型. 第一种类似对 $vec(v_1,v_2)$ 定义 $v_1 + v_2$ or $|v_1 + v_2|$, 第二种类似于定义 $(v_1^2 + v_2^2)^(1/2)$ or $|v_1^2 - v_2^2|^(1/2)$. 两种体积的定义对 $k = n$ 重合
+考虑两种方法. 类似于一次型 vs 二次型. 两种体积的定义对 $k = n$ 重合
 
 #let base-alt = $e_(i_1) ∧ ⋯ ∧ e_(i_k)$
 #let index-alt = $i_1 < ⋯ < i_k$
@@ -118,8 +118,7 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
 
   对于一般平行体 $v_1 ∧ ⋯ ∧ v_k = (v_1^(i_1) e_(i_1)) ∧ ⋯ ∧ (v_k^(i_k) e_(i_k)) = sum_(#index-alt) #coefficent-alt #base-alt$ 体积就是 
   $
-    Vol(v_1 ∧ ⋯ ∧ v_k) &:= sum_(#index-alt) #coefficent-alt \
-    "or " &:= abs(sum_(#index-alt) #coefficent-alt)
+    Vol(v_1 ∧ ⋯ ∧ v_k) &:= sum_(#index-alt) #coefficent-alt 
   $
   在这种体积定义下, 非零可分解交错张量的体积可能是零. 考虑 $ℝ^2$ 的情况, $A = mat(1,0;-1,1) in GL(2,ℝ)$ 使得 $A e_1 = mat(1,0;-1,1) vec(1,0) = vec(1,-1)$. $A e_1$ 是 $ℝ^2$ 的一个 $1$ 阶可分解交错张量. $Vol_(2,1)(A e_1) = Vol_(2,1)(e_1 - e_2) = 1 - 1 = 0$
   
@@ -127,8 +126,6 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
 
   *Question* 选取了一个特殊的基 $e_1 ,…, e_n$, 所以怎么样的其它基有相同的结果? or 保持所有阶一次型体积不变的线性子群是什么? 
   
-  $SL(n,ℝ)$ 并不保持 $k < n$ 维体积. e.g. $mat(1/2;,2)$ or $mat(-1;,-1)$ 不保持 $e_1$ 子空间的 $1$ 维体积
-
   保持所有阶体积的 $A = mat(
     a^1_1, ⋯, a^1_n;
     ⋮,,⋮;
@@ -163,7 +160,7 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
     a^2_2 &= 1 + x \
     A &= mat(1-x,-x;x,1+x) = mat(1;,1) + mat(-x,-x;x,x)
   $
-  是 $gl(2,ℝ)$ 的经过 $𝟙 = mat(1;,1)$ 的一条仿射直线. $SO(2)$ or $SO(1,1)$ 不是其子集
+  是 $gl(2,ℝ)$ 的经过 $𝟙 = mat(1;,1)$ 的一条仿射直线. $SO(2)$ or $SO(1,1)$ 不是其子集. $det mat(1-x,-x;x,1+x) = 1 - 2 x^2$ 所以一般不属于 $SL(2,ℝ)$
 ]
 2. 选取一个非退化二次型
 #indent[
@@ -202,52 +199,8 @@ $v_1 ∧ ⋯ ∧ v_n$ 是 $n$ 重张量, 其 $n$ 重线性来自平行体 $n$ �
 
   不同 signature 会对 $k < n$ 阶的相同集合给出不同体积定义
 ]
-#tag("convex_hull_decomposition") convex hull 以这种方式分解到 simplex
-- simplex 的顶点属于 convex hull 的顶点
-- simplex 内部不相交
-- simplex 的并集是 convex hull
 
-分解方式非唯一
-
-*Example* 
-
-$ℝ^2$ 的 $4$ 个点
-
-#image("../image/convex_hull_decomposition_1.png", width: 40%)
-
-$ℝ^2$ 的 $5$ 个点
-
-#image("../image/convex_hull_decomposition_3.png", width: 50%)
-
-*Prop* convex hull 分解为 simplex
-
-_Proof_
-#indent[
-  根据上图, 直观上可以这样证明
-
-  对维数归纳. 取一个顶点 $x_i$
-  
-  将边界面分类为
-  - 包含 $x_i$ 
-  - 不包含 $x_i$
-
-  $H$ 可以分解为由 $x_i$ 和不包含 $x_i$ 的边界面 $F_i$ 形成的锥
-
-  每个 $F_i$ 是低一维的 convex hull, 可以分解为 $n - 1$ 维 simplex
-
-  这些 simplex 和 $x_i$ 组成 $n$ 维 simplex
-
-  convex hull 分解为这些 simplex
-]
-convex hull 的交集是 convex hull
-
-*Example* #image("../image/simplex_intersection.png", width: 60%)
-
-simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex 
-
-*Example* #image("../image/simplex_substraction.png", width: 20%)
-
-#tag("polyhedra") 多面体 := n simplex 有限并 with. 可数推广 -> 可数多面体
+#tag("polyhedra") 多面体 := n simplex 有限并. 可数推广是可数多面体
 
 #image("../image/polyhedra.png", width: 30%)
 
@@ -275,23 +228,32 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   对应三角不等式 $d(B,B') <= d(A,B) + d(A,B')$
 
-  _Proof_ $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
+  _Proof_ 
+  #indent[
+    $B ∖ B' ⊆ (B ∖ A) ∪ (A ∖ B')$ 
 
-  #stack( dir: ltr,
-    image("../image/measure_triangle_inequality_1.png", width: 40%),
-    image("../image/measure_triangle_inequality_2.jpeg", width: 50%)
-  )
-  by
-  $
-    x in B ∖ B' 
-    &<==>x in B and x in.not B' \
-    &<==> (x in B and x in.not B') and (x in.not A or x in A) \
-    &<==> (x in B and x in.not B' and x in.not A) or (x in B and x in.not B' and x in A) \
-    &==> (x in B and x in.not A) or (x in A and x in.not B') \
-    &<==> x in (B ∖ A) ∪ (A ∖ B') 
-  $
-  另一边类似
+    #stack( dir: ltr,
+      image("../image/measure_triangle_inequality_1.png", width: 40%),
+      image("../image/measure_triangle_inequality_2.jpeg", width: 50%)
+    )
+    by
+    $
+      x in B ∖ B' 
+      &<==>x in B and x in.not B' \
+      &<==> (x in B and x in.not B') and (x in.not A or x in A) \
+      &<==> (x in B and x in.not B' and x in.not A) or (x in B and x in.not B' and x in A) \
+      &==> (x in B and x in.not A) or (x in A and x in.not B') \
+      &<==> x in (B ∖ A) ∪ (A ∖ B') 
+    $
+    另一边类似
 
+    $B' ∖ B ⊆ (B' ∖ A) ∪ (A ∖ B)$
+
+    两个结果并起来就得到
+
+    $B Δ B' subset (A Δ B) ∪ (A Δ B')$
+  ]
+  
   三角不等式
   $
     d(B,B') &= d(B Δ B') \
@@ -319,9 +281,9 @@ simplex 的减集可能不是 convex hull. 但仍然可以分解到 simplex
 
   对一般可测集, 直觉上, 边界 = 
 
-  $ {x in ℝ^n : not lim_("ball" -> x) frac(Vol(A ∩ "ball"),Vol("ball")) = 0,1} $
+  $ {x in ℝ^n : not lim_("hull" -> x) frac(Vol(A ∩ "hull"),Vol("hull")) = 0,1} $
 
-  where $"ball" -> 0$ 指相对于任何一个 $x$ 为中心的 ball 的整体伸缩到零
+  where $"hull" -> x$ 指相对于任何一个 $x$ 为中心的 convex hull 的整体伸缩到中心
 
   or 边界 = 不是内部或外部. 内部 = 极限 $1$, 外部 = 极限 $0$
 ]
